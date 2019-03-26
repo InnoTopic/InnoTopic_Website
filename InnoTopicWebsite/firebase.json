@@ -13,7 +13,7 @@
     ]
   },
   "hosting": {
-    "public": "dist",
+    "public": "dist/InnoTopicWebsite",
     "ignore": [
       "firebase.json",
       "**/.*",
