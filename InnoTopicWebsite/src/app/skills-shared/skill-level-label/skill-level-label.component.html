@@ -1,5 +1,8 @@
-<fa name="{{skillsIcons[skillLevels?.have]}}"></fa>
-<ng-template [ngIf]="skillLevels?.want">↗</ng-template>
-<fa name="{{skillsIcons[skillLevels?.want]}}"></fa>
+<fa class="skill-icon" name="{{skillsIcons[skillLevels?.have]}}"></fa>
+<ng-template [ngIf]="skillLevels?.want"><!--↗-->
+  <fa class="skill-icon want"
+      style="margin-left: -4px; opacity: 0.7"
+      name="{{skillsIcons[skillLevels?.want]}}"></fa>
+</ng-template>
 <!--<span>{{text}}</span>-->
 <!--Sk2: {{skillLevels | json}}-->
