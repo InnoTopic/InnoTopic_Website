@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TopicTag2Component } from './topic-tag2.component';
+import { TopicSkillComponent } from './topic-skill.component';
 
 describe('TopicTag2Component', () => {
-  let component: TopicTag2Component;
-  let fixture: ComponentFixture<TopicTag2Component>;
+  let component: TopicSkillComponent;
+  let fixture: ComponentFixture<TopicSkillComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TopicTag2Component ]
+      declarations: [ TopicSkillComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TopicTag2Component);
+    fixture = TestBed.createComponent(TopicSkillComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
