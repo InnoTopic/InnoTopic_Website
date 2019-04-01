@@ -31,6 +31,7 @@ export class Topics {
       // angularFlexLayoutResponsiveApi,
       tag('Angular Lazy Loading', 'angular'),
       tag('Angular i18n'),
+      tag('Angular HTTP'),
     ],
     new TopicUrls(
       'https://en.wikipedia.org/wiki/Angular_(application_platform)',
@@ -95,6 +96,12 @@ export class Topics {
   RegExp = t()
   AngularFire = t()
   Lua = t()
+  'Java Swing' = t()
+  HTML5 = t()
+  CSS3 = t()
+  ElasticSearch = t()
+  WebSocket = t()
+   // = t()
 }
 
 export function transformTopics(inputTopics: Topics) {

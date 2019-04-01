@@ -1,7 +1,7 @@
 <mat-chip
   (mouseenter)="onMouseEnter()"
   (click)="clickTopic.emit($event)"
-  style="cursor: pointer"
+  style="cursor: pointer; color: gray"
   [ngClass]="{
     'tag-chip': true,
     'highlight': isHighlighted

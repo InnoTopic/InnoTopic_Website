@@ -18,8 +18,13 @@ export const workExperience = {
       we(advanced, expert),
     Ionic:
       we(intermediate, expert),
+    HTML5:
+      we(advanced, expert),
+    CSS3:
+      we(advanced, expert),
     Git:
       we(advanced, expert),
+    // EcmaScript
     GitHub:
       we(advanced, expert),
     Yarn:
@@ -58,6 +63,8 @@ export const workExperience = {
       we(intermediate, expert),
     KeystoneJS:
       we(intermediate, advanced),
+    WebSocket:
+      we(intermediate, expert),
     Android:
       we(advanced),
     Bash:
@@ -77,7 +84,7 @@ export const workExperience = {
     macOS:
       we(advanced),
     nginx:
-      we(advanced),
+      we(intermediate),
     RegExp:
       we(advanced, expert),
   }),
@@ -95,6 +102,8 @@ export const workExperience = {
     // Angular Dart
   }),
   earlier: experience({
+    'Java Swing':
+      we(advanced),
     Hibernate:
       we(intermediate),
     Maven:

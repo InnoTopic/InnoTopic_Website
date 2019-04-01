@@ -8,7 +8,7 @@ import { UserSkillLevelsHaveWant } from '../../user-profile-shared/user-skills.s
 @Component({
   selector: 'app-topic-skill',
   templateUrl: './topic-skill.component.html',
-  styleUrls: ['./topic-skill.component.scss']
+  styleUrls: ['./topic-skill.component.sass']
 })
 export class TopicSkillComponent implements OnInit {
 
