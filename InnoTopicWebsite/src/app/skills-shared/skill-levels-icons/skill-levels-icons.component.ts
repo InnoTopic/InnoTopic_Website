@@ -9,11 +9,11 @@ import { UserSkillLevelsHaveWant } from '../../user-profile-shared/user-skills.s
 
 @Component({
   selector: 'app-skill-level-label',
-  templateUrl: './skill-level-label.component.html',
+  templateUrl: './skill-levels-icons.component.html',
   styleUrls: ['./skill-level-label.component.sass'],
   encapsulation: ViewEncapsulation.None
 })
-export class SkillLevelLabelComponent implements OnInit {
+export class SkillLevelsIconsComponent implements OnInit {
 
   @Input() topic: TopicInterest;
   @Input() skillLevels: UserSkillLevelsHaveWant;

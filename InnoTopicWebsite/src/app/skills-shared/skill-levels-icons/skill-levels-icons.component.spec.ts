@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SkillLevelLabelComponent } from './skill-level-label.component';
+import { SkillLevelsIconsComponent } from './skill-levels-icons.component';
 
 describe('SkillLevelLabelComponent', () => {
-  let component: SkillLevelLabelComponent;
-  let fixture: ComponentFixture<SkillLevelLabelComponent>;
+  let component: SkillLevelsIconsComponent;
+  let fixture: ComponentFixture<SkillLevelsIconsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SkillLevelLabelComponent ]
+      declarations: [ SkillLevelsIconsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SkillLevelLabelComponent);
+    fixture = TestBed.createComponent(SkillLevelsIconsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

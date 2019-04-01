@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TopicsSharedModule } from '../topics-shared/topics-shared.module';
-import { SkillLevelLabelComponent } from './skill-level-label/skill-level-label.component';
+import { SkillLevelsIconsComponent } from './skill-levels-icons/skill-levels-icons.component';
 
 let declarations = [
-  SkillLevelLabelComponent,
+  SkillLevelsIconsComponent,
 ];
 
 @NgModule({
