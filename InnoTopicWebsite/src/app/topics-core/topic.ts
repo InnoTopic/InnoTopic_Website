@@ -27,7 +27,7 @@ export class TopicUrls {
 }
 
 /* TODO rename to Topic */
-export class TagEntry {
+export class Topic {
   logo: string;
   id: string
 
@@ -43,12 +43,13 @@ export class TagEntry {
     // public topicId?,
     logo?: string,
     public website?: string,
-    public related?: TagEntry[],
+    public related?: Topic[],
     public urls?: TopicUrls,
-    public dependencies?: TagEntry[],
+    public dependencies?: Topic[],
     public shortName?: string,
     public logoTipoWide?: boolean
   ) {
+    console.log('new Topic(', name)
     this.id = name
       .replace('#', '_Sharp')
       .replace(/^\./, 'Dot_')
@@ -73,9 +74,15 @@ export class TagEntry {
     if ( this.urls === undefined ) {
       this.urls = new TopicUrls(null, null, null, null, null, null) // for firebase, because it does not allow to save undefined
     }
+    if ( this.id.match(/\.|#|\$|\[|\]|\//) ) {
+      const message = 'Topic id contains illegal char: '
+      console.error(message, this)
+      window.alert(message + this.id)
+      return null
+    }
   }
 
-  public getLogoPath(tag: string){
+  public getLogoPath(tag: string) {
     // return '../../../assets/images/logos/' + tag.toLowerCase() + '-icon.svg'
     return '../../../assets/images/logos/' + tag.toLowerCase().replace(/ /g, '-') +
       (tag.toLowerCase().endsWith('.png') ? '' : '.svg')

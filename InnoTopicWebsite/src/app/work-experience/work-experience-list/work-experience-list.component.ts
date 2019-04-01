@@ -3,6 +3,7 @@ import {
   Input,
   OnInit,
 } from '@angular/core';
+import { getDictionaryValuesAsArray } from '../../utils/dictionary-utils';
 
 @Component({
   selector: 'app-work-experience-list',
@@ -16,6 +17,7 @@ export class WorkExperienceListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.experience = getDictionaryValuesAsArray(this.experience)
   }
 
 }

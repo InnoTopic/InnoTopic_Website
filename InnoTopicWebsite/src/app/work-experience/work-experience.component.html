@@ -22,171 +22,34 @@
 <section>
   <h2>Experience <span class="comment">(hover/tap to highlight)</span></h2>
 
-  <app-work-experience-list [experience]="experience"></app-work-experience-list>
- ---
-  <app-topic-skill tId="Angular"
-                   [skillLevels]="{have: 'advanced', want:'expert'}"
-  ></app-topic-skill>
+  <h3><b>Main</b> Experience:</h3>
+  <app-work-experience-list
+    [experience]="experience.main"
+  ></app-work-experience-list>
 
-  <app-topic-skill
-    tId="Git"
-    [skillLevels]="{have: 'advanced', want:'expert'}"
-  ></app-topic-skill>
+  <h3>Additional Experience: <span class="comment">(learning more, but not as critical now)</span></h3>
 
-  <app-topic-skill
-    tId="GitHub"
-    [skillLevels]="{have: 'advanced', want:'expert'}"
-  ></app-topic-skill>
+  <app-work-experience-list
+    [experience]="experience.additional"
+  ></app-work-experience-list>
 
-  <app-topic-skill
-    tId="Bootstrap"
-    [skillLevels]="{have: 'advanced'}"
-  ></app-topic-skill>
+  <h3>Expanding to:</h3>
 
-  <app-topic-skill
-    tId="TypeScript"
-    [skillLevels]="{have: 'advanced', want:'expert'}"
-  ></app-topic-skill>
+  <app-work-experience-list
+    [experience]="experience.expandingTo"
+  ></app-work-experience-list>
 
-  <app-topic-skill
-    tId="RxJS"
-    [skillLevels]="{have: 'advanced', want:'expert'}"
-  ></app-topic-skill>
+  <h3>Earlier experience: <span class="comment">(always curious to learn more, but no particular need right now)</span></h3>
 
-  <app-topic-skill
-    tId="ReactiveX"
-    [skillLevels]="{have: 'advanced', want:'expert'}"
-  ></app-topic-skill>
+  <app-work-experience-list
+    [experience]="experience.earlier"
+  ></app-work-experience-list>
 
+  <h3>Wish-list: <span class="comment">(learning bits and pieces when I can))</span></h3>
 
-
-  <app-topic-skill
-    tId="Firebase"
-    [skillLevels]="{have: 'advanced', want:'expert'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="NgRx"
-    [skillLevels]="{have: 'intermediate', want:'expert'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="TestCafe"
-    [skillLevels]="{have: 'intermediate', want:'expert'}"
-  ></app-topic-skill>
-
-  <h3>Previous experience:</h3>
-
-  <app-topic-skill
-    tId="Java"
-    [skillLevels]="{have: 'advanced'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="Android"
-    [skillLevels]="{have: 'advanced'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="Gradle"
-    [skillLevels]="{have: 'advanced'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="Maven"
-    [skillLevels]="{have: 'advanced'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="Subversion"
-    [skillLevels]="{have: 'advanced'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="Linux"
-    [skillLevels]="{have: 'advanced'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="Ubuntu Linux"
-    [skillLevels]="{have: 'advanced'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="RedHat Linux"
-    [skillLevels]="{have: 'intermediate'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="CentOS Linux"
-    [skillLevels]="{have: 'intermediate'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="Bash"
-    [skillLevels]="{have: 'intermediate'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="macOS"
-    [skillLevels]="{have: 'advanced'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="Kotlin"
-    [skillLevels]="{have: 'advanced'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="Groovy"
-    [skillLevels]="{have: 'intermediate'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="Scala"
-    [skillLevels]="{have: 'intermediate'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="Swift"
-    [skillLevels]="{have: 'intermediate'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="Ruby"
-    [skillLevels]="{have: 'intermediate'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="Python"
-    [skillLevels]="{have: 'intermediate'}"
-  ></app-topic-skill>
-
-
-  <app-topic-skill
-    tId="Perl"
-    [skillLevels]="{have: 'intermediate'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="C"
-    [skillLevels]="{have: 'intermediate'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="C++"
-    [skillLevels]="{have: 'intermediate'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId="C#"
-    [skillLevels]="{have: 'intermediate'}"
-  ></app-topic-skill>
-
-  <app-topic-skill
-    tId=".NET"
-    [skillLevels]="{have: 'intermediate'}"
-  ></app-topic-skill>
+  <app-work-experience-list
+    [experience]="experience.wishList"
+  ></app-work-experience-list>
 
 </section>
 
@@ -229,7 +92,7 @@
   </section>
   <section>
     <h3>Project: Platform for assessing risk </h3>
-    <fa name="male"></fa>Roles: Lead frontend developer and backend developer
+    <fa name="male"></fa>Roles: Lead frontend developer and backend developer, teaching Angular
     <mat-chip-list>
       <app-topic-tag tId="Angular"></app-topic-tag>
       <app-topic-tag tId="Angular i18n"></app-topic-tag>
@@ -247,8 +110,6 @@
       <app-topic-tag tId="Docker"></app-topic-tag>
       <!--<app-topic-tag id="TypeScript"></app-topic-tag>-->
     </mat-chip-list>
-    <app-work-experience-list [experience]="experience"></app-work-experience-list>
-
 
   </section>
   <section>

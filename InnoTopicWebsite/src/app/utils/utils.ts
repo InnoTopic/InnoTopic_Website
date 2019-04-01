@@ -1,7 +1,6 @@
-
-import {AbstractControl, FormControl} from '@angular/forms'
-import {Observable} from 'rxjs/Observable'
-import {combineLatest} from 'rxjs/observable/combineLatest'
+import { AbstractControl } from '@angular/forms';
+import { Observable } from 'rxjs/Observable';
+import { combineLatest } from 'rxjs/observable/combineLatest';
 
 export function setFormControlEnabled(formControl: AbstractControl, enable: boolean) {
   if ( enable ) {
@@ -11,19 +10,6 @@ export function setFormControlEnabled(formControl: AbstractControl, enable: bool
   }
 }
 
-/**
- * Created by kd on 2017-08-01.
- */
-
-export function getDictionaryValuesAsArray<T>(dictionary: { [p: string]: T }): T[] {
-  const values = [];
-  if ( dictionary ) {
-    for (const key in dictionary) {
-      values.push(dictionary[key]);
-    }
-  }
-  return values;
-}
 
 export function isNullOrUndefinedOrWhiteSpace(s: string) {
   if ( ! s ) {

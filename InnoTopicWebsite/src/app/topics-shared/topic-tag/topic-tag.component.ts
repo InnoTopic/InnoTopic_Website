@@ -1,13 +1,13 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { HighlightService } from '../../topics-core/highlight.service';
-import {TagEntry} from '../../topics-core/tag-entry'
+import {Topic} from '../../topics-core/topic'
 import {TopicsService} from '../../topics-core/topics.service'
 
 
 export class TopicInterest {
   // idea: hourly / per-minute rates (in Pro version? :) )
   // name: string;
-  constructor(public tagEntry: TagEntry,
+  constructor(public tagEntry: Topic,
               // public active?: boolean,
               // public level?: string, // level of expertise
 
@@ -55,30 +55,6 @@ export class TopicTagComponent implements OnInit {
       this.isHighlighted = this.tag.tagEntry.id === id
     })
   }
-
-  // shouldHighlightSymmetric() {
-  //   return (
-  //     this.relatedTopicLists &&
-  //     this.relatedTopicLists.symmetric &&
-  //     this.relatedTopicLists.symmetric.tagExists(this.tag.tagEntry)
-  //   )
-  // }
-  //
-  // shouldHighlightSupplyDemandSame() {
-  //   return (
-  //     this.relatedTopicLists &&
-  //     this.relatedTopicLists.supplyDemandSame &&
-  //     this.relatedTopicLists.supplyDemandSame.tagExists(this.tag.tagEntry)
-  //   )
-  // }
-  //
-  // shouldHighlightSupplyDemandMatch() {
-  //   return (
-  //     this.relatedTopicLists &&
-  //     this.relatedTopicLists.supplyDemandMatch &&
-  //     this.relatedTopicLists.supplyDemandMatch.tagExists(this.tag.tagEntry)
-  //   )
-  // }
 
   onMouseEnter() {
     this.highlightService.setHighlight(this.tag.tagEntry.id)
