@@ -26,7 +26,7 @@ export const angularFire = tagNoIcon('AngularFire');
 export const rxJs = tagNoIcon('RxJS');
 export const materialDesign = tag('Material Design', null/** TODO: has icon: https://material.io */);
 export const typeScript = tag('TypeScript');
-export const ionic = tag('Ionic', 'ionic', 'https://ionicframework.com/', [],
+export const ionic = tagLogoType('Ionic', 'ionic', 'https://ionicframework.com/', [],
   new TopicUrls(
     'https://en.wikipedia.org/wiki/Ionic_(mobile_app_framework)',
     'https://github.com/ionic-team/ionic',
@@ -426,7 +426,7 @@ export const topicsOld = [
   tag('Flyway', null, 'https://flywaydb.org/'),
   tag('Spring Boot', null, 'https://projects.spring.io/spring-boot/'),
   tag('Dropwizard', null, 'http://www.dropwizard.io/'),
-  tag('Algolia', undefined, 'https://www.algolia.com/'),
+  tagLogoType('Algolia', undefined, 'https://www.algolia.com/'),
   tag('Digital Marketing', null),
   tag('Django Rest Framework', null, 'http://www.django-rest-framework.org/'),
   tag('Python pandas', null, 'http://pandas.pydata.org/'),

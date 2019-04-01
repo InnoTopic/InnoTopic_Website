@@ -40,11 +40,13 @@ export class Topics {
       'https://stackshare.io/angular-2',
       'https://twitter.com/angular',
     ))
+  Ionic = t() // FIXME: new logo (thicker)
   Promises = t()
   //
   D = t()
   Maven = t()
   Java = t()
+  Hibernate = t()
   Flutter = t()
   Dart = t()
   Git = t()
@@ -90,13 +92,16 @@ export class Topics {
   WebAssembly = t()
   Algolia = t()
   Express = t()
+  RegExp = t()
+  AngularFire = t()
+  Lua = t()
 }
 
 export function transformTopics(inputTopics: Topics) {
   // inputTopics = setIdsFromKeys(inputTopics, 'name')
   for (let topicKey of Object.getOwnPropertyNames(inputTopics)) {
     if ( inputTopics.hasOwnProperty(topicKey) ) {
-      console.log('transformTopics', topicKey)
+      // console.log('transformTopics', topicKey)
       let topic = inputTopics[topicKey]
       if ( ! topic ) {
         topic = new Topic(topicKey)

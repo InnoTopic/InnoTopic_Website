@@ -12,8 +12,12 @@ export const workExperience = {
   main: experience({
     Angular:
       we(advanced, expert),
-    // Promises:
-    //   we(advanced, expert),
+    AngularFire:
+      we(advanced, expert),
+    Promises:
+      we(advanced, expert),
+    Ionic:
+      we(intermediate, expert),
     Git:
       we(advanced, expert),
     GitHub:
@@ -74,12 +78,12 @@ export const workExperience = {
       we(advanced),
     nginx:
       we(advanced),
+    RegExp:
+      we(advanced, expert),
   }),
   additional: experience({
     Java:
       we(advanced),
-   Gradle:
-     we(advanced),
     Swift:
       we(intermediate),
     Python:
@@ -89,9 +93,10 @@ export const workExperience = {
     Flutter: we(),
     Dart: we(),
     // Angular Dart
-
   }),
   earlier: experience({
+    Hibernate:
+      we(intermediate),
     Maven:
       we(advanced),
     Subversion:
@@ -112,6 +117,8 @@ export const workExperience = {
       we(intermediate),
     '.NET':
       we(intermediate),
+    Lua:
+      we(beginner),
   }),
   wishList: experience({
     D:

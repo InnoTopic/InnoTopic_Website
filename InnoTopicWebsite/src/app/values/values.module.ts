@@ -22,6 +22,7 @@ import { CommonModule } from '@angular/common';
   Some things cannot be added as an after-thought, they have to built into the system
   Every few years, technology changes so much that a rewrite might be necessary, but it is beneficial, as the new technologies offer much more.
     Companies which cannot afford or are not willing to do the change - let them die in peace (natural selection), make new room for new, more ambitious companies/products.,
+  Ockham's Razor ("Can we do without it, while still maintiaing the features we want")
 
   In Angular:
     small modules and compnonents

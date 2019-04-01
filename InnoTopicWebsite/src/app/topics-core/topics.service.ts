@@ -18,10 +18,9 @@ export class TopicsService {
   constructor(
 
   ) {
-    console.log('topicsArr', topicsArr)
-
+    // console.log('topicsArr', topicsArr)
     this.topics.push(... topicsArr)
-    console.log('all topics', this.topics)
+    // console.log('all topics', this.topics)
   }
 
 
@@ -29,7 +28,7 @@ export class TopicsService {
   private transformTags(inputList: (Topic|string)[]): Topic[] {
     let retTopicsArray = []
     for ( let elTopic of inputList ) {
-      console.log('transformTags elTopic', elTopic)
+      // console.log('transformTags elTopic', elTopic)
       this.addTopic(elTopic, retTopicsArray)
     }
     return retTopicsArray

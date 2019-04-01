@@ -8,7 +8,7 @@ export function getDictionaryValuesAsArray<T>(dictionary: { [p: string]: T }): T
     for (const key of Object.getOwnPropertyNames(dictionary)) {
       // if (dictionary.hasOwnProperty(key)) {
       let dictionaryElement = dictionary[key];
-      console.log('getDictionaryValuesAsArray', key, dictionaryElement)
+      // console.log('getDictionaryValuesAsArray', key, dictionaryElement)
       values.push(dictionaryElement);
       // }
     }
@@ -19,11 +19,11 @@ export function getDictionaryValuesAsArray<T>(dictionary: { [p: string]: T }): T
 export function setIdsFromKeys<T>(dictionary: T, idKeyName: string = 'id'): T {
   // idKeyName = idKeyName || 'id';
   let ownPropertyNames = Object.getOwnPropertyNames(dictionary);
-  console.log('setIdsFromKeys ownPropertyNames', ownPropertyNames);
+  // console.log('setIdsFromKeys ownPropertyNames', ownPropertyNames);
   for (const id of ownPropertyNames) {
     const curExp = dictionary[id];
     curExp[idKeyName] = id;
-    console.log('setIdsFromKeys', id, curExp);
+    // console.log('setIdsFromKeys', id, curExp);
   }
   return dictionary;
 }

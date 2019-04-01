@@ -2,5 +2,6 @@
   <app-topic-skill
     *ngFor="let exp of experience"
     [tId]="exp.topicId"
+    [skillLevels]="exp.skillLevels"
   ></app-topic-skill><!--    [skillLevels]="exp.skillLevels"-->
 </mat-chip-list>
