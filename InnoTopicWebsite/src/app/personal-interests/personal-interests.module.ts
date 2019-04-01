@@ -4,8 +4,11 @@ import { PersonalInterestsComponent } from './personal-interests.component';
 
 @NgModule({
   declarations: [PersonalInterestsComponent],
+  exports: [
+    PersonalInterestsComponent,
+  ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+  ],
 })
 export class PersonalInterestsModule { }
