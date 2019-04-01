@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(1,0,0,1,-159.864,-489.206)">
+        <g id="g6395">
+            <g id="g6197">
+                <path id="rect6045" d="M235.366,503.748C235.366,498.229 230.885,493.748 225.366,493.748L174.15,493.748C168.631,493.748 164.15,498.229 164.15,503.748L164.15,554.206C164.15,559.725 168.631,564.206 174.15,564.206L225.366,564.206C230.885,564.206 235.366,559.725 235.366,554.206L235.366,503.748Z" style="fill:rgb(212,115,47);"/>
+                <path id="rect6045.-0" d="M233.394,503.467C233.394,499.051 229.809,495.467 225.394,495.467L174.121,495.467C169.706,495.467 166.121,499.051 166.121,503.467L166.121,554.487C166.121,558.902 169.706,562.487 174.121,562.487L225.394,562.487C229.809,562.487 233.394,558.902 233.394,554.487L233.394,503.467Z" style="fill:rgb(229,126,42);"/>
+                <path id="rect6045.-0.-9" d="M232.005,504.273C232.005,500.04 228.568,496.603 224.335,496.603L175.18,496.603C170.947,496.603 167.51,500.04 167.51,504.273L167.51,553.681C167.51,557.914 170.947,561.351 175.18,561.351L224.335,561.351C228.568,561.351 232.005,557.914 232.005,553.681L232.005,504.273Z" style="fill:url(#_Linear1);"/>
+                <g id="path6103" transform="matrix(1,0,0,1,-82.0749,-3.03046)">
+                    <path d="M276.024,548.927C276.024,554.538 271.407,559.155 265.796,559.155C260.186,559.155 255.569,554.538 255.569,548.927C255.569,543.317 260.186,538.7 265.796,538.7C271.407,538.7 276.024,543.317 276.024,548.927Z" style="fill:white;fill-rule:nonzero;"/>
+                </g>
+                <g id="g6174" transform="matrix(1,0,0,1,-80.5597,0)">
+                    <rect id="rect6105" x="254.369" y="504.354" width="25.001" height="6.566" style="fill:white;"/>
+                    <rect id="rect6105.-0" x="254.369" y="514.077" width="25.001" height="6.566" style="fill:white;"/>
+                    <rect id="rect6105.-3" x="254.369" y="523.8" width="25.001" height="6.566" style="fill:white;"/>
+                    <rect id="rect6105.-03" x="281.454" y="504.228" width="25.001" height="6.566" style="fill:white;"/>
+                    <rect id="rect6105.-0.-5" x="281.454" y="513.867" width="25.001" height="6.566" style="fill:white;"/>
+                    <rect id="rect6105.-3.-0" x="281.454" y="523.505" width="25.001" height="6.566" style="fill:white;"/>
+                    <rect id="rect6105.-3.-0.-7" x="281.454" y="533.144" width="25.001" height="6.566" style="fill:white;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(59.1917,61.1142,-61.1142,59.1917,170.036,498.672)"><stop offset="0" style="stop-color:rgb(228,119,47);stop-opacity:1"/><stop offset="0.43" style="stop-color:rgb(246,150,48);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(218,96,41);stop-opacity:1"/></linearGradient>
+    </defs>
+</svg>

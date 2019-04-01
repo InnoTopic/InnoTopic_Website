@@ -1,0 +1,73 @@
+@keyframes ChipAnimation {
+  0% {
+    opacity: 0.0;
+    transform: scale(0) rotateZ(0deg); // rotateY(0)
+  }
+  50% {
+    transform: scale(1.2) rotateZ(10deg); // rotateY(45deg)
+  }
+  100% {
+    opacity: 1.0;
+    transform: scale(1) rotateZ(0deg); // rotateY(0)
+  }
+}
+
+//.tag-chip {
+.mat-chip {
+  transition: all 0.5s ease-in-out;
+  //animation: ChipAnimation 0.5s ease-in-out;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  &.highlight {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  height: 18px !important;
+  vertical-align: middle !important;
+  margin-bottom: 8px !important;
+  margin-right: 6px !important;
+  margin-left: 0 !important;
+  // margin is overwritten by:
+  // >.mat-chip:not(.mat-basic-chip)+.mat-chip:not(.mat-basic-chip) {
+  // > margin: 0 0 0 3px;
+  // >}
+  //transform-style: preserve-3d;
+}
+
+.tag-chip:hover {
+  //transform: scale(1.07);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@mixin highlight-border {
+  border: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+* {
+  transition: all ease-in-out 1s;
+}
+
+:not(.highlight) {
+  img {
+    opacity: 0.6;
+    //filter: sepia(100%);
+    filter: grayscale(100%); // blur(0.5px);
+    //filter: saturate(40%);
+
+  }
+
+}
+
+.highlight {
+  img {
+    opacity: 1;
+    filter: grayscale(0%);
+    //filter: sepia(0%);
+    //filter: saturate(100%);
+  }
+  background-color: yellow;
+  z-index: 2;
+}
