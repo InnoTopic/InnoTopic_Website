@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SkillsSharedModule } from '../skills-shared/skills-shared.module';
 import { TopicsSharedModule } from '../topics-shared/topics-shared.module';
-import { SkillLevelLabelComponent } from './skill-level-label/skill-level-label.component';
+import { TopicSkillComponent } from './topic-skill/topic-skill.component';
 
 let declarations = [
-  SkillLevelLabelComponent,
+  TopicSkillComponent,
 ];
 
 @NgModule({
@@ -12,10 +13,12 @@ let declarations = [
   imports: [
     CommonModule,
     TopicsSharedModule,
+    SkillsSharedModule,
   ],
   exports: [
     ...declarations,
     TopicsSharedModule,
+    SkillsSharedModule,
   ]
 })
-export class SkillsSharedModule { }
+export class TopicSkillsModule { }

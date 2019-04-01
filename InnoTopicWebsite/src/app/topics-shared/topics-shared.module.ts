@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 import { TopicsCoreModule } from '../topics-core/topics-core.module';
 import { TopicLogoComponent } from './topic-logo/topic-logo.component';
-import { TopicSkillComponent } from '../skills-shared/topic-skill/topic-skill.component'
+import { TopicSkillComponent } from '../topic-skills/topic-skill/topic-skill.component'
 import { TopicTagComponent } from './topic-tag/topic-tag.component';
 
 let declarations = [
