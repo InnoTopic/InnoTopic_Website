@@ -17,6 +17,8 @@ export function t() {
 /* Tech topics */
 export class Topics {
   JHipster = t()
+  Meteor = t()
+  PouchDB = t()
   Go = t()
   TestCafe = t()
   Lodash = t()
@@ -41,7 +43,8 @@ export class Topics {
       'https://stackshare.io/angular-2',
       'https://twitter.com/angular',
     ))
-  Ionic = t() // FIXME: new logo (thicker)
+  'Angular Universal' = t()
+  Ionic = t()
   Promises = t()
   //
   D = t()
@@ -92,7 +95,7 @@ export class Topics {
   Rust = t()
   WebAssembly = t()
   Algolia = t()
-  Express = t()
+  'Express.js' = t()
   RegExp = t()
   AngularFire = t()
   Lua = t()
@@ -101,7 +104,15 @@ export class Topics {
   CSS3 = t()
   ElasticSearch = t()
   WebSocket = t()
+  Jest = t()
+  Figma = t()
+  'Node.js' = t()
+  Capacitor = t()
+  Stencil = t()
+  XYZ = t()
    // = t()
+  // TODO: stuff like BugZilla, Trello, Agile Central
+  // TODO: groups (here or in experience), like FrontEnd, BackEnd, Languages, Other
 }
 
 export function transformTopics(inputTopics: Topics) {

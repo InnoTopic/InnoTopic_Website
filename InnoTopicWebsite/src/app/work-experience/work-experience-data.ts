@@ -27,12 +27,12 @@ export const workExperience = {
     // EcmaScript
     GitHub:
       we(advanced, expert),
+    NPM:
+      we(advanced, expert),
     Yarn:
       we(intermediate),
     D3:
       we(intermediate, expert),
-    NPM:
-      we(advanced, expert),
     Lodash:
       we(advanced, expert),
     jQuery:
@@ -87,6 +87,14 @@ export const workExperience = {
       we(intermediate),
     RegExp:
       we(advanced, expert),
+    Jest:
+      we(intermediate, expert),
+    Figma:
+      we(advanced, expert),
+    'Node.js':
+      we(intermediate, expert),
+    'Express.js':
+      we(intermediate, expert),
   }),
   additional: experience({
     Java:
@@ -99,6 +107,7 @@ export const workExperience = {
   expandingTo: experience({
     Flutter: we(),
     Dart: we(),
+    Capacitor: we(),
     // Angular Dart
   }),
   earlier: experience({
@@ -140,6 +149,12 @@ export const workExperience = {
       we(),
     Algolia:
       we(),
+    JHipster:
+      we(),
+    Meteor:
+      we(),
+    PouchDB:
+      we(),
   })
 };
 
@@ -150,5 +165,5 @@ export const experienceAigRap = experience({
   MongoDB: e,
   Mongoose: e,
   KeystoneJS: e,
-  Express: e,
+  // Expressjssss: e,
 })

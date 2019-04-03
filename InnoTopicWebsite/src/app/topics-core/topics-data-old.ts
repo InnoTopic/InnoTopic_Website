@@ -514,8 +514,6 @@ export const topicsOld = [
   'Jest',
 
   tagNoIcon('Electronic Voting'), tagNoIcon('Activism'), tagNoIcon('Volunteering'),
-
-  tagNoIcon('Figma'),
   tagNoIcon('Affinity Designer'),
   tagNoIcon('Psychology'),
   tagNoIcon('StackBlitz'),
