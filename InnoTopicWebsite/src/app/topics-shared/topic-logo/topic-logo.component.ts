@@ -26,7 +26,7 @@ export class TopicLogoComponent implements OnInit {
     }
     this.styles = {
       'width.px': this.width,
-      'height.px': this.height,
+      // 'height.px': this.height,
       'margin-right.px': this.margin,
       'vertical-align': 'middle'
     }
