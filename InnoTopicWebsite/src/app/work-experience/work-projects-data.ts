@@ -1,18 +1,33 @@
-function org(param: { projects: any; time: number[] }) {
-  return param
+import { setIdsFromKeys } from '../utils/dictionary-utils';
+
+export interface Organisation {
+  projects: any
+  time: number[]
 }
 
-function project(param) {
-  return param
+function org(organisation: Organisation) {
+  console.log('processing org', organisation)
+  let projects = organisation.projects;
+  for (let projectId of Object.getOwnPropertyNames(projects)) {
+    let project = projects[projectId];
+    console.log('processing projectId', projectId, project)
+    const topics = project.topics
+    setIdsFromKeys(topics, 'topicId')
+  }
+
+  return organisation
 }
 
 export class OrganisationsAndProjects {
 
   static instance = new OrganisationsAndProjects()
 
+  constructor() {
+  }
+
   AIG = org({
     time: [2017, 2018],
-    projects: project({
+    projects: {
       'Customer-facing application for managing insurance plans and customer data': {
         roles: 'Senior Angular & Node.js Developer',
         topics: {
@@ -23,10 +38,10 @@ export class OrganisationsAndProjects {
           Express: {},
         }
       },
-      'XYZ': {
-
-      }
-    }),
+      // 'XYZ': {
+      //
+      // },
+    },
   })
 
   'Oblong Industries' = org({

@@ -155,6 +155,8 @@ export const workExperience = {
       we(),
     PouchDB:
       we(),
+    GraphQL:
+      we(),
   })
 };
 

@@ -109,6 +109,7 @@ export class Topics {
   'Node.js' = t()
   Capacitor = t()
   Stencil = t()
+  GraphQL = t()
   XYZ = t()
    // = t()
   // TODO: stuff like BugZilla, Trello, Agile Central
