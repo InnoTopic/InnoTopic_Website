@@ -42,7 +42,7 @@ export class Topic {
     public urls?: TopicUrls,
     public dependencies?: Topic[],
     public shortName?: string,
-    public logoTipoWide?: boolean
+    public logoTypeWide?: boolean
   ) {
     // console.log('new Topic(', name)
     this.id = name

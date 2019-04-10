@@ -8,20 +8,7 @@
   }"
 >
   <div style="display:table-cell; vertical-align: middle">
-    <ng-template [ngIf]="tag.tagEntry.logo" >
-      <a *ngIf="! isCustomClick" [routerLink]="'/topic/'+tag.tagEntry.id">
-        <img style="width: 36px; height: 18px; vertical-align: middle"
-             src="{{tag.tagEntry.logo}}" onerror="this.style.display='none';"/>&nbsp;
-      </a>
-      <a *ngIf="isCustomClick">
-        <img style="width: 18px; height: 18px; vertical-align: middle"
-             src="{{tag.tagEntry.logo}}" onerror="this.style.display='none';"/>&nbsp;
-      </a>
-    </ng-template>
-    <ng-template [ngIf]="! tag.tagEntry.logo" > <!-- hack for "vertical-align: middle" slightly shifted if no img -->
-      <img style="width: 0px; height: 18px; vertical-align:middle"
-           src="assets/images/logos/git.svg" onerror="this.style.display='none';"/>&nbsp;
-    </ng-template>
+    <app-topic-logo [topic]="tag.tagEntry"></app-topic-logo>
     <!--<i *ngIf="editable"-->
     <!--class="ion-close-circled"-->
     <!--style="cursor:pointer; color: rgba(0, 0, 0, 0.54); font-size: 20px"-->

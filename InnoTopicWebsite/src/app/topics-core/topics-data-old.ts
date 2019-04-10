@@ -233,7 +233,7 @@ export const topicsOld = [
   tag('Backbone.js', 'backbone-icon'),
   tagNoIcon('Backend'),
   'Socket.IO',
-  tagLogoType('Express', 'express', 'https://expressjs.com', [
+  tagLogoType('Express.js', 'express', 'https://expressjs.com', [
       tag('Kraken.js', 'krakenjs', 'http://krakenjs.com/'),
       tag('FeathersJS', 'feathersjs', 'https://feathersjs.com/'),
       tag('KeystoneJS', 'keystonejs', 'http://keystonejs.com/'),

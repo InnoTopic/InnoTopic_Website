@@ -37,7 +37,7 @@ export class OrganisationsAndProjects {
           TypeScript: {},
           Less: {},
           NodeJS: {},
-          Express: {},
+          'Express.js': {},
         }
       },
       // 'XYZ': {
@@ -54,7 +54,7 @@ export class OrganisationsAndProjects {
           Bootstrap: {},
           Less: {},
           NodeJS: {},
-          Express: {},
+          'Express.js': {},
           'Dexie.js': {},
           'ag-Grid': {},
           'Chart.js': {},

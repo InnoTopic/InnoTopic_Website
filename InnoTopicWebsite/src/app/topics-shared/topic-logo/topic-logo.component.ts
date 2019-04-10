@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Topic } from '../../topics-core/topic';
 
 @Component({
   selector: 'app-topic-logo',
@@ -7,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TopicLogoComponent implements OnInit {
 
+  @Input() public topic: Topic;
   @Input() public url;
   @Input() public width = 18;
   @Input() public height = 18;
@@ -17,6 +19,11 @@ export class TopicLogoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    if ( this.topic ) {
+      this.url = this.topic.logo
+      this.width = this.topic.logoTypeWide ? 48 : 18
+      this.height = this.topic.logoTypeWide ? 24 : 18
+    }
     this.styles = {
       'width.px': this.width,
       'height.px': this.height,
