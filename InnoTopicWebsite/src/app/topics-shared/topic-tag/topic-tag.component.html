@@ -15,7 +15,7 @@
     <!--(click)=deleteTag(chip)></i>-->
 
     <!--<div style="vertical-align: middle; display: inline; height: 100%">-->
-    <span style="display: inline; height: 100%; vertical-align: middle; padding-right: .5em; font-weight: normal; color: gray">
+    <span style="display: inline; height: 100%; vertical-align: middle; font-weight: normal; color: gray">
       <a *ngIf="! isCustomClick" [routerLink]="'/topic/'+tag.tagEntry.id">{{tag.tagEntry.name}}</a>
       <a *ngIf="isCustomClick">{{tag.tagEntry.name}}</a>
       <!--&nbsp;-->
