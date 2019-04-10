@@ -14,7 +14,14 @@ export function t() {
   return null
 }
 
-/* Tech topics */
+/* Tech topics.
+*
+* Grouping:
+* - frontend
+* - backend
+* - tools (e.g. Git)
+* - languages (e.g. TypeScript)
+*/
 export class Topics {
   JHipster = t()
   Meteor = t()
@@ -58,7 +65,7 @@ export class Topics {
   Groovy = t()
   GitHub = t()
   Yarn = t()
-  D3 = t()
+  'D3.js' = t()
   NPM = t()
   jQuery = t()
   SVG = t()

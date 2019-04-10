@@ -31,7 +31,7 @@ export const workExperience = {
       we(advanced, expert),
     Yarn:
       we(intermediate),
-    D3:
+    'D3.js':
       we(intermediate, expert),
     Lodash:
       we(advanced, expert),

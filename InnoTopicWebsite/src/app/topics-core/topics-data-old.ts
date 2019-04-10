@@ -136,7 +136,7 @@ export const topicsOld = [
   tagNoIcon('ASP.NET'), tagNoIcon('ASP.NET MVC'), tagNoIcon('ASP.NET Core MVC') /* https://github.com/aspnet/Mvc */,
   tag('F#', 'fsharp'), 'JRuby',
   tag('iOS'), tag('Swift'), tag('Objective-C', null),
-  tag('D3'), // Vega [Lite] - on top of d3. From Luis Sanchez
+  tag('D3.js', 'd3'), // Vega [Lite] - on top of d3. From Luis Sanchez
 
   webPack,
   tagNoIcon('Web Development'), tagNoIcon('CMS'), tagNoIcon('Selenium'), tagNoIcon('Blog Software'),
