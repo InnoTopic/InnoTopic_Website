@@ -261,7 +261,8 @@ export const topicsOld = [
 
   tagNoIcon('Law'), tagNoIcon('LOPD'),
   tagNoIcon('SEO'), tagNoIcon('JBoss'),
-  tagNoIcon('Functional Programming'), tag('EC2', 'aws-ec2'), tag('GCP', 'logo_gcp_hexagon_rgb.png'), tag('G Suite'),
+  tagNoIcon('Functional Programming'), tag('EC2', 'aws-ec2'),
+  tag('GCP', 'logo_gcp_hexagon_rgb.png' /* FIXME: PNG is not square and takes 300K*/), tag('G Suite'),
   'CocoaPods',
   tagLogoType('ArangoDB'),
   'Auth0',

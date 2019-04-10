@@ -2,9 +2,12 @@
   work-projects-section works!
 </p>
 
-<section *ngFor="let orgKV of organisationsAndProjects | keyvalue">
+<section *ngFor="let orgKV of organisationsAndProjects | keyvalue"
+><ng-template let-org="orgKV.value">
+
+  <img width=120 height=80 [src]="org.logoFileName">
   ORG: {{orgKV.key}}
-  <section *ngFor="let projKV of orgKV.value.projects | keyvalue"
+  <section *ngFor="let projKV of org.projects | keyvalue"
   >
     <h2>PROJ: {{projKV.key}}</h2>
     <fa name="male"></fa> ROLE: {{projKV.value.roles}}
@@ -14,4 +17,6 @@
     </section>
   </section>
 
-</section>
+
+
+</ng-template></section>

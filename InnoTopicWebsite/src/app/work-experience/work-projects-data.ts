@@ -3,6 +3,7 @@ import { setIdsFromKeys } from '../utils/dictionary-utils';
 export interface Organisation {
   projects: any
   time: number[]
+  logoFileName?: string
 }
 
 function org(organisation: Organisation) {
@@ -27,6 +28,7 @@ export class OrganisationsAndProjects {
 
   AIG = org({
     time: [2017, 2018],
+    logoFileName: 'aiglogo_white.svg',
     projects: {
       'Customer-facing application for managing insurance plans and customer data': {
         roles: 'Senior Angular & Node.js Developer',
@@ -51,7 +53,6 @@ export class OrganisationsAndProjects {
           Jasmine: {},
           Bootstrap: {},
           Less: {},
-          TypeScript: {},
           NodeJS: {},
           Express: {},
           'Dexie.js': {},
