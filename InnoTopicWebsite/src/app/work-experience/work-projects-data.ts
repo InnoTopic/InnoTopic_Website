@@ -41,6 +41,26 @@ export class OrganisationsAndProjects {
       // 'XYZ': {
       //
       // },
+      'Platform for assessing risk': {
+        roles: 'Lead frontend developer and backend developer, teaching Angular',
+        topics: {
+          Angular: {},
+          'Angular i18n': {},
+          TypeScript: {},
+          Karma: {},
+          Jasmine: {},
+          Bootstrap: {},
+          Less: {},
+          TypeScript: {},
+          NodeJS: {},
+          Express: {},
+          'Dexie.js': {},
+          'ag-Grid': {},
+          'Chart.js': {},
+          PWA: {},
+          Docker: {},
+        }
+      }
     },
   })
 
