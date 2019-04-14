@@ -28,8 +28,6 @@ export class TopicTagComponent implements OnInit {
   @Input() tId: string;
   @Input() tag: TopicInterest;
   @Input() editable: boolean;
-  // @Input() tagListModel: TagListModel
-  // @Input() relatedTopicLists = [];
   @Input() isCustomClick: boolean = false
 
   @Output() clickTopic = new EventEmitter<any>()

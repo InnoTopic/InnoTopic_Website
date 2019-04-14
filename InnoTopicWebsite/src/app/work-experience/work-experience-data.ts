@@ -12,6 +12,8 @@ export const workExperience = {
   main: experience({
     Angular:
       we(advanced, expert),
+    PrimeNG:
+      we(intermediate, expert),
     AngularFire:
       we(advanced, expert),
     Promises:

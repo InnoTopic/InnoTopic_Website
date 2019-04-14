@@ -46,8 +46,11 @@ export class OrganisationsAndProjects {
       'Platform for assessing risk': {
         roles: 'Lead frontend developer and backend developer, teaching Angular',
         topics: {
-          Angular: {},
-          'Angular i18n': {},
+          Angular: {
+            subTopics: {
+              'i18n': {} /* FIXME */
+            }
+          },
           TypeScript: {},
           Karma: {},
           Jasmine: {},

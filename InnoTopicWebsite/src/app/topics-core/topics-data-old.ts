@@ -42,7 +42,7 @@ export const topicsOld = [
   'Google Plus',
   protractor, karma, jasmine,
   // Cucumber
-  tagNoIcon('PrimeFaces', [],
+  tagLogoType('PrimeFaces', 'PrimeFaces', null, [],
     new TopicUrls(
       'https://www.primefaces.org/',
       'https://es.wikipedia.org/wiki/PrimeFaces',

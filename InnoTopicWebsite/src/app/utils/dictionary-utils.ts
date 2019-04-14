@@ -3,6 +3,7 @@
  */
 
 export function getDictionaryValuesAsArray<T>(dictionary: { [p: string]: T }): T[] {
+  console.log('getDictionaryValuesAsArray dictionary', dictionary)
   const values = [];
   if (dictionary) {
     for (const key of Object.getOwnPropertyNames(dictionary)) {

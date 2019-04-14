@@ -18,7 +18,7 @@ export class TopicsService {
   constructor(
 
   ) {
-    // console.log('topicsArr', topicsArr)
+    console.log('topicsArr', topicsArr)
     this.topics.push(... topicsArr)
     // console.log('all topics', this.topics)
   }
@@ -37,6 +37,7 @@ export class TopicsService {
   getTopicById(topicIdOrName: string, topicsArray?: Topic[]): Topic {
     const topic = this.getTopicByIdIfExisting(/*...arguments*/ topicIdOrName, topicsArray)
     if ( ! topic ) {
+      console.log('getTopicById', this.topics)
       throw new Error('getTopicById failed for topicIdOrName ' + topicIdOrName)
       // console.log(topicsArray)
     }
@@ -44,6 +45,7 @@ export class TopicsService {
   }
 
   getTopicByIdIfExisting(topicIdOrName: string, topicsArray?: Topic[]): Topic {
+    console.log('getTopicByIdIfExisting topicIdOrName', topicIdOrName)
     // TODO: change to hash-map, while doing topic management
     topicsArray = topicsArray || this.topics
     let retVal = topicsArray.find((it: Topic) => it.id.toLowerCase() === topicIdOrName.toLowerCase())
