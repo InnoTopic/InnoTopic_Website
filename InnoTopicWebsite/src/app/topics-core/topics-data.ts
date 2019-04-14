@@ -206,7 +206,7 @@ export class Cloud {
   'Firebase' = t({
     subTopics: {
       // most are from firebase console left navbar:
-      'Authentication': {},
+      'Authentication': t(),
       'Realtime Database': t('Firebase-realtime-database'),
       'Cloud Firestore': t('firebase-firestore'),
       'Storage': t('Firebase-storage'),

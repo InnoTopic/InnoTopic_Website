@@ -3,7 +3,10 @@ import {
   Input,
   OnInit,
 } from '@angular/core';
+import { TopicsService } from '../../topics-core/topics.service';
 import { getDictionaryValuesAsArray } from '../../utils/dictionary-utils';
+
+import * as _ from "lodash";
 
 @Component({
   selector: 'app-work-experience-list',
@@ -14,10 +17,20 @@ export class WorkExperienceListComponent implements OnInit {
 
   @Input() experience
 
-  constructor() { }
+  byCategory = {}
+
+  constructor(
+    public topicsService: TopicsService,
+  ) {
+  }
 
   ngOnInit() {
-    this.experience = getDictionaryValuesAsArray(this.experience)
+    this.experience = getDictionaryValuesAsArray(this.experience).map(exp => {
+      exp.topic = this.topicsService.getTopicById(exp.topicId)
+      exp.category = exp.topic.category
+      return exp
+    })
+    this.byCategory = _.groupBy(this.experience, 'category')
   }
 
 }

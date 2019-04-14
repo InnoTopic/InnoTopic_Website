@@ -1,7 +1,14 @@
-<mat-chip-list>
-  <app-topic-skill
-    *ngFor="let exp of experience"
-    [tId]="exp.topicId"
-    [skillLevels]="exp.skillLevels"
-  ></app-topic-skill><!--    [skillLevels]="exp.skillLevels"-->
-</mat-chip-list>
+<section *ngFor="let categoryKV of byCategory | keyvalue">
+  <h4>Category {{categoryKV.key}}</h4>
+  <mat-chip-list>
+    <app-topic-skill
+      *ngFor="let exp of categoryKV.value"
+      [tId]="exp.topicId"
+      [skillLevels]="exp.skillLevels"
+    ></app-topic-skill><!--    [skillLevels]="exp.skillLevels"-->
+  </mat-chip-list>
+
+</section>
+
+<!--byCategory-->
+<!--<pre>{{byCategory | json}}</pre>-->
