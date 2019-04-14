@@ -13,20 +13,41 @@ import {
   tagNoIcon,
 } from './topics';
 
-export type TopicData = any
+export type TopicData = Partial<Topic>
+export type TopicDataOrLogo = TopicData | string
 
-export function t(topicData?: TopicData) {
-  return topicData || {}
+function coerceLogoToTopicData(topicData: TopicDataOrLogo): TopicData {
+  if (typeof (topicData) === 'string') {
+    topicData = {
+      logo: topicData as string,
+    }
+  }
+  return topicData
+}
+
+export function t(topicData?: TopicDataOrLogo) {
+  topicData = coerceLogoToTopicData(topicData)
+  const topic = Object.create(Topic.prototype)
+  Object.assign(topic, topicData)
+  // TODO: instantiate Topic class (once we have id). But be careful, if using Object.create, ctor is not called
+  console.log('topic instantiated', topic)
+
+  // instantiate as soon as possible, even incomplete object; even before ID
+  // to have access to utility methods e.g. fluent API like .setLogo()
+  // and to avoid changing object prototype
+  // when having id and post-processing, call smth like finaliseAndValidate, which will post-process/mangle id/name if necessary (keep in mind topics-old which already have name&id)
+  // https://jeena.net/constructor-object-create
+  return topic
+}
+
+export function tWide(topicData?: TopicDataOrLogo) {
+  topicData = coerceLogoToTopicData(topicData);
+  return t({...topicData, logoTypeWide: true})
 }
 
 export function tNoIcon(topicData?: TopicData) {
-  return topicData  || {}
+  return t({...topicData, logo: null})
 }
-
-export function tWide(topicData?: TopicData) {
-  return topicData || {}
-}
-
 
 export class Frontend {
   PouchDB = t()
@@ -86,9 +107,8 @@ export class Frontend {
     )
   })
 
-  Ionic = tWide(
-    // TODO: stencil, capacitor
-    new TopicUrls(
+  Ionic = tWide({
+    urls: new TopicUrls(
       'https://ionicframework.com/',
       'https://en.wikipedia.org/wiki/Ionic_(mobile_app_framework)',
       'https://github.com/ionic-team/ionic',
@@ -97,13 +117,10 @@ export class Frontend {
       'https://stackshare.io/ionic',
       'https://twitter.com/Ionicframework',
     )
-  )
+    // TODO: stencil, capacitor
+  })
 
   Lodash = t()
-  // angularFlexLayout,
-  // angularFlexLayoutResponsiveApi,
-
-
 
 }
 
@@ -200,7 +217,8 @@ export class Cloud {
       'Analytics': t(),
       'Grow': t(),
     }
-  });
+  })
+  GCP = t('logo_gcp_hexagon_rgb.png' /* FIXME: PNG is not square and takes 300K*/)
 
 }
 
@@ -260,6 +278,7 @@ export class Other {
   WebAssembly = t()
   Algolia = t()
   'Express.js' = tWide({
+    logo: 'express.svg',
     subTopics: [
       tag('Kraken.js', 'krakenjs', 'http://krakenjs.com/'),
       tag('FeathersJS', 'feathersjs', 'https://feathersjs.com/'),
@@ -299,17 +318,18 @@ export class Other {
   // TODO: groups (here or in experience), like FrontEnd, BackEnd, Languages, Other
 }
 
-export function transformTopics<T>(inputTopics: T/*: Topics*/): T {
+export function processTopics<T>(inputTopics: T/*: Topics*/): T {
   // inputTopics = setIdsFromKeys(inputTopics, 'name')
   for (let topicKey of Object.getOwnPropertyNames(inputTopics)) {
     if ( inputTopics.hasOwnProperty(topicKey) ) {
       // console.log('transformTopics', topicKey)
-      let topic = inputTopics[topicKey]
+      let topic: Topic = inputTopics[topicKey]
       if ( ! topic ) {
         topic = new Topic(topicKey)
       }
       inputTopics[topicKey] = topic
-      topic.id = topicKey // TODO
+      topic.setNameAndLogoAndId(topicKey) // TODO ; or setNameAndIdAndIcon
+      topic.sealAndValidate() // finalise / solidify
     }
   }
   return inputTopics
@@ -335,7 +355,7 @@ function processCategory<T>(cat: T) {
   return cat
 }
 
-export const topics: Topics = transformTopics(
+export const topics: Topics = processTopics(
   // mergeTopics(Frontend, Backend, Other, Testing, {})
   // mergeTopics(new Frontend, Backend, Other, Testing, {})
   Object.assign({},

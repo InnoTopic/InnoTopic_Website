@@ -27,7 +27,6 @@ export class TopicUrls {
   }
 }
 
-/* TODO rename to Topic */
 export class Topic {
   logo: string;
   id: string
@@ -43,24 +42,16 @@ export class Topic {
     public urls?: TopicUrls,
     public dependencies?: Topic[],
     public shortName?: string,
-    public logoTypeWide?: boolean
-  ) {
+    public logoTypeWide?: boolean,
+    // just to match types for now:
+    public iconWebsite?: string,
+    public iconUrl?: string,
+    public subTopics?: any,
+    public organisation?: any,
+    public categories?: any,
+) {
     console.log('new Topic(', name)
-    this.id = name
-      .replace('#', '_Sharp')
-      .replace(/^\./, 'Dot_')
-      .replace(/\./, '_Dot_')
-      .replace(/\//, '_Slash_')
-    if ( this.id !== name ) {
-      // console.log('id mangled from name: ' + this.id)
-    }
-    if ( logo === null ) {
-      this.logo = null;
-    } else if ( logo === undefined ) {
-      this.logo = this.getLogoPath(name);
-    } else {
-      this.logo = this.getLogoPath(logo);
-    }
+    this.setNameAndLogoAndId(name, logo);
     // if ( this.website === undefined ) {
     //   this.website = null // for firebase, because it does not allow to save undefined
     // }
@@ -78,10 +69,38 @@ export class Topic {
     }
   }
 
+  /** Using Convention Over Configuration */
+  public setNameAndLogoAndId(name: string, logo?: string) {
+    console.log('setNameAndLogoAnd name ' + name)
+    this.name = name
+    this.id = name
+      .replace('#', '_Sharp')
+      .replace(/^\./, 'Dot_')
+      .replace(/\./, '_Dot_')
+      .replace(/\//, '_Slash_');
+    if (this.id !== name) {
+      // console.log('id mangled from name: ' + this.id)
+    }
+    if ( this.logo === undefined /* do not override */ ) {
+      if (logo === null) {
+        this.logo = null;
+      } else if (logo === undefined) {
+        this.logo = this.getLogoPath(name);
+      } else {
+        this.logo = this.getLogoPath(logo);
+      }
+    } else {
+      if ( this.logo !== null ) {
+        this.logo = this.getLogoPath(this.logo)
+      }
+    }
+    console.log('setNameAndLogoAndId ' + this.id, this)
+  }
+
   public getLogoPath(tag: string) {
     // return '../../../assets/images/logos/' + tag.toLowerCase() + '-icon.svg'
     return '../../../assets/images/logos/' + tag.toLowerCase().replace(/ /g, '-') +
-      (tag.toLowerCase().endsWith('.png') ? '' : '.svg')
+      (tag.toLowerCase().match(/.*\.(png|svg)$/) ? '' : '.svg')
   }
 
   matchesTextFilter(filterString: string) {
@@ -113,4 +132,7 @@ export class Topic {
     return this
   }
 
+  sealAndValidate() {
+    // FIXME
+  }
 }
