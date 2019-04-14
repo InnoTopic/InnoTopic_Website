@@ -157,6 +157,10 @@ export const workExperience = {
       we(),
     GraphQL:
       we(),
+    Dart:
+      we(),
+    Flutter:
+      we(),
   })
 };
 

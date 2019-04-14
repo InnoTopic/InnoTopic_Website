@@ -25,8 +25,8 @@ export class TopicLogoComponent implements OnInit {
       this.height = this.topic.logoTypeWide ? 24 : 18
     }
     this.styles = {
-      'width.px': this.width,
-      // 'height.px': this.height,
+      'width.px': this.width, // TODO: try limiting width instead of height
+      'height.px': this.height, // better to specify both width and height, coz less layout jumping on loading
       'margin-right.px': this.margin,
       'vertical-align': 'middle'
     }

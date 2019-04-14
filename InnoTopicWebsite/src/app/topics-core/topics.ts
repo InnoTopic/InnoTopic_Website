@@ -7,7 +7,7 @@ export function tag(name: string, logo?: string, webSite?: string, related?: Top
   return new Topic(name, logo, webSite, related, urls, undefined, undefined, logoTipoWide);
 }
 
-export function tagNoIcon(name: string, gitHubLink?: string, related?: Topic[], urls?: TopicUrls) {
+export function tagNoIcon(name: string, related?: Topic[], urls?: TopicUrls) {
   return new Topic(name, null, null, related, urls);
 }
 

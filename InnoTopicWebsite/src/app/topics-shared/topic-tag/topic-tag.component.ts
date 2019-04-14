@@ -3,7 +3,6 @@ import { HighlightService } from '../../topics-core/highlight.service';
 import {Topic} from '../../topics-core/topic'
 import {TopicsService} from '../../topics-core/topics.service'
 
-
 export class TopicInterest {
   // idea: hourly / per-minute rates (in Pro version? :) )
   // name: string;
@@ -34,7 +33,6 @@ export class TopicTagComponent implements OnInit {
   @Input() isCustomClick: boolean = false
 
   @Output() clickTopic = new EventEmitter<any>()
-  height = '18px';
   isHighlighted = false
 
   constructor(

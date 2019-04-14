@@ -6,46 +6,17 @@ import {
 } from './topics';
 import { topics } from './topics-data';
 
-export const firebase = tag('Firebase').setRelated(
-  // most are from firebase console left navbar:
-  tagNoIcon('Firebase Authentication').setLogo('Firebase'),
-  tagNoIcon('Firebase Realtime Database').setLogo('Firebase-realtime-database'),
-  tagNoIcon('Firebase Cloud Firestore').setLogo('firebase-firestore'),
-  tagNoIcon('Firebase Storage').setLogo('Firebase-storage'),
-  tagNoIcon('Firebase Hosting').setLogo('Firebase-hosting'),
-  tagNoIcon('Firebase Cloud Functions').setLogo('Firebase'),
-  tagNoIcon('Firebase Stability').setLogo('Firebase'),
-  tagNoIcon('Firebase Crashlytics').setLogo('Crashlytics'),
-  tagNoIcon('Firebase Analytics').setLogo('Firebase'),
-  tagNoIcon('Firebase Grow').setLogo('Firebase'),
-  // Firebase: hosting, analytics, authentication, ...
-
-);
 export const angularMaterial = tag('Angular Material');
 export const angularFire = tagNoIcon('AngularFire');
 export const rxJs = tagNoIcon('RxJS');
 export const materialDesign = tag('Material Design', null/** TODO: has icon: https://material.io */);
-export const typeScript = tag('TypeScript');
-export const ionic = tagLogoType('Ionic', 'ionic', 'https://ionicframework.com/', [],
-  new TopicUrls(
-    'https://en.wikipedia.org/wiki/Ionic_(mobile_app_framework)',
-    'https://github.com/ionic-team/ionic',
-    'https://www.npmjs.com/package/ionic',
-    'https://stackoverflow.com/questions/tagged/ionic-framework',
-    'https://stackshare.io/ionic',
-    'https://twitter.com/Ionicframework',
-  ));
 export const reactiveX = tag('ReactiveX');
-export const angularFlexLayout = tagNoIcon('Angular Flex-Layout', 'https://github.com/angular/flex-layout').setLogo('angular');
-export const angularFlexLayoutResponsiveApi = tagNoIcon(
-  'Angular Flex-Layout Responsive API', 'https://github.com/angular/flex-layout/wiki/Responsive-API').setLogo('angular');
 export const protractor = tag('Protractor');
 export const sass = tag('Sass');
 export const npm = tagLogoType('NPM');
 export const karma = tag('Karma');
 export const jasmine = tag('Jasmine');
 export const webPack = tag('Webpack');
-export const angular = topics.Angular;
 export const businessNetworking = tagNoIcon('Business Networking').setLogo('business--chart-line');
 export const entrepreneurship = tagNoIcon('Entrepreneurship').setLogo('business--chart-line');
 
@@ -54,29 +25,10 @@ export const entrepreneurship = tagNoIcon('Entrepreneurship').setLogo('business-
 /** ============= */
 /** ============= */
 export const topicsOld = [
-  angular, tagNoIcon('Angular Universal').setLogo('angular'),
-  tagNoIcon('AngularJS', null, [],
-    new TopicUrls(
-      'https://en.wikipedia.org/wiki/AngularJS',
-      'https://github.com/angular/angular.js',
-      null,
-      'https://stackoverflow.com/questions/tagged/angularjs',
-      'https://stackshare.io/angularjs',
-      null,
-    )),
-  tagNoIcon('PrimeNG', null,[],
-    new TopicUrls(
-      null,
-      'https://github.com/primefaces/primeng',
-      'https://www.npmjs.com/package/primeng',
-      'https://stackoverflow.com/questions/tagged/primeng',
-      null,
-      'https://twitter.com/prime_ng'
-    )),
-  ionic, firebase,
   tagNoIcon('Web Performance Optimizations'),
-  tagNoIcon('Google Maps',null, [],
+  tagNoIcon('Google Maps', [],
     new TopicUrls(
+      null,
       'https://en.wikipedia.org/wiki/Google_Maps',
       'https://github.com/googlemaps/',
       'https://www.npmjs.com/package/google-maps',
@@ -90,8 +42,9 @@ export const topicsOld = [
   'Google Plus',
   protractor, karma, jasmine,
   // Cucumber
-  tagNoIcon('PrimeFaces',null, [],
+  tagNoIcon('PrimeFaces', [],
     new TopicUrls(
+      'https://www.primefaces.org/',
       'https://es.wikipedia.org/wiki/PrimeFaces',
       'https://github.com/primefaces/primefaces',
       null,
@@ -99,8 +52,9 @@ export const topicsOld = [
       null,
       'https://twitter.com/primefaces'
     )),
-  tag('PHP', 'php', 'http://www.php.net/', [],
+  tag('PHP', 'php', null, [],
     new TopicUrls(
+      'http://www.php.net/',
       'https://en.wikipedia.org/wiki/PHP',
       'https://github.com/php',
       'https://www.npmjs.com/search?q=php&page=1&ranking=popularity',
@@ -108,9 +62,10 @@ export const topicsOld = [
       'https://stackshare.io/php',
       'https://twitter.com/php_net'
     )),
-  materialDesign, typeScript,
-  tag('Django', 'django', 'https://www.djangoproject.com/', [],
+  materialDesign,
+  tag('Django', 'django', null, [],
     new TopicUrls(
+      'https://www.djangoproject.com/',
       'https://en.wikipedia.org/wiki/Django_(web_framework)',
       'https://github.com/django/django',
       null,
@@ -118,8 +73,9 @@ export const topicsOld = [
       'https://stackoverflow.com/questions/tagged/django',
       'https://twitter.com/djangoproject'
     )),
-  tag('Python', 'python', 'https://www.python.org/', [],
+  tag('Python', 'python', null, [],
     new TopicUrls(
+      'https://www.python.org/',
       'https://en.wikipedia.org/wiki/Python_(programming_language)',
       'https://github.com/python',
       null,
@@ -131,11 +87,10 @@ export const topicsOld = [
   tag('PeopleMatcher'),
   tag('TopicFriends', 'PeopleMatcher'),
   tag('UAP', null),
-  tag('Android'), tag('Kotlin'), tag('KotlinJS', null), tag('Java'), tagNoIcon('Java EE'), 'C++', 'C',
-  tag('C#', 'c_sharp'),
+  tag('Kotlin'), tag('KotlinJS', null), tagNoIcon('Java EE'),
   tagNoIcon('ASP.NET'), tagNoIcon('ASP.NET MVC'), tagNoIcon('ASP.NET Core MVC') /* https://github.com/aspnet/Mvc */,
   tag('F#', 'fsharp'), 'JRuby',
-  tag('iOS'), tag('Swift'), tag('Objective-C', null),
+  tag('Objective-C', null),
   tag('D3.js', 'd3'), // Vega [Lite] - on top of d3. From Luis Sanchez
 
   webPack,
@@ -146,15 +101,14 @@ export const topicsOld = [
   'Elm', 'Scala', tag('.NET', 'dotnet'), tag('.NET Core', null), 'Docker', 'ElasticSearch',
   tagNoIcon('Akka'),
   tagLogoType('Ember'), 'React', 'Redux', 'MobX', tagNoIcon('React Native'), 'Xamarin', tagNoIcon('Xamarin.Forms'),
-  'Git',
   tag('TensorFlow', 'tensorflow'), 'OpenCV', // TODO: Keras
   'Appium', tagNoIcon('Robotium'),
-  'JHipster', tagLogoType('Meteor'), tagLogoType('Hoodie'),
   'Laravel', 'CakePHP', 'Zend Framework', 'CodeIgniter', 'Symfony',
   tag('CSS3', 'css-3'), tag('Responsive Design', null), tag('HTML5', 'html-5'),
   tagLogoType('PWA'), tagNoIcon('SPA'), tag('REST', null), tag('HTTP', null), tag('WebSocket'), 'WebRTC', tagLogoType('Upwork'),
   tagLogoType('NodeJS').setName('Node.JS'), npm,
-  tag('Seneca', 'seneca', 'http://senecajs.org/', [], new TopicUrls(
+  tag('Seneca', 'seneca', null, [], new TopicUrls(
+    'http://senecajs.org/',
     null,
     'https://github.com/senecajs/seneca',
     'https://www.npmjs.com/package/seneca',
@@ -163,7 +117,8 @@ export const topicsOld = [
     'https://twitter.com/senecajs',
     null
   )),
-  tag('Swagger', 'swagger', 'https://swagger.io/', [], new TopicUrls(
+  tag('Swagger', 'swagger', null, [], new TopicUrls(
+    'https://swagger.io/',
     'https://en.wikipedia.org/wiki/Swagger_(software)',
     'https://github.com/swagger-api/swagger-core',
     'https://www.npmjs.com/package/swagger',
@@ -233,23 +188,6 @@ export const topicsOld = [
   tag('Backbone.js', 'backbone-icon'),
   tagNoIcon('Backend'),
   'Socket.IO',
-  tagLogoType('Express.js', 'express', 'https://expressjs.com', [
-      tag('Kraken.js', 'krakenjs', 'http://krakenjs.com/'),
-      tag('FeathersJS', 'feathersjs', 'https://feathersjs.com/'),
-      tag('KeystoneJS', 'keystonejs', 'http://keystonejs.com/'),
-      tag('LoopBack', 'loopback', 'https://loopback.io/'),
-      tag('MEAN Stack', 'meanio', 'http://mean.io/'),
-      tag('Sails', 'sails', 'http://sailsjs.com/'),
-    ], new TopicUrls(
-    'https://en.wikipedia.org/wiki/Express.js',
-    'https://github.com/expressjs/express',
-    'https://www.npmjs.com/package/express',
-    'https://stackoverflow.com/questions/tagged/express',
-    'https://stackshare.io/expressjs',
-    'https://twitter.com/expressjs',
-    // TOOD: 'https://alternativeto.net/software/expressjs/',
-    )
-  ),
   'Sinatra',
   tag('NgRx' /* I've also seen different capitalizations: NgRx, ngRx etc */),
   tag('NGXS'),
@@ -270,15 +208,15 @@ export const topicsOld = [
   tag('GitHub', 'github-icon'),
   tagNoIcon('Stencil'), /* Ionic */
   'OData', tagNoIcon('PowerBI'), tagNoIcon('SignalR'), // Mark S.
-  tagNoIcon('Voice Interfaces'),
-  tagNoIcon('Amazon Alexa'),
-  tagNoIcon('Amazon Echo'),
-  tagNoIcon('Google Home'),
-  tagNoIcon('Cortana'),
-  tagNoIcon('Google Docs'),
-  tagNoIcon('Google AdWords'),
-  tagNoIcon('Google AdSense'),
-  tagNoIcon('Google Analytics'),
+  // tagNoIcon('Voice Interfaces'),
+  // tagNoIcon('Amazon Alexa'),
+  // tagNoIcon('Amazon Echo'),
+  // tagNoIcon('Google Home'),
+  // tagNoIcon('Cortana'),
+  // tagNoIcon('Google Docs'),
+  // tagNoIcon('Google AdWords'),
+  // tagNoIcon('Google AdSense'),
+  // tagNoIcon('Google Analytics'),
   tagNoIcon('Frontend'),
   tagNoIcon('Telerik UI'),
   tagNoIcon('Kendo UI'),
@@ -402,14 +340,12 @@ export const topicsOld = [
   tagNoIcon('Calabash'),
   tagNoIcon('Calabash iOS'),
   tagNoIcon('Calabash Android'),
-  'Jira',
   'GitLab',
   tagNoIcon('Mapbox Studio'),
   tagNoIcon('SystemJS'),
   'json',
   'OAuth',
   'jspm',
-  tagLogoType('ag-Grid'),
   'SendGrid',
   'MailChimp',
   tag('Sauce Labs', 'saucelabs'),

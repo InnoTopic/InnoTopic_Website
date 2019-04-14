@@ -4,12 +4,13 @@ function escapeRegexp(s) {
 
 export class TopicUrls {
   constructor(
-    public wikipedia,
-    public gitHub,
-    public npm,
-    public stackOverFlow,
-    public stackShare,
-    public twitter,
+    public webSite,
+    public wikipedia?,
+    public gitHub?,
+    public npm?,
+    public stackOverFlow?,
+    public stackShare?,
+    public twitter?,
     public alternativeTo?,
     public changeLog?,
     public runKit?,
@@ -44,7 +45,7 @@ export class Topic {
     public shortName?: string,
     public logoTypeWide?: boolean
   ) {
-    // console.log('new Topic(', name)
+    console.log('new Topic(', name)
     this.id = name
       .replace('#', '_Sharp')
       .replace(/^\./, 'Dot_')
@@ -60,15 +61,15 @@ export class Topic {
     } else {
       this.logo = this.getLogoPath(logo);
     }
-    if ( this.website === undefined ) {
-      this.website = null // for firebase, because it does not allow to save undefined
-    }
+    // if ( this.website === undefined ) {
+    //   this.website = null // for firebase, because it does not allow to save undefined
+    // }
     if ( this.related === undefined ) {
       this.related = null // for firebase, because it does not allow to save undefined
     }
-    if ( this.urls === undefined ) {
-      this.urls = new TopicUrls(null, null, null, null, null, null) // for firebase, because it does not allow to save undefined
-    }
+    // if ( this.urls === undefined ) {
+    //   this.urls = new TopicUrls(null, null, null, null, null, null) // for firebase, because it does not allow to save undefined
+    // }
     if ( this.id.match(/\.|#|\$|\[|\]|\//) ) {
       const message = 'Topic id contains illegal char: '
       console.error(message, this)
