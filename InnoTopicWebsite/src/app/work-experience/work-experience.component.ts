@@ -3,7 +3,6 @@ import {
   OnInit,
 } from '@angular/core';
 import {
-  experienceAigRap,
   workExperience,
 } from './work-experience-data';
 

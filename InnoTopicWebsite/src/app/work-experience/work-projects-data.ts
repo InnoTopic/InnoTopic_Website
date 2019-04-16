@@ -36,7 +36,7 @@ export class OrganisationsAndProjects {
           Angular: {},
           TypeScript: {},
           Less: {},
-          NodeJS: {},
+          'Node.js': {},
           'Express.js': {},
         }
       },
@@ -56,13 +56,17 @@ export class OrganisationsAndProjects {
           Jasmine: {},
           Bootstrap: {},
           Less: {},
-          NodeJS: {},
+          'Node.js': {},
           'Express.js': {},
           'Dexie.js': {},
           'ag-Grid': {},
           'Chart.js': {},
           PWA: {},
           Docker: {},
+          Lodash: {},
+          MongoDB: {},
+          Mongoose: {},
+          KeystoneJS: {},
         }
       }
     },

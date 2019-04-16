@@ -8,10 +8,12 @@ import {
 } from './work-experience';
 
 /** Can split into: main experience(critical), additional (wanna learn more, but not critical)*/
-export const workExperience = {
-  main: experience({
+export class WorkExperienceData {
+  main = experience({
     Angular:
       we(advanced, expert),
+    'Chart.js':
+      we(advanced),
     GCP:
       we(advanced, expert),
     PrimeNG:
@@ -99,22 +101,28 @@ export const workExperience = {
       we(intermediate, expert),
     'Express.js':
       we(intermediate, expert),
-  }),
-  additional: experience({
+    'Chrome Extensions':
+      we(intermediate, expert),
+    NoSQL:
+      we(advanced, expert),
+    WebStorm: we(advanced, expert),
+    'Visual Studio Code': we(intermediate, expert),
+  })
+  additional = experience({
     Java:
       we(advanced),
     Swift:
       we(intermediate),
     Python:
       we(intermediate),
-  }),
-  expandingTo: experience({
+  })
+  expandingTo = experience({
     Flutter: we(),
     Dart: we(),
     Capacitor: we(),
     // Angular Dart
-  }),
-  earlier: experience({
+  })
+  earlier = experience({
     'Java Swing':
       we(advanced),
     Hibernate:
@@ -141,39 +149,22 @@ export const workExperience = {
       we(intermediate),
     Lua:
       we(beginner),
-  }),
-  wishList: experience({
-    D:
-      we(),
-    Rust:
-      we(),
-    Go:
-      we(),
-    WebAssembly:
-      we(),
-    Algolia:
-      we(),
-    JHipster:
-      we(),
-    Meteor:
-      we(),
-    PouchDB:
-      we(),
-    GraphQL:
-      we(),
-    Dart:
-      we(),
-    Flutter:
-      we(),
   })
-};
+  wishList = experience({
+    D: we(),
+    Rust: we(),
+    Go: we(),
+    WebAssembly: we(),
+    Algolia: we(),
+    ElasticSearch: we(),
+    JHipster: we(),
+    Meteor: we(),
+    Aurelia: we(),
+    PouchDB: we(),
+    GraphQL: we(),
+    Dart: we(),
+    Flutter: we(),
+  })
+}
 
-
-const e = we();
-
-export const experienceAigRap = experience({
-  MongoDB: e,
-  Mongoose: e,
-  KeystoneJS: e,
-  // Expressjssss: e,
-})
+export const workExperience = new WorkExperienceData()

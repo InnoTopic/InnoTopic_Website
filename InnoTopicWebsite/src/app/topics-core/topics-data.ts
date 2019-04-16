@@ -30,7 +30,7 @@ export function t(topicData?: TopicDataOrLogo) {
   const topic = Object.create(Topic.prototype)
   Object.assign(topic, topicData)
   // TODO: instantiate Topic class (once we have id). But be careful, if using Object.create, ctor is not called
-  console.log('topic instantiated', topic)
+  // console.log('topic instantiated', topic)
 
   // instantiate as soon as possible, even incomplete object; even before ID
   // to have access to utility methods e.g. fluent API like .setLogo()
@@ -50,7 +50,16 @@ export function tNoIcon(topicData?: TopicData) {
 }
 
 export class Frontend {
-  PouchDB = t()
+  'HTML5' = t({logo: 'html-5'})
+  'CSS3' = t({logo: 'css-3'})
+  'PWA' = tWide()
+  'D3.js' = t({logo: 'd3'}) // Vega [Lite] - on top of d3. From Luis Sanchez
+  'Chart.js' = t({logo: "chart-js" /* non-standard svg*/})
+  'Stylus' = tWide()
+  'Less' = tWide()
+  'Sass' = t()
+
+  PouchDB = t({categories: 'Databases'})
   PrimeNG = t({
     iconWebsite: 'https://www.primefaces.org/press-kit/',
     iconUrl: 'https://www.primefaces.org/presskit/primeng-logo.svg',
@@ -95,6 +104,7 @@ export class Frontend {
       'Angular Universal': t()
     }
   })
+  'Angular Material' = t()
   AngularJS = tNoIcon({
     urls: new TopicUrls(
       null,
@@ -121,37 +131,88 @@ export class Frontend {
   })
 
   Lodash = t()
+  Bootstrap = t()
+  jQuery = tWide()
+  'ag-Grid' = tWide()
+  AngularFire = t()
+  NgRx = t()
+  NGXS = tNoIcon()
+  WebSocket = t()
+  Stencil = t()
+  'Chrome Extensions' = t('chrome')
+  'Dexie.js' = t('dexie-js')
+  'Aurelia' = t()
+}
+
+export class JavaScript {
+  Promises = t()
+  RxJS = t()
+  // TODO: more like ecosystem
+}
+
+export class Java {
+  // TODO: more like ecosystem
 
 }
 
 export class Backend {
+  'Node.js' = tWide('nodejs')
+
+  'Express.js' = tWide({
+    logo: 'express.svg',
+    subTopics: [
+      tag('Kraken.js', 'krakenjs', 'http://krakenjs.com/'),
+      tag('FeathersJS', 'feathersjs', 'https://feathersjs.com/'),
+      tag('LoopBack', 'loopback', 'https://loopback.io/'),
+      tag('MEAN Stack', 'meanio', 'http://mean.io/'),
+      tag('Sails', 'sails', 'http://sailsjs.com/'),
+    ],
+    urls: new TopicUrls(
+      'https://expressjs.com',
+      'https://en.wikipedia.org/wiki/Express.js',
+      'https://github.com/expressjs/express',
+      'https://www.npmjs.com/package/express',
+      'https://stackoverflow.com/questions/tagged/express',
+      'https://stackshare.io/expressjs',
+      'https://twitter.com/expressjs',
+      // TOOD: 'https://alternativeto.net/software/expressjs/',
+    )
+  })
+
+  KeystoneJS = t({
+    urls: new TopicUrls(
+      'http://keystonejs.com/'
+    ),
+  })
   D = t()
   Maven = t()
   Java = t()
   Hibernate = t()
-  Flutter = t()
 }
 
 
-export class FrontendAndBackend /* App Platforms */{
+export class Frontend_And_Backend_App_Platforms {
   JHipster = t()
   Meteor = tWide()
   Hoodie = tWide()
-
 }
-
 
 export class Testing {
   TestCafe = t()
+  Jest = t()
+  Karma = t()
+  Jasmine = t()
 
   // TODO: TestNG
   // TODO: JUnit
 }
 
 export class Tools {
+  WebStorm = t()
+  'Visual Studio Code' = t()
 }
 
-export class ProjectManagementTools {
+export class Project_Management_Tools {
   'Agile Central' = t()
   'Bugzilla' = t()
   'JTrac' = t()
@@ -168,14 +229,19 @@ export class ProjectManagementTools {
 
 export class Graphics {
   // TODO FIGma, inkscape, Affinity Designer, GIMP
-  SVG = t()
+  SVG = t({
+    categories: 'Frontend',
+  })
+  Figma = t()
 
 }
 
 export class Languages {
   Go = t()
   TypeScript = t()
-  Kotlin = t()
+  Kotlin = t({
+    categories: 'Mobile',
+  })
   Swift = t()
   Python = t()
   Scala = t()
@@ -183,9 +249,15 @@ export class Languages {
   Perl = t()
   C = t()
   'C++' = t()
-  'C#' = t()
+  'C#' = t('c_sharp')
   Dart = t()
   Groovy = t()
+  Rust = t()
+  WebAssembly = t({
+    categories: "Frontend",
+    ecosystem: "JavaScript",
+  })
+
 }
 
 export class OS {
@@ -199,7 +271,8 @@ export class OS {
 export class Mobile {
   iOS = t()
   Android = t()
-
+  Capacitor = t()
+  Flutter = t()
 }
 
 export class Cloud {
@@ -223,97 +296,56 @@ export class Cloud {
 }
 
 export class Databases {
-
+  MongoDB = t()
+  Mongoose = t()
+  GraphQL = t()
+  NoSQL = tNoIcon()
+  PostgreSQL = t()
+  MySQL = t()
+  Oracle = t()
+  // TODO: sqlite
 }
 
-export class VersionControl {
-  Git = t()
+export class Version_Control {
+  Git = t({
+    subTopics: {
+      Rebase: {},
+      Submodules: {},
+      Bisect: {},
+    }
+  })
   GitHub = t({
-    categories: 'ProjectManagementTools' /* secondary categories */
+    logo: 'github-icon',
+    categories: 'ProjectManagementTools' /* secondary categories */,
   })
   Subversion = t()
 
 }
 
 
-/* Tech topics.
+/*
+* Tech topics.
 *
 * Grouping (pick the right granularity based on count) :
-* - frontend
-* - backend
-* - mobile
-* - cloud
-* - testing
-* - languages (e.g. TypeScript)
-* - tools (e.g. Git)
-* - OS (Linux, Bash)
 */
 export class Other {
 
-  Promises = t()
   //
   Yarn = t()
-  'D3.js' = t()
   NPM = t()
-  jQuery = t()
-  'ag-Grid' = tWide()
-  MongoDB = t()
-  Mongoose = t()
-  Bootstrap = t()
-  RxJS = t()
+
   ReactiveX = t()
   Firebase = t()
-  NgRx = t()
-  NGXS = t()
-  KeystoneJS = t({
-    urls: new TopicUrls(
-      'http://keystonejs.com/'
-    ),
-  })
   Bash = t()
   Gradle = t()
   nginx = t()
   '.NET' = t()
-  Rust = t()
-  WebAssembly = t()
   Algolia = t()
-  'Express.js' = tWide({
-    logo: 'express.svg',
-    subTopics: [
-      tag('Kraken.js', 'krakenjs', 'http://krakenjs.com/'),
-      tag('FeathersJS', 'feathersjs', 'https://feathersjs.com/'),
-      tag('LoopBack', 'loopback', 'https://loopback.io/'),
-      tag('MEAN Stack', 'meanio', 'http://mean.io/'),
-      tag('Sails', 'sails', 'http://sailsjs.com/'),
-    ],
-    urls: new TopicUrls(
-      'https://expressjs.com',
-      'https://en.wikipedia.org/wiki/Express.js',
-      'https://github.com/expressjs/express',
-      'https://www.npmjs.com/package/express',
-      'https://stackoverflow.com/questions/tagged/express',
-      'https://stackshare.io/expressjs',
-      'https://twitter.com/expressjs',
-      // TOOD: 'https://alternativeto.net/software/expressjs/',
-    )
-  })
 
-  RegExp = t()
-  AngularFire = t()
+  RegExp = tNoIcon()
   Lua = t()
   'Java Swing' = t()
-  HTML5 = t()
-  CSS3 = t()
   ElasticSearch = t()
-  WebSocket = t()
-  Jest = t()
-  Figma = t()
-  'Node.js' = t()
-  Capacitor = t()
-  Stencil = t()
-  GraphQL = t()
-  XYZ = t()
-   // = t()
   // TODO: stuff like BugZilla, Trello, Agile Central
   // TODO: groups (here or in experience), like FrontEnd, BackEnd, Languages, Other
 }
@@ -336,8 +368,8 @@ export function processTopics<T>(inputTopics: T/*: Topics*/): T {
 }
 
 export type Topics =
-  Frontend & FrontendAndBackend & Backend & Other & Testing & Tools & Languages & OS & Mobile & Cloud &
-  ProjectManagementTools & Graphics & VersionControl & Databases
+  Frontend & Frontend_And_Backend_App_Platforms & Backend & Other & Testing & Tools & Languages & OS & Mobile & Cloud &
+  Project_Management_Tools & Graphics & Version_Control & Databases & Java & JavaScript
 
 console.log('new Frontend().constructor.name', new Frontend().constructor.name)
 console.log('new Frontend.name', Frontend.name)
@@ -349,7 +381,7 @@ function mergeTopics<T1, T2, T3, T4, T5>(t1: T1, t2: T2, t3: T3, t4: T4, t5?: T5
 function processCategory<T>(cat: T) {
   let catName = cat.constructor.name;
   Object.keys(cat).forEach(key => {
-    console.log('processing category key', key)
+    // console.log('processing category key', key)
     cat[key].category = catName
   });
   return cat
@@ -361,18 +393,20 @@ export const topics: Topics = processTopics(
   Object.assign({},
     processCategory(new Frontend()),
     processCategory(new Backend()),
-    processCategory(new FrontendAndBackend()),
+    processCategory(new Frontend_And_Backend_App_Platforms()),
     processCategory(new Other()),
     processCategory(new Testing()),
     processCategory(new Tools()),
     processCategory(new Languages()),
     processCategory(new Databases()),
-    processCategory(new VersionControl()),
-    processCategory(new ProjectManagementTools()),
+    processCategory(new Version_Control()),
+    processCategory(new Project_Management_Tools()),
     processCategory(new Graphics()),
     processCategory(new OS()),
     processCategory(new Mobile()),
     processCategory(new Cloud()),
+    processCategory(new Java),
+    processCategory(new JavaScript()),
   )
 )
 

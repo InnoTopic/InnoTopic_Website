@@ -6,16 +6,7 @@ import {
 } from './topics';
 import { topics } from './topics-data';
 
-export const angularMaterial = tag('Angular Material');
-export const angularFire = tagNoIcon('AngularFire');
-export const rxJs = tagNoIcon('RxJS');
 export const materialDesign = tag('Material Design', null/** TODO: has icon: https://material.io */);
-export const reactiveX = tag('ReactiveX');
-export const protractor = tag('Protractor');
-export const sass = tag('Sass');
-export const npm = tagLogoType('NPM');
-export const karma = tag('Karma');
-export const jasmine = tag('Jasmine');
 export const webPack = tag('Webpack');
 export const businessNetworking = tagNoIcon('Business Networking').setLogo('business--chart-line');
 export const entrepreneurship = tagNoIcon('Entrepreneurship').setLogo('business--chart-line');
@@ -40,7 +31,6 @@ export const topicsOld = [
   'Twitter',
   tagLogoType('LinkedIn'),
   'Google Plus',
-  protractor, karma, jasmine,
   // Cucumber
   tagLogoType('PrimeFaces', 'PrimeFaces', null, [],
     new TopicUrls(
@@ -91,7 +81,6 @@ export const topicsOld = [
   tagNoIcon('ASP.NET'), tagNoIcon('ASP.NET MVC'), tagNoIcon('ASP.NET Core MVC') /* https://github.com/aspnet/Mvc */,
   tag('F#', 'fsharp'), 'JRuby',
   tag('Objective-C', null),
-  tag('D3.js', 'd3'), // Vega [Lite] - on top of d3. From Luis Sanchez
 
   webPack,
   tagNoIcon('Web Development'), tagNoIcon('CMS'), tagNoIcon('Selenium'), tagNoIcon('Blog Software'),
@@ -104,9 +93,8 @@ export const topicsOld = [
   tag('TensorFlow', 'tensorflow'), 'OpenCV', // TODO: Keras
   'Appium', tagNoIcon('Robotium'),
   'Laravel', 'CakePHP', 'Zend Framework', 'CodeIgniter', 'Symfony',
-  tag('CSS3', 'css-3'), tag('Responsive Design', null), tag('HTML5', 'html-5'),
-  tagLogoType('PWA'), tagNoIcon('SPA'), tag('REST', null), tag('HTTP', null), tag('WebSocket'), 'WebRTC', tagLogoType('Upwork'),
-  tagLogoType('NodeJS').setName('Node.JS'), npm,
+  tag('Responsive Design', null),
+  tagNoIcon('SPA'), tag('REST', null), tag('HTTP', null), 'WebRTC', tagLogoType('Upwork'),
   tag('Seneca', 'seneca', null, [], new TopicUrls(
     'http://senecajs.org/',
     null,
@@ -129,7 +117,6 @@ export const topicsOld = [
     'https://github.com/swagger-api/swagger-core/releases',
     'https://npm.runkit.com/swagger',
   )),
-  sass, tagLogoType('Stylus'), tagLogoType('Less'),
   'Bitcoin', 'Ethereum', 'Steemit', 'Monero',
   tagNoIcon('Cryptocurrency'), tagNoIcon('Blockchain'), tagNoIcon('Cryptography'),
   // TODO: segregated witness (SegWit)
@@ -138,12 +125,10 @@ export const topicsOld = [
   tagNoIcon('Game Development'),
   tagNoIcon('Geolocation'),
   tagNoIcon('Social graphs'), 'Open Graph',
-  tagNoIcon('NoSQL'), 'PostgreSQL', 'MySQL', 'Oracle', // TODO: sqlite
   tagNoIcon('HMR - Hot Module Replacement'),
-  rxJs, tagNoIcon('RxJava'), reactiveX,
-  angularMaterial, angularFire, /* Note: versions will be specified separately, thus not "AngularFire2" */
-  'SVG', tag('WordPress', 'wordpress-icon'), 'Drupal', 'Joomla', tagLogoType('jQuery'), 'jQuery Mobile', tagNoIcon('jQuery UI'),
-  'PouchDB', tagNoIcon('CloudBoost'), 'Spring', tagLogoType('Vaadin'), 'Yarn',
+  tagNoIcon('RxJava'),
+  tag('WordPress', 'wordpress-icon'), 'Drupal', 'Joomla', 'jQuery Mobile', tagNoIcon('jQuery UI'),
+  tagNoIcon('CloudBoost'), 'Spring', tagLogoType('Vaadin'), 'Yarn',
   'Heroku', 'Jenkins', 'Vagrant', tag('Kubernetes', 'kubernets' /* they have a typo*/),
   tag('Vue.js', 'vue'),
   tag('Linux', 'tux'), tag('Debian Linux', 'debian'), tag('Ubuntu Linux', 'ubuntu') , tag('SUSE Linux', 'suse'),
@@ -175,7 +160,7 @@ export const topicsOld = [
   'Ansible',
   'Perl',
   'Polymer', tag('Web Components', 'webcomponents'),
-  'Bootstrap', tagNoIcon('Clarity Design System') /* https://vmware.github.io/clarity/ */ ,
+  tagNoIcon('Clarity Design System') /* https://vmware.github.io/clarity/ */ ,
   'ng-bootstrap',
   'Capistrano', 'Chef', 'Puppet',
   'Clojure',  'CoffeeScript', /* TODO ClojureScript */
@@ -187,14 +172,11 @@ export const topicsOld = [
   // tagLogoTipo('Backbone.js', 'backbone-icon'),
   tag('Backbone.js', 'backbone-icon'),
   tagNoIcon('Backend'),
-  'Socket.IO',
   'Sinatra',
-  tag('NgRx' /* I've also seen different capitalizations: NgRx, ngRx etc */),
-  tag('NGXS'),
   'Flask', tagNoIcon('Pylons'), tagNoIcon('Zope'),
   tagNoIcon('UX'), tagNoIcon('UI'), tagNoIcon('Usability'), tagNoIcon('Accessibility'),
-  'GraphQL', 'Grunt', tag('Browserify', 'browserify-icon'),
-  'Hibernate', tagNoIcon('NHibernate'), 'MariaDB', 'Material-UI',
+  'Grunt', tag('Browserify', 'browserify-icon'),
+  tagNoIcon('NHibernate'), 'MariaDB', 'Material-UI',
   tagNoIcon('FinTech'), tagNoIcon('PropTech'),
 
   tagNoIcon('Law'), tagNoIcon('LOPD'),
@@ -205,7 +187,6 @@ export const topicsOld = [
   tagLogoType('ArangoDB'),
   'Auth0',
   'Mapbox',
-  tag('GitHub', 'github-icon'),
   tagNoIcon('Stencil'), /* Ionic */
   'OData', tagNoIcon('PowerBI'), tagNoIcon('SignalR'), // Mark S.
   // tagNoIcon('Voice Interfaces'),
@@ -306,7 +287,6 @@ export const topicsOld = [
   tagNoIcon('Geomarketing'),
   tagNoIcon('LAMP Stack'),
   tagNoIcon('Cyber Security'),
-  tag('Chart.js', "chart-js" /* non-standard svg*/),
   tagNoIcon('Robotics'),
   tagNoIcon('Lego Mindstorms'),
   tagNoIcon('CSS Flexbox'),
@@ -316,7 +296,6 @@ export const topicsOld = [
   tagNoIcon('Underscore_Test'),
   tag('R Language', 'r-lang'),
   tagLogoType('nginx'),
-  'WebAssembly',
   'Struts',
   'Yammer',
   tagNoIcon('Office 365'),
@@ -455,10 +434,7 @@ export const topicsOld = [
   tagNoIcon('Psychology'),
   tagNoIcon('StackBlitz'),
   tagNoIcon('Java Server Faces (JSF)'),
-  tag('Dexie.js', 'dexie-js'),
-  'Aurelia',
   'Marionette',
-  'Subversion',
   tagNoIcon('Cypress' /* From David Atencia GitHub repo :) */)
   // TODO: Cassandra
 ]

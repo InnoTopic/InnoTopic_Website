@@ -49,8 +49,9 @@ export class Topic {
     public subTopics?: any,
     public organisation?: any,
     public categories?: any,
+    public ecosystem?: any,
 ) {
-    console.log('new Topic(', name)
+    // console.log('new Topic(', name)
     this.setNameAndLogoAndId(name, logo);
     // if ( this.website === undefined ) {
     //   this.website = null // for firebase, because it does not allow to save undefined
@@ -71,7 +72,7 @@ export class Topic {
 
   /** Using Convention Over Configuration */
   public setNameAndLogoAndId(name: string, logo?: string) {
-    console.log('setNameAndLogoAnd name ' + name)
+    // console.log('setNameAndLogoAnd name ' + name)
     this.name = name
     this.id = name
       .replace('#', '_Sharp')
@@ -94,7 +95,7 @@ export class Topic {
         this.logo = this.getLogoPath(this.logo)
       }
     }
-    console.log('setNameAndLogoAndId ' + this.id, this)
+    // console.log('setNameAndLogoAndId ' + this.id, this)
   }
 
   public getLogoPath(tag: string) {

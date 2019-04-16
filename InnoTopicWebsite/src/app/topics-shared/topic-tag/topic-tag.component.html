@@ -15,13 +15,15 @@
     <!--(click)=deleteTag(chip)></i>-->
 
     <!--<div style="vertical-align: middle; display: inline; height: 100%">-->
-    <span style="display: inline; height: 100%; vertical-align: middle; font-weight: normal; color: gray">
-      <a *ngIf="! isCustomClick" [routerLink]="'/topic/'+tag.tagEntry.id">{{tag.tagEntry.name}}</a>
-      <a *ngIf="isCustomClick">{{tag.tagEntry.name}}</a>
-      <!--&nbsp;-->
-      <!--<span *ngIf="shouldHighlightSymmetric()">SYM_MATCH</span>-->
-    </span>
+<!--    <span style="display: inline; height: 100%; vertical-align: middle; font-weight: normal; color: gray">-->
+<!--      <a *ngIf="! isCustomClick" [routerLink]="'/topic/'+tag.tagEntry.id">{{tag.tagEntry.name}}</a>-->
+<!--&lt;!&ndash;      <a *ngIf="isCustomClick"></a>&ndash;&gt;-->
+<!--      {{tag.tagEntry.name}}-->
+<!--      &lt;!&ndash;&nbsp;&ndash;&gt;-->
+<!--      &lt;!&ndash;<span *ngIf="shouldHighlightSymmetric()">SYM_MATCH</span>&ndash;&gt;-->
+<!--    </span>-->
 
+    {{tag.tagEntry.name}}
     <!--    cat: {{tag.tagEntry.category}}-->
     <!--<i *ngIf="editable"-->
        <!--class="ion-close-circled"-->
