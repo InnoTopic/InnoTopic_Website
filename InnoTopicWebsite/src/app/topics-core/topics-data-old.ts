@@ -127,8 +127,8 @@ export const topicsOld = [
   tagNoIcon('Social graphs'), 'Open Graph',
   tagNoIcon('HMR - Hot Module Replacement'),
   tagNoIcon('RxJava'),
-  tag('WordPress', 'wordpress-icon'), 'Drupal', 'Joomla', 'jQuery Mobile', tagNoIcon('jQuery UI'),
-  tagNoIcon('CloudBoost'), 'Spring', tagLogoType('Vaadin'), 'Yarn',
+  'Drupal', 'Joomla', 'jQuery Mobile', tagNoIcon('jQuery UI'),
+  tagNoIcon('CloudBoost'), 'Spring', tagLogoType('Vaadin'),
   'Heroku', 'Jenkins', 'Vagrant', tag('Kubernetes', 'kubernets' /* they have a typo*/),
   tag('Vue.js', 'vue'),
   tag('Linux', 'tux'), tag('Debian Linux', 'debian'), tag('Ubuntu Linux', 'ubuntu') , tag('SUSE Linux', 'suse'),
@@ -139,7 +139,7 @@ export const topicsOld = [
   tagLogoType('CentOS Linux', 'centos'),
   tagNoIcon('Gentoo Linux'), tag('Arch Linux', 'archlinux'),
   'FreeBSD',
-  'Redis', 'CouchBase', 'CouchDB', tagLogoType('MongoDB'), 'Memcached',
+  'Redis', 'CouchBase', 'CouchDB', 'Memcached',
   tagNoIcon('Mongoose'),
   'PrestaShop', 'WooCommerce', tagNoIcon('osCommerce'), 'Magento', 'Shopify', tagNoIcon('BigCommerce'),
   'Travis CI',
@@ -166,7 +166,7 @@ export const topicsOld = [
   'Clojure',  'CoffeeScript', /* TODO ClojureScript */
   'Electron',
   tagNoIcon('MyBatis'),
-  'Gradle', tagLogoType('Maven'), 'Grails',
+  'Grails',
   'Neo4j', 'Hadoop',
   tagLogoType('OpenGL'), 'Unity',
   // tagLogoTipo('Backbone.js', 'backbone-icon'),
@@ -427,7 +427,6 @@ export const topicsOld = [
   // CI: Continous Integration, CD: Continuous Delivery
   // RethinkDB
   tagNoIcon('Web Animations API'),
-  'Jest',
 
   tagNoIcon('Electronic Voting'), tagNoIcon('Activism'), tagNoIcon('Volunteering'),
   tagNoIcon('Affinity Designer'),

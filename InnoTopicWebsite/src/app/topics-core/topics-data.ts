@@ -142,6 +142,7 @@ export class Frontend {
   'Chrome Extensions' = t('chrome')
   'Dexie.js' = t('dexie-js')
   'Aurelia' = t()
+  'Font Awesome' = t('fort-awesome-alt-brands')
 }
 
 export class JavaScript {
@@ -185,7 +186,6 @@ export class Backend {
     ),
   })
   D = t()
-  Maven = t()
   Java = t()
   Hibernate = t()
 }
@@ -296,13 +296,13 @@ export class Cloud {
 }
 
 export class Databases {
-  MongoDB = t()
+  MongoDB = tWide()
   Mongoose = t()
   GraphQL = t()
   NoSQL = tNoIcon()
   PostgreSQL = t()
   MySQL = t()
-  Oracle = t()
+  Oracle = tWide()
   // TODO: sqlite
 }
 
@@ -329,15 +329,12 @@ export class Version_Control {
 * Grouping (pick the right granularity based on count) :
 */
 export class Other {
-
+  'WordPress' = t('wordpress-icon')
   //
-  Yarn = t()
-  NPM = t()
 
   ReactiveX = t()
   Firebase = t()
   Bash = t()
-  Gradle = t()
   nginx = t()
   '.NET' = t()
   Algolia = t()
@@ -348,6 +345,13 @@ export class Other {
   ElasticSearch = t()
   // TODO: stuff like BugZilla, Trello, Agile Central
   // TODO: groups (here or in experience), like FrontEnd, BackEnd, Languages, Other
+}
+
+export class Build_Systems_And_Package_Managers {
+  Gradle = t()
+  Maven = tWide()
+  Yarn = t()
+  NPM = tWide()
 }
 
 export function processTopics<T>(inputTopics: T/*: Topics*/): T {
@@ -369,7 +373,7 @@ export function processTopics<T>(inputTopics: T/*: Topics*/): T {
 
 export type Topics =
   Frontend & Frontend_And_Backend_App_Platforms & Backend & Other & Testing & Tools & Languages & OS & Mobile & Cloud &
-  Project_Management_Tools & Graphics & Version_Control & Databases & Java & JavaScript
+  Project_Management_Tools & Graphics & Version_Control & Databases & Java & JavaScript & Build_Systems_And_Package_Managers
 
 console.log('new Frontend().constructor.name', new Frontend().constructor.name)
 console.log('new Frontend.name', Frontend.name)
@@ -407,6 +411,7 @@ export const topics: Topics = processTopics(
     processCategory(new Cloud()),
     processCategory(new Java),
     processCategory(new JavaScript()),
+    processCategory(new Build_Systems_And_Package_Managers()),
   )
 )
 

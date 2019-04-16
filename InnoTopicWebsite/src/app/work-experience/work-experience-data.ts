@@ -95,6 +95,10 @@ export class WorkExperienceData {
       we(advanced, expert),
     Jest:
       we(intermediate, expert),
+    Jasmine:
+      we(advanced, expert),
+    Karma:
+      we(advanced, expert),
     Figma:
       we(advanced, expert),
     'Node.js':
@@ -107,6 +111,12 @@ export class WorkExperienceData {
       we(advanced, expert),
     WebStorm: we(advanced, expert),
     'Visual Studio Code': we(intermediate, expert),
+    // DataBases:
+    PostgreSQL: we(intermediate),
+    MySQL: we(intermediate),
+    Oracle: we(intermediate),
+    WordPress: we(advanced),
+    'Font Awesome': we(advanced, expert)
   })
   additional = experience({
     Java:
