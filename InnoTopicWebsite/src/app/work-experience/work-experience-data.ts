@@ -189,6 +189,7 @@ export class WorkExperienceData {
     GraphQL: we(),
     Dart: we(),
     Flutter: we(),
+    'Plastic SCM': we(),
   })
 }
 

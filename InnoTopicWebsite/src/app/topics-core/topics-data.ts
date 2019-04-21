@@ -363,6 +363,7 @@ export class Version_Control {
     categories: 'ProjectManagementTools' /* secondary categories */,
   })
   Subversion = t()
+  'Plastic SCM' = t()
 
 }
 
