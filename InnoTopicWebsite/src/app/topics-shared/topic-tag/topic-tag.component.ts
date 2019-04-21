@@ -1,4 +1,11 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  ViewEncapsulation,
+} from '@angular/core';
 import { HighlightService } from '../../topics-core/highlight.service';
 import {Topic} from '../../topics-core/topic'
 import {TopicsService} from '../../topics-core/topics.service'
@@ -20,7 +27,8 @@ export class TopicInterest {
 @Component({
   selector: 'app-topic-tag',
   templateUrl: './topic-tag.component.html',
-  styleUrls: ['./topic-tag.component.scss']
+  styleUrls: ['./topic-tag.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class TopicTagComponent implements OnInit {
 

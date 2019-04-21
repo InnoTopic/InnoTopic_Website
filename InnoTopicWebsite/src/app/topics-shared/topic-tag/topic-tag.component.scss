@@ -71,14 +71,14 @@ a {
 }
 
 * {
-  transition: all ease-in-out 1s;
+  transition: all ease-in-out 0.6s;
 }
 
 :not(.highlight) {
-  img {
+  img.topic-logo-img {
     opacity: 0.6;
     //filter: sepia(100%);
-    background-color: red;
+    //background-color: red;
     filter: grayscale(100%); // blur(0.5px);
     //filter: saturate(40%);
 
@@ -90,12 +90,12 @@ a {
 }
 
 .highlight {
-  img {
+  img.topic-logo-img {
     opacity: 1;
     filter: grayscale(0%);
     //filter: sepia(0%);
     //filter: saturate(100%);
   }
-  background-color: yellow;
+  //background-color: yellow;
   z-index: 2;
 }
