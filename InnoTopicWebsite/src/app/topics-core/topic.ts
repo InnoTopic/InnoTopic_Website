@@ -30,6 +30,7 @@ export class TopicUrls {
 export class Topic {
   logo: string;
   id: string
+  logoSize: number[]
 
   // TODO: introduce a separate TopicMetaData or TopicPages class. Will be easier to put it in a separate firebase location.
 

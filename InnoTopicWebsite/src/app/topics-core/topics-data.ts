@@ -76,7 +76,7 @@ export class Frontend {
   })
   Nx = t({
     logo: 'nx-logo.png',
-    // logoSize: [1048, 652], // FIXME
+    logoSize: [1048, 652], // FIXME
     iconUrl: 'https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png',
   })
   WebPack = t()
