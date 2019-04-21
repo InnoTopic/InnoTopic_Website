@@ -38,6 +38,7 @@ export class WorkExperienceListComponent implements OnInit {
       return exp
     })
     this.byCategory = _.groupBy(this.experience, 'category')
+    // console.log('this.byCategory', this.byCategory)
   }
 
   categoryTitle(key: string) {

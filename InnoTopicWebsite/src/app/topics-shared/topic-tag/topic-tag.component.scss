@@ -1,3 +1,8 @@
+// Ideas:
+// try:
+// page curl shadow: https://codepen.io/bsmith/pen/Fgapi
+
+
 @keyframes ChipAnimation {
   0% {
     opacity: 0.0;
@@ -14,12 +19,27 @@
 
 //.tag-chip {
 .mat-chip {
-  transition: all 0.5s ease-in-out;
+  //&:before {
+  //  content: '';
+  //  position: absolute;
+  //  display: none;
+  //  top: -20px;
+  //  left: -20px;
+  //  right: -20px;
+  //  bottom: -20px;
+  //  z-index: -1;
+  //  background: linear-gradient(to bottom, red, blue);
+  //}
+
+
+    transition: all 0.5s ease-in-out;
   //animation: ChipAnimation 0.5s ease-in-out;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.02);
   &.highlight {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   }
+
+  background: linear-gradient(0deg, rgba(0,0,0,.02) 0%, rgba(255,255,255,1) 100%) !important ;
 
   //border-radius: 0px 0px;
   border-radius: 20px 7px;
@@ -56,9 +76,10 @@ a {
 
 :not(.highlight) {
   img {
-    //opacity: 0.6;
+    opacity: 0.6;
     //filter: sepia(100%);
-    //filter: grayscale(100%); // blur(0.5px);
+    background-color: red;
+    filter: grayscale(100%); // blur(0.5px);
     //filter: saturate(40%);
 
   }

@@ -1,5 +1,6 @@
 <section *ngFor="let categoryKV of byCategory | keyvalue">
   <h4>{{categoryTitle(categoryKV.key)}}</h4>
+  <hr>
   <mat-chip-list>
     <app-topic-skill
       *ngFor="let exp of categoryKV.value"

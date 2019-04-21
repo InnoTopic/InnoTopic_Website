@@ -10,6 +10,7 @@ import {
 } from './topic';
 import {
   tag,
+  tagLogoType,
   tagNoIcon,
 } from './topics';
 
@@ -73,6 +74,12 @@ export class Frontend {
       'https://twitter.com/prime_ng'
     )
   })
+  Nx = t({
+    logo: 'nx-logo.png',
+    // logoSize: [1048, 652], // FIXME
+    iconUrl: 'https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png',
+  })
+  WebPack = t()
   Angular = t({
     urls: new TopicUrls(
       'https://angular.io/',
@@ -126,19 +133,21 @@ export class Frontend {
       'https://stackoverflow.com/questions/tagged/ionic-framework',
       'https://stackshare.io/ionic',
       'https://twitter.com/Ionicframework',
-    )
-    // TODO: stencil, capacitor
+    ),
+    subTopics: {
+      Stencil: tNoIcon(),
+      Capacitor: tNoIcon(),
+    }
   })
 
   Lodash = t()
   Bootstrap = t()
   jQuery = tWide()
   'ag-Grid' = tWide()
-  AngularFire = t()
+  AngularFire = tNoIcon()
   NgRx = t()
   NGXS = tNoIcon()
   WebSocket = t()
-  Stencil = t()
   'Chrome Extensions' = t('chrome')
   'Dexie.js' = t('dexie-js')
   'Aurelia' = t()
@@ -147,7 +156,7 @@ export class Frontend {
 
 export class JavaScript {
   Promises = t()
-  RxJS = t()
+  RxJS = tNoIcon()
   // TODO: more like ecosystem
 }
 
@@ -185,9 +194,14 @@ export class Backend {
       'http://keystonejs.com/'
     ),
   })
-  D = t()
+  D = tNoIcon()
+  Rust = t()
+
   Java = t()
   Hibernate = t()
+  Docker = tWide()
+  ElasticSearch = t()
+  nginx = tWide()
 }
 
 
@@ -210,6 +224,7 @@ export class Testing {
 export class Tools {
   WebStorm = t()
   'Visual Studio Code' = t()
+  'Vim' = t()
 }
 
 export class Project_Management_Tools {
@@ -237,42 +252,68 @@ export class Graphics {
 }
 
 export class Languages {
-  Go = t()
+  Go = tNoIcon()
   TypeScript = t()
   Kotlin = t({
     categories: 'Mobile',
   })
   Swift = t()
-  Python = t()
-  Scala = t()
   Ruby = t()
+  'Ruby On Rails' = t()
+
+  Python = t({
+    urls: new TopicUrls(
+      'https://www.python.org/',
+      'https://en.wikipedia.org/wiki/Python_(programming_language)',
+      'https://github.com/python',
+      null,
+      'https://stackoverflow.com/questions/tagged/python',
+      'https://stackshare.io/python',
+      'https://twitter.com/ThePSF'
+    )
+  })
+  Scala = t()
   Perl = t()
+
   C = t()
   'C++' = t()
   'C#' = t('c_sharp')
   Dart = t()
-  Groovy = t()
+  Groovy = tWide()
   Rust = t()
   WebAssembly = t({
     categories: "Frontend",
     ecosystem: "JavaScript",
   })
+  Bash = t()
+  Lua = t()
 
 }
 
 export class OS {
-  Linux = t()
-  'Ubuntu Linux' = t()
-  'RedHat Linux' = t()
-  'CentOS Linux' = t()
-  macOS = t()
+  Linux = t('tux')
+  'Ubuntu Linux' = t('ubuntu')
+  'SUSE Linux' = t('suse')
+  'RedHat Linux' = t('redhat')
+  'CentOS Linux' = tWide('centos')
+  'Debian Linux' = t('debian')
+  'Fedora Linux' = t('fedora' /* Officially just "Fedora", but better for filtering*/)
+  'macOS' = t('macosx')
+  'Microsoft Windows' = t()
+  'VirtualBox' = t({
+    iconUrl: 'https://icons8.com/icons/set/oracle-vm-virtualbox'
+  })
 }
 
 export class Mobile {
   iOS = t()
-  Android = t()
-  Capacitor = t()
-  Flutter = t()
+  Android = t({
+    subTopics: {
+      'Recycler View': tNoIcon({}),
+    }
+  })
+  Capacitor = t() // FIXME: remove
+  Flutter = tNoIcon()
 }
 
 export class Cloud {
@@ -291,13 +332,16 @@ export class Cloud {
       'Grow': t(),
     }
   })
-  GCP = t('logo_gcp_hexagon_rgb.png' /* FIXME: PNG is not square and takes 300K*/)
-
+  GCP = t({
+    logo: 'gcp.png',
+    iconUrl: 'logo_gcp_hexagon_rgb.png'
+  })
+  Algolia = tWide()
 }
 
 export class Databases {
   MongoDB = tWide()
-  Mongoose = t()
+  Mongoose = tNoIcon()
   GraphQL = t()
   NoSQL = tNoIcon()
   PostgreSQL = t()
@@ -330,19 +374,13 @@ export class Version_Control {
 */
 export class Other {
   'WordPress' = t('wordpress-icon')
-  //
+  'Travis CI' = t()
+  '.NET' = t('dotnet')
 
   ReactiveX = t()
-  Firebase = t()
-  Bash = t()
-  nginx = t()
-  '.NET' = t()
-  Algolia = t()
 
   RegExp = tNoIcon()
-  Lua = t()
-  'Java Swing' = t()
-  ElasticSearch = t()
+  'Java Swing' = tNoIcon()
   // TODO: stuff like BugZilla, Trello, Agile Central
   // TODO: groups (here or in experience), like FrontEnd, BackEnd, Languages, Other
 }
@@ -374,9 +412,6 @@ export function processTopics<T>(inputTopics: T/*: Topics*/): T {
 export type Topics =
   Frontend & Frontend_And_Backend_App_Platforms & Backend & Other & Testing & Tools & Languages & OS & Mobile & Cloud &
   Project_Management_Tools & Graphics & Version_Control & Databases & Java & JavaScript & Build_Systems_And_Package_Managers
-
-console.log('new Frontend().constructor.name', new Frontend().constructor.name)
-console.log('new Frontend.name', Frontend.name)
 
 function mergeTopics<T1, T2, T3, T4, T5>(t1: T1, t2: T2, t3: T3, t4: T4, t5?: T5) {
   return Object.assign({}, Object.create(t1 as any), Object.create(t2 as any), Object.create(t3 as any), Object.create(t4 as any), Object.create(t5 as any));

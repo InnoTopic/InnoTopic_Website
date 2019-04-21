@@ -7,11 +7,11 @@ export interface Organisation {
 }
 
 function org(organisation: Organisation) {
-  console.log('processing org', organisation)
+  // console.log('processing org', organisation)
   let projects = organisation.projects;
   for (let projectId of Object.getOwnPropertyNames(projects)) {
     let project = projects[projectId];
-    console.log('processing projectId', projectId, project)
+    // console.log('processing projectId', projectId, project)
     const topics = project.topics
     setIdsFromKeys(topics, 'topicId')
   }

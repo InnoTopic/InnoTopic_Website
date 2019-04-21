@@ -12,6 +12,10 @@ export class WorkExperienceData {
   main = experience({
     Angular:
       we(advanced, expert),
+    Nx:
+      we(intermediate, expert),
+    WebPack:
+      we(intermediate, expert),
     'Chart.js':
       we(advanced),
     GCP:
@@ -74,7 +78,7 @@ export class WorkExperienceData {
     Android:
       we(advanced),
     Bash:
-      we(intermediate),
+      we(advanced),
     Gradle:
       we(advanced),
     Kotlin:
@@ -83,11 +87,19 @@ export class WorkExperienceData {
       we(advanced),
     'Ubuntu Linux':
       we(advanced),
+    'Debian Linux':
+      we(advanced),
     'RedHat Linux':
+      we(intermediate),
+    'Fedora Linux':
       we(intermediate),
     'CentOS Linux':
       we(intermediate),
+    'SUSE Linux':
+      we(intermediate),
     macOS:
+      we(advanced),
+    'Microsoft Windows':
       we(advanced),
     nginx:
       we(intermediate),
@@ -111,16 +123,19 @@ export class WorkExperienceData {
       we(advanced, expert),
     WebStorm: we(advanced, expert),
     'Visual Studio Code': we(intermediate, expert),
+    'Vim': we(intermediate),
     // DataBases:
     PostgreSQL: we(intermediate),
     MySQL: we(intermediate),
     Oracle: we(intermediate),
-    WordPress: we(advanced),
-    'Font Awesome': we(advanced, expert)
+    WordPress: we(intermediate),
+    'Font Awesome': we(advanced, expert),
+    'VirtualBox': we(advanced),
   })
   additional = experience({
     Java:
       we(advanced),
+    // TODO: FindBugs, PMD (TODO: check CODACY (written in Scala) from Leo, Lisbon -> Silicon Valley)
     Swift:
       we(intermediate),
     Python:

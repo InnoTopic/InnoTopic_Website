@@ -7,7 +7,6 @@ import {
 import { topics } from './topics-data';
 
 export const materialDesign = tag('Material Design', null/** TODO: has icon: https://material.io */);
-export const webPack = tag('Webpack');
 export const businessNetworking = tagNoIcon('Business Networking').setLogo('business--chart-line');
 export const entrepreneurship = tagNoIcon('Entrepreneurship').setLogo('business--chart-line');
 
@@ -63,31 +62,18 @@ export const topicsOld = [
       'https://stackoverflow.com/questions/tagged/django',
       'https://twitter.com/djangoproject'
     )),
-  tag('Python', 'python', null, [],
-    new TopicUrls(
-      'https://www.python.org/',
-      'https://en.wikipedia.org/wiki/Python_(programming_language)',
-      'https://github.com/python',
-      null,
-      'https://stackoverflow.com/questions/tagged/python',
-      'https://stackshare.io/python',
-      'https://twitter.com/ThePSF'
-    )),
-  tag('Ruby'), tagLogoType('Ruby On Rails'),
   tag('PeopleMatcher'),
   tag('TopicFriends', 'PeopleMatcher'),
   tag('UAP', null),
-  tag('Kotlin'), tag('KotlinJS', null), tagNoIcon('Java EE'),
+  tag('KotlinJS', null), tagNoIcon('Java EE'),
   tagNoIcon('ASP.NET'), tagNoIcon('ASP.NET MVC'), tagNoIcon('ASP.NET Core MVC') /* https://github.com/aspnet/Mvc */,
   tag('F#', 'fsharp'), 'JRuby',
   tag('Objective-C', null),
-
-  webPack,
   tagNoIcon('Web Development'), tagNoIcon('CMS'), tagNoIcon('Selenium'), tagNoIcon('Blog Software'),
   tagNoIcon('Blogging'),
   tagNoIcon('VR'),
   'JavaScript', tag('ECMAScript', 'es6'),
-  'Elm', 'Scala', tag('.NET', 'dotnet'), tag('.NET Core', null), 'Docker', 'ElasticSearch',
+  'Elm', tag('.NET Core', null),
   tagNoIcon('Akka'),
   tagLogoType('Ember'), 'React', 'Redux', 'MobX', tagNoIcon('React Native'), 'Xamarin', tagNoIcon('Xamarin.Forms'),
   tag('TensorFlow', 'tensorflow'), 'OpenCV', // TODO: Keras
@@ -131,34 +117,24 @@ export const topicsOld = [
   tagNoIcon('CloudBoost'), 'Spring', tagLogoType('Vaadin'),
   'Heroku', 'Jenkins', 'Vagrant', tag('Kubernetes', 'kubernets' /* they have a typo*/),
   tag('Vue.js', 'vue'),
-  tag('Linux', 'tux'), tag('Debian Linux', 'debian'), tag('Ubuntu Linux', 'ubuntu') , tag('SUSE Linux', 'suse'),
-  tag('Bash'),
-  tag('RedHat Linux', 'redhat'),
-  tag('Fedora Linux' /* Officially just "Fedora", but better for filtering*/, 'fedora'),
   tagNoIcon('Fedora' /* Just for compatibility with older data that I (Karol) have in firebase */),
-  tagLogoType('CentOS Linux', 'centos'),
   tagNoIcon('Gentoo Linux'), tag('Arch Linux', 'archlinux'),
+  tagNoIcon('Alpine Linux'),
   'FreeBSD',
   'Redis', 'CouchBase', 'CouchDB', 'Memcached',
-  tagNoIcon('Mongoose'),
   'PrestaShop', 'WooCommerce', tagNoIcon('osCommerce'), 'Magento', 'Shopify', tagNoIcon('BigCommerce'),
-  'Travis CI',
   'CircleCI',
   tagNoIcon('Continuous Integration'),
   tagNoIcon('Continuous Delivery'),
   'Wix',
   tagLogoType('Lucene'), tagLogoType('Solr'),
-  tag('macOS', 'macosx'),
   'Kinto',
   'KickStarter',
-  'Lua',
   'Sencha',
-  'Rust', tagNoIcon('D'),
   tagLogoType('AWS'), 'Azure', tagLogoType('Babel'), 'Bower', 'Gulp',
-  tagLogoType('Groovy'), 'GWT', 'Haskell', tagNoIcon('Elixir'), 'Erlang',
+  'GWT', 'Haskell', tagNoIcon('Elixir'), 'Erlang',
   tagNoIcon('JetBrains MPS'),
   'Ansible',
-  'Perl',
   'Polymer', tag('Web Components', 'webcomponents'),
   tagNoIcon('Clarity Design System') /* https://vmware.github.io/clarity/ */ ,
   'ng-bootstrap',
@@ -295,7 +271,6 @@ export const topicsOld = [
   tagNoIcon('Economics'),
   tagNoIcon('Underscore_Test'),
   tag('R Language', 'r-lang'),
-  tagLogoType('nginx'),
   'Struts',
   'Yammer',
   tagNoIcon('Office 365'),
@@ -342,7 +317,6 @@ export const topicsOld = [
   tag('Flyway', null, 'https://flywaydb.org/'),
   tag('Spring Boot', null, 'https://projects.spring.io/spring-boot/'),
   tag('Dropwizard', null, 'http://www.dropwizard.io/'),
-  tagLogoType('Algolia', undefined, 'https://www.algolia.com/'),
   tag('Digital Marketing', null),
   tag('Django Rest Framework', null, 'http://www.django-rest-framework.org/'),
   tag('Python pandas', null, 'http://pandas.pydata.org/'),
@@ -385,7 +359,6 @@ export const topicsOld = [
     'https://runkit.com/icebob/moleculer-quick-start',
   )),
   tagNoIcon('Træfik'),
-  tagNoIcon('Alpine Linux'),
   tagNoIcon('TCP/IP'), // NOTE: slash - special char for storing in firebase
   tagNoIcon('SQL'),
   tagNoIcon('Remote Work'),
@@ -422,7 +395,7 @@ export const topicsOld = [
   // IndexedDB, LocalStorage
   // ngx-bootstrap
 
-  // NestJS: A progressive Node.js framework for building efficient and scalable server-side applications on top of TypeScript & JavaScript (ES6 / ES7 / ES8) heavily inspired by Angular 😻🚀
+  // NestJS: https://nestjs.com/ A progressive Node.js framework for building efficient and scalable server-side applications on top of TypeScript & JavaScript (ES6 / ES7 / ES8) heavily inspired by Angular 😻🚀
 
   // CI: Continous Integration, CD: Continuous Delivery
   // RethinkDB

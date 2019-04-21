@@ -15,7 +15,8 @@ scriptDir="`dirname $0`"
 
 #git tag test_`date --utc +%Y-%m-%d_%H.%M.%SZ`
 #ng build \
-ng build --prod --aot \
+#ng build --prod --aot \
+ng build \
   && firebase deploy --only hosting \
   && git tag deploy_`date -u +%Y-%m-%d__%H.%M.%SZ` \
   && git push --tags

@@ -23,35 +23,14 @@ export function we(/*topicId: string, */have?: string, want?: string) {
       want: want,
     }
   }
-  // return new
 }
 
 export type MapToTopics<TVal> = Partial<
   {
-    [P in keyof Topics]: TVal // // https://www.typescriptlang.org/docs/handbook/advanced-types.html - Mapped Types
+    [P in keyof Topics]: TVal // https://www.typescriptlang.org/docs/handbook/advanced-types.html - Mapped Types
   }
 >
 
 export function experience(exp: MapToTopics<any>) {
   return setIdsFromKeys(exp, 'topicId')
 }
-
-//
-// export class WorkExperienceList {
-//   Git
-//     = we(advanced, expert)
-//   TypeScript
-//     = we(advanced, expert)
-// }
-
-// const mapsToSchema: Partial<MapsToSchema> = {
-//   a: '5',
-//   b: '6',
-//   // c: '7', // illegal
-// }
-
-// const x2 = {
-//   a: 'a',
-//   // a: 'b',
-//   'JetBrains MPS': 'b',
-// }
