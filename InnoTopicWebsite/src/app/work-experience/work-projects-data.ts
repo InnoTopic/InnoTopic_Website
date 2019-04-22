@@ -9,10 +9,12 @@ export interface Organisation {
 function org(organisation: Organisation) {
   // console.log('processing org', organisation)
   let projects = organisation.projects;
+  console.log('or projects', organisation.projects)
   for (let projectId of Object.getOwnPropertyNames(projects)) {
     let project = projects[projectId];
     // console.log('processing projectId', projectId, project)
-    const topics = project.topics
+    const topics = project.topicsById
+    console.log('org topics', topics)
     setIdsFromKeys(topics, 'topicId')
   }
 
@@ -32,7 +34,7 @@ export class OrganisationsAndProjects {
     projects: {
       'Customer-facing application for managing insurance plans and customer data': {
         roles: 'Senior Angular & Node.js Developer',
-        topics: {
+        topicsById: {
           Angular: {},
           TypeScript: {},
           Less: {},
@@ -45,7 +47,7 @@ export class OrganisationsAndProjects {
       // },
       'Platform for assessing risk': {
         roles: 'Lead frontend developer and backend developer, teaching Angular',
-        topics: {
+        topicsById: {
           Angular: {
             subTopics: {
               'i18n': {} /* FIXME */
@@ -77,7 +79,7 @@ export class OrganisationsAndProjects {
     projects: {
       'Mezzanine Android': {
         roles: 'Android Lead, Senior Developer',
-        topics: {
+        topicsById: {
           Android: {},
           Java: {},
           Gradle: {},

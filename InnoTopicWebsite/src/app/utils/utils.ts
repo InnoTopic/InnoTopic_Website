@@ -25,3 +25,21 @@ export function arrayOfObservablesToObservableOfArray<T>(arr: Array<Observable<T
   const combineLatest2: Observable<Array<T>> = combineLatest<T>(arr)
   return combineLatest2
 }
+
+export function groupByKeepingOrder(kv, propertyToGroupBy: string) {
+  const ret = {}
+  for ( let key in kv ) {
+    if ( kv.hasOwnProperty(key) ) {
+      console.log('groupByKeepingOrder', key)
+      const item = kv[key]
+      const groupVal = item[propertyToGroupBy]
+      let groupArray = ret[groupVal]
+      if ( ! groupArray ) {
+        groupArray = []
+        ret[groupVal] = groupArray
+      }
+      groupArray.push(item)
+    }
+  }
+  return ret
+}

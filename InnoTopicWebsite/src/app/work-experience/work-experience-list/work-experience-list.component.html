@@ -1,12 +1,13 @@
-<section *ngFor="let categoryKV of byCategory | keyvalue">
-  <h4>{{categoryTitle(categoryKV.key)}}</h4>
-  <hr>
+<section *ngFor="let category of topicCategoriesArray">
+  <h4>{{categoryTitle(category.name)}}</h4>
+<!--  <hr>-->
   <mat-chip-list>
-    <app-topic-skill
-      *ngFor="let exp of categoryKV.value"
-      [tId]="exp.topicId"
-      [skillLevels]="exp.skillLevels"
-    ></app-topic-skill><!--    [skillLevels]="exp.skillLevels"-->
+    <ng-container *ngFor="let topic of category.topicsArray">
+      <app-topic-skill *ngIf="experience[topic.id]; let experienceItem"
+        [tId]="experienceItem.topicId"
+        [skillLevels]="experienceItem?.skillLevels"
+      ></app-topic-skill><!--    [skillLevels]="exp.skillLevels"-->
+    </ng-container>
   </mat-chip-list>
 
 </section>

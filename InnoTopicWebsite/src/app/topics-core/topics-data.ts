@@ -12,6 +12,7 @@ import {
   tag,
   tagLogoType,
   tagNoIcon,
+  TopicCategory,
 } from './topics';
 
 export type TopicData = Partial<Topic>
@@ -146,7 +147,7 @@ export class Frontend {
   'ag-Grid' = tWide()
   AngularFire = tNoIcon()
   NgRx = t()
-  NGXS = tNoIcon()
+  NGXS = t({logo: 'ngxs.png', logoSize: [442, 132]})
   WebSocket = t()
   'Chrome Extensions' = t('chrome')
   'Dexie.js' = t('dexie-js')
@@ -418,37 +419,46 @@ function mergeTopics<T1, T2, T3, T4, T5>(t1: T1, t2: T2, t3: T3, t4: T4, t5?: T5
   return Object.assign({}, Object.create(t1 as any), Object.create(t2 as any), Object.create(t3 as any), Object.create(t4 as any), Object.create(t5 as any));
 }
 
-function processCategory<T>(cat: T) {
-  let catName = cat.constructor.name;
-  Object.keys(cat).forEach(key => {
+function processCategory(cat: TopicCategory): TopicCategory {
+  // let catName = cat.constructor.name;
+  let catName = cat.name;
+  // (cat as any).name = catName
+  let catTopics = cat.topicsById;
+  Object.keys(catTopics).forEach(key => {
     // console.log('processing category key', key)
-    cat[key].category = catName
+    // if ( key !== 'name' ) {
+    let topic = catTopics[key];
+    topic.category = catName
+    // }
   });
+  cat.topicsArray = getDictionaryValuesAsArray(cat.topicsById)
   return cat
 }
+
+export const topicCategoriesArray = [
+  new TopicCategory('Frontend', new Frontend()),
+  new TopicCategory('Backend', new Backend()),
+  new TopicCategory('Frontend and backend app platforms', new Frontend_And_Backend_App_Platforms()),
+  new TopicCategory('Other', new Other()),
+  new TopicCategory('Testing', new Testing()),
+  new TopicCategory('Tools', new Tools()),
+  new TopicCategory('Languages', new Languages()),
+  new TopicCategory('Databases', new Databases()),
+  new TopicCategory('Version Control', new Version_Control()),
+  new TopicCategory('Project Management Tools', new Project_Management_Tools()),
+  new TopicCategory('Graphics', new Graphics()),
+  new TopicCategory('OS', new OS()),
+  new TopicCategory('Mobile', new Mobile()),
+  new TopicCategory('Cloud', new Cloud()),
+  new TopicCategory('Java', new Java),
+  new TopicCategory('JavaScript', new JavaScript()),
+  new TopicCategory('Build Systems and package managers', new Build_Systems_And_Package_Managers()),
+]
 
 export const topics: Topics = processTopics(
   // mergeTopics(Frontend, Backend, Other, Testing, {})
   // mergeTopics(new Frontend, Backend, Other, Testing, {})
-  Object.assign({},
-    processCategory(new Frontend()),
-    processCategory(new Backend()),
-    processCategory(new Frontend_And_Backend_App_Platforms()),
-    processCategory(new Other()),
-    processCategory(new Testing()),
-    processCategory(new Tools()),
-    processCategory(new Languages()),
-    processCategory(new Databases()),
-    processCategory(new Version_Control()),
-    processCategory(new Project_Management_Tools()),
-    processCategory(new Graphics()),
-    processCategory(new OS()),
-    processCategory(new Mobile()),
-    processCategory(new Cloud()),
-    processCategory(new Java),
-    processCategory(new JavaScript()),
-    processCategory(new Build_Systems_And_Package_Managers()),
-  )
+  Object.assign({}, ... topicCategoriesArray.map(cat => processCategory(cat).topicsById))
 )
 
 export const topicsArr = getDictionaryValuesAsArray(topics as { [p: string]: any })

@@ -15,3 +15,13 @@ export function tagNoIcon(name: string, related?: Topic[], urls?: TopicUrls) {
 export function tagLogoType(name: string, logo?: string, website?, related?: Topic[], urls?: TopicUrls) {
   return tag(name, logo, website, related, urls, true); // pass visual hint later
 }
+
+export class TopicCategory {
+
+  public topicsArray: Array<Topic>
+
+  constructor(
+    public name: string,
+    public topicsById: any,
+  ) {}
+}
