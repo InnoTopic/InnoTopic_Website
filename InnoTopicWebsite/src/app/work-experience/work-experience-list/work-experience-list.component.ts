@@ -3,6 +3,7 @@ import {
   Input,
   OnInit,
 } from '@angular/core';
+import { TopicCategory } from '../../topics-core/topics';
 import { topicCategoriesArray } from '../../topics-core/topics-data';
 import { TopicsService } from '../../topics-core/topics.service';
 import {
@@ -53,5 +54,10 @@ export class WorkExperienceListComponent implements OnInit {
 
   categoryTitle(key: string) {
     return (key as any).replaceAll('_', ' ')
+  }
+
+  hasExperienceInCategory(category: TopicCategory) {
+    return true // FIXME
+    // this.byCategory.
   }
 }
