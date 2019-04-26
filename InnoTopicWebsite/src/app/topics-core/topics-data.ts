@@ -195,8 +195,6 @@ export class Backend {
       'http://keystonejs.com/'
     ),
   })
-  D = tNoIcon()
-  Rust = t()
 
   Java = t()
   Hibernate = t()
@@ -288,7 +286,7 @@ export class Languages {
   })
   Bash = t()
   Lua = t()
-
+  D = tNoIcon()
 }
 
 export class OS {
