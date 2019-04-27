@@ -2,6 +2,7 @@
   [tId]="tId"
 >
   <app-skill-level-label
+    *ngIf="skillLevels?.want || skillLevels?.have"
     [skillLevels]="skillLevels"
   ></app-skill-level-label>
 

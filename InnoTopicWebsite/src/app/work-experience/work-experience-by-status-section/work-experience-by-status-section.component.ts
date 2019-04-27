@@ -4,7 +4,7 @@ import {
   OnInit,
 } from '@angular/core';
 
-/** status: mode / approach */
+/** status: mode / approach / intent(ions) */
 @Component({
   selector: 'app-work-experience-by-status-section',
   templateUrl: './work-experience-by-status-section.component.html',
@@ -12,8 +12,6 @@ import {
 })
 export class WorkExperienceByStatusSectionComponent implements OnInit {
 
-  @Input() title
-  @Input() comment
   @Input() experience
 
   constructor() { }
