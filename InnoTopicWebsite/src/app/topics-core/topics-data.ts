@@ -153,6 +153,7 @@ export class Frontend {
   'Dexie.js' = t('dexie-js')
   'Aurelia' = t()
   'Font Awesome' = t('fort-awesome-alt-brands')
+  Workbox = tWide('Workbox-Logo-Grey.svg')
 }
 
 export class JavaScript {
@@ -167,7 +168,7 @@ export class Java {
 }
 
 export class Backend {
-  'Node.js' = tWide('nodejs')
+  'Node.js' = tWide('nodejs.svg')
 
   'Express.js' = tWide({
     logo: 'express.svg',
@@ -276,7 +277,7 @@ export class Languages {
 
   C = t()
   'C++' = t()
-  'C#' = t('c_sharp')
+  'C#' = t('c_sharp.svg')
   Dart = t()
   Groovy = tWide()
   Rust = t()
@@ -290,14 +291,14 @@ export class Languages {
 }
 
 export class OS {
-  Linux = t('tux')
-  'Ubuntu Linux' = t('ubuntu')
-  'SUSE Linux' = t('suse')
-  'RedHat Linux' = t('redhat')
-  'CentOS Linux' = tWide('centos')
-  'Debian Linux' = t('debian')
-  'Fedora Linux' = t('fedora' /* Officially just "Fedora", but better for filtering*/)
-  'macOS' = t('macosx')
+  Linux = t('tux.svg')
+  'Ubuntu Linux' = t('ubuntu.svg')
+  'SUSE Linux' = t('suse.svg')
+  'RedHat Linux' = t('redhat.svg')
+  'CentOS Linux' = tWide('centos.svg')
+  'Debian Linux' = t('debian.svg')
+  'Fedora Linux' = t('fedora.svg' /* Officially just "Fedora", but better for filtering*/)
+  'macOS' = t('macosx.svg')
   'Microsoft Windows' = t()
   'VirtualBox' = t({
     iconUrl: 'https://icons8.com/icons/set/oracle-vm-virtualbox'
@@ -358,7 +359,7 @@ export class Version_Control {
     }
   })
   GitHub = t({
-    logo: 'github-icon',
+    logo: 'github-icon.svg',
     categories: 'ProjectManagementTools' /* secondary categories */,
   })
   Subversion = t()
@@ -373,9 +374,11 @@ export class Version_Control {
 * Grouping (pick the right granularity based on count) :
 */
 export class Other {
-  'WordPress' = t('wordpress-icon')
+  'WordPress' = t('wordpress-icon.svg')
   'Travis CI' = t()
-  '.NET' = t('dotnet')
+  '.NET' = t('dotnet.svg')
+  'NET.smth' = t('dotnet.svg') // for testing dot
+  // 'test' = t('dotnet.svg')
 
   ReactiveX = t()
 

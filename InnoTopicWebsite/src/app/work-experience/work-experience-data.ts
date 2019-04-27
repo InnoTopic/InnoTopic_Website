@@ -168,10 +168,14 @@ export class WorkExperienceData {
       we(intermediate),
     'C++':
       we(intermediate),
-    'C#':
+    'C#': // FIXME: not working
       we(intermediate),
-    '.NET':
+    '.NET': // FIXME: not working
       we(intermediate),
+    'NET.smth': // FIXME: not working
+      we(intermediate),
+    // 'test':
+    //   we(intermediate),
     Lua:
       we(beginner),
   })
@@ -190,6 +194,7 @@ export class WorkExperienceData {
     Dart: we(),
     Flutter: we(),
     'Plastic SCM': we(),
+    Workbox: we(),
   })
 }
 

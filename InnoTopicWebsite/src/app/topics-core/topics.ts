@@ -19,6 +19,7 @@ export function tagLogoType(name: string, logo?: string, website?, related?: Top
 export class TopicCategory {
 
   public topicsArray: Array<Topic>
+  public get id() { return this.name }
 
   constructor(
     public name: string,

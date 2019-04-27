@@ -87,7 +87,7 @@ export class Topic {
       if (logo === null) {
         this.logo = null;
       } else if (logo === undefined) {
-        this.logo = this.getLogoPath(name);
+        this.logo = this.getLogoPath(this.getLogoFileName(name))
       } else {
         this.logo = this.getLogoPath(logo);
       }
@@ -99,10 +99,14 @@ export class Topic {
     // console.log('setNameAndLogoAndId ' + this.id, this)
   }
 
-  public getLogoPath(tag: string) {
-    // return '../../../assets/images/logos/' + tag.toLowerCase() + '-icon.svg'
-    return '../../../assets/images/logos/' + tag.toLowerCase().replace(/ /g, '-') +
-      (tag.toLowerCase().match(/.*\.(png|svg)$/) ? '' : '.svg')
+  public getLogoPath(iconFileName: string) {
+    // return '../../../assets/images/logos/' + iconFileName.toLowerCase() + '-icon.svg'
+    return '../../../assets/images/logos/' + iconFileName
+  }
+
+  private getLogoFileName(tag: string) {
+    return tag.toLowerCase().replace(/ /g, '-') +
+      (tag.toLowerCase().match(/.*\.(png|svg)$/) ? '' : '.svg');
   }
 
   matchesTextFilter(filterString: string) {

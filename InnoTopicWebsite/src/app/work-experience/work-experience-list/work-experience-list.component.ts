@@ -29,8 +29,10 @@ export class WorkExperienceListComponent implements OnInit {
   public topicCategoriesArray = topicCategoriesArray
 
   @Input() experience
+  experienceArr
 
   byCategory = []
+  experienceByCategory = {}
 
   constructor(
     public topicsService: TopicsService,
@@ -39,16 +41,16 @@ export class WorkExperienceListComponent implements OnInit {
 
   ngOnInit() {
     console.log('this.experience', this.experience)
-    // this.experience = getDictionaryValuesAsArray(this.experience).map((exp: any) => {
-    //   // console.log('this.experience exp', exp)
-    //   exp.topic = this.topicsService.getTopicById(exp.topicId)
-    //   exp.category = exp.topic.category
-    //   return exp
-    // })
+    this.experienceArr = getDictionaryValuesAsArray(this.experience).map((exp: any) => {
+      // console.log('this.experience exp', exp)
+      exp.topic = this.topicsService.getTopicById(exp.topicId)
+      exp.category = exp.topic.category
+      return exp
+    })
     this.byCategory = getDictionaryValuesAsArray(
-      setIdsFromKeys(groupByKeepingOrder(this.experience, 'category'))
+      setIdsFromKeys(groupByKeepingOrder(this.experienceArr, 'category'))
     ) // .sortBy(group => this.experience.indexOf(group[0]))
-    // this.byCategory = _.groupBy(this.experience, 'category') // .sortBy(group => this.experience.indexOf(group[0]))
+    this.experienceByCategory = _.groupBy(this.experienceArr, 'category') // .sortBy(group => this.experience.indexOf(group[0]))
     console.log('this.byCategory', this.byCategory)
   }
 
@@ -57,7 +59,10 @@ export class WorkExperienceListComponent implements OnInit {
   }
 
   hasExperienceInCategory(category: TopicCategory) {
-    return true // FIXME
+    let experienceByCat = this.experienceByCategory[category.name];
+    console.log('hasExperienceInCategory', arguments, this.experienceByCategory)
+    // return true
+    return experienceByCat // FIXME
     // this.byCategory.
   }
 }
