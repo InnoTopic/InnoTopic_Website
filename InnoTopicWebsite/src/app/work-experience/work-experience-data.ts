@@ -9,7 +9,7 @@ import {
 
 /** Can split into: main experience(critical), additional (wanna learn more, but not critical)*/
 export class WorkExperienceData {
-  main = experience({
+  main = experience('Main Experience', 'extensive usage and always learning', {
     Angular:
       we(advanced, expert),
     Nx:
@@ -134,7 +134,7 @@ export class WorkExperienceData {
     'Font Awesome': we(advanced, expert),
     'VirtualBox': we(advanced),
   })
-  additional = experience({
+  additional = experience('Additional experience', 'learning more, but not as critical for me now', {
     Java:
       we(advanced),
     // TODO: FindBugs, PMD (TODO: check CODACY (written in Scala) from Leo, Lisbon -> Silicon Valley)
@@ -143,13 +143,13 @@ export class WorkExperienceData {
     Python:
       we(intermediate),
   })
-  expandingTo = experience({
+  expandingTo = experience('Expanding to', 'actively learning and looking for projects', {
     Flutter: we(),
     Dart: we(),
     Capacitor: we(),
     // Angular Dart
   })
-  earlier = experience({
+  earlier = experience('Earlier experience', '(always curious to learn more, but no particular need right now', {
     'Java Swing':
       we(advanced),
     Hibernate:
@@ -181,7 +181,7 @@ export class WorkExperienceData {
     Lua:
       we(beginner),
   })
-  wishList = experience({
+  wishList = experience('Wish-list', 'things on my radar; learning bits and pieces when I can', {
     D: we(),
     Rust: we(),
     Go: we(),

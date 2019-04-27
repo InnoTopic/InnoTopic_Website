@@ -31,6 +31,10 @@ export type MapToTopics<TVal> = Partial<
   }
 >
 
-export function experience(exp: MapToTopics<any>) {
-  return setIdsFromKeys(exp, 'topicId')
+export function experience(title, comment, exp: MapToTopics<any>) {
+  return {
+    title: title,
+    comment: comment,
+    topics: setIdsFromKeys(exp, 'topicId')
+  }
 }
