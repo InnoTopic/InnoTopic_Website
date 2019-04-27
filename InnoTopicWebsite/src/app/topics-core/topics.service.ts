@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {
   Topic,
-} from './topic';
+} from './Topic';
 import {
   tag,
 } from './topics';

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Topic } from '../../topics-core/topic';
+import { Topic } from '../../topics-core/Topic';
 import { TopicsService } from '../../topics-core/topics.service';
 
 export const defaultIconHeight = 18

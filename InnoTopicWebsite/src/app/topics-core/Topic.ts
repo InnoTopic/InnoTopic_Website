@@ -51,6 +51,7 @@ export class Topic {
     public organisation?: any,
     public categories?: any,
     public ecosystem?: any,
+    public logoSmallIcon?: string,
 ) {
     // console.log('new Topic(', name)
     this.setNameAndLogoAndId(name, logo);
@@ -71,6 +72,8 @@ export class Topic {
     }
   }
 
+  private static regexpImageFileEndingWithExtension = /.*\.(png|svg|jpg)$/;
+
   /** Using Convention Over Configuration */
   public setNameAndLogoAndId(name: string, logo?: string) {
     // console.log('setNameAndLogoAnd name ' + name)
@@ -83,7 +86,7 @@ export class Topic {
     if (this.id !== name) {
       // console.log('id mangled from name: ' + this.id)
     }
-    if ( this.logo === undefined /* do not override */ ) {
+    if ( this.logo === undefined /* else do not override if specified */ ) {
       if (logo === null) {
         this.logo = null;
       } else if (logo === undefined) {
@@ -96,6 +99,9 @@ export class Topic {
         this.logo = this.getLogoPath(this.logo)
       }
     }
+    if ( this.logo && ! this.logo.toLowerCase().match(Topic.regexpImageFileEndingWithExtension) ) {
+      this.logo = this.logo + '.svg'
+    }
     // console.log('setNameAndLogoAndId ' + this.id, this)
   }
 
@@ -106,7 +112,7 @@ export class Topic {
 
   private getLogoFileName(tag: string) {
     return tag.toLowerCase().replace(/ /g, '-') +
-      (tag.toLowerCase().match(/.*\.(png|svg)$/) ? '' : '.svg');
+      (tag.toLowerCase().match(Topic.regexpImageFileEndingWithExtension) ? '' : '.svg');
   }
 
   matchesTextFilter(filterString: string) {

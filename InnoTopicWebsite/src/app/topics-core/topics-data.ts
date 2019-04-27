@@ -7,7 +7,7 @@ import {
 import {
   Topic,
   TopicUrls,
-} from './topic';
+} from './Topic';
 import {
   tag,
   tagLogoType,
@@ -42,9 +42,9 @@ export function t(topicData?: TopicDataOrLogo) {
   return topic
 }
 
-export function tWide(topicData?: TopicDataOrLogo) {
+export function tWide(topicData?: TopicDataOrLogo, logoSize?: number[]) {
   topicData = coerceLogoToTopicData(topicData);
-  return t({...topicData, logoTypeWide: true})
+  return t({...topicData, logoTypeWide: true, logoSize})
 }
 
 export function tNoIcon(topicData?: TopicData) {
@@ -52,11 +52,11 @@ export function tNoIcon(topicData?: TopicData) {
 }
 
 export class Frontend {
-  'HTML5' = t({logo: 'html-5'})
-  'CSS3' = t({logo: 'css-3'})
+  'HTML5' = t({logo: 'html-5.svg'})
+  'CSS3' = t({logo: 'css-3.svg'})
   'PWA' = tWide()
-  'D3.js' = t({logo: 'd3'}) // Vega [Lite] - on top of d3. From Luis Sanchez
-  'Chart.js' = t({logo: "chart-js" /* non-standard svg*/})
+  'D3.js' = t({logo: 'd3.svg'}) // Vega [Lite] - on top of d3. From Luis Sanchez
+  'Chart.js' = t({logo: "chart-js.svg" /* non-standard svg*/})
   'Stylus' = tWide()
   'Less' = tWide()
   'Sass' = t()
@@ -80,6 +80,7 @@ export class Frontend {
     logoSize: [1048, 652], // FIXME
     iconUrl: 'https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png',
   })
+  xplat = tWide('xplat-logo.png', [899, 393])
   WebPack = t()
   Angular = t({
     urls: new TopicUrls(
@@ -149,10 +150,10 @@ export class Frontend {
   NgRx = t()
   NGXS = t({logo: 'ngxs.png', logoSize: [442, 132]})
   WebSocket = t()
-  'Chrome Extensions' = t('chrome')
-  'Dexie.js' = t('dexie-js')
+  'Chrome Extensions' = t('chrome.svg')
+  'Dexie.js' = t('dexie-js.svg')
   'Aurelia' = t()
-  'Font Awesome' = t('fort-awesome-alt-brands')
+  'Font Awesome' = t('fort-awesome-alt-brands.svg')
   Workbox = tWide('Workbox-Logo-Grey.svg')
 }
 
@@ -312,7 +313,7 @@ export class Mobile {
       'Recycler View': tNoIcon({}),
     }
   })
-  Capacitor = t() // FIXME: remove
+  Capacitor = tWide('capacitor--logo-light.png', [256, 45]) // FIXME: remove (is in sub-topics of Ionic)
   Flutter = tNoIcon()
 }
 
@@ -321,13 +322,13 @@ export class Cloud {
     subTopics: {
       // most are from firebase console left navbar:
       'Authentication': t(),
-      'Realtime Database': t('Firebase-realtime-database'),
-      'Cloud Firestore': t('firebase-firestore'),
-      'Storage': t('Firebase-storage'),
-      'Hosting': t('Firebase-hosting'),
+      'Realtime Database': t('Firebase-realtime-database.svg'),
+      'Cloud Firestore': t('firebase-firestore.svg'),
+      'Storage': t('Firebase-storage.svg'),
+      'Hosting': t('Firebase-hosting.svg'),
       'Cloud Functions': t(),
       'Stability': t(),
-      'Crashlytics': t('Crashlytics'),
+      'Crashlytics': t('Crashlytics.svg'),
       'Analytics': t(),
       'Grow': t(),
     }
@@ -359,7 +360,7 @@ export class Version_Control {
     }
   })
   GitHub = t({
-    logo: 'github-icon.svg',
+    logo: 'github-icon',
     categories: 'ProjectManagementTools' /* secondary categories */,
   })
   Subversion = t()
@@ -388,6 +389,14 @@ export class Other {
   // TODO: groups (here or in experience), like FrontEnd, BackEnd, Languages, Other
 }
 
+export class AI {
+  Keras = t/*Wide*/({
+    logo: 'keras-logo-2018-large-1200.png',
+    logoSize: [1200, 348],
+    logoSmallIcon: 'keras-logo-small.jpg',
+  })
+}
+
 export class Build_Systems_And_Package_Managers {
   Gradle = t()
   Maven = tWide()
@@ -414,7 +423,8 @@ export function processTopics<T>(inputTopics: T/*: Topics*/): T {
 
 export type Topics =
   Frontend & Frontend_And_Backend_App_Platforms & Backend & Other & Testing & Tools & Languages & OS & Mobile & Cloud &
-  Project_Management_Tools & Graphics & Version_Control & Databases & Java & JavaScript & Build_Systems_And_Package_Managers
+  Project_Management_Tools & Graphics & Version_Control & Databases & Java & JavaScript & Build_Systems_And_Package_Managers &
+  AI
 
 function mergeTopics<T1, T2, T3, T4, T5>(t1: T1, t2: T2, t3: T3, t4: T4, t5?: T5) {
   return Object.assign({}, Object.create(t1 as any), Object.create(t2 as any), Object.create(t3 as any), Object.create(t4 as any), Object.create(t5 as any));
@@ -436,6 +446,7 @@ function processCategory(cat: TopicCategory): TopicCategory {
   return cat
 }
 
+/** Note: names are specified as strings, because in ng prod build, class names are lost */
 export const topicCategoriesArray = [
   new TopicCategory('Frontend', new Frontend()),
   new TopicCategory('Backend', new Backend()),
@@ -454,6 +465,7 @@ export const topicCategoriesArray = [
   new TopicCategory('Java', new Java),
   new TopicCategory('JavaScript', new JavaScript()),
   new TopicCategory('Build Systems and package managers', new Build_Systems_And_Package_Managers()),
+  new TopicCategory('AI', new AI()),
 ]
 
 export const topics: Topics = processTopics(

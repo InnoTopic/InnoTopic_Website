@@ -1,3 +1,4 @@
+// import * as winston from 'winston';
 import { setIdsFromKeys } from '../utils/dictionary-utils';
 
 export interface Organisation {
@@ -9,12 +10,12 @@ export interface Organisation {
 function org(organisation: Organisation) {
   // console.log('processing org', organisation)
   let projects = organisation.projects;
-  console.log('or projects', organisation.projects)
+  // console.log('or projects', organisation.projects)
   for (let projectId of Object.getOwnPropertyNames(projects)) {
     let project = projects[projectId];
     // console.log('processing projectId', projectId, project)
     const topics = project.topicsById
-    console.log('org topics', topics)
+    // winston.debug('org topics', topics)
     setIdsFromKeys(topics, 'topicId')
   }
 

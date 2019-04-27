@@ -30,7 +30,7 @@ export function groupByKeepingOrder(kv, propertyToGroupBy: string) {
   const ret = {}
   for ( let key in kv ) {
     if ( kv.hasOwnProperty(key) ) {
-      console.log('groupByKeepingOrder', key)
+      // console.log('groupByKeepingOrder', key)
       const item = kv[key]
       const groupVal = item[propertyToGroupBy]
       let groupArray = ret[groupVal]

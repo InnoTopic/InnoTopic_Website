@@ -1,7 +1,7 @@
 import {
   Topic,
   TopicUrls,
-} from './topic';
+} from './Topic';
 
 export function tag(name: string, logo?: string, webSite?: string, related?: Topic[], urls?: TopicUrls, logoTipoWide?: boolean) {
   return new Topic(name, logo, webSite, related, urls, undefined, undefined, logoTipoWide);

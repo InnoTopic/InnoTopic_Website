@@ -14,6 +14,8 @@ export class WorkExperienceData {
       we(advanced, expert),
     Nx:
       we(intermediate, expert),
+    xplat: // nstudio
+      we(intermediate, expert),
     WebPack:
       we(intermediate, expert),
     'Chart.js':
@@ -195,6 +197,7 @@ export class WorkExperienceData {
     Flutter: we(),
     'Plastic SCM': we(),
     Workbox: we(),
+    Keras: we(),
   })
 }
 

@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { Topic } from '../../topics-core/topic';
+import { Topic } from '../../topics-core/Topic';
 import { TopicsService } from '../../topics-core/topics.service';
 
 import {

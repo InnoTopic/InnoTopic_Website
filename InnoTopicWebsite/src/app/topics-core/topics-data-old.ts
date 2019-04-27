@@ -1,4 +1,4 @@
-import { TopicUrls } from './topic';
+import { TopicUrls } from './Topic';
 import {
   tag,
   tagLogoType,
@@ -76,7 +76,7 @@ export const topicsOld = [
   'Elm', tag('.NET Core', null),
   tagNoIcon('Akka'),
   tagLogoType('Ember'), 'React', 'Redux', 'MobX', tagNoIcon('React Native'), 'Xamarin', tagNoIcon('Xamarin.Forms'),
-  tag('TensorFlow', 'tensorflow'), 'OpenCV', // TODO: Keras
+  tag('TensorFlow', 'tensorflow'), 'OpenCV',
   'Appium', tagNoIcon('Robotium'),
   'Laravel', 'CakePHP', 'Zend Framework', 'CodeIgniter', 'Symfony',
   tag('Responsive Design', null),

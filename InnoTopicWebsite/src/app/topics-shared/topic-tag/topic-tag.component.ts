@@ -7,7 +7,7 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import { HighlightService } from '../../topics-core/highlight.service';
-import {Topic} from '../../topics-core/topic'
+import {Topic} from '../../topics-core/Topic'
 import {TopicsService} from '../../topics-core/topics.service'
 
 export class TopicInterest {
