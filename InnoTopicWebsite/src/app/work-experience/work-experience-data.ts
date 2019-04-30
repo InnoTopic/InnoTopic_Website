@@ -139,17 +139,21 @@ export class WorkExperienceData {
       we(advanced),
     // TODO: FindBugs, PMD (TODO: check CODACY (written in Scala) from Leo, Lisbon -> Silicon Valley)
     Swift:
-      we(intermediate),
+      we(intermediate, advanced),
     Python:
       we(intermediate),
   })
-  expandingTo = experience('Expanding to', 'actively learning and looking for projects', {
+  expandingTo = experience('Expanding to', 'actively learning and ready to take projects', {
     Flutter: we(),
-    Dart: we(),
-    Capacitor: we(),
+    Dart: we(intermediate, advanced),
+    Capacitor: we(intermediate, expert),
+    Stencil: we(intermediate, expert),
+    'Vue.js': we(),
+    'Angular Elements': we(),
+    'SVG.js': we(),
     // Angular Dart
   })
-  earlier = experience('Earlier experience', '(always curious to learn more, but no particular need right now', {
+  earlier = experience('Earlier experience', 'always curious to learn more, but no particular need right now', {
     'Java Swing':
       we(advanced),
     Hibernate:
@@ -171,7 +175,7 @@ export class WorkExperienceData {
     'C++':
       we(intermediate),
     'C#': // FIXME: not working
-      we(intermediate),
+      we(intermediate, advanced),
     '.NET': // FIXME: not working
       we(intermediate),
     'NET.smth': // FIXME: not working

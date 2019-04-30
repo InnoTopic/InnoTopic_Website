@@ -116,7 +116,6 @@ export const topicsOld = [
   'Drupal', 'Joomla', 'jQuery Mobile', tagNoIcon('jQuery UI'),
   tagNoIcon('CloudBoost'), 'Spring', tagLogoType('Vaadin'),
   'Heroku', 'Jenkins', 'Vagrant', tag('Kubernetes', 'kubernets' /* they have a typo*/),
-  tag('Vue.js', 'vue'),
   tagNoIcon('Fedora' /* Just for compatibility with older data that I (Karol) have in firebase */),
   tagNoIcon('Gentoo Linux'), tag('Arch Linux', 'archlinux'),
   tagNoIcon('Alpine Linux'),
@@ -146,7 +145,7 @@ export const topicsOld = [
   'Neo4j', 'Hadoop',
   tagLogoType('OpenGL'), 'Unity',
   // tagLogoTipo('Backbone.js', 'backbone-icon'),
-  tag('Backbone.js', 'backbone-icon'),
+  tag('Backbone.js', 'backbone-icon'), // TODO: knockout
   tagNoIcon('Backend'),
   'Sinatra',
   'Flask', tagNoIcon('Pylons'), tagNoIcon('Zope'),
@@ -163,7 +162,6 @@ export const topicsOld = [
   tagLogoType('ArangoDB'),
   'Auth0',
   'Mapbox',
-  tagNoIcon('Stencil'), /* Ionic */
   'OData', tagNoIcon('PowerBI'), tagNoIcon('SignalR'), // Mark S.
   // tagNoIcon('Voice Interfaces'),
   // tagNoIcon('Amazon Alexa'),

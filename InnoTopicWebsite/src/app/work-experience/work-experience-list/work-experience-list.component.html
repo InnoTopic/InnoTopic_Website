@@ -4,7 +4,9 @@
     <!--  <hr>-->
     <mat-chip-list>
       <ng-container *ngFor="let topic of category.topicsArray">
-        <app-topic-skill *ngIf="experience[topic.id]; let experienceItem"
+<!--        TOPIC_: {{topic.id}}-->
+<!--        experience[topic.id]: {{experienceByName[topic.name]}}-->
+        <app-topic-skill *ngIf="experienceByName[topic.name]; let experienceItem"
                          [tId]="experienceItem.topicId"
                          [skillLevels]="experienceItem?.skillLevels"
         ></app-topic-skill><!--    [skillLevels]="exp.skillLevels"-->

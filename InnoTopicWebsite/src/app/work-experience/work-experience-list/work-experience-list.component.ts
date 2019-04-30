@@ -28,7 +28,7 @@ export class WorkExperienceListComponent implements OnInit {
 
   public topicCategoriesArray = topicCategoriesArray
 
-  @Input() experience
+  @Input() experienceByName
   experienceArr
 
   byCategory = []
@@ -40,8 +40,8 @@ export class WorkExperienceListComponent implements OnInit {
   }
 
   ngOnInit() {
-    // console.log('this.experience', this.experience)
-    this.experienceArr = getDictionaryValuesAsArray(this.experience).map((exp: any) => {
+    // console.log('this.experience', this.experienceByName)
+    this.experienceArr = getDictionaryValuesAsArray(this.experienceByName).map((exp: any) => {
       // console.log('this.experience exp', exp)
       exp.topic = this.topicsService.getTopicById(exp.topicId)
       exp.category = exp.topic.category

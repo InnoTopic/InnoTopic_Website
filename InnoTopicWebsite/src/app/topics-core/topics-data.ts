@@ -113,6 +113,7 @@ export class Frontend {
       'Angular Universal': t()
     }
   })
+  'Angular Elements' = t('angular-elements-logo.png')
   'Angular Material' = t()
   AngularJS = tNoIcon({
     urls: new TopicUrls(
@@ -141,6 +142,10 @@ export class Frontend {
       Capacitor: tNoIcon(),
     }
   })
+  Stencil = tWide()
+  'Vue.js' = t({logo: 'vue'})
+
+
 
   Lodash = t()
   Bootstrap = t()
@@ -155,6 +160,7 @@ export class Frontend {
   'Aurelia' = t()
   'Font Awesome' = t('fort-awesome-alt-brands.svg')
   Workbox = tWide('Workbox-Logo-Grey.svg')
+  'SVG.js' = t('svg-js.png' /* WTF, PNG for an SVG lib :D */)
 }
 
 export class JavaScript {
@@ -169,7 +175,10 @@ export class Java {
 }
 
 export class Backend {
-  'Node.js' = tWide('nodejs.svg')
+  'Node.js' = tWide({
+    logo: 'nodejs.svg',
+    logoSmallIcon: 'nodejs-icon.svg',
+  })
 
   'Express.js' = tWide({
     logo: 'express.svg',
@@ -384,7 +393,7 @@ export class Other {
   ReactiveX = t()
 
   RegExp = tNoIcon()
-  'Java Swing' = tNoIcon()
+  'Java Swing' = t('java')
   // TODO: stuff like BugZilla, Trello, Agile Central
   // TODO: groups (here or in experience), like FrontEnd, BackEnd, Languages, Other
 }
