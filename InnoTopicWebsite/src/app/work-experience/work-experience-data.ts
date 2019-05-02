@@ -146,12 +146,13 @@ export class WorkExperienceData {
   expandingTo = experience('Expanding to', 'actively learning and ready to take projects', {
     Flutter: we(),
     Dart: we(intermediate, advanced),
+    // Angular Dart
     Capacitor: we(intermediate, expert),
     Stencil: we(intermediate, expert),
     'Vue.js': we(),
     'Angular Elements': we(),
     'SVG.js': we(),
-    // Angular Dart
+    Akita: we(),
   })
   earlier = experience('Earlier experience', 'always curious to learn more, but no particular need right now', {
     'Java Swing':
@@ -174,14 +175,10 @@ export class WorkExperienceData {
       we(intermediate),
     'C++':
       we(intermediate),
-    'C#': // FIXME: not working
+    'C#':
       we(intermediate, advanced),
-    '.NET': // FIXME: not working
+    '.NET':
       we(intermediate),
-    'NET.smth': // FIXME: not working
-      we(intermediate),
-    // 'test':
-    //   we(intermediate),
     Lua:
       we(beginner),
   })
@@ -202,6 +199,7 @@ export class WorkExperienceData {
     'Plastic SCM': we(),
     Workbox: we(),
     Keras: we(),
+    Hoodie: we(),
   })
 }
 

@@ -219,6 +219,7 @@ export class Frontend_And_Backend_App_Platforms {
   JHipster = t()
   Meteor = tWide()
   Hoodie = tWide()
+  Akita = tNoIcon() // https://github.com/datorama/akita
 }
 
 export class Testing {

@@ -17,6 +17,8 @@ export class SkillLevelsIconsComponent implements OnInit {
 
   @Input() topic: TopicInterest;
   @Input() skillLevels: UserSkillLevelsHaveWant;
+  @Input() useSignalLevels = true
+
   icon: string;
   // text:string = "set";
   public isTextVisible: boolean = true;
@@ -29,6 +31,15 @@ export class SkillLevelsIconsComponent implements OnInit {
     advanced: "battery-three-quarters",
     expert: "battery-full"
   }
+
+  public skillsIconsSignal = {
+    none: 'signal-solid-1',
+    beginner: "signal-solid-2",
+    intermediate: "signal-solid-3",
+    advanced: "signal-solid-4",
+    expert: "signal-solid"
+  }
+
 
   constructor() {
     /// if(topic in userSkills){
