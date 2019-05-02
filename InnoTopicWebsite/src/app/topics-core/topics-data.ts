@@ -461,7 +461,6 @@ export const topicCategoriesArray = [
   new TopicCategory('Frontend', new Frontend()),
   new TopicCategory('Backend', new Backend()),
   new TopicCategory('Frontend and backend app platforms', new Frontend_And_Backend_App_Platforms()),
-  new TopicCategory('Other', new Other()),
   new TopicCategory('Testing', new Testing()),
   new TopicCategory('Tools', new Tools()),
   new TopicCategory('Languages', new Languages()),
@@ -476,6 +475,7 @@ export const topicCategoriesArray = [
   new TopicCategory('JavaScript', new JavaScript()),
   new TopicCategory('Build Systems and package managers', new Build_Systems_And_Package_Managers()),
   new TopicCategory('AI', new AI()),
+  new TopicCategory('Other', new Other()),
 ]
 
 export const topics: Topics = processTopics(

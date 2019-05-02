@@ -1,13 +1,10 @@
-<p>
-  work-projects-section works!
-</p>
 
 <section *ngFor="let orgKV of organisationsAndProjects | keyvalue"><!--<ng-template let-org="orgKV.value">-->
 
   <img width=120 height=80 src="assets/images/clients/{{orgKV.value.logoFileName}}">
-  <h2>ORG: {{orgKV.key}}</h2>
+  <h2>{{orgKV.key}}</h2>
   <section *ngFor="let projKV of orgKV.value.projects | keyvalue"
-  >
+  > <!-- FIXME: don't use keyvalue, as it looses order !! -->
     <h3>PROJ: {{projKV.key}}</h3>
     <fa name="male"></fa> ROLE: {{projKV.value.roles}}
     <section>
