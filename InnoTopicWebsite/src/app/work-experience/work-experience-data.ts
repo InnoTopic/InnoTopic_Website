@@ -147,6 +147,7 @@ export class WorkExperienceData {
     Flutter: we(),
     Dart: we(),
     Capacitor: we(),
+    Akita: we(),
     // Angular Dart
   })
   earlier = experience('Earlier experience', '(always curious to learn more, but no particular need right now', {
@@ -174,8 +175,8 @@ export class WorkExperienceData {
       we(intermediate),
     '.NET': // FIXME: not working
       we(intermediate),
-    'NET.smth': // FIXME: not working
-      we(intermediate),
+    // 'NET.smth': // FIXME: not working
+    //   we(intermediate),
     // 'test':
     //   we(intermediate),
     Lua:
@@ -198,6 +199,7 @@ export class WorkExperienceData {
     'Plastic SCM': we(),
     Workbox: we(),
     Keras: we(),
+    Hoodie: we(),
   })
 }
 
