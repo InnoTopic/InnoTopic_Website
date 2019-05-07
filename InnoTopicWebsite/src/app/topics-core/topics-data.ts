@@ -324,7 +324,7 @@ export class Mobile {
     }
   })
   Capacitor = tWide('capacitor--logo-light.png', [256, 45]) // FIXME: remove (is in sub-topics of Ionic)
-  Flutter = tNoIcon()
+  Flutter = tWide()
 }
 
 export class Cloud {
