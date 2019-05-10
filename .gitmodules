@@ -1,0 +1,3 @@
+[submodule "InnoTopicWebsite/src/app/TopicFriendsShared"]
+	path = InnoTopicWebsite/src/app/TopicFriendsShared
+	url = git@github.com:TopicFriends/TopicFriendsShared.git
