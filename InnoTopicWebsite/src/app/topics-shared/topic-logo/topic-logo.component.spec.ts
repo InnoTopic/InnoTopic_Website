@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { Topic } from '../../topics-core/Topic';
-import { TopicsService } from '../../topics-core/topics.service';
+import { Topic } from '../../TopicFriendsShared/topics-core/Topic';
+import { TopicsService } from '../../TopicFriendsShared/topics-core/topics.service';
 
 import {
   defaultIconHeight,

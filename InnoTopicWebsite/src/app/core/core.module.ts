@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TopicsCoreModule } from '../topics-core/topics-core.module';
+import { TopicsCoreModule } from '../TopicFriendsShared/topics-core/topics-core.module';
 
 @NgModule({
   declarations: [],

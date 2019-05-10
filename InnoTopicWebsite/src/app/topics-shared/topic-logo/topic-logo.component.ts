@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Topic } from '../../topics-core/Topic';
-import { TopicsService } from '../../topics-core/topics.service';
+import { Topic } from '../../TopicFriendsShared/topics-core/Topic';
+import { TopicsService } from '../../TopicFriendsShared/topics-core/topics.service';
 
 export const defaultIconHeight = 18
 

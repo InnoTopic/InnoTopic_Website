@@ -1,4 +1,4 @@
-import { Topics } from '../topics-core/topics-data';
+import { Topics } from '../TopicFriendsShared/topics-core/topics-data';
 import { UserSkillLevelsHaveWant2 } from '../user-profile-shared/user-skills.service';
 import { setIdsFromKeys } from '../utils/dictionary-utils';
 
