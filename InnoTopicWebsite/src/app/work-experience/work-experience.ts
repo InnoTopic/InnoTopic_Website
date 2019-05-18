@@ -2,6 +2,15 @@ import { Topics } from '../TopicFriendsShared/topics-core/topics-data';
 import { UserSkillLevelsHaveWant2 } from '../user-profile-shared/user-skills.service';
 import { setIdsFromKeys } from '../utils/dictionary-utils';
 
+export class WorkExperienceByStatus {
+  constructor(
+    public title: string,
+    public comment: string,
+    public topics: any,
+  ) {}
+}
+
+
 export class WorkExperience {
 
   public constructor(
@@ -31,7 +40,7 @@ export type MapToTopics<TVal> = Partial<
   }
 >
 
-export function experience(title, comment, exp: MapToTopics<any>) {
+export function experience(title, comment, exp: MapToTopics<any>): WorkExperienceByStatus {
   return {
     title: title,
     comment: comment,

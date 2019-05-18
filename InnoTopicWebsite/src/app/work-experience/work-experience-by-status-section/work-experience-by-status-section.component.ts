@@ -3,6 +3,7 @@ import {
   Input,
   OnInit,
 } from '@angular/core';
+import { WorkExperienceByStatus } from '../work-experience';
 
 /** status: mode / approach / intent(ions) */
 @Component({
@@ -12,7 +13,7 @@ import {
 })
 export class WorkExperienceByStatusSectionComponent implements OnInit {
 
-  @Input() experience
+  @Input() experience: WorkExperienceByStatus
 
   constructor() { }
 

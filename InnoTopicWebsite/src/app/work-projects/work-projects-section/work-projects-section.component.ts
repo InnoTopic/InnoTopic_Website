@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { OrganisationsAndProjects } from '../../work-experience/work-projects-data';
+import { OrganisationsAndProjects } from '../work-projects-data';
 
 @Component({
   selector: 'app-work-projects-section',

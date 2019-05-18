@@ -2,7 +2,7 @@
   <section *ngIf="hasExperienceInCategory(category)">
     <h4>{{categoryTitle(category.name)}}</h4>
     <!--  <hr>-->
-    <mat-chip-list>
+<!--    <mat-chip-list>-->
       <ng-container *ngFor="let topic of category.topicsArray">
 <!--        TOPIC_: {{topic.id}}-->
 <!--        experience[topic.id]: {{experienceByName[topic.name]}}-->
@@ -11,7 +11,7 @@
                          [skillLevels]="experienceItem?.skillLevels"
         ></app-topic-skill><!--    [skillLevels]="exp.skillLevels"-->
       </ng-container>
-    </mat-chip-list>
+<!--    </mat-chip-list>-->
 
   </section>
 

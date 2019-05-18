@@ -2,6 +2,7 @@
 import { setIdsFromKeys } from '../utils/dictionary-utils';
 
 export interface Organisation {
+  flags?: string
   projects: any
   time: number[]
   logoFileName?: string
@@ -30,8 +31,9 @@ export class OrganisationsAndProjects {
   }
 
   AIG = org({
+    flags: 'pl de at es gb us', /* FIXME */
     time: [2017, 2018],
-    logoFileName: 'aiglogo_white.svg',
+    logoFileName: 'AIG_logo.svg.png',
     projects: {
       'Customer-facing application for managing insurance plans and customer data': {
         roles: 'Senior Angular & Node.js Developer',
@@ -76,6 +78,8 @@ export class OrganisationsAndProjects {
   })
 
   'Oblong Industries' = org({
+    flags: 'pl de us gb es es-ct in fr',
+    logoFileName: 'oblong_logo.png',
     time: [2013, 2015],
     projects: {
       'Mezzanine Android': {
@@ -90,13 +94,23 @@ export class OrganisationsAndProjects {
 
   })
 
-  // 'CollabNet' = org({
-  //
-  // })
-  //
-  // 'Siemens SIS' = org({
-  //
-  // })
+  'CollabNet' = org({
+    flags: 'pl de us gb in',
+    logoFileName: 'collabnet_logo_blue.jpeg',
+    time: [2011, 2012],
+    projects: {
+
+    }
+  })
+
+  'Siemens SIS' = org({
+    flags: 'lu de pl gb',
+    logoFileName: 'Siemens-logo.png',
+    time: [2010, 2011],
+    projects: {
+
+    }
+  })
   //
   // 'Research And Engineering Center (REC), later GlobalLogic' = org({
   //

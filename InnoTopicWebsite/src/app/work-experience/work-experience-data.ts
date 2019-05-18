@@ -154,7 +154,9 @@ export class WorkExperienceData {
     'SVG.js': we(),
     Akita: we(),
   })
-  earlier = experience('Earlier experience', 'always curious to learn more, but no particular need right now', {
+  earlier = experience('Earlier experience',
+    'always curious to learn more, but no particular need right now',
+    {
     'Java Swing':
       we(advanced),
     Hibernate:

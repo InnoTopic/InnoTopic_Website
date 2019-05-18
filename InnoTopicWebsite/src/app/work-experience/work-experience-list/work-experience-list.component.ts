@@ -22,7 +22,7 @@ import { groupByKeepingOrder } from '../../utils/utils';
 @Component({
   selector: 'app-work-experience-list',
   templateUrl: './work-experience-list.component.html',
-  styleUrls: ['./work-experience-list.component.scss']
+  styleUrls: ['./work-experience-list.component.sass']
 })
 export class WorkExperienceListComponent implements OnInit {
 
