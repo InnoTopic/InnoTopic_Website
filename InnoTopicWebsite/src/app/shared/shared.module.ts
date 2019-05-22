@@ -127,6 +127,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Angular2FontawesomeModule } from 'angular2-fontawesome';
 import { AppRoutingModule } from '../app-routing.module';
+import { CompanyLogoComponent } from './company-logo/company-logo.component';
 import { SpacerComponent } from './spacer/spacer.component';
 
 let imports = [
@@ -139,7 +140,7 @@ let imports = [
   Angular2FontawesomeModule,
 ];
 
-let declarations = [SpacerComponent];
+let declarations = [SpacerComponent, CompanyLogoComponent];
 
 @NgModule({
   imports: imports,
