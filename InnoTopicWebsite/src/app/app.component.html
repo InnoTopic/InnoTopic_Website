@@ -27,29 +27,33 @@
 <!-- List of topics with experience levels and -->
 <!-- D3 graph ; highlights from/to topic tags-->
 
-<div id="email">
-  <fa name="envelope"></fa>
-  E-mail: consulting.offers@innotopic.com
+<div style="max-width: 800px; margin: auto">
+
+  <div id="email">
+    <fa name="envelope"></fa>
+    E-mail: consulting.offers@innotopic.com
+  </div>
+
+  <!-- Testimonials (Felix, take from LinkedIn recommendations) -->
+
+  <app-cv-page></app-cv-page>
+
+  <router-outlet></router-outlet>
+
+  <div class="powered-by">
+    Powered by
+    <app-topic-tag tId="Angular">
+      <span class="version">7</span>
+    </app-topic-tag>
+    <app-topic-tag tId="Angular Material">
+      <span class="version">7</span>
+    </app-topic-tag>
+    <app-topic-tag tId="TypeScript">
+      <span class="version">3.2.2</span>
+    </app-topic-tag>
+    <app-topic-tag tId="Sass">
+    </app-topic-tag>
+  </div>
+
+
 </div>
-
-<!-- Testimonials (Felix, take from LinkedIn recommendations) -->
-
-<app-cv-page></app-cv-page>
-
-<router-outlet></router-outlet>
-
-<div class="powered-by">
-  Powered by
-  <app-topic-tag tId="Angular">
-    <span class="version">7</span>
-  </app-topic-tag>
-  <app-topic-tag tId="Angular Material">
-    <span class="version">7</span>
-  </app-topic-tag>
-  <app-topic-tag tId="TypeScript">
-    <span class="version">3.2.2</span>
-  </app-topic-tag>
-  <app-topic-tag tId="Sass">
-  </app-topic-tag>
-</div>
-
