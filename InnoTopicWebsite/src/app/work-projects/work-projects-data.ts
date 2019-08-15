@@ -6,6 +6,7 @@ export interface Organisation {
   projects: any
   time: number[]
   logoFileName?: string
+  linkedInRecommendations?: number
 }
 
 function org(organisation: Organisation) {
@@ -30,26 +31,30 @@ export class OrganisationsAndProjects {
   constructor() {
   }
 
+  'InnoTopic SLU' = org({
+    logoFileName: '../InnoTopic_Logo.svg',
+    flags: 'pl us gb es',
+    time: [2018],
+    projects: {
+      'InnoTopic.com website': {
+        topicsById: {
+          'Angular Material': {},
+          Angular: {},
+          TypeScript: {},
+        }
+      }
+    }
+  })
+
   AIG = org({
     flags: 'pl de at es gb us', /* FIXME */
     time: [2017, 2018],
     logoFileName: 'AIG_logo.svg.png',
     projects: {
-      'Customer-facing application for managing insurance plans and customer data': {
-        roles: 'Senior Angular & Node.js Developer',
-        topicsById: {
-          Angular: {},
-          TypeScript: {},
-          Less: {},
-          'Node.js': {},
-          'Express.js': {},
-        }
-      },
-      // 'XYZ': {
-      //
-      // },
       'Platform for assessing risk': {
         roles: 'Lead frontend developer and backend developer, teaching Angular',
+        description: 'PWA working fully offline. Advanced analytics using chart and grid. Internationalisation.',
+        recommendations: '',
         topicsById: {
           Angular: {
             subTopics: {
@@ -72,15 +77,65 @@ export class OrganisationsAndProjects {
           MongoDB: {},
           Mongoose: {},
           KeystoneJS: {},
+          // TODO: Agile Central
+        }
+      },
+      'Customer-facing application for managing insurance plans and customer data': {
+        roles: 'Senior Angular & Node.js Developer',
+        topicsById: {
+          Angular: {},
+          TypeScript: {},
+          Less: {},
+          'Node.js': {},
+          'Express.js': {},
+        }
+      },
+      'Application for managing insurance plans': {
+        roles: 'Angular Developer',
+        topicsById: {
+          Angular: {},
+          TypeScript: {},
+          Karma: {},
+          Jasmine: {},
+          Bootstrap: {},
         }
       }
     },
+  })
+
+  'TopicFriends.org' = org({
+    logoFileName: 'TopicFriends.svg',
+    flags: 'pl us gb es',
+    time: [2017],
+    projects: {
+      'TopicFriends.org Web App': {
+        role: 'Co-Founder',
+        topicsById: {
+          Angular: {},
+          Firebase: {},
+          'Angular Material': {},
+          'TestCafe': {},
+          'WebStorm': {},
+          'CircleCI': {},
+          'GitHub': {},
+          'Bash': {},
+          'TypeScript': {},
+          'Karma': {},
+          'Jasmine': {},
+          'Figma': {},
+          'Affinity Designer': {},
+          'SVG': {},
+          'Google Maps': {},
+        }
+      }
+    }
   })
 
   'Oblong Industries' = org({
     flags: 'pl de us gb es es-ct in fr',
     logoFileName: 'oblong_logo.png',
     time: [2013, 2015],
+    linkedInRecommendations: 2,
     projects: {
       'Mezzanine Android': {
         roles: 'Android Lead, Senior Developer',
@@ -88,29 +143,92 @@ export class OrganisationsAndProjects {
           Android: {},
           Java: {},
           Gradle: {},
+          Bugzilla: {},
+          Ruby: {}, // TODO: Calabash Android
+          RubyMine: {},
+          JUnit: {},
+          Eclipse: {},
+          'IntelliJ IDEA': {},
+          'Android Studio': {},
         }
       }
     }
-
   })
+
+  // TODO: FlexAgenda, A2P; Play Store
 
   'CollabNet' = org({
     flags: 'pl de us gb in',
     logoFileName: 'collabnet_logo_blue.jpeg',
     time: [2011, 2012],
-    projects: {
+    linkedInRecommendations: 2,
 
+    projects: {
+      'CollabNet TeamForge integration with Git': {
+        roles: 'Java Developer and related',
+        topicsById: {
+          Java: {},
+          // TODO: SOAP
+          Perl: {},
+          Python: {},
+          Bash: {},
+          // TODO: TeamForge
+          Git: {},
+          Subversion: {},
+          JUnit: {}, // TODO: Cobertura, Mockito
+          'CentOS Linux': {},
+          'Eclipse': {},
+        }
+      }
     }
   })
+
 
   'Siemens SIS' = org({
     flags: 'lu de pl gb',
     logoFileName: 'Siemens-logo.png',
     time: [2010, 2011],
+    linkedInRecommendations: 2,
     projects: {
-
+      'Multi-Dimensional-Tool for EuroStat (European Commission)': {
+        topicsById: {
+          Java: {},
+          Jira: {},
+          Subversion: {},
+          Eclipse: {},
+          'IntelliJ IDEA': {},
+        }
+      }
     }
   })
+
+  'CoViOb - Communicate via Objects' = org({
+    logoFileName: 'old-LogoIcon_Coviob2.svg.png',
+    flags: 'pl gb',
+    time: [2006, 2010],
+    linkedInRecommendations: 2,
+    projects: {
+      'CoViOb - Communicate via Objects': {
+        topicsById: {
+          Java: {},
+          'Git': {},
+          'Subversion': {},
+          'Debian Linux': {},
+          Scala: {},
+          Maven: {},
+          Eclipse: {},
+          NetBeans: {},
+          Bash: {},
+          'IntelliJ IDEA': {},
+          'JUnit': {},
+          'TestNG': {},
+          'Jenkins': {},
+        }
+      }
+    }
+  })
+
+
   //
   // 'Research And Engineering Center (REC), later GlobalLogic' = org({
   //

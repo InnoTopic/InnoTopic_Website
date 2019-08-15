@@ -2,7 +2,9 @@
  * Created by kd on 2017-08-01.
  */
 
-export function getDictionaryValuesAsArray<T>(dictionary: { [p: string]: T }): T[] {
+export interface Dict<TVal, /*TKey = string*/> { [key: string /*TKey*/]: TVal }
+
+export function getDictionaryValuesAsArray<TItem>(dictionary: Dict<TItem>): TItem[] {
   // console.log('getDictionaryValuesAsArray dictionary', dictionary)
   const values = [];
   if (dictionary) {
@@ -17,7 +19,7 @@ export function getDictionaryValuesAsArray<T>(dictionary: { [p: string]: T }): T
   return values;
 }
 
-export function setIdsFromKeys<T>(dictionary: T, idKeyName: string = 'id'): T {
+export function setIdsFromKeys<TItem>(dictionary: Dict<TItem>, idKeyName: string = 'id'): Dict<TItem> {
   // idKeyName = idKeyName || 'id';
   let ownPropertyNames = Object.getOwnPropertyNames(dictionary);
   // console.log('setIdsFromKeys ownPropertyNames', ownPropertyNames);
@@ -27,4 +29,10 @@ export function setIdsFromKeys<T>(dictionary: T, idKeyName: string = 'id'): T {
     // console.log('setIdsFromKeys', id, curExp);
   }
   return dictionary;
+}
+
+
+export function dictToArrayAssigningIds<TItem>(dictionary: Dict<TItem>, idKeyName: string = 'id'): TItem[] {
+  const dictWithIdsFromKeys: Dict<TItem> = setIdsFromKeys(dictionary, idKeyName);
+  return getDictionaryValuesAsArray(dictWithIdsFromKeys)
 }

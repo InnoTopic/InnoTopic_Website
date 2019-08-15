@@ -1,5 +1,9 @@
 
-<section *ngFor="let orgKV of organisationsAndProjects | keyvalue"><!--<ng-template let-org="orgKV.value">-->
+<h2>Organisations and Projects</h2>
+
+<section *ngFor="let orgKV of organisationsAndProjects | keyvalue">
+  <!-- FIXME: don't use keyvalue, as it loses order !! -->
+  <!--<ng-template let-org="orgKV.value">-->
 
   <h2>
     <img width=auto height=50 src="assets/images/clients/{{orgKV.value.logoFileName}}">
@@ -8,6 +12,10 @@
     <app-spacer></app-spacer>
     <app-flags [flags]="orgKV.value.flags"></app-flags>
   </h2>
+  <a *ngIf="orgKV.value.linkedInRecommendations" href="https://www.linkedin.com/in/karoldepka" target="_blank">
+    Please also check {{orgKV.value.linkedInRecommendations}} Recommendations on
+    <img style="vertical-align: middle; padding-bottom: 2px" height='14px' src="assets/images/logos/linkedin.svg"> <!-- TODO LinkedIn Logo; TODO: underline link -->
+  </a>
   <section *ngFor="let projKV of orgKV.value.projects | keyvalue"
   > <!-- FIXME: don't use keyvalue, as it looses order !! -->
     <h3>
@@ -16,6 +24,7 @@
         <app-spacer></app-spacer> <fa name="male"></fa> Role: {{projKV.value.roles}}
       </span>
     </h3>
+    <span *ngIf="projKV.value.description">{{projKV.value.description}}</span>
 
     <section>
       Skills:

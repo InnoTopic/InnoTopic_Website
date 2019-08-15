@@ -7,10 +7,11 @@ import {
   experience,
 } from './work-experience';
 
-/** Can split into: main experience(critical), additional (wanna learn more, but not critical)*/
 export class WorkExperienceData {
   main = experience('Main Experience', 'extensive usage and always learning', {
     Angular:
+      we(advanced, expert),
+    Codelyzer:
       we(advanced, expert),
     Nx:
       we(intermediate, expert),
@@ -39,6 +40,8 @@ export class WorkExperienceData {
     // EcmaScript
     GitHub:
       we(advanced, expert),
+    GitLab:
+      we(advanced, expert),
     NPM:
       we(advanced, expert),
     Yarn:
@@ -50,6 +53,8 @@ export class WorkExperienceData {
     jQuery:
       we(intermediate),
     SVG:
+      we(advanced, expert),
+    'Google Maps':
       we(advanced, expert),
     'ag-Grid':
       we(advanced, expert),
@@ -124,6 +129,7 @@ export class WorkExperienceData {
     NoSQL:
       we(advanced, expert),
     WebStorm: we(advanced, expert),
+    'Android Studio': we(advanced, expert),
     'Visual Studio Code': we(intermediate, expert),
     'Vim': we(intermediate),
     // DataBases:
@@ -133,15 +139,42 @@ export class WorkExperienceData {
     WordPress: we(intermediate),
     'Font Awesome': we(advanced, expert),
     'VirtualBox': we(advanced),
+    Blender: we(intermediate, advanced),
+    'Adobe Illustrator': we(advanced, expert),
+    'Adobe Photoshop': we(intermediate, advanced),
+    'Adobe Creative Cloud': we(intermediate, advanced),
+    'Affinity Designer': we(advanced, expert),
+    'GIMP': we(advanced),
+    'Inkscape': we(advanced),
   })
   additional = experience('Additional experience', 'learning more, but not as critical for me now', {
     Java:
       we(advanced),
     // TODO: FindBugs, PMD (TODO: check CODACY (written in Scala) from Leo, Lisbon -> Silicon Valley)
+    JUnit:
+      we(advanced),
+    TestNG:
+      we(intermediate),
+    Jenkins:
+      we(intermediate),
+    RubyMine:
+      we(intermediate),
     Swift:
       we(intermediate, advanced),
     Python:
       we(intermediate),
+    Docker:
+      we(intermediate),
+    React:
+      we(intermediate),
+    Redux:
+      we(intermediate),
+    Ember:
+      we(beginner),
+    'Vue.js':
+      we(beginner, advanced),
+    Kubernetes:
+      we(beginner),
   })
   expandingTo = experience('Expanding to', 'actively learning and ready to take projects', {
     Flutter: we(),
@@ -153,6 +186,7 @@ export class WorkExperienceData {
     'Angular Elements': we(),
     'SVG.js': we(),
     Akita: we(),
+    TensorFlow: we(),
   })
   earlier = experience('Earlier experience',
     'always curious to learn more, but no particular need right now',
@@ -166,11 +200,13 @@ export class WorkExperienceData {
     Subversion:
       we(advanced),
     Groovy:
-      we(intermediate),
+      we(intermediate, advanced),
     Scala:
-      we(intermediate),
+      we(intermediate, advanced),
+    Eclipse:
+      we(advanced),
     Ruby:
-      we(intermediate),
+      we(intermediate, advanced),
     Perl:
       we(intermediate),
     C:

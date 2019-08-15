@@ -36,7 +36,7 @@ export function we(/*topicId: string, */have?: string, want?: string) {
 
 export type MapToTopics<TVal> = Partial<
   {
-    [P in keyof Topics]: TVal // https://www.typescriptlang.org/docs/handbook/advanced-types.html - Mapped Types
+    [P in keyof Topics]: TVal // https://www.typescriptlang.org/docs/handbook/advanced-types.html - TypeScript Mapped Types
   }
 >
 
