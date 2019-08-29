@@ -4,8 +4,8 @@ import {
   Input,
   ViewEncapsulation,
 } from '@angular/core';
+import { UserSkillLevelsHaveWant } from '../../TopicFriendsShared/skills/skills-core/user-skills';
 import { TopicInterest } from '../../topics-shared/topic-tag/topic-tag.component';
-import { UserSkillLevelsHaveWant } from '../../user-profile-shared/user-skills.service';
 
 @Component({
   selector: 'app-skill-level-label',
