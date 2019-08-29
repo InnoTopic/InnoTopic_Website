@@ -1,7 +1,7 @@
 
 <h2>Organisations and Projects</h2>
 
-<section *ngFor="let orgKV of organisationsAndProjects | keyvalue">
+<section *ngFor="let orgKV of organisationsAndProjects | keyValOrdered">
   <!-- FIXME: don't use keyvalue, as it loses order !! -->
   <!--<ng-template let-org="orgKV.value">-->
 
