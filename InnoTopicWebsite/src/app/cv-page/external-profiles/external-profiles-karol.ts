@@ -6,9 +6,15 @@ export const externalProfilesKarol: UserOtherProfiles = {
     userName: 'karoldepka',
   },
   gitHub: {
-
+    userName: 'karol-depka',
   },
   TopicFriends: {
     userName: 'karol-depka'
+  },
+  twitter: {
+    userName: 'karol_depka',
+  },
+  stackOverflow: {
+    userName: '170451/karoldepka',
   }
 }

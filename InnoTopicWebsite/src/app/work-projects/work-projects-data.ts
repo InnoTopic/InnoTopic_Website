@@ -42,8 +42,21 @@ export class OrganisationsAndProjects {
           Angular: {},
           TypeScript: {},
         }
+      },
+      'FlexAgenda': {
+        roles: 'Founder, Android/Java Developer, Publisher',
+        description: 'Android app for time planning (freemium). Reached 100k installs organically.',
+        topicsById: {
+          Android: {},
+          Java: {},
+          Gradle: {},
+          JUnit: {},
+          Eclipse: {},
+          'IntelliJ IDEA': {},
+          'Android Studio': {},
+        }
       }
-    }
+    },
   })
 
   AIG = org({
@@ -109,7 +122,7 @@ export class OrganisationsAndProjects {
     time: [2017],
     projects: {
       'TopicFriends.org Web App': {
-        role: 'Co-Founder',
+        roles: 'Co-Founder',
         topicsById: {
           Angular: {},
           Firebase: {},
@@ -164,7 +177,7 @@ export class OrganisationsAndProjects {
     linkedInRecommendations: 2,
 
     projects: {
-      'CollabNet TeamForge integration with Git': {
+      'CollabNet TeamForge integration with Gerrit Code Review System and Git': {
         roles: 'Java Developer and related',
         topicsById: {
           Java: {},
@@ -178,6 +191,7 @@ export class OrganisationsAndProjects {
           JUnit: {}, // TODO: Cobertura, Mockito
           'CentOS Linux': {},
           'Eclipse': {},
+          'Jenkins': {},
         }
       }
     }
@@ -222,7 +236,6 @@ export class OrganisationsAndProjects {
           'IntelliJ IDEA': {},
           'JUnit': {},
           'TestNG': {},
-          'Jenkins': {},
         }
       }
     }

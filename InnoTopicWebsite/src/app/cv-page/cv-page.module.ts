@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Angular2FontawesomeModule } from 'angular2-fontawesome';
 import { PersonalInterestsModule } from '../personal-interests/personal-interests.module';
 import { WorkExperienceModule } from '../skills/work-experience.module';
 import { OtherProfilesModule } from '../TopicFriendsShared/other-profiles/other-profiles.module';
@@ -19,6 +20,7 @@ import { ExternalProfilesComponent } from './external-profiles/external-profiles
     WorkProjectsModule,
     PersonalInterestsModule,
     OtherProfilesModule,
+    Angular2FontawesomeModule,
   ],
 })
 export class CvPageModule { }
