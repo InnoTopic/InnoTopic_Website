@@ -5,10 +5,12 @@ import { SharedModule } from '../shared/shared.module';
 import { WorkExperienceModule } from '../skills/work-experience.module';
 import { UtilsModule } from '../utils/utils.module';
 import { WorkProjectsSectionComponent } from './work-projects-section/work-projects-section.component';
+import { WorkProjectComponent } from './work-projects-section/work-project/work-project.component';
 
 @NgModule({
   declarations: [
-    WorkProjectsSectionComponent
+    WorkProjectsSectionComponent,
+    WorkProjectComponent
   ],
   imports: [
     CommonModule,

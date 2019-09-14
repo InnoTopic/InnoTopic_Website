@@ -1,0 +1,16 @@
+<section>
+  <h3>
+    <span style="margin-left: -8px"><label>Project:</label> {{projectTitle}}</span>
+    <span class="projectRole">
+      <app-spacer></app-spacer> <fa name="male"></fa>&nbsp;<label>Roles:</label>&nbsp;{{project.roles}}
+    </span>
+  </h3>
+  <span *ngIf="project.description; let description">{{description}}</span>
+
+  <section>
+    <label>Skills:</label>
+    <app-work-experience-list
+      [experienceByName]="project.topicsById"
+    ></app-work-experience-list>
+  </section>
+</section>

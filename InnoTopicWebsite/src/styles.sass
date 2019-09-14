@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css'
 
+$break-small: 500px
+
+
 html, body
   height: 100%
 body
@@ -13,8 +16,12 @@ body
 .mat-app-background
   background: white !important
 
+
 section
   margin: 13px
+  margin-right: 0px
+  @media screen and (max-width: $break-small)
+    margin: 3px
 
 h4
   margin: 0.5em

@@ -2,7 +2,6 @@
 <h2>Organisations and Projects</h2>
 
 <section *ngFor="let orgKV of organisationsAndProjects | keyValOrdered">
-  <!-- FIXME: don't use keyvalue, as it loses order !! -->
   <!--<ng-template let-org="orgKV.value">-->
 
   <h2>
@@ -11,26 +10,18 @@
     <span class="years">&nbsp;{{orgKV.value.time[0]}}-{{orgKV.value.time[1]}}</span>
     <app-spacer></app-spacer>
     <app-flags [flags]="orgKV.value.flags"></app-flags>
+    <app-spacer></app-spacer>
+    <span class="comment" *ngIf="orgKV.value.locations; let locations">{{locations}} </span>
   </h2>
   <a *ngIf="orgKV.value.linkedInRecommendations" href="https://www.linkedin.com/in/karoldepka" target="_blank">
-    Please also check {{orgKV.value.linkedInRecommendations}} recommendations on
+    Please also take a look at {{orgKV.value.linkedInRecommendations}} recommendations on
     <img style="vertical-align: middle; padding-bottom: 2px" height='14px' src="assets/images/logos/linkedin.svg"> <!-- TODO LinkedIn Logo; TODO: underline link -->
   </a>
-  <section *ngFor="let projKV of orgKV.value.projects | keyvalue"
-  > <!-- FIXME: don't use keyvalue, as it looses order !! -->
-    <h3>
-      <span style="margin-left: -8px">Project: {{projKV.key}}</span>
-      <span class="projectRole">
-        <app-spacer></app-spacer> <fa name="male"></fa> Roles: {{projKV.value.roles}}
-      </span>
-    </h3>
-    <span *ngIf="projKV.value.description">{{projKV.value.description}}</span>
-
-    <section>
-      Skills:
-      <app-work-experience-list [experienceByName]="projKV.value.topicsById"></app-work-experience-list>
-    </section>
-  </section>
+  <app-work-project
+    *ngFor="let projKV of orgKV.value.projects | keyValOrdered"
+    [project]="projKV.value"
+    [projectTitle]="projKV.key"
+  ></app-work-project>
 
 <!--</ng-template>-->
 </section>

@@ -72,6 +72,8 @@ export class WorkExperienceData {
       we(advanced, expert),
     Firebase:
       we(advanced, expert),
+    'Cloud Firestore':
+      we(advanced, expert),
     NgRx:
       we(intermediate, expert),
     NGXS:
@@ -146,6 +148,7 @@ export class WorkExperienceData {
     'Affinity Designer': we(advanced, expert),
     'GIMP': we(advanced),
     'Inkscape': we(advanced),
+    'Google Play': we(advanced, expert),
   })
   additional = experience('Additional experience', 'learning more, but not as critical for me now', {
     Java:

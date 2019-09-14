@@ -3,6 +3,7 @@ import { setIdsFromKeys } from '../utils/dictionary-utils';
 
 export interface Organisation {
   flags?: string
+  locations?: string
   projects: any
   time: number[]
   logoFileName?: string
@@ -54,6 +55,21 @@ export class OrganisationsAndProjects {
           Eclipse: {},
           'IntelliJ IDEA': {},
           'Android Studio': {},
+          'Google Play': {},
+          'GIMP': {},
+          'Inkscape': {},
+          'Adobe Illustrator': {},
+        }
+      },
+      'OrYoL': {
+        topicsById: {
+          Angular: {},
+          TypeScript: {},
+          Karma: {},
+          Jasmine: {},
+          Bootstrap: {},
+          Firebase: {},
+          'Cloud Firestore': {}
         }
       }
     },
@@ -63,6 +79,7 @@ export class OrganisationsAndProjects {
     flags: 'pl de at es gb us', /* FIXME */
     time: [2017, 2018],
     logoFileName: 'AIG_logo.svg.png',
+    locations: 'Heilbronn - Germany, Málaga - Spain (remote)',
     projects: {
       'Platform for assessing risk': {
         roles: 'Lead frontend developer and backend developer, teaching Angular',
@@ -90,7 +107,7 @@ export class OrganisationsAndProjects {
           MongoDB: {},
           Mongoose: {},
           KeystoneJS: {},
-          // TODO: Agile Central
+          'Agile Central': {},
         }
       },
       'Customer-facing application for managing insurance plans and customer data': {
@@ -145,6 +162,7 @@ export class OrganisationsAndProjects {
   })
 
   'Oblong Industries' = org({
+    locations: 'Barcelona, Los Angeles',
     flags: 'pl de us gb es es-ct in fr',
     logoFileName: 'oblong_logo.png',
     time: [2013, 2015],
@@ -153,12 +171,15 @@ export class OrganisationsAndProjects {
       'Mezzanine Android': {
         roles: 'Android Lead, Senior Developer',
         topicsById: {
+          'Google Play': {},
+          'JetBrains MPS': {},
           Android: {},
           Java: {},
           Gradle: {},
           Bugzilla: {},
           Ruby: {}, // TODO: Calabash Android
           RubyMine: {},
+          Cucumber: {},
           JUnit: {},
           Eclipse: {},
           'IntelliJ IDEA': {},
@@ -168,9 +189,8 @@ export class OrganisationsAndProjects {
     }
   })
 
-  // TODO: FlexAgenda, A2P; Play Store
-
   'CollabNet' = org({
+    locations: 'Potsdam, Berlin, Silicon Valley',
     flags: 'pl de us gb in',
     logoFileName: 'collabnet_logo_blue.jpeg',
     time: [2011, 2012],
@@ -185,20 +205,22 @@ export class OrganisationsAndProjects {
           Perl: {},
           Python: {},
           Bash: {},
-          // TODO: TeamForge
           Git: {},
           Subversion: {},
           JUnit: {}, // TODO: Cobertura, Mockito
           'CentOS Linux': {},
           'Eclipse': {},
           'Jenkins': {},
+          'TeamForge': {},
+          'Gerrit': {},
         }
       }
     }
   })
 
 
-  'Siemens SIS' = org({
+  'Siemens SIS (later Atos)' = org({
+    locations: 'Wroclaw - Poland, Koszalin - Poland (remote)',
     flags: 'lu de pl gb',
     logoFileName: 'Siemens-logo.png',
     time: [2010, 2011],
@@ -243,9 +265,29 @@ export class OrganisationsAndProjects {
 
 
   //
-  // 'Research And Engineering Center (REC), later GlobalLogic' = org({
-  //
-  // })
+  'Research And Engineering Center (REC), later GlobalLogic' = org({
+    locations: 'Koszalin - Poland, Wroclaw - Poland',
+    flags: 'pl gb de',
+    time: [2010, 2011],
+    projects: {
+      'Rostock Harbor': {
+        topicsById: {
+          Java: {},
+          'Subversion': {},
+          // 'JAXB': {},
+        }
+      },
+      'M2M Platform': {
+        topicsById: {
+          Java: {},
+          'Java Micro Edition': {},
+          'Subversion': {},
+          'Trac': {},
+        }
+      }
+    }
+
+  })
   //
   // 'o2.pl' = org({
   //

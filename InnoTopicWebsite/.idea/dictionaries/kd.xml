@@ -3,6 +3,7 @@
     <words>
       <w>aiglogo</w>
       <w>algolia</w>
+      <w>angeles</w>
       <w>bugzilla</w>
       <w>català</w>
       <w>centos</w>
@@ -13,7 +14,9 @@
       <w>depka</w>
       <w>figma</w>
       <w>freemium</w>
+      <w>gerrit</w>
       <w>grayscale</w>
+      <w>heilbronn</w>
       <w>hoodie</w>
       <w>inkscape</w>
       <w>inno</w>
@@ -21,6 +24,8 @@
       <w>intelli</w>
       <w>karoldepka</w>
       <w>keras</w>
+      <w>koszalin</w>
+      <w>málaga</w>
       <w>ngxs</w>
       <w>photoshop</w>
       <w>postgre</w>
@@ -32,6 +37,7 @@
       <w>trac</w>
       <w>wilber</w>
       <w>workbox</w>
+      <w>wrocław</w>
       <w>xplat</w>
     </words>
   </dictionary>
