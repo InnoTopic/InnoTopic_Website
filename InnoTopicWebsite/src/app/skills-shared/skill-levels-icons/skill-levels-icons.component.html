@@ -9,7 +9,7 @@
     <img
       *ngIf='useSignalLevels'
       class="skill-icon signal-icon"
-      src="assets/images/icons/signal/{{skillsIconsSignal[skillLevels?.have]}}.svg">
+      src="assets/images/icons/signal/{{skillIconSignal(skillLevels?.have)}}.svg">
   </ng-template>
 
   <ng-template [ngIf]="skillLevels?.want"><!--↗-->
@@ -23,7 +23,7 @@
     <img
       *ngIf='useSignalLevels'
       class="skill-icon want signal-icon"
-      src="assets/images/icons/signal/{{skillsIconsSignal[skillLevels?.want]}}.svg">
+      src="assets/images/icons/signal/{{skillIconSignal(skillLevels?.want)}}.svg">
 
   </ng-template>
   <!--<span>{{text}}</span>-->

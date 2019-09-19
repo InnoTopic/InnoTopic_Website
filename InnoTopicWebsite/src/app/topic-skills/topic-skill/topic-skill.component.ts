@@ -3,7 +3,10 @@ import {
   Input,
   OnInit,
 } from '@angular/core';
-import { UserSkillLevelsHaveWant } from '../../TopicFriendsShared/skills/skills-core/user-skills';
+import {
+  UserSkillLevelsHaveWant,
+  UserSkillLevelsHaveWant2,
+} from '../../TopicFriendsShared/skills/skills-core/user-skills';
 
 @Component({
   selector: 'app-topic-skill',
@@ -13,7 +16,7 @@ import { UserSkillLevelsHaveWant } from '../../TopicFriendsShared/skills/skills-
 export class TopicSkillComponent implements OnInit {
 
   @Input() tId: string;
-  @Input() skillLevels: UserSkillLevelsHaveWant
+  @Input() skillLevels: UserSkillLevelsHaveWant2
 
   constructor() { }
 

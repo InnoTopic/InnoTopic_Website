@@ -4,19 +4,31 @@ import {
   Input,
   ViewEncapsulation,
 } from '@angular/core';
-import { UserSkillLevelsHaveWant } from '../../TopicFriendsShared/skills/skills-core/user-skills';
+import {
+  UserSkillLevelsHaveWant,
+  UserSkillLevelsHaveWant2,
+} from '../../TopicFriendsShared/skills/skills-core/user-skills';
 import { TopicInterest } from '../../topics-shared/topic-tag/topic-tag.component';
 
+export const skillsIconsSignal = {
+  none: 'signal-solid-1',
+  beginner: "signal-solid-2",
+  intermediate: "signal-solid-3",
+  advanced: "signal-solid-4",
+  expert: "signal-solid"
+}
+
+
+/** TODO: rename: app-skill-levels-icons-have-want */
 @Component({
-  selector: 'app-skill-level-label',
+  selector: 'app-skill-levels-icons',
   templateUrl: './skill-levels-icons.component.html',
   styleUrls: ['./skill-level-label.component.sass'],
   encapsulation: ViewEncapsulation.None
 })
 export class SkillLevelsIconsComponent implements OnInit {
 
-  @Input() topic: TopicInterest;
-  @Input() skillLevels: UserSkillLevelsHaveWant;
+  @Input() skillLevels: UserSkillLevelsHaveWant2;
   @Input() useSignalLevels = true
 
   icon: string;
@@ -32,14 +44,9 @@ export class SkillLevelsIconsComponent implements OnInit {
     expert: "battery-full"
   }
 
-  public skillsIconsSignal = {
-    none: 'signal-solid-1',
-    beginner: "signal-solid-2",
-    intermediate: "signal-solid-3",
-    advanced: "signal-solid-4",
-    expert: "signal-solid"
+  skillIconSignal(level) {
+    return skillsIconsSignal[level]
   }
-
 
   constructor() {
     /// if(topic in userSkills){

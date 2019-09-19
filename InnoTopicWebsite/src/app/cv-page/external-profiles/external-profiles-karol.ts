@@ -5,6 +5,10 @@ export const externalProfilesKarol: UserOtherProfiles = {
     url: 'testLinkedIn',
     userName: 'karoldepka',
   },
+  XING: {
+    url: 'testLinkedIn',
+    userName: 'Karol_DepkaPradzinski',
+  },
   gitHub: {
     userName: 'karol-depka',
   },

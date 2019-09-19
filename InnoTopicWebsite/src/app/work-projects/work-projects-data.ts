@@ -49,6 +49,9 @@ export class OrganisationsAndProjects {
         description: 'Android app for time planning (freemium). Reached 100k installs organically.',
         topicsById: {
           Android: {},
+          Kotlin: {},
+          Groovy: {},
+          Spock: {},
           Java: {},
           Gradle: {},
           JUnit: {},
@@ -64,6 +67,7 @@ export class OrganisationsAndProjects {
       'OrYoL': {
         topicsById: {
           Angular: {},
+          PrimeNG: {},
           TypeScript: {},
           Karma: {},
           Jasmine: {},
@@ -173,7 +177,11 @@ export class OrganisationsAndProjects {
         topicsById: {
           'Google Play': {},
           'JetBrains MPS': {},
+          Groovy: {},
           Android: {},
+          Kotlin: {},
+          'Ubuntu Linux': {},
+          'macOS': {},
           Java: {},
           Gradle: {},
           Bugzilla: {},
@@ -266,11 +274,14 @@ export class OrganisationsAndProjects {
 
   //
   'Research And Engineering Center (REC), later GlobalLogic' = org({
+    linkedInRecommendations: 2 /* TODO: check */,
+    logoFileName: 'rec-global-logo.jpg',
     locations: 'Koszalin - Poland, Wroclaw - Poland',
     flags: 'pl gb de',
     time: [2010, 2011],
     projects: {
       'Rostock Harbor': {
+        roles: 'Senior Java developer',
         topicsById: {
           Java: {},
           'Subversion': {},
@@ -278,6 +289,7 @@ export class OrganisationsAndProjects {
         }
       },
       'M2M Platform': {
+        roles: 'Senior Java developer, tech lead',
         topicsById: {
           Java: {},
           'Java Micro Edition': {},

@@ -65,6 +65,33 @@
     <img style="vertical-align: middle; padding-bottom: 2px" height='14px' src="assets/images/logos/linkedin.svg"> <!-- TODO: underline link -->
   </a>
   <br>
+  <p id="legend">
+    Legend:
+
+    <ng-container
+      *ngFor="let level of ['beginner', 'intermediate', 'advanced', 'expert']"
+    >
+      <app-skill-level-icon
+        [skillLevel]="level"
+      ></app-skill-level-icon>
+      {{level}}
+    </ng-container>
+
+<!--    <img style="width: 12px; height: 12px" src="assets/images/icons/signal/signal-solid-2.svg">-->
+<!--    <app-skill-levels-icons [skillLevels]="{have: 'beginner', want: 'expert'}"></app-skill-levels-icons>-->
+<!--    <app-skill-levels-icons [skillLevels]="{have: 'advanced'}"></app-skill-levels-icons>-->
+    <p>Example:
+    <app-topic-skill [tId]="'Angular'"
+                     [skillLevels]="{have: 'advanced', want: 'expert'}"
+    ></app-topic-skill>- have: advanced; on my way to become: expert.
+    </p>
+<!--    none: 'battery-empty',-->
+<!--    beginner: "battery-quarter",-->
+<!--    intermediate: "battery-half",-->
+<!--    advanced: "battery-three-quarters",-->
+<!--    expert: "battery-full"-->
+<!--    Example: <app-topic-skill></app-topic-skill>-->
+<!--  </p>-->
 
 
   <app-work-experience-by-status-section
