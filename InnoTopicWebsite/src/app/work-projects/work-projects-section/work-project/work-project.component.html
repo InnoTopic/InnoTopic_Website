@@ -1,13 +1,13 @@
-<section>
+<section class="project">
   <h3>
-    <span style="margin-left: -8px"><label>Project:</label> {{projectTitle}}</span>
-    <span class="projectRole">
-      <app-spacer></app-spacer> <fa name="male"></fa>&nbsp;<label>Roles:</label>&nbsp;{{project.roles}}
-    </span>
+    <div><fa name="laptop"></fa><span><label>  Project: </label> {{projectTitle}}</span></div>
+    <div>
+       <fa name="male"></fa><span><label>  Roles: </label>{{project.roles}}</span>
+    </div>
   </h3>
   <span *ngIf="project.description; let description">{{description}}</span>
 
-  <section>
+  <section class="project-skills">
     <label>Skills:</label>
     <app-work-experience-list
       [experienceByName]="project.topicsById"

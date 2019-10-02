@@ -1,3 +1,6 @@
+@import '../../../app-themes.scss'
+@import '../../../styles.sass'
+
 .years
   font-size: 50%
   color: gray
@@ -5,3 +8,21 @@
 .projectRole
   display: inline-block
   font-size: 66%
+
+.organisation
+  margin: 0 10px
+  h2
+    border-bottom: 2px solid mat-color($light-accent,800)
+    margin-top: 30px
+    margin-bottom: 20px
+    display: flex
+    align-items: center
+    @media screen and (max-width: $break-medium)
+      flex-wrap: wrap
+      justify-content: center
+    & > *
+      margin: 0px 15px 10px 15px
+    & > *:first-child
+      margin-left: 0px
+
+

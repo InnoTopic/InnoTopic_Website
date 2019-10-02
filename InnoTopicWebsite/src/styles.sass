@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-@import '@angular/material/prebuilt-themes/deeppurple-amber.css'
+@import "~@angular/material/_theming.scss"
+@import 'app-themes.scss'
 
 $break-small: 500px
+$break-medium: 800px
 
 
 html, body
@@ -17,12 +19,6 @@ body
   background: white !important
 
 
-section
-  margin: 13px
-  margin-right: 0px
-  @media screen and (max-width: $break-small)
-    margin: 3px
-
 h4
   margin: 0.5em
   margin-block-start: 0.2em
@@ -35,11 +31,11 @@ h4
 .powered-by mat-chip
   img
     opacity: 10%
-  opacity: 50% !important
-  margin: 3px !important
-  padding: 5px !important
-  background-color: white !important
-  box-shadow: none !important
+    opacity: 50% !important
+    margin: 3px !important
+    padding: 5px !important
+    background-color: white !important
+    box-shadow: none !important
 
 .comment
   font-size: 60%
@@ -50,9 +46,18 @@ h4
   fill: white !important
 
 .powered-by
-  background-color: red
+  // background-color: red
 
 //@media print
 .mat-chip.mat-standard-chip
   -webkit-print-color-adjust: exact
   //background-color: yellow !important
+  color: #ddd
+
+.section-title
+  background-color: #00acc1
+  margin-top: 40px
+  margin-left: 0px
+  color: white
+  padding: 15px
+  text-transform: uppercase

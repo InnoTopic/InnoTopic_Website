@@ -1,0 +1,33 @@
+@import '../../styles.sass';
+
+div {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+
+  @media screen and (max-width: $break-medium) {
+    flex-direction: column;
+    margin: 10px;
+  }
+}
+
+app-personal-data {
+  width: 49%;
+}
+
+app-external-profiles {
+  width: 51%;
+}
+
+app-personal-data,
+app-external-profiles {
+  @media screen and (max-width: $break-medium) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+section {
+  padding: 10px 0;
+}

@@ -1,8 +1,40 @@
+@import '../../../app-themes.scss'
+@import '../../../styles.sass'
+
 \:host
   font-weight: bold
 
 label
   font-weight: normal
+  text-transform: uppercase
+  width: 115px
+  color: mat-color($light-accent,900)
+  font-weight: bold
   &::after
     content: ":"
   //color:
+
+h1
+  color: mat-color($light-accent,900)
+  text-transform: uppercase
+  font-weight: bolder
+  font-size: 2rem
+  margin-top: 0
+  width: 100%
+  word-wrap: break-word
+
+div
+  display: flex
+  margin: 10px 0 0 0
+  @media screen and (max-width: $break-medium)
+    flex-direction: column
+
+
+p
+  margin: 0 !important
+  width: 305px
+  word-wrap: break-word
+
+section
+  margin: 0
+

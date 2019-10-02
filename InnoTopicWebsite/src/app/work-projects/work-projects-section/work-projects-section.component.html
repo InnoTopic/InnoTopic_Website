@@ -1,16 +1,14 @@
 
-<h2>Organisations and Projects</h2>
+<h2 class="section-title">Organisations and Projects</h2>
 
-<section *ngFor="let orgKV of organisationsAndProjects | keyValOrdered">
+<section class="organisation" *ngFor="let orgKV of organisationsAndProjects | keyValOrdered">
   <!--<ng-template let-org="orgKV.value">-->
 
   <h2>
     <img width=auto height=50 src="assets/images/clients/{{orgKV.value.logoFileName}}">
     {{orgKV.key}}
-    <span class="years">&nbsp;{{orgKV.value.time[0]}}-{{orgKV.value.time[1]}}</span>
-    <app-spacer></app-spacer>
+    <span class="years">{{orgKV.value.time[0]}}-{{orgKV.value.time[1]}}</span>
     <app-flags [flags]="orgKV.value.flags"></app-flags>
-    <app-spacer></app-spacer>
     <span class="comment" *ngIf="orgKV.value.locations; let locations">{{locations}} </span>
   </h2>
   <a *ngIf="orgKV.value.linkedInRecommendations" href="https://www.linkedin.com/in/karoldepka" target="_blank">

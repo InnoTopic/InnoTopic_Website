@@ -3,14 +3,16 @@
     <h4>{{categoryTitle(category.name)}}</h4>
     <!--  <hr>-->
 <!--    <mat-chip-list>-->
+    <span>
       <ng-container *ngFor="let topic of category.topicsArray">
 <!--        TOPIC_: {{topic.id}}-->
 <!--        experience[topic.id]: {{experienceByName[topic.name]}}-->
         <app-topic-skill *ngIf="experienceByName[topic.name]; let experienceItem"
-                         [tId]="experienceItem.topicId"
-                         [skillLevels]="experienceItem?.skillLevels"
+                        [tId]="experienceItem.topicId"
+                        [skillLevels]="experienceItem?.skillLevels"
         ></app-topic-skill><!--    [skillLevels]="exp.skillLevels"-->
       </ng-container>
+    </span>
 <!--    </mat-chip-list>-->
 
   </section>
