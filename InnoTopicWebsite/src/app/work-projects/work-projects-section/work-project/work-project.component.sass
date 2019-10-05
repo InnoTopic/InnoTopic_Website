@@ -1,14 +1,16 @@
 @import '../../../../styles.sass'
+@import '../../../../app-themes.scss'
 
-.project-skills
-  margin-left: 5px
+.project-skills label
+  margin-left: 10px
+  font-weight: bold
+  color: #555
 
 h3
   border-bottom: 1px solid #ddd
-  color: #00acc1
+  color: mat-color($light-primary)
   padding: 0 10px 8px 10px
   text-transform: uppercase
-  margin-bottom: 10px
   @media screen and (max-width: $break-medium)
     padding: 0 0 8px 0
 
@@ -18,10 +20,22 @@ fa
   text-align: center
 
 .project
-  margin: 30px 10px 0px 10px
+  h3
+    margin: 30px 10px 10px 10px
+  & > span
+    margin: 0 10px 5px 10px
+    display: block
+    color: #555
 
 div
   display: flex
   align-items: center
   &:first-child
     margin-bottom: 5px
+  & > *
+    flex: none
+  span
+    width: calc(100% - 30px)
+
+app-work-experience-list section
+  margin: 0

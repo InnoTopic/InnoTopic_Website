@@ -31,11 +31,11 @@ h4
 .powered-by mat-chip
   img
     opacity: 10%
-    opacity: 50% !important
-    margin: 3px !important
-    padding: 5px !important
-    background-color: white !important
-    box-shadow: none !important
+  opacity: 50% !important
+  margin: 3px !important
+  padding: 5px 8px !important
+  background-color: white !important
+  box-shadow: none !important
 
 .comment
   font-size: 60%
@@ -55,9 +55,16 @@ h4
   color: #ddd
 
 .section-title
-  background-color: #00acc1
+  background-color: mat-color($light-primary)
   margin-top: 40px
   margin-left: 0px
   color: white
   padding: 15px
   text-transform: uppercase
+
+.container
+  max-width: $break-medium
+  margin: auto
+  padding: 0px 10px
+  @media screen and (max-width: $break-medium)
+    padding: 0px

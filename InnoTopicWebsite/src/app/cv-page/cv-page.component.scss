@@ -12,19 +12,17 @@ div {
 }
 
 app-personal-data {
-  width: 49%;
+  width: 48%;
 }
 
 app-external-profiles {
-  width: 51%;
+  width: 52%;
 }
 
 app-personal-data,
 app-external-profiles {
   @media screen and (max-width: $break-medium) {
     width: 100%;
-    display: flex;
-    justify-content: center;
   }
 }
 

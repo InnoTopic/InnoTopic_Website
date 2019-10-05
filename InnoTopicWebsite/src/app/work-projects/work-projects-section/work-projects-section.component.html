@@ -1,25 +1,27 @@
 
-<h2 class="section-title">Organisations and Projects</h2>
+<div class="container">
+  <h2 class="section-title">Organisations and Projects</h2>
 
-<section class="organisation" *ngFor="let orgKV of organisationsAndProjects | keyValOrdered">
-  <!--<ng-template let-org="orgKV.value">-->
+  <section class="organisation" *ngFor="let orgKV of organisationsAndProjects | keyValOrdered">
+    <!--<ng-template let-org="orgKV.value">-->
 
-  <h2>
-    <img width=auto height=50 src="assets/images/clients/{{orgKV.value.logoFileName}}">
-    {{orgKV.key}}
-    <span class="years">{{orgKV.value.time[0]}}-{{orgKV.value.time[1]}}</span>
-    <app-flags [flags]="orgKV.value.flags"></app-flags>
-    <span class="comment" *ngIf="orgKV.value.locations; let locations">{{locations}} </span>
-  </h2>
-  <a *ngIf="orgKV.value.linkedInRecommendations" href="https://www.linkedin.com/in/karoldepka" target="_blank">
-    Please also take a look at {{orgKV.value.linkedInRecommendations}} recommendations on
-    <img style="vertical-align: middle; padding-bottom: 2px" height='14px' src="assets/images/logos/linkedin.svg"> <!-- TODO LinkedIn Logo; TODO: underline link -->
-  </a>
-  <app-work-project
-    *ngFor="let projKV of orgKV.value.projects | keyValOrdered"
-    [project]="projKV.value"
-    [projectTitle]="projKV.key"
-  ></app-work-project>
+    <h2>
+      <img width=auto height=50 src="assets/images/clients/{{orgKV.value.logoFileName}}">
+      {{orgKV.key}}
+      <span class="years">{{orgKV.value.time[0]}}-{{orgKV.value.time[1]}}</span>
+      <app-flags [flags]="orgKV.value.flags"></app-flags>
+      <span class="comment" *ngIf="orgKV.value.locations; let locations">{{locations}} </span>
+    </h2>
+    <a *ngIf="orgKV.value.linkedInRecommendations" href="https://www.linkedin.com/in/karoldepka" target="_blank">
+      Please also take a look at {{orgKV.value.linkedInRecommendations}} recommendations on
+      <img style="vertical-align: middle; padding-bottom: 2px" height='14px' src="assets/images/logos/linkedin.svg"> <!-- TODO LinkedIn Logo; TODO: underline link -->
+    </a>
+    <app-work-project
+      *ngFor="let projKV of orgKV.value.projects | keyValOrdered"
+      [project]="projKV.value"
+      [projectTitle]="projKV.key"
+    ></app-work-project>
 
-<!--</ng-template>-->
-</section>
+  <!--</ng-template>-->
+  </section>
+</div>

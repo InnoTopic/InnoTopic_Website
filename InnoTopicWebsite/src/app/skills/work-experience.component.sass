@@ -16,8 +16,13 @@ b
 #languages
   font-weight: bold
 
-#languages > div
+.language
   display: flex
+  & > *
+    flex: none
+  span
+    word-break: break-word
+    width: calc(100% - 55px - 110px)
 
 label
   // font-weight: normal
