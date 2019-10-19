@@ -52,7 +52,23 @@ h4
 .mat-chip.mat-standard-chip
   -webkit-print-color-adjust: exact
   //background-color: yellow !important
-  color: #ddd
+  color: #999 !important
+
+.other-profile-icon-container
+  width: 1.2em !important
+  height: 1.2em
+  padding: 5px
+  background-color: #eee
+  border-radius: 50%
+  flex: none
+  & + a
+    word-break: break-all
+    margin-left: 5px
+
+app-other-profile-user-name p
+  display: flex
+  align-items: center
+  justify-content: flex-start
 
 .section-title
   background-color: mat-color($light-primary)

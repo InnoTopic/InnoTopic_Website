@@ -9,18 +9,26 @@
   display: inline-block
   font-size: 66%
 
+.section-title
+  page-break-before: always
+
 .organisation
   margin: 0
+  &:not(:last-child)
+    page-break-after: always
   h2
     border-bottom: 2px solid mat-color($light-accent,800)
     margin 30px 10px 20px 10px
     display: flex
     align-items: center
+    line-height: 1.1
+    page-break-inside: avoid
     @media screen and (max-width: $break-medium)
       flex-wrap: wrap
       justify-content: center
     & > *
       margin: 0px 15px 10px 15px
+      text-align: center
     & > *:first-child
       margin-left: 0px
   a
