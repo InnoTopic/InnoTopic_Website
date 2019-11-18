@@ -13,7 +13,7 @@ export const externalProfilesKarol: UserOtherProfiles = {
     userName: 'karol-depka',
   },
   TopicFriends: {
-    userName: 'karol-depka'
+    userName: 'u/karol-depka'
   },
   twitter: {
     userName: 'karol_depka',
