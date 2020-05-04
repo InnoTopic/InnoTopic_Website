@@ -8,7 +8,7 @@ import {
 } from './work-experience';
 
 export class WorkExperienceData {
-  main = experience('Main Experience', 'extensive usage and always learning', {
+  main = experience('Main Experience', 'extensive usage and always honing my skills and learning', {
     Angular:
       we(advanced, expert),
     Codelyzer:
@@ -131,7 +131,9 @@ export class WorkExperienceData {
     NoSQL:
       we(advanced, expert),
     WebStorm: we(advanced, expert),
+    'IntelliJ IDEA': we(advanced, expert),
     'Android Studio': we(advanced, expert),
+    'Visual Studio': we(advanced),
     'Visual Studio Code': we(intermediate, expert),
     'Vim': we(intermediate),
     // DataBases:
@@ -154,6 +156,10 @@ export class WorkExperienceData {
     Java:
       we(advanced),
     // TODO: FindBugs, PMD (TODO: check CODACY (written in Scala) from Leo, Lisbon -> Silicon Valley)
+    Spring:
+      we(intermediate, advanced),
+    'Spring Boot':
+      we(intermediate, advanced),
     JUnit:
       we(advanced),
     TestNG:
@@ -197,7 +203,7 @@ export class WorkExperienceData {
     'Java Swing':
       we(advanced),
     Hibernate:
-      we(intermediate),
+      we(intermediate, advanced),
     Maven:
       we(advanced),
     Subversion:
@@ -241,6 +247,8 @@ export class WorkExperienceData {
     Workbox: we(),
     Keras: we(),
     Hoodie: we(),
+    Svelte: we(),
+    // TODO: Blazor, .NET Core
   })
 }
 

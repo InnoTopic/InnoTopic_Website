@@ -73,7 +73,9 @@ export class OrganisationsAndProjects {
           Jasmine: {},
           Bootstrap: {},
           Firebase: {},
-          'Cloud Firestore': {}
+          'Cloud Firestore': {},
+          'GCP': {},
+          'GitHub': {},
         }
       }
     },
@@ -147,6 +149,7 @@ export class OrganisationsAndProjects {
         topicsById: {
           Angular: {},
           Firebase: {},
+          'GCP': {},
           'Angular Material': {},
           'TestCafe': {},
           'WebStorm': {},
@@ -174,6 +177,8 @@ export class OrganisationsAndProjects {
     projects: {
       'Mezzanine Android': {
         roles: 'Android Lead, Senior Developer',
+        description: `Lead developer on the Android client of Company's flagship product, Mezzanine.` +
+          `Solidified and refactored existing codebase/prototype written by a Junior Developer, successfully releasing it and then working on subsequent releases with new features.`,
         topicsById: {
           'Google Play': {},
           'JetBrains MPS': {},
