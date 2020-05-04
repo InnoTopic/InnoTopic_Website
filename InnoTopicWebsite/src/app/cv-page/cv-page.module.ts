@@ -8,9 +8,10 @@ import { WorkProjectsModule } from '../work-projects/work-projects.module';
 import { CvPageComponent } from './cv-page.component';
 import { PersonalDataComponent } from './personal-data/personal-data.component';
 import { ExternalProfilesComponent } from './external-profiles/external-profiles.component';
+import { TechGraphComponent } from './tech-graph/tech-graph.component';
 
 @NgModule({
-  declarations: [CvPageComponent, PersonalDataComponent, ExternalProfilesComponent],
+  declarations: [CvPageComponent, PersonalDataComponent, ExternalProfilesComponent, TechGraphComponent],
   exports: [
     CvPageComponent,
   ],
