@@ -151,7 +151,7 @@ export class WorkExperienceData {
     'GIMP': we(advanced),
     'Inkscape': we(advanced),
     'Google Play': we(advanced, expert),
-  })
+  }, false)
   additional = experience('Additional experience', 'learning more, but not as critical for me now', {
     Java:
       we(advanced),

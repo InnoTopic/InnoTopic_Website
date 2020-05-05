@@ -37,6 +37,7 @@ export class TopicTagComponent implements OnInit {
   @Input() tag: TopicInterest;
   @Input() editable: boolean;
   @Input() isCustomClick: boolean = false
+  @Input() showLogo: boolean = true
 
   @Output() clickTopic = new EventEmitter<any>()
   isHighlighted = false

@@ -8,7 +8,10 @@
   }"
 >
   <div style="display:table-cell; vertical-align: middle">
-    <app-topic-logo [topic]="tag.tagEntry"></app-topic-logo>
+    <app-topic-logo
+      *ngIf="showLogo || true"
+      [topic]="tag.tagEntry"
+    ></app-topic-logo>
     <!--<i *ngIf="editable"-->
     <!--class="ion-close-circled"-->
     <!--style="cursor:pointer; color: rgba(0, 0, 0, 0.54); font-size: 20px"-->

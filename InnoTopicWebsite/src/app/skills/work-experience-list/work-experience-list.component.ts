@@ -29,6 +29,9 @@ export class WorkExperienceListComponent implements OnInit {
   public topicCategoriesArray = topicCategoriesArray
 
   @Input() experienceByName
+
+  @Input() showIcons: boolean
+
   experienceArr
 
   byCategory = []

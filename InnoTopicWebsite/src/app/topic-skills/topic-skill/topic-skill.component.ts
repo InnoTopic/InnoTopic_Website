@@ -16,7 +16,10 @@ import {
 export class TopicSkillComponent implements OnInit {
 
   @Input() tId: string;
+
   @Input() skillLevels: UserSkillLevelsHaveWant2
+
+  @Input() showLogo: boolean
 
   constructor() { }
 

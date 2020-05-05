@@ -7,6 +7,7 @@ export class WorkExperienceByStatus {
     public title: string,
     public comment: string,
     public topics: any,
+    public showIcons: boolean,
   ) {}
 }
 
@@ -39,10 +40,11 @@ export type MapToTopics<TVal> = Partial<
   }
 >
 
-export function experience(title, comment, exp: MapToTopics<any>): WorkExperienceByStatus {
+export function experience(title, comment, exp: MapToTopics<any>, showIcons?: boolean): WorkExperienceByStatus {
   return {
     title: title,
     comment: comment,
-    topics: setIdsFromKeys(exp, 'topicId')
+    topics: setIdsFromKeys(exp, 'topicId'),
+    showIcons
   }
 }
