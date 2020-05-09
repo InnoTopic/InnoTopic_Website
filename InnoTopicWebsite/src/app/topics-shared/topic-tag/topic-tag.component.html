@@ -1,15 +1,14 @@
 <mat-chip
-  (mouseenter)="onMouseEnter()"
   (click)="clickTopic.emit($event)"
   style="cursor: pointer; color: rgb(103, 58, 183)"
   [ngClass]="{
     'tag-chip': true,
     'highlight': isHighlighted
   }"
->
+> <!--   (mouseenter)="onMouseEnter()" -->
   <div style="display:table-cell; vertical-align: middle">
     <app-topic-logo
-      *ngIf="showLogo || true"
+      *ngIf="(showLogo || true) && tag.tagEntry.logo"
       [topic]="tag.tagEntry"
     ></app-topic-logo>
     <!--<i *ngIf="editable"-->
