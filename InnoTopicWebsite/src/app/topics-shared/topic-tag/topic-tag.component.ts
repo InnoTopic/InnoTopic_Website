@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   Input,
@@ -7,8 +8,8 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import { HighlightService } from '../../TopicFriendsShared/topics-core/highlight.service';
-import {Topic} from '../../TopicFriendsShared/topics-core/Topic'
-import {TopicsService} from '../../TopicFriendsShared/topics-core/topics.service'
+import { Topic } from '../../TopicFriendsShared/topics-core/Topic';
+import { TopicsService } from '../../TopicFriendsShared/topics-core/topics.service';
 
 export class TopicInterest {
   // idea: hourly / per-minute rates (in Pro version? :) )
@@ -28,7 +29,8 @@ export class TopicInterest {
   selector: 'app-topic-tag',
   templateUrl: './topic-tag.component.html',
   styleUrls: ['./topic-tag.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TopicTagComponent implements OnInit {
 
@@ -62,6 +64,6 @@ export class TopicTagComponent implements OnInit {
   }
 
   onMouseEnter() {
-    this.highlightService.setHighlight(this.tag.tagEntry.id)
+    // this.highlightService.setHighlight(this.tag.tagEntry.id)
   }
 }
