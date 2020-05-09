@@ -1,4 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { Topic } from '../../TopicFriendsShared/topics-core/Topic';
 import { TopicsService } from '../../TopicFriendsShared/topics-core/topics.service';
 
@@ -7,7 +12,8 @@ export const defaultIconHeight = 18
 @Component({
   selector: 'app-topic-logo',
   templateUrl: './topic-logo.component.html',
-  styleUrls: ['./topic-logo.component.scss']
+  styleUrls: ['./topic-logo.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TopicLogoComponent implements OnInit {
 
