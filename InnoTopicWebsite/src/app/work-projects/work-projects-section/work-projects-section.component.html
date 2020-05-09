@@ -6,7 +6,7 @@
     <!--<ng-template let-org="orgKV.value">-->
 
     <h2>
-      <img width=auto height=50 src="assets/images/clients/{{orgKV.value.logoFileName}}">
+      <img *ngIf='orgKV.value.logoFileName' width=auto height=50 src="assets/images/clients/{{orgKV.value.logoFileName}}">
       <span>{{orgKV.key}}</span>
       <span class="years">{{orgKV.value.time[0]}}-{{orgKV.value.time[1]}}</span>
       <app-flags [flags]="orgKV.value.flags"></app-flags>
