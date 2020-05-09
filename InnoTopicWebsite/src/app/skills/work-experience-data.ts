@@ -110,7 +110,7 @@ export class WorkExperienceData {
       we(advanced),
     'Microsoft Windows':
       we(advanced),
-    nginx:
+    NGINX:
       we(intermediate),
     RegExp:
       we(advanced, expert),
@@ -151,6 +151,8 @@ export class WorkExperienceData {
     'GIMP': we(advanced),
     'Inkscape': we(advanced),
     'Google Play': we(advanced, expert),
+    'Customer Support': we(intermediate, advanced),
+    // TODO: algorithms and data structures, design patterns, software architecture, performance optimizations, profiling, object-oriented-programming, functional programming,
   }, false)
   additional = experience('Additional experience', 'learning more, but not as critical for me now', {
     Java:

@@ -32,7 +32,7 @@ export class OrganisationsAndProjects {
   constructor() {
   }
 
-  'Genengine SL' = org({
+  'Genengine SL (as Consultant)' = org({
     flags: 'es uk',
     time: [2019, 2020],
     linkedInRecommendations: 2,
@@ -40,7 +40,7 @@ export class OrganisationsAndProjects {
     logoFileName: `genengine-simbolo_isotipo-azul.svg`,
     projects: {
       'Genengine Angular App for genetic diagnosis of rare diseases': {
-        roles: 'Senior Angular Developer (Freelance)',
+        roles: 'Senior Angular Developer (Consultant)',
         description: 'First I wrote a suite of E2E UI tests in TestCafe from scratch, in order to increase confidence while making changes.' +
           ' Then I made numerous improvements of UI/UX, performance, architecture and preparing the app for release. Working directly with CEO & CTO.',
         topicsById: {
@@ -48,6 +48,9 @@ export class OrganisationsAndProjects {
           'TypeScript': {},
           'TestCafe': {},
           'Angular Material': {},
+          'Git': {},
+          'GitLab': {},
+          'Docker': {},
           // 'R': {}
         }
       }
@@ -57,7 +60,7 @@ export class OrganisationsAndProjects {
   'InnoTopic SLU' = org({
     logoFileName: '../InnoTopic_Logo.svg',
     flags: 'pl us gb es',
-    time: [2018],
+    time: [2017],
     projects: {
       'InnoTopic.com website': {
         roles: `Angular developer`,
@@ -69,7 +72,8 @@ export class OrganisationsAndProjects {
       },
       'FlexAgenda': {
         roles: 'Founder, Android/Java Developer, Publisher',
-        description: 'Android app for time planning (freemium). Reached 100k installs organically; 4.3/5 average rating. I developed the app from scratch in native Android & Java and released many versions based on a lot of user feedback I received.',
+        description: 'Android app for time planning (freemium). Reached 100k installs organically; 4.3/5 average rating. I developed the app from scratch in native Android & Java and released many versions based on a lot of user feedback I received. ' +
+          'I was also in regular communication with users (paid and gratis) over e-mail, IM and voice chat, helping to solve issues and discussing improvement suggestions. App available in English, Spanish, German, Polish.',
         topicsById: {
           Android: {},
           Kotlin: {},
@@ -85,12 +89,15 @@ export class OrganisationsAndProjects {
           'GIMP': {},
           'Inkscape': {},
           'Adobe Illustrator': {},
+          'Customer Support': {},
         }
       },
       'OrYoL': {
         topicsById: {
           Angular: {},
           PrimeNG: {},
+          'Font Awesome': {},
+          'Sass': {},
           TypeScript: {},
           Karma: {},
           Jasmine: {},
@@ -100,11 +107,58 @@ export class OrganisationsAndProjects {
           'GCP': {},
           'GitHub': {},
         }
+      },
+      'LifeSuite': {
+        description: 'Ionic 5 App (Web, Android, iOS) for finding solutions (psychology, motivation, productivity, etc.) to common life problems and to see life overview in terms of charts (SVG) like Ikigai, Flow State, etc. '
+          + 'Released to Google Play and soon to Apple App Store.',
+        topicsById: {
+          Angular: {},
+          Ionic: {},
+          TypeScript: {},
+          Karma: {},
+          Jasmine: {},
+          TestCafe: {},
+          Bash: {},
+          Bootstrap: {},
+          Firebase: {},
+          'Cloud Firestore': {},
+          'GCP': {},
+          'Git': {},
+          'GitHub': {},
+          'Android': {},
+          'iOS': {},
+          'Google Play': {},
+          'SVG': {},
+          'Gravit Designer': {},
+          'Affinity Designer': {},
+        }
+      },
+      'CloudTime': {
+        description: 'Ionic 5 App (Web, Android, iOS) for timers (countdown, soon also counting up) synced across devices. '
+          + 'Soon to be released to Google Play and Apple App Store.',
+        topicsById: {
+          Angular: {},
+          Ionic: {},
+          TypeScript: {},
+          Karma: {},
+          Jasmine: {},
+          TestCafe: {},
+          Bash: {},
+          Firebase: {},
+          'Cloud Firestore': {},
+          'GCP': {},
+          'Git': {},
+          'GitHub': {},
+          'Android': {},
+          'iOS': {},
+          'Google Play': {},
+          'Affinity Designer': {},
+        }
       }
     },
   })
 
-  AIG = org({
+  'AIG (as Consultant)' = org({
     flags: 'pl de at es gb us', /* FIXME */
     time: [2017, 2018],
     logoFileName: 'AIG_logo.svg.png',
@@ -138,12 +192,14 @@ export class OrganisationsAndProjects {
           Mongoose: {},
           KeystoneJS: {},
           'Agile Central': {},
+          'Git': {},
         }
       },
       'Customer-facing application for managing insurance plans and customer data': {
         roles: 'Senior Angular & Node.js Developer',
         topicsById: {
           Angular: {},
+          Bootstrap: {},
           TypeScript: {},
           Less: {},
           'Node.js': {},
@@ -151,16 +207,20 @@ export class OrganisationsAndProjects {
           XML: {},
           'XML Schema': {},
           BiPRO: {},
+          Git: {},
         }
       },
       'Application for managing insurance plans': {
-        roles: 'Angular Developer',
+        roles: 'Senior Angular Developer',
+        description: 'Drag & drop tree, file upload via drag & drop.',
         topicsById: {
           Angular: {},
           TypeScript: {},
           Karma: {},
           Jasmine: {},
           Bootstrap: {},
+          PrimeNG: {},
+          Git: {},
         }
       }
     },
@@ -181,6 +241,7 @@ export class OrganisationsAndProjects {
           'TestCafe': {},
           'WebStorm': {},
           'CircleCI': {},
+          'Git': {},
           'GitHub': {},
           'Bash': {},
           'TypeScript': {},
@@ -259,6 +320,7 @@ export class OrganisationsAndProjects {
           'Jenkins': {},
           'TeamForge': {},
           'Gerrit': {},
+          'PostgreSQL': {},
         }
       }
     }
@@ -280,6 +342,7 @@ export class OrganisationsAndProjects {
           Subversion: {},
           Eclipse: {},
           'IntelliJ IDEA': {},
+          'PostgreSQL': {},
         }
       }
     }
@@ -310,8 +373,6 @@ export class OrganisationsAndProjects {
     }
   })
 
-
-  //
   'Research And Engineering Center (REC), later GlobalLogic' = org({
     linkedInRecommendations: 2 /* TODO: check */,
     logoFileName: 'rec-global-logo.jpg',
@@ -324,7 +385,7 @@ export class OrganisationsAndProjects {
         topicsById: {
           Java: {},
           'Subversion': {},
-          // 'JAXB': {},
+          'JAXB': {},
         }
       },
       'M2M Platform': {
@@ -339,10 +400,89 @@ export class OrganisationsAndProjects {
     }
 
   })
-  //
-  // 'o2.pl' = org({
-  //
-  // })
+
+
+  'o2.pl' = org({
+    time: [2008, 2009],
+    flags: 'pl',
+    projects: {
+      'Java ME clients for E-mail and Instant Messaging': {
+        topicsById: {
+          Java: {},
+          'Java Micro Edition': {},
+          'Trac': {},
+        }
+      }
+    }
+  })
+
+  'Petrus - TV, Internet, Phone' = org({
+    time: [2006, 2006],
+    locations: 'Chojnice, Poland',
+    flags: 'pl',
+    projects: {
+      'Server Administration, Customer Support, Help Desk': {
+        topicsById: {
+          Linux: {},
+          'Customer Support': {},
+          'Oracle': {},
+        }
+      }
+    }
+  })
+
+  'Freelance Software Developer' = org({
+    logoFileName: `laptop-code-solid.svg`,
+    time: [2002],
+    linkedInRecommendations: 1,
+    locations: 'Poland, Germany, Spain',
+    flags: 'pl gb',
+    projects: {
+      '3D Homes - Real estate app on Costa del Sol, with interactive maps and 3D views of homes': {
+        topicsById: {
+          Angular: {},
+          TypeScript: {},
+          'Angular Material': {},
+          'Firebase': {},
+          'Cloud Firestore': {},
+          'WebStorm': {},
+          'Git': {},
+          'GitLab': {},
+        }
+      },
+      'Angular app for geo-fencing protection of field workers in dangerous areas (NDA)': {
+        topicsById: {
+          Angular: {},
+          TypeScript: {},
+          'Bootstrap': {},
+          'WebStorm': {},
+          'Vagrant': {},
+          'Git': {},
+        }
+      },
+      'Invoice Generator for Cable TV + Internet + Phone Company (Petrus)': {
+        topicsById: {
+          Java: {},
+          'XML': {},
+          'XML Schema': {},
+          'JAXB': {},
+          'PDF': {},
+          'iText': {},
+          'Git': {},
+        }
+      },
+      'BlackBerry client for a social network (NDA)': {
+        topicsById: {
+          Java: {},
+          BlackBerry: {},
+          'Java Micro Edition': {},
+          'Eclipse': {},
+          'Git': {},
+        }
+      },
+    }
+  })
+
 
   // personal projects
   // innotopic website

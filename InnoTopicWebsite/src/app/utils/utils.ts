@@ -43,3 +43,9 @@ export function groupByKeepingOrder(kv, propertyToGroupBy: string) {
   }
   return ret
 }
+
+export function errorAlert(...args: any) {
+  const prefix = 'ERROR: errorAlert: '
+  console.log(prefix, ...args)
+  window.alert(prefix + '(see console for details) ' + args.join(', '))
+}
