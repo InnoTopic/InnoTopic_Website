@@ -32,12 +32,35 @@ export class OrganisationsAndProjects {
   constructor() {
   }
 
+  'Genengine SL' = org({
+    flags: 'es uk',
+    time: [2019, 2020],
+    linkedInRecommendations: 2,
+    locations: `Málaga, on-site and remote`,
+    logoFileName: `genengine-simbolo_isotipo-azul.svg`,
+    projects: {
+      'Genengine Angular App for genetic diagnosis of rare diseases': {
+        roles: 'Senior Angular Developer (Freelance)',
+        description: 'First I wrote a suite of E2E UI tests in TestCafe from scratch, in order to increase confidence while making changes.' +
+          ' Then I made numerous improvements of UI/UX, performance, architecture and preparing the app for release. Working directly with CEO & CTO.',
+        topicsById: {
+          'Angular': {},
+          'TypeScript': {},
+          'TestCafe': {},
+          'Angular Material': {},
+          // 'R': {}
+        }
+      }
+    },
+  })
+
   'InnoTopic SLU' = org({
     logoFileName: '../InnoTopic_Logo.svg',
     flags: 'pl us gb es',
     time: [2018],
     projects: {
       'InnoTopic.com website': {
+        roles: `Angular developer`,
         topicsById: {
           'Angular Material': {},
           Angular: {},
@@ -46,7 +69,7 @@ export class OrganisationsAndProjects {
       },
       'FlexAgenda': {
         roles: 'Founder, Android/Java Developer, Publisher',
-        description: 'Android app for time planning (freemium). Reached 100k installs organically.',
+        description: 'Android app for time planning (freemium). Reached 100k installs organically; 4.3/5 average rating. I developed the app from scratch in native Android & Java and released many versions based on a lot of user feedback I received.',
         topicsById: {
           Android: {},
           Kotlin: {},
@@ -89,7 +112,8 @@ export class OrganisationsAndProjects {
     projects: {
       'Platform for assessing risk': {
         roles: 'Lead frontend developer and backend developer, teaching Angular',
-        description: 'PWA working fully offline. Advanced analytics using chart and grid. Internationalisation.',
+        description: 'PWA working fully offline and synchronising with server to support multi-million-dollar multi-national functionality. Advanced analytics using charts and grid. Internationalisation.' +
+          'I developed the Angular + Bootstrap app from scratch and helped with the Node.js + MongoDB backend (conceptually as well as in development)',
         recommendations: '',
         topicsById: {
           Angular: {
@@ -124,6 +148,9 @@ export class OrganisationsAndProjects {
           Less: {},
           'Node.js': {},
           'Express.js': {},
+          XML: {},
+          'XML Schema': {},
+          BiPRO: {},
         }
       },
       'Application for managing insurance plans': {
@@ -170,15 +197,16 @@ export class OrganisationsAndProjects {
 
   'Oblong Industries' = org({
     locations: 'Barcelona, Los Angeles',
-    flags: 'pl de us gb es es-ct in fr',
+    flags: 'pl us gb es es-ct fr',
     logoFileName: 'oblong_logo.png',
     time: [2013, 2015],
     linkedInRecommendations: 2,
     projects: {
       'Mezzanine Android': {
         roles: 'Android Lead, Senior Developer',
-        description: `Lead developer on the Android client of Company's flagship product, Mezzanine.` +
-          `Solidified and refactored existing codebase/prototype written by a Junior Developer, successfully releasing it and then working on subsequent releases with new features.`,
+        description: `Lead developer on the Android client of Company's flagship product, Mezzanine. ` +
+          `I solidified and refactored existing codebase/prototype written by a Junior Developer, successfully releasing it and then making subsequent releases with new features. ` +
+          `Also developed a schema language and code generator for Company's communication protocol, using JetBrains MPS (generating Java code from a DSL)`,
         topicsById: {
           'Google Play': {},
           'JetBrains MPS': {},
@@ -212,15 +240,20 @@ export class OrganisationsAndProjects {
     projects: {
       'CollabNet TeamForge integration with Gerrit Code Review System and Git': {
         roles: 'Java Developer and related',
+        description: `Development of integration of Git and Gerrit with CollabNet's flagship product - TeamForge (a software lifecycle enterprise system), used by big clients like Ericsson, NXP. ` +
+          `We were also dogfooding using the Gerrit-based review system which was a great opportunity to also master advanced Git workflows using rebasing, squashing, etc.`,
         topicsById: {
           Java: {},
-          // TODO: SOAP
+          SOAP: {},
           Perl: {},
           Python: {},
           Bash: {},
           Git: {},
           Subversion: {},
-          JUnit: {}, // TODO: Cobertura, Mockito
+          JUnit: {},
+          Cobertura: {},
+          Mockito: {},
+          Guice: {},
           'CentOS Linux': {},
           'Eclipse': {},
           'Jenkins': {},
@@ -240,6 +273,7 @@ export class OrganisationsAndProjects {
     linkedInRecommendations: 2,
     projects: {
       'Multi-Dimensional-Tool for EuroStat (European Commission)': {
+        description: `Development of EuroStat's MDT (Multi-Dimensional Tool) - main tool used for all kinds of statistics in the European Union. Advanced Java Swing UI.`,
         topicsById: {
           Java: {},
           Jira: {},
