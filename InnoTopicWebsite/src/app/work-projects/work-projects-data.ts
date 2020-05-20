@@ -42,7 +42,7 @@ export class OrganisationsAndProjects {
       'Genengine Angular App for genetic diagnosis of rare diseases': {
         roles: 'Senior Angular Developer (Consultant)',
         description: 'First I wrote a suite of E2E UI tests in TestCafe from scratch, in order to increase confidence while making changes.' +
-          ' Then I made numerous improvements of UI/UX, performance, architecture and preparing the app for release. Working directly with CEO & CTO.',
+          ' Then I made numerous improvements of UI/UX, performance, robustness, architecture, refactors and preparing the app for release. Working directly with CEO & CTO.',
         topicsById: {
           'Angular': {},
           'TypeScript': {},
@@ -51,6 +51,8 @@ export class OrganisationsAndProjects {
           'Git': {},
           'GitLab': {},
           'Docker': {},
+          'Trello': {},
+          'WebStorm': {},
           // 'R': {}
         }
       }
@@ -92,7 +94,8 @@ export class OrganisationsAndProjects {
           'Customer Support': {},
         }
       },
-      'OrYoL': {
+      'OrYoL - Organize Your Life': {
+        roles: `Founder, Angular Developer`,
         topicsById: {
           Angular: {},
           PrimeNG: {},
@@ -110,10 +113,12 @@ export class OrganisationsAndProjects {
       },
       'LifeSuite': {
         description: 'Ionic 5 App (Web, Android, iOS) for finding solutions (psychology, motivation, productivity, etc.) to common life problems and to see life overview in terms of charts (SVG) like Ikigai, Flow State, etc. '
-          + 'Released to Google Play and soon to Apple App Store.',
+          + 'Released to Google Play and soon to Apple App Store. Has a search engine with Damerau-Levenshtein distance between strings - fuzzy search taking typos into account, with memoization for performance optimization. Strictest settings of TypeScript and Angular.',
+        roles: `Founder, Angular/Ionic/Android/iOS Developer`,
         topicsById: {
           Angular: {},
           Ionic: {},
+          Sass: {},
           TypeScript: {},
           Karma: {},
           Jasmine: {},
@@ -136,6 +141,7 @@ export class OrganisationsAndProjects {
       'CloudTime': {
         description: 'Ionic 5 App (Web, Android, iOS) for timers (countdown, soon also counting up) synced across devices. '
           + 'Soon to be released to Google Play and Apple App Store.',
+        roles: `Founder, Angular/Ionic/Android/iOS Developer`,
         topicsById: {
           Angular: {},
           Ionic: {},
@@ -166,8 +172,8 @@ export class OrganisationsAndProjects {
     projects: {
       'Platform for assessing risk': {
         roles: 'Lead frontend developer and backend developer, teaching Angular',
-        description: 'PWA working fully offline and synchronising with server to support multi-million-dollar multi-national functionality. Advanced analytics using charts and grid. Internationalisation.' +
-          'I developed the Angular + Bootstrap app from scratch and helped with the Node.js + MongoDB backend (conceptually as well as in development)',
+        description: 'PWA working fully offline and synchronising with server to support multi-million-dollar multi-national functionality. Advanced analytics using charts and grid. Internationalisation. ' +
+          'I developed the Angular + Bootstrap app from scratch and helped with the Node.js + MongoDB backend (conceptually as well as in development).',
         recommendations: '',
         topicsById: {
           Angular: {
@@ -226,13 +232,32 @@ export class OrganisationsAndProjects {
     },
   })
 
+  'Angular Málaga Meetup Group' = org({
+    flags: 'gb es pl', /* FIXME */
+    time: [2017],
+    logoFileName: 'Angular-Malaga-Logo.svg',
+    locations: 'Málaga - Spain',
+    projects: {
+      'Angular Málaga Meetup Group': {
+        roles: 'Co-Founder / Co-Organizer, Event Organizer',
+        topicsById: {
+          Angular: {},
+          TypeScript: {},
+          Karma: {},
+          Meetup: {},
+          Git: {},
+        }
+      }
+    },
+  })
+
   'TopicFriends.org' = org({
     logoFileName: 'TopicFriends.svg',
     flags: 'pl us gb es',
     time: [2017],
     projects: {
       'TopicFriends.org Web App': {
-        roles: 'Co-Founder',
+        roles: 'Founder, Architect, Angular Developer',
         topicsById: {
           Angular: {},
           Firebase: {},
@@ -241,6 +266,7 @@ export class OrganisationsAndProjects {
           'TestCafe': {},
           'WebStorm': {},
           'CircleCI': {},
+          'Travis CI': {},
           'Git': {},
           'GitHub': {},
           'Bash': {},
@@ -255,6 +281,7 @@ export class OrganisationsAndProjects {
       }
     }
   })
+
 
   'Oblong Industries' = org({
     locations: 'Barcelona, Los Angeles',
@@ -271,15 +298,19 @@ export class OrganisationsAndProjects {
         topicsById: {
           'Google Play': {},
           'JetBrains MPS': {},
+          'DSL - Domain-Specific Languages': {},
           Groovy: {},
           Android: {},
+          iOS: {},
           Kotlin: {},
           'Ubuntu Linux': {},
           'macOS': {},
           Java: {},
           Gradle: {},
           Bugzilla: {},
-          Ruby: {}, // TODO: Calabash Android
+          Ruby: {},
+          Calabash: {},
+          'BDD - Behavior-Driven Development': {},
           RubyMine: {},
           Cucumber: {},
           JUnit: {},
@@ -295,14 +326,14 @@ export class OrganisationsAndProjects {
     locations: 'Potsdam, Berlin, Silicon Valley',
     flags: 'pl de us gb in',
     logoFileName: 'collabnet_logo_blue.jpeg',
-    time: [2011, 2012],
+    time: [2011, 2013],
     linkedInRecommendations: 2,
 
     projects: {
-      'CollabNet TeamForge integration with Gerrit Code Review System and Git': {
+      'TeamForge integration with Gerrit and Git': {
         roles: 'Java Developer and related',
-        description: `Development of integration of Git and Gerrit with CollabNet's flagship product - TeamForge (a software lifecycle enterprise system), used by big clients like Ericsson, NXP. ` +
-          `We were also dogfooding using the Gerrit-based review system which was a great opportunity to also master advanced Git workflows using rebasing, squashing, etc.`,
+        description: `Worked at the Company that created Subversion (Svn) version control system, somewhat ironically on development of integration of Git and Gerrit with CollabNet's flagship product - TeamForge, an ALM (Application Lifecycle Management) enterprise /  system, used by big enterprise clients like Intel, Ericsson, NXP. ` +
+          `We were also dogfooding using the Gerrit-based code review system which was a great opportunity to also master advanced Git workflows using rebasing, squashing, etc.`,
         topicsById: {
           Java: {},
           SOAP: {},
@@ -355,6 +386,8 @@ export class OrganisationsAndProjects {
     linkedInRecommendations: 2,
     projects: {
       'CoViOb - Communicate via Objects': {
+        roles: `Startup Co-Founder, Architect, Java developer`,
+        description: `Won startup competition main prize among ~100 startups. Decentralized database with version control (before Git), real-time threaded communication (before Google Wave)`,
         topicsById: {
           Java: {},
           'Git': {},
@@ -407,10 +440,13 @@ export class OrganisationsAndProjects {
     flags: 'pl',
     projects: {
       'Java ME clients for E-mail and Instant Messaging': {
+        roles: `Java ME developer`,
+        description: `Got my hands very dirty working with binary IM protocol and E-mail protocol/format directly.`,
         topicsById: {
           Java: {},
           'Java Micro Edition': {},
           'Trac': {},
+          'Subversion': {},
         }
       }
     }
@@ -451,6 +487,7 @@ export class OrganisationsAndProjects {
         }
       },
       'Angular app for geo-fencing protection of field workers in dangerous areas (NDA)': {
+        description: `Angular Development. Worked directly with CEO/Founder.`,
         topicsById: {
           Angular: {},
           TypeScript: {},
@@ -461,6 +498,7 @@ export class OrganisationsAndProjects {
         }
       },
       'Invoice Generator for Cable TV + Internet + Phone Company (Petrus)': {
+        description: `Reliably generated tens of thousands of e-invoices every months, amounting to millions of invoices generated over the years.`,
         topicsById: {
           Java: {},
           'XML': {},
@@ -478,6 +516,7 @@ export class OrganisationsAndProjects {
           'Java Micro Edition': {},
           'Eclipse': {},
           'Git': {},
+          'Pivotal Tracker': {},
         }
       },
     }

@@ -1,3 +1,4 @@
+import { t } from '../TopicFriendsShared/topics-core/topics-data';
 import {
   beginner,
   advanced,
@@ -31,6 +32,8 @@ export class WorkExperienceData {
       we(advanced, expert),
     Ionic:
       we(intermediate, expert),
+    PWA:
+      we(advanced, expert),
     HTML5:
       we(advanced, expert),
     CSS3:
@@ -151,8 +154,32 @@ export class WorkExperienceData {
     'GIMP': we(advanced),
     'Inkscape': we(advanced),
     'Google Play': we(advanced, expert),
+    // ======= Other:
     'Customer Support': we(intermediate, advanced),
-    // TODO: algorithms and data structures, design patterns, software architecture, performance optimizations, profiling, object-oriented-programming, functional programming,
+    'Agile': we(advanced, expert),
+    'Scrum': we(advanced, expert),
+    'ALM - Application Lifecycle Management': we(advanced, expert),
+    'Algorithms': we(advanced, expert),
+    'Data Structures': we(advanced, expert),
+    'OOP - Object Oriented Programming': we(advanced, expert),
+    'SOLID Principles': we(advanced, expert),
+    'FP - Functional Programming': we(advanced, expert),
+    'Design Patterns': we(advanced, expert),
+    'Antipatterns': we(advanced, expert),
+    'Software Architecture': we(advanced, expert),
+    'Refactoring': we(advanced, expert),
+    'TDD - Test-Driven Development': we(advanced, expert),
+    'BDD - Behavior-Driven Development': we(advanced, expert),
+    'DSL - Domain-Specific Languages': we(intermediate, expert),
+    'Making Presentations': we(advanced, expert),
+    'Leadership': we(advanced, expert),
+    'Performance Optimization': we(advanced, expert),
+    'Performance Profiling': we(advanced, expert),
+    'UX - User Experience': we(advanced, expert),
+    'Troubleshooting': we(advanced, expert),
+    'Graphic Design': we(intermediate, expert),
+    'Testing': we(advanced, expert),
+    // TODO: performance optimizations, profiling, UX
   }, false)
   additional = experience('Additional experience', 'learning more, but not as critical for me now', {
     Java:
@@ -198,6 +225,7 @@ export class WorkExperienceData {
     'SVG.js': we(),
     Akita: we(),
     TensorFlow: we(),
+    Deno: we(intermediate, expert),
   })
   earlier = experience('Earlier experience',
     'always curious to learn more, but no particular need right now',
