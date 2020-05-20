@@ -1,8 +1,8 @@
 <section class="project">
   <h3>
     <div><fa name="laptop"></fa><span><label>  Project: </label> {{projectTitle}}</span></div>
-    <div>
-       <fa name="male"></fa><span><label>  Roles: </label>{{project.roles}}</span>
+    <div *ngIf="project.roles; let roles">
+       <fa name="male"></fa><span><label>  Roles: </label>{{roles}}</span>
     </div>
   </h3>
   <span *ngIf="project.description; let description">{{description}}</span>
