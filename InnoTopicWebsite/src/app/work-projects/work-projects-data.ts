@@ -59,13 +59,81 @@ export class OrganisationsAndProjects {
     },
   })
 
+  'AIG (as Consultant)' = org({
+    flags: 'pl de at es gb us', /* FIXME */
+    time: [2017, 2018],
+    logoFileName: 'AIG_logo.svg.png',
+    locations: 'Heilbronn - Germany, Málaga - Spain (remote)',
+    projects: {
+      'Platform for assessing risk': {
+        roles: 'Lead frontend developer and backend developer, teaching Angular',
+        description: 'PWA working fully offline and synchronising with server to support multi-million-dollar multi-national functionality. Advanced analytics using charts and grid. Internationalisation. ' +
+          'I developed the Angular + Bootstrap app from scratch and helped with the Node.js + MongoDB backend (conceptually as well as in development).',
+        recommendations: '',
+        topicsById: {
+          Angular: {
+            subTopics: {
+              'i18n': {} /* FIXME */
+            }
+          },
+          TypeScript: {},
+          Karma: {},
+          Jasmine: {},
+          Bootstrap: {},
+          Less: {},
+          'Node.js': {},
+          'Express.js': {},
+          'Dexie.js': {},
+          'ag-Grid': {},
+          'Chart.js': {},
+          PWA: {},
+          Docker: {},
+          Lodash: {},
+          MongoDB: {},
+          Mongoose: {},
+          KeystoneJS: {},
+          'Agile Central': {},
+          'Git': {},
+        }
+      },
+      'Customer-facing application for managing insurance plans and customer data': {
+        roles: 'Senior Angular & Node.js Developer',
+        topicsById: {
+          Angular: {},
+          Bootstrap: {},
+          TypeScript: {},
+          Less: {},
+          'Node.js': {},
+          'Express.js': {},
+          XML: {},
+          'XML Schema': {},
+          BiPRO: {},
+          Git: {},
+        }
+      },
+      'Application for managing insurance plans': {
+        roles: 'Senior Angular Developer',
+        description: 'Drag & drop tree, file upload via drag & drop.',
+        topicsById: {
+          Angular: {},
+          TypeScript: {},
+          Karma: {},
+          Jasmine: {},
+          Bootstrap: {},
+          PrimeNG: {},
+          Git: {},
+        }
+      }
+    },
+  })
+
   'InnoTopic SLU' = org({
     logoFileName: '../InnoTopic_Logo.svg',
     flags: 'pl us gb es',
     time: [2017],
     projects: {
       'InnoTopic.com website': {
-        roles: `Angular developer`,
+        roles: `Founder, Owner, Angular developer`,
         topicsById: {
           'Angular Material': {},
           Angular: {},
@@ -164,74 +232,6 @@ export class OrganisationsAndProjects {
     },
   })
 
-  'AIG (as Consultant)' = org({
-    flags: 'pl de at es gb us', /* FIXME */
-    time: [2017, 2018],
-    logoFileName: 'AIG_logo.svg.png',
-    locations: 'Heilbronn - Germany, Málaga - Spain (remote)',
-    projects: {
-      'Platform for assessing risk': {
-        roles: 'Lead frontend developer and backend developer, teaching Angular',
-        description: 'PWA working fully offline and synchronising with server to support multi-million-dollar multi-national functionality. Advanced analytics using charts and grid. Internationalisation. ' +
-          'I developed the Angular + Bootstrap app from scratch and helped with the Node.js + MongoDB backend (conceptually as well as in development).',
-        recommendations: '',
-        topicsById: {
-          Angular: {
-            subTopics: {
-              'i18n': {} /* FIXME */
-            }
-          },
-          TypeScript: {},
-          Karma: {},
-          Jasmine: {},
-          Bootstrap: {},
-          Less: {},
-          'Node.js': {},
-          'Express.js': {},
-          'Dexie.js': {},
-          'ag-Grid': {},
-          'Chart.js': {},
-          PWA: {},
-          Docker: {},
-          Lodash: {},
-          MongoDB: {},
-          Mongoose: {},
-          KeystoneJS: {},
-          'Agile Central': {},
-          'Git': {},
-        }
-      },
-      'Customer-facing application for managing insurance plans and customer data': {
-        roles: 'Senior Angular & Node.js Developer',
-        topicsById: {
-          Angular: {},
-          Bootstrap: {},
-          TypeScript: {},
-          Less: {},
-          'Node.js': {},
-          'Express.js': {},
-          XML: {},
-          'XML Schema': {},
-          BiPRO: {},
-          Git: {},
-        }
-      },
-      'Application for managing insurance plans': {
-        roles: 'Senior Angular Developer',
-        description: 'Drag & drop tree, file upload via drag & drop.',
-        topicsById: {
-          Angular: {},
-          TypeScript: {},
-          Karma: {},
-          Jasmine: {},
-          Bootstrap: {},
-          PrimeNG: {},
-          Git: {},
-        }
-      }
-    },
-  })
-
   'Angular Málaga Meetup Group' = org({
     flags: 'gb es pl', /* FIXME */
     time: [2017],
@@ -294,7 +294,7 @@ export class OrganisationsAndProjects {
         roles: 'Android Lead, Senior Developer',
         description: `Lead developer on the Android client of Company's flagship product, Mezzanine. ` +
           `I solidified and refactored existing codebase/prototype written by a Junior Developer, successfully releasing it and then making subsequent releases with new features. ` +
-          `Also developed a schema language and code generator for Company's communication protocol, using JetBrains MPS (generating Java code from a DSL)`,
+          `Also developed a schema language and code generator for Company's communication protocol, using JetBrains MPS (generating Java code from a DSL).`,
         topicsById: {
           'Google Play': {},
           'JetBrains MPS': {},
