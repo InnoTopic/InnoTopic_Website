@@ -215,8 +215,8 @@ export class WorkExperienceData {
       we(beginner),
   })
   expandingTo = experience('Expanding to', 'actively learning and ready to take projects', {
-    Flutter: we(),
-    Dart: we(intermediate, advanced),
+    // Flutter: we(),
+    // Dart: we(intermediate, advanced),
     // Angular Dart
     Capacitor: we(intermediate, expert),
     Stencil: we(intermediate, expert),
@@ -225,6 +225,7 @@ export class WorkExperienceData {
     'SVG.js': we(),
     Akita: we(),
     TensorFlow: we(),
+    NestJS: we(),
     Deno: we(intermediate, expert),
   })
   earlier = experience('Earlier experience',
@@ -281,5 +282,7 @@ export class WorkExperienceData {
     // TODO: Blazor, .NET Core
   })
 }
+
+// TODO: check for duplicates
 
 export const workExperience = new WorkExperienceData()
