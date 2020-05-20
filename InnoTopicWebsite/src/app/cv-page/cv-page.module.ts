@@ -9,9 +9,10 @@ import { CvPageComponent } from './cv-page.component';
 import { PersonalDataComponent } from './personal-data/personal-data.component';
 import { ExternalProfilesComponent } from './external-profiles/external-profiles.component';
 import { TechGraphComponent } from './tech-graph/tech-graph.component';
+import { WorldMapComponent } from './world-map/world-map.component';
 
 @NgModule({
-  declarations: [CvPageComponent, PersonalDataComponent, ExternalProfilesComponent, TechGraphComponent],
+  declarations: [CvPageComponent, PersonalDataComponent, ExternalProfilesComponent, TechGraphComponent, WorldMapComponent],
   exports: [
     CvPageComponent,
   ],
