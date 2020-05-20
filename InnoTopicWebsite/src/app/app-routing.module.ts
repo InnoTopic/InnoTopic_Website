@@ -1,7 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CvPageComponent } from './cv-page/cv-page.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'karol-depka',
+    component: CvPageComponent,
+  },
+  {
+    path: '',
+    redirectTo: 'karol-depka',
+    pathMatch: 'full',
+    //   canActivate: [AuthGuard]
+  },
+  { path: '**', redirectTo: '' }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
