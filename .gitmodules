@@ -1,3 +1,6 @@
 [submodule "InnoTopicWebsite/src/app/TopicFriendsShared"]
 	path = InnoTopicWebsite/src/app/TopicFriendsShared
 	url = git@github.com:TopicFriends/TopicFriendsShared.git
+[submodule "svg-conversions"]
+	path = svg-conversions
+	url = https://github.com/noviodelangel/svg-conversions
