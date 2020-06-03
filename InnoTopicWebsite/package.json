@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "prepare-icons": "npm --prefix ../svg-conversions start ../InnoTopicWebsite/src/assets/images/logos ../InnoTopicWebsite/src/assets/images/logos-c"
   },
   "private": true,
   "dependencies": {
