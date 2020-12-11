@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256px" height="256px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+	<g>
+		<polygon fill="#cc5a00" points="256 256 0 256 0 0 256 0"></polygon>
+		<polygon fill="#ff7000" points="256 256 51.2 256 51.2 51.2 256 51.2"></polygon>
+		<polygon fill="#ff7000" points="204.8 204.8 51.2 204.8 51.2 51.2 204.8 51.2"></polygon>
+		<polygon fill="#ff7305" points="204.8 204.8 102.4 204.8 102.4 102.4 204.8 102.4"></polygon>
+		<polygon fill="#ff8d33" points="153.6 153.6 102.4 153.6 102.4 102.4 153.6 102.4"></polygon>
+	</g>
+</svg>
