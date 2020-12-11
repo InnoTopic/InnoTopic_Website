@@ -76,10 +76,10 @@ a {
 
 :not(.highlight) {
   img.topic-logo-img {
-    opacity: 0.6;
+    opacity: 1; //0.6;
     //filter: sepia(100%);
     //background-color: red;
-    filter: grayscale(100%); // blur(0.5px);
+    //filter: grayscale(100%); // blur(0.5px);
     //filter: saturate(40%);
 
   }
@@ -92,7 +92,7 @@ a {
 .highlight {
   img.topic-logo-img {
     opacity: 1;
-    filter: grayscale(0%);
+    //filter: grayscale(0%);
     //filter: sepia(0%);
     //filter: saturate(100%);
   }
