@@ -1,9 +1,10 @@
 <ng-container *ngFor="let category of topicCategoriesArray">
-  <section *ngIf="hasExperienceInCategory(category)">
+  <section style="page-break-inside: avoid" *ngIf="hasExperienceInCategory(category)">
     <p>{{categoryTitle(category.name)}}</p>
     <!--  <hr>-->
 <!--    <mat-chip-list>-->
     <span>
+<!--      {{category.topicsArray | json}}-->
       <ng-container *ngFor="let topic of category.topicsArray">
 <!--        TOPIC_: {{topic.id}}-->
 <!--        experience[topic.id]: {{experienceByName[topic.name]}}-->
