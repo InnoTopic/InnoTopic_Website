@@ -22,7 +22,7 @@ export class WorkExperienceData {
       we(intermediate, expert),
     'Chart.js':
       we(advanced),
-    GCP:
+    'GCP - Google Cloud Platform':
       we(advanced, expert),
     PrimeNG:
       we(intermediate, expert),
@@ -56,6 +56,8 @@ export class WorkExperienceData {
     jQuery:
       we(intermediate),
     SVG:
+      we(advanced, expert),
+    Markdown:
       we(advanced, expert),
     'Google Maps':
       we(advanced, expert),
@@ -143,6 +145,7 @@ export class WorkExperienceData {
     PostgreSQL: we(intermediate),
     MySQL: we(intermediate),
     Oracle: we(intermediate),
+    IndexedDB: we(intermediate, expert),
     WordPress: we(intermediate),
     'Font Awesome': we(advanced, expert),
     'VirtualBox': we(advanced),
@@ -210,8 +213,8 @@ export class WorkExperienceData {
       we(intermediate),
     Ember:
       we(beginner),
-    'Vue.js':
-      we(beginner, advanced),
+    // 'Vue.js':
+    //   we(beginner, advanced),
     Kubernetes:
       we(beginner),
   })
@@ -221,13 +224,20 @@ export class WorkExperienceData {
     // Angular Dart
     Capacitor: we(intermediate, expert),
     Stencil: we(intermediate, expert),
-    'Vue.js': we(),
+    Flutter: we(),
+    Dart: we(),
+    NativeScript: we(),
+    Cypress: we(intermediate, expert),
+    'Vue.js': we(intermediate, expert),
     'Angular Elements': we(),
     'SVG.js': we(),
     Akita: we(),
     TensorFlow: we(),
     NestJS: we(),
     Deno: we(intermediate, expert),
+    Storybook: we(beginner, advanced),
+    'DDD - Domain-Driven Design': we(intermediate, advanced),
+    // TODO: Scully
   })
   earlier = experience('Earlier experience',
     'always curious to learn more, but no particular need right now',
@@ -260,6 +270,8 @@ export class WorkExperienceData {
       we(intermediate),
     Lua:
       we(beginner),
+    'AOP - Aspect-Oriented Programming':
+      we(intermediate),
   })
   wishList = experience('Wish-list', 'things on my radar; learning bits and pieces when I can', {
     D: we(),
@@ -274,13 +286,13 @@ export class WorkExperienceData {
     Aurelia: we(),
     PouchDB: we(),
     GraphQL: we(),
-    Dart: we(),
-    Flutter: we(),
     'Plastic SCM': we(),
     Workbox: we(),
-    Keras: we(),
+    // Keras: we(),
     Hoodie: we(),
     Svelte: we(),
+    Bazel: we(),
+    // TODO: Blazor: we(),
     // TODO: Blazor, .NET Core
   })
 }
