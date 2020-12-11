@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="80d4c87d-e11b-4f65-b284-6f0f51c0e1f9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1cEr04Cu64cxN1qT8Z3EHRRJCym" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/svg/logos" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/svg/logos" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/svg/logos" />
+      <recent name="$PROJECT_DIR$/svg" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="80d4c87d-e11b-4f65-b284-6f0f51c0e1f9" name="Default Changelist" comment="" />
+      <created>1590104367880</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590104367880</updated>
+      <workItem from="1590104369476" duration="16184000" />
+      <workItem from="1591070302292" duration="288000" />
+      <workItem from="1591071004276" duration="511000" />
+      <workItem from="1591109797393" duration="596000" />
+      <workItem from="1591111594021" duration="598000" />
+      <workItem from="1591113771251" duration="583000" />
+      <workItem from="1591118710336" duration="599000" />
+      <workItem from="1591162260128" duration="1177000" />
+      <workItem from="1591325665526" duration="596000" />
+      <workItem from="1591329419448" duration="389000" />
+      <workItem from="1591348145979" duration="597000" />
+      <workItem from="1591352543847" duration="158000" />
+      <workItem from="1591352781287" duration="34000" />
+      <workItem from="1591352836586" duration="263000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="661" y="292" width="598" height="518" key="find.popup" timestamp="1590988944414">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="661" y="292" width="598" height="518" key="find.popup/-1080.48.1080.1897/0.23.1920.1057/0.1103.1440.877@0.23.1920.1057" timestamp="1590718504306" />
+    <state x="661" y="292" width="598" height="518" key="find.popup/0.23.1920.1057/140.1103.1440.877@0.23.1920.1057" timestamp="1590988944414" />
+  </component>
+</project>
