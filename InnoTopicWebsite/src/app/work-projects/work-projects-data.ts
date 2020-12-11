@@ -42,7 +42,7 @@ export class OrganisationsAndProjects {
       'Genengine Angular App for genetic diagnosis of rare diseases': {
         roles: 'Senior Angular Developer (Consultant)',
         description: 'First I wrote a suite of E2E UI tests in TestCafe from scratch, in order to increase confidence while making changes.' +
-          ' Then I made numerous improvements of UI/UX, performance, robustness, architecture, refactors and preparing the app for release. Working directly with CEO & CTO.',
+          ' Then I made numerous improvements of UI/UX, performance, robustness, architecture, refactors and I prepared the app for release. Working directly with CEO & CTO. Communication in English and Spanish.',
         topicsById: {
           'Angular': {},
           'TypeScript': {},
@@ -175,7 +175,7 @@ export class OrganisationsAndProjects {
           Bootstrap: {},
           Firebase: {},
           'Cloud Firestore': {},
-          'GCP': {},
+          'GCP - Google Cloud Platform': {},
           'GitHub': {},
         }
       },
@@ -195,7 +195,7 @@ export class OrganisationsAndProjects {
           Bootstrap: {},
           Firebase: {},
           'Cloud Firestore': {},
-          'GCP': {},
+          'GCP - Google Cloud Platform': {},
           'Git': {},
           'GitHub': {},
           'Android': {},
@@ -220,7 +220,7 @@ export class OrganisationsAndProjects {
           Bash: {},
           Firebase: {},
           'Cloud Firestore': {},
-          'GCP': {},
+          'GCP - Google Cloud Platform': {},
           'Git': {},
           'GitHub': {},
           'Android': {},
@@ -261,7 +261,7 @@ export class OrganisationsAndProjects {
         topicsById: {
           Angular: {},
           Firebase: {},
-          'GCP': {},
+          'GCP - Google Cloud Platform': {},
           'Angular Material': {},
           'TestCafe': {},
           'WebStorm': {},
@@ -332,7 +332,7 @@ export class OrganisationsAndProjects {
     projects: {
       'TeamForge integration with Gerrit and Git': {
         roles: 'Java Developer and related',
-        description: `Worked at the Company that created Subversion (Svn) version control system, somewhat ironically on development of integration of Git and Gerrit with CollabNet's flagship product - TeamForge, an ALM (Application Lifecycle Management) enterprise /  system, used by big enterprise clients like Intel, Ericsson, NXP. ` +
+        description: `Worked at the Company that created Subversion (Svn) version control system, somewhat ironically on development of integration of Git and Gerrit with CollabNet's flagship product - TeamForge, an ALM (Application Lifecycle Management) enterprise system, used by big enterprise clients like Intel, Ericsson, NXP. ` +
           `We were also dogfooding using the Gerrit-based code review system which was a great opportunity to also master advanced Git workflows using rebasing, squashing, etc.`,
         topicsById: {
           Java: {},
@@ -498,7 +498,7 @@ export class OrganisationsAndProjects {
         }
       },
       'Invoice Generator for Cable TV + Internet + Phone Company (Petrus)': {
-        description: `Reliably generated tens of thousands of e-invoices every months, amounting to millions of invoices generated over the years.`,
+        description: `Reliably generated tens of thousands of e-invoices every month, amounting to millions of invoices generated over the years.`,
         topicsById: {
           Java: {},
           'XML': {},
