@@ -1,4 +1,7 @@
-import { NgModule } from '@angular/core';
+import {
+  CUSTOM_ELEMENTS_SCHEMA,
+  NgModule,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Angular2FontawesomeModule } from 'angular2-fontawesome';
 import { PersonalInterestsModule } from '../personal-interests/personal-interests.module';
@@ -24,5 +27,8 @@ import { WorldMapComponent } from './world-map/world-map.component';
     OtherProfilesModule,
     Angular2FontawesomeModule,
   ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+  ]
 })
 export class CvPageModule { }
