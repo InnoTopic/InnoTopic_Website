@@ -4,6 +4,7 @@ import { CoreModule } from './core/core.module';
 import { CvPageModule } from './cv-page/cv-page.module';
 import { SharedModule } from './shared/shared.module';
 import { TopicsSharedModule } from './topics-shared/topics-shared.module';
+import { PoweredByComponent } from './powered-by/powered-by.component';
 
 
 // var log4js = require('log4js');
@@ -14,6 +15,7 @@ import { TopicsSharedModule } from './topics-shared/topics-shared.module';
 @NgModule({
   declarations: [
     AppComponent,
+    PoweredByComponent,
   ],
   imports: [
     CoreModule,
