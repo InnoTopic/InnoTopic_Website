@@ -21,10 +21,10 @@ export function isNullOrUndefinedOrWhiteSpace(s: string) {
   return false
 }
 
-export function arrayOfObservablesToObservableOfArray<T>(arr: Array<Observable<T>>): Observable<Array<T>> {
-  const combineLatest2: Observable<Array<T>> = combineLatest<T>(arr)
-  return combineLatest2
-}
+// export function arrayOfObservablesToObservableOfArray<T>(arr: Array<Observable<T>>): Observable<Array<T>> {
+//   const combineLatest2: Observable<Array<T>> = combineLatest<T>(arr)
+//   return combineLatest2
+// }
 
 export function groupByKeepingOrder(kv, propertyToGroupBy: string) {
   const ret = {}
