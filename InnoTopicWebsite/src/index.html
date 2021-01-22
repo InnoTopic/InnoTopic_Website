@@ -25,25 +25,34 @@
 <!--assets/3d/InnoTopic_3D_Logo.glb-->
 <!--src="assets/3d/Astronaut.glb"-->
 <!-- assets/3d/WebGL.glb -->
-<div>
 
-  <model-viewer src="assets/3d/Scene5.glb"
-                style="position: sticky"
-                ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"
-                poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"
-                alt="A 3D model of an astronaut"
-                style="height: 500px"
-                camera-orbit="calc(-1.5rad + env(window-scroll-y) * 4rad) calc(0deg + env(window-scroll-y) * 180deg) calc(3m - env(window-scroll-y) * 1.5m)"
-                camera-target="0m 0m 0m"
+  <model-viewer
+    src="assets/3d/Scene5.glb"
+    ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"
+
+    alt="A 3D model of an astronaut"
+    style="height: 1000px; outline: none; opacity: 20%"
+    camera-orbit="calc(-1.5rad + env(window-scroll-y) * 4rad) calc(0deg + env(window-scroll-y) * 180deg) calc(3m - env(window-scroll-y) * 1.5m)"
+    camera-target="0m 0m 0m"
+    disable-zoom
+    disable-orbit
   >
+
     <!--              shadow-intensity="1"
                 camera-controls
                 auto-rotate ar
    -->
-  </model-viewer> <!-- https://github.com/google/model-viewer/issues/969 -->
-</div>
+    <!-- https://github.com/google/model-viewer/issues/969 -->
+  </model-viewer>
+  <div class=" basic-container">
+    <!-- mat-app-background -->
+    <div
+      style="position: sticky; top: 0px"
 
-  <div class="mat-app-background basic-container">
+    >
+
+
+    </div>
     <app-root><div style="margin: 20px;">Loading...</div></app-root>
     <!--<app-root>Loading...</toolbar-multirow-example>-->
   </div>

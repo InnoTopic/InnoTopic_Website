@@ -23,7 +23,7 @@ export class TopicLogoComponent implements OnInit {
   @Input() public url;
   @Input() public width = defaultIconHeight;
   @Input() public height = defaultIconHeight;
-  @Input() public margin = 5;
+  @Input() public margin = 2;
 
   public styles;
 
