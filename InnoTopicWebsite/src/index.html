@@ -16,7 +16,7 @@
 <!--  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">-->
 <!--  </script>-->
   <script type="module"
-          src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
+          src="https://unpkg.com/@google/model-viewer@1.4.1/dist/model-viewer.js">
   </script>
 
 </head>
@@ -36,6 +36,7 @@
     camera-target="0m 0m 0m"
     disable-zoom
     disable-orbit
+    data-js-focus-visible=""
   >
 
     <!--              shadow-intensity="1"
@@ -43,6 +44,7 @@
                 auto-rotate ar
    -->
     <!-- https://github.com/google/model-viewer/issues/969 -->
+    <!-- https://github.com/google/model-viewer/issues/1728 -->
   </model-viewer>
   <div class=" basic-container">
     <!-- mat-app-background -->
