@@ -13,9 +13,10 @@ import { PersonalDataComponent } from './personal-data/personal-data.component';
 import { ExternalProfilesComponent } from './external-profiles/external-profiles.component';
 import { TechGraphComponent } from './tech-graph/tech-graph.component';
 import { WorldMapComponent } from './world-map/world-map.component';
+import { Logo3dComponent } from './logo3d/logo3d.component';
 
 @NgModule({
-  declarations: [CvPageComponent, PersonalDataComponent, ExternalProfilesComponent, TechGraphComponent, WorldMapComponent],
+  declarations: [CvPageComponent, PersonalDataComponent, ExternalProfilesComponent, TechGraphComponent, WorldMapComponent, Logo3dComponent],
   exports: [
     CvPageComponent,
   ],

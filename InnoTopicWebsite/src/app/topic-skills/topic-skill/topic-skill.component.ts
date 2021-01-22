@@ -1,4 +1,5 @@
 import {
+  ApplicationRef,
   Component,
   Input,
   OnInit,
@@ -21,9 +22,18 @@ export class TopicSkillComponent implements OnInit {
 
   @Input() showLogo: boolean
 
-  constructor() { }
+  constructor(
+    public app: ApplicationRef
+  ) {
+
+  }
 
   ngOnInit() {
+    this.app.tick()
+  }
+
+  ngAfterViewInit() {
+    this.app.tick()
   }
 
 }

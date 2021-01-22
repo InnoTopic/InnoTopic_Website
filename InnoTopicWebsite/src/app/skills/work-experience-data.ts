@@ -183,6 +183,9 @@ export class WorkExperienceData {
     'Troubleshooting': we(advanced, expert),
     'Graphic Design': we(intermediate, expert),
     'Testing': we(advanced, expert),
+    Lighthouse: we(),
+    'three.js': we(),
+    WebGL: we(),
     // TODO: performance optimizations, profiling, UX
   }, false)
   additional = experience('Additional experience', 'learning more, but not as critical for me now', {
