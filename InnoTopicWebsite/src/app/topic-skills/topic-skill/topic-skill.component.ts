@@ -29,11 +29,11 @@ export class TopicSkillComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.app.tick()
+    // this.app.tick()
   }
 
   ngAfterViewInit() {
-    this.app.tick()
+    // this.app.tick()
   }
 
 }

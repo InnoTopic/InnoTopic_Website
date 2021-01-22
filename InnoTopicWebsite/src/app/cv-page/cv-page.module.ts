@@ -28,8 +28,8 @@ import { Logo3dComponent } from './logo3d/logo3d.component';
     OtherProfilesModule,
     Angular2FontawesomeModule,
   ],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA,
-  ]
+  // schemas: [
+  //   CUSTOM_ELEMENTS_SCHEMA,
+  // ]
 })
 export class CvPageModule { }
