@@ -79,7 +79,10 @@ a {
 }
 
 * {
-  transition: all ease-in-out 0.6s;
+  /* FIXME */
+  //transition: all ease-in-out 0.6s;
+  transition: background-color ease-in-out 1s;
+  //transition: color ease-in-out 0s;
 }
 
 :not(.highlight) {

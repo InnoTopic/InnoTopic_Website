@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>InnoTopic.com - Karol Depka Pradzinski</title>
+  <title>Karol Depka Pradzinski - InnoTopic.com</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,7 +27,7 @@
 <!-- assets/3d/WebGL.glb -->
   <button
     onclick="document.querySelector('body').classList.add('dark-theme');"
-  >DARK</button>
+  >DARK<sup>NEW</sup></button>
   <button
     onclick="document.querySelector('body').classList.remove('dark-theme');"
   >LIGHT</button>
@@ -36,7 +36,7 @@
     src="assets/3d/Scene5.glb"
     ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"
 
-    alt="A 3D model of an astronaut"
+    alt="InnoTopic Logo"
     style="height: 1000px; outline: none; opacity: 10%"
     camera-orbit="calc(-1.5rad + env(window-scroll-y) * 4rad) calc(0deg + env(window-scroll-y) * 180deg) calc(3m - env(window-scroll-y) * 1.5m)"
     camera-target="0m 0m 0m"
@@ -44,6 +44,10 @@
     disable-orbit
     data-js-focus-visible=""
   >
+    <!-- iOS transparency: https://github.com/google/model-viewer/pull/268/commits/99c720b21a3f8a92845c1a75da031bb9d6291781
+      https://github.com/GoogleWebComponents/model-viewer/pull/268
+      https://stackoverflow.com/questions/57150436/webgl-does-not-have-an-alpha-background-channel-on-ios-safari
+    -->
 
     <!--              shadow-intensity="1"
                 camera-controls
