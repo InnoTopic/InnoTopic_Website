@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatRadioModule } from '@angular/material/radio';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { CvPageModule } from './cv-page/cv-page.module';
@@ -32,6 +34,8 @@ import { PoweredByComponent } from './powered-by/powered-by.component';
     CvPageModule,
     TopicsSharedModule,
     TopicSkillsModule,
+    MatButtonModule,
+    MatRadioModule,
   ],
   providers: [
   ],

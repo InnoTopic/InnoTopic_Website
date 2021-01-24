@@ -20,18 +20,24 @@
   </script>
 
 </head>
-<body>
+<body class="dark-theme">
 <!-- https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948 -->
 <!--assets/3d/InnoTopic_3D_Logo.glb-->
 <!--src="assets/3d/Astronaut.glb"-->
 <!-- assets/3d/WebGL.glb -->
+  <button
+    onclick="document.querySelector('body').classList.add('dark-theme');"
+  >DARK</button>
+  <button
+    onclick="document.querySelector('body').classList.remove('dark-theme');"
+  >LIGHT</button>
 
   <model-viewer
     src="assets/3d/Scene5.glb"
     ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"
 
     alt="A 3D model of an astronaut"
-    style="height: 1000px; outline: none; opacity: 20%"
+    style="height: 1000px; outline: none; opacity: 10%"
     camera-orbit="calc(-1.5rad + env(window-scroll-y) * 4rad) calc(0deg + env(window-scroll-y) * 180deg) calc(3m - env(window-scroll-y) * 1.5m)"
     camera-target="0m 0m 0m"
     disable-zoom
@@ -45,6 +51,15 @@
    -->
     <!-- https://github.com/google/model-viewer/issues/969 -->
     <!-- https://github.com/google/model-viewer/issues/1728 -->
+    <!-- https://stackblitz.com/edit/angular-ivy-onjfwt?file=package.json
+      "@google/model-viewer": "^1.3.0"
+
+      https://stackblitz.com/edit/angular-ivy-onjfwt?file=src%2Fapp%2Fapp.component.ts
+      import "@google/model-viewer";
+
+      focus outline: https://stackoverflow.com/questions/62044624/model-viewer-outline
+
+    -->
   </model-viewer>
   <div class=" basic-container">
     <!-- mat-app-background -->
