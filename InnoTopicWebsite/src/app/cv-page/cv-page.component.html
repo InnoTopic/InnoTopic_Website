@@ -2,13 +2,37 @@
   <div class="container">
     <app-personal-data></app-personal-data>
 
+
+
     <app-external-profiles></app-external-profiles>
   </div>
 </div>
 
+<!--<model-viewer id="reveal" loading="eager" camera-controls auto-rotate poster="../../assets/poster-shishkebab.png" src="../../shared-assets/models/shishkebab.glb" alt="A 3D model of a shishkebab"></model-viewer>-->
+<!--<model-viewer src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948"-->
+<!--              ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"-->
+<!--              poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"-->
+<!--              alt="A 3D model of an astronaut"-->
+<!--              style="height: 500px"-->
+<!--              camera-orbit="45deg 55deg 2.5m"-->
+<!--              camera-controls camera-orbit="calc(-1.5rad + env(window-scroll-y) * 4rad) calc(0deg + env(window-scroll-y) * 180deg) calc(3m - env(window-scroll-y) * 1.5m)"-->
+<!--&gt;-->
+<!--  &lt;!&ndash;              shadow-intensity="1"-->
+<!--              camera-controls-->
+<!--              auto-rotate ar-->
+<!-- &ndash;&gt;-->
+<!--</model-viewer>-->
+
 <div style="display: flex; justify-content: center">
   <app-world-map style="max-height: 500px"></app-world-map>
   <app-tech-graph></app-tech-graph>
+  <!-- WebGL svg: https://css-tricks.com/rendering-svg-paths-in-webgl/
+    Demo: https://mattdesl.github.io/svg-mesh-3d/
+    https://threejs.org/docs/#examples/en/renderers/SVGRenderer
+    https://github.com/pmndrs/react-three-fiber
+    https://nl.pinterest.com/nadiehbremer/demos-webgl/
+    https://domenicobrz.github.io/webgl/projects/marching%20cubes/ - could have smth like that with angular logo merging with other logos
+  -->
 </div>
 
 <app-work-experience></app-work-experience> <!-- rename to work-skills ? -->
