@@ -13,14 +13,18 @@ body
   //font-family: Roboto, "Helvetica Neue", sans-serif
   font-family: Karla, "Helvetica Neue", sans-serif
   font-weight: lighter
-  background: white
+  color: black
+  &.dark-theme
+    background: #404040
+    color: white
   @media screen and (max-width: $break-medium)
     font-size: 16px !important
   @media screen and (max-width: $break-small)
     font-size: 14px !important
 
 .mat-app-background
-  background: white !important
+  //background: white !important
+  background: black !important
 
 
 h4
@@ -95,6 +99,14 @@ app-other-profile-user-name p
   align-items: center
   justify-content: flex-start
 
+.dark-theme
+  .section-title
+    background-color: mat-color($dark-primary) !important
+
+  .mat-toolbar.mat-primary
+    background-color: mat-color($dark-primary) !important
+
+
 .section-title
   background-color: mat-color($light-primary)
   margin-top: 25px
@@ -113,3 +125,15 @@ app-other-profile-user-name p
   padding: 0px 10px
   @media screen and (max-width: $break-medium)
     padding: 0px
+
+//:focus-visible polyfill { outline: none; }
+
+
+model-viewer
+  width: 100vw
+  height: 100vh
+  display: block
+  position: fixed
+  top: 0
+  left: 0
+  z-index: -9999

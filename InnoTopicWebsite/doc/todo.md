@@ -1,0 +1,16 @@
+- [30min] 50% width (6 and 12 responsive columns) on first section, map, tech graph
+- [1h] fix page breaks for PDF, so that some stuff does not stick on previous page
+- add more secondary color and balance with primray:
+  - on map
+  - on the page in general (replace gray text, like location?)
+  - in logo?
+  - shades / tints of primary/secondary
+- fill more project descriptions
+- fix/disable mouseover (slowdown) etc
+  - [Violation] 'focus' handler took 3112ms
+  - [Violation] 'blur' handler took 6394ms
+  - use profiler
+  - look at change detection
+- fix slow font size transition on changing window size
+- maybe add screenshots of recommendations
+- maybe add little screenshots of apps like TopiFriends, LifeSuite diagrams
