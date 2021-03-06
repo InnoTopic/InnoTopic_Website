@@ -13,7 +13,7 @@ const routes: Routes = [
     pathMatch: 'full',
     //   canActivate: [AuthGuard]
   },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '' /* FIXME: does not work? */ }
 ];
 
 @NgModule({
