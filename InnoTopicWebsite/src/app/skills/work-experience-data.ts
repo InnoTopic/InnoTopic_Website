@@ -279,6 +279,7 @@ export class WorkExperienceData {
   })
   wishList = experience('Wish-list', 'things on my radar; learning bits and pieces when I can', {
     D: we(),
+    Julia: we(),
     Rust: we(),
     Go: we(),
     WebAssembly: we(),
@@ -296,7 +297,7 @@ export class WorkExperienceData {
     Hoodie: we(),
     Svelte: we(),
     Bazel: we(),
-    // TODO: Blazor: we(),
+    Blazor: we(),
     // TODO: Blazor, .NET Core
   })
 }
