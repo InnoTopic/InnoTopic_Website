@@ -8,6 +8,13 @@ import {
   experience,
 } from './work-experience';
 
+/* TODO:
+* Azure
+* Amazon WebServices (AWS)
+* RabbitMQ
+*
+* */
+
 export class WorkExperienceData {
   main = experience('Main Experience', 'extensive usage and always honing my skills and learning', {
     Angular:
