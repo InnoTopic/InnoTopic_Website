@@ -64,12 +64,14 @@ export class WorkExperienceData {
     'ag-Grid':
       we(advanced, expert),
     MongoDB:
-      we(intermediate, advanced),
+      we(advanced, advanced),
     Mongoose:
-      we(intermediate, advanced),
+      we(advanced, advanced),
     Bootstrap:
       we(intermediate, expert),
     TypeScript:
+      we(advanced /* FIXME very_advanced */, expert),
+    'Micro Frontends':
       we(advanced, expert),
     RxJS:
       we(advanced, expert),
@@ -117,6 +119,8 @@ export class WorkExperienceData {
       we(advanced),
     NGINX:
       we(intermediate),
+    GraphQL: we(advanced, expert),
+    Microservices: we(advanced, expert),
     RegExp:
       we(advanced, expert),
     Jest:
@@ -128,9 +132,9 @@ export class WorkExperienceData {
     Figma:
       we(advanced, expert),
     'Node.js':
-      we(intermediate, expert),
+      we(advanced, expert),
     'Express.js':
-      we(intermediate, expert),
+      we(advanced, expert),
     'Chrome Extensions':
       we(intermediate, expert),
     NoSQL:
@@ -142,10 +146,10 @@ export class WorkExperienceData {
     'Visual Studio Code': we(intermediate, expert),
     'Vim': we(intermediate),
     // DataBases:
-    PostgreSQL: we(intermediate),
-    MySQL: we(intermediate),
-    Oracle: we(intermediate),
-    IndexedDB: we(intermediate, expert),
+    PostgreSQL: we(advanced),
+    MySQL: we(advanced),
+    Oracle: we(advanced),
+    IndexedDB: we(advanced, expert),
     WordPress: we(intermediate),
     'Font Awesome': we(advanced, expert),
     'VirtualBox': we(advanced),
@@ -290,7 +294,6 @@ export class WorkExperienceData {
     Meteor: we(),
     Aurelia: we(),
     PouchDB: we(),
-    GraphQL: we(),
     'Plastic SCM': we(),
     Workbox: we(),
     // Keras: we(),
