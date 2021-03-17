@@ -23,6 +23,7 @@ export class WorkExperience {
 export const beginner = 'beginner'
 export const intermediate = 'intermediate'
 export const advanced = 'advanced'
+export const very_advanced = 'very_advanced'
 export const expert = 'expert'
 
 export function we(/*topicId: string, */have?: string, want?: string) {

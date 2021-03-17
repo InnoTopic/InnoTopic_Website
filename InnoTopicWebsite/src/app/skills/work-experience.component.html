@@ -46,8 +46,11 @@
 </section>
 
 <section id="languages" class="container">
+  <!-- FIXME: extract languages component -->
   <h2 class="section-title">Languages</h2>
+  <!-- FIXME: 2..4 columns -->
 <!--  <app-flags flags="de at lu pl gb us pt es es-ct fr"></app-flags>-->
+  <!-- FIXME: extract component for flag + label-->
   <div class="language">
     <div class="app-flags"><app-flags flags="pl"></app-flags></div>
     <label>Polish</label>
@@ -59,12 +62,12 @@
     <span>Full professional proficiency</span>
   </div>
   <div class="language">
-    <div class="app-flags"><app-flags flags="es"></app-flags></div>
+    <div class="app-flags"><app-flags flags="es mx"></app-flags></div> <!-- TODO: argentina -->
     <label>Spanish</label>
     <span>Full professional proficiency</span>
   </div>
   <div class="language">
-    <div class="app-flags"><app-flags flags="de"></app-flags></div>
+    <div class="app-flags"><app-flags flags="de at"></app-flags></div> <!-- TODO CH-->
     <label>German</label>
     <span>Advanced</span>
   </div>
@@ -74,18 +77,33 @@
     <span>Basic</span>
   </div>
   <div class="language">
-    <div class="app-flags"><app-flags flags="pt"></app-flags></div>
+    <div class="app-flags"><app-flags flags="pt br"></app-flags></div>
     <label>Portuguese</label>
-    <span>Beginner</span>
+    <span>Intermediate</span>
   </div>
   <div class="language">
-    <div class="app-flags"><app-flags flags="fr"></app-flags></div>
+    <div class="app-flags"><app-flags flags="fr be"></app-flags></div>
     <label>French</label>
     <span>Beginner</span>
   </div>
   <div class="language">
     <div class="app-flags"><app-flags flags="it"></app-flags></div>
     <label>Italian</label>
+    <span>Beginner</span>
+  </div>
+  <div class="language">
+    <div class="app-flags"><app-flags flags="nl be"></app-flags></div>
+    <label>Dutch</label>
+    <span>Beginner</span>
+  </div>
+  <div class="language">
+    <div class="app-flags"><app-flags flags="ru"></app-flags></div>
+    <label>Russian</label>
+    <span>Beginner</span>
+  </div>
+  <div class="language">
+    <div class="app-flags"><app-flags flags="cn"></app-flags></div>
+    <label>Mandarin Chinese</label>
     <span>Beginner</span>
   </div>
 </section>

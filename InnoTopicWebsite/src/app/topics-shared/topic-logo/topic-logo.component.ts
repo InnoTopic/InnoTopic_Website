@@ -3,6 +3,7 @@ import {
   OnInit,
   Input,
   ChangeDetectionStrategy,
+  ChangeDetectorRef,
 } from '@angular/core';
 import { Topic } from '../../TopicFriendsShared/topics-core/Topic';
 import { TopicsService } from '../../TopicFriendsShared/topics-core/topics.service';
@@ -22,12 +23,13 @@ export class TopicLogoComponent implements OnInit {
   @Input() public url;
   @Input() public width = defaultIconHeight;
   @Input() public height = defaultIconHeight;
-  @Input() public margin = 5;
+  @Input() public margin = 2;
 
   public styles;
 
   constructor(
     public topicsService: TopicsService,
+    public changeDetectorRef: ChangeDetectorRef,
   ) { }
 
   ngOnInit() {
@@ -58,6 +60,7 @@ export class TopicLogoComponent implements OnInit {
       'margin-right.px': this.margin,
       'vertical-align': 'middle'
     }
+    this.changeDetectorRef.markForCheck()
   }
 
 }

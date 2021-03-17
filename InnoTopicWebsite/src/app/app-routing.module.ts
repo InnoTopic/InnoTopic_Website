@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CvPageComponent } from './cv-page/cv-page.component';
+import { EpicEliteComponent } from './jobs/epic-elite/epic-elite.component';
 
 const routes: Routes = [
   {
@@ -8,12 +9,16 @@ const routes: Routes = [
     component: CvPageComponent,
   },
   {
+    path: 'jobs/epic-elite',
+    component: EpicEliteComponent,
+  },
+  {
     path: '',
     redirectTo: 'karol-depka',
     pathMatch: 'full',
     //   canActivate: [AuthGuard]
   },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '' /* FIXME: does not work? */ }
 ];
 
 @NgModule({

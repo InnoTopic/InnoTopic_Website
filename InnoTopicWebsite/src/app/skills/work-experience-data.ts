@@ -8,6 +8,13 @@ import {
   experience,
 } from './work-experience';
 
+/* TODO:
+* Azure
+* Amazon WebServices (AWS)
+* RabbitMQ
+*
+* */
+
 export class WorkExperienceData {
   main = experience('Main Experience', 'extensive usage and always honing my skills and learning', {
     Angular:
@@ -22,7 +29,7 @@ export class WorkExperienceData {
       we(intermediate, expert),
     'Chart.js':
       we(advanced),
-    GCP:
+    'GCP - Google Cloud Platform':
       we(advanced, expert),
     PrimeNG:
       we(intermediate, expert),
@@ -57,17 +64,21 @@ export class WorkExperienceData {
       we(intermediate),
     SVG:
       we(advanced, expert),
+    Markdown:
+      we(advanced, expert),
     'Google Maps':
       we(advanced, expert),
     'ag-Grid':
       we(advanced, expert),
     MongoDB:
-      we(intermediate, advanced),
+      we(advanced, advanced),
     Mongoose:
-      we(intermediate, advanced),
+      we(advanced, advanced),
     Bootstrap:
       we(intermediate, expert),
     TypeScript:
+      we(advanced /* FIXME very_advanced */, expert),
+    'Micro Frontends':
       we(advanced, expert),
     RxJS:
       we(advanced, expert),
@@ -115,6 +126,8 @@ export class WorkExperienceData {
       we(advanced),
     NGINX:
       we(intermediate),
+    GraphQL: we(advanced, expert),
+    Microservices: we(advanced, expert),
     RegExp:
       we(advanced, expert),
     Jest:
@@ -126,9 +139,9 @@ export class WorkExperienceData {
     Figma:
       we(advanced, expert),
     'Node.js':
-      we(intermediate, expert),
+      we(advanced, expert),
     'Express.js':
-      we(intermediate, expert),
+      we(advanced, expert),
     'Chrome Extensions':
       we(intermediate, expert),
     NoSQL:
@@ -140,9 +153,10 @@ export class WorkExperienceData {
     'Visual Studio Code': we(intermediate, expert),
     'Vim': we(intermediate),
     // DataBases:
-    PostgreSQL: we(intermediate),
-    MySQL: we(intermediate),
-    Oracle: we(intermediate),
+    PostgreSQL: we(advanced),
+    MySQL: we(advanced),
+    Oracle: we(advanced),
+    IndexedDB: we(advanced, expert),
     WordPress: we(intermediate),
     'Font Awesome': we(advanced, expert),
     'VirtualBox': we(advanced),
@@ -180,6 +194,10 @@ export class WorkExperienceData {
     'Troubleshooting': we(advanced, expert),
     'Graphic Design': we(intermediate, expert),
     'Testing': we(advanced, expert),
+    Lighthouse: we(),
+    'three.js': we(),
+    WebGL: we(),
+    glTF: we(),
     // TODO: performance optimizations, profiling, UX
   }, false)
   additional = experience('Additional experience', 'learning more, but not as critical for me now', {
@@ -206,12 +224,14 @@ export class WorkExperienceData {
       we(intermediate),
     React:
       we(intermediate),
+    Gatsby:
+      we(),
     Redux:
       we(intermediate),
     Ember:
       we(beginner),
-    'Vue.js':
-      we(beginner, advanced),
+    // 'Vue.js':
+    //   we(beginner, advanced),
     Kubernetes:
       we(beginner),
   })
@@ -221,13 +241,20 @@ export class WorkExperienceData {
     // Angular Dart
     Capacitor: we(intermediate, expert),
     Stencil: we(intermediate, expert),
-    'Vue.js': we(),
+    Flutter: we(),
+    Dart: we(),
+    NativeScript: we(),
+    Cypress: we(intermediate, expert),
+    'Vue.js': we(intermediate, expert),
     'Angular Elements': we(),
     'SVG.js': we(),
     Akita: we(),
     TensorFlow: we(),
     NestJS: we(),
     Deno: we(intermediate, expert),
+    Storybook: we(beginner, advanced),
+    'DDD - Domain-Driven Design': we(intermediate, advanced),
+    // TODO: Scully
   })
   earlier = experience('Earlier experience',
     'always curious to learn more, but no particular need right now',
@@ -260,9 +287,14 @@ export class WorkExperienceData {
       we(intermediate),
     Lua:
       we(beginner),
+    'AOP - Aspect-Oriented Programming':
+      we(intermediate),
+    // TODO: PHP, Laravel (EpicElite)
+    // TODO: ApolloServer
   })
   wishList = experience('Wish-list', 'things on my radar; learning bits and pieces when I can', {
     D: we(),
+    Julia: we(),
     Rust: we(),
     Go: we(),
     WebAssembly: we(),
@@ -273,14 +305,13 @@ export class WorkExperienceData {
     Meteor: we(),
     Aurelia: we(),
     PouchDB: we(),
-    GraphQL: we(),
-    Dart: we(),
-    Flutter: we(),
     'Plastic SCM': we(),
     Workbox: we(),
-    Keras: we(),
+    // Keras: we(),
     Hoodie: we(),
     Svelte: we(),
+    Bazel: we(),
+    Blazor: we(),
     // TODO: Blazor, .NET Core
   })
 }

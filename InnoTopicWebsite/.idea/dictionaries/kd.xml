@@ -5,7 +5,9 @@
       <w>algolia</w>
       <w>angeles</w>
       <w>antipatterns</w>
+      <w>arango</w>
       <w>atos</w>
+      <w>bazel</w>
       <w>bugzilla</w>
       <w>català</w>
       <w>centos</w>
@@ -41,6 +43,7 @@
       <w>karoldepka</w>
       <w>keras</w>
       <w>koszalin</w>
+      <w>linkedin</w>
       <w>málaga</w>
       <w>nginx</w>
       <w>ngxs</w>
@@ -56,11 +59,14 @@
       <w>suse</w>
       <w>testng</w>
       <w>trac</w>
+      <w>typegraphql</w>
       <w>wilber</w>
       <w>wordpress</w>
       <w>workbox</w>
       <w>wrocław</w>
+      <w>xing</w>
       <w>xplat</w>
+      <w>zeplin</w>
       <w>zilla</w>
     </words>
   </dictionary>
