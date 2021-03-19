@@ -11,6 +11,7 @@ import { TopicSkillsModule } from './topic-skills/topic-skills.module';
 // import { WorkExperienceComponent } from './skills/work-experience.component';
 import { TopicsSharedModule } from './topics-shared/topics-shared.module';
 import { PoweredByComponent } from './powered-by/powered-by.component';
+import { EpicEliteComponent } from './jobs/epic-elite/epic-elite.component';
 
 
 // var log4js = require('log4js');
@@ -22,6 +23,7 @@ import { PoweredByComponent } from './powered-by/powered-by.component';
   declarations: [
     AppComponent,
     PoweredByComponent,
+    EpicEliteComponent,
 
     // WorkExperienceComponent,
     // WorkExperienceListComponent,

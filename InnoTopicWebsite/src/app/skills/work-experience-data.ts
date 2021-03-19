@@ -224,6 +224,8 @@ export class WorkExperienceData {
       we(intermediate),
     React:
       we(intermediate),
+    Gatsby:
+      we(),
     Redux:
       we(intermediate),
     Ember:
@@ -287,6 +289,8 @@ export class WorkExperienceData {
       we(beginner),
     'AOP - Aspect-Oriented Programming':
       we(intermediate),
+    // TODO: PHP, Laravel (EpicElite)
+    // TODO: ApolloServer
   })
   wishList = experience('Wish-list', 'things on my radar; learning bits and pieces when I can', {
     D: we(),
