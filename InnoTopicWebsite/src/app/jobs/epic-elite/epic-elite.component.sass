@@ -1,6 +1,32 @@
 p
   font-variant: small-caps
+  font-weight: bold
 
 
 p::first-letter
   vertical-align: -10%
+
+\:host
+  margin: 1rem
+
+.fancy-text
+  font-size: 70px
+  text-transform: uppercase
+  font-weight: bold
+  -webkit-text-fill-color: transparent
+  -webkit-background-clip: text
+  background-image: url("/assets/images/jobs/epic-elite/hero-image.png")
+  animation-name: anim-bg
+  animation-duration: 10s
+  animation-timing-function: ease-in-out
+  animation-iteration-count: infinite
+  //text-shadow: #FFF8 0px 0px 2px
+
+
+@keyframes anim-bg
+  0%
+    background-position: 0% 0%
+  50%
+    background-position: 187% 50%
+  0%
+    background-position: 0% 0%
