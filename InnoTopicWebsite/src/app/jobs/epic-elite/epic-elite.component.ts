@@ -10,7 +10,7 @@ export class EpicEliteComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    document.title = 'Job Offer - EpicElite'
+    document.title = 'Job Offer - Epic Elite'
   }
 
 }

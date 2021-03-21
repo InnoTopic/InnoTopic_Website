@@ -1,21 +1,23 @@
-p
+@import '../../../app-themes.scss'
+
+p, li
   font-variant: small-caps
   font-weight: bold
 
 
 p::first-letter
-  vertical-align: -10%
+  //vertical-align: -10%
 
 \:host
   margin: 1rem
 
 .fancy-text
-  font-size: 70px
+  font-size: 50px
   text-transform: uppercase
   font-weight: bold
   -webkit-text-fill-color: transparent
   -webkit-background-clip: text
-  background-image: url("/assets/images/jobs/epic-elite/hero-image.png")
+  background-image: url("/assets/images/jobs/epic-elite/hero-image.jpg")
   animation-name: anim-bg
   animation-duration: 10s
   animation-timing-function: ease-in-out
@@ -27,6 +29,14 @@ p::first-letter
   0%
     background-position: 0% 0%
   50%
-    background-position: 187% 50%
+    background-position: 187% 10%
   0%
     background-position: 0% 0%
+
+
+h2
+  text-transform: uppercase
+
+a
+  color: mat-color($light-primary)
+  text-decoration: underline
