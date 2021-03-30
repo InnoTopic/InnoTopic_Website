@@ -127,6 +127,7 @@ export class WorkExperienceData {
     NGINX:
       we(intermediate),
     GraphQL: we(advanced, expert),
+    // TODO : TypeGraphQL, TypeORM
     Microservices: we(advanced, expert),
     RegExp:
       we(advanced, expert),
@@ -236,9 +237,9 @@ export class WorkExperienceData {
       we(beginner),
   })
   expandingTo = experience('Expanding to', 'actively learning and ready to take projects', {
-    // Flutter: we(),
     // Dart: we(intermediate, advanced),
     // Angular Dart
+    // TODO: Swagger
     Capacitor: we(intermediate, expert),
     Stencil: we(intermediate, expert),
     Flutter: we(),
