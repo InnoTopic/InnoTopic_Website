@@ -127,7 +127,7 @@ export class WorkExperienceData {
     NGINX:
       we(intermediate),
     GraphQL: we(advanced, expert),
-    // TODO : TypeGraphQL, TypeORM
+    // TODO : TypeGraphQL, TypeORM, RAML (has logo), Rest (there is some logo?)
     Microservices: we(advanced, expert),
     RegExp:
       we(advanced, expert),
