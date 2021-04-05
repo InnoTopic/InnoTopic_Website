@@ -81,7 +81,7 @@ export class OrganisationsAndProjects {
           'Docker': {},
           'Trello': {},
           'WebStorm': {},
-          // 'R': {}
+          'R Language': {}
         }
       }
     },

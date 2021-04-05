@@ -294,7 +294,7 @@ export class WorkExperienceData {
     // TODO: ApolloServer
   })
   wishList = experience('Wish-list', 'things on my radar; learning bits and pieces when I can', {
-    D: we(),
+    'D Language': we(),
     Julia: we(),
     Rust: we(),
     Go: we(),
