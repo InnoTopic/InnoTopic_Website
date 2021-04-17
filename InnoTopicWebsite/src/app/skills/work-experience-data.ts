@@ -68,7 +68,7 @@ export class WorkExperienceData {
       we(advanced, expert),
     'Google Maps':
       we(advanced, expert),
-    'ag-Grid':
+    'AG Grid':
       we(advanced, expert),
     MongoDB:
       we(advanced, advanced),

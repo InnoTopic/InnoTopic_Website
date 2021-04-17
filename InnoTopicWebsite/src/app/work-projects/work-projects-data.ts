@@ -112,7 +112,7 @@ export class OrganisationsAndProjects {
           'Node.js': {},
           'Express.js': {},
           'Dexie.js': {},
-          'ag-Grid': {},
+          'AG Grid': {},
           'Chart.js': {},
           PWA: {},
           Docker: {},
