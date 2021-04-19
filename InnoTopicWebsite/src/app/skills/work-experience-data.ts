@@ -313,6 +313,7 @@ export class WorkExperienceData {
     Svelte: we(),
     Bazel: we(),
     Blazor: we(),
+    AssemblyScript: we(),
     // TODO: Blazor, .NET Core
   })
 }
