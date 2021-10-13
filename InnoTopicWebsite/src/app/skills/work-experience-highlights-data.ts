@@ -47,6 +47,7 @@ export const highlights = {
     "Figma": {},
     "Git": {},
     "GitHub": {},
+    "ReactiveX": {},
     // "RxJS": {}, -- no icon
   }),
   broad: topics({
