@@ -32,6 +32,34 @@ export class OrganisationsAndProjects {
   constructor() {
   }
 
+  // 'Epic Elite FZE' = org({
+  //   flags: 'es uk',
+  //   time: [2021, 2020],
+  //   linkedInRecommendations: 2,
+  //   locations: `Málaga, on-site and remote`,
+  //   logoFileName: `genengine-simbolo_isotipo-azul.svg`,
+  //   projects: {
+  //     'Genengine Angular App for genetic diagnosis of rare diseases': {
+  //       roles: 'Senior Angular Developer (Consultant)',
+  //       description: 'First I wrote a suite of E2E UI tests in TestCafe from scratch, in order to increase confidence while making changes.' +
+  //         ' Then I made numerous improvements of UI/UX, performance, robustness, architecture, refactors and I prepared the app for release. Working directly with CEO & CTO. Communication in English and Spanish.',
+  //       topicsById: {
+  //         'Mailgun': {},
+  //         // 'TypeScript': {},
+  //         // 'TestCafe': {},
+  //         // 'Angular Material': {},
+  //         // 'Git': {},
+  //         // 'GitLab': {},
+  //         // 'Docker': {},
+  //         // 'Trello': {},
+  //         // 'WebStorm': {},
+  //         // 'R': {}
+  //       }
+  //     }
+  //   },
+  // })
+
+
   'Genengine SL (as Consultant)' = org({
     flags: 'es uk',
     time: [2019, 2020],
@@ -53,7 +81,7 @@ export class OrganisationsAndProjects {
           'Docker': {},
           'Trello': {},
           'WebStorm': {},
-          // 'R': {}
+          'R Language': {}
         }
       }
     },
@@ -84,7 +112,7 @@ export class OrganisationsAndProjects {
           'Node.js': {},
           'Express.js': {},
           'Dexie.js': {},
-          'ag-Grid': {},
+          'AG Grid': {},
           'Chart.js': {},
           PWA: {},
           Docker: {},

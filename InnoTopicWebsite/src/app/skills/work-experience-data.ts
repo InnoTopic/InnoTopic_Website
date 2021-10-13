@@ -68,7 +68,7 @@ export class WorkExperienceData {
       we(advanced, expert),
     'Google Maps':
       we(advanced, expert),
-    'ag-Grid':
+    'AG Grid':
       we(advanced, expert),
     MongoDB:
       we(advanced, advanced),
@@ -127,6 +127,7 @@ export class WorkExperienceData {
     NGINX:
       we(intermediate),
     GraphQL: we(advanced, expert),
+    // TODO : TypeGraphQL, TypeORM, RAML (has logo), Rest (there is some logo?)
     Microservices: we(advanced, expert),
     RegExp:
       we(advanced, expert),
@@ -236,9 +237,9 @@ export class WorkExperienceData {
       we(beginner),
   })
   expandingTo = experience('Expanding to', 'actively learning and ready to take projects', {
-    // Flutter: we(),
     // Dart: we(intermediate, advanced),
     // Angular Dart
+    // TODO: Swagger
     Capacitor: we(intermediate, expert),
     Stencil: we(intermediate, expert),
     Flutter: we(),
@@ -293,7 +294,7 @@ export class WorkExperienceData {
     // TODO: ApolloServer
   })
   wishList = experience('Wish-list', 'things on my radar; learning bits and pieces when I can', {
-    D: we(),
+    'D Language': we(),
     Julia: we(),
     Rust: we(),
     Go: we(),
@@ -312,6 +313,7 @@ export class WorkExperienceData {
     Svelte: we(),
     Bazel: we(),
     Blazor: we(),
+    AssemblyScript: we(),
     // TODO: Blazor, .NET Core
   })
 }
