@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CvPageComponent } from './cv-page/cv-page.component';
 import { EpicEliteComponent } from './jobs/epic-elite/epic-elite.component';
+import { ShirtComponent } from './shirt/shirt.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'jobs/epic-elite',
     component: EpicEliteComponent,
+  },
+  {
+    path: 'shirt',
+    component: ShirtComponent,
   },
   {
     path: '',
