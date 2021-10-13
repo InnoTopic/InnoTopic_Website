@@ -4,8 +4,9 @@ import {
 } from '@angular/core';
 import { getDictionaryValuesAsArray } from '../utils/dictionary-utils';
 import {
-  workExperience,
+  workExperience
 } from './work-experience-data';
+import { highlights } from './work-experience-highlights-data';
 
 @Component({
   selector: 'app-work-experience',
@@ -13,6 +14,8 @@ import {
   styleUrls: ['./work-experience.component.sass']
 })
 export class WorkExperienceComponent implements OnInit {
+
+  highlights = highlights
 
   experience = workExperience
   experiencesByStatusArray

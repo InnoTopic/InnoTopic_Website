@@ -6,57 +6,23 @@
       <app-flags flags="de at pl gb us es es-ct fr lu in"></app-flags>
       <p>cross-platform experience: </p>
       <span>
-<!--        LOGOs-->
-        <app-topic-logo topic="HTML5"></app-topic-logo>
-        <app-topic-logo topic="Ionic"></app-topic-logo>
-        <app-topic-logo topic="Angular"></app-topic-logo>
-        <app-topic-logo topic="Java"></app-topic-logo>
-        <app-topic-logo topic="Android"></app-topic-logo>
-        <app-topic-logo topic="iOS"></app-topic-logo>
-        <app-topic-logo topic="macOS"></app-topic-logo>
-        <app-topic-logo topic="Microsoft Windows"></app-topic-logo>
-        <app-topic-logo topic="Linux"></app-topic-logo>
-<!--        after logos-->
+      <app-topic-logo *ngFor="let topic of highlights.crossPlatform.ids" [topic]="topic"></app-topic-logo>
+
       </span>
     </div>
     <div>
       <p>Modern <strong>Full-Stack Development</strong>, focused on</p>
 
-      <app-topic-tag [showLogo]="true" tId="Angular"></app-topic-tag>
-      <app-topic-tag [showLogo]="true" tId="TypeScript"></app-topic-tag>
-      <app-topic-tag [showLogo]="true" tId="Ionic"></app-topic-tag>
-      <app-topic-tag [showLogo]="true" tId="Node.js"></app-topic-tag>
-      <app-topic-tag [showLogo]="true" tId="Deno"></app-topic-tag>
+      <app-topic-logo *ngFor="let topic of highlights.main.ids" [topic]="topic"></app-topic-logo>
+
       <p>ecosystems, with a strong "utility belt":</p>
       <span>
         <!-- TODO: tooltips -->
-        <app-topic-logo topic="GraphQL"></app-topic-logo>
-        <app-topic-logo topic="MongoDB"></app-topic-logo>
-        <app-topic-logo topic="Firebase"></app-topic-logo>
-        <app-topic-logo topic="PWA"></app-topic-logo>
-        <app-topic-logo topic="D3.js"></app-topic-logo>
-        <app-topic-logo topic="AG Grid"></app-topic-logo>
-        <app-topic-logo topic="Lodash"></app-topic-logo>
-        <app-topic-logo topic="TestCafe"></app-topic-logo>
-        <app-topic-logo topic="Cypress"></app-topic-logo>
-        <app-topic-logo topic="Jest"></app-topic-logo>
-        <app-topic-logo topic="SVG"></app-topic-logo>
+        <app-topic-logo *ngFor="let topic of highlights.utility.ids" [topic]="topic"></app-topic-logo>
       </span>
       <p>ecosystems, with a broad and polyglot general experience:</p>
       <span>
-        <app-topic-logo topic="Kotlin"></app-topic-logo>
-        <app-topic-logo topic="Java"></app-topic-logo>
-        <app-topic-logo topic="Groovy"></app-topic-logo>
-        <app-topic-logo topic="Android"></app-topic-logo>
-        <app-topic-logo topic="Swift"></app-topic-logo>
-        <app-topic-logo topic="C#"></app-topic-logo>
-        <app-topic-logo topic='C++'></app-topic-logo>
-        <app-topic-logo topic='C'></app-topic-logo>
-        <app-topic-logo topic="Ruby"></app-topic-logo>
-        <app-topic-logo topic="Python"></app-topic-logo>
-        <app-topic-logo topic='PHP'></app-topic-logo>
-        <app-topic-logo topic='Perl'></app-topic-logo>
-        <app-topic-logo topic='Bash'></app-topic-logo>
+        <app-topic-logo *ngFor="let topic of highlights.broad.ids" [topic]="topic"></app-topic-logo>
       </span>
     </div>
   </div>
