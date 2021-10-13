@@ -38,7 +38,7 @@ export const highlights = {
     "Firebase": {},
     "PWA": {},
     "D3.js": {},
-    "AG Grid": {},
+    // "AG Grid": {}, // old logo; and trying to conserve horizontal space
     "Lodash": {},
     "TestCafe": {},
     "Cypress": {},
@@ -47,13 +47,12 @@ export const highlights = {
     "Figma": {},
     "Git": {},
     "GitHub": {},
-    "RxJS": {},
-
+    // "RxJS": {}, -- no icon
   }),
   broad: topics({
     "Kotlin": {},
     "Java": {},
-    "Groovy": {},
+    // "Groovy": {},
     "Android": {},
     "Swift": {},
     "C#": {},
@@ -65,4 +64,16 @@ export const highlights = {
     'Perl': {},
     'Bash': {},
   }),
+  personalInterests: topics({
+
+  }),
+  producingContent: topics({
+    // YouTube
+    // medium
+    // dev.to
+    // linkedin learning
+    // udemy
+    // udacity
+    // lynda
+  })
 }

@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" *ngIf="! config.shirtMode">
   <mat-toolbar-row>
     <app-company-logo></app-company-logo>
     &nbsp;
@@ -31,5 +31,5 @@
 
   <router-outlet></router-outlet>
 
-  <app-powered-by></app-powered-by>
+  <app-powered-by *ngIf="! config.shirtMode"></app-powered-by>
 </div>

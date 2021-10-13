@@ -1,5 +1,8 @@
 
-<div style="display: flex; flex-direction: column; justify-content: center; margin: 50px">
+
+<div style="display: flex; flex-direction: column; justify-content: center; margin: 100px">
+
+  <img src="assets/images/InnoTopic-Logo_Alan.svg" height="100" style="margin-bottom: 50px;">
 
   <div class="topics">
     <app-topic-logo [size]="100" *ngFor="let topic of highlights.main.ids" [topic]="topic"></app-topic-logo>
@@ -9,9 +12,17 @@
     <app-topic-logo [size]="50" *ngFor="let topic of highlights.utility.ids" [topic]="topic"></app-topic-logo>
   </div>
 
-  <div class="topics">
+  <div class="topics" style="margin-top: 35px;">
     <app-topic-logo [size]="25" *ngFor="let topic of highlights.broad.ids" [topic]="topic"></app-topic-logo>
   </div>
+
+<!--  <div class="topics">-->
+<!--    <app-topic-logo [size]="50" *ngFor="let topic of highlights.personalInterests.ids" [topic]="topic"></app-topic-logo>-->
+<!--  </div>-->
+
+<!--  <div class="topics">-->
+<!--    <app-topic-logo [size]="50" *ngFor="let topic of highlights.producingContent.ids" [topic]="topic"></app-topic-logo>-->
+<!--  </div>-->
 
 </div>
 
