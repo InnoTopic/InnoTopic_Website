@@ -1,1 +1,17 @@
-<p>shirt works!</p>
+
+<div style="display: flex; flex-direction: column; justify-content: center; margin: 50px">
+
+  <div class="topics">
+    <app-topic-logo [size]="100" *ngFor="let topic of highlights.main.ids" [topic]="topic"></app-topic-logo>
+  </div>
+
+  <div class="topics">
+    <app-topic-logo [size]="50" *ngFor="let topic of highlights.utility.ids" [topic]="topic"></app-topic-logo>
+  </div>
+
+  <div class="topics">
+    <app-topic-logo [size]="25" *ngFor="let topic of highlights.broad.ids" [topic]="topic"></app-topic-logo>
+  </div>
+
+</div>
+

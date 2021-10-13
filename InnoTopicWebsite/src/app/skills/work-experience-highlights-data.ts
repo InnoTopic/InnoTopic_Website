@@ -1,11 +1,12 @@
 import { Topics } from '../TopicFriendsShared/topics-core/topics-data';
+import { MapToTopics } from './work-experience';
 
 //
 // function topics(tDict: [k in keyof Topics]: any) {
 //
 // }
 
-function topics(tDict: any) {
+function topics(tDict: MapToTopics<any>) {
   return {
     ids: Object.keys(tDict)
   }
@@ -43,6 +44,11 @@ export const highlights = {
     "Cypress": {},
     "Jest": {},
     "SVG": {},
+    "Figma": {},
+    "Git": {},
+    "GitHub": {},
+    "RxJS": {},
+
   }),
   broad: topics({
     "Kotlin": {},

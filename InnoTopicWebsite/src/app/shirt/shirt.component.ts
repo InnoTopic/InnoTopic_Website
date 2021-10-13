@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { highlights } from '../skills/work-experience-highlights-data';
 
 @Component({
   selector: 'app-shirt',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shirt.component.sass']
 })
 export class ShirtComponent implements OnInit {
+
+  highlights = highlights
 
   constructor() { }
 

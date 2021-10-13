@@ -21,8 +21,9 @@ export class TopicLogoComponent implements OnInit {
   @Input() public topic: Topic | string;
   public _topic: Topic
   @Input() public url;
-  @Input() public width = defaultIconHeight;
-  @Input() public height = defaultIconHeight;
+  @Input() public size = defaultIconHeight;
+  @Input() public width = undefined;
+  @Input() public height = undefined;
   @Input() public margin = 2;
 
   public styles;
@@ -33,6 +34,9 @@ export class TopicLogoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.width = this.width || this.size
+    this.height = this.height || this.size
+
     if ( typeof this.topic === 'string' ) {
       this.topic = this.topicsService.getTopicById(this.topic)
     }
@@ -49,8 +53,8 @@ export class TopicLogoComponent implements OnInit {
           this.height = defaultIconHeight
         }
       } else {
-        this.width = this.topic.logoTypeWide ? 48 : defaultIconHeight
-        this.height = this.topic.logoTypeWide ? 24 : defaultIconHeight
+        this.width *= this.topic.logoTypeWide ? (48 / defaultIconHeight) : 1
+        this.height *= this.topic.logoTypeWide ? (24 / defaultIconHeight) : 1
       }
     }
     this._topic = this.topic
