@@ -1,3 +1,5 @@
+@import '../../../app-themes.scss'
+
 p, li
   font-variant: small-caps
   font-weight: bold
@@ -27,10 +29,14 @@ p::first-letter
   0%
     background-position: 0% 0%
   50%
-    background-position: 187% 50%
+    background-position: 187% 10%
   0%
     background-position: 0% 0%
 
 
 h2
   text-transform: uppercase
+
+a
+  color: mat-color($light-primary)
+  text-decoration: underline
