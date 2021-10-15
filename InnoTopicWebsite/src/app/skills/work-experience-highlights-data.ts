@@ -13,10 +13,15 @@ function topics(tDict: MapToTopics<any>) {
 }
 
 export const highlights = {
+  // could split e.g. frontend on the left; backend on the right (TypeScript in the middle)
+  // maybe visually split just for website/CV. But could be split in the code and concatenated into single list for Shirt.
+
   main: topics({
     "Angular": {},
-    "TypeScript": {},
+    "Vue.js": {},
+    "React": {},
     "Ionic": {},
+    "TypeScript": {},
     "Node.js": {},
     "Deno": {},
   }),
@@ -33,6 +38,9 @@ export const highlights = {
   }),
   utility: topics({
     "Sass": {},
+    "Web Components": {},
+    "Stencil": {},
+    "Capacitor": {},
     "GraphQL": {},
     "MongoDB": {},
     "Firebase": {},
@@ -49,12 +57,16 @@ export const highlights = {
     "GitHub": {},
     "ReactiveX": {},
     // "RxJS": {}, -- no icon
+    // TODO: Bootstrap, Ng-bootstrap, material, angular-material
+    // TODO: AWS, Google Cloud Platform
   }),
   broad: topics({
     "Kotlin": {},
     "Java": {},
-    // "Groovy": {},
+    "Groovy": {},
+    "Scala": {},
     "Android": {},
+    "Dart": {},
     "Swift": {},
     "C#": {},
     'C++': {},
@@ -64,6 +76,7 @@ export const highlights = {
     'PHP': {},
     'Perl': {},
     'Bash': {},
+    // TODO: Flutter, TensorFlow ?
   }),
   personalInterests: topics({
 
