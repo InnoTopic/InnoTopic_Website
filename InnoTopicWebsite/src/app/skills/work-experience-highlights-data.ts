@@ -1,4 +1,7 @@
-import { Topics } from '../TopicFriendsShared/topics-core/topics-data';
+import {
+  t,
+  Topics,
+} from '../TopicFriendsShared/topics-core/topics-data';
 import { MapToTopics } from './work-experience';
 
 //
@@ -37,34 +40,57 @@ export const highlights = {
     "Linux": {},
   }),
   utility: topics({
+    "Svelte": {},
     "Sass": {},
     "Web Components": {},
     "Stencil": {},
     "Capacitor": {},
+    "Cordova": {},
+    "NativeScript": {},
+    "Flutter": {},
     "GraphQL": {},
     "MongoDB": {},
     "Firebase": {},
     "PWA": {},
     "D3.js": {},
+    "WebGL": {},
+    "glTF": {}, /* FIXME too big */
+    "Blender": {},
+    "Figma": {},
     // "AG Grid": {}, // old logo; and trying to conserve horizontal space
     "Lodash": {},
     "TestCafe": {},
     "Cypress": {},
     "Jest": {},
     "SVG": {},
-    "Figma": {},
+    "WebAssembly": {},
     "Git": {},
     "GitHub": {},
+    "Linux": {},
     "ReactiveX": {},
+    "TensorFlow": {},
+    "Keras": {},
+    "Bitcoin": {},
+    "WebStorm": {},
+    "Visual Studio Code": {},
+    //
     // "RxJS": {}, -- no icon
     // TODO: Bootstrap, Ng-bootstrap, material, angular-material
-    // TODO: AWS, Google Cloud Platform
+    // TODO: AWS, Google Cloud Platform, Azure
+    // todo: lit elements
+    // TODO:
+    // TODO polymer
+    // TODO Elastic / Kibana
+    // TODO: Notion
   }),
   broad: topics({
+    // "JavaScript": {}, /* FIXME es6 bad */
+    "AssemblyScript": {},
     "Kotlin": {},
     "Java": {},
     "Groovy": {},
     "Scala": {},
+    // "Clojure": {}, /* TODO */
     "Android": {},
     "Dart": {},
     "Swift": {},
@@ -72,15 +98,40 @@ export const highlights = {
     'C++': {},
     'C': {},
     "Ruby": {},
+    'Crystal': {},
     "Python": {},
     'PHP': {},
     'Perl': {},
     'Bash': {},
-    // TODO: Flutter, TensorFlow ?
+    'R Language': {},
+    'Rust': {},
+    'Go': {},
+    'D Language': {},
+    'V Language': {},
+    // 'Jetbrains MPS': {},
+    'Julia': {},
+    'Lua': {},
+    // TODO: some functional / fancy languages: Erlang, Haskell, Elixir, Eiffel
+    //  Lisp / Scheme with cool logo
+    // TODO: Flutter?
+    // TODO: check console for 404 errors for missing logos
   }),
   personalInterests: topics({
-
-  }),
+    Volleyball: {},
+    'Interpersonal Networking': {},
+    'Hiking': {},
+    Outdoors: {},
+    Nature: {},
+    'Car trips': {},
+    'Bicycle': {},
+    'Table Tennis': {},
+    Padel: {},
+    Swimming: {},
+    Chess: {},
+    'Business': {},
+    'Psychology': {},
+    // TODO: travel, international? (globe)
+}),
   producingContent: topics({
     // YouTube
     // medium
