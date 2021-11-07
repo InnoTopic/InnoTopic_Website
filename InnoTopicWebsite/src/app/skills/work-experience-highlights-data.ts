@@ -111,9 +111,9 @@ export const highlights = {
     // 'Jetbrains MPS': {},
     'Julia': {},
     'Lua': {},
+    // https://pypl.github.io/PYPL.html
     // TODO: some functional / fancy languages: Erlang, Haskell, Elixir, Eiffel
     //  Lisp / Scheme with cool logo
-    // TODO: Flutter?
     // TODO: check console for 404 errors for missing logos
   }),
   personalInterests: topics({
@@ -130,7 +130,7 @@ export const highlights = {
     Chess: {},
     'Business': {},
     'Psychology': {},
-    // TODO: travel, international? (globe)
+    // TODO: travel, international? (globe), natural languages
 }),
   producingContent: topics({
     // YouTube
