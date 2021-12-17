@@ -45,11 +45,15 @@ export const highlights = {
     "Web Components": {},
     "Stencil": {},
     "Capacitor": {},
-    "Cordova": {},
+    "Cordova": {}, /* NO PhoneGap -- discontinued - https://blog.phonegap.com/update-for-customers-using-phonegap-and-phonegap-build-cc701c77502c ? */
     "NativeScript": {},
     "Flutter": {},
-    "GraphQL": {},
+    "GraphQL": {}, /* TODO: Apollo / Studio */
+    "Swagger": {},
+    /* FIXME: more backend: OpenAPI, Swagger, maybe JSON Schema, websockets, socket.io maybe
+    *   */
     "MongoDB": {},
+    "ElasticSearch": {},
     "Firebase": {},
     "PWA": {},
     "D3.js": {},
@@ -71,6 +75,7 @@ export const highlights = {
     "TensorFlow": {},
     "Keras": {},
     "Bitcoin": {},
+    "Ethereum": {},
     "WebStorm": {},
     "Visual Studio Code": {},
     //
@@ -80,10 +85,13 @@ export const highlights = {
     // todo: lit elements
     // TODO:
     // TODO polymer
-    // TODO Elastic / Kibana
+    // TODO Elastic / Kibana / elastic stack - (ELK ; logstack, beats)
+    // TODO: some lowcode/nocode / BI (business intelligence)
     // TODO: Notion
+    // the thingy which is like DB/SpredSheet
+    // Zapier?
   }),
-  broad: topics({
+  broad: topics({ /* maybe distinguish broad from polyglot? */
     // "JavaScript": {}, /* FIXME es6 bad */
     "AssemblyScript": {},
     "Kotlin": {},
@@ -106,7 +114,7 @@ export const highlights = {
     'R Language': {},
     'Rust': {},
     'Go': {},
-    'D Language': {},
+    'D Language': {} /* FIXME: D logo prints with glitches; FIXME: remove shadow; adapt: https://dlang.org/images/dlogo.svg -- OR BETTER just get the square-bounded logo out of the current file as square is less problemss */,
     'V Language': {},
     // 'Jetbrains MPS': {},
     'Julia': {},
