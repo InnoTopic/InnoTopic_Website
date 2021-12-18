@@ -54,15 +54,17 @@ export class TopicLogoComponent implements OnInit {
         }
       } else {
         this.width *= this.topic.logoTypeWide ? (48 / defaultIconHeight) : 1
-        this.height *= this.topic.logoTypeWide ? (24 / defaultIconHeight) : 1
+        this.height *= this.topic.logoTypeWide ? (16 / defaultIconHeight) : 1
       }
     }
     this._topic = this.topic
     this.styles = {
-      'width.px': this.width, // TODO: try limiting width instead of height
       'height.px': this.height, // better to specify both width and height, coz less layout jumping on loading
       'margin-right.px': this.margin,
       'vertical-align': 'middle'
+    }
+    if ( ! this.topic.logoTypeWide ) {
+      this.styles['width.px'] = this.width // TODO: try limiting width instead of height
     }
     this.changeDetectorRef.markForCheck()
   }

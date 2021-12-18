@@ -1,4 +1,7 @@
-import { Topics } from '../TopicFriendsShared/topics-core/topics-data';
+import {
+  t,
+  Topics,
+} from '../TopicFriendsShared/topics-core/topics-data';
 import { MapToTopics } from './work-experience';
 
 //
@@ -42,9 +45,13 @@ export const highlights = {
     "Web Components": {},
     "Stencil": {},
     "Capacitor": {},
-    "Cordova": {},
+    "Cordova": {}, /* NO PhoneGap -- discontinued - https://blog.phonegap.com/update-for-customers-using-phonegap-and-phonegap-build-cc701c77502c ? */
     "NativeScript": {},
-    "GraphQL": {},
+    "Flutter": {},
+    "GraphQL": {}, /* TODO: Apollo / Studio */
+    "Swagger": {},
+    /* FIXME: more backend: OpenAPI, Swagger, maybe JSON Schema, websockets, socket.io maybe
+    *   */
     "MongoDB": {},
     "Firebase": {},
     "PWA": {},
@@ -67,6 +74,7 @@ export const highlights = {
     "TensorFlow": {},
     "Keras": {},
     "Bitcoin": {},
+    "Ethereum": {},
     "WebStorm": {},
     "Visual Studio Code": {},
     //
@@ -76,17 +84,20 @@ export const highlights = {
     // todo: lit elements
     // TODO:
     // TODO polymer
-    // TODO Elastic / Kibana
+    // TODO Elastic / Kibana / elastic stack - (ELK ; logstack, beats)
+    // TODO: some lowcode/nocode / BI (business intelligence)
     // TODO: Notion
+    // the thingy which is like DB/SpredSheet
+    // Zapier?
   }),
   broad: topics({
-    "JavaScript": {}, /* FIXME es6 bad */
+    // "JavaScript": {}, /* FIXME es6 bad */
     "AssemblyScript": {},
     "Kotlin": {},
     "Java": {},
     "Groovy": {},
     "Scala": {},
-    "Clojure": {}, /* TODO */
+    // "Clojure": {}, /* TODO */
     "Android": {},
     "Dart": {},
     "Swift": {},
@@ -102,19 +113,32 @@ export const highlights = {
     'R Language': {},
     'Rust': {},
     'Go': {},
-    'D Language': {},
+    'D Language': {} /* FIXME: D logo prints with glitches; FIXME: remove shadow; adapt: https://dlang.org/images/dlogo.svg -- OR BETTER just get the square-bounded logo out of the current file as square is less problemss */,
     'V Language': {},
-    'Jetbrains MPS': {},
+    // 'Jetbrains MPS': {},
     'Julia': {},
     'Lua': {},
+    // https://pypl.github.io/PYPL.html
     // TODO: some functional / fancy languages: Erlang, Haskell, Elixir, Eiffel
     //  Lisp / Scheme with cool logo
-    // TODO: Flutter, TensorFlow ?
     // TODO: check console for 404 errors for missing logos
   }),
   personalInterests: topics({
-
-  }),
+    Volleyball: {},
+    'Interpersonal Networking': {},
+    'Hiking': {},
+    Outdoors: {},
+    Nature: {},
+    'Car trips': {},
+    'Bicycle': {},
+    'Table Tennis': {},
+    Padel: {},
+    Swimming: {},
+    Chess: {},
+    'Business': {},
+    'Psychology': {},
+    // TODO: travel, international? (globe), natural languages
+}),
   producingContent: topics({
     // YouTube
     // medium
