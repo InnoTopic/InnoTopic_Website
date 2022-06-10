@@ -1,0 +1,40 @@
+section {
+  margin: 0;
+  height: 100%;
+}
+
+img {
+  background-color: red;
+}
+
+#email {
+  color: gray;
+}
+
+fa {
+  color: #444;
+  text-align: center;
+  display: inline-block;
+}
+
+span {
+  word-break: break-all;
+  margin-left: 5px;
+}
+
+app-user-other-profiles a {
+  word-wrap: break-word;
+}
+
+p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+/*# sourceMappingURL=external-profiles.component.css.map */

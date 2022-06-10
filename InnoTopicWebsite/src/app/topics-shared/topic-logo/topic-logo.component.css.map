@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "topic-logo.component.scss"
+    ],
+    "names": [],
+    "file": "topic-logo.component.css"
+}

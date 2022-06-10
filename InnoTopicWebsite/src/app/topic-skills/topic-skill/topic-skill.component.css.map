@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,sBAAsB,CAAC;EACrB,KAAK,EAAE,IAAI;CAAG",
+    "sources": [
+        "topic-skill.component.sass"
+    ],
+    "names": [],
+    "file": "topic-skill.component.css"
+}

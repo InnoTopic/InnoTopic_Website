@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,CAAC,CAAC;EACA,KAAK,EAAE,MAAM;CAAG",
+    "sources": [
+        "personal-interests.component.sass"
+    ],
+    "names": [],
+    "file": "personal-interests.component.css"
+}

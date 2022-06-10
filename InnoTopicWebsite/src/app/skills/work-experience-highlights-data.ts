@@ -62,7 +62,7 @@ export const highlights = {
     "Docker": {},
     /* TODO: GraalVM */
     "GraphQL": {}, /* TODO: Apollo / Studio */
-    "Swagger": {},
+    // "Swagger": {},
     /* FIXME: more backend: OpenAPI, Swagger, maybe JSON Schema, websockets, socket.io maybe
     *   */
     "MongoDB": {},
@@ -160,7 +160,7 @@ export const highlights = {
     // 'Jetbrains MPS': {},
     'Julia': {},
     'Lua': {},
-    'OCaml': {},
+    // 'OCaml': {},
     // https://pypl.github.io/PYPL.html
     // TODO: some functional / fancy languages: Erlang, Haskell, Elixir, Eiffel, OCaml (Pricemoov Ion)
     // Prolog, Mozart OZ
