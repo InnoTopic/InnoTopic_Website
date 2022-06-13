@@ -48,6 +48,7 @@ export const highlights = {
   */
   utility: topics({
     "Svelte": {}, /* TODO: Marko, Mithril - */
+    /* TODO; SvelteKit svelte-kit */
     /* TODO: Meteor */
     /* TODO: webhooks */
     /* TODO: Zapier - business automation */
@@ -94,6 +95,8 @@ export const highlights = {
     "Keras": {},
     "Bitcoin": {},
     "Ethereum": {},
+    "Web3": {},
+    "web3.js": {},
     "WebStorm": {},
     "Visual Studio Code": {},
     //
@@ -135,6 +138,7 @@ export const highlights = {
     // "JavaScript": {}, /* FIXME es6 bad */
     "AssemblyScript": {},
     "Kotlin": {},
+    'JetBrains MPS': {},
     "Java": {},
     "Groovy": {},
     "Scala": {},
@@ -157,10 +161,10 @@ export const highlights = {
     'Go': {},
     'D Language': {} /* FIXME: D logo prints with glitches; FIXME: remove shadow; adapt: https://dlang.org/images/dlogo.svg -- OR BETTER just get the square-bounded logo out of the current file as square is less problemss */,
     'V Language': {},
-    // 'Jetbrains MPS': {},
     'Julia': {},
     'Lua': {},
     'OCaml': {},
+    Haskell: {},
     // https://pypl.github.io/PYPL.html
     // TODO: some functional / fancy languages: Erlang, Haskell, Elixir, Eiffel, OCaml (Pricemoov Ion)
     // Prolog, Mozart OZ
