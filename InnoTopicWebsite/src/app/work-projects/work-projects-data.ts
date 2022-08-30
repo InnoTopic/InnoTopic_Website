@@ -25,9 +25,9 @@ function org(organisation: Organisation) {
   return organisation
 }
 
-export class OrganisationsAndProjects {
+export class WorkOrganisationsAndProjects {
 
-  static instance = new OrganisationsAndProjects()
+  static instance = new WorkOrganisationsAndProjects()
 
   constructor() {
   }

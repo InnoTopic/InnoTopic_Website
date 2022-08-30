@@ -140,7 +140,7 @@ export const highlights = {
     // the thingy which is like DB/SpreadSheet - Coda
     // TODO: StoryBook - for components / web components ?
   }),
-  /* TODO: broad interestes but more on-topic (where the next-big-think or inspiration can come from:)
+  /* TODO: broad interests but more on-topic (where the next-big-think or inspiration can come from:)
    -- TODO: MobX State tree
    -- from https://storybook.js.org/
    - Mithril
