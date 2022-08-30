@@ -5,9 +5,13 @@ export interface Organisation {
   flags?: string
   locations?: string
   projects: any
-  time: number[]
+  time: (number|string)[]
   logoFileName?: string
   linkedInRecommendations?: number
+}
+
+export class Project {
+
 }
 
 function org(organisation: Organisation) {
@@ -25,6 +29,10 @@ function org(organisation: Organisation) {
   return organisation
 }
 
+function project(p: Project) {
+  return p
+}
+
 export class WorkOrganisationsAndProjectsData {
 
   static instance = new WorkOrganisationsAndProjectsData()
@@ -32,32 +40,63 @@ export class WorkOrganisationsAndProjectsData {
   constructor() {
   }
 
-  // 'Epic Elite FZE' = org({
-  //   flags: 'es uk',
-  //   time: [2021, 2020],
-  //   linkedInRecommendations: 2,
-  //   locations: `Málaga, on-site and remote`,
-  //   logoFileName: `genengine-simbolo_isotipo-azul.svg`,
-  //   projects: {
-  //     'Genengine Angular App for genetic diagnosis of rare diseases': {
-  //       roles: 'Senior Angular Developer (Consultant)',
-  //       description: 'First I wrote a suite of E2E UI tests in TestCafe from scratch, in order to increase confidence while making changes.' +
-  //         ' Then I made numerous improvements of UI/UX, performance, robustness, architecture, refactors and I prepared the app for release. Working directly with CEO & CTO. Communication in English and Spanish.',
-  //       topicsById: {
-  //         'Mailgun': {},
-  //         // 'TypeScript': {},
-  //         // 'TestCafe': {},
-  //         // 'Angular Material': {},
-  //         // 'Git': {},
-  //         // 'GitLab': {},
-  //         // 'Docker': {},
-  //         // 'Trello': {},
-  //         // 'WebStorm': {},
-  //         // 'R': {}
-  //       }
-  //     }
-  //   },
-  // })
+  'Epic Elite FZE' = org({
+    flags: 'es uk ae us',
+    time: ['March 2021', 'September 2022'],
+    linkedInRecommendations: 2,
+    locations: `Málaga, remote, London, Dubai`,
+    logoFileName: `epic-elite-logo.svg`,
+    projects: {
+      'EpicElite Platform': project({
+        roles: 'Lead/Senior Full-Stack Developer & Interviewing and Recruiting (Consultant)',
+        description: 'Recruited and interviewed 5 Developers and a UI/UX/Web/Graphics Designer. Lead a team of 5 Developers. Did code&architecture reviews.' +
+          'Working directly with CEO & Director of Operations. Communication in English, Spanish, Polish.',
+        topicsById: {
+          'Mailgun': {},
+          'Angular': {},
+          'Angular Material': {},
+          'AG Grid': {},
+          'GraphQL': {},
+          'Apollo': {},
+          // 'Apollo Studio': {},
+          'TypeScript': {},
+          'Ionic': {},
+          'Cypress': {},
+          'Jest': {},
+          'React': {},
+          'Bootstrap': {},
+          'React-Bootstrap': {},
+          'Gatsby': {},
+          'Lodash': {},
+          'YouTube': {},
+          'Figma': {},
+          'SVG': {},
+          'MobX': {},
+          "MobX-State-Tree": {},
+          // 'TestCafe': {},
+          'Git': {},
+          'GitHub': {},
+          'Docker': {},
+          'Kubernetes': {},
+          'ElasticSearch': {},
+          'AWS': {},
+          // 'Trello': {},
+          'WebStorm': {},
+          // 'PyCharm': {},
+          'Notion': {},
+          'Slack': {},
+          // 'Datadog': {},
+          'TypeORM': {},
+          'AudioSalad': {},
+          'Python': {},
+          // 'Python Backend Framework???': {},
+          'PHP': {},
+          'Laravel': {},
+          // 'PandaDoc': {},
+        }
+      })
+    },
+  })
 
 
   'Genengine SL (as Consultant)' = org({
@@ -91,12 +130,13 @@ export class WorkOrganisationsAndProjectsData {
     flags: 'pl de at es gb us', /* FIXME */
     time: [2017, 2018],
     logoFileName: 'AIG_logo.svg.png',
+    linkedInRecommendations: 2,
     locations: 'Heilbronn - Germany, Málaga - Spain (remote)',
     projects: {
       'Platform for assessing risk': {
         roles: 'Lead frontend developer and backend developer, teaching Angular',
         description: 'PWA working fully offline and synchronising with server to support multi-million-dollar multi-national functionality. Advanced analytics using charts and grid. Internationalisation. ' +
-          'I developed the Angular + Bootstrap app from scratch and helped with the Node.js + MongoDB backend (conceptually as well as in development).',
+          'I developed the Angular + Bootstrap app from scratch and helped with the Node.js + MongoDB backend (conceptually as well as in development). Communication in English and German.',
         recommendations: '',
         topicsById: {
           Angular: {
