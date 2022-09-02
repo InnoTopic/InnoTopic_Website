@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,OAAO,CAAC;EACN,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,aAAa,EAAE,IAAI;EACnB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,MAAM;EACnB,GAAG,EAAE,SAAS;CAAG",
-    "sources": [
-        "shirt.component.sass"
-    ],
-    "names": [],
-    "file": "shirt.component.css"
-}
