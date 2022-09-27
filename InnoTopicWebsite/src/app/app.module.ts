@@ -14,6 +14,16 @@ import { PoweredByComponent } from './powered-by/powered-by.component';
 import { EpicEliteComponent } from './jobs/epic-elite/epic-elite.component';
 import { ShirtComponent } from './shirt/shirt.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatInputModule } from '@angular/material/input';
+import { MatExpansionModule } from '@angular/material/expansion';
+
+
 
 // var log4js = require('log4js');
 // var logger = log4js.getLogger();
@@ -39,7 +49,17 @@ import { ShirtComponent } from './shirt/shirt.component';
     TopicsSharedModule,
     TopicSkillsModule,
     MatButtonModule,
+
     MatRadioModule,
+    MatSlideToggleModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatExpansionModule
+
   ],
   providers: [
   ],

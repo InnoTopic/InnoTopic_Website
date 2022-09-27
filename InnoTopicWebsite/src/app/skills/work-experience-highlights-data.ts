@@ -116,6 +116,7 @@ export const highlights = {
     "Solidity": {},
     "Web3": {},
     "web3.js": {},
+    "ethers.js": {},
     "Airtable": {},
     "Notion": {},
     "Zapier": {},

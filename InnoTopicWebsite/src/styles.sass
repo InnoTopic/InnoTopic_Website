@@ -17,6 +17,25 @@ body
   &.dark-theme
     background: #404040
     color: white
+    // Bullet point colors darktheme
+    :not(.highlight)
+      a
+        color: #787D86
+    // email bullet
+    #email
+      color: #ABB2BF 
+    fa
+      color: #bf360c
+    // Project skills (dark theme) 
+    .project-skills label
+      color: #ABB2BF 
+
+    .project
+      & > span
+        color: #ABB2BF
+    
+
+
   @media screen and (max-width: $break-medium)
     font-size: 16px !important
   @media screen and (max-width: $break-small)

@@ -1,4 +1,4 @@
-<mat-toolbar color="primary" *ngIf="! config.shirtMode">
+<mat-toolbar color="primary">
   <mat-toolbar-row>
     <app-company-logo></app-company-logo>
     &nbsp;
@@ -6,7 +6,10 @@
 <!--    <button mat-button>Contact</button>-->
 <!--    <button mat-button>People</button>&lt;!&ndash; Link see -> experience &ndash;&gt;-->
 <!--    <button mat-button>Experience</button>-->
-<!--    <button mat-button>Conferences</button> &lt;!&ndash; TODO: list Angular Conferences, with logos, dates &ndash;&gt;-->
+   <!-- <button mat-button>Conferences</button> &lt;!&ndash; TODO: list Angular Conferences, with logos, dates &ndash;&gt; -->
+   <div class="flex-stretch"></div>
+   <mat-slide-toggle [formControl]="toggleControl" style="margin-left:auto">
+   </mat-slide-toggle>
   </mat-toolbar-row>
 </mat-toolbar>
 
