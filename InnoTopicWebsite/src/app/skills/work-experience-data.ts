@@ -19,6 +19,8 @@ export class WorkExperienceData {
   main = experience('Main Experience', 'extensive usage and always honing my skills and learning', {
     Angular:
       we(advanced, expert),
+    React:
+      we(advanced),
     Codelyzer:
       we(advanced, expert),
     Nx:
@@ -26,7 +28,7 @@ export class WorkExperienceData {
     xplat: // nstudio
       we(intermediate, expert),
     WebPack:
-      we(intermediate, expert),
+      we(intermediate, advanced),
     'Chart.js':
       we(advanced),
     'GCP - Google Cloud Platform':
@@ -222,8 +224,6 @@ export class WorkExperienceData {
     Python:
       we(intermediate),
     Docker:
-      we(intermediate),
-    React:
       we(intermediate),
     Gatsby:
       we(),
