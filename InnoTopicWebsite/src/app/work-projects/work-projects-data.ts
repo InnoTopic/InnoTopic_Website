@@ -1,17 +1,20 @@
 // import * as winston from 'winston';
+import { MapToTopics } from '../skills/work-experience';
 import { setIdsFromKeys } from '../utils/dictionary-utils';
 
 export interface Organisation {
   flags?: string
   locations?: string
-  projects: any
+  projects: {[projKey: string]: Project}
   time: (number|string)[]
   logoFileName?: string
   linkedInRecommendations?: number
 }
 
 export class Project {
-
+  roles?: string
+  description?: string
+  topicsById: MapToTopics<{}>
 }
 
 function org(organisation: Organisation) {
@@ -19,9 +22,9 @@ function org(organisation: Organisation) {
   let projects = organisation.projects;
   // console.log('or projects', organisation.projects)
   for (let projectId of Object.getOwnPropertyNames(projects)) {
-    let project = projects[projectId];
+    let currProject = projects[projectId];
     // console.log('processing projectId', projectId, project)
-    const topics = project.topicsById
+    const topics = currProject.topicsById
     // winston.debug('org topics', topics)
     setIdsFromKeys(topics, 'topicId')
   }
@@ -43,7 +46,7 @@ export class WorkOrganisationsAndProjectsData {
   'Epic Elite FZE' = org({
     flags: 'es uk ae us',
     time: ['March 2021', 'September 2022'],
-    linkedInRecommendations: 2,
+    linkedInRecommendations: 3,
     locations: `Málaga, remote, London, Dubai`,
     logoFileName: `epic-elite-logo.svg`,
     projects: {
@@ -53,6 +56,7 @@ export class WorkOrganisationsAndProjectsData {
           'Working directly with CEO & Director of Operations. Communication in English, Spanish, Polish.',
         topicsById: {
           'Mailgun': {},
+          'Terraform': {},
           'Angular': {},
           'Angular Material': {},
           'AG Grid': {},
@@ -89,7 +93,8 @@ export class WorkOrganisationsAndProjectsData {
           'TypeORM': {},
           'AudioSalad': {},
           'Python': {},
-          // 'Python Backend Framework???': {},
+          'Django': {},
+          // TODO: PyCharm
           'PHP': {},
           'Laravel': {},
           // 'PandaDoc': {},
@@ -137,7 +142,7 @@ export class WorkOrganisationsAndProjectsData {
         roles: 'Lead frontend developer and backend developer, teaching Angular',
         description: 'PWA working fully offline and synchronising with server to support multi-million-dollar multi-national functionality. Advanced analytics using charts and grid. Internationalisation. ' +
           'I developed the Angular + Bootstrap app from scratch and helped with the Node.js + MongoDB backend (conceptually as well as in development). Communication in English and German.',
-        recommendations: '',
+        // recommendations: '',
         topicsById: {
           Angular: {
             subTopics: {
@@ -166,6 +171,7 @@ export class WorkOrganisationsAndProjectsData {
       },
       'Customer-facing application for managing insurance plans and customer data': {
         roles: 'Senior Angular & Node.js Developer',
+        description: '' /* FIXME */,
         topicsById: {
           Angular: {},
           Bootstrap: {},
@@ -200,14 +206,29 @@ export class WorkOrganisationsAndProjectsData {
     flags: 'pl us gb es',
     time: [2017],
     projects: {
-      'InnoTopic.com website': {
+      'InnoTopic.com website': project({
         roles: `Founder, Owner, Angular developer`,
         topicsById: {
           'Angular Material': {},
           Angular: {},
           TypeScript: {},
+          Nx: {},
+          Sass: {},
+          WebStorm: {},
+          WebGL: {},
+          Blender: {},
+          glTF: {},
+          'D3.js': {},
+          Git: {},
+          GitHub: {},
+          SVG: {},
+          'Affinity Designer': {},
+          'Figma': {},
+          'Font Awesome': {},
+          'Node.js': {},
+          'Firebase': {},
         }
-      },
+      }),
       'FlexAgenda': {
         roles: 'Founder, Android/Java Developer, Publisher',
         description: 'Android app for time planning (freemium). Reached 100k installs organically; 4.3/5 average rating. I developed the app from scratch in native Android & Java and released many versions based on a lot of user feedback I received. ' +
@@ -256,6 +277,7 @@ export class WorkOrganisationsAndProjectsData {
           Ionic: {},
           Sass: {},
           TypeScript: {},
+          NgRx: {},
           Karma: {},
           Jasmine: {},
           TestCafe: {},
@@ -434,6 +456,7 @@ export class WorkOrganisationsAndProjectsData {
     linkedInRecommendations: 2,
     projects: {
       'Multi-Dimensional-Tool for EuroStat (European Commission)': {
+        roles: 'Java & Swing Senior Developer',
         description: `Development of EuroStat's MDT (Multi-Dimensional Tool) - main tool used for all kinds of statistics in the European Union. Advanced Java Swing UI.`,
         topicsById: {
           Java: {},
@@ -455,7 +478,7 @@ export class WorkOrganisationsAndProjectsData {
     projects: {
       'CoViOb - Communicate via Objects': {
         roles: `Startup Co-Founder, Architect, Java developer`,
-        description: `Won startup competition main prize among ~100 startups. Decentralized database with version control (before Git), real-time threaded communication (before Google Wave)`,
+        description: `Won startup competition main prize among ~100 startups. Decentralized database with version control (before Git became popular), real-time threaded communication (before Google Wave)`,
         topicsById: {
           Java: {},
           'Git': {},
@@ -530,6 +553,7 @@ export class WorkOrganisationsAndProjectsData {
           Linux: {},
           'Customer Support': {},
           'Oracle': {},
+          'Perl': {},
         }
       }
     }
