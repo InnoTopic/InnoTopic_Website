@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CvPageComponent } from './cv-page/cv-page.component';
 import { EpicEliteComponent } from './jobs/epic-elite/epic-elite.component';
 import { ShirtComponent } from './shirt/shirt.component';
+import {TechGraphD3Component} from './cv-page/tech-graph-d3/tech-graph-d3.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'shirt',
     component: ShirtComponent,
+  },
+  {
+    path: 'tech-graph-d3',
+    component: TechGraphD3Component,
   },
   {
     path: '',
