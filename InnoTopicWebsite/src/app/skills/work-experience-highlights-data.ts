@@ -48,9 +48,10 @@ export const highlights = {
   */
   utility: topics({
     "Svelte": {}, /* TODO: Marko, Mithril - */
+    "Nx": {}, /* TODO: Marko, Mithril - */
+    /* TODO; SvelteKit svelte-kit */
     /* TODO: Meteor */
     /* TODO: webhooks */
-    /* TODO: Zapier - business automation */
     /* TODO: netlify */
     "Sass": {},
     "Web Components": {},
@@ -59,17 +60,29 @@ export const highlights = {
     "Cordova": {}, /* NO PhoneGap -- discontinued - https://blog.phonegap.com/update-for-customers-using-phonegap-and-phonegap-build-cc701c77502c ? */
     "NativeScript": {},
     "Flutter": {},
+    "Redux": {},
+    "Redux Toolkit": {},
+    "MobX": {}, // TODO FIXME MobX-State-Tree https://github.com/mobxjs/mobx-state-tree/blob/b6c1c9b29d7bd7525ac6588f8f67f6c13eb17b2b/website/static/img/mobx-state-tree-logo.svg
+    "MobX-State-Tree": {}, // TODO FIXME MobX-State-Tree https://github.com/mobxjs/mobx-state-tree/blob/b6c1c9b29d7bd7525ac6588f8f67f6c13eb17b2b/website/static/img/mobx-state-tree-logo.svg
+    // https://github.com/simple-icons/simple-icons/issues/4352
+    "Terraform": {},
+    // TODO: smth like monitoring like dynatrace
     "Docker": {},
-    /* TODO: GraalVM */
-    "GraphQL": {}, /* TODO: Apollo / Studio */
-    // "Swagger": {},
-    /* FIXME: more backend: OpenAPI, Swagger, maybe JSON Schema, websockets, socket.io maybe
+    "GraalVM": {},
+    /* TODO: Spring Framework */
+    "GraphQL": {},
+    "Apollo": {}, /* TODO Apollo Studio? */
+    "Swagger": {},
+    /* FIXME: more backend: OpenAPI, maybe JSON Schema, websockets, socket.io maybe
     *   */
-    "MongoDB": {},
+    "MongoDB": {}, /* TODO: Prisma */
+    "AWS": {},
+    "Microsoft Azure": {},
+    // TODO FIXME Google Cloud
+    "Firebase": {},
     "ElasticSearch": {}, /* TODO: Kibana, Beats, LogStash */
     /* TODO: Smth like PowerBI, Tableau ? */
-    "Firebase": {},
-    /* TODO: Docker (kubernetes?) */
+    /* TODO: (kubernetes?) */
     "PWA": {},
     "D3.js": {},
     "WebGL": {},
@@ -78,14 +91,20 @@ export const highlights = {
     "Figma": {},
     // "AG Grid": {}, // old logo; and trying to conserve horizontal space
     "Lodash": {},
+    'NestJS': {},
+    "Gatsby": {},
+    "Next.js": {},
+    "Storybook": {},
     "TestCafe": {},
     "Cypress": {},
     "Jest": {},
     "SVG": {},
+    "Bootstrap": {},
+    "Material Design": {},
     "WebAssembly": {},
     "Git": {},
     "GitHub": {},
-    /* TODO: GitLab */
+    "GitLab": {},
     /* TODO: smth like Jira / Atlassian */
     /* TODO: BitBucket ? */
     "Linux": {},
@@ -94,13 +113,24 @@ export const highlights = {
     "Keras": {},
     "Bitcoin": {},
     "Ethereum": {},
+    "Solidity": {},
+    "Web3": {},
+    "web3.js": {},
+    "ethers.js": {},
+    "Airtable": {},
+    "Notion": {},
+    "Zapier": {},
+    // TODO "Coda": {},
     "WebStorm": {},
     "Visual Studio Code": {},
+    "YouTube": {},
+    "LinkedIn": {},
+    "Meetup": {},
     //
     // "RxJS": {}, -- no icon (can be ReactiveX)
     // RxDB?
-    // TODO: Bootstrap, Ng-bootstrap, material, angular-material
-    // TODO: AWS, Google Cloud Platform, Azure
+    // TODO: , Ng-bootstrap, material, angular-material
+    // TODO: , Google Cloud Platform, Azure
     // todo: lit elements
     // TODO:
     // TODO polymer
@@ -108,12 +138,11 @@ export const highlights = {
     // TODO: some lowcode/nocode / BI (business intelligence)
     // TODO: smthlike Ragic?
     // Smth like WebFlow / website designer tools
-    // TODO: Notion
-    // the thingy which is like DB/SpreadSheet - Coda / Airtable
-    // Zapier?
+    // the thingy which is like DB/SpreadSheet - Coda
     // TODO: StoryBook - for components / web components ?
   }),
-  /* TODO: broad interestes but more on-topic (where the next-big-think or inspiration can come from:)
+  /* TODO: broad interests but more on-topic (where the next-big-think or inspiration can come from:)
+   -- TODO: MobX State tree
    -- from https://storybook.js.org/
    - Mithril
    - Riot
@@ -126,7 +155,6 @@ export const highlights = {
    NuxtJS ? (Vue, inspired by Next.js) - https://www.npmjs.com/package/nuxt - https://github.com/nuxt/framework TypeScript
    Nest.js - and/or other popular TypeScript Node.js framework
    Next.js - React framework; (Vercel) or other popular - 80k stars! - https://github.com/vercel/next.js/ - 2M/week - https://www.npmjs.com/package/next
-   Gatsby
    TODO some DevOps, like Terraform or other popular / rising
 
   *  */
@@ -135,6 +163,7 @@ export const highlights = {
     // "JavaScript": {}, /* FIXME es6 bad */
     "AssemblyScript": {},
     "Kotlin": {},
+    'JetBrains MPS': {},
     "Java": {},
     "Groovy": {},
     "Scala": {},
@@ -143,7 +172,9 @@ export const highlights = {
     "Dart": {},
     "Swift": {},
     /* Maybe .NET / Core */
+    ".NET": {},
     "C#": {},
+    "Blazor": {},
     'C++': {},
     'C': {},
     "Ruby": {},
@@ -157,10 +188,16 @@ export const highlights = {
     'Go': {},
     'D Language': {} /* FIXME: D logo prints with glitches; FIXME: remove shadow; adapt: https://dlang.org/images/dlogo.svg -- OR BETTER just get the square-bounded logo out of the current file as square is less problemss */,
     'V Language': {},
-    // 'Jetbrains MPS': {},
     'Julia': {},
     'Lua': {},
-    // 'OCaml': {},
+    'Eiffel': {},
+    'Erlang': {},
+    'Elixir': {},
+    Haskell: {},
+    'Lisp': {},
+    'OCaml': {},
+    'Elm': {},
+    'Clojure': {},
     // https://pypl.github.io/PYPL.html
     // TODO: some functional / fancy languages: Erlang, Haskell, Elixir, Eiffel, OCaml (Pricemoov Ion)
     // Prolog, Mozart OZ
@@ -179,17 +216,22 @@ export const highlights = {
     'Table Tennis': {},
     Padel: {},
     Swimming: {},
+    Guitar: {},
+    ASG: {},
     Chess: {},
+    'Triskelion': {},
+    'Wikipedia': {},
     'Business': {},
     'Psychology': {},
     // TODO: travel, international? (globe), natural languages
     /* TODO: Wikipedia (learning / curiosity) */
     /* TODO: gym (weights icon) */
-    /* Audible / Blinkist - audiobooks */
+    /* Audible / Blinkist - audiobooks / linkedin learning */
     /* TODO: maybe guitar, asg */
 }),
   producingContent: topics({
     // YouTube
+    // TODO meetup
     // medium
     // dev.to
     // linkedin learning

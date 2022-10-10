@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { OrganisationsAndProjects } from '../work-projects-data';
+import { WorkOrganisationsAndProjectsData } from '../work-projects-data';
 
 @Component({
   selector: 'app-work-projects-section',
@@ -8,7 +8,7 @@ import { OrganisationsAndProjects } from '../work-projects-data';
 })
 export class WorkProjectsSectionComponent implements OnInit {
 
-  organisationsAndProjects = OrganisationsAndProjects.instance
+  organisationsAndProjects = WorkOrganisationsAndProjectsData.instance
 
   constructor() { }
 
