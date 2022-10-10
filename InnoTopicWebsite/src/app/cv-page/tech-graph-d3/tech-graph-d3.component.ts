@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 //import * as d3 from "d3";
 declare const d3: any;
-
 @Component({
   selector: 'app-tech-graph-d3',
   templateUrl: './tech-graph-d3.component.html',
-  styleUrls: ['./tech-graph-d3.component.sass']
+  styleUrls: ['./tech-graph-d3.component.sass'],
+  encapsulation: ViewEncapsulation.None
 })
 export class TechGraphD3Component implements OnInit {
 
