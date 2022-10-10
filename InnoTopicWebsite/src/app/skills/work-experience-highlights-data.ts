@@ -61,9 +61,9 @@ export const highlights = {
     "NativeScript": {},
     "Flutter": {},
     "Redux": {},
-    "Redux Toolkit": {},
+    //"Redux Toolkit": {},
     "MobX": {}, // TODO FIXME MobX-State-Tree https://github.com/mobxjs/mobx-state-tree/blob/b6c1c9b29d7bd7525ac6588f8f67f6c13eb17b2b/website/static/img/mobx-state-tree-logo.svg
-    "MobX-State-Tree": {}, // TODO FIXME MobX-State-Tree https://github.com/mobxjs/mobx-state-tree/blob/b6c1c9b29d7bd7525ac6588f8f67f6c13eb17b2b/website/static/img/mobx-state-tree-logo.svg
+    //"MobX-State-Tree": {}, // TODO FIXME MobX-State-Tree https://github.com/mobxjs/mobx-state-tree/blob/b6c1c9b29d7bd7525ac6588f8f67f6c13eb17b2b/website/static/img/mobx-state-tree-logo.svg
     // https://github.com/simple-icons/simple-icons/issues/4352
     "Terraform": {},
     // TODO: smth like monitoring like dynatrace
@@ -116,7 +116,7 @@ export const highlights = {
     "Solidity": {},
     "Web3": {},
     "web3.js": {},
-    "ethers.js": {},
+    //"ethers.js": {},
     "Airtable": {},
     "Notion": {},
     "Zapier": {},
@@ -190,8 +190,8 @@ export const highlights = {
     'V Language': {},
     'Julia': {},
     'Lua': {},
-    'Eiffel': {},
-    'Erlang': {},
+    //'Eiffel': {},
+    //'Erlang': {},
     'Elixir': {},
     Haskell: {},
     'Lisp': {},
@@ -216,7 +216,7 @@ export const highlights = {
     'Table Tennis': {},
     Padel: {},
     Swimming: {},
-    Guitar: {},
+    //Guitar: {},
     ASG: {},
     Chess: {},
     'Triskelion': {},
