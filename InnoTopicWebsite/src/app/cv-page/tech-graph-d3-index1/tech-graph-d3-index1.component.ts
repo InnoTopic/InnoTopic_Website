@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation} from '@angular/core';
 declare const d3: any;
+declare const $: any;
 
 @Component({
   selector: 'app-tech-graph-d3-index1',
@@ -1127,7 +1128,7 @@ var nodes = {
     Selendroid: {id: Selendroid},
     JCIP: {id: JCIP},
     Gerrit: {id: Gerrit},
-    Lua: {id: Lua},
+    // Lua: {id: Lua},
     SASS: {id: "SASS"},
     LESS: {id: "LESS"},
     // TODO: RxJava
@@ -1369,7 +1370,7 @@ perNodeMainGroup.append("foreignObject")
                     bodyText + "</p></div>";
         });
 
-function unHighlightHover(d) {
+function unHighlightHover(d?) {
     $('.techCircleHover').removeClass("techCircleHover", false);
     d3.select(".techCircleHover").classed("techCircleHover", false);
 }
