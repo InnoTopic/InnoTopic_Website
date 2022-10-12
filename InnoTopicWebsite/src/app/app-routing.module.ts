@@ -25,9 +25,6 @@ const routes: Routes = [
     pathMatch: 'full',
     //   canActivate: [AuthGuard]
   },
-  { path: '**', redirectTo: '' /* FIXME: does not work? */ },
-
-
 
   // Experimental routes
   {
@@ -38,6 +35,8 @@ const routes: Routes = [
     path: 'tech-graph-d3-index1',
     component: TechGraphD3Index1Component,
   },
+
+  { path: '**', redirectTo: 'karol-depka' /* FIXME: does not work? */ },
 
 ];
 
