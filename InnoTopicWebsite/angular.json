@@ -10,8 +10,7 @@
       "prefix": "app",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "sass",
-          "strict": false
+          "style": "sass"
         }
       },
       "architect": {
