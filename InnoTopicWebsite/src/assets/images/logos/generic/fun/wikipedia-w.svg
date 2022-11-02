@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128px" height="128px" viewBox="0 0 128 128" version="1.1">
+	<metadata>
+		<rdf:RDF>
+			<dc:Image>
+				<dc:format>image/svg+xml</dc:format>
+				<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+				<dc:title>
+					<rdf:Bag>
+						<rdf:li lang="en">Wikipedia's W</rdf:li>
+						<rdf:li lang="es">W de Wikipédia</rdf:li>
+					</rdf:Bag>
+				</dc:title>
+				<dc:description>
+					<rdf:Bag>
+						<rdf:li lang="en">The official Wikipedia favicon</rdf:li>
+						<rdf:li lang="es">El favicono oficial de Wikipédia</rdf:li>
+					</rdf:Bag>
+				</dc:description>
+				<dc:creator>
+					<rdf:Bag>
+						<rdf:li lang="en">
+							<dc:title>Jonathan Hoefler</dc:title>
+							<dc:description>The "W" originates from the Hoefler Text typeface by Jonathan Hoefler.</dc:description>
+						</rdf:li>
+						<rdf:li lang="en">
+							<dc:title>STyx</dc:title>
+							<dc:description>SVG document originally created by Wikimedia user STyx and uploaded on 25 June 2007</dc:description>
+							<dc:date>2007-06-26</dc:date>
+						</rdf:li>
+					</rdf:Bag>
+				</dc:creator>
+				<dc:subject>
+					<rdf:Bag>
+						<rdf:li>Wikipedia</rdf:li>
+						<rdf:li>favicon</rdf:li>
+					</rdf:Bag>
+				</dc:subject>
+				<dc:rights>
+					<rdf:Bag>
+						<dc:description>This work is ineligible for copyright and therefore in the public domain because it consists entirely of information that is common property and contains no original authorship.</dc:description>
+						<dc:description>™ Wikimedia Foundation, Inc. This file is (or includes) one of the official logos or designs used by the Wikimedia Foundation or by one of its projects. Use of the Wikimedia logos and trademarks is subject to the Wikimedia trademark policy and visual identity guidelines, and may require permission.</dc:description>
+					</rdf:Bag>
+				</dc:rights>
+				<dc:publisher>
+					<cc:Agent>
+						<dc:title>Wikimedia Commons</dc:title>
+					</cc:Agent>
+				</dc:publisher>
+			</dc:Image>
+		</rdf:RDF>
+	</metadata>
+	<use id="V (Left)" x="3.02" y="23.909" xlink:href="#V"/>
+	<use id="V (Right)" x="38.265" y="23.909" xlink:href="#V"/>
+	<defs>
+		<path fill="currentColor" id="V" d="M93.849,0l0,2.139c-2.822,0.501 -4.957,1.388 -6.407,2.659c-2.077,1.889 -4.525,4.779 -6.132,8.672l-32.685,66.712l-2.175,0l-32.813,-67.579c-1.528,-3.469 -3.606,-5.589 -4.233,-6.359c-0.979,-1.195 -2.184,-2.13 -3.614,-2.804c-1.431,-0.675 -3.361,-1.108 -5.79,-1.301l0,-2.139l31.928,0l-0,2.139c-3.683,0.347 -5.439,0.964 -6.537,1.85c-1.097,0.886 -1.645,2.023 -1.645,3.411c-0,1.927 0.901,4.933 2.703,9.018l24.233,45.959l23.692,-45.381c1.842,-4.47 3.37,-7.573 3.37,-9.307c0,-1.118 -0.568,-2.187 -1.705,-3.209c-1.136,-1.021 -2.422,-1.744 -5.125,-2.168c-0.196,-0.038 -0.529,-0.096 -1,-0.173l0,-2.139l23.935,0Z"/>
+	</defs>
+</svg>
