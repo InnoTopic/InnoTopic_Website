@@ -2,6 +2,23 @@ import { Component, OnInit, ViewEncapsulation} from '@angular/core';
 declare const d3: any;
 declare const $: any;
 
+const preset1 = {
+  // forceLinkStrength: 3,
+  forceLinkStrength: 0.1,
+  // forceManyBodyStrength: -1000,
+  forceManyBodyStrength: -50,
+}
+
+const preset = {
+  // forceLinkStrength: 3,
+  forceLinkStrength: 1,
+  // forceManyBodyStrength: -1000,
+  forceManyBodyStrength: -200,
+}
+
+// TODO: try d3.forceRadial(radius[, x][, y])
+
+
 @Component({
   selector: 'app-tech-graph-d3-index1',
   templateUrl: './tech-graph-d3-index1.component.html',
@@ -13,9 +30,9 @@ export class TechGraphD3Index1Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
-
-
+    fetch('../../../assets/images/logos-l/logos/stencil.svg').then(x => {
+      console.log('svg fetched', x.text())
+    })
     var svgRootElement = d3.select("#tech-graph-d3-index1"),
       width = +svgRootElement.attr("width"),
       height = +svgRootElement.attr("height");
@@ -23,9 +40,9 @@ export class TechGraphD3Index1Component implements OnInit {
     var svg = svgRootElement.append("g"); /* actually a <g>, to fix transform not working in <svg> on chrome:
         http://stackoverflow.com/questions/27283610/d3-workaround-for-svg-transform-in-chrome */
 
-    svgRootElement.call(d3.zoom().on("zoom", function () {
-      svg.attr("transform", d3.event.transform)
-    }));
+    // svgRootElement.call(d3.zoom().on("zoom", function () {
+    //   svg.attr("transform", d3.event.transform)
+    // }));
 
 //var color = d3.scaleOrdinal(d3.schemeCategory20);
     var color = d3.rgb(230,230,230, 128);
@@ -33,15 +50,15 @@ export class TechGraphD3Index1Component implements OnInit {
     /* Base Example:
        Force-Directed Graph: https://bl.ocks.org/mbostock/4062045 */
     var simulation = d3.forceSimulation()
-      //  .force("gravity", 3)
+       // .force("gravity", 3)
       .force("link",
         d3.forceLink().id(function(d) { return d.id; })
           .strength(function(d) {
-            return 3;
+            return preset.forceLinkStrength;
 //                      return 1 / Math.min(count(link.source), count(link.target));
 //                      return (typeof d.strengthMul === "undefined") ? 3 : d.strengthMul
           }))
-      .force("charge", d3.forceManyBody().strength(-1000))
+      .force("charge", d3.forceManyBody().strength(preset.forceManyBodyStrength))
       .force("center", d3.forceCenter(width / 2, height / 2));
 
 //simulation.force("charge", function() {
@@ -81,6 +98,8 @@ export class TechGraphD3Index1Component implements OnInit {
     const FakeRuby = "FakeRuby";
     const Linux = "Linux";
     const Ionic = "Ionic";
+    const Stencil = "Stencil";
+    const WebComponents = "WebComponents";
     const D3 = "D3";
     const Cordova = "Cordova";
     const Firebase = "Firebase";
@@ -245,7 +264,10 @@ export class TechGraphD3Index1Component implements OnInit {
           "        <path d=\"M127.889582,155.854066 L127.889582,155.932132 L205.032791,155.932132 L205.673495,148.753582 L207.128615,132.562989 L207.892396,123.994725 L127.889582,123.994725 L127.889582,155.854066 L127.889582,155.854066 Z\" fill=\"#FFFFFF\"></path>\n" +
           "    </g>\n" +
           "</svg>",
-        sizeMult: 1.3
+        sizeMult: 1.3,
+        // x: -1000,
+        fx: width / 2,
+        fy: height / 2,
       },
       SVG: {
         "id": SVG,
@@ -1121,6 +1143,8 @@ export class TechGraphD3Index1Component implements OnInit {
       Inkscape: {id: Inkscape},
       Illustrator: {id: Illustrator},
       AffinityDesigner: {id: AffinityDesigner, html: "Affinity<br/>Designer"},
+      Stencil: {id: Stencil, html: "Stencil"},
+      WebComponents: {id: WebComponents, html: "Web<br/>Components"},
       Lua: {id: Lua},
       Grinder: {id: Grinder},
       XML: {id: XML},
@@ -1221,10 +1245,10 @@ export class TechGraphD3Index1Component implements OnInit {
     ];
 
     var nodesWebOnly = [
-      nodes.Angular2,
       nodes.Cordova,
       nodes.HTML5,
       nodes.JavaScript,
+      nodes.Angular2,
       nodes.Ionic,
       nodes.TypeScript,
       nodes.SVG,
@@ -1238,12 +1262,16 @@ export class TechGraphD3Index1Component implements OnInit {
       nodes.LESS,
       nodes.NodeJS,
       nodes.NPM,
+      nodes.Stencil,
+      nodes.WebComponents,
     ];
     /* ToDo: Bower, Grunt, JSLint */
 
     var linksWebOnly = [
       {source: HTML5, target: Angular2},
       {source: Ionic, target: Angular2},
+      {source: Ionic, target: 'Stencil'},
+      {source: 'WebComponents', target: 'Stencil'},
       {source: HTML5, target: Angular2},
       {source: D3, target: SVG},
       {source: JavaScript, target: HTML5},
@@ -1267,6 +1295,7 @@ export class TechGraphD3Index1Component implements OnInit {
 
     var nodesArray = nodesKeys.map(function(v) { return nodes[v]; });
 
+    // initial xy: https://observablehq.com/@d3/force-layout-phyllotaxis
 
 
     var graph = { nodes: nodesWebOnly, links: linksWebOnly  };
