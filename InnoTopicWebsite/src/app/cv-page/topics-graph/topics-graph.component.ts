@@ -69,8 +69,13 @@ export class TopicsGraphComponent implements OnInit {
                 'Vue': {},
                 'React': { /*...weak*/},
               },
-            }
-          }
+            },
+            svelte: {},
+            qwik: {},
+            SolidJS: {},
+            NodeJS: {},
+            Deno: {},
+          },
         },
         css: {
           connections: {
@@ -464,14 +469,14 @@ export class TopicsGraphComponent implements OnInit {
 
   private generateLinks(connections: GraphConnections) {
     Object.keys(connections).map(sourceId => {
-      // const child = connections[sourceId]
-      // const childConnections = child.connections
-      // if ( childConnections ) {
-      //   this.generateLinks(childConnections)
-      // }
+      const child = connections[sourceId]
+      const childConnections = child.connections
+      if ( childConnections ) {
+        this.generateLinks(childConnections)
+      }
 
       // const nestedConnections = child.connections
-      const nestedConnections = connections[sourceId].connections
+      const nestedConnections = connections[sourceId].connections || {}
       const links: LinkByIds[] = Object.keys(nestedConnections).map(
         key => {
           const d3Link: LinkByIds = {
