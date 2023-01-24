@@ -5,6 +5,7 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import { topics } from '../../TopicFriendsShared/topics-core/topics-data';
+import { errorAlert } from '../../utils/utils';
 
 declare const d3: any;
 declare const $: any;
@@ -58,28 +59,28 @@ export class TopicsGraphComponent implements OnInit {
 
   @Input()
   connections: GraphConnections = {
-    html: {
+    HTML5: {
       connections: {
         JavaScript: {
           connections: {
-            ionic: {
+            Ionic: {
               connections: {
                 'Angular': {},
                 'TypeScript': { /*type: 'writtenIn'*/ /* dependsOn / uses */},
-                'Vue': {},
+                'Vue.js': {},
                 'React': { /*...weak*/},
               },
             },
-            svelte: {},
-            qwik: {},
+            Svelte: {},
+            Qwik: {},
             SolidJS: {},
-            NodeJS: {},
+            'Node.js': {},
             Deno: {},
           },
         },
-        css: {
+        CSS3: {
           connections: {
-            sass: {},
+            Sass: {},
             Stylus: {},
             Less: {},
           }
@@ -98,12 +99,19 @@ export class TopicsGraphComponent implements OnInit {
     this.generateNodes(this.connections)
     console.log('d3Nodes', this.d3Nodes)
     this.generateLinks(this.connections)
-    this.fetchIcons()
-    this.initD3Graph()
+    this.fetchIcons() // this inits graph when finished
   }
 
   private async fetchIcons() {
-    const topicNodes = [topics.Svelte, topics['Vue.js'], topics.React]
+    // const topicNodes = [topics.Svelte, topics['Vue.js'], topics.React]
+    const topicNodes = this.d3Nodes.map(d3Node => {
+      let topicId = d3Node.id;
+      const topic = topics[topicId]
+      if ( ! topic ) {
+        console.error('No topic for graph node id:', topicId)
+      }
+      return topic
+    })
 
     let logosPromises = topicNodes.map(topic => {
       console.log(`topic`, topic)
@@ -120,6 +128,8 @@ export class TopicsGraphComponent implements OnInit {
 
     console.log(`topic logos`, topicLogosResponses)
     console.log(`topic logos topicLogosTexts`, topicLogosTexts)
+
+    this.initD3Graph()
 
 
     // fetch('../../../assets/images/logos-l/logos/stencil.svg').then(x => {
@@ -204,26 +214,15 @@ export class TopicsGraphComponent implements OnInit {
 
     // const linksWebOnly = [
     //   {source: HTML5, target: Angular2},
-    //   {source: Ionic, target: Angular2},
-    //   {source: Ionic, target: Vue},
-    //   {source: Ionic, target: 'Stencil'},
     //   {source: 'WebComponents', target: 'Stencil'},
     //   {source: HTML5, target: Angular2},
     //   {source: D3, target: SVG},
-    //   {source: JavaScript, target: HTML5},
-    //   {source: JavaScript, target: Vue},
-    //   {source: JavaScript, target: TypeScript},
-    //   {source: JavaScript, target: jQuery},
-    //   {source: Ionic, target: Cordova},
-    //   {source: SVG, target: Inkscape},
-    //   {source: SVG, target: Illustrator},
     //   {source: SVG, target: AffinityDesigner},
     //   {source: HTML5, target: CSS, thick: 10},
     //   {source: nodes.SASS.id, target: CSS},
     //   {source: nodes.LESS.id, target: CSS},
     //   {source: nodes.NodeJS.id, target: JavaScript},
     //   {source: nodes.NodeJS.id, target: nodes.NPM.id},
-    //   {source: Angular2, target: TypeScript},
     //   {source: jQuery, target: nodes.HTML5.id},
     //   {source: SVG, target: HTML5, thick: 10, distance: 1.5},
     // ];
@@ -435,7 +434,7 @@ export class TopicsGraphComponent implements OnInit {
 
   }
 
-  private generateNodes(connections: any) {
+  private generateNodes(connections: GraphConnections) {
     // const nodesSet = new Set(GraphNodeId)
     const nodes = []
     nodes.push(... Object.keys(connections).map(key => {
