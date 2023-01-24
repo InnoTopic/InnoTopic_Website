@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation} from '@angular/core';
+import { topics } from '../../TopicFriendsShared/topics-core/topics-data';
 declare const d3: any;
 declare const $: any;
 
@@ -30,26 +31,23 @@ export class TechGraphD3Index1Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    fetch('../../../assets/images/logos-l/logos/stencil.svg').then(x => {
-      console.log('svg fetched', x.text())
-    })
-    var svgRootElement = d3.select("#tech-graph-d3-index1"),
+    const svgRootElement = d3.select("#tech-graph-d3-index1"),
       width = +svgRootElement.attr("width"),
       height = +svgRootElement.attr("height");
 
-    var svg = svgRootElement.append("g"); /* actually a <g>, to fix transform not working in <svg> on chrome:
+    const svg = svgRootElement.append("g"); /* actually a <g>, to fix transform not working in <svg> on chrome:
         http://stackoverflow.com/questions/27283610/d3-workaround-for-svg-transform-in-chrome */
 
     // svgRootElement.call(d3.zoom().on("zoom", function () {
     //   svg.attr("transform", d3.event.transform)
     // }));
 
-//var color = d3.scaleOrdinal(d3.schemeCategory20);
-    var color = d3.rgb(230,230,230, 128);
+    //var color = d3.scaleOrdinal(d3.schemeCategory20);
+    const color = d3.rgb(230, 230, 230, 128);
 
     /* Base Example:
        Force-Directed Graph: https://bl.ocks.org/mbostock/4062045 */
-    var simulation = d3.forceSimulation()
+    const simulation = d3.forceSimulation()
        // .force("gravity", 3)
       .force("link",
         d3.forceLink().id(function(d) { return d.id; })
@@ -67,7 +65,7 @@ export class TechGraphD3Index1Component implements OnInit {
 //        })
 
 
-    const bigSize = 1.76, midSize = 1.25;
+    const bigSize = 1.76, midSize = 1.25, smallSize = 0.7, verySmallSize = 0.35;
 
     const Kotlin = "Kotlin";
     const Java = "Java";
@@ -75,6 +73,7 @@ export class TechGraphD3Index1Component implements OnInit {
     const HTML5 = "HTML5";
     const TypeScript = "TypeScript";
     const Angular2 = "Angular2";
+    const Vue = "Vue";
     const JavaScript = "JavaScript";
     const CalabashAndroid = "CalabashAndroid";
     const jQuery = "jQuery";
@@ -104,7 +103,7 @@ export class TechGraphD3Index1Component implements OnInit {
     const Cordova = "Cordova";
     const Firebase = "Firebase";
     const CSS = "CSS";
-    var nodes = {
+    const nodes = {
       Java: {
         "id": Java,
         sizeMult: bigSize,
@@ -518,7 +517,8 @@ export class TechGraphD3Index1Component implements OnInit {
           "    <g>\n" +
           "        <path d=\"M232.727273,244.363636 L191.272727,244.363636 L194.181818,209.454545 L173.818182,209.454545 L170.909091,244.363636 L85.0909091,244.363636 L82.1818182,209.454545 L61.8181818,209.454545 L64.7272727,244.363636 L23.2727273,244.363636 L0,93.0909091 L58.1818182,0 L197.818182,0 L256,93.0909091 L232.727273,244.363636 Z M186.181818,46.5454545 L148.778909,46.5454545 L151.272727,64 L104.727273,64 L107.221091,46.5454545 L69.8181818,46.5454545 L46.5454545,93.0909091 L58.1818182,186.181818 L197.818182,186.181818 L209.454545,93.0909091 L186.181818,46.5454545 Z M165.818182,155.287273 C162.605091,155.287273 160,145.597091 160,133.643636 C160,121.690182 162.605091,112 165.818182,112 C169.031273,112 171.636364,121.690182 171.636364,133.643636 C171.636364,145.597091 169.031273,155.287273 165.818182,155.287273 Z M92.3636364,157.090909 C89.1505455,157.090909 86.5454545,147.400727 86.5454545,135.447273 C86.5454545,123.493818 89.1505455,113.803636 92.3636364,113.803636 C95.5767273,113.803636 98.1818182,123.493818 98.1818182,135.447273 C98.1818182,147.400727 95.5767273,157.090909 92.3636364,157.090909 Z\" fill=\"#444444\"></path>\n" +
           "    </g>\n" +
-          "</svg>\n"
+          "</svg>\n",
+        sizeMult: verySmallSize,
       },
       iOS: {
         "id": "iOS",
@@ -671,6 +671,17 @@ export class TechGraphD3Index1Component implements OnInit {
           "\t\t<path d=\"M126.107393,32.27393 L126.107393,32.27393 L47.7136187,206.692607 L76.9992218,206.194553 L92.7377432,166.848249 L126.207004,166.848249 L126.306615,166.848249 L163.063035,166.848249 L180.29572,206.692607 L208.286381,207.190661 L126.107393,32.27393 L126.107393,32.27393 Z M126.306615,88.155642 L152.803113,143.5393 L127.402335,143.5393 L126.107393,143.5393 L102.997665,143.5393 L126.306615,88.155642 L126.306615,88.155642 Z\" fill=\"#FFFFFF\"></path>\n" +
           "\t</g>\n" +
           "</svg>"
+      },
+      Vue: {
+        "id": Vue,
+        body: `viewBox="0 0 256 221" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+            \t<g>
+            \t\t<path d="M204.8,0 L256,0 L128,220.8 L0,0 L50.56,0 L97.92,0 L128,51.2 L157.44,0 L204.8,0 Z" fill="#41B883"></path>
+            \t\t<path d="M0,0 L128,220.8 L256,0 L204.8,0 L128,132.48 L50.56,0 L0,0 Z" fill="#41B883"></path>
+            \t\t<path d="M50.56,0 L128,133.12 L204.8,0 L157.44,0 L128,51.2 L97.92,0 L50.56,0 Z" fill="#35495E"></path>
+            \t</g>
+            </svg>
+        `
       },
       Subversion: {
         "id": "Subversion",
@@ -1138,7 +1149,8 @@ export class TechGraphD3Index1Component implements OnInit {
           "            </g>\n" +
           "        </g>\n" +
           "    </g>\n" +
-          "</svg>"
+          "</svg>",
+        sizeMult: verySmallSize,
       },
       Inkscape: {id: Inkscape},
       Illustrator: {id: Illustrator},
@@ -1161,7 +1173,7 @@ export class TechGraphD3Index1Component implements OnInit {
     var links = [
       {source: Java, target: "Scala"},
       {source: Java, target: Android},
-      {source: Java, target: Kotlin, distance:1.3},
+      {source: Java, target: Kotlin, distance: 1.3},
       {source: Java, target: "Groovy"},
       {source: Ruby, target: "Groovy", thick: 0},
       {source: Java, target: "Maven"},
@@ -1171,7 +1183,7 @@ export class TechGraphD3Index1Component implements OnInit {
       {source: "Hibernate", target: "PostgreSQL", distance: 0.1},
       {source: Android, target: "Gradle", distance: 1.3},
       {source: "Gradle", target: "Groovy", distance: 0.5},
-      {source: Android, target: Kotlin, distance:1.3},
+      {source: Android, target: Kotlin, distance: 1.3},
       {source: Android, target: "GooglePlay", distance: 1.7},
       {source: Android, target: Ionic},
       {source: Android, target: CalabashAndroid},
@@ -1191,6 +1203,7 @@ export class TechGraphD3Index1Component implements OnInit {
       {source: TypeScript, target: Angular2},
       {source: TypeScript, target: JavaScript},
       {source: Angular2, target: Ionic},
+      {source: JavaScript, target: Vue},
       {source: HTML5, target: CSS, distance: 0.1},
       {source: HTML5, target: SVG, distance: 0.1},
       {source: HTML5, target: JavaScript},
@@ -1244,11 +1257,12 @@ export class TechGraphD3Index1Component implements OnInit {
       {source: "SOAP", target: "Grinder", thick: 0},
     ];
 
-    var nodesWebOnly = [
+    const nodesWebOnly = [
       nodes.Cordova,
       nodes.HTML5,
       nodes.JavaScript,
       nodes.Angular2,
+      nodes.Vue,
       nodes.Ionic,
       nodes.TypeScript,
       nodes.SVG,
@@ -1267,14 +1281,16 @@ export class TechGraphD3Index1Component implements OnInit {
     ];
     /* ToDo: Bower, Grunt, JSLint */
 
-    var linksWebOnly = [
+    const linksWebOnly = [
       {source: HTML5, target: Angular2},
       {source: Ionic, target: Angular2},
+      {source: Ionic, target: Vue},
       {source: Ionic, target: 'Stencil'},
       {source: 'WebComponents', target: 'Stencil'},
       {source: HTML5, target: Angular2},
       {source: D3, target: SVG},
       {source: JavaScript, target: HTML5},
+      {source: JavaScript, target: Vue},
       {source: JavaScript, target: TypeScript},
       {source: JavaScript, target: jQuery},
       {source: Ionic, target: Cordova},
@@ -1291,30 +1307,30 @@ export class TechGraphD3Index1Component implements OnInit {
       {source: SVG, target: HTML5, thick: 10, distance: 1.5},
     ];
 
-    var nodesKeys = Object.keys(nodes);
+    const nodesKeys = Object.keys(nodes);
 
-    var nodesArray = nodesKeys.map(function(v) { return nodes[v]; });
+    const nodesArray = nodesKeys.map(function(v) { return nodes[v]; });
 
     // initial xy: https://observablehq.com/@d3/force-layout-phyllotaxis
 
 
-    var graph = { nodes: nodesWebOnly, links: linksWebOnly  };
+    const graph = { nodes: nodesWebOnly, links: linksWebOnly  };
 
 
-    var allLinksGroup = svg.append("g")
+    const allLinksGroup = svg.append("g")
       .attr("class", "links")
       .selectAll("line")
       .data(graph.links)
       .enter().append("line")
       .attr("stroke-width", function(d) { return Math.sqrt(d.thick == null ? 1 : d.thick ); });
 
-    var allNodesGroup = svg.append("g") /* Group that contains all nodes */
+    const allNodesGroup = svg.append("g") /* Group that contains all nodes */
       .attr("class", "nodes")
       .selectAll(".node")
       .data(graph.nodes)
       .enter();
 
-    var perNodeMainGroup = allNodesGroup.append("g") /* top-level group of a node which will include the circle and icon */
+    const perNodeMainGroup = allNodesGroup.append("g") /* top-level group of a node which will include the circle and icon */
       .attr("class", "node");
 
     allNodesGroup.selectAll(".techCircleOverlay")
@@ -1328,7 +1344,7 @@ export class TechGraphD3Index1Component implements OnInit {
       .links(graph.links)
       .distance(function(link) {
         //        return link.graph === 0 ? height/2 : height/4;
-        var multip = link.distance == null ? 0.7 : link.distance;
+        const multip = link.distance == null ? 0.7 : link.distance;
         return multip * 70;
       });
 
