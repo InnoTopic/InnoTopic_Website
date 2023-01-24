@@ -212,7 +212,9 @@ export class TopicsGraphComponent implements OnInit {
 
     // var color = d3.scaleOrdinal(d3.schemeCategory20);
     // const color = d3.rgb(230, 230, 230, 128);
-    const color = d3.rgb(80, 80, 80);
+    console.log(`d3`, d3)
+    // const color = d3.rgb(80, 80, 80)// .copy({opacity: 0.5});
+    const color = d3.color(`rgba(80, 80, 80, 0.5)`) // .copy({opacity: 0.5});
 
     /* Base Example:
        Force-Directed Graph: https://bl.ocks.org/mbostock/4062045 */
