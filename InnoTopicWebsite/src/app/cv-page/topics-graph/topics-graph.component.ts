@@ -66,6 +66,7 @@ export class TopicsGraphComponent implements OnInit {
       connections: {
         JavaScript: {
           connections: {
+            'TypeScript': { /*type: 'writtenIn'*/ /* dependsOn / uses */},
             Ionic: {
               connections: {
                 'Angular': {
@@ -73,7 +74,6 @@ export class TopicsGraphComponent implements OnInit {
                     NgRx: {},
                   }
                 },
-                'TypeScript': { /*type: 'writtenIn'*/ /* dependsOn / uses */},
                 'Vue.js': {},
                 'React': { /*...weak*/},
                 Android: {
@@ -148,16 +148,17 @@ export class TopicsGraphComponent implements OnInit {
     let logosPromises = topicNodes.map((topic: any) => {
       console.log(`topic`, topic)
       const responsePromise = fetch(topic.logo);
-      responsePromise.then(resp => {
-        resp.text().then(text => {
-          const d3Node = this.d3Nodes.find(n => n.id === topic.name /* not id coz _dot_js */);
-          if ( ! d3Node ) {
-            console.error('no node', topic.id)
-          }
-          d3Node.body = text.trim().substr(text.indexOf('<svg')) // TODO maybe remove other attrs like width height
-          console.log('d3Node with text', d3Node)
-        })
-      })
+      // responsePromise.then(resp => {
+      //   resp.text().then(text => {
+      //     const d3Node = this.d3Nodes.find(n => n.id === topic.name /* not id coz _dot_js */);
+      //     if ( ! d3Node ) {
+      //       console.error('no node', topic.id)
+      //     }
+      //     d3Node.body = text.trim().substr(text.indexOf('<svg')) // TODO maybe remove other attrs like width height
+      //     // TODO: prolly i really wanna remove stuff AFTER <svg
+      //     console.log('d3Node with text', d3Node)
+      //   })
+      // })
       return responsePromise/*.then(x => {
         console.log('topic svg fetched', x.text())
       })*/
@@ -166,16 +167,29 @@ export class TopicsGraphComponent implements OnInit {
     console.log(`topic logosPromises`, logosPromises)
     const topicLogosResponses = await Promise.all(logosPromises)
 
-    // const topicLogosTexts = await Promise.all(topicLogosResponses.map(resp => resp.text()))
-    const topicLogosTexts = await Promise.all(topicLogosResponses)
+    const topicLogosTexts = await Promise.all(topicLogosResponses.map(resp => resp.text())).then(texts => {
+      texts.forEach((text, i) => {
+        const topic = topicNodes[i]
+        const id = topic.name
+        const d3Node = this.d3Nodes.find(n => n.id === topic.name /* not id coz _dot_js */);
+        if ( ! d3Node ) {
+          console.error('no node', topic.id)
+        }
+        d3Node.body = text.trim().substr(text.indexOf('<svg')) // TODO maybe remove other attrs like width height
+        // TODO: prolly i really wanna remove stuff AFTER <svg
+        console.log('d3Node with text', d3Node)
+
+      })
+      this.initD3Graph() // FIXME
+    })
+    // const topicLogosTexts = await Promise.all(topicLogosResponses)
 
     console.log(`topic logos`, topicLogosResponses)
     console.log(`topic logos topicLogosTexts`, topicLogosTexts)
 
-    setTimeout(() => {
-      this.initD3Graph() // FIXME
-    }, 3000)
-
+    // setTimeout(() => {
+    //   this.initD3Graph() // FIXME
+    // }, 3000)
 
     // fetch('../../../assets/images/logos-l/logos/stencil.svg').then(x => {
     //   console.log('svg fetched', x.text())
