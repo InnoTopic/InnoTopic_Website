@@ -36,6 +36,7 @@ export class TopicsGraphComponent implements OnInit {
 
   ngOnInit() {
     this.fetchIcons()
+    this.initD3Graph()
   }
 
   private async fetchIcons() {
@@ -65,4 +66,438 @@ export class TopicsGraphComponent implements OnInit {
   }
 
 
+  private initD3Graph() {
+    const svgRootElement = d3.select("#tech-graph-d3-index1"),
+      width = +svgRootElement.attr("width"),
+      height = +svgRootElement.attr("height");
+
+    const svg = svgRootElement.append("g"); /* actually a <g>, to fix transform not working in <svg> on chrome:
+        http://stackoverflow.com/questions/27283610/d3-workaround-for-svg-transform-in-chrome */
+
+    // svgRootElement.call(d3.zoom().on("zoom", function () {
+    //   svg.attr("transform", d3.event.transform)
+    // }));
+
+    //var color = d3.scaleOrdinal(d3.schemeCategory20);
+    const color = d3.rgb(230, 230, 230, 128);
+
+    /* Base Example:
+       Force-Directed Graph: https://bl.ocks.org/mbostock/4062045 */
+    const simulation = d3.forceSimulation()
+      // .force("gravity", 3)
+      .force("link",
+        d3.forceLink().id(function(d) { return d.id; })
+          .strength(function(d) {
+            return preset.forceLinkStrength;
+//                      return 1 / Math.min(count(link.source), count(link.target));
+//                      return (typeof d.strengthMul === "undefined") ? 3 : d.strengthMul
+          }))
+      .force("charge", d3.forceManyBody().strength(preset.forceManyBodyStrength))
+      .force("center", d3.forceCenter(width / 2, height / 2));
+
+//simulation.force("charge", function() {
+////        return (d.sizeMult ? d.sizeMult : 1) * 100 }
+//            return -1000000;
+//        })
+
+
+    const bigSize = 1.76, midSize = 1.25, smallSize = 0.7, verySmallSize = 0.35;
+
+    const Kotlin = "Kotlin";
+    const Java = "Java";
+    const Android = "Android";
+    const HTML5 = "HTML5";
+    const TypeScript = "TypeScript";
+    const Angular2 = "Angular2";
+    const Vue = "Vue";
+    const JavaScript = "JavaScript";
+    const CalabashAndroid = "CalabashAndroid";
+    const jQuery = "jQuery";
+    const Inkscape = "Inkscape";
+    const Illustrator = "Illustrator";
+    const AffinityDesigner = "AffinityDesigner";
+    const Lua = "Lua";
+    const Perl = "Perl";
+    const SOAP = "SOAP";
+    const Grinder = "Grinder";
+    const SVG = "SVG";
+    const Python = "Python";
+    const XML = "XML";
+    const Selendroid = "Selendroid";
+    const JavaEE = "JavaEE";
+    const JCIP = "JCIP";
+    const Gerrit = "Gerrit";
+
+    const Git = "Git";
+    const Ruby = "Ruby";
+    const FakeRuby = "FakeRuby";
+    const Linux = "Linux";
+    const Ionic = "Ionic";
+    const Stencil = "Stencil";
+    const WebComponents = "WebComponents";
+    const D3 = "D3";
+    const Cordova = "Cordova";
+    const Firebase = "Firebase";
+    const CSS = "CSS";
+    const nodes = {
+      Java: {
+        "id": Java,
+        sizeMult: bigSize,
+        body: "viewBox=\"0 0 256 346\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" preserveAspectRatio=\"xMidYMid\">\n" +
+          "\t<g>\n" +
+          "\t\t<path d=\"M82.5539491,267.472524 C82.5539491,267.472524 69.35552,275.147869 91.9468218,277.745105 C119.315549,280.867375 133.303389,280.419607 163.463913,274.711273 C163.463913,274.711273 171.393396,279.683258 182.467491,283.989644 C114.855564,312.966982 29.4483782,282.311215 82.5539491,267.472524\" fill=\"#5382A1\"></path>\n" +
+          "\t\t<path d=\"M74.2921309,229.658996 C74.2921309,229.658996 59.4888145,240.616727 82.0968727,242.955171 C111.333004,245.971316 134.421411,246.218007 174.373236,238.524975 C174.373236,238.524975 179.899113,244.127185 188.588218,247.190807 C106.841367,271.094691 15.79008,249.075898 74.2921309,229.658996\" fill=\"#5382A1\"></path>\n" +
+          "\t\t<path d=\"M143.941818,165.514705 C160.601367,184.695156 139.564684,201.955142 139.564684,201.955142 C139.564684,201.955142 181.866124,180.117876 162.438982,152.772422 C144.294633,127.271098 130.380335,114.600495 205.706705,70.9138618 C205.706705,70.9138618 87.4691491,100.44416 143.941818,165.514705\" fill=\"#E76F00\"></path>\n" +
+          "\t\t<path d=\"M233.364015,295.441687 C233.364015,295.441687 243.131113,303.489396 222.60736,309.715316 C183.580858,321.537862 60.1748945,325.107898 25.8932364,310.186356 C13.5698618,304.825251 36.67968,297.385425 43.9491491,295.824291 C51.5304727,294.180305 55.8629236,294.486575 55.8629236,294.486575 C42.15808,284.832116 -32.7195927,313.443607 17.8287709,321.637469 C155.681513,343.993251 269.121164,311.570618 233.364015,295.441687\" fill=\"#5382A1\"></path>\n" +
+          "\t\t<path d=\"M88.9008873,190.479825 C88.9008873,190.479825 26.1287564,205.389265 66.6717091,210.803433 C83.7901964,213.095331 117.915462,212.576815 149.702284,209.913484 C175.680233,207.722124 201.765236,203.062924 201.765236,203.062924 C201.765236,203.062924 192.605091,206.985775 185.977949,211.510924 C122.233949,228.275665 -0.907636364,220.476509 34.5432436,203.328233 C64.5241018,188.83584 88.9008873,190.479825 88.9008873,190.479825\" fill=\"#5382A1\"></path>\n" +
+          "\t\t<path d=\"M201.506444,253.422313 C266.305164,219.7504 236.344785,187.392 215.432844,191.751447 C210.307258,192.818269 208.021876,193.742662 208.021876,193.742662 C208.021876,193.742662 209.924655,190.761891 213.558924,189.471651 C254.929455,174.927127 286.746065,232.368873 200.204102,255.11936 C200.204102,255.120291 201.206691,254.223825 201.506444,253.422313\" fill=\"#5382A1\"></path>\n" +
+          "\t\t<path d=\"M162.438982,0.371432727 C162.438982,0.371432727 198.325527,36.27008 128.402153,91.4720582 C72.3307055,135.753542 115.616116,161.001658 128.37888,189.848669 C95.6490473,160.318371 71.6297309,134.322735 87.7437673,110.128407 C111.395375,74.6132945 176.918342,57.3942691 162.438982,0.371432727\" fill=\"#E76F00\"></path>\n" +
+          "\t\t<path d=\"M95.2683055,344.665367 C157.466996,348.646865 252.980131,342.45632 255.24224,313.025629 C255.24224,313.025629 250.893964,324.182575 203.838371,333.042967 C150.750487,343.033484 85.2740655,341.867055 46.4393309,335.464262 C46.4402618,335.463331 54.3892945,342.043927 95.2683055,344.665367\" fill=\"#5382A1\"></path>\n" +
+          "\t</g>\n" +
+          "</svg>\n"
+      },
+    };
+
+    var links = [
+      {source: Java, target: "Scala"},
+      {source: Java, target: Android},
+      {source: Java, target: Kotlin, distance: 1.3},
+      {source: Java, target: "Groovy"},
+      {source: Ruby, target: "Groovy", thick: 0},
+      {source: Java, target: "Maven"},
+      {source: Java, target: "Hibernate"},
+//    {source: Java, target: "JUnit"},
+      {source: "Hibernate", target: "MySQL", distance: 0.1},
+      {source: "Hibernate", target: "PostgreSQL", distance: 0.1},
+      {source: Android, target: "Gradle", distance: 1.3},
+      {source: "Gradle", target: "Groovy", distance: 0.5},
+      {source: Android, target: Kotlin, distance: 1.3},
+      {source: Android, target: "GooglePlay", distance: 1.7},
+      {source: Android, target: Ionic},
+      {source: Android, target: CalabashAndroid},
+      {source: Selendroid, target: CalabashAndroid},
+      {source: CalabashAndroid, target: Ruby, distance: 0.0001},
+//    {source: CalabashAndroid, target: FakeRuby, distance: 1, strengthMul: 10},
+//    {source: CalabashAndroid, target: FakeRuby, distance: 1},
+      {source: Android, target: Firebase},
+      {source: Angular2, target: Firebase},
+      {source: Cordova, target: "iOS"},
+      {source: Cordova, target: Ionic},
+      {source: Cordova, target: Android},
+      {source: Cordova, target: JavaScript},
+      {source: HTML5, target: Ionic},
+      {source: HTML5, target: Angular2},
+      {source: TypeScript, target: Angular2, distance: 0.2},
+      {source: TypeScript, target: Angular2},
+      {source: TypeScript, target: JavaScript},
+      {source: Angular2, target: Ionic},
+      {source: JavaScript, target: Vue},
+      {source: HTML5, target: CSS, distance: 0.1},
+      {source: HTML5, target: SVG, distance: 0.1},
+      {source: HTML5, target: JavaScript},
+      {source: JavaScript, target: Angular2},
+      {source: Linux, target: "Debian", distance: 0.3},
+      {source: "Debian", target: "Ubuntu", distance: 0.3},
+      {source: Linux, target: Android, distance: 0.7},
+      {source: Linux, target: "RedHat", distance: 0.3},
+      {source: "RedHat", target: "CentOS", distance: 0.1},
+      {source: "iOS", target: Ionic, distance: 0.3},
+      {source: "iOS", target: "Swift", distance: 0.2},
+      {source: Git, target: "GitHub", distance: 0.3},
+      {source: Git, target: Linux, thick: 0},
+      {source: Git, target: "Subversion", distance: 0.3, thick: 0},
+      {source: Python, target: Ruby, distance: 0.3, thick: 0},
+//    {source: Python, target: FakeRuby, distance: 0.3},
+      {source: D3, target: SVG, distance: 0.5},
+      {source: Java, target: "GWT"},
+      {source: "Swing", target: "JGraph"},
+      {source: "Swing", target: "JFreeChart"},
+      {source: Java, target: "Guice"},
+      {source: Java, target: "Mockito"},
+      {source: Java, target: "Swing"},
+      {source: Java, target: "Tomcat"},
+      {source: Java, target: "JUnit"},
+      {source: Java, target: "iText"},
+      {source: Java, target: "JAXB"},
+      {source: "JAXB", target: "XMLSchema", distance: 0.1},
+      {source: XML, target: "XMLSchema", distance: 0.1},
+      {source: "C", target: "Cpp"},
+      {source: "C", target: "OpenGL"},
+      {source: "C", target: Linux, thick: 0},
+      {source: Android, target: "Dagger"},
+      {source: Android, target: "Fresco"},
+      {source: Android, target: "RecyclerView"},
+      {source: "GlazedLists", target: Java},
+      {source: JavaEE, target: Java},
+      {source: jQuery, target: JavaScript},
+      {source: Selendroid, target: Android},
+      {source: SVG, target: Inkscape},
+      {source: SVG, target: Illustrator},
+      {source: SVG, target: AffinityDesigner},
+      {source: Python, target: Grinder},
+      {source: Lua, target: Python, thick:0},
+      {source: Perl, target: Python, thick:0},
+      {source: SOAP, target: XML},
+      {source: Java, target: JCIP},
+      {source: Git, target: Gerrit},
+      {source: Python, target: "Groovy", thick: 0},
+      {source: Lua, target: Ruby, thick: 0},
+      {source: "SOAP", target: "Grinder", thick: 0},
+    ];
+
+    const nodesWebOnly = [
+      nodes.Cordova,
+      nodes.HTML5,
+      nodes.JavaScript,
+      nodes.Angular2,
+      nodes.Vue,
+      nodes.Ionic,
+      nodes.TypeScript,
+      nodes.SVG,
+      nodes.D3,
+      nodes.jQuery,
+      nodes.AffinityDesigner,
+      nodes.Inkscape,
+      nodes.Illustrator,
+      nodes.CSS,
+      nodes.SASS,
+      nodes.LESS,
+      nodes.NodeJS,
+      nodes.NPM,
+      nodes.Stencil,
+      nodes.WebComponents,
+    ];
+    /* ToDo: Bower, Grunt, JSLint */
+
+    const linksWebOnly = [
+      {source: HTML5, target: Angular2},
+      {source: Ionic, target: Angular2},
+      {source: Ionic, target: Vue},
+      {source: Ionic, target: 'Stencil'},
+      {source: 'WebComponents', target: 'Stencil'},
+      {source: HTML5, target: Angular2},
+      {source: D3, target: SVG},
+      {source: JavaScript, target: HTML5},
+      {source: JavaScript, target: Vue},
+      {source: JavaScript, target: TypeScript},
+      {source: JavaScript, target: jQuery},
+      {source: Ionic, target: Cordova},
+      {source: SVG, target: Inkscape},
+      {source: SVG, target: Illustrator},
+      {source: SVG, target: AffinityDesigner},
+      {source: HTML5, target: CSS, thick: 10},
+      {source: nodes.SASS.id, target: CSS},
+      {source: nodes.LESS.id, target: CSS},
+      {source: nodes.NodeJS.id, target: JavaScript},
+      {source: nodes.NodeJS.id, target: nodes.NPM.id},
+      {source: Angular2, target: TypeScript},
+      {source: jQuery, target: nodes.HTML5.id},
+      {source: SVG, target: HTML5, thick: 10, distance: 1.5},
+    ];
+
+    const nodesKeys = Object.keys(nodes);
+
+    const nodesArray = nodesKeys.map(function(v) { return nodes[v]; });
+
+    // initial xy: https://observablehq.com/@d3/force-layout-phyllotaxis
+
+
+    const graph = { nodes: nodesWebOnly, links: linksWebOnly  };
+
+
+    const allLinksGroup = svg.append("g")
+      .attr("class", "links")
+      .selectAll("line")
+      .data(graph.links)
+      .enter().append("line")
+      .attr("stroke-width", function(d) { return Math.sqrt(d.thick == null ? 1 : d.thick ); });
+
+    const allNodesGroup = svg.append("g") /* Group that contains all nodes */
+      .attr("class", "nodes")
+      .selectAll(".node")
+      .data(graph.nodes)
+      .enter();
+
+    const perNodeMainGroup = allNodesGroup.append("g") /* top-level group of a node which will include the circle and icon */
+      .attr("class", "node");
+
+    allNodesGroup.selectAll(".techCircleOverlay")
+      .data(graph.nodes)
+
+    simulation
+      .nodes(graph.nodes)
+      .on("tick", ticked);
+
+    simulation.force("link")
+      .links(graph.links)
+      .distance(function(link) {
+        //        return link.graph === 0 ? height/2 : height/4;
+        const multip = link.distance == null ? 0.7 : link.distance;
+        return multip * 70;
+      });
+
+    const defaultRadius = 23;
+    var isDragging = false;
+
+    const radiusFunc = function(d) {
+      return d.sizeMult ? d.sizeMult * defaultRadius : defaultRadius
+    };
+
+    const radiusFuncRect = function(d) {
+      return radiusFunc(d) * 2;
+    }
+    const nodeCircle = perNodeMainGroup.append("circle")
+      .attr("class", function(d) { d.id + '_background' + ' circleBg' + ' techCircle'} )
+      .attr("r", radiusFunc )
+      .attr("id2", function(d) { return d.id } )
+      .attr("id", function(d) { return d.id } )
+
+      .attr("fill", function(d) { return color; })
+//                .attr("title", "TEST")
+    ;
+
+
+    const foreignObjectW = 100; // foreign object width
+    const foreignObjectH = 50;
+    const defaultSize = 30;
+
+    perNodeMainGroup.append("g").html(function(d) {
+      const bodyText = d.body || "";
+      const size = d.sizeMult ? d.sizeMult * defaultSize
+        : defaultSize;
+
+      if (bodyText.trim().endsWith("</svg>")) {
+        const htmlContent = '<svg '
+          + 'width=\"'  + size + 'px\" '
+          + 'height=\"' + size + 'px\" '
+          + 'x="' + (-size/2) + '" '
+          + 'y="' + (-size/2) + '" '
+          + bodyText /* also contains </svg> */;
+        return htmlContent;
+      } else {
+        return "";
+      }
+    });
+
+
+    const border = 0;
+
+    perNodeMainGroup.append("foreignObject")
+      .attr("style", "pointer-events:none;")
+      .attr("width", foreignObjectW)
+      .attr("height", foreignObjectH)
+      .attr("height", foreignObjectH)
+      .attr("x", -foreignObjectW / 2)
+      .attr("y", -foreignObjectH / 2)
+      .style("font", "9px 'Helvetica Neue'")
+      .html(function(d) {
+        if ( d.body ) {
+          return ""; // has icon: no need for text
+        }
+        var bodyText = d.html || d.id;
+        return "<div style='display: table;" +
+          "text-align:center;" +
+          "height:100%; width:100%'>" +
+          "<p style='display: table-cell; " +
+          "vertical-align: middle'>" +
+          bodyText + "</p></div>";
+      });
+
+    function unHighlightHover(d?) {
+      $('.techCircleHover').removeClass("techCircleHover", false);
+      d3.select(".techCircleHover").classed("techCircleHover", false);
+    }
+
+    /* need to set the overlay's position separately in root,
+       because of jerky movement issue with drag&drop and "translate(...)" transform
+    */
+    var nodeCircleOverlay = allNodesGroup
+      .append("rect")
+      //        .attr("r", radiusFunc)
+      .attr("width", radiusFuncRect)
+      .attr("height", radiusFuncRect)
+      .attr("rx", radiusFunc)
+      .attr("ry", radiusFunc)
+      //        .attr("x", 0)
+      //        .attr("x", -defaultRadius)
+      //        .attr("y", 0)
+      //        .attr("y", -defaultRadius)
+      .classed("techCircleOverlay", true);
+
+    nodeCircleOverlay.on("mouseover", function(d) {
+      if ( ! isDragging ) {
+//            $('tech').hover(function() {
+        $('#'+d.id).addClass("techCircleHover");
+//            $("[id2='"+ d.id + "']").css('background-color','rgba(0, 0, 0, 0.6)');
+        $("."+d.id + '_background').css('background-color','rgba(0, 0, 0, 0.6)');
+        d3.select(this).classed("techCircleHover", true); //"#fff8ee00"
+      }
+    })
+      .on("mouseout", function(d) {
+        if ( ! isDragging ) { /* While dragging, the highlight shall stay */
+          unHighlightHover.call(this, d);
+        }
+      });
+
+    nodeCircleOverlay.call(
+      d3.drag()
+        .on("start", dragStarted)
+        .on("drag", dragged)
+        .on("end", dragEnded));
+
+    const titleFunc = function(d) { return d.id; };
+    nodeCircle.append("title")
+      .text(titleFunc);
+    nodeCircleOverlay.append("title")
+      .text(titleFunc);
+
+
+    function ticked() {
+      allLinksGroup
+        .attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
+
+      perNodeMainGroup
+        .attr("x", function(d) { return (d.x - radiusFunc(d) ); })
+        .attr("y", function(d) { return (d.y - radiusFunc(d) ); });
+      nodeCircleOverlay /* need to set position separately, because of issue with drag&drop and "translate(...)" transform */
+        .attr("x", function(d) { return (d.fx || d.x) - radiusFunc(d); })
+        .attr("y", function(d) { return (d.fy || d.y) - radiusFunc(d); });
+      perNodeMainGroup.attr("transform", function(d) {
+        // return "translate(" + (d.x + radiusFunc(d) / 2) + "," + (d.y + radiusFunc(d) / 2) + ")";
+        return "translate(" + (d.x) + "," + (d.y) + ")";
+      });
+    }
+
+    function dragStarted(d) {
+      isDragging = true;
+      if (!d3.event.active) {
+        simulation.alphaTarget(0.3).restart();
+      }
+      d.fx = d.x;
+      d.fy = d.y;
+    }
+
+    function dragged(d) {
+      isDragging = true; // just in case...
+      d.fx = d3.event.x;
+      d.fy = d3.event.y;
+    }
+
+    function dragEnded(d) {
+      isDragging = false;
+      unHighlightHover()
+
+      if (!d3.event.active) {
+        simulation.alphaTarget(0);
+      }
+      d.fx = null;
+      d.fy = null;
+    }
+
+
+
+  }
 }
