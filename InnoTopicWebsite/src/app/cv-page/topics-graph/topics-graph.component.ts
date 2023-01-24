@@ -122,7 +122,7 @@ export class TopicsGraphComponent implements OnInit {
           if ( ! d3Node ) {
             console.error('no node', topic.id)
           }
-          d3Node.body = text
+          d3Node.body = text.trim().substr(text.indexOf('<svg')) // TODO maybe remove other attrs like width height
           console.log('d3Node with text', d3Node)
         })
       })
@@ -141,8 +141,8 @@ export class TopicsGraphComponent implements OnInit {
     console.log(`topic logos topicLogosTexts`, topicLogosTexts)
 
     setTimeout(() => {
-      this.initD3Graph()
-    }, 2000)
+      this.initD3Graph() // FIXME
+    }, 3000)
 
 
     // fetch('../../../assets/images/logos-l/logos/stencil.svg').then(x => {
@@ -153,7 +153,7 @@ export class TopicsGraphComponent implements OnInit {
 
 
   private initD3Graph() {
-    const svgRootElement = d3.select("#tech-graph-d3-index1"),
+    const svgRootElement = d3.select("#topics-graph-d3"),
       width = +svgRootElement.attr("width"),
       height = +svgRootElement.attr("height");
 
