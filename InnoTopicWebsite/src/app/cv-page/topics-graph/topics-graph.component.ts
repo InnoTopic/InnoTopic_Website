@@ -113,9 +113,19 @@ export class TopicsGraphComponent implements OnInit {
       return topic
     })
 
-    let logosPromises = topicNodes.map(topic => {
+    let logosPromises = topicNodes.map((topic: any) => {
       console.log(`topic`, topic)
-      let responsePromise = fetch(topic.logo);
+      const responsePromise = fetch(topic.logo);
+      responsePromise.then(resp => {
+        resp.text().then(text => {
+          const d3Node = this.d3Nodes.find(n => n.id === topic.name /* not id coz _dot_js */);
+          if ( ! d3Node ) {
+            console.error('no node', topic.id)
+          }
+          d3Node.body = text
+          console.log('d3Node with text', d3Node)
+        })
+      })
       return responsePromise/*.then(x => {
         console.log('topic svg fetched', x.text())
       })*/
@@ -124,12 +134,15 @@ export class TopicsGraphComponent implements OnInit {
     console.log(`topic logosPromises`, logosPromises)
     const topicLogosResponses = await Promise.all(logosPromises)
 
-    const topicLogosTexts = await Promise.all(topicLogosResponses.map(resp => resp.text()))
+    // const topicLogosTexts = await Promise.all(topicLogosResponses.map(resp => resp.text()))
+    const topicLogosTexts = await Promise.all(topicLogosResponses)
 
     console.log(`topic logos`, topicLogosResponses)
     console.log(`topic logos topicLogosTexts`, topicLogosTexts)
 
-    this.initD3Graph()
+    setTimeout(() => {
+      this.initD3Graph()
+    }, 2000)
 
 
     // fetch('../../../assets/images/logos-l/logos/stencil.svg').then(x => {
@@ -444,7 +457,8 @@ export class TopicsGraphComponent implements OnInit {
         this.generateNodes(childConnections)
       }
 
-      return {id: key, html: key}
+      // return {id: key, html: key}
+      return {id: key }
 
       // return {
       //   "id": key,
