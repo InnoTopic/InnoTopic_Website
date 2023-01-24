@@ -1,0 +1,75 @@
+.links line
+  stroke: #999
+  stroke-opacity: 0.6
+
+
+.circleBg
+  stroke: #fff
+  stroke-width: 1.5px
+
+
+/*         .attr("fill", d3.rgb(180,180,180, 0)) */
+/*.attr("style", "stroke-width: 1.5px;")*/
+
+
+.techCircle
+  fill: #000
+  stroke: #fff
+  fill-opacity: 0.2
+  stroke-width: 1.5px
+  transition: all 0.2s ease-in
+
+
+.techCircleHover
+  stroke: #fff
+  fill: #aaa
+  stroke-width: 1.5px
+  transition: all 0.2s ease-in
+
+tech
+  border-radius: 4px
+  background: #e6e6e6
+  /*border-style: solid;*/
+  /*border-color: #e0e0e0;*/
+  padding: 5px
+  /*width: 200px;*/
+  height: 2000px
+  transition: all 0.2s ease-in
+  -webkit-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.63)
+  -moz-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.63)
+  box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.63)
+
+
+.techCircleOverlay, .techCircleMouseOver
+  fill: #f00
+  fill-opacity: 0.0
+  stroke: #fff
+  stroke-width: 0px
+
+/*{*/
+    /*fill: #f00;*/
+    /*fill-opacity: 0.2;*/
+    /*stroke: #fff;*/
+    /*stroke-width: 0px;*/
+/*}*/
+
+
+/*@keyframes tech {*/
+    /*0% { transform: scale(1); }*/
+    /*30% { transform: scale(1); }*/
+    /*40% { transform: scale(1.08); }*/
+    /*50% { transform: scale(1); }*/
+    /*60% { transform: scale(1); }*/
+    /*70% { transform: scale(1.05); }*/
+    /*80% { transform: scale(1); }*/
+    /*100% { transform: scale(1); }*/
+/*}*/
+tech:hover
+  background-color: yellow
+  transition: all 0.2s ease-in
+  transform: scale(1.18)
+
+#techBody
+  padding: 5px
+  overflow: scroll
+
