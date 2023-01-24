@@ -4,7 +4,10 @@ import {
   OnInit,
   ViewEncapsulation,
 } from '@angular/core';
-import { topics } from '../../TopicFriendsShared/topics-core/topics-data';
+import {
+  Topics,
+  topics,
+} from '../../TopicFriendsShared/topics-core/topics-data';
 import { errorAlert } from '../../utils/utils';
 
 declare const d3: any;
@@ -14,7 +17,7 @@ export type GraphNodeId = string
 export type TopicId = string /*FIXME move*/
 
 // export type GraphConnections = { [key: TopicId]: GraphNode }
-export type GraphConnections = { [key: string /* FIXME */]: GraphNode }
+export type GraphConnections = { [key in keyof Partial<Topics>]: GraphNode }
 
 export interface GraphNode {
   connections?: GraphConnections
@@ -65,17 +68,39 @@ export class TopicsGraphComponent implements OnInit {
           connections: {
             Ionic: {
               connections: {
-                'Angular': {},
+                'Angular': {
+                  connections: {
+                    NgRx: {},
+                  }
+                },
                 'TypeScript': { /*type: 'writtenIn'*/ /* dependsOn / uses */},
                 'Vue.js': {},
                 'React': { /*...weak*/},
+                Android: {
+                  connections: {
+                    Java: {},
+                    Kotlin: {},
+                  },
+                },
+                'Stencil': {
+                  connections: {
+                    'Web Components': {},
+                  }
+                }
               },
             },
             Svelte: {},
             Qwik: {},
             SolidJS: {},
             'Node.js': {},
-            Deno: {},
+            Deno: {
+              connections: {
+                Rust: {},
+              }
+            },
+            Jest: {},
+            Redux: {},
+            'RxJS': {},
           },
         },
         CSS3: {
@@ -84,7 +109,14 @@ export class TopicsGraphComponent implements OnInit {
             Stylus: {},
             Less: {},
           }
-        }
+        },
+        SVG: {
+          connections: {
+            "Affinity Designer": {},
+            Figma: {},
+            'D3.js': {},
+          }
+        },
       },
     },
   }
@@ -165,7 +197,8 @@ export class TopicsGraphComponent implements OnInit {
     // }));
 
     // var color = d3.scaleOrdinal(d3.schemeCategory20);
-    const color = d3.rgb(230, 230, 230, 128);
+    // const color = d3.rgb(230, 230, 230, 128);
+    const color = d3.rgb(80, 80, 80);
 
     /* Base Example:
        Force-Directed Graph: https://bl.ocks.org/mbostock/4062045 */
@@ -226,17 +259,7 @@ export class TopicsGraphComponent implements OnInit {
     /* ToDo: Bower, Grunt, JSLint */
 
     // const linksWebOnly = [
-    //   {source: HTML5, target: Angular2},
-    //   {source: 'WebComponents', target: 'Stencil'},
-    //   {source: HTML5, target: Angular2},
-    //   {source: D3, target: SVG},
-    //   {source: SVG, target: AffinityDesigner},
     //   {source: HTML5, target: CSS, thick: 10},
-    //   {source: nodes.SASS.id, target: CSS},
-    //   {source: nodes.LESS.id, target: CSS},
-    //   {source: nodes.NodeJS.id, target: JavaScript},
-    //   {source: nodes.NodeJS.id, target: nodes.NPM.id},
-    //   {source: jQuery, target: nodes.HTML5.id},
     //   {source: SVG, target: HTML5, thick: 10, distance: 1.5},
     // ];
 
