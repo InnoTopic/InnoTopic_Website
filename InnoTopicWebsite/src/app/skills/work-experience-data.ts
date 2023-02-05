@@ -255,6 +255,8 @@ export class WorkExperienceData {
     Deno: we(intermediate, expert),
     Storybook: we(beginner, advanced),
     'DDD - Domain-Driven Design': we(intermediate, advanced),
+    'Vite': we(intermediate, advanced),
+    'SurrealDB': we(),
     // TODO: Scully
   })
   earlier = experience('Earlier experience',

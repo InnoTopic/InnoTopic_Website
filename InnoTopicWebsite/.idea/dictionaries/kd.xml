@@ -6,6 +6,7 @@
       <w>angeles</w>
       <w>antipatterns</w>
       <w>arango</w>
+      <w>astro</w>
       <w>atos</w>
       <w>audiosalad</w>
       <w>bazel</w>
@@ -15,6 +16,7 @@
       <w>chojnice</w>
       <w>cobertura</w>
       <w>codelyzer</w>
+      <w>colab</w>
       <w>collab</w>
       <w>collabnet</w>
       <w>coviob</w>
@@ -35,9 +37,11 @@
       <w>gravit</w>
       <w>gravitio</w>
       <w>grayscale</w>
+      <w>gridsome</w>
       <w>guice</w>
       <w>heilbronn</w>
       <w>hoodie</w>
+      <w>huggingface</w>
       <w>inkscape</w>
       <w>inno</w>
       <w>innotopic</w>
@@ -51,6 +55,7 @@
       <w>málaga</w>
       <w>nginx</w>
       <w>ngxs</w>
+      <w>noborder</w>
       <w>paddel</w>
       <w>padel</w>
       <w>payoneer</w>
@@ -58,17 +63,25 @@
       <w>photoshop</w>
       <w>postgre</w>
       <w>pradzinski</w>
+      <w>qwik</w>
       <w>redhat</w>
       <w>redmine</w>
       <w>rostock</w>
       <w>seeklogo</w>
       <w>simbolo</w>
+      <w>solidjs</w>
       <w>steemit</w>
+      <w>storyblok</w>
       <w>suse</w>
+      <w>svgator</w>
       <w>svgrepo</w>
       <w>testng</w>
       <w>trac</w>
+      <w>turbopack</w>
+      <w>turborepo</w>
       <w>typegraphql</w>
+      <w>vectorizer</w>
+      <w>vercel</w>
       <w>wilber</w>
       <w>wordpress</w>
       <w>workbox</w>

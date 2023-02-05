@@ -7,6 +7,12 @@
   title="{{topic.name}}"
 >
 
+<ng-container
+  *ngIf="debug_showText"
+>
+  {{topic.name}}
+</ng-container>
+
 <!--<svg width="50" height="50 " viewBox="0 0 100 100">-->
 <!--&lt;!&ndash;  <use attr.xlink:href="{{url}}" >&ndash;&gt;-->
 <!--&lt;!&ndash;  <use [attr.xlink:href]="'assets/images/logos-l/logos/html-5.svg'" >&ndash;&gt;-->

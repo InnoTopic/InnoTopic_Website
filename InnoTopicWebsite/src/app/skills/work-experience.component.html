@@ -2,9 +2,9 @@
   <h1 class="section-title">Overview</h1>
   <div class="overview">
     <div>
-      <p><strong>~15 Years</strong> of international</p>
+      <p><strong>~15 Years</strong> of international…</p>
       <app-flags flags="de at pl gb us es es-ct fr lu in"></app-flags>
-      <p>cross-platform experience: </p>
+      <p>…cross-platform experience: </p>
       <span>
       <app-topic-logo *ngFor="let topic of highlights.crossPlatform.ids" [topic]="topic"></app-topic-logo>
 
@@ -103,14 +103,13 @@
     <br>
     <p id="legend">Legend:</p>
 
-
       <ng-container
         *ngFor="let level of ['beginner', 'intermediate', 'advanced', 'expert']"
       >
         <app-skill-level-icon
           [skillLevel]="level"
         ></app-skill-level-icon>
-        {{level}}
+        &nbsp;<span style="text-transform: uppercase">{{level}}</span>
       </ng-container>
 
   <!--    <img style="width: 12px; height: 12px" src="assets/images/icons/signal/signal-solid-2.svg">-->

@@ -29,7 +29,7 @@ export const skillsIconsSignal = {
 export class SkillLevelsIconsComponent implements OnInit {
 
   @Input() skillLevels: UserSkillLevelsHaveWant2;
-  @Input() useSignalLevels = true
+  @Input() useSignalLevels = false
 
   icon: string;
   // text:string = "set";

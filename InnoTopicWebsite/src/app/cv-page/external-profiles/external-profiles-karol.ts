@@ -3,7 +3,7 @@ import { UserOtherProfiles } from '../../TopicFriendsShared/other-profiles/other
 export const externalProfilesKarol: UserOtherProfiles = {
   eMail: {
     // url: 'karol',
-    userName: 'karol at innotopic.com',
+    userName: 'karol [at] innotopic.com',
   },
   linkedIn: {
     url: 'testLinkedIn',

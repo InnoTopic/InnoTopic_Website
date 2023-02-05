@@ -10,6 +10,9 @@ import {
 } from '../../TopicFriendsShared/topics-core/topics-data';
 import { errorAlert } from '../../utils/utils';
 
+
+// idea: new/expanding-to topics could be with effect e.g. static noise or fading in-out, e.g. qwik, turbopack; while old, permanently faded
+
 declare const d3: any;
 declare const $: any;
 
@@ -78,7 +81,14 @@ export class TopicsGraphComponent implements OnInit {
                 'React': { /*...weak*/},
                 Android: {
                   connections: {
-                    Java: {},
+                    Java: {
+                      connections: {
+                        "Spring Boot": {
+                          /* TODO could display old stuff as faded/transparent/grayed */
+                          // ...small
+                        }
+                      }
+                    },
                     Kotlin: {},
                   },
                 },
@@ -91,16 +101,34 @@ export class TopicsGraphComponent implements OnInit {
             },
             Svelte: {},
             Qwik: {},
+            Astro: {},
             SolidJS: {},
             'Node.js': {},
             Deno: {
               connections: {
-                Rust: {},
+                Rust: {
+                  connections: {
+                    Turbopack: {},
+                    // Turborepo: {},
+                  }
+                },
               }
             },
             Jest: {},
             Redux: {},
-            'RxJS': {},
+            RxJS: {},
+            Vite: {},
+            Turbopack: {
+              connections: {
+                Turborepo: {},
+              },
+            },
+            // TODO: "JS build & deploy node" - icon with a box and up-arrow (a'la upload): vercel, esbuild turbopack, netlify, vite
+            // "JavaScript Libraries": {},
+            // Astro: {},
+            // TurboPack,
+            Vercel: {},
+            Netlify: {},
           },
         },
         CSS3: {
@@ -297,7 +325,9 @@ export class TopicsGraphComponent implements OnInit {
       .selectAll("line")
       .data(graph.links)
       .enter().append("line")
-      .attr("stroke-width", function(d) { return Math.sqrt(d.thick == null ? 1 : d.thick ); });
+      .attr("stroke-width", function(d) {
+        return 10; // Math.sqrt(d.thick == null ? 10 : d.thick );
+      });
 
     const allNodesGroup = svg.append("g") /* Group that contains all nodes */
       .attr("class", "nodes")

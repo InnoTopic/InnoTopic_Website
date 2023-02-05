@@ -16,9 +16,11 @@ import { WorldMapComponent } from './world-map/world-map.component';
 import { Logo3dComponent } from './logo3d/logo3d.component';
 import { TechGraphD3Component } from './tech-graph-d3/tech-graph-d3.component';
 import { TechGraphD3Index1Component } from './tech-graph-d3-index1/tech-graph-d3-index1.component';
+import { TopicsGraphComponent } from './topics-graph/topics-graph.component';
+import { VideoCvComponent } from './video-cv/video-cv.component';
 
 @NgModule({
-  declarations: [CvPageComponent, PersonalDataComponent, ExternalProfilesComponent, TechGraphComponent, WorldMapComponent, Logo3dComponent, TechGraphD3Component, TechGraphD3Index1Component],
+  declarations: [CvPageComponent, PersonalDataComponent, ExternalProfilesComponent, TechGraphComponent, WorldMapComponent, Logo3dComponent, TechGraphD3Component, TechGraphD3Index1Component, TopicsGraphComponent, VideoCvComponent],
   exports: [
     CvPageComponent,
   ],

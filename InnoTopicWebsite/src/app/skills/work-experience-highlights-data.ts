@@ -16,23 +16,37 @@ function topics(tDict: MapToTopics<any>) {
 }
 
 export const highlights = {
+  // TODO: Electron (near Ionic) here and in experience
+  // TODO: chrome extensions
+  // TODO: svg-porn
+  // TODO: tailwind
+  // TODO: Smashing Magazine (has svg logo in logos github repo), near figma somewhere
+  // TODO: css-tricks
   // could split e.g. frontend on the left; backend on the right (TypeScript in the middle)
   // maybe visually split just for website/CV. But could be split in the code and concatenated into single list for Shirt.
 
   // TODO: https://nrwl.io/assets/nrwl-logo.svg - nx; + yarn
 
+  // TODO: observable (data visualization platform), redux-observable (both on svgporn)
+  // TODO: medium, quora, stackoverflow ?
+
   main: topics({
     "Angular": {},
-    "Vue.js": {},
     "React": {},
+    "Vue.js": {},
+    "Svelte": {},
     "Ionic": {},
+    "JavaScript": {},
     "TypeScript": {},
     "Node.js": {},
-    "Deno": {}, /* FIXME: new deno logo - better for print / low-res - no thin lines https://deno.land/logo.svg */
+    // TODO maybe ts-node; https://typestrong.org/ts-node/ , https://github.com/TypeStrong/ts-node
+    "Deno": {},
+    "Bun": {}, /* TODO: mark as non-main experience; written in Zig */
   }),
   crossPlatform: topics({
     "HTML5": {},
     "Ionic": {},
+    "Electron": {}, /* TODO: mark as non-main experience */
     "Angular": {},
     "Java": {},
     "Android": {},
@@ -47,13 +61,34 @@ export const highlights = {
     could split into frontend-what-I-really-use and frontend-broad
   */
   utility: topics({
-    "Svelte": {}, /* TODO: Marko, Mithril - */
-    "Nx": {}, /* TODO: Marko, Mithril - */
+    // FIXME: openai
+    "Gridsome": {} /* A Jamstack framework for Vue.js */,
+    "Svelte": {},
+    "Qwik": {},
+    "SolidJS": {},
+    "Mithril": {},
+    "Marko": {},
+    "Rax": {},
+    "Riot": {},
+    "Alpine.js": {},
+    "Astro": {},
+    // TODO akita; elf https://github.com/ngneat/elf built on top of RxJS
+    Preact: {},
+    GreenSock: {},
+    "Storyblok": {},
+    "Nx": {},
+    "WebKit": {},
+    "NW.js": {},
+    "Electron": {}, /* TODO: mark as non-main experience */
+    "Expo": {}, /* TODO: mark as non-main experience; (in nx project template; here and in expanding-to) */
+
     /* TODO; SvelteKit svelte-kit */
     /* TODO: Meteor */
     /* TODO: webhooks */
-    /* TODO: netlify */
+
     "Sass": {},
+    "Less": {},
+    "Stylus": {},
     "Web Components": {},
     "Stencil": {},
     "Capacitor": {},
@@ -61,12 +96,18 @@ export const highlights = {
     "NativeScript": {},
     "Flutter": {},
     "Redux": {},
-    //"Redux Toolkit": {},
+    "Redux Toolkit": {},
+    "NgRx": {},
+    "NGXS": {},
     "MobX": {}, // TODO FIXME MobX-State-Tree https://github.com/mobxjs/mobx-state-tree/blob/b6c1c9b29d7bd7525ac6588f8f67f6c13eb17b2b/website/static/img/mobx-state-tree-logo.svg
-    //"MobX-State-Tree": {}, // TODO FIXME MobX-State-Tree https://github.com/mobxjs/mobx-state-tree/blob/b6c1c9b29d7bd7525ac6588f8f67f6c13eb17b2b/website/static/img/mobx-state-tree-logo.svg
+    "MobX-State-Tree": {}, // TODO FIXME MobX-State-Tree https://github.com/mobxjs/mobx-state-tree/blob/b6c1c9b29d7bd7525ac6588f8f67f6c13eb17b2b/website/static/img/mobx-state-tree-logo.svg
     // https://github.com/simple-icons/simple-icons/issues/4352
     "Terraform": {},
-    // TODO: smth like monitoring like dynatrace
+    "Datadog": {},
+    "Dynatrace": {},
+    "Vercel": {},
+    "Netlify": {},
+    "Turbopack": {},
     "Docker": {},
     "GraalVM": {},
     /* TODO: Spring Framework */
@@ -89,12 +130,16 @@ export const highlights = {
     "glTF": {}, /* FIXME too big */
     "Blender": {},
     "Figma": {},
+    "SVGator": {},
+    "Zeplin": {},
     // "AG Grid": {}, // old logo; and trying to conserve horizontal space
     "Lodash": {},
     'NestJS': {},
     "Gatsby": {},
     "Next.js": {},
+    "Remix": {},
     "Storybook": {},
+    // "Storyblok": {},
     "TestCafe": {},
     "Cypress": {},
     "Jest": {},
@@ -109,53 +154,82 @@ export const highlights = {
     /* TODO: BitBucket ? */
     "Linux": {},
     "ReactiveX": {},
+    // ==== AI / ML:
+    "Jupyter": {},
+    "PyTorch": {},
+    "Hugging Face": {},
     "TensorFlow": {},
     "Keras": {},
+    "Google Colaboratory": {},
+    "OpenAI": {},
+    "Open Assistant": {},
+    "Stability AI": {},
+    "Stable Diffusion": {},
+    // BlockChain / CryptoCurrencies
     "Bitcoin": {},
     "Ethereum": {},
     "Solidity": {},
     "Web3": {},
-    "web3.js": {},
-    //"ethers.js": {},
+    "web3.js" /* FIXME */: {},
+    // TODO "ethers.js": {},
     "Airtable": {},
     "Notion": {},
+    "Coda": {},
+    "Observable": {},
+    "Carbide": {},
     "Zapier": {},
-    // TODO "Coda": {},
+    "IFTTT": {},
+    // TODO: intellij idea
     "WebStorm": {},
+    // "PyCharm": {},
+    // jetbrains academy, JB Space
+    // mypy - python static type checker
+    // DatasSpell (data science) Jupyter; kaggle
     "Visual Studio Code": {},
     "YouTube": {},
     "LinkedIn": {},
     "Meetup": {},
+    "SurrealDB": {},
+    "Algolia": {},
+
+    "Vite": {}, // TODO: Vitest, Playwright, https://testing-library.com/, https://github.com/pocketbase/pocketbase
     //
     // "RxJS": {}, -- no icon (can be ReactiveX)
     // RxDB?
     // TODO: , Ng-bootstrap, material, angular-material
     // TODO: , Google Cloud Platform, Azure
+    // TODO: Font Awesome
+    // github actions, gitub copilot
+    // TODO payoneer, pm2, pnpm, postman, recoil
+    // TODO: Docusaurus; 40 stars on GH
+    // TODO immer
     // todo: lit elements
     // TODO:
     // TODO polymer
-    // TODO Elastic / Kibana / elastic stack - (ELK ; logstack, beats)
-    // TODO: some lowcode/nocode / BI (business intelligence)
+    // TODO Elastic / Kibana / elastic stack - (ELK ; logstack, beats) !!! new logo
+    // TODO: StackBlitz, StackShare
+    // TODO: Loom
+    // TODO: some lowcode/nocode / BI (business intelligence) /  Tableau
+    // TODO: AppSheet
+    // TODO: Appian, https://www.gartner.com/reviews/market/enterprise-low-code-application-platform
+    // https://www.google.com/search?q=gartner+nocode+quadrants&sxsrf=ALiCzsYzQgM6ji258wt8ABwXX5oLXHpKFA%3A1667484719597&ei=L8xjY6WBJIr_7_UP-_ClgAY&ved=0ahUKEwjl1ITTmJL7AhWK_7sIHXt4CWAQ4dUDCA8&uact=5&oq=gartner+nocode+quadrants&gs_lp=Egxnd3Mtd2l6LXNlcnC4AQP4AQEyBhAAGBYYHjIFEAAYhgMyBRAAGIYDMgUQABiGAzIFEAAYhgPCAgoQABhHGNYEGLADwgIFEAAYgATCAggQABgWGB4YD5AGCEj4DVBuWIgNcAF4AcgBAJABAJgBhwGgAfoIqgEDMS454gMEIE0YAeIDBCBBGADiAwQgRhgAiAYB&sclient=gws-wiz-serp#imgrc=gQRhhPExJFw07M
+    // bubble, outSystems, Mendix, ZoHo builder
     // TODO: smthlike Ragic?
-    // Smth like WebFlow / website designer tools
+    // Smth like WebFlow / website designer tools; https://www.youtube.com/watch?v=2Ti9_zALVsA&ab_channel=ArnauRos
+    // EditorX / WiX ?
     // the thingy which is like DB/SpreadSheet - Coda
-    // TODO: StoryBook - for components / web components ?
   }),
   /* TODO: broad interests but more on-topic (where the next-big-think or inspiration can come from:)
    -- TODO: MobX State tree
    -- from https://storybook.js.org/
-   - Mithril
-   - Riot
    - Ember (for a historical touch)
-   - Rax
-   - Svelte
    - Ember? (in broad / supportive tech)
    - https://gohugo.io/ - 56k stars (written in GO)
    - Lottie
    NuxtJS ? (Vue, inspired by Next.js) - https://www.npmjs.com/package/nuxt - https://github.com/nuxt/framework TypeScript
-   Nest.js - and/or other popular TypeScript Node.js framework
-   Next.js - React framework; (Vercel) or other popular - 80k stars! - https://github.com/vercel/next.js/ - 2M/week - https://www.npmjs.com/package/next
    TODO some DevOps, like Terraform or other popular / rising
+
+    TODO lit elements; lit-icon.svg
 
   *  */
   /** This should just be languages / platforms / ecosystems */
@@ -167,7 +241,6 @@ export const highlights = {
     "Java": {},
     "Groovy": {},
     "Scala": {},
-    // "Clojure": {}, /* TODO */
     "Android": {},
     "Dart": {},
     "Swift": {},
@@ -182,6 +255,10 @@ export const highlights = {
     "Python": {},
     'PHP': {},
     'Perl': {},
+    'Raku': {},
+    'Zig': {},
+    // TODO: nim
+    // TODO: mint lang
     'Bash': {},
     'R Language': {},
     'Rust': {},
@@ -190,14 +267,15 @@ export const highlights = {
     'V Language': {},
     'Julia': {},
     'Lua': {},
-    //'Eiffel': {},
-    //'Erlang': {},
+    // 'Eiffel': {},
+    // 'Erlang': {},
     'Elixir': {},
     Haskell: {},
     'Lisp': {},
     'OCaml': {},
     'Elm': {},
     'Clojure': {},
+    'Fortran': {},
     // https://pypl.github.io/PYPL.html
     // TODO: some functional / fancy languages: Erlang, Haskell, Elixir, Eiffel, OCaml (Pricemoov Ion)
     // Prolog, Mozart OZ
@@ -216,7 +294,7 @@ export const highlights = {
     'Table Tennis': {},
     Padel: {},
     Swimming: {},
-    //Guitar: {},
+    // Guitar: {},
     ASG: {},
     Chess: {},
     'Triskelion': {},
