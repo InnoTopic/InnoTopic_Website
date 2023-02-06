@@ -22,6 +22,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -58,7 +59,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatFormFieldModule,
     MatCheckboxModule,
     MatInputModule,
-    MatExpansionModule
+    MatExpansionModule,
+    FontAwesomeModule
 
   ],
   providers: [
