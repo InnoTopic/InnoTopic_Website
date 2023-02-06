@@ -33,7 +33,7 @@
               "src/styles.sass"
             ],
             "scripts": [],
-            "es5BrowserSupport": true, //
+            "es5BrowserSupport": true
           },
           "configurations": {
             "production": {
@@ -147,6 +147,7 @@
   },
   "defaultProject": "InnoTopicWebsite",
   "cli": {
-    "defaultCollection": "@ngxs/schematics"
+    "defaultCollection": "@ngxs/schematics",
+    "analytics": false
   }
 }
