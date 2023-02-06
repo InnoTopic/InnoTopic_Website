@@ -4,13 +4,13 @@
   class='topic-logo-img'
   [ngStyle]="styles"
   onerror="this.style.display='none'"
-  title="{{topic.name}}"
+  title="{{_topic.name}}"
 >
 
 <ng-container
   *ngIf="debug_showText"
 >
-  {{topic.name}}
+  {{_topic.name}}
 </ng-container>
 
 <!--<svg width="50" height="50 " viewBox="0 0 100 100">-->

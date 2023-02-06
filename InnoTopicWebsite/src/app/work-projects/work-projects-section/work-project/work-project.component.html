@@ -1,6 +1,7 @@
 <section class="project">
   <h3>
-    <div><fa name="laptop"></fa><span><label>  Project: </label> {{projectTitle}}</span></div>
+    <div><fa-icon [icon]="faLaptop"></fa-icon><span><label>  Project: </label> {{projectTitle}}</span></div>
+    <!-- FIXME: position & size of laptop icon -->
     <div *ngIf="project.roles; let roles">
        <fa name="male"></fa><span><label>  Roles: </label>{{roles}}</span>
     </div>
