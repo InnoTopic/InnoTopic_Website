@@ -55,8 +55,8 @@ export class TopicLogoComponent implements OnInit {
           this.height = defaultIconHeight
         }
       } else {
-        this.width *= this.topic.logoTypeWide ? (48 / defaultIconHeight) : 1
-        this.height *= this.topic.logoTypeWide ? (16 / defaultIconHeight) : 1
+        // this.width *= this.topic.logoTypeWide ? (48 / defaultIconHeight) : 1
+        // this.height *= this.topic.logoTypeWide ? (16 / defaultIconHeight) : 1
       }
     }
     this._topic = this.topic

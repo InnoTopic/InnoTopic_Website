@@ -91,12 +91,15 @@ export const highlights = {
     "Stylus": {},
     "Web Components": {},
     "Stencil": {},
+    // TODO https://mitosis.builder.io/?outputTab=G4VwpkA%3D -- Write components once, run everywhere. Compiles to Vue, React, Solid, Angular, Svelte, and more.
     "Capacitor": {},
     "Cordova": {}, /* NO PhoneGap -- discontinued - https://blog.phonegap.com/update-for-customers-using-phonegap-and-phonegap-build-cc701c77502c ? */
     "NativeScript": {},
     "Flutter": {},
     "Redux": {},
     "Redux Toolkit": {},
+    "Recoil": {},
+    // TODO: jotai
     "NgRx": {},
     "NGXS": {},
     "MobX": {}, // TODO FIXME MobX-State-Tree https://github.com/mobxjs/mobx-state-tree/blob/b6c1c9b29d7bd7525ac6588f8f67f6c13eb17b2b/website/static/img/mobx-state-tree-logo.svg
@@ -108,14 +111,14 @@ export const highlights = {
     "Vercel": {},
     "Netlify": {},
     "Turbopack": {},
+    "Vite": {}, // TODO: Vitest, Playwright, https://testing-library.com/, https://github.com/pocketbase/pocketbase
     "Docker": {},
     "GraalVM": {},
     /* TODO: Spring Framework */
     "GraphQL": {},
     "Apollo": {}, /* TODO Apollo Studio? */
     "Swagger": {},
-    /* FIXME: more backend: OpenAPI, maybe JSON Schema, websockets, socket.io maybe
-    *   */
+    /* FIXME: more backend: OpenAPI, maybe JSON Schema, websockets, socket.io maybe */
     "MongoDB": {}, /* TODO: Prisma */
     "AWS": {},
     "Microsoft Azure": {},
@@ -156,13 +159,14 @@ export const highlights = {
     "ReactiveX": {},
     // ==== AI / ML:
     "Jupyter": {},
-    "PyTorch": {},
+    "Google Colaboratory": {},
     "Hugging Face": {},
+    "PyTorch": {},
     "TensorFlow": {},
     "Keras": {},
-    "Google Colaboratory": {},
     "OpenAI": {},
     "Open Assistant": {},
+    "LAION": {},
     "Stability AI": {},
     "Stable Diffusion": {},
     // BlockChain / CryptoCurrencies
@@ -179,6 +183,13 @@ export const highlights = {
     "Carbide": {},
     "Zapier": {},
     "IFTTT": {},
+    // ====  LowCode / NoCode:
+    "Builder.io": {},
+    "Budibase": {},
+    "Bubble": {},
+    "Framer": {},
+    "WebFlow": {},
+    "Wix": {},
     // TODO: intellij idea
     "WebStorm": {},
     // "PyCharm": {},
@@ -191,8 +202,8 @@ export const highlights = {
     "Meetup": {},
     "SurrealDB": {},
     "Algolia": {},
+    // TODO JetBrains Fleet
 
-    "Vite": {}, // TODO: Vitest, Playwright, https://testing-library.com/, https://github.com/pocketbase/pocketbase
     //
     // "RxJS": {}, -- no icon (can be ReactiveX)
     // RxDB?
