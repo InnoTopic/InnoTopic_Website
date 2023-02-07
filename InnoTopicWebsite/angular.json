@@ -144,10 +144,9 @@
       }
     }
   },
+  "defaultProject": "InnoTopicWebsite",
   "cli": {
-    "analytics": false,
-    "schematicCollections": [
-      "@ngxs/schematics"
-    ]
+    "defaultCollection": "@ngxs/schematics",
+    "analytics": false
   }
 }
