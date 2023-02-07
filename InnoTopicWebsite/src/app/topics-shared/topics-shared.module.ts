@@ -5,6 +5,8 @@ import { TopicsCoreModule } from '../TopicFriendsShared2/topics-core/topics-core
 import { TopicLogoComponent } from './topic-logo/topic-logo.component';
 import { TopicTagComponent } from './topic-tag/topic-tag.component';
 
+/* test */
+
 let declarations = [
   TopicLogoComponent,
   TopicTagComponent,
