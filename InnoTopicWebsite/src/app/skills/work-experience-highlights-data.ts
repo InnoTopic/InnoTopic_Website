@@ -111,7 +111,9 @@ export const highlights = {
     "Vercel": {},
     "Netlify": {},
     "Turbopack": {},
+    "Turborepo": {},
     "Vite": {}, // TODO: Vitest, Playwright, https://testing-library.com/, https://github.com/pocketbase/pocketbase
+    "pnpm": {},
     "Docker": {},
     "GraalVM": {},
     /* TODO: Spring Framework */
