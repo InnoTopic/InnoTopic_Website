@@ -74,6 +74,7 @@ export const highlights = {
     "Astro": {},
     // TODO akita; elf https://github.com/ngneat/elf built on top of RxJS
     Preact: {},
+    Nuxt: {},
     GreenSock: {},
     "Storyblok": {},
     "Nx": {},

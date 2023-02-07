@@ -159,6 +159,7 @@ export class Frontend {
   'Electron' = t()
   'Expo' = t('expo-icon')
   'Vue.js' = t({logo: 'vue'})
+  'Nuxt' = t('nuxt-icon')
   'Gridsome' = t({logo: 'gridsome-icon.svg'})
   'Svelte' = t('svelte-icon')
   // TODO Phoenix  https://www.phoenixframework.org/  supposedly most loved; https://github.com/phoenixframework/phoenix
