@@ -198,6 +198,7 @@ export class Frontend {
   Redux = t()
   "Redux Toolkit" = t(`redux--toolkit.svg`)
   Recoil = tWide('recoil-icon')
+  Pinia = tWide()
 
   React = t()
   Preact = t()

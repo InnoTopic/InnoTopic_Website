@@ -103,6 +103,7 @@ export const highlights = {
     // TODO: jotai
     "NgRx": {},
     "NGXS": {},
+    "Pinia": {},
     "MobX": {}, // TODO FIXME MobX-State-Tree https://github.com/mobxjs/mobx-state-tree/blob/b6c1c9b29d7bd7525ac6588f8f67f6c13eb17b2b/website/static/img/mobx-state-tree-logo.svg
     "MobX-State-Tree": {}, // TODO FIXME MobX-State-Tree https://github.com/mobxjs/mobx-state-tree/blob/b6c1c9b29d7bd7525ac6588f8f67f6c13eb17b2b/website/static/img/mobx-state-tree-logo.svg
     // https://github.com/simple-icons/simple-icons/issues/4352
