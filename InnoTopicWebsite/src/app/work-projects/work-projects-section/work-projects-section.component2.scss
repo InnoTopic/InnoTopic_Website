@@ -1,19 +1,23 @@
 //@import '../../../app-themes.scss'
 //@import '../../../styles.sass'
-@import '../../../shared.sass'
+@import '../../../shared.sass';
 
-//.years
-//  // font-size: 50%
-//  font-size: .75rem
-//  color: gray
+.years {
+  // font-size: 50%
+  font-size: .75rem;
+  color: gray;
+}
 
- //.projectRole
- //  display: inline-block
-//   font-size: 66%
+ .projectRole {
+   display: inline-block;
+   font-size: 66%;
+ }
 
-//.section-title
-//  // page-break-before: always
-//  page-break-before: auto
+.section-title {
+  // page-break-before: always
+  page-break-before: auto;
+}
+
 //
 //.organisation
 //  margin: 0
@@ -47,8 +51,10 @@
 //    margin-left: 10px
 //    display: block
 //
-//app-work-project
-//  page-break-before: auto
-//  &:first-child
-//    background-color: red
-//
+app-work-project {
+  page-break-before: auto;
+  &:first-child {
+    background-color: red;
+    // test
+  }
+}
