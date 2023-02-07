@@ -7,7 +7,7 @@ import {
 import {
   UserSkillLevelsHaveWant,
   UserSkillLevelsHaveWant2,
-} from '../../TopicFriendsShared/skills/skills-core/user-skills';
+} from '../../TopicFriendsShared2/skills/skills-core/user-skills';
 
 @Component({
   selector: 'app-topic-skill',

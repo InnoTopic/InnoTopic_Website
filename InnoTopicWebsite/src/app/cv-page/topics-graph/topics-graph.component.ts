@@ -7,7 +7,7 @@ import {
 import {
   Topics,
   topics,
-} from '../../TopicFriendsShared/topics-core/topics-data';
+} from '../../TopicFriendsShared2/topics-core/topics-data';
 import { errorAlert } from '../../utils/utils';
 
 

@@ -7,9 +7,9 @@ import {
   Output,
   ViewEncapsulation,
 } from '@angular/core';
-import { HighlightService } from '../../TopicFriendsShared/topics-core/highlight.service';
-import { Topic } from '../../TopicFriendsShared/topics-core/Topic';
-import { TopicsService } from '../../TopicFriendsShared/topics-core/topics.service';
+import { HighlightService } from '../../TopicFriendsShared2/topics-core/highlight.service';
+import { Topic } from '../../TopicFriendsShared2/topics-core/Topic';
+import { TopicsService } from '../../TopicFriendsShared2/topics-core/topics.service';
 
 export class TopicInterest {
   // idea: hourly / per-minute rates (in Pro version? :) )

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
-import { TopicsCoreModule } from '../TopicFriendsShared/topics-core/topics-core.module';
+import { TopicsCoreModule } from '../TopicFriendsShared2/topics-core/topics-core.module';
 import { TopicLogoComponent } from './topic-logo/topic-logo.component';
 import { TopicTagComponent } from './topic-tag/topic-tag.component';
 

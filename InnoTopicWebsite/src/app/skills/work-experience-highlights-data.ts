@@ -1,7 +1,7 @@
 import {
   t,
   Topics,
-} from '../TopicFriendsShared/topics-core/topics-data';
+} from '../TopicFriendsShared2/topics-core/topics-data';
 import { MapToTopics } from './work-experience';
 
 //

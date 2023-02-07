@@ -5,8 +5,8 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
 } from '@angular/core';
-import { Topic } from '../../TopicFriendsShared/topics-core/Topic';
-import { TopicsService } from '../../TopicFriendsShared/topics-core/topics.service';
+import { Topic } from '../../TopicFriendsShared2/topics-core/Topic';
+import { TopicsService } from '../../TopicFriendsShared2/topics-core/topics.service';
 
 export const defaultIconHeight = 18
 

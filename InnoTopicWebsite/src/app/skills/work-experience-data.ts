@@ -1,4 +1,4 @@
-import { t } from '../TopicFriendsShared/topics-core/topics-data';
+import { t } from '../TopicFriendsShared2/topics-core/topics-data';
 import {
   beginner,
   advanced,

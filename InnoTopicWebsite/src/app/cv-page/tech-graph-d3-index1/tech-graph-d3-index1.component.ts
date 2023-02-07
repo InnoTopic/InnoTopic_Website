@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation} from '@angular/core';
-import { topics } from '../../TopicFriendsShared/topics-core/topics-data';
+import { topics } from '../../TopicFriendsShared2/topics-core/topics-data';
 declare const d3: any;
 declare const $: any;
 
