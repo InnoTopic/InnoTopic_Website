@@ -1,4 +1,6 @@
-@import '~@angular/material/theming';
+//@import '~@angular/material/theming';
+//@use '@angular/material' as mat;
+
 // https://material.angular.io/guide/theming
 
 // Plus imports for other components in your app.
@@ -6,27 +8,31 @@
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // **Be sure that you only ever include this mixin once!**
-@include mat-core();
+//@include mat.core();
 
-// LIGHT THEME
-$light-primary: mat-palette($mat-cyan, 600);
-$light-accent: mat-palette($mat-deep_orange, A200, A100, A400);
-$light-warn: mat-palette($mat-red);
 
-$light-theme: mat-light-theme($light-primary, $light-accent, $light-warn);
 
-@include angular-material-theme($light-theme);
 
-// DARK THEME
-$dark-primary: mat-palette($mat-brown);
-$dark-accent: mat-palette($mat-amber, A200, A100, A400);
-$dark-warn: mat-palette($mat-deep-orange);
-$dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 
-/* Include the alternative theme styles inside of a block with a CSS class.
-You can make this CSS class whatever you want. In this example, any component
-inside of an element with  `.dark-theme` will be affected by this alternate
-dark theme instead of the default theme. */
-.dark-theme {
-  @include angular-material-theme($dark-theme);
-}
+//// LIGHT THEME
+//$light-primary: mat-palette($mat-cyan, 600);
+//$light-accent: mat-palette($mat-deep_orange, A200, A100, A400);
+//$light-warn: mat-palette($mat-red);
+//
+//$light-theme: mat-light-theme($light-primary, $light-accent, $light-warn);
+//
+//@include angular-material-theme($light-theme);
+//
+//// DARK THEME
+//$dark-primary: mat-palette($mat-brown);
+//$dark-accent: mat-palette($mat-amber, A200, A100, A400);
+//$dark-warn: mat-palette($mat-deep-orange);
+//$dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+//
+///* Include the alternative theme styles inside of a block with a CSS class.
+//You can make this CSS class whatever you want. In this example, any component
+//inside of an element with  `.dark-theme` will be affected by this alternate
+//dark theme instead of the default theme. */
+//.dark-theme {
+//  @include angular-material-theme($dark-theme);
+//}

@@ -1,31 +1,31 @@
-@import '../../styles.sass';
-
-div {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-
-  @media screen and (max-width: $break-medium) {
-    flex-direction: column;
-    margin: 6px;
-  }
-}
-
-app-personal-data {
-  width: 48%;
-}
-
-app-external-profiles {
-  width: 52%;
-}
-
-app-personal-data,
-app-external-profiles {
-  @media screen and (max-width: $break-medium) {
-    width: 100%;
-  }
-}
-
-section {
-  padding: 10px 0;
-}
+//@import '../../styles.sass';
+//
+//div {
+//  display: flex;
+//  align-items: center;
+//  margin: 10px 0;
+//
+//  @media screen and (max-width: $break-medium) {
+//    flex-direction: column;
+//    margin: 6px;
+//  }
+//}
+//
+//app-personal-data {
+//  width: 48%;
+//}
+//
+//app-external-profiles {
+//  width: 52%;
+//}
+//
+//app-personal-data,
+//app-external-profiles {
+//  @media screen and (max-width: $break-medium) {
+//    width: 100%;
+//  }
+//}
+//
+//section {
+//  padding: 10px 0;
+//}

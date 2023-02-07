@@ -42,7 +42,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": true,
+              "optimization": true  ,
               "outputHashing": "all",
               "sourceMap": false,
               "extractCss": true,
