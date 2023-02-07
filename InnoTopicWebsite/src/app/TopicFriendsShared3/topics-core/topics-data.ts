@@ -198,7 +198,7 @@ export class Frontend {
   Redux = t()
   "Redux Toolkit" = t(`redux--toolkit.svg`)
   Recoil = tWide('recoil-icon')
-  Pinia = tWide()
+  Pinia = tWide() // vue state management
 
   React = t()
   Preact = t()
