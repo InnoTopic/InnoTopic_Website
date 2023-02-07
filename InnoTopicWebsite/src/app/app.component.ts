@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { config } from './config';
 
 import { HostBinding, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
 
   title = 'InnoTopic.com';
 
-  toggleControl = new FormControl(false);
+  toggleControl = new UntypedFormControl(false);
 
   ngOnInit(): void {
     this.toggleControl.valueChanges.subscribe((darkMode) => {
