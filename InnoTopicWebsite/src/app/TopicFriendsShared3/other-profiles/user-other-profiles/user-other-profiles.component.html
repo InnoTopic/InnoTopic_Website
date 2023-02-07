@@ -1,0 +1,25 @@
+<!--<mat-card style="margin-bottom: 10px">-->
+
+<!--  <mat-card-title>Other Profiles (optional, but recommended)</mat-card-title>-->
+
+<!--<mat-card-content>-->
+
+<!--<div [formGroup]="formGroup">-->
+
+<!--  <ng-template [ngIf]="! otherProfiles" >Loading external profiles...</ng-template>-->
+
+<ng-container
+  *ngFor="let descriptor of descriptorsList"
+>
+  <app-other-profile-user-name
+    *ngIf="formControls[descriptor.id]; let value"
+    [descriptor]="descriptor"
+    [parentFormGroup]="formGroup"
+    [thisFormControl]="value"
+  ></app-other-profile-user-name>
+
+</ng-container>
+<!--</div>-->
+
+<!--</mat-card-content>-->
+<!--</mat-card>-->

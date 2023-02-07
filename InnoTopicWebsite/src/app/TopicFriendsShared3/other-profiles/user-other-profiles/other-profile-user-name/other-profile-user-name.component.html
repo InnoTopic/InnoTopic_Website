@@ -1,0 +1,51 @@
+<!--<div-->
+<!--  [formGroup]="parentFormGroup"-->
+<!--&gt;-->
+
+<!--  <mat-form-field *ngIf="isEditable">-->
+<!--    <mat-placeholder>-->
+<!--      <mat-icon>person</mat-icon>-->
+<!--      <b>{{descriptor.websiteName}}</b>-->
+<!--      &nbsp;Profile-->
+<!--      <span class="input-remark">-->
+<!--        ({{descriptor.whatIsEnough}})-->
+<!--      </span>-->
+<!--    </mat-placeholder>-->
+<!--    <span class="tf-user-other-profile-prefix" matPrefix style="text-align: center">-->
+<!--      <app-user-other-profile-icon-->
+<!--        style="display: inline"-->
+<!--        [descriptor]="descriptor"-->
+<!--      ></app-user-other-profile-icon>-->
+<!--      &nbsp;-->
+<!--      {{descriptor.urlPrefix.replace('https://', '')}}-->
+<!--    </span>-->
+
+<!--    <input-->
+<!--      matInput-->
+<!--      [formControl]="thisFormControl"-->
+<!--    >-->
+<!--  </mat-form-field>-->
+
+
+  <p
+    *ngIf="! isEditable"
+  >
+    <span
+      class="other-profile-icon-container"
+    >
+      <app-user-other-profile-icon
+        [descriptor]="descriptor"
+      ></app-user-other-profile-icon>
+    </span>
+    <a
+      *ngIf="fullUrl"
+      href="{{fullUrl}}"
+      target="_blank"
+    >
+      {{urlNoProtocol}}
+    </a>
+  </p>
+
+  <!--</p>-->
+
+<!--</div>-->

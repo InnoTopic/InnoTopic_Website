@@ -1,0 +1,23 @@
+<!--<i-->
+<!--  *ngIf="descriptor.iconClass"-->
+<!--  class="icon {{descriptor.iconClass}}"-->
+<!--&gt;</i>-->
+
+<!--<svg viewBox="0 0 522 584" style="width: 32px; height: 32px" xmlns="http://www.w3.org/2000/svg">-->
+<!--  <use [attr.href]="descriptor.iconImg">-->
+<!--  </use>-->
+<!--</svg>-->
+
+<!--<img-->
+<!--  *ngIf="descriptor.iconImg"-->
+<!--  class="otherProfileIcon"-->
+<!--  src="{{descriptor.iconImg}}"-->
+<!--&gt;-->
+
+<div
+  style="color: orange"
+  *ngIf="descriptor.icon"
+  class="otherProfileIcon"
+  [innerHtml]="domSanitizer.bypassSecurityTrustHtml(descriptor.icon)">
+></div>
+<!--<img src="{{descriptor.iconImg}}">-->
