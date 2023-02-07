@@ -3,9 +3,9 @@ import {
   Input,
   OnInit,
 } from '@angular/core';
-import { TopicCategory } from '../../TopicFriendsShared2/topics-core/topics';
-import { topicCategoriesArray } from '../../TopicFriendsShared2/topics-core/topics-data';
-import { TopicsService } from '../../TopicFriendsShared2/topics-core/topics.service';
+import { TopicCategory } from '../../TopicFriendsShared3/topics-core/topics';
+import { topicCategoriesArray } from '../../TopicFriendsShared3/topics-core/topics-data';
+import { TopicsService } from '../../TopicFriendsShared3/topics-core/topics.service';
 import {
   getDictionaryValuesAsArray,
   setIdsFromKeys,

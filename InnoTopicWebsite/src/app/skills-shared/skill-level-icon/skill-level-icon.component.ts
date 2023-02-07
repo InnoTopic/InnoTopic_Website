@@ -3,7 +3,7 @@ import {
   Input,
   OnInit,
 } from '@angular/core';
-import { UserSkillLevelEnum } from '../../TopicFriendsShared2/skills/skills-core/user-skills';
+import { UserSkillLevelEnum } from '../../TopicFriendsShared3/skills/skills-core/user-skills';
 import { skillsIconsSignal } from '../skill-levels-icons/skill-levels-icons.component';
 
 @Component({

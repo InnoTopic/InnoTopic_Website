@@ -1,4 +1,4 @@
-import { UserOtherProfiles } from '../../TopicFriendsShared2/other-profiles/other-profiles-core/UserOtherProfiles';
+import { UserOtherProfiles } from '../../TopicFriendsShared3/other-profiles/other-profiles-core/UserOtherProfiles';
 
 export const externalProfilesKarol: UserOtherProfiles = {
   eMail: {

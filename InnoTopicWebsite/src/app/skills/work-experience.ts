@@ -1,5 +1,5 @@
-import { UserSkillLevelsHaveWant2 } from '../TopicFriendsShared2/skills/skills-core/user-skills';
-import { Topics } from '../TopicFriendsShared2/topics-core/topics-data';
+import { UserSkillLevelsHaveWant2 } from '../TopicFriendsShared3/skills/skills-core/user-skills';
+import { Topics } from '../TopicFriendsShared3/topics-core/topics-data';
 import { setIdsFromKeys } from '../utils/dictionary-utils';
 
 export class WorkExperienceByStatus {
