@@ -100,7 +100,7 @@ export const highlights = {
     "Redux": {},
     "Redux Toolkit": {},
     "Recoil": {},
-    // TODO: jotai
+    "Jotai": {},
     "NgRx": {},
     "NGXS": {},
     "Pinia": {},
@@ -165,6 +165,7 @@ export const highlights = {
     "Jupyter": {},
     "Google Colaboratory": {},
     "Hugging Face": {},
+    "NumPy": {},
     "PyTorch": {},
     "TensorFlow": {},
     "Keras": {},
@@ -205,6 +206,9 @@ export const highlights = {
     "LinkedIn": {},
     "Meetup": {},
     "SurrealDB": {},
+    "Xata": {},
+    "Dgraph": {},
+    "Fauna": {},
     "Algolia": {},
     // TODO JetBrains Fleet
 

@@ -310,7 +310,7 @@ export const topicsOld = [
   tag('Digital Marketing', null),
   tag('Django Rest Framework', null, 'http://www.django-rest-framework.org/'),
   tag('Python pandas', null, 'http://pandas.pydata.org/'),
-  tag('NumPy', null, 'http://www.numpy.org/'),
+  // tag('NumPy', null, 'http://www.numpy.org/'),
   tag('Payment Processing', null),
   tag('Digital Payments', null),
   tag('Mobile Payments', null),

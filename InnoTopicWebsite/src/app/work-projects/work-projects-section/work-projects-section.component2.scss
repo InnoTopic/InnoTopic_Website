@@ -1,6 +1,6 @@
 //@import '../../../app-themes.scss'
 //@import '../../../styles.sass'
-@import '../../../shared.sass';
+@import '../../../shared.scss';
 
 .years {
   // font-size: 50%
@@ -51,10 +51,11 @@
 //    margin-left: 10px
 //    display: block
 //
-app-work-project {
+app-work-project  {
   page-break-before: auto;
   &:first-child {
     background-color: red;
     // test
+    // test 2
   }
 }

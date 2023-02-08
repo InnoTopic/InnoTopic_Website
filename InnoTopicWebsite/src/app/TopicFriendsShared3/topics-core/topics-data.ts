@@ -198,6 +198,7 @@ export class Frontend {
   Redux = t()
   "Redux Toolkit" = t(`redux--toolkit.svg`)
   Recoil = tWide('recoil-icon')
+  Jotai = tWide('jotai')
   Pinia = tWide() // vue state management
 
   React = t()
@@ -543,6 +544,9 @@ export class Databases {
   Oracle = tWide()
   IndexedDB = tNoIcon()
   SurrealDB = t('surrealdb-icon')
+  Xata = t('xata-icon')
+  Dgraph = t('dgraph-icon')
+  Fauna = t('fauna-icon')
   // TODO: sqlite
 }
 
@@ -676,6 +680,7 @@ export class AI {
   'Stability AI' = tWide('stability-ai-vectorizer.ai.svg') // https://github.com/LAION-AI/Open-Assistant https://www.linkedin.com/company/stability-ai/
   'Google Colaboratory' = tWide('google-colab-icon-wide.svg')
   TensorFlow = t()
+  NumPy = t()
   'Hugging Face' = tWide('huggingface_logo-noborder.svg')
   Jupyter = tWide('jupyter-icon2')
   PyTorch = tWide('pytorch-icon')
