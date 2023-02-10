@@ -58,9 +58,8 @@ export class Frontend {
   'Stylus' = tWide()
   'Less' = tWide()
   'Sass' = tWide()
+  'Tailwind CSS' = tWide('tailwindcss-icon.svg')
   // TODO: https://www.pollen.style/
-  // TODO: alpine.js (added logo svg)
-  // TODO: Lit elements (Moi)
 
   PouchDB = t({categories: 'Databases'})
   PrimeNG = t({
@@ -83,9 +82,11 @@ export class Frontend {
   })
   xplat = tWide('xplat-logo.png', [899, 393])
   'Web Components' = tWide('webcomponents')
+  "Lit" = tWide('lit-icon.svg') /* lit elements (Moises) */
   // TODO: https://www.webcomponents.org/ logo
   WebPack = t()
   Vite = t('vitejs')
+  "Speedy Web Compiler (SWC)" = tWide('swc')
   Turbopack = t('turbopack-icon.svg')
   "esbuild" = t()
   Turborepo = t('turborepo-icon.svg')
@@ -455,9 +456,9 @@ export class Languages {
   PureScript = tWide('purescript-icon')
   ReScript = tWide('rescript-icon')
   Imba = tWide('imba-icon')
+  'Mint Lang' = tWide('mint-lang-icon-wide.svg')
   Zig = tWide('zig-icon.svg')
   Nim = tWide('nim-lang-icon-wide.svg')
-  'Mint Lang' = tWide('mint-lang-icon-wide.svg')
   Rust = t()
   WebAssembly = t({
     categories: "Frontend",
@@ -476,7 +477,6 @@ export class Languages {
       Square -- https://ocaml.org/img/OCaml_Sticker.svg */)
   'R Language' = tWide('r-lang.svg')
   'V Language' = t('v-logo.svg')
-  // 'Nim Language': https://nim-lang.org/,
   'D Language' = tWide('dlang-simple'/*, 'https://en.wikipedia.org/wiki/File:D_Programming_Language_logo.svg'*/)
   Julia = tWide('julia-dots-no-text.svg', /*{
     logo: ,
@@ -539,6 +539,7 @@ export class Cloud {
     /* logos SVG-s: https://googlecloudcheatsheet.withgoogle.com/ */
   })
   Algolia = t('algolia-cropped.svg')
+  tRPC = t('trpc-icon.svg') // end-to-end typescript typesafe; powered by Vercel. https://trpc.io/media (RIGHT CLICK on logo! I'm impressed :D)
   AWS = tWide()
   "Microsoft Azure" = t('microsoft-azure')
 }

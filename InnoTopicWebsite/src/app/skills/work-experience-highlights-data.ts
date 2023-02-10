@@ -90,7 +90,9 @@ export const highlights = {
     "Sass": {},
     "Less": {},
     "Stylus": {},
+    "Tailwind CSS": {},
     "Web Components": {},
+    "Lit": {},
     "Stencil": {},
     // TODO https://mitosis.builder.io/?outputTab=G4VwpkA%3D -- Write components once, run everywhere. Compiles to Vue, React, Solid, Angular, Svelte, and more.
     "Capacitor": {},
@@ -118,6 +120,7 @@ export const highlights = {
     "Turbopack": {},
     "Turborepo": {},
     "esbuild": {},
+    "Speedy Web Compiler (SWC)": {},
     "Vite": {}, // TODO: Vitest, Playwright, https://testing-library.com/, https://github.com/pocketbase/pocketbase
     "pnpm": {},
     "Docker": {},
@@ -211,12 +214,14 @@ export const highlights = {
     "YouTube": {},
     "LinkedIn": {},
     "Meetup": {},
+    // ==== Databases:
     "SurrealDB": {},
     "Xata": {},
     "Dgraph": {},
     "Fauna": {},
     "RethinkDB": {},
     "Algolia": {},
+    "tRPC": {},
     // TODO JetBrains Fleet
 
     //
@@ -229,7 +234,6 @@ export const highlights = {
     // TODO payoneer, pm2, pnpm, postman, recoil
     // TODO: Docusaurus; 40 stars on GH
     // TODO immer
-    // todo: lit elements
     // TODO:
     // TODO polymer
     // TODO Elastic / Kibana / elastic stack - (ELK ; logstack, beats) !!! new logo
@@ -254,9 +258,6 @@ export const highlights = {
    - Lottie
    NuxtJS ? (Vue, inspired by Next.js) - https://www.npmjs.com/package/nuxt - https://github.com/nuxt/framework TypeScript
    TODO some DevOps, like Terraform or other popular / rising
-
-    TODO lit elements; lit-icon.svg
-
   *  */
   /** This should just be languages / platforms / ecosystems */
   broad: topics({ /* maybe distinguish broad from polyglot? This is more past stuff */
@@ -286,8 +287,6 @@ export const highlights = {
     'Raku': {},
     'Zig': {},
     'Nim': {},
-    'Mint Lang': {},
-    // TODO: mint lang
     'Bash': {},
     'R Language': {},
     'Rust': {},
@@ -302,10 +301,11 @@ export const highlights = {
     Haskell: {},
     'Lisp': {},
     'OCaml': {},
-    'Elm': {},
     'PureScript': {},
     'ReScript': {},
+    'Mint Lang': {},
     'Imba': {},
+    'Elm': {},
     'Clojure': {},
     'Fortran': {},
     // https://pypl.github.io/PYPL.html
