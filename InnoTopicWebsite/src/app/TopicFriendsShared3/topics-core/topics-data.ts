@@ -432,6 +432,8 @@ export class Languages {
       'https://twitter.com/ThePSF'
     )
   })
+  Hack = tWide()
+  Haxe = t()
   Scala = t()
   Clojure = t()
   Perl = t()
@@ -445,7 +447,10 @@ export class Languages {
   Dart = t()
   Groovy = tWide()
   Elm = t()
+  PureScript = tWide('purescript-icon')
   Zig = tWide('zig-icon.svg')
+  Nim = tWide('nim-lang-icon-wide.svg')
+  'Mint Lang' = tWide('mint-lang-icon-wide.svg')
   Rust = t()
   WebAssembly = t({
     categories: "Frontend",
@@ -547,6 +552,7 @@ export class Databases {
   Xata = t('xata-icon')
   Dgraph = t('dgraph-icon')
   Fauna = t('fauna-icon')
+  RethinkDB = tWide('rethinkdb')
   // TODO: sqlite
 }
 
@@ -673,6 +679,7 @@ export class Crypto {
 
 /** AI / Machine Learning ML */
 export class AI {
+  "GitHub Copilot" = tWide('github-copilot.svg')
   OpenAI = t('openai-icon')
   'Open Assistant' = tWide('open-assistant-icon-wide.svg') // https://github.com/LAION-AI/Open-Assistant
   'LAION' = t()

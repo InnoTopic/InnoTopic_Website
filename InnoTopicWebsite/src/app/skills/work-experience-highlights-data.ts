@@ -61,7 +61,6 @@ export const highlights = {
     could split into frontend-what-I-really-use and frontend-broad
   */
   utility: topics({
-    // FIXME: openai
     "Gridsome": {} /* A Jamstack framework for Vue.js */,
     "Svelte": {},
     "Qwik": {},
@@ -169,6 +168,7 @@ export const highlights = {
     "PyTorch": {},
     "TensorFlow": {},
     "Keras": {},
+    "GitHub Copilot": {},
     "OpenAI": {},
     "Open Assistant": {},
     "LAION": {},
@@ -209,6 +209,7 @@ export const highlights = {
     "Xata": {},
     "Dgraph": {},
     "Fauna": {},
+    "RethinkDB": {},
     "Algolia": {},
     // TODO JetBrains Fleet
 
@@ -272,11 +273,14 @@ export const highlights = {
     "Ruby": {},
     'Crystal': {},
     "Python": {},
+    'Haxe': {},
+    'Hack': {},
     'PHP': {},
     'Perl': {},
     'Raku': {},
     'Zig': {},
-    // TODO: nim
+    'Nim': {},
+    'Mint Lang': {},
     // TODO: mint lang
     'Bash': {},
     'R Language': {},
@@ -286,13 +290,14 @@ export const highlights = {
     'V Language': {},
     'Julia': {},
     'Lua': {},
-    // 'Eiffel': {},
-    // 'Erlang': {},
+    'Eiffel': {},
+    'Erlang': {},
     'Elixir': {},
     Haskell: {},
     'Lisp': {},
     'OCaml': {},
     'Elm': {},
+    'PureScript': {},
     'Clojure': {},
     'Fortran': {},
     // https://pypl.github.io/PYPL.html
