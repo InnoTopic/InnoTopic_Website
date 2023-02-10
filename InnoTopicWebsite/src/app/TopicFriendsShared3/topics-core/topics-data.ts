@@ -87,6 +87,7 @@ export class Frontend {
   WebPack = t()
   Vite = t('vitejs')
   Turbopack = t('turbopack-icon.svg')
+  "esbuild" = t()
   Turborepo = t('turborepo-icon.svg')
   pnpm = t('pnpm-icon')
   Angular = t({
@@ -453,6 +454,7 @@ export class Languages {
   Elm = t()
   PureScript = tWide('purescript-icon')
   ReScript = tWide('rescript-icon')
+  Imba = tWide('imba-icon')
   Zig = tWide('zig-icon.svg')
   Nim = tWide('nim-lang-icon-wide.svg')
   'Mint Lang' = tWide('mint-lang-icon-wide.svg')

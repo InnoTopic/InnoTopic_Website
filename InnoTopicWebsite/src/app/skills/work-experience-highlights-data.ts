@@ -117,6 +117,7 @@ export const highlights = {
     "Netlify": {},
     "Turbopack": {},
     "Turborepo": {},
+    "esbuild": {},
     "Vite": {}, // TODO: Vitest, Playwright, https://testing-library.com/, https://github.com/pocketbase/pocketbase
     "pnpm": {},
     "Docker": {},
@@ -304,6 +305,7 @@ export const highlights = {
     'Elm': {},
     'PureScript': {},
     'ReScript': {},
+    'Imba': {},
     'Clojure': {},
     'Fortran': {},
     // https://pypl.github.io/PYPL.html
