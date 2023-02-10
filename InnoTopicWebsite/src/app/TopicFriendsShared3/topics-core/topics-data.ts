@@ -166,6 +166,7 @@ export class Frontend {
   'SolidJS' = t('solidjs-icon')
   'Qwik' = t('qwik')
   'Astro' = t('astro-icon.svg')
+  "Inferno" = t()
   'Mithril' = t()
   'Marko' = tWide('marko-cropped.svg')
   'Alpine.js' = tWide('alpinejs-icon.svg')
@@ -364,6 +365,9 @@ export class Tools {
   'PandaDoc' = tNoIcon() /* FIXME logo */
   'Datadog' = t('datadog-icon')
   'Dynatrace' = t('dynatrace-icon')
+  'Sentry' = t('sentry-icon')
+  'Snyk' = tWide()
+  'CodeSee' = tWide('codesee-icon')
   'Netlify' = t()
   'VirtualBox' = t({
     iconUrl: 'https://icons8.com/icons/set/oracle-vm-virtualbox'
@@ -448,6 +452,7 @@ export class Languages {
   Groovy = tWide()
   Elm = t()
   PureScript = tWide('purescript-icon')
+  ReScript = tWide('rescript-icon')
   Zig = tWide('zig-icon.svg')
   Nim = tWide('nim-lang-icon-wide.svg')
   'Mint Lang' = tWide('mint-lang-icon-wide.svg')
@@ -463,11 +468,11 @@ export class Languages {
   Eiffel = tWide('eiffel-no-text.svg')
   Erlang = tWide('erlang-no-text.svg')
   Elixir = tWide('elixir-lang-icon.svg')
-  Haskell = t('haskell-icon')
+  Haskell = tWide('haskell-icon')
   Lisp = tWide('lisp-logo.svg')
   OCaml = tWide('ocaml-no-text.svg'/* https://ocaml.org/docs/logos.html  http://ocaml.org/logo/Colour/SVG/colour-logo.svg
       Square -- https://ocaml.org/img/OCaml_Sticker.svg */)
-  'R Language' = t('r-lang.svg')
+  'R Language' = tWide('r-lang.svg')
   'V Language' = t('v-logo.svg')
   // 'Nim Language': https://nim-lang.org/,
   'D Language' = tWide('dlang-simple'/*, 'https://en.wikipedia.org/wiki/File:D_Programming_Language_logo.svg'*/)
@@ -667,13 +672,15 @@ export class Other {
   // TODO: google docs
 }
 
+/** crypto / blockchain / decentralized */
 export class Crypto {
   Bitcoin = t()
   Ethereum = t()
   Solidity = t()
   "Web3" = t()
   "web3.js" = t('web3js')
-  "ethers.js" = t('ethers.svg')
+  "ethers.js" = tWide('ethers.svg')
+  "Solid" = tWide() // https://solidproject.org/ (re-decentralizing the web)
 }
 
 
