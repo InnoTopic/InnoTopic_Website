@@ -34,6 +34,7 @@ const routes: Routes = [
   {
     path: 'tech-graph-d3-index1',
     component: TechGraphD3Index1Component,
+    /* FCK, no lazy loading; move to Ionic pages anyway */
   },
 
   { path: '**', redirectTo: 'karol-depka' /* FIXME: does not work? */ },

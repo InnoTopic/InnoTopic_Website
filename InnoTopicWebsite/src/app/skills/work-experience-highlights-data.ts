@@ -19,7 +19,6 @@ export const highlights = {
   // TODO: Electron (near Ionic) here and in experience
   // TODO: chrome extensions
   // TODO: svg-porn
-  // TODO: tailwind
   // TODO: Smashing Magazine (has svg logo in logos github repo), near figma somewhere
   // TODO: css-tricks
   // could split e.g. frontend on the left; backend on the right (TypeScript in the middle)
@@ -91,6 +90,8 @@ export const highlights = {
     "Less": {},
     "Stylus": {},
     "Tailwind CSS": {},
+    "Windi CSS": {},
+    "Bulma": {},
     "Web Components": {},
     "Lit": {},
     "Stencil": {},
@@ -103,6 +104,7 @@ export const highlights = {
     "Redux Toolkit": {},
     "Recoil": {},
     "Jotai": {},
+    "Zustand": {},
     "NgRx": {},
     "NGXS": {},
     "Pinia": {},
@@ -126,11 +128,15 @@ export const highlights = {
     "Docker": {},
     "GraalVM": {},
     /* TODO: Spring Framework */
+    "Kong": {},
     "GraphQL": {},
     "Apollo": {}, /* TODO Apollo Studio? */
+    'Altair GraphQL Client': {},
     "Swagger": {},
+    "tRPC": {},
     /* FIXME: more backend: OpenAPI, maybe JSON Schema, websockets, socket.io maybe */
-    "MongoDB": {}, /* TODO: Prisma */
+    "StackShare": {},
+    "Openbase": {},
     "AWS": {},
     "Microsoft Azure": {},
     // TODO FIXME Google Cloud
@@ -177,6 +183,8 @@ export const highlights = {
     "TensorFlow": {},
     "Keras": {},
     "GitHub Copilot": {},
+    "OpenAI Codex": {},
+    "Microsoft Bing": {},
     "OpenAI": {},
     "Open Assistant": {},
     "LAION": {},
@@ -211,28 +219,33 @@ export const highlights = {
     // mypy - python static type checker
     // DatasSpell (data science) Jupyter; kaggle
     "Visual Studio Code": {},
+
+    // ==== Social / Content:
     "YouTube": {},
     "LinkedIn": {},
     "Meetup": {},
-    // ==== Databases:
+    // ==== Databases (DB-s):
+    "Prisma": {},
+    "MongoDB": {},
+    "ArangoDB": {},
     "SurrealDB": {},
     "Xata": {},
     "Dgraph": {},
     "Fauna": {},
     "RethinkDB": {},
-    "Algolia": {},
-    "tRPC": {},
+    "RxDB": {},
+    "Algolia": {}, /* move closer with Elastic */ /* FIXME new logo*/
+    "MindsDB": {},
     // TODO JetBrains Fleet
 
     //
     // "RxJS": {}, -- no icon (can be ReactiveX)
-    // RxDB?
     // TODO: , Ng-bootstrap, material, angular-material
     // TODO: , Google Cloud Platform, Azure
     // TODO: Font Awesome
     // github actions, gitub copilot
-    // TODO payoneer, pm2, pnpm, postman, recoil
-    // TODO: Docusaurus; 40 stars on GH
+    // TODO payoneer, pm2, postman
+    // TODO: Docusaurus; 40k stars on GH
     // TODO immer
     // TODO:
     // TODO polymer
@@ -243,7 +256,7 @@ export const highlights = {
     // TODO: AppSheet
     // TODO: Appian, https://www.gartner.com/reviews/market/enterprise-low-code-application-platform
     // https://www.google.com/search?q=gartner+nocode+quadrants&sxsrf=ALiCzsYzQgM6ji258wt8ABwXX5oLXHpKFA%3A1667484719597&ei=L8xjY6WBJIr_7_UP-_ClgAY&ved=0ahUKEwjl1ITTmJL7AhWK_7sIHXt4CWAQ4dUDCA8&uact=5&oq=gartner+nocode+quadrants&gs_lp=Egxnd3Mtd2l6LXNlcnC4AQP4AQEyBhAAGBYYHjIFEAAYhgMyBRAAGIYDMgUQABiGAzIFEAAYhgPCAgoQABhHGNYEGLADwgIFEAAYgATCAggQABgWGB4YD5AGCEj4DVBuWIgNcAF4AcgBAJABAJgBhwGgAfoIqgEDMS454gMEIE0YAeIDBCBBGADiAwQgRhgAiAYB&sclient=gws-wiz-serp#imgrc=gQRhhPExJFw07M
-    // bubble, outSystems, Mendix, ZoHo builder
+    // outSystems, Mendix, ZoHo builder
     // TODO: smthlike Ragic?
     // Smth like WebFlow / website designer tools; https://www.youtube.com/watch?v=2Ti9_zALVsA&ab_channel=ArnauRos
     // EditorX / WiX ?

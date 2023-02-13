@@ -52,6 +52,10 @@ export class Topic {
     public categories?: any,
     public ecosystem?: any,
     public logoSmallIcon?: string,
+    public description?: string,
+    /** allows more free-form draft text than description or tagline */
+    public comments?: string,
+    public tagline?: string,
 ) {
     // console.log('new Topic(', name)
     this.setNameAndLogoAndId(name, logo);

@@ -138,7 +138,7 @@ export class WorkOrganisationsAndProjectsData {
   'AIG (as Consultant)' = org({
     flags: 'pl de at es gb us', /* FIXME */
     time: [2017, 2018],
-    logoFileName: 'AIG_logo.svg.png',
+    logoFileName: 'AIG_logo.svg.png', /* USE https://vectorizer.ai/ ! works really well */
     linkedInRecommendations: 2,
     locations: 'Heilbronn - Germany, Málaga - Spain (remote)',
     projects: {

@@ -2,6 +2,7 @@
 @import '../../../styles.sass';
 @import '../../../shared.scss';
 
+
 .years {
   // font-size: 50%
   font-size: .75rem;
@@ -20,9 +21,10 @@
   // test
 }
 
-//
-//.organisation
-//  margin: 0
+
+.organisation {
+  margin: 0;
+}
 //  &:not(:last-child)
 //    // page-break-after: always
 //    page-break-after: auto

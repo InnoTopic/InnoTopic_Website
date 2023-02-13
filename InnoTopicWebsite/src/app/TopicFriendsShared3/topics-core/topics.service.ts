@@ -10,6 +10,31 @@ import { topicsArr } from './topics-data';
 import { topicsOld } from './topics-data-old';
 
 
+interface IdToTopicMap {
+  [key: string]: string;
+}
+
+interface TopicMaps {
+  [key: string]: IdToTopicMap;
+}
+
+function checkForDuplicates(maps: TopicMaps): string[] {
+  const seenKeys: Set<string> = new Set();
+  const duplicates: string[] = [];
+
+  Object.values(maps).forEach((map) => {
+    Object.keys(map).forEach((key) => {
+      if (seenKeys.has(key)) {
+        duplicates.push(key);
+      } else {
+        seenKeys.add(key);
+      }
+    });
+  });
+
+  return duplicates;
+}
+
 @Injectable()
 export class TopicsService {
 

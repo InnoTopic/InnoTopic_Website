@@ -40,6 +40,13 @@ export function t(topicData?: TopicDataOrLogo, iconWebsiteTodo?: string | string
   return topic
 }
 
+
+/* Just a placeholder and redirect */
+export function tNarrow(topicData?: TopicDataOrLogo, logoSize?: number[]) {
+  return tWide(topicData, logoSize)
+}
+
+
 export function tWide(topicData?: TopicDataOrLogo, logoSize?: number[]) {
   topicData = coerceLogoToTopicData(topicData);
   return t({...topicData, logoTypeWide: true, logoSize})
@@ -49,6 +56,15 @@ export function tNoIcon(topicData?: TopicData) {
   return t({...topicData, logo: null})
 }
 
+
+export class Frontend_Visual {
+  Bulma = tNarrow(/* {tagline: 'Modern CSS framework based on Flexbox'} */)
+}
+
+/** TODO split (here, not in highlights) into
+ * Frontend - UI/visual (bigger icons for me) (ui libs - where is the line - if it deals with HTML markup; or generates smth visual html/css/svg etc; sass, webgl; maybe docusaurus)
+ *  - another criterion: stuff that I actually use for my own apps; e.g. I wouldnt care too much about e.g. Business Intelligence (yest?)
+ * Frontend - Other (includes libs like lodash, state mgmt) */
 export class Frontend {
   'HTML5' = t({logo: 'html-5.svg'})
   'CSS3' = t({logo: 'css-3.svg'})
@@ -59,6 +75,7 @@ export class Frontend {
   'Less' = tWide()
   'Sass' = tWide()
   'Tailwind CSS' = tWide('tailwindcss-icon.svg')
+  'Windi CSS' = tWide('windi-css')
   // TODO: https://www.pollen.style/
 
   PouchDB = t({categories: 'Databases'})
@@ -140,7 +157,7 @@ export class Frontend {
 
   Ionic = t({
     /* logos: https://ionicframework.com/press */
-    logo: 'ionic-icon.svg',
+    logo: 'ionic-light-logo-black.svg',
     urls: new TopicUrls(
       'https://ionicframework.com/',
       'https://en.wikipedia.org/wiki/Ionic_(mobile_app_framework)',
@@ -161,7 +178,7 @@ export class Frontend {
   'Electron' = t()
   'Expo' = t('expo-icon')
   'Vue.js' = t({logo: 'vue'})
-  'Nuxt' = t('nuxt-icon')
+  'Nuxt' = tWide('nuxt-icon')
   'Gridsome' = t({logo: 'gridsome-icon.svg'})
   'Svelte' = t('svelte-icon')
   // TODO Phoenix  https://www.phoenixframework.org/  supposedly most loved; https://github.com/phoenixframework/phoenix
@@ -202,6 +219,7 @@ export class Frontend {
   "Redux Toolkit" = t(`redux--toolkit.svg`)
   Recoil = tWide('recoil-icon')
   Jotai = tWide('jotai')
+  Zustand = t('zustand--logo512.png--vectorizer.ai.svg') // tagline: '🐻 Bear necessities for state management in React'
   Pinia = tWide() // vue state management
 
   React = t()
@@ -209,7 +227,7 @@ export class Frontend {
   Gatsby = t('Gatsby-Monogram.svg', /* https://www.gatsbyjs.com/guidelines/logo */)
   "Next.js" = t('nextjs-icon.svg')
   "Remix" = t('remix-icon.svg') /* https://remix.run/ */
-  // TODO: Chakra
+  // TODO: Chakra, Playwright
   GreenSock = t('greensock-icon.svg')
   Ember = tWide()
   WebSocket = t()
@@ -266,6 +284,7 @@ export class Backend {
   'Microservices' = tNoIcon()
   'TypeORM' = tNoIcon()
   'TypeGraphQL' = t(`typegraphql-icon.svg` /* https://github.com/MichalLytek/type-graphql/issues/824 */)
+  'Altair GraphQL Client' = t(`altair`) // https://altairgraphql.dev/
   'Apollo' = t(`apollostack.svg`)
   'Apollo Studio' = t(`apollostack.svg`)
 
@@ -275,6 +294,7 @@ export class Backend {
   })
   'NestJS' = t(`nest--logo-small.ede75a6b.svg`)
   'GraalVM' = tWide('graalvm-rgb-cropped.svg')
+  Kong = tWide('kong-icon.svg'/* { tagline: 'the fastest cloud native API platform.' } */)
   GraphQL = t()
   RabbitMQ = t()
   Swagger = t()
@@ -333,8 +353,15 @@ export class Frontend_And_Backend_App_Platforms {
   Akita = tNoIcon() // https://github.com/datorama/akita
 }
 
+/** Important coz META-quality to make sense of the rest of topics */
+export class Comparators {
+  StackShare = tWide() // {tagline: 'Tech Stack Intelligence" }
+  Openbase = t('openbase-icon-full.svg') // { tagline: 'Compare open-source packages with powerful metrics and user reviews.' }
+}
+
+
 export class Testing {
-  TestCafe = t()
+  TestCafe = tWide()
   Cypress = t('cypress-icon.svg' /*`cypress-io-logo-round-flat.svg`*/)
   Spock = tNoIcon()
   Jest = t()
@@ -538,15 +565,17 @@ export class Cloud {
     iconUrl: 'logo_gcp_hexagon_rgb.png'
     /* logos SVG-s: https://googlecloudcheatsheet.withgoogle.com/ */
   })
-  Algolia = t('algolia-cropped.svg')
+  Algolia = t('algolia-icon.svg') /* new icon ~2023 */
+  MindsDB = tWide('mindsdb-icon-wide.svg') // { iconUrl: 'mindsdb-icon-wide.svg', comments: 'Embedding AI in DB (select query from models e.g. from HuggingFace'})
   tRPC = t('trpc-icon.svg') // end-to-end typescript typesafe; powered by Vercel. https://trpc.io/media (RIGHT CLICK on logo! I'm impressed :D)
   AWS = tWide()
   "Microsoft Azure" = t('microsoft-azure')
 }
 
 export class Databases {
+  Prisma = tWide() /* "Next-generation Node.js and TypeScript ORM" */
   MongoDB = tWide('mongodb-icon.svg')
-  ArangoDB = tWide()
+  ArangoDB = tWide('arangodb-icon') /* native multi-model database with flexible data models for documents, graphs, and key-values. Build high performance applications using a convenient SQL-like query language or JavaScript extensions. */
   Mongoose = tNoIcon()
   // TODO
   NoSQL = tNoIcon()
@@ -561,6 +590,7 @@ export class Databases {
   Dgraph = t('dgraph-icon')
   Fauna = t('fauna-icon')
   RethinkDB = tWide('rethinkdb')
+  "RxDB" = tNarrow('rxdb-icon') /* A fast, offline-first, reactive database for JavaScript Applications */
   // TODO: sqlite
 }
 
@@ -689,7 +719,9 @@ export class Crypto {
 
 /** AI / Machine Learning ML */
 export class AI {
+  "Microsoft Bing" = tNarrow('bing.svg')
   "GitHub Copilot" = tWide('github-copilot.svg')
+  "OpenAI Codex" = tNarrow('openai-codex')
   OpenAI = t('openai-icon')
   'Open Assistant' = tWide('open-assistant-icon-wide.svg') // https://github.com/LAION-AI/Open-Assistant
   'LAION' = t()
@@ -754,8 +786,11 @@ export function processTopics<T>(inputTopics: T/*: Topics*/): T {
 }
 
 export type Topics =
-  Frontend & Frontend_And_Backend_App_Platforms & Backend & Other & Testing & Tools & Languages & OS & Mobile & Cloud &
-  Project_Management_Tools & Graphics & Version_Control & Databases & Java & JavaScript & Build_Systems_And_Package_Managers &
+  Comparators &
+  Frontend & Frontend_Visual & Frontend_And_Backend_App_Platforms &
+  Graphics &
+  Backend & Other & Testing & Tools & Languages & OS & Mobile & Cloud &
+  Project_Management_Tools & Version_Control & Databases & Java & JavaScript & Build_Systems_And_Package_Managers &
   AI & Crypto & FunAndSports
 
 function mergeTopics<T1, T2, T3, T4, T5>(t1: T1, t2: T2, t3: T3, t4: T4, t5?: T5) {
@@ -780,7 +815,9 @@ function processCategory(cat: TopicCategory): TopicCategory {
 
 /** Note: names are specified as strings, because in ng prod build, class names are lost */
 export const topicCategoriesArray = [
+  new TopicCategory('Comparators', new Comparators()),
   new TopicCategory('Frontend', new Frontend()),
+  new TopicCategory('Frontend - Visual', new Frontend_Visual()),
   new TopicCategory('Backend', new Backend()),
   new TopicCategory('Frontend and backend app platforms', new Frontend_And_Backend_App_Platforms()),
   new TopicCategory('Testing', new Testing()),
