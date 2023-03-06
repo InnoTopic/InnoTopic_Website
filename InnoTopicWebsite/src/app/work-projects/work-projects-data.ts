@@ -85,7 +85,7 @@ export class WorkOrganisationsAndProjectsData {
           'GitHub': {},
           'Docker': {},
           'Kubernetes': {},
-          'ElasticSearch': {},
+          'Elasticsearch': {},
           'AWS': {},
           // 'Trello': {},
           'WebStorm': {},

@@ -16,6 +16,7 @@ function topics(tDict: MapToTopics<any>) {
 }
 
 export const highlights = {
+  // https://codesandbox.io/
   // TODO: Electron (near Ionic) here and in experience
   // TODO: chrome extensions
   // TODO: svg-porn
@@ -61,7 +62,7 @@ export const highlights = {
   */
   utility: topics({
     "Gridsome": {} /* A Jamstack framework for Vue.js */,
-    "Svelte": {},
+    // "Svelte": {},
     "Qwik": {},
     "SolidJS": {},
     "Mithril": {},
@@ -89,11 +90,15 @@ export const highlights = {
     "Sass": {},
     "Less": {},
     "Stylus": {},
+    "PostCSS": {},
     "Tailwind CSS": {},
     "Windi CSS": {},
+    "Chakra UI": {},
+    "Mantine": {},
     "Bulma": {},
     "Web Components": {},
     "Lit": {},
+    // TODO styled-jsx - https://marketplace.visualstudio.com/items?itemName=blanu.vscode-styled-jsx - 200k installs
     "Stencil": {},
     // TODO https://mitosis.builder.io/?outputTab=G4VwpkA%3D -- Write components once, run everywhere. Compiles to Vue, React, Solid, Angular, Svelte, and more.
     "Capacitor": {},
@@ -101,10 +106,11 @@ export const highlights = {
     "NativeScript": {},
     "Flutter": {},
     "Redux": {},
-    "Redux Toolkit": {},
+    "Redux Toolkit": {}, // hide coz looks like duplicate icon?
     "Recoil": {},
     "Jotai": {},
     "Zustand": {},
+    "Akita": {}, // TODO elf
     "NgRx": {},
     "NGXS": {},
     "Pinia": {},
@@ -112,10 +118,12 @@ export const highlights = {
     "MobX-State-Tree": {}, // TODO FIXME MobX-State-Tree https://github.com/mobxjs/mobx-state-tree/blob/b6c1c9b29d7bd7525ac6588f8f67f6c13eb17b2b/website/static/img/mobx-state-tree-logo.svg
     // https://github.com/simple-icons/simple-icons/issues/4352
     "Terraform": {},
+    "Ansible": {},
     "Datadog": {},
     "Dynatrace": {},
     "Sentry": {},
-    "Snyk": {} /*  --- deepcode */,
+    "Snyk": {} /*  --- comments: includes/bought deepcode */,
+    "OWASP": {} /*  */,
     "CodeSee": {},
     "Vercel": {},
     "Netlify": {},
@@ -123,7 +131,9 @@ export const highlights = {
     "Turborepo": {},
     "esbuild": {},
     "Speedy Web Compiler (SWC)": {},
-    "Vite": {}, // TODO: Vitest, Playwright, https://testing-library.com/, https://github.com/pocketbase/pocketbase
+    "Rollup": {},
+    "Vite": {}, // TODO: https://testing-library.com/, https://github.com/pocketbase/pocketbase
+    "Vitest": {},
     "pnpm": {},
     "Docker": {},
     "GraalVM": {},
@@ -135,13 +145,13 @@ export const highlights = {
     "Swagger": {},
     "tRPC": {},
     /* FIXME: more backend: OpenAPI, maybe JSON Schema, websockets, socket.io maybe */
+    /// ==== comprehension / compare / explore:
     "StackShare": {},
     "Openbase": {},
-    "AWS": {},
-    "Microsoft Azure": {},
-    // TODO FIXME Google Cloud
-    "Firebase": {},
-    "ElasticSearch": {}, /* TODO: Kibana, Beats, LogStash */
+    "SVGPorn": {},
+    "SVGO": {},
+    // https://jakearchibald.github.io/svgomg/ / https://github.com/svg - with gradient
+    /// ====
     /* TODO: Smth like PowerBI, Tableau ? */
     /* TODO: (kubernetes?) */
     "PWA": {},
@@ -160,13 +170,20 @@ export const highlights = {
     "Remix": {},
     "Storybook": {},
     // "Storyblok": {},
+    "Selenium": {},
     "TestCafe": {},
     "Cypress": {},
+    "Playwright": {},
     "Jest": {},
     "SVG": {},
     "Bootstrap": {},
     "Material Design": {},
     "WebAssembly": {},
+    "WebAssembly System Interface (WASI)": {},
+    "Wasmtime": {},
+    "Wasmer": {},
+    "WebAssembly Package Manager (WAPM)": {}, /* https://wapm.io/startpage/logo.svg */
+    "Fermyon": {}, // https://github.com/fermyon/spin ; microservices in webassembly
     "Git": {},
     "GitHub": {},
     "GitLab": {},
@@ -176,6 +193,7 @@ export const highlights = {
     "ReactiveX": {},
     // ==== AI / ML:
     "Jupyter": {},
+    "JetBrains DataLore": {},
     "Google Colaboratory": {},
     "Hugging Face": {},
     "NumPy": {},
@@ -192,6 +210,8 @@ export const highlights = {
     "Stable Diffusion": {},
     // BlockChain / CryptoCurrencies
     "Bitcoin": {},
+    "Basic Attention Token (BAT)": {},
+    "Brave Browser": {},
     "Ethereum": {},
     "Solidity": {},
     "Web3": {},
@@ -206,6 +226,7 @@ export const highlights = {
     "Zapier": {},
     "IFTTT": {},
     // ====  LowCode / NoCode:
+    "Shopify": {},
     "Builder.io": {},
     "Budibase": {},
     "Bubble": {},
@@ -217,7 +238,7 @@ export const highlights = {
     // "PyCharm": {},
     // jetbrains academy, JB Space
     // mypy - python static type checker
-    // DatasSpell (data science) Jupyter; kaggle
+    // DataSpell (data science) Jupyter; kaggle
     "Visual Studio Code": {},
 
     // ==== Social / Content:
@@ -225,6 +246,22 @@ export const highlights = {
     "LinkedIn": {},
     "Meetup": {},
     // ==== Databases (DB-s):
+    Feathers: {},
+    "8base": {},
+    "Algolia": {},
+    "Meilisearch": {},
+    "Typesense": {},
+    // "Elastic.co": {}, // tagline: 'Search. Observe. Protect.'. Rationale for own icon: it's kinda on the level of aws/azure/gcp with lots of products
+    "Elasticsearch": {},
+    "Logstash": {},
+    "Kibana": {},
+    "Beats": {},
+    "Microsoft Azure": {},
+    "AWS": {},
+    // TODO FIXME Google Cloud
+    "AWS Amplify": {},
+    "Firebase": {},
+
     "Prisma": {},
     "MongoDB": {},
     "ArangoDB": {},
@@ -234,7 +271,6 @@ export const highlights = {
     "Fauna": {},
     "RethinkDB": {},
     "RxDB": {},
-    "Algolia": {}, /* move closer with Elastic */ /* FIXME new logo*/
     "MindsDB": {},
     // TODO JetBrains Fleet
 

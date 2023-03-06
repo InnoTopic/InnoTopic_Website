@@ -27,10 +27,15 @@ export class TopicUrls {
   }
 }
 
+
+export type Url = string
+
 export class Topic {
   logo: string;
   id: string
   logoSize: number[]
+
+  public pressKitUrl?: Url
 
   // TODO: introduce a separate TopicMetaData or TopicPages class. Will be easier to put it in a separate firebase location.
 
@@ -38,7 +43,7 @@ export class Topic {
     public name: string,
     // public topicId?,
     logo?: string,
-    public website?: string,
+    public website?: Url,
     public related?: Topic[],
     public urls?: TopicUrls,
     public dependencies?: Topic[],
@@ -46,7 +51,7 @@ export class Topic {
     public logoTypeWide?: boolean,
     // just to match types for now:
     public iconWebsite?: string | string[],
-    public iconUrl?: string,
+    public iconUrl?: Url,
     public subTopics?: any,
     public organisation?: any,
     public categories?: any,

@@ -17,6 +17,7 @@
       <w>chojnice</w>
       <w>cobertura</w>
       <w>codelyzer</w>
+      <w>codesee</w>
       <w>colab</w>
       <w>collab</w>
       <w>collabnet</w>
@@ -30,6 +31,7 @@
       <w>dexie</w>
       <w>dotnet</w>
       <w>ericsson</w>
+      <w>fermyon</w>
       <w>figma</w>
       <w>freemium</w>
       <w>genengine</w>
@@ -48,11 +50,15 @@
       <w>innotopic</w>
       <w>intelli</w>
       <w>isotipo</w>
+      <w>jotai</w>
       <w>karoldepka</w>
       <w>keras</w>
+      <w>kinto</w>
       <w>koszalin</w>
       <w>laion</w>
       <w>linkedin</w>
+      <w>mantine</w>
+      <w>meilisearch&quot;</w>
       <w>monero</w>
       <w>málaga</w>
       <w>nginx</w>
@@ -64,15 +70,18 @@
       <w>payoneer</w>
       <w>petrus</w>
       <w>photoshop</w>
+      <w>pinia</w>
       <w>pnpm</w>
       <w>postgre</w>
       <w>pradzinski</w>
+      <w>presta</w>
       <w>qwik</w>
       <w>redhat</w>
       <w>redmine</w>
       <w>rostock</w>
       <w>seeklogo</w>
       <w>simbolo</w>
+      <w>snyk</w>
       <w>solidjs</w>
       <w>steemit</w>
       <w>storyblok</w>
@@ -84,18 +93,29 @@
       <w>turbopack</w>
       <w>turborepo</w>
       <w>typegraphql</w>
+      <w>typesense&quot;</w>
       <w>vectorizer</w>
       <w>vercel</w>
       <w>vitejs</w>
+      <w>vitest</w>
+      <w>wapm</w>
+      <w>wasi</w>
+      <w>wasmer</w>
+      <w>wasmer&quot;</w>
+      <w>wasmtime</w>
+      <w>wasmtime&quot;</w>
       <w>webflow</w>
       <w>wilber</w>
+      <w>windi</w>
       <w>wordpress</w>
       <w>workbox</w>
       <w>wrocław</w>
+      <w>xata</w>
       <w>xing</w>
       <w>xplat</w>
       <w>zeplin</w>
       <w>zilla</w>
+      <w>zustand</w>
     </words>
   </dictionary>
 </component>

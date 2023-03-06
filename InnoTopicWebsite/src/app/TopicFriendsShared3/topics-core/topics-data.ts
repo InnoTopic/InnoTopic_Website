@@ -59,6 +59,8 @@ export function tNoIcon(topicData?: TopicData) {
 
 export class Frontend_Visual {
   Bulma = tNarrow(/* {tagline: 'Modern CSS framework based on Flexbox'} */)
+  'Chakra UI' = t('chakra-ui-icon'/* {tagline: '⚡️ Simple, Modular & Accessible UI Components for your React Applications'} */)
+  'Mantine' = tNarrow('mantine-icon.svg'/* {tagline: 'A fully featured React components library'} */)
 }
 
 /** TODO split (here, not in highlights) into
@@ -74,6 +76,7 @@ export class Frontend {
   'Stylus' = tWide()
   'Less' = tWide()
   'Sass' = tWide()
+  'PostCSS' = t() /* sponsored by tailwind */
   'Tailwind CSS' = tWide('tailwindcss-icon.svg')
   'Windi CSS' = tWide('windi-css')
   // TODO: https://www.pollen.style/
@@ -99,13 +102,16 @@ export class Frontend {
   })
   xplat = tWide('xplat-logo.png', [899, 393])
   'Web Components' = tWide('webcomponents')
+  // TODO https://github.com/ampproject/amphtml
   "Lit" = tWide('lit-icon.svg') /* lit elements (Moises) */
   // TODO: https://www.webcomponents.org/ logo
   WebPack = t()
+  "Rollup" = t('rollupjs.svg') /* comments: The bundler behind Vite */
   Vite = t('vitejs')
+  Vitest = t()
   "Speedy Web Compiler (SWC)" = tWide('swc')
-  Turbopack = t('turbopack-icon.svg')
   "esbuild" = t()
+  Turbopack = t('turbopack-icon.svg')
   Turborepo = t('turborepo-icon.svg')
   pnpm = t('pnpm-icon')
   Angular = t({
@@ -200,7 +206,7 @@ export class Frontend {
   'TypeDI' = tNoIcon() // TODO move to Frontend & Backend / JavaScript / TypeScript
   'TypeStack' = tNoIcon()
 
-  Bootstrap = t()
+  Bootstrap = tWide()
   'React-Bootstrap' = t('react-bootstrap.svg')
   "Material Design" = t('Google_Material_Design_Logo.svg')
   jQuery = tWide()
@@ -219,7 +225,7 @@ export class Frontend {
   "Redux Toolkit" = t(`redux--toolkit.svg`)
   Recoil = tWide('recoil-icon')
   Jotai = tWide('jotai')
-  Zustand = t('zustand--logo512.png--vectorizer.ai.svg') // tagline: '🐻 Bear necessities for state management in React'
+  Zustand = tWide('zustand--logo512.png--vectorizer.ai--cropped.svg') // tagline: '🐻 Bear necessities for state management in React'
   Pinia = tWide() // vue state management
 
   React = t()
@@ -239,7 +245,6 @@ export class Frontend {
   'SVG.js' = t('svg-js.png' /* WTF, PNG for an SVG lib :D */)
   'Storybook' = t('storybook-icon.svg')
   // TODO: storyblok?
-  // TODO: SVGPorn
   'DDD - Domain-Driven Design' = t('project-diagram-solid.svg')
   // TODO Scully
   Lighthouse = t('google--lighthouse-logo.svg' /*
@@ -331,16 +336,22 @@ export class Backend {
       'http://keystonejs.com/'
     ),
   })
+  // TODO: adonis ?
 
   Spring = t()
   'Spring Boot' = t()
 
   Hibernate = t()
+  "Fermyon" = tNarrow('fermyon-icon.svg') // wasm instead of docker { tagline: 'Fermyon Cloud is the easiest way to deploy and manage cloud native WebAssembly applications with Spin, our developer tool.', pressKitUrl: 'https://design.fermyon.dev/' }'
   Docker = tWide('docker-simple'/* https://www.docker.com/company/newsroom/media-resources */)
   'Vagrant' = t()
   Terraform = t('terraform-icon.svg')
+  Ansible = t('ansible-icon.svg')
   Kubernetes = t(/* they had a typo: 'kubernets.svg'*/)
-  ElasticSearch = t(/* https://www.elastic.co/brand */)
+  Elasticsearch = t(/* https://www.elastic.co/brand */)
+  Kibana = t(/* https://www.elastic.co/brand */)
+  Logstash = t(/* https://www.elastic.co/brand */)
+  Beats = t(/* https://www.elastic.co/brand */)
   NGINX = tWide()
   'Ruby On Rails' = t()
 }
@@ -349,20 +360,39 @@ export class Backend {
 export class Frontend_And_Backend_App_Platforms {
   JHipster = t()
   Meteor = tWide()
-  Hoodie = tWide()
-  Akita = tNoIcon() // https://github.com/datorama/akita
+  Hoodie = tWide() // redirects to rxdb
+  Feathers = t('feathersjs.svg') // The API and Real-time Application Framework
+  Akita = tWide() // https://github.com/datorama/akita
+  // feathers
+  // Amplify
 }
 
 /** Important coz META-quality to make sense of the rest of topics */
-export class Comparators {
+export class Comprehension_Comparators_Security_And_Exploring {
   StackShare = tWide() // {tagline: 'Tech Stack Intelligence" }
   Openbase = t('openbase-icon-full.svg') // { tagline: 'Compare open-source packages with powerful metrics and user reviews.' }
+  SVGPorn = tWide ('svgporn') // { tagline: 'Compare open-source packages with powerful metrics and user reviews.' }
+  SVGO = t ('svgo-icon') // Node.js tool for optimizing SVG files; https://github.com/svg/svgo
+  // https://tidelift.com/
+  // https://npms.io/about - quality/popularity scores
+
+  // TODO npmjs.com ?
+  // https://libraries.io/npm/@feathersjs%2Ffeathers
+  // codeclimate
+  // stackoverflow to see tag stats
+  // NOTE: this is highly related to security like Snyk
+  // https://bestofjs.org/projects/typebox
+  // https://chaoss.community/ ?
+  // https://opensource.com/article/19/8/measure-project
+  // https://openjsf.org/
 }
 
 
 export class Testing {
+  "Selenium" = t()
   TestCafe = tWide()
   Cypress = t('cypress-icon.svg' /*`cypress-io-logo-round-flat.svg`*/)
+  Playwright = tWide() /* Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. */
   Spock = tNoIcon()
   Jest = t()
   Karma = t()
@@ -376,6 +406,9 @@ export class Testing {
 }
 
 export class Tools {
+  // browsers:
+  "Brave Browser" = tNarrow('brave.svg')
+
   WebStorm = t(/* https://www.jetbrains.com/de-de/company/brand/logos/ */)
   RubyMine = t()
   'Android Studio' = t('Android_Studio_icon.svg')
@@ -389,14 +422,15 @@ export class Tools {
   'CircleCI' = t()
   'Travis CI' = t()
   'Jenkins' = t('jenkins-icon')
-  'Zeplin' = t()
+  'Zeplin' = tWide()
   'Slack' = t('slack-icon.svg')
   'PandaDoc' = tNoIcon() /* FIXME logo */
   'Datadog' = t('datadog-icon')
   'Dynatrace' = t('dynatrace-icon')
   'Sentry' = t('sentry-icon')
   'Snyk' = tWide()
-  'CodeSee' = tWide('codesee-icon')
+  "OWASP" = t('owasp-icon')
+  'CodeSee' = tWide('codesee-icon') // move to comprehension?
   'Netlify' = t()
   'VirtualBox' = t({
     iconUrl: 'https://icons8.com/icons/set/oracle-vm-virtualbox'
@@ -491,6 +525,10 @@ export class Languages {
     categories: "Frontend",
     ecosystem: "JavaScript",
   })
+  "WebAssembly System Interface (WASI)" = tWide('wasi-icon-cropped-wide.svg')
+  "Wasmtime" = tWide('bytecode-alliance-logo-icon.svg')
+  "Wasmer" = tNarrow('wasmer-icon.svg')
+  "WebAssembly Package Manager (WAPM)" = tNarrow('wapm-icon.svg')
   AssemblyScript = t()
 
   Bash = t('bash-icon.svg')
@@ -566,13 +604,19 @@ export class Cloud {
     /* logos SVG-s: https://googlecloudcheatsheet.withgoogle.com/ */
   })
   Algolia = t('algolia-icon.svg') /* new icon ~2023 */
-  MindsDB = tWide('mindsdb-icon-wide.svg') // { iconUrl: 'mindsdb-icon-wide.svg', comments: 'Embedding AI in DB (select query from models e.g. from HuggingFace'})
+  "Meilisearch" = tWide('meilisearch-icon-wide.svg')  /* Rust 99% */
+  "Typesense" = tWide('typesense-text-wide.svg')
+  MindsDB = tWide('mindsdb-icon-wide.svg') // { iconUrl: 'mindsdb-icon-wide.svg', comments: 'Embedding AI in DB (select query from models e.g. from HuggingFace'}); automatic #MLOps
+  // TODO: CockroachDB
   tRPC = t('trpc-icon.svg') // end-to-end typescript typesafe; powered by Vercel. https://trpc.io/media (RIGHT CLICK on logo! I'm impressed :D)
-  AWS = tWide()
   "Microsoft Azure" = t('microsoft-azure')
+  AWS = tWide()
+  'AWS Amplify' = tWide('aws-amplify.svg')
+  // TODO: CLoudFlare - has its own databases, D1, on the edge
 }
 
 export class Databases {
+  "8base" = t('8base-icon') // like Hasura; "Create custom JavaScript and TypeScript logic and run as 8base Serverless Functions."
   Prisma = tWide() /* "Next-generation Node.js and TypeScript ORM" */
   MongoDB = tWide('mongodb-icon.svg')
   ArangoDB = tWide('arangodb-icon') /* native multi-model database with flexible data models for documents, graphs, and key-values. Build high performance applications using a convenient SQL-like query language or JavaScript extensions. */
@@ -585,13 +629,14 @@ export class Databases {
   MariaDB = t()
   Oracle = tWide()
   IndexedDB = tNoIcon()
-  SurrealDB = t('surrealdb-icon')
-  Xata = t('xata-icon')
+  SurrealDB = t('surrealdb-icon') // Multi-modal. ACID transactions, while scaling horizontally. Feels like SQL, but uses arrows to connect nodes and edges
+  Xata = t('xata-icon') // Postgres + Elastic. Feels like a developer-friendly alternative to Notion or AirTable. Treats your data like a spreadsheet.
   Dgraph = t('dgraph-icon')
-  Fauna = t('fauna-icon')
+  Fauna = t('fauna-icon') /* document db that supports joins; custom query language called FQL; closed-source */
   RethinkDB = tWide('rethinkdb')
   "RxDB" = tNarrow('rxdb-icon') /* A fast, offline-first, reactive database for JavaScript Applications */
   // TODO: sqlite
+  // EdgeDB - Graph-Relational; types not tables; eliminates need for joins
 }
 
 export class Version_Control {
@@ -647,12 +692,12 @@ export class Other {
   Airtable = t()
   Notion = t('notion-icon-no-text.svg')
   Coda = t('coda-icon.svg')
-  Observable = t('observablehq.svg')
+  Observable = t('observablehq.svg') // "Collaborative data platform and canvas"; "Explore, analyze and explain data. As a team."
   Carbide = t('carbide.svg')
-  // FIXME Bubble = t('observablehq.svg')
   Zapier = t('zapier-icon')
   IFTTT = tWide('ifttt.svg')
   // ======== LowCode / NoCode / CMS:
+  Shopify = tNarrow()
   WebFlow = t('webflow-mark-vector-blue.svg') /* https://brand-at.webflow.io/resources#logos */
   Wix = tWide()
   'Builder.io' = t('builder-io-icon')
@@ -709,6 +754,7 @@ export class Other {
 export class Crypto {
   Bitcoin = t()
   Ethereum = t()
+  "Basic Attention Token (BAT)" = tWide('brave_basic_attention_token_logo.svg')
   Solidity = t()
   "Web3" = t()
   "web3.js" = t('web3js')
@@ -732,6 +778,7 @@ export class AI {
   NumPy = t()
   'Hugging Face' = tWide('huggingface_logo-noborder.svg')
   Jupyter = tWide('jupyter-icon2')
+  "JetBrains DataLore" = t('jetbrains-datalore-icon.svg')
   PyTorch = tWide('pytorch-icon')
   Keras = t/*Wide*/('keras.svg'/*{
     https://github.com/valohai/ml-logos/blob/master/keras.svg
@@ -786,7 +833,7 @@ export function processTopics<T>(inputTopics: T/*: Topics*/): T {
 }
 
 export type Topics =
-  Comparators &
+  Comprehension_Comparators_Security_And_Exploring &
   Frontend & Frontend_Visual & Frontend_And_Backend_App_Platforms &
   Graphics &
   Backend & Other & Testing & Tools & Languages & OS & Mobile & Cloud &
@@ -815,7 +862,7 @@ function processCategory(cat: TopicCategory): TopicCategory {
 
 /** Note: names are specified as strings, because in ng prod build, class names are lost */
 export const topicCategoriesArray = [
-  new TopicCategory('Comparators', new Comparators()),
+  new TopicCategory('Comparators', new Comprehension_Comparators_Security_And_Exploring()),
   new TopicCategory('Frontend', new Frontend()),
   new TopicCategory('Frontend - Visual', new Frontend_Visual()),
   new TopicCategory('Backend', new Backend()),

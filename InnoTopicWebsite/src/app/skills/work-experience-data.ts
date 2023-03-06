@@ -302,7 +302,7 @@ export class WorkExperienceData {
     Go: we(),
     WebAssembly: we(),
     Algolia: we(),
-    ElasticSearch: we(),
+    Elasticsearch: we(),
     ArangoDB: we(),
     JHipster: we(),
     Meteor: we(),
