@@ -82,6 +82,14 @@ export const highlights = {
     "NW.js": {},
     "Electron": {}, /* TODO: mark as non-main experience */
     "Expo": {}, /* TODO: mark as non-main experience; (in nx project template; here and in expanding-to) */
+    "PWA": {},
+    "D3.js": {},
+    "SVG": {},
+    // ===== 3d:
+    "WebGL": {},
+    "glTF": {}, /* FIXME too big */
+    "Blender": {},
+
 
     /* TODO; SvelteKit svelte-kit */
     /* TODO: Meteor */
@@ -154,28 +162,24 @@ export const highlights = {
     /// ====
     /* TODO: Smth like PowerBI, Tableau ? */
     /* TODO: (kubernetes?) */
-    "PWA": {},
-    "D3.js": {},
-    "WebGL": {},
-    "glTF": {}, /* FIXME too big */
-    "Blender": {},
     "Figma": {},
     "SVGator": {},
     "Zeplin": {},
     // "AG Grid": {}, // old logo; and trying to conserve horizontal space
     "Lodash": {},
+    "ReactiveX": {},
     'NestJS': {},
     "Gatsby": {},
     "Next.js": {},
     "Remix": {},
     "Storybook": {},
     // "Storyblok": {},
+    // ==== TESTING
     "Selenium": {},
     "TestCafe": {},
     "Cypress": {},
     "Playwright": {},
     "Jest": {},
-    "SVG": {},
     "Bootstrap": {},
     "Material Design": {},
     "WebAssembly": {},
@@ -190,7 +194,6 @@ export const highlights = {
     /* TODO: smth like Jira / Atlassian */
     /* TODO: BitBucket ? */
     "Linux": {},
-    "ReactiveX": {},
     // ==== AI / ML:
     "Jupyter": {},
     "JetBrains DataLore": {},

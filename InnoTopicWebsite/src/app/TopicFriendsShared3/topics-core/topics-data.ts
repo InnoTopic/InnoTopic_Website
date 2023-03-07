@@ -109,7 +109,7 @@ export class Frontend {
   "Rollup" = t('rollupjs.svg') /* comments: The bundler behind Vite */
   Vite = t('vitejs')
   Vitest = t()
-  "Speedy Web Compiler (SWC)" = tWide('swc')
+  "Speedy Web Compiler (SWC)" = tWide('swc') /* written in rust */
   "esbuild" = t()
   Turbopack = t('turbopack-icon.svg')
   Turborepo = t('turborepo-icon.svg')
@@ -392,7 +392,7 @@ export class Testing {
   "Selenium" = t()
   TestCafe = tWide()
   Cypress = t('cypress-icon.svg' /*`cypress-io-logo-round-flat.svg`*/)
-  Playwright = tWide() /* Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. */
+  Playwright = tWide() /* Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. By Microsoft. */
   Spock = tNoIcon()
   Jest = t()
   Karma = t()
