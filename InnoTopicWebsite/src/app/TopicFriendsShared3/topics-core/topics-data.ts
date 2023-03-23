@@ -46,6 +46,10 @@ export function tNarrow(topicData?: TopicDataOrLogo, logoSize?: number[]) {
   return tWide(topicData, logoSize)
 }
 
+export function tSquare(topicData?: TopicDataOrLogo, logoSize?: number[]) {
+  return tWide(topicData, logoSize)
+}
+
 
 export function tWide(topicData?: TopicDataOrLogo, logoSize?: number[]) {
   topicData = coerceLogoToTopicData(topicData);
@@ -114,7 +118,7 @@ export class Frontend {
   Turbopack = t('turbopack-icon.svg')
   Turborepo = t('turborepo-icon.svg')
   pnpm = t('pnpm-icon')
-  Angular = t({
+  Angular = tNarrow({
     logo: 'angular-icon',
     urls: new TopicUrls(
       'https://angular.io/',
@@ -183,7 +187,7 @@ export class Frontend {
   "NW.js" = t('nodewebkit') /* NW.js */
   'Electron' = t()
   'Expo' = t('expo-icon')
-  'Vue.js' = t({logo: 'vue'})
+  'Vue.js' = tWide({logo: 'vue'})
   'Nuxt' = tWide('nuxt-icon')
   'Gridsome' = t({logo: 'gridsome-icon.svg'})
   'Svelte' = t('svelte-icon')
@@ -198,7 +202,9 @@ export class Frontend {
   'Rax' = t()
   'Riot' = t()
   'Vercel' = t('vercel-icon.svg')
+  // ===== headless CMS:
   'Storyblok' = t('storyblok-icon.svg')
+  "Strapi" = t('strapi-icon.svg')
 
   // TODO: https://web.dev/
 
@@ -209,7 +215,7 @@ export class Frontend {
   Bootstrap = tWide()
   'React-Bootstrap' = t('react-bootstrap.svg')
   "Material Design" = t('Google_Material_Design_Logo.svg')
-  jQuery = tWide()
+  jQuery = tWide('jquery-icon-cropped.svg')
   'AG Grid' = tWide('ag-grid')
   'ApexCharts.js' = tNoIcon()
   AngularFire = tNoIcon()
@@ -228,7 +234,7 @@ export class Frontend {
   Zustand = tWide('zustand--logo512.png--vectorizer.ai--cropped.svg') // tagline: '🐻 Bear necessities for state management in React'
   Pinia = tWide() // vue state management
 
-  React = t()
+  React = tWide()
   Preact = t()
   Gatsby = t('Gatsby-Monogram.svg', /* https://www.gatsbyjs.com/guidelines/logo */)
   "Next.js" = t('nextjs-icon.svg')
@@ -389,10 +395,16 @@ export class Comprehension_Comparators_Security_And_Exploring {
 
 
 export class Testing {
+  "AVA" = tWide()
   "Selenium" = t()
   TestCafe = tWide()
   Cypress = t('cypress-icon.svg' /*`cypress-io-logo-round-flat.svg`*/)
   Playwright = tWide() /* Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. By Microsoft. */
+  "Testing Library" = tSquare()
+  "Nightwatch.js" = tNarrow('nightwatch.svg')
+  "UserTesting" = tNarrow('user-testing-icon.svg')
+  BrowserStack = t()
+  "User Testing" = t()
   Spock = tNoIcon()
   Jest = t()
   Karma = t()
@@ -694,6 +706,8 @@ export class Other {
   Coda = t('coda-icon.svg')
   Observable = t('observablehq.svg') // "Collaborative data platform and canvas"; "Explore, analyze and explain data. As a team."
   Carbide = t('carbide.svg')
+  Replit = tNarrow('replit-icon.svg') /* highlights: social coding; computation token currency; AI-assisted IDE (Ghostwriter) */
+  "Ghostwriter" = tNarrow('ghostwriter-icon-cropped.svg') /* #AI #IDE */
   Zapier = t('zapier-icon')
   IFTTT = tWide('ifttt.svg')
   // ======== LowCode / NoCode / CMS:

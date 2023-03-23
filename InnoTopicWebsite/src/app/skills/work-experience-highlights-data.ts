@@ -74,9 +74,9 @@ export const highlights = {
     "Inferno": {},
     // TODO akita; elf https://github.com/ngneat/elf built on top of RxJS
     Preact: {},
+    jQuery: {}, /* kinda as a joke / to test someone */
     Nuxt: {},
     GreenSock: {},
-    "Storyblok": {},
     "Nx": {},
     "WebKit": {},
     "NW.js": {},
@@ -140,7 +140,7 @@ export const highlights = {
     "esbuild": {},
     "Speedy Web Compiler (SWC)": {},
     "Rollup": {},
-    "Vite": {}, // TODO: https://testing-library.com/, https://github.com/pocketbase/pocketbase
+    "Vite": {}, // https://github.com/pocketbase/pocketbase
     "Vitest": {},
     "pnpm": {},
     "Docker": {},
@@ -173,12 +173,16 @@ export const highlights = {
     "Next.js": {},
     "Remix": {},
     "Storybook": {},
-    // "Storyblok": {},
     // ==== TESTING
+    "AVA": {},
     "Selenium": {},
     "TestCafe": {},
     "Cypress": {},
     "Playwright": {},
+    "Testing Library": {}, // https://github.com/testing-library not just react; has 6.7M npm/week; https://testing-library.com/
+    "Nightwatch.js": {},
+    "UserTesting": {},
+    "BrowserStack": {}, // high on stackshare
     "Jest": {},
     "Bootstrap": {},
     "Material Design": {},
@@ -226,8 +230,15 @@ export const highlights = {
     "Coda": {},
     "Observable": {},
     "Carbide": {},
+    "Replit": {},
+    "Ghostwriter": {},
+    // "CodeSandbox": {},
+    // "Cloud9": {},
     "Zapier": {},
     "IFTTT": {},
+    // ==== headless CMS:
+    "Storyblok": {},
+    "Strapi": {}, // 54k stars GH! Self-hosted or Cloud, RESTful or GraphQL
     // ====  LowCode / NoCode:
     "Shopify": {},
     "Builder.io": {},
