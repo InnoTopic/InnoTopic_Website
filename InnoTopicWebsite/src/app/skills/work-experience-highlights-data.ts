@@ -76,7 +76,6 @@ export const highlights = {
     Preact: {},
     jQuery: {}, /* kinda as a joke / to test someone */
     Nuxt: {},
-    GreenSock: {},
     "Nx": {},
     "PWA": {},
 
@@ -152,6 +151,7 @@ export const highlights = {
     "Zeplin": {},
     "Dribbble": {},
     // ==== vector graphics, svg:
+    GreenSock: {},
     "D3.js": {},
     "SVG": {},
     // ===== 3d graphics:
