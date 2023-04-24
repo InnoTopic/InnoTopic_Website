@@ -78,10 +78,6 @@ export const highlights = {
     Nuxt: {},
     GreenSock: {},
     "Nx": {},
-    "WebKit": {},
-    "NW.js": {},
-    "Electron": {}, /* TODO: mark as non-main experience */
-    "Expo": {}, /* TODO: mark as non-main experience; (in nx project template; here and in expanding-to) */
     "PWA": {},
 
 
@@ -105,10 +101,16 @@ export const highlights = {
     // TODO styled-jsx - https://marketplace.visualstudio.com/items?itemName=blanu.vscode-styled-jsx - 200k installs
     "Stencil": {},
     // TODO https://mitosis.builder.io/?outputTab=G4VwpkA%3D -- Write components once, run everywhere. Compiles to Vue, React, Solid, Angular, Svelte, and more.
+    // ======= cross-platform / hybrid development:
     "Capacitor": {},
     "Cordova": {}, /* NO PhoneGap -- discontinued - https://blog.phonegap.com/update-for-customers-using-phonegap-and-phonegap-build-cc701c77502c ? */
     "NativeScript": {},
+    // React Native would also be here, but same logo
     "Flutter": {},
+    "Expo": {}, /* TODO: mark as non-main experience; (in nx project template; here and in expanding-to) */
+    "Electron": {}, /* TODO: mark as non-main experience */
+    "NW.js": {},
+    "WebKit": {},
     // ==== Frontend State management:
     "Redux": {},
     // "Redux Toolkit": {}, // hide coz looks like duplicate icon?;  // hiding coz looks quirky and I don't have other stuff like that with same icon, e.g. SvelteKit. And it's kinda implied, that each tech can have its companion toolkit / higher-level utilities, so Redux Toolkit not that special; also, saving space
