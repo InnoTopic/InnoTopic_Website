@@ -210,29 +210,7 @@ export const highlights = {
     "GitLab": {},
     /* TODO: smth like Jira / Atlassian */
     /* TODO: BitBucket ? */
-    // ==== AI / ML:
-    "Jupyter": {},
-    "JetBrains DataLore": {},
-    "Google Colaboratory": {},
-    "Observable": {},
-    "Hugging Face": {},
-    "NumPy": {},
-    "PyTorch": {},
-    "TensorFlow": {},
-    "Keras": {},
-    "GitHub Copilot": {},
-    "OpenAI Codex": {},
-    "Microsoft Bing": {},
-    "OpenAI": {},
-    "Open Assistant": {},
-    "LAION": {},
-    "Stability AI": {},
-    "Stable Diffusion": {},
-    "Ghostwriter": {}, // Between AI and Web IDE-s
-    "Replit": {},
-    "Carbide": {},
-    // "CodeSandbox": {},
-    // "Cloud9": {},
+
     // ====== LowCode / NoCode
     "Airtable": {},
     "Notion": {},
@@ -251,6 +229,7 @@ export const highlights = {
     "Framer": {},
     "WebFlow": {},
     "Wix": {},
+    // ====== IDE-s:
     // TODO: intellij idea
     "WebStorm": {},
     // "PyCharm": {},
@@ -258,6 +237,30 @@ export const highlights = {
     // mypy - python static type checker
     // DataSpell (data science) Jupyter; kaggle
     "Visual Studio Code": {},
+    "Carbide": {},
+    // "CodeSandbox": {},
+    // "Cloud9": {},
+    "Replit": {},
+    "Ghostwriter": {}, // Between AI and Web IDE-s
+    // ==== AI / ML:
+    "Jupyter": {},
+    "JetBrains DataLore": {},
+    "Google Colaboratory": {},
+    "Observable": {},
+    "Hugging Face": {},
+    "NumPy": {},
+    "PyTorch": {},
+    "TensorFlow": {},
+    "Keras": {},
+    "GitHub Copilot": {},
+    "OpenAI Codex": {},
+    "Microsoft Bing": {},
+    "OpenAI": {},
+    "Open Assistant": {},
+    "LAION": {},
+    "Stability AI": {},
+    "Stable Diffusion": {},
+
     // ===== BlockChain / CryptoCurrencies
     "Ethereum": {},
     "Basic Attention Token (BAT)": {},
