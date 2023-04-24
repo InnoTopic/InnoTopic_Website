@@ -61,21 +61,25 @@ export const highlights = {
     could split into frontend-what-I-really-use and frontend-broad
   */
   utility: topics({
-    "Gridsome": {} /* A Jamstack framework for Vue.js */,
     // "Svelte": {},
     "Qwik": {},
     "SolidJS": {},
     "Mithril": {},
     "Marko": {},
     "Rax": {},
+    "Remix": {},
     "Riot": {},
     "Alpine.js": {},
     "Astro": {},
     "Inferno": {},
     // TODO akita; elf https://github.com/ngneat/elf built on top of RxJS
     Preact: {},
-    jQuery: {}, /* kinda as a joke / to test someone */
+    'NestJS': {},
     Nuxt: {},
+    "Gridsome": {} /* A Jamstack framework for Vue.js */,
+    "Gatsby": {},
+    "Next.js": {},
+    jQuery: {}, /* kinda as a joke / to test someone */
     "Nx": {},
     "PWA": {},
 
@@ -162,10 +166,6 @@ export const highlights = {
     // "AG Grid": {}, // old logo; and trying to conserve horizontal space
     "Lodash": {},
     "ReactiveX": {},
-    'NestJS': {},
-    "Gatsby": {},
-    "Next.js": {},
-    "Remix": {},
     "Storybook": {},
     // ==== TESTING
     "AVA": {},
