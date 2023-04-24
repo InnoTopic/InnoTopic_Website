@@ -2,12 +2,12 @@
 <svg width="512px" height="116px" viewBox="0 0 512 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
     <defs>
         <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="linearGradient-1">
-            <stop stop-color="rgb(255,133,35)" offset="0%"></stop>
-            <stop stop-color="rgb(234,104,0)" offset="100%"></stop>
+            <stop stop-color="rgb(53,53,53)" offset="0%"></stop>
+            <stop stop-color="rgb(38,38,38)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
-            <stop stop-color="rgb(255,212,177)" offset="0%"></stop>
-            <stop stop-color="rgb(255,183,125)" offset="100%"></stop>
+            <stop stop-color="rgb(90,90,90)" offset="0%"></stop>
+            <stop stop-color="rgb(76,76,76)" offset="100%"></stop>
         </linearGradient>
     </defs>
 	<g>

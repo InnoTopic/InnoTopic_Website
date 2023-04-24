@@ -2,148 +2,148 @@
 <svg width="256px" height="250px" viewBox="0 0 256 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
     <defs>
         <linearGradient x1="73.8440616%" y1="26.6921802%" x2="30.4585012%" y2="67.386722%" id="linearGradient-1">
-            <stop stop-color="rgb(255,186,131)" offset="0%"></stop>
-            <stop stop-color="rgb(255,183,125)" offset="48%"></stop>
-            <stop stop-color="rgb(255,170,101)" offset="65%"></stop>
-            <stop stop-color="rgb(255,154,73)" offset="76%"></stop>
+            <stop stop-color="rgb(78,78,78)" offset="0%"></stop>
+            <stop stop-color="rgb(76,76,76)" offset="48%"></stop>
+            <stop stop-color="rgb(70,70,70)" offset="65%"></stop>
+            <stop stop-color="rgb(62,62,62)" offset="76%"></stop>
         </linearGradient>
         <linearGradient x1="111.45912%" y1="16.5892875%" x2="-0.0733783563%" y2="76.3231516%" id="linearGradient-2">
-            <stop stop-color="rgb(255,212,177)" offset="0%"></stop>
-            <stop stop-color="rgb(255,210,173)" offset="47%"></stop>
-            <stop stop-color="rgb(255,206,167)" offset="64%"></stop>
-            <stop stop-color="rgb(255,196,149)" offset="76%"></stop>
-            <stop stop-color="rgb(255,186,131)" offset="86%"></stop>
-            <stop stop-color="rgb(255,170,101)" offset="95%"></stop>
-            <stop stop-color="rgb(255,154,73)" offset="100%"></stop>
+            <stop stop-color="rgb(90,90,90)" offset="0%"></stop>
+            <stop stop-color="rgb(88,88,88)" offset="47%"></stop>
+            <stop stop-color="rgb(87,87,87)" offset="64%"></stop>
+            <stop stop-color="rgb(82,82,82)" offset="76%"></stop>
+            <stop stop-color="rgb(78,78,78)" offset="86%"></stop>
+            <stop stop-color="rgb(70,70,70)" offset="95%"></stop>
+            <stop stop-color="rgb(62,62,62)" offset="100%"></stop>
         </linearGradient>
         <radialGradient cx="56.9149816%" cy="88.8833143%" fx="56.9149816%" fy="88.8833143%" r="141.731287%" id="radialGradient-3">
-            <stop stop-color="rgb(255,212,177)" offset="0%"></stop>
-            <stop stop-color="rgb(255,190,137)" offset="24%"></stop>
-            <stop stop-color="rgb(255,128,25)" offset="77%"></stop>
-            <stop stop-color="rgb(234,104,0)" offset="100%"></stop>
+            <stop stop-color="rgb(90,90,90)" offset="0%"></stop>
+            <stop stop-color="rgb(79,79,79)" offset="24%"></stop>
+            <stop stop-color="rgb(50,50,50)" offset="77%"></stop>
+            <stop stop-color="rgb(38,38,38)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="37.4328838%" cy="107.316971%" fx="37.4328838%" fy="107.316971%" r="81.7439196%" id="radialGradient-4">
-            <stop stop-color="rgb(255,190,137)" offset="0%"></stop>
-            <stop stop-color="rgb(255,186,131)" offset="23%"></stop>
-            <stop stop-color="rgb(255,173,107)" offset="51%"></stop>
-            <stop stop-color="rgb(255,151,67)" offset="83%"></stop>
-            <stop stop-color="rgb(255,134,37)" offset="100%"></stop>
+            <stop stop-color="rgb(79,79,79)" offset="0%"></stop>
+            <stop stop-color="rgb(78,78,78)" offset="23%"></stop>
+            <stop stop-color="rgb(72,72,72)" offset="51%"></stop>
+            <stop stop-color="rgb(61,61,61)" offset="83%"></stop>
+            <stop stop-color="rgb(53,53,53)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="-17.8113765%" cy="68.5756164%" fx="-17.8113765%" fy="68.5756164%" r="115.435554%" id="radialGradient-5">
-            <stop stop-color="rgb(255,210,173)" offset="9%"></stop>
-            <stop stop-color="rgb(255,151,67)" offset="100%"></stop>
+            <stop stop-color="rgb(88,88,88)" offset="9%"></stop>
+            <stop stop-color="rgb(61,61,61)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="5.23908%" cy="62.2269711%" fx="5.23908%" fy="62.2269711%" r="80.2174636%" id="radialGradient-6">
-            <stop stop-color="rgb(255,210,173)" offset="9%"></stop>
-            <stop stop-color="rgb(255,151,67)" offset="100%"></stop>
+            <stop stop-color="rgb(88,88,88)" offset="9%"></stop>
+            <stop stop-color="rgb(61,61,61)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="6.17172913%" cy="59.6559061%" fx="6.17172913%" fy="59.6559061%" r="84.7637675%" id="radialGradient-7">
-            <stop stop-color="rgb(255,210,173)" offset="9%"></stop>
-            <stop stop-color="rgb(255,151,67)" offset="100%"></stop>
+            <stop stop-color="rgb(88,88,88)" offset="9%"></stop>
+            <stop stop-color="rgb(61,61,61)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="22.0505567%" cy="60.4802396%" fx="22.0505567%" fy="60.4802396%" r="133.158635%" id="radialGradient-8">
-            <stop stop-color="rgb(255,210,173)" offset="0%"></stop>
-            <stop stop-color="rgb(255,206,167)" offset="25%"></stop>
-            <stop stop-color="rgb(255,200,155)" offset="44%"></stop>
-            <stop stop-color="rgb(255,186,131)" offset="60%"></stop>
-            <stop stop-color="rgb(255,170,101)" offset="76%"></stop>
-            <stop stop-color="rgb(255,151,67)" offset="89%"></stop>
+            <stop stop-color="rgb(88,88,88)" offset="0%"></stop>
+            <stop stop-color="rgb(87,87,87)" offset="25%"></stop>
+            <stop stop-color="rgb(84,84,84)" offset="44%"></stop>
+            <stop stop-color="rgb(78,78,78)" offset="60%"></stop>
+            <stop stop-color="rgb(70,70,70)" offset="76%"></stop>
+            <stop stop-color="rgb(61,61,61)" offset="89%"></stop>
         </radialGradient>
         <linearGradient x1="4.05138932%" y1="47.6374918%" x2="91.0546504%" y2="51.9359766%" id="linearGradient-9">
-            <stop stop-color="rgb(255,186,131)" offset="0%"></stop>
-            <stop stop-color="rgb(255,183,125)" offset="48%"></stop>
-            <stop stop-color="rgb(255,170,101)" offset="65%"></stop>
-            <stop stop-color="rgb(255,154,73)" offset="76%"></stop>
+            <stop stop-color="rgb(78,78,78)" offset="0%"></stop>
+            <stop stop-color="rgb(76,76,76)" offset="48%"></stop>
+            <stop stop-color="rgb(70,70,70)" offset="65%"></stop>
+            <stop stop-color="rgb(62,62,62)" offset="76%"></stop>
         </linearGradient>
         <linearGradient x1="3.18749749%" y1="44.8011675%" x2="95.4743141%" y2="53.5945109%" id="linearGradient-10">
-            <stop stop-color="rgb(255,212,177)" offset="0%"></stop>
-            <stop stop-color="rgb(255,210,173)" offset="47%"></stop>
-            <stop stop-color="rgb(255,206,167)" offset="64%"></stop>
-            <stop stop-color="rgb(255,196,149)" offset="76%"></stop>
-            <stop stop-color="rgb(255,186,131)" offset="86%"></stop>
-            <stop stop-color="rgb(255,170,101)" offset="95%"></stop>
-            <stop stop-color="rgb(255,154,73)" offset="100%"></stop>
+            <stop stop-color="rgb(90,90,90)" offset="0%"></stop>
+            <stop stop-color="rgb(88,88,88)" offset="47%"></stop>
+            <stop stop-color="rgb(87,87,87)" offset="64%"></stop>
+            <stop stop-color="rgb(82,82,82)" offset="76%"></stop>
+            <stop stop-color="rgb(78,78,78)" offset="86%"></stop>
+            <stop stop-color="rgb(70,70,70)" offset="95%"></stop>
+            <stop stop-color="rgb(62,62,62)" offset="100%"></stop>
         </linearGradient>
         <radialGradient cx="95.195158%" cy="26.5531645%" fx="95.195158%" fy="26.5531645%" r="109.020649%" id="radialGradient-11">
-            <stop stop-color="rgb(255,212,177)" offset="0%"></stop>
-            <stop stop-color="rgb(255,190,137)" offset="24%"></stop>
-            <stop stop-color="rgb(255,128,25)" offset="77%"></stop>
-            <stop stop-color="rgb(234,104,0)" offset="100%"></stop>
+            <stop stop-color="rgb(90,90,90)" offset="0%"></stop>
+            <stop stop-color="rgb(79,79,79)" offset="24%"></stop>
+            <stop stop-color="rgb(50,50,50)" offset="77%"></stop>
+            <stop stop-color="rgb(38,38,38)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="103.819561%" cy="39.4798802%" fx="103.819561%" fy="39.4798802%" r="117.774443%" id="radialGradient-12">
-            <stop stop-color="rgb(255,190,137)" offset="0%"></stop>
-            <stop stop-color="rgb(255,186,131)" offset="23%"></stop>
-            <stop stop-color="rgb(255,173,107)" offset="51%"></stop>
-            <stop stop-color="rgb(255,151,67)" offset="83%"></stop>
-            <stop stop-color="rgb(255,134,37)" offset="100%"></stop>
+            <stop stop-color="rgb(79,79,79)" offset="0%"></stop>
+            <stop stop-color="rgb(78,78,78)" offset="23%"></stop>
+            <stop stop-color="rgb(72,72,72)" offset="51%"></stop>
+            <stop stop-color="rgb(61,61,61)" offset="83%"></stop>
+            <stop stop-color="rgb(53,53,53)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="101.124411%" cy="82.9324871%" fx="101.124411%" fy="82.9324871%" r="100.719861%" id="radialGradient-13">
-            <stop stop-color="rgb(255,210,173)" offset="9%"></stop>
-            <stop stop-color="rgb(255,151,67)" offset="100%"></stop>
+            <stop stop-color="rgb(88,88,88)" offset="9%"></stop>
+            <stop stop-color="rgb(61,61,61)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="98.5486449%" cy="73.0939312%" fx="98.5486449%" fy="73.0939312%" r="110.462498%" id="radialGradient-14">
-            <stop stop-color="rgb(255,210,173)" offset="9%"></stop>
-            <stop stop-color="rgb(255,151,67)" offset="100%"></stop>
+            <stop stop-color="rgb(88,88,88)" offset="9%"></stop>
+            <stop stop-color="rgb(61,61,61)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="99.5515693%" cy="72.2464762%" fx="99.5515693%" fy="72.2464762%" r="112.771912%" id="radialGradient-15">
-            <stop stop-color="rgb(255,210,173)" offset="9%"></stop>
-            <stop stop-color="rgb(255,151,67)" offset="100%"></stop>
+            <stop stop-color="rgb(88,88,88)" offset="9%"></stop>
+            <stop stop-color="rgb(61,61,61)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="77.3596357%" cy="60.3652515%" fx="77.3596357%" fy="60.3652515%" r="125.522698%" id="radialGradient-16">
-            <stop stop-color="rgb(255,210,173)" offset="0%"></stop>
-            <stop stop-color="rgb(255,206,167)" offset="25%"></stop>
-            <stop stop-color="rgb(255,200,155)" offset="44%"></stop>
-            <stop stop-color="rgb(255,186,131)" offset="60%"></stop>
-            <stop stop-color="rgb(255,170,101)" offset="76%"></stop>
-            <stop stop-color="rgb(255,151,67)" offset="89%"></stop>
+            <stop stop-color="rgb(88,88,88)" offset="0%"></stop>
+            <stop stop-color="rgb(87,87,87)" offset="25%"></stop>
+            <stop stop-color="rgb(84,84,84)" offset="44%"></stop>
+            <stop stop-color="rgb(78,78,78)" offset="60%"></stop>
+            <stop stop-color="rgb(70,70,70)" offset="76%"></stop>
+            <stop stop-color="rgb(61,61,61)" offset="89%"></stop>
         </radialGradient>
         <linearGradient x1="59.8890778%" y1="137.595586%" x2="42.4570427%" y2="-75.9662138%" id="linearGradient-17">
-            <stop stop-color="rgb(255,186,131)" offset="0%"></stop>
-            <stop stop-color="rgb(255,183,125)" offset="48%"></stop>
-            <stop stop-color="rgb(255,170,101)" offset="65%"></stop>
-            <stop stop-color="rgb(255,154,73)" offset="76%"></stop>
+            <stop stop-color="rgb(78,78,78)" offset="0%"></stop>
+            <stop stop-color="rgb(76,76,76)" offset="48%"></stop>
+            <stop stop-color="rgb(70,70,70)" offset="65%"></stop>
+            <stop stop-color="rgb(62,62,62)" offset="76%"></stop>
         </linearGradient>
         <linearGradient x1="68.5552427%" y1="128.237426%" x2="37.7518358%" y2="-32.5667788%" id="linearGradient-18">
-            <stop stop-color="rgb(255,212,177)" offset="0%"></stop>
-            <stop stop-color="rgb(255,210,173)" offset="47%"></stop>
-            <stop stop-color="rgb(255,206,167)" offset="64%"></stop>
-            <stop stop-color="rgb(255,196,149)" offset="76%"></stop>
-            <stop stop-color="rgb(255,186,131)" offset="86%"></stop>
-            <stop stop-color="rgb(255,170,101)" offset="95%"></stop>
-            <stop stop-color="rgb(255,154,73)" offset="100%"></stop>
+            <stop stop-color="rgb(90,90,90)" offset="0%"></stop>
+            <stop stop-color="rgb(88,88,88)" offset="47%"></stop>
+            <stop stop-color="rgb(87,87,87)" offset="64%"></stop>
+            <stop stop-color="rgb(82,82,82)" offset="76%"></stop>
+            <stop stop-color="rgb(78,78,78)" offset="86%"></stop>
+            <stop stop-color="rgb(70,70,70)" offset="95%"></stop>
+            <stop stop-color="rgb(62,62,62)" offset="100%"></stop>
         </linearGradient>
         <radialGradient cx="16.8509016%" cy="17.9116162%" fx="16.8509016%" fy="17.9116162%" r="71.8957579%" id="radialGradient-19">
-            <stop stop-color="rgb(255,212,177)" offset="0%"></stop>
-            <stop stop-color="rgb(255,190,137)" offset="24%"></stop>
-            <stop stop-color="rgb(255,128,25)" offset="77%"></stop>
-            <stop stop-color="rgb(234,104,0)" offset="100%"></stop>
+            <stop stop-color="rgb(90,90,90)" offset="0%"></stop>
+            <stop stop-color="rgb(79,79,79)" offset="24%"></stop>
+            <stop stop-color="rgb(50,50,50)" offset="77%"></stop>
+            <stop stop-color="rgb(38,38,38)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="19.4919641%" cy="16.6080961%" fx="19.4919641%" fy="16.6080961%" r="72.0934328%" id="radialGradient-20">
-            <stop stop-color="rgb(255,190,137)" offset="0%"></stop>
-            <stop stop-color="rgb(255,186,131)" offset="23%"></stop>
-            <stop stop-color="rgb(255,173,107)" offset="51%"></stop>
-            <stop stop-color="rgb(255,151,67)" offset="83%"></stop>
-            <stop stop-color="rgb(255,134,37)" offset="100%"></stop>
+            <stop stop-color="rgb(79,79,79)" offset="0%"></stop>
+            <stop stop-color="rgb(78,78,78)" offset="23%"></stop>
+            <stop stop-color="rgb(72,72,72)" offset="51%"></stop>
+            <stop stop-color="rgb(61,61,61)" offset="83%"></stop>
+            <stop stop-color="rgb(53,53,53)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="56.3611222%" cy="-43.4976803%" fx="56.3611222%" fy="-43.4976803%" r="66.7156912%" id="radialGradient-21">
-            <stop stop-color="rgb(255,210,173)" offset="9%"></stop>
-            <stop stop-color="rgb(255,151,67)" offset="100%"></stop>
+            <stop stop-color="rgb(88,88,88)" offset="9%"></stop>
+            <stop stop-color="rgb(61,61,61)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="57.4765699%" cy="-39.6175144%" fx="57.4765699%" fy="-39.6175144%" r="53.6090645%" id="radialGradient-22">
-            <stop stop-color="rgb(255,210,173)" offset="9%"></stop>
-            <stop stop-color="rgb(255,151,67)" offset="100%"></stop>
+            <stop stop-color="rgb(88,88,88)" offset="9%"></stop>
+            <stop stop-color="rgb(61,61,61)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="57.4970798%" cy="-37.2164949%" fx="57.4970798%" fy="-37.2164949%" r="52.3293595%" id="radialGradient-23">
-            <stop stop-color="rgb(255,210,173)" offset="9%"></stop>
-            <stop stop-color="rgb(255,151,67)" offset="100%"></stop>
+            <stop stop-color="rgb(88,88,88)" offset="9%"></stop>
+            <stop stop-color="rgb(61,61,61)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="49.1649706%" cy="11.7621644%" fx="49.1649706%" fy="11.7621644%" r="70.9158683%" id="radialGradient-24">
-            <stop stop-color="rgb(255,210,173)" offset="0%"></stop>
-            <stop stop-color="rgb(255,206,167)" offset="25%"></stop>
-            <stop stop-color="rgb(255,200,155)" offset="44%"></stop>
-            <stop stop-color="rgb(255,186,131)" offset="60%"></stop>
-            <stop stop-color="rgb(255,170,101)" offset="76%"></stop>
-            <stop stop-color="rgb(255,151,67)" offset="89%"></stop>
+            <stop stop-color="rgb(88,88,88)" offset="0%"></stop>
+            <stop stop-color="rgb(87,87,87)" offset="25%"></stop>
+            <stop stop-color="rgb(84,84,84)" offset="44%"></stop>
+            <stop stop-color="rgb(78,78,78)" offset="60%"></stop>
+            <stop stop-color="rgb(70,70,70)" offset="76%"></stop>
+            <stop stop-color="rgb(61,61,61)" offset="89%"></stop>
         </radialGradient>
     </defs>
     <g>

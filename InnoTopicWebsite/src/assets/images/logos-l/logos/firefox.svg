@@ -2,121 +2,121 @@
 <svg width="256px" height="265px" viewBox="0 0 256 265" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
 	<defs>
 		<radialGradient id="SVGID_1_" cx="-14920.2256" cy="-8274.0713" r="124.382" fx="-14928.1611" fy="-8274.0713" gradientTransform="matrix(0.7398 2.920152e-02 -4.866920e-02 1.0902 10886.5264 9537.6963)" gradientUnits="userSpaceOnUse">
-			<stop offset="0.1" style="stop-color:rgb(255,206,167)"/>
-			<stop offset="0.17" style="stop-color:rgb(255,202,159)"/>
-			<stop offset="0.28" style="stop-color:rgb(255,192,141)"/>
-			<stop offset="0.43" style="stop-color:rgb(255,177,115)"/>
-			<stop offset="0.77" style="stop-color:rgb(255,148,61)"/>
-			<stop offset="0.87" style="stop-color:rgb(255,145,57)"/>
-			<stop offset="0.95" style="stop-color:rgb(255,143,53)"/>
-			<stop offset="1" style="stop-color:rgb(255,142,51)"/>
+			<stop offset="0.1" style="stop-color:rgb(87,87,87)"/>
+			<stop offset="0.17" style="stop-color:rgb(85,85,85)"/>
+			<stop offset="0.28" style="stop-color:rgb(80,80,80)"/>
+			<stop offset="0.43" style="stop-color:rgb(73,73,73)"/>
+			<stop offset="0.77" style="stop-color:rgb(60,60,60)"/>
+			<stop offset="0.87" style="stop-color:rgb(59,59,59)"/>
+			<stop offset="0.95" style="stop-color:rgb(58,58,58)"/>
+			<stop offset="1" style="stop-color:rgb(57,57,57)"/>
 		</radialGradient>
 		<radialGradient id="_Path__1_" cx="-8176.5342" cy="-7746.3013" r="218.2726" gradientTransform="matrix(1.1973 0 0 1.1973 9957.373 9315.5225)" gradientUnits="userSpaceOnUse">
-			<stop offset="0" style="stop-color:rgb(255,169,99)"/>
-			<stop offset="0.22" style="stop-color:rgb(255,149,63)"/>
-			<stop offset="0.26" style="stop-color:rgb(255,145,57)"/>
-			<stop offset="0.33" style="stop-color:rgb(255,137,41)"/>
-			<stop offset="0.33" style="stop-color:rgb(255,135,39)"/>
-			<stop offset="0.44" style="stop-color:rgb(255,127,23)"/>
-			<stop offset="0.52" style="stop-color:rgb(255,120,11)"/>
-			<stop offset="0.57" style="stop-color:rgb(255,118,7)"/>
+			<stop offset="0" style="stop-color:rgb(69,69,69)"/>
+			<stop offset="0.22" style="stop-color:rgb(60,60,60)"/>
+			<stop offset="0.26" style="stop-color:rgb(59,59,59)"/>
+			<stop offset="0.33" style="stop-color:rgb(54,54,54)"/>
+			<stop offset="0.33" style="stop-color:rgb(54,54,54)"/>
+			<stop offset="0.44" style="stop-color:rgb(50,50,50)"/>
+			<stop offset="0.52" style="stop-color:rgb(47,47,47)"/>
+			<stop offset="0.57" style="stop-color:rgb(46,46,46)"/>
 		</radialGradient>
 		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="145.2425" y1="481.7857" x2="93.8365" y2="313.6288" gradientTransform="matrix(1 0 0 1 0 -286)">
-			<stop offset="0" style="stop-color:rgb(234,104,0);stop-opacity:0.4"/>
-			<stop offset="0.48" style="stop-color:rgb(242,108,0);stop-opacity:0.17"/>
-			<stop offset="1" style="stop-color:rgb(248,111,0);stop-opacity:0"/>
+			<stop offset="0" style="stop-color:rgb(38,38,38);stop-opacity:0.4"/>
+			<stop offset="0.48" style="stop-color:rgb(41,41,41);stop-opacity:0.17"/>
+			<stop offset="1" style="stop-color:rgb(42,42,42);stop-opacity:0"/>
 		</linearGradient>
 		<radialGradient id="SVGID_3_" cx="-9132.6758" cy="-6696.7002" r="73.6256" gradientTransform="matrix(1.1875 0.1168 -0.1168 1.1875 10322.1836 9194.8447)" gradientUnits="userSpaceOnUse">
-			<stop offset="0" style="stop-color:rgb(255,206,167)"/>
-			<stop offset="0.5" style="stop-color:rgb(255,148,61)"/>
-			<stop offset="1" style="stop-color:rgb(255,142,51)"/>
+			<stop offset="0" style="stop-color:rgb(87,87,87)"/>
+			<stop offset="0.5" style="stop-color:rgb(60,60,60)"/>
+			<stop offset="1" style="stop-color:rgb(57,57,57)"/>
 		</radialGradient>
 		<radialGradient id="SVGID_4_" cx="-9139.3379" cy="-6767.2969" r="122.9475" gradientTransform="matrix(1.1875 0.1168 -0.1168 1.1875 10322.1836 9194.8447)" gradientUnits="userSpaceOnUse">
-			<stop offset="0" style="stop-color:rgb(255,205,165)"/>
-			<stop offset="0.16" style="stop-color:rgb(255,189,135)"/>
-			<stop offset="0.32" style="stop-color:rgb(255,172,105)"/>
-			<stop offset="0.47" style="stop-color:rgb(255,160,83)"/>
-			<stop offset="0.62" style="stop-color:rgb(255,150,65)"/>
-			<stop offset="0.76" style="stop-color:rgb(255,142,51)"/>
-			<stop offset="0.89" style="stop-color:rgb(255,139,45)"/>
-			<stop offset="1" style="stop-color:rgb(255,137,41)"/>
+			<stop offset="0" style="stop-color:rgb(86,86,86)"/>
+			<stop offset="0.16" style="stop-color:rgb(78,78,78)"/>
+			<stop offset="0.32" style="stop-color:rgb(71,71,71)"/>
+			<stop offset="0.47" style="stop-color:rgb(65,65,65)"/>
+			<stop offset="0.62" style="stop-color:rgb(61,61,61)"/>
+			<stop offset="0.76" style="stop-color:rgb(57,57,57)"/>
+			<stop offset="0.89" style="stop-color:rgb(55,55,55)"/>
+			<stop offset="1" style="stop-color:rgb(55,55,55)"/>
 		</radialGradient>
 		<radialGradient id="SVGID_5_" cx="-9121.9473" cy="-6653.3262" r="112.8177" gradientTransform="matrix(1.1875 0.1168 -0.1168 1.1875 10322.1836 9194.8447)" gradientUnits="userSpaceOnUse">
-			<stop offset="0" style="stop-color:rgb(255,148,61)"/>
-			<stop offset="0.5" style="stop-color:rgb(255,142,51)"/>
-			<stop offset="0.99" style="stop-color:rgb(250,112,0)"/>
+			<stop offset="0" style="stop-color:rgb(60,60,60)"/>
+			<stop offset="0.5" style="stop-color:rgb(57,57,57)"/>
+			<stop offset="0.99" style="stop-color:rgb(43,43,43)"/>
 		</radialGradient>
 		<radialGradient id="SVGID_6_" cx="227.574" cy="408.42" r="215.776" fx="235.2917" fy="404.6054" gradientTransform="matrix(0.9734 0 0 0.9734 -29.4728 -291.7491)" gradientUnits="userSpaceOnUse">
-			<stop offset="0.16" style="stop-color:rgb(255,206,167)"/>
-			<stop offset="0.23" style="stop-color:rgb(255,202,159)"/>
-			<stop offset="0.37" style="stop-color:rgb(255,192,141)"/>
-			<stop offset="0.54" style="stop-color:rgb(255,177,115)"/>
-			<stop offset="0.76" style="stop-color:rgb(255,148,61)"/>
-			<stop offset="0.8" style="stop-color:rgb(255,146,59)"/>
-			<stop offset="0.84" style="stop-color:rgb(255,142,51)"/>
-			<stop offset="0.89" style="stop-color:rgb(255,135,39)"/>
-			<stop offset="0.94" style="stop-color:rgb(255,129,27)"/>
+			<stop offset="0.16" style="stop-color:rgb(87,87,87)"/>
+			<stop offset="0.23" style="stop-color:rgb(85,85,85)"/>
+			<stop offset="0.37" style="stop-color:rgb(80,80,80)"/>
+			<stop offset="0.54" style="stop-color:rgb(73,73,73)"/>
+			<stop offset="0.76" style="stop-color:rgb(60,60,60)"/>
+			<stop offset="0.8" style="stop-color:rgb(59,59,59)"/>
+			<stop offset="0.84" style="stop-color:rgb(57,57,57)"/>
+			<stop offset="0.89" style="stop-color:rgb(54,54,54)"/>
+			<stop offset="0.94" style="stop-color:rgb(51,51,51)"/>
 		</radialGradient>
 		<radialGradient id="SVGID_7_" cx="215.2015" cy="308.3499" r="245.9198" gradientTransform="matrix(0.9734 0 0 0.9734 -29.4728 -291.7491)" gradientUnits="userSpaceOnUse">
-			<stop offset="0.28" style="stop-color:rgb(255,206,167)"/>
-			<stop offset="0.4" style="stop-color:rgb(255,202,159)"/>
-			<stop offset="0.63" style="stop-color:rgb(255,191,139)"/>
-			<stop offset="0.86" style="stop-color:rgb(255,179,117)"/>
-			<stop offset="0.93" style="stop-color:rgb(255,166,95)"/>
-			<stop offset="0.99" style="stop-color:rgb(255,158,79)"/>
+			<stop offset="0.28" style="stop-color:rgb(87,87,87)"/>
+			<stop offset="0.4" style="stop-color:rgb(85,85,85)"/>
+			<stop offset="0.63" style="stop-color:rgb(80,80,80)"/>
+			<stop offset="0.86" style="stop-color:rgb(74,74,74)"/>
+			<stop offset="0.93" style="stop-color:rgb(68,68,68)"/>
+			<stop offset="0.99" style="stop-color:rgb(64,64,64)"/>
 		</radialGradient>
 		<linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="-9348.6621" y1="-6754.1943" x2="-9266.2168" y2="-6775.209" gradientTransform="matrix(1.22 0.12 -0.12 1.22 10634.7598 9460)">
-			<stop offset="0" style="stop-color:rgb(255,142,51);stop-opacity:0.5"/>
-			<stop offset="0.47" style="stop-color:rgb(255,148,61);stop-opacity:0.5"/>
-			<stop offset="0.49" style="stop-color:rgb(255,150,65);stop-opacity:0.51"/>
-			<stop offset="0.68" style="stop-color:rgb(255,172,105);stop-opacity:0.72"/>
-			<stop offset="0.83" style="stop-color:rgb(255,190,137);stop-opacity:0.87"/>
-			<stop offset="0.94" style="stop-color:rgb(255,200,155);stop-opacity:0.96"/>
-			<stop offset="1" style="stop-color:rgb(255,204,163)"/>
+			<stop offset="0" style="stop-color:rgb(57,57,57);stop-opacity:0.5"/>
+			<stop offset="0.47" style="stop-color:rgb(60,60,60);stop-opacity:0.5"/>
+			<stop offset="0.49" style="stop-color:rgb(60,60,60);stop-opacity:0.51"/>
+			<stop offset="0.68" style="stop-color:rgb(71,71,71);stop-opacity:0.72"/>
+			<stop offset="0.83" style="stop-color:rgb(79,79,79);stop-opacity:0.87"/>
+			<stop offset="0.94" style="stop-color:rgb(84,84,84);stop-opacity:0.96"/>
+			<stop offset="1" style="stop-color:rgb(86,86,86)"/>
 		</linearGradient>
 		<linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="103.0922" y1="-1126.7808" x2="88.439" y2="-1164.3336" gradientTransform="matrix(0.99 0.1 -0.1 0.99 -175.62 1176.2098)">
-			<stop offset="0" style="stop-color:rgb(255,125,21);stop-opacity:0.6"/>
-			<stop offset="1" style="stop-color:rgb(255,142,51);stop-opacity:0"/>
+			<stop offset="0" style="stop-color:rgb(50,50,50);stop-opacity:0.6"/>
+			<stop offset="1" style="stop-color:rgb(57,57,57);stop-opacity:0"/>
 		</linearGradient>
 		<linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="-193.2793" y1="534.1769" x2="-168.0087" y2="562.8766" gradientTransform="matrix(0.99 0.1 -0.1 0.99 303.51 -384.2)">
-			<stop offset="1.000000e-02" style="stop-color:rgb(255,125,21);stop-opacity:0.5"/>
-			<stop offset="0.48" style="stop-color:rgb(255,148,61);stop-opacity:0.5"/>
-			<stop offset="1" style="stop-color:rgb(255,148,61);stop-opacity:0"/>
+			<stop offset="1.000000e-02" style="stop-color:rgb(50,50,50);stop-opacity:0.5"/>
+			<stop offset="0.48" style="stop-color:rgb(60,60,60);stop-opacity:0.5"/>
+			<stop offset="1" style="stop-color:rgb(60,60,60);stop-opacity:0"/>
 		</linearGradient>
 		<linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="-144.6839" y1="583.6765" x2="-144.6651" y2="563.5964" gradientTransform="matrix(0.99 0.1 -0.1 0.99 303.51 -384.2)">
-			<stop offset="0" style="stop-color:rgb(255,142,51)"/>
-			<stop offset="8.000000e-02" style="stop-color:rgb(255,142,51);stop-opacity:0.81"/>
-			<stop offset="0.21" style="stop-color:rgb(255,142,51);stop-opacity:0.57"/>
-			<stop offset="0.33" style="stop-color:rgb(255,142,51);stop-opacity:0.36"/>
-			<stop offset="0.45" style="stop-color:rgb(255,142,51);stop-opacity:0.2"/>
-			<stop offset="0.56" style="stop-color:rgb(255,142,51);stop-opacity:9.000000e-02"/>
-			<stop offset="0.67" style="stop-color:rgb(255,142,51);stop-opacity:2.000000e-02"/>
-			<stop offset="0.77" style="stop-color:rgb(255,142,51);stop-opacity:0"/>
+			<stop offset="0" style="stop-color:rgb(57,57,57)"/>
+			<stop offset="8.000000e-02" style="stop-color:rgb(57,57,57);stop-opacity:0.81"/>
+			<stop offset="0.21" style="stop-color:rgb(57,57,57);stop-opacity:0.57"/>
+			<stop offset="0.33" style="stop-color:rgb(57,57,57);stop-opacity:0.36"/>
+			<stop offset="0.45" style="stop-color:rgb(57,57,57);stop-opacity:0.2"/>
+			<stop offset="0.56" style="stop-color:rgb(57,57,57);stop-opacity:9.000000e-02"/>
+			<stop offset="0.67" style="stop-color:rgb(57,57,57);stop-opacity:2.000000e-02"/>
+			<stop offset="0.77" style="stop-color:rgb(57,57,57);stop-opacity:0"/>
 		</linearGradient>
 		<linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="166.5909" y1="295.7137" x2="248.6675" y2="479.2461" gradientTransform="matrix(1 0 0 1 0 -286)">
-			<stop offset="0" style="stop-color:rgb(255,212,177)"/>
-			<stop offset="0.27" style="stop-color:rgb(255,212,177)"/>
-			<stop offset="0.45" style="stop-color:rgb(255,208,171)"/>
-			<stop offset="0.61" style="stop-color:rgb(255,203,161)"/>
-			<stop offset="0.76" style="stop-color:rgb(255,195,147)"/>
-			<stop offset="0.89" style="stop-color:rgb(255,186,131)"/>
-			<stop offset="0.9" style="stop-color:rgb(255,185,129)"/>
-			<stop offset="0.95" style="stop-color:rgb(255,183,125)"/>
-			<stop offset="1" style="stop-color:rgb(255,179,117)"/>
+			<stop offset="0" style="stop-color:rgb(90,90,90)"/>
+			<stop offset="0.27" style="stop-color:rgb(89,89,89)"/>
+			<stop offset="0.45" style="stop-color:rgb(88,88,88)"/>
+			<stop offset="0.61" style="stop-color:rgb(85,85,85)"/>
+			<stop offset="0.76" style="stop-color:rgb(82,82,82)"/>
+			<stop offset="0.89" style="stop-color:rgb(78,78,78)"/>
+			<stop offset="0.9" style="stop-color:rgb(77,77,77)"/>
+			<stop offset="0.95" style="stop-color:rgb(76,76,76)"/>
+			<stop offset="1" style="stop-color:rgb(74,74,74)"/>
 		</linearGradient>
 		<linearGradient id="SVGID_13_" gradientUnits="userSpaceOnUse" x1="182.8878" y1="401.2735" x2="144.0111" y2="505.6616" gradientTransform="matrix(1 0 0 1 0 -286)">
-			<stop offset="0" style="stop-color:rgb(255,177,115)"/>
-			<stop offset="4.000000e-02" style="stop-color:rgb(255,177,115);stop-opacity:0.86"/>
-			<stop offset="8.000000e-02" style="stop-color:rgb(255,177,115);stop-opacity:0.73"/>
-			<stop offset="0.13" style="stop-color:rgb(255,177,115);stop-opacity:0.63"/>
-			<stop offset="0.18" style="stop-color:rgb(255,177,115);stop-opacity:0.56"/>
-			<stop offset="0.23" style="stop-color:rgb(255,177,115);stop-opacity:0.51"/>
-			<stop offset="0.28" style="stop-color:rgb(255,177,115);stop-opacity:0.5"/>
-			<stop offset="0.39" style="stop-color:rgb(255,177,115);stop-opacity:0.48"/>
-			<stop offset="0.52" style="stop-color:rgb(255,177,115);stop-opacity:0.42"/>
-			<stop offset="0.68" style="stop-color:rgb(255,177,115);stop-opacity:0.31"/>
-			<stop offset="0.84" style="stop-color:rgb(255,177,115);stop-opacity:0.17"/>
-			<stop offset="1" style="stop-color:rgb(255,177,115);stop-opacity:0"/>
+			<stop offset="0" style="stop-color:rgb(73,73,73)"/>
+			<stop offset="4.000000e-02" style="stop-color:rgb(73,73,73);stop-opacity:0.86"/>
+			<stop offset="8.000000e-02" style="stop-color:rgb(73,73,73);stop-opacity:0.73"/>
+			<stop offset="0.13" style="stop-color:rgb(73,73,73);stop-opacity:0.63"/>
+			<stop offset="0.18" style="stop-color:rgb(73,73,73);stop-opacity:0.56"/>
+			<stop offset="0.23" style="stop-color:rgb(73,73,73);stop-opacity:0.51"/>
+			<stop offset="0.28" style="stop-color:rgb(73,73,73);stop-opacity:0.5"/>
+			<stop offset="0.39" style="stop-color:rgb(73,73,73);stop-opacity:0.48"/>
+			<stop offset="0.52" style="stop-color:rgb(73,73,73);stop-opacity:0.42"/>
+			<stop offset="0.68" style="stop-color:rgb(73,73,73);stop-opacity:0.31"/>
+			<stop offset="0.84" style="stop-color:rgb(73,73,73);stop-opacity:0.17"/>
+			<stop offset="1" style="stop-color:rgb(73,73,73);stop-opacity:0"/>
 		</linearGradient>
 	</defs>
 	<g>

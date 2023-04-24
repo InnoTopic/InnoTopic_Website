@@ -5,23 +5,23 @@
     <desc>Created with Sketch.</desc>
     <defs>
         <linearGradient x1="62.1023273%" y1="0%" x2="108.19718%" y2="37.8635764%" id="linearGradient-1">
-            <stop stop-color="rgb(255,149,63)" offset="0%"></stop>
-            <stop stop-color="rgb(255,194,145)" offset="100%"></stop>
+            <stop stop-color="rgb(60,60,60)" offset="0%"></stop>
+            <stop stop-color="rgb(81,81,81)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="69.644116%" y1="0%" x2="54.0428975%" y2="108.456714%" id="linearGradient-2">
-            <stop stop-color="rgb(255,196,149)" offset="0%"></stop>
-            <stop stop-color="rgb(255,141,49)" offset="37.8600687%"></stop>
-            <stop stop-color="rgb(234,104,0)" offset="100%"></stop>
+            <stop stop-color="rgb(82,82,82)" offset="0%"></stop>
+            <stop stop-color="rgb(56,56,56)" offset="37.8600687%"></stop>
+            <stop stop-color="rgb(38,38,38)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="69.6908165%" y1="-12.9743587%" x2="16.7228981%" y2="117.391248%" id="linearGradient-3">
-            <stop stop-color="rgb(255,200,155)" offset="0%"></stop>
-            <stop stop-color="rgb(255,154,73)" offset="41.472606%"></stop>
-            <stop stop-color="rgb(250,112,0)" offset="100%"></stop>
+            <stop stop-color="rgb(84,84,84)" offset="0%"></stop>
+            <stop stop-color="rgb(62,62,62)" offset="41.472606%"></stop>
+            <stop stop-color="rgb(43,43,43)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="68.1279872%" y1="-35.6905737%" x2="30.4400914%" y2="114.942679%" id="linearGradient-4">
-            <stop stop-color="rgb(255,212,177)" offset="0%"></stop>
-            <stop stop-color="rgb(255,154,73)" offset="51.2635191%"></stop>
-            <stop stop-color="rgb(250,112,0)" offset="100%"></stop>
+            <stop stop-color="rgb(90,90,90)" offset="0%"></stop>
+            <stop stop-color="rgb(62,62,62)" offset="51.2635191%"></stop>
+            <stop stop-color="rgb(43,43,43)" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

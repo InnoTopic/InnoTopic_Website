@@ -3,14 +3,14 @@
     <title>SingleStore</title>
     <defs>
         <linearGradient x1="67.3449258%" y1="-26.0044686%" x2="-18.5227789%" y2="22.9877555%" id="singleStoreLinearGradient-1">
-            <stop stop-color="rgb(255,212,177)" offset="0%"></stop>
-            <stop stop-color="rgb(255,129,27)" offset="35.0158%"></stop>
-            <stop stop-color="rgb(255,115,3)" offset="100%"></stop>
+            <stop stop-color="rgb(90,90,90)" offset="0%"></stop>
+            <stop stop-color="rgb(51,51,51)" offset="35.0158%"></stop>
+            <stop stop-color="rgb(45,45,45)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="36.2591509%" y1="-19.3628763%" x2="111.72205%" y2="44.9975357%" id="singleStoreLinearGradient-2">
-            <stop stop-color="rgb(255,212,177)" offset="3.54358%"></stop>
-            <stop stop-color="rgb(255,115,3)" offset="57.6537%"></stop>
-            <stop stop-color="rgb(234,104,0)" offset="100%"></stop>
+            <stop stop-color="rgb(90,90,90)" offset="3.54358%"></stop>
+            <stop stop-color="rgb(45,45,45)" offset="57.6537%"></stop>
+            <stop stop-color="rgb(38,38,38)" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g>

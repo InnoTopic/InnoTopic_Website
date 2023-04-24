@@ -3,8 +3,8 @@
     <title>Overloop</title>
     <defs>
         <linearGradient x1="100.000913%" y1="-7.14383695%" x2="0.00217923797%" y2="92.8571023%" id="overloopLinearGradient-1">
-            <stop stop-color="rgb(234,104,0)" offset="0%"></stop>
-            <stop stop-color="rgb(255,212,177)" offset="100%"></stop>
+            <stop stop-color="rgb(38,38,38)" offset="0%"></stop>
+            <stop stop-color="rgb(90,90,90)" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g>

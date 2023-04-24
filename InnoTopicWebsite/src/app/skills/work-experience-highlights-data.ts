@@ -83,12 +83,6 @@ export const highlights = {
     "Electron": {}, /* TODO: mark as non-main experience */
     "Expo": {}, /* TODO: mark as non-main experience; (in nx project template; here and in expanding-to) */
     "PWA": {},
-    "D3.js": {},
-    "SVG": {},
-    // ===== 3d:
-    "WebGL": {},
-    "glTF": {}, /* FIXME too big */
-    "Blender": {},
 
 
     /* TODO; SvelteKit svelte-kit */
@@ -101,6 +95,8 @@ export const highlights = {
     "PostCSS": {},
     "Tailwind CSS": {},
     "Windi CSS": {},
+    "Bootstrap": {},
+    "Material Design": {},
     "Chakra UI": {},
     "Mantine": {},
     "Bulma": {},
@@ -113,8 +109,9 @@ export const highlights = {
     "Cordova": {}, /* NO PhoneGap -- discontinued - https://blog.phonegap.com/update-for-customers-using-phonegap-and-phonegap-build-cc701c77502c ? */
     "NativeScript": {},
     "Flutter": {},
+    // ==== Frontend State management:
     "Redux": {},
-    "Redux Toolkit": {}, // hide coz looks like duplicate icon?
+    // "Redux Toolkit": {}, // hide coz looks like duplicate icon?;  // hiding coz looks quirky and I don't have other stuff like that with same icon, e.g. SvelteKit. And it's kinda implied, that each tech can have its companion toolkit / higher-level utilities, so Redux Toolkit not that special; also, saving space
     "Recoil": {},
     "Jotai": {},
     "Zustand": {},
@@ -125,16 +122,9 @@ export const highlights = {
     "MobX": {}, // TODO FIXME MobX-State-Tree https://github.com/mobxjs/mobx-state-tree/blob/b6c1c9b29d7bd7525ac6588f8f67f6c13eb17b2b/website/static/img/mobx-state-tree-logo.svg
     "MobX-State-Tree": {}, // TODO FIXME MobX-State-Tree https://github.com/mobxjs/mobx-state-tree/blob/b6c1c9b29d7bd7525ac6588f8f67f6c13eb17b2b/website/static/img/mobx-state-tree-logo.svg
     // https://github.com/simple-icons/simple-icons/issues/4352
-    "Terraform": {},
-    "Ansible": {},
-    "Datadog": {},
-    "Dynatrace": {},
-    "Sentry": {},
-    "Snyk": {} /*  --- comments: includes/bought deepcode */,
-    "OWASP": {} /*  */,
-    "CodeSee": {},
     "Vercel": {},
     "Netlify": {},
+    "Jamstack": {},
     "Turbopack": {},
     "Turborepo": {},
     "esbuild": {},
@@ -143,28 +133,30 @@ export const highlights = {
     "Vite": {}, // https://github.com/pocketbase/pocketbase
     "Vitest": {},
     "pnpm": {},
-    "Docker": {},
-    "GraalVM": {},
     /* TODO: Spring Framework */
-    "Kong": {},
-    "GraphQL": {},
-    "Apollo": {}, /* TODO Apollo Studio? */
-    'Altair GraphQL Client': {},
-    "Swagger": {},
-    "tRPC": {},
     /* FIXME: more backend: OpenAPI, maybe JSON Schema, websockets, socket.io maybe */
     /// ==== comprehension / compare / explore:
-    "StackShare": {},
-    "Openbase": {},
-    "SVGPorn": {},
-    "SVGO": {},
     // https://jakearchibald.github.io/svgomg/ / https://github.com/svg - with gradient
     /// ====
     /* TODO: Smth like PowerBI, Tableau ? */
     /* TODO: (kubernetes?) */
-    "Figma": {},
+    "StackShare": {},
+    "Openbase": {},
+    "SVGPorn": {},
+    "SVGO": {},
     "SVGator": {},
+    "Figma": {},
+    "UXPin": {},
     "Zeplin": {},
+    "Dribbble": {},
+    // ==== vector graphics, svg:
+    "D3.js": {},
+    "SVG": {},
+    // ===== 3d graphics:
+    "WebGL": {},
+    "glTF": {}, /* FIXME too big */
+    "Blender": {},
+
     // "AG Grid": {}, // old logo; and trying to conserve horizontal space
     "Lodash": {},
     "ReactiveX": {},
@@ -184,24 +176,43 @@ export const highlights = {
     "UserTesting": {},
     "BrowserStack": {}, // high on stackshare
     "Jest": {},
-    "Bootstrap": {},
-    "Material Design": {},
+    //// ====== WebAssembly (WASM):
     "WebAssembly": {},
+    "AssemblyScript": {},
     "WebAssembly System Interface (WASI)": {},
-    "Wasmtime": {},
     "Wasmer": {},
     "WebAssembly Package Manager (WAPM)": {}, /* https://wapm.io/startpage/logo.svg */
+    "Wasmtime": {},
     "Fermyon": {}, // https://github.com/fermyon/spin ; microservices in webassembly
+    'Rust': {},
+    /// ===== ^^^^^ End of Frontend / UI / UX / WASM related
+    // ========= Frontend-Backed communication protocols:
+    "GraphQL": {},
+    "Apollo": {}, /* TODO Apollo Studio? */
+    'Altair GraphQL Client': {},
+    "Swagger": {},
+    "OpenAPI": {},
+    "tRPC": {},
+    // ====== Tracking / tracing / security:
+    "Dynatrace": {},
+    // ^^ stuff that is kinda frontend-related
+    "Ansible": {},
+    "Datadog": {},
+    "Sentry": {},
+    "Snyk": {} /*  --- comments: includes/bought deepcode */,
+    "OWASP": {} /*  */,
+    "CodeSee": {},
+    /// Version control and collaboration:
     "Git": {},
     "GitHub": {},
     "GitLab": {},
     /* TODO: smth like Jira / Atlassian */
     /* TODO: BitBucket ? */
-    "Linux": {},
     // ==== AI / ML:
     "Jupyter": {},
     "JetBrains DataLore": {},
     "Google Colaboratory": {},
+    "Observable": {},
     "Hugging Face": {},
     "NumPy": {},
     "PyTorch": {},
@@ -215,7 +226,7 @@ export const highlights = {
     "LAION": {},
     "Stability AI": {},
     "Stable Diffusion": {},
-    // BlockChain / CryptoCurrencies
+    // ===== BlockChain / CryptoCurrencies
     "Bitcoin": {},
     "Basic Attention Token (BAT)": {},
     "Brave Browser": {},
@@ -225,10 +236,10 @@ export const highlights = {
     "web3.js" /* FIXME */: {},
     "ethers.js": {},
     "Solid": {},
+    // ====== LowCode / NoCode
     "Airtable": {},
     "Notion": {},
     "Coda": {},
-    "Observable": {},
     "Carbide": {},
     "Replit": {},
     "Ghostwriter": {},
@@ -236,6 +247,7 @@ export const highlights = {
     // "Cloud9": {},
     "Zapier": {},
     "IFTTT": {},
+    "Kong": {}, /* The Cloud Native API Management Platform */
     // ==== headless CMS:
     "Storyblok": {},
     "Strapi": {}, // 54k stars GH! Self-hosted or Cloud, RESTful or GraphQL
@@ -259,7 +271,11 @@ export const highlights = {
     "YouTube": {},
     "LinkedIn": {},
     "Meetup": {},
-    // ==== Databases (DB-s):
+    "Linux": {},
+    "Docker": {},
+    "Terraform": {},
+    "GraalVM": {},
+    // ==== Databases (DB-s): (the backend-only databases should go last, coz they are farthest from frontend)
     Feathers: {},
     "8base": {},
     "Algolia": {},
@@ -275,6 +291,7 @@ export const highlights = {
     // TODO FIXME Google Cloud
     "AWS Amplify": {},
     "Firebase": {},
+    "Supabase": {},
 
     "Prisma": {},
     "MongoDB": {},
@@ -283,7 +300,7 @@ export const highlights = {
     "Xata": {},
     "Dgraph": {},
     "Fauna": {},
-    "RethinkDB": {},
+    // "RethinkDB": {}, /* disabled to save space and optimize layout for print */
     "RxDB": {},
     "MindsDB": {},
     // TODO JetBrains Fleet
@@ -325,7 +342,6 @@ export const highlights = {
   /** This should just be languages / platforms / ecosystems */
   broad: topics({ /* maybe distinguish broad from polyglot? This is more past stuff */
     // "JavaScript": {}, /* FIXME es6 bad */
-    "AssemblyScript": {},
     "Kotlin": {},
     'JetBrains MPS': {},
     "Java": {},
@@ -335,11 +351,12 @@ export const highlights = {
     "Dart": {},
     "Swift": {},
     /* Maybe .NET / Core */
-    ".NET": {},
-    "C#": {},
-    "Blazor": {},
     'C++': {},
     'C': {},
+    'HolyC': {},
+    "C#": {},
+    ".NET": {},
+    "Blazor": {},
     "Ruby": {},
     'Crystal': {},
     "Python": {},
@@ -352,7 +369,6 @@ export const highlights = {
     'Nim': {},
     'Bash': {},
     'R Language': {},
-    'Rust': {},
     'Go': {},
     'D Language': {} /* FIXME: D logo prints with glitches; FIXME: remove shadow; adapt: https://dlang.org/images/dlogo.svg -- OR BETTER just get the square-bounded logo out of the current file as square is less problemss */,
     'V Language': {},

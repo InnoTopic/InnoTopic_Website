@@ -3,24 +3,24 @@
     <title>Windi CSS</title>
     <defs>
         <linearGradient x1="16.6393504%" y1="36.1860418%" x2="137.274641%" y2="175.371416%" id="windiLinearGradient-1">
-            <stop stop-color="rgb(255,161,85)" offset="7.8225%"></stop>
-            <stop stop-color="rgb(255,129,27)" offset="57.2917%"></stop>
-            <stop stop-color="rgb(242,108,0)" offset="100%"></stop>
+            <stop stop-color="rgb(90,90,90)" offset="7.8225%"></stop>
+            <stop stop-color="rgb(59,59,59)" offset="57.2917%"></stop>
+            <stop stop-color="rgb(38,38,38)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="-22.0989921%" y1="-49.6214796%" x2="91.4510521%" y2="73.6945313%" id="windiLinearGradient-2">
-            <stop stop-color="rgb(255,161,85)" offset="7.8225%"></stop>
-            <stop stop-color="rgb(255,129,27)" offset="57.2917%"></stop>
-            <stop stop-color="rgb(242,108,0)" offset="100%"></stop>
+            <stop stop-color="rgb(90,90,90)" offset="7.8225%"></stop>
+            <stop stop-color="rgb(59,59,59)" offset="57.2917%"></stop>
+            <stop stop-color="rgb(38,38,38)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="8.69565217%" y1="37.4606971%" x2="71.7391304%" y2="80.2713244%" id="windiLinearGradient-3">
-            <stop stop-color="rgb(255,161,85)" offset="7.8225%"></stop>
-            <stop stop-color="rgb(255,129,27)" offset="57.2917%"></stop>
-            <stop stop-color="rgb(242,108,0)" offset="100%"></stop>
+            <stop stop-color="rgb(90,90,90)" offset="7.8225%"></stop>
+            <stop stop-color="rgb(59,59,59)" offset="57.2917%"></stop>
+            <stop stop-color="rgb(38,38,38)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="60.7436542%" y1="-308.636493%" x2="501.135147%" y2="225.788414%" id="windiLinearGradient-4">
-            <stop stop-color="rgb(255,161,85)" offset="7.8225%"></stop>
-            <stop stop-color="rgb(255,129,27)" offset="57.2917%"></stop>
-            <stop stop-color="rgb(242,108,0)" offset="100%"></stop>
+            <stop stop-color="rgb(90,90,90)" offset="7.8225%"></stop>
+            <stop stop-color="rgb(59,59,59)" offset="57.2917%"></stop>
+            <stop stop-color="rgb(38,38,38)" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g>

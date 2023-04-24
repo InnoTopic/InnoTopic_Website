@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 240 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <path d="M28.8,120C28.8,69.632 69.632,28.8 120,28.8C140.276,28.8 158.996,35.406 174.143,46.602C178.116,37.251 186.122,30.027 195.978,27.113C175.295,10.178 148.828,0 120,0C53.726,0 0,53.726 0,120C0,186.274 53.726,240 120,240C186.274,240 240,186.274 240,120C240,106.13 237.641,92.787 233.296,80.366C227.385,88.358 218.082,93.69 207.514,94.237C209.912,102.396 211.2,111.039 211.2,120C211.2,170.368 170.368,211.2 120,211.2C69.632,211.2 28.8,170.368 28.8,120Z" style="fill:url(#_Radial1);fill-rule:nonzero;"/>
+    <path d="M237.533,95.687C236.454,90.449 235.034,85.334 233.296,80.365C227.385,88.358 218.082,93.69 207.514,94.236C209.21,100.008 210.351,106.021 210.873,112.218C222.003,110.85 231.624,104.605 237.533,95.687Z" style="fill:rgb(38,38,38);fill-opacity:0.3;fill-rule:nonzero;"/>
+    <path d="M120,172.5C148.927,172.5 172.5,148.972 172.5,120C172.5,91.073 148.972,67.5 120,67.5C91.028,67.5 67.5,91.073 67.5,120C67.5,148.927 91.073,172.5 120,172.5Z" style="fill:rgb(90,90,90);fill-rule:nonzero;"/>
+    <path d="M198.75,75C213.247,75 225,63.248 225,48.75C225,34.253 213.247,22.5 198.75,22.5C184.253,22.5 172.5,34.253 172.5,48.75C172.5,63.248 184.253,75 198.75,75Z" style="fill:rgb(90,90,90);fill-rule:nonzero;"/>
+    <defs>
+        <radialGradient id="_Radial1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(85.5,-31.5001,31.9347,86.6796,120,120)"><stop offset="0" style="stop-color:rgb(90,90,90);stop-opacity:0.8"/><stop offset="0.11" style="stop-color:rgb(90,90,90);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(90,90,90);stop-opacity:1"/></radialGradient>
+    </defs>
+</svg>

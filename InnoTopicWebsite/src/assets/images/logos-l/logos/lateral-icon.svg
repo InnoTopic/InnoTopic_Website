@@ -4,55 +4,55 @@
     <defs>
         <circle id="path-1" cx="128" cy="128" r="128"></circle>
         <linearGradient x1="1.38181042e-06%" y1="73.25%" x2="37.75%" y2="36.5833333%" id="linearGradient-3">
-            <stop stop-color="rgb(240,107,0)" offset="0%"></stop>
-            <stop stop-color="rgb(248,111,0)" offset="100%"></stop>
+            <stop stop-color="rgb(40,40,40)" offset="0%"></stop>
+            <stop stop-color="rgb(42,42,42)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="34.7222222%" y1="1.11882917e-06%" x2="92.0138889%" y2="90.75%" id="linearGradient-4">
-            <stop stop-color="rgb(254,113,0)" offset="0%"></stop>
-            <stop stop-color="rgb(255,122,15)" offset="100%"></stop>
+            <stop stop-color="rgb(44,44,44)" offset="0%"></stop>
+            <stop stop-color="rgb(48,48,48)" offset="100%"></stop>
         </linearGradient>
         <polygon id="path-5" points="234.666667 256 234.666667 0 0 0 192 256"></polygon>
         <linearGradient x1="76.5%" y1="48.2653125%" x2="8.64720833e-07%" y2="54.8185764%" id="linearGradient-7">
-            <stop stop-color="rgb(234,104,0)" offset="0%"></stop>
-            <stop stop-color="rgb(234,104,0)" offset="100%"></stop>
+            <stop stop-color="rgb(38,38,38)" offset="0%"></stop>
+            <stop stop-color="rgb(38,38,38)" offset="100%"></stop>
         </linearGradient>
         <polygon id="path-8" points="186.453333 0 0 52.6933333 0 91.0933333 256 91.0933333 256 73.6"></polygon>
     </defs>
     <g>
         <g>
-            <mask id="mask-2" fill="rgb(255,212,177)">
+            <mask id="mask-2" fill="rgb(90,90,90)">
                 <use xlink:href="#path-1"></use>
             </mask>
             <g mask="url(#mask-2)">
                 <g transform="translate(-122.168533, -69.990430)">
                     <polygon stroke="none" fill="url(#linearGradient-3)" points="378.168533 325.99043 378.168533 69.99043 122.168533 69.99043 122.168533 325.777097"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(100.616616, 100.918377) rotate(-45.000000) translate(-100.616616, -100.918377) " points="-27.3833837 100.278377 228.616616 100.278377 228.616616 101.558377 -27.3833837 101.558377"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(116.003283, 116.305044) rotate(-45.000000) translate(-116.003283, -116.305044) " points="-11.996717 115.665044 244.003283 115.665044 244.003283 116.945044 -11.996717 116.945044"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(131.389950, 131.691710) rotate(-45.000000) translate(-131.389950, -131.691710) " points="3.38994967 131.05171 259.38995 131.05171 259.38995 132.33171 3.38994967 132.33171"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(146.776083, 147.078377) rotate(-45.000000) translate(-146.776083, -147.078377) " points="18.776083 146.438377 274.776083 146.438377 274.776083 147.718377 18.776083 147.718377"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(162.163283, 162.465044) rotate(-45.000000) translate(-162.163283, -162.465044) " points="34.163283 161.825044 290.163283 161.825044 290.163283 163.105044 34.163283 163.105044"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(177.550003, 177.851710) rotate(-45.000000) translate(-177.550003, -177.851710) " points="49.550003 177.21171 305.550003 177.21171 305.550003 178.49171 49.550003 178.49171"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(192.936403, 193.237844) rotate(-45.000000) translate(-192.936403, -193.237844) " points="64.936403 192.597844 320.936403 192.597844 320.936403 193.877844 64.936403 193.877844"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(208.323134, 208.624510) rotate(-45.000000) translate(-208.323134, -208.624510) " points="80.3231337 207.98451 336.323134 207.98451 336.323134 209.26451 80.3231337 209.26451"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(223.709523, 224.011177) rotate(-45.000000) translate(-223.709523, -224.011177) " points="95.709523 223.371177 351.709523 223.371177 351.709523 224.651177 95.709523 224.651177"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(239.096243, 239.398377) rotate(-45.000000) translate(-239.096243, -239.398377) " points="111.096243 238.758377 367.096243 238.758377 367.096243 240.038377 111.096243 240.038377"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(90.962216, 244.829416) rotate(-45.000000) translate(-90.962216, -244.829416) " points="90.3222163 116.829416 91.6022163 116.829416 91.6022163 372.829416 90.3222163 372.829416"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(106.348350, 229.442216) rotate(-45.000000) translate(-106.348350, -229.442216) " points="105.70835 101.442216 106.98835 101.442216 106.98835 357.442216 105.70835 357.442216"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(121.735550, 214.055550) rotate(-45.000000) translate(-121.735550, -214.055550) " points="121.09555 86.0555497 122.37555 86.0555497 122.37555 342.05555 121.09555 342.05555"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(137.122216, 198.668670) rotate(-45.000000) translate(-137.122216, -198.668670) " points="136.482216 70.6686697 137.762216 70.6686697 137.762216 326.66867 136.482216 326.66867"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(152.508883, 183.281950) rotate(-45.000000) translate(-152.508883, -183.281950) " points="151.868883 55.2819497 153.148883 55.2819497 153.148883 311.28195 151.868883 311.28195"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(167.895390, 167.895870) rotate(-45.000000) translate(-167.895390, -167.895870) " points="167.25539 39.8958697 168.53539 39.8958697 168.53539 295.89587 167.25539 295.89587"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(183.281790, 152.509150) rotate(-45.000000) translate(-183.281790, -152.509150) " points="182.64179 24.5091497 183.92179 24.5091497 183.92179 280.50915 182.64179 280.50915"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(198.668830, 137.122430) rotate(-45.000000) translate(-198.668830, -137.122430) " points="198.02883 9.12242967 199.30883 9.12242967 199.30883 265.12243 198.02883 265.12243"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(214.055230, 121.735710) rotate(-45.000000) translate(-214.055230, -121.735710) " points="213.41523 -6.26429033 214.69523 -6.26429033 214.69523 249.73571 213.41523 249.73571"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(229.441950, 106.348883) rotate(-45.000000) translate(-229.441950, -106.348883) " points="228.80195 -21.651117 230.08195 -21.651117 230.08195 234.348883 228.80195 234.348883"></polygon>
-                    <polygon stroke="none" fill="rgb(240,107,0)" transform="translate(244.828350, 90.962216) rotate(-45.000000) translate(-244.828350, -90.962216) " points="244.18835 -37.0377837 245.46835 -37.0377837 245.46835 218.962216 244.18835 218.962216"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(100.616616, 100.918377) rotate(-45.000000) translate(-100.616616, -100.918377) " points="-27.3833837 100.278377 228.616616 100.278377 228.616616 101.558377 -27.3833837 101.558377"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(116.003283, 116.305044) rotate(-45.000000) translate(-116.003283, -116.305044) " points="-11.996717 115.665044 244.003283 115.665044 244.003283 116.945044 -11.996717 116.945044"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(131.389950, 131.691710) rotate(-45.000000) translate(-131.389950, -131.691710) " points="3.38994967 131.05171 259.38995 131.05171 259.38995 132.33171 3.38994967 132.33171"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(146.776083, 147.078377) rotate(-45.000000) translate(-146.776083, -147.078377) " points="18.776083 146.438377 274.776083 146.438377 274.776083 147.718377 18.776083 147.718377"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(162.163283, 162.465044) rotate(-45.000000) translate(-162.163283, -162.465044) " points="34.163283 161.825044 290.163283 161.825044 290.163283 163.105044 34.163283 163.105044"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(177.550003, 177.851710) rotate(-45.000000) translate(-177.550003, -177.851710) " points="49.550003 177.21171 305.550003 177.21171 305.550003 178.49171 49.550003 178.49171"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(192.936403, 193.237844) rotate(-45.000000) translate(-192.936403, -193.237844) " points="64.936403 192.597844 320.936403 192.597844 320.936403 193.877844 64.936403 193.877844"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(208.323134, 208.624510) rotate(-45.000000) translate(-208.323134, -208.624510) " points="80.3231337 207.98451 336.323134 207.98451 336.323134 209.26451 80.3231337 209.26451"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(223.709523, 224.011177) rotate(-45.000000) translate(-223.709523, -224.011177) " points="95.709523 223.371177 351.709523 223.371177 351.709523 224.651177 95.709523 224.651177"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(239.096243, 239.398377) rotate(-45.000000) translate(-239.096243, -239.398377) " points="111.096243 238.758377 367.096243 238.758377 367.096243 240.038377 111.096243 240.038377"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(90.962216, 244.829416) rotate(-45.000000) translate(-90.962216, -244.829416) " points="90.3222163 116.829416 91.6022163 116.829416 91.6022163 372.829416 90.3222163 372.829416"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(106.348350, 229.442216) rotate(-45.000000) translate(-106.348350, -229.442216) " points="105.70835 101.442216 106.98835 101.442216 106.98835 357.442216 105.70835 357.442216"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(121.735550, 214.055550) rotate(-45.000000) translate(-121.735550, -214.055550) " points="121.09555 86.0555497 122.37555 86.0555497 122.37555 342.05555 121.09555 342.05555"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(137.122216, 198.668670) rotate(-45.000000) translate(-137.122216, -198.668670) " points="136.482216 70.6686697 137.762216 70.6686697 137.762216 326.66867 136.482216 326.66867"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(152.508883, 183.281950) rotate(-45.000000) translate(-152.508883, -183.281950) " points="151.868883 55.2819497 153.148883 55.2819497 153.148883 311.28195 151.868883 311.28195"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(167.895390, 167.895870) rotate(-45.000000) translate(-167.895390, -167.895870) " points="167.25539 39.8958697 168.53539 39.8958697 168.53539 295.89587 167.25539 295.89587"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(183.281790, 152.509150) rotate(-45.000000) translate(-183.281790, -152.509150) " points="182.64179 24.5091497 183.92179 24.5091497 183.92179 280.50915 182.64179 280.50915"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(198.668830, 137.122430) rotate(-45.000000) translate(-198.668830, -137.122430) " points="198.02883 9.12242967 199.30883 9.12242967 199.30883 265.12243 198.02883 265.12243"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(214.055230, 121.735710) rotate(-45.000000) translate(-214.055230, -121.735710) " points="213.41523 -6.26429033 214.69523 -6.26429033 214.69523 249.73571 213.41523 249.73571"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(229.441950, 106.348883) rotate(-45.000000) translate(-229.441950, -106.348883) " points="228.80195 -21.651117 230.08195 -21.651117 230.08195 234.348883 228.80195 234.348883"></polygon>
+                    <polygon stroke="none" fill="rgb(40,40,40)" transform="translate(244.828350, 90.962216) rotate(-45.000000) translate(-244.828350, -90.962216) " points="244.18835 -37.0377837 245.46835 -37.0377837 245.46835 218.962216 244.18835 218.962216"></polygon>
                     <polygon stroke="none" fill="url(#linearGradient-4)" points="378.168533 325.99043 378.168533 69.99043 143.501867 69.99043 335.501867 325.99043"></polygon>
                     <g transform="translate(143.501867, 69.990430)">
-                        <mask id="mask-6" fill="rgb(255,212,177)">
+                        <mask id="mask-6" fill="rgb(90,90,90)">
                             <use xlink:href="#path-5"></use>
                         </mask>
-                        <g mask="url(#mask-6)" fill="rgb(255,128,25)">
+                        <g mask="url(#mask-6)" fill="rgb(50,50,50)">
                             <g transform="translate(-62.626933, -150.601630)">
                                 <polygon transform="translate(100.616830, 100.918217) rotate(-45.000000) translate(-100.616830, -100.918217) " points="-27.3831703 100.278217 228.61683 100.278217 228.61683 101.558217 -27.3831703 101.558217"></polygon>
                                 <polygon transform="translate(254.483016, 254.784510) rotate(-45.000000) translate(-254.483016, -254.784510) " points="126.483016 254.14451 382.483016 254.14451 382.483016 255.42451 126.483016 255.42451"></polygon>
@@ -87,12 +87,12 @@
                             </g>
                         </g>
                     </g>
-                    <polygon stroke="rgb(234,104,0)" stroke-width="1" fill="url(#linearGradient-7)" points="308.621867 234.897097 122.168533 287.59043 122.168533 325.99043 378.168533 325.99043 378.168533 308.497097"></polygon>
+                    <polygon stroke="rgb(38,38,38)" stroke-width="1" fill="url(#linearGradient-7)" points="308.621867 234.897097 122.168533 287.59043 122.168533 325.99043 378.168533 325.99043 378.168533 308.497097"></polygon>
                     <g transform="translate(122.168533, 234.897097)">
-                        <mask id="mask-9" fill="rgb(255,212,177)">
+                        <mask id="mask-9" fill="rgb(90,90,90)">
                             <use xlink:href="#path-8"></use>
                         </mask>
-                        <g mask="url(#mask-9)" fill="rgb(244,109,0)">
+                        <g mask="url(#mask-9)" fill="rgb(41,41,41)">
                             <g transform="translate(-92.725333, -86.468946)">
                                 <polygon transform="translate(245.821392, 88.616040) rotate(-16.500000) translate(-245.821392, -88.616040) " points="-10.1786082 87.3360403 501.821392 87.3360403 501.821392 89.8960403 -10.1786082 89.8960403"></polygon>
                                 <polygon transform="translate(258.181925, 130.344040) rotate(-16.500000) translate(-258.181925, -130.344040) " points="2.1819251 129.06404 514.181925 129.06404 514.181925 131.62404 2.1819251 131.62404"></polygon>
@@ -113,12 +113,12 @@
             </g>
         </g>
         <g transform="translate(46.933280, 45.226560)">
-            <polygon fill="rgb(255,150,65)" points="51.2000533 0 39.6800533 65.7067733 81.9200533 88.3201067"></polygon>
-            <polygon fill="rgb(255,204,163)" points="122.453387 65.7067733 51.2000533 0 81.9200533 88.3201067"></polygon>
-            <polygon fill="rgb(255,175,111)" points="122.453387 65.7067733 81.9200533 88.3201067 162.560053 135.680107"></polygon>
-            <polygon fill="rgb(255,196,149)" points="162.560053 135.680107 81.9200533 88.3201067 121.173387 153.17344"></polygon>
-            <polygon fill="rgb(255,165,93)" points="121.173387 153.17344 81.9200533 88.3201067 0 135.680107"></polygon>
-            <polygon fill="rgb(255,177,115)" points="-1.41264778e-14 135.680107 81.9200533 88.3201067 39.6800533 65.7067733"></polygon>
+            <polygon fill="rgb(61,61,61)" points="51.2000533 0 39.6800533 65.7067733 81.9200533 88.3201067"></polygon>
+            <polygon fill="rgb(86,86,86)" points="122.453387 65.7067733 51.2000533 0 81.9200533 88.3201067"></polygon>
+            <polygon fill="rgb(72,72,72)" points="122.453387 65.7067733 81.9200533 88.3201067 162.560053 135.680107"></polygon>
+            <polygon fill="rgb(82,82,82)" points="162.560053 135.680107 81.9200533 88.3201067 121.173387 153.17344"></polygon>
+            <polygon fill="rgb(68,68,68)" points="121.173387 153.17344 81.9200533 88.3201067 0 135.680107"></polygon>
+            <polygon fill="rgb(73,73,73)" points="-1.41264778e-14 135.680107 81.9200533 88.3201067 39.6800533 65.7067733"></polygon>
         </g>
     </g>
 </svg>

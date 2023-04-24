@@ -14,27 +14,27 @@
   <path d="M52 14H14v38h38V14z" fill="url(#paint4_linear)"/>
   <path
     d="M33.144 45H19v2.322h14.144V45zM34 18.64h3.128v11.512h6.194v2.628H34V18.64zM19 18.64h5.506c4.442 0 7.508 3.066 7.508 7.007v.063c0 4.004-3.066 7.07-7.508 7.07H19V18.64zm3.128 2.816v8.509h2.378c2.565 0 4.254-1.69 4.254-4.192v-.063c0-2.503-1.689-4.255-4.254-4.255h-2.378z"
-    fill="rgb(255,212,177)"/>
+    fill="rgb(90,90,90)"/>
   <defs>
     <linearGradient id="paint0_linear" x1="20.566" y1="16.836" x2="59.406" y2="24.577" gradientUnits="userSpaceOnUse">
-      <stop offset=".242" stop-color="rgb(255,174,109)"/>
-      <stop offset=".857" stop-color="rgb(255,202,159)"/>
+      <stop offset=".242" stop-color="rgb(72,72,72)"/>
+      <stop offset=".857" stop-color="rgb(85,85,85)"/>
     </linearGradient>
     <linearGradient id="paint1_linear" x1="16.407" y1="5.429" x2="53.7" y2="62.15" gradientUnits="userSpaceOnUse">
-      <stop offset=".018" stop-color="rgb(255,174,109)"/>
-      <stop offset=".786" stop-color="rgb(255,146,59)"/>
+      <stop offset=".018" stop-color="rgb(72,72,72)"/>
+      <stop offset=".786" stop-color="rgb(59,59,59)"/>
     </linearGradient>
     <linearGradient id="paint2_linear" x1="15.889" y1="36.989" x2="63.122" y2="54.049" gradientUnits="userSpaceOnUse">
-      <stop offset=".121" stop-color="rgb(255,159,81)"/>
-      <stop offset=".975" stop-color="rgb(255,146,59)"/>
+      <stop offset=".121" stop-color="rgb(65,65,65)"/>
+      <stop offset=".975" stop-color="rgb(59,59,59)"/>
     </linearGradient>
     <linearGradient id="paint3_linear" x1="2.301" y1="39.648" x2="63.311" y2="12.608" gradientUnits="userSpaceOnUse">
-      <stop offset=".121" stop-color="rgb(255,159,81)"/>
-      <stop offset=".856" stop-color="rgb(255,202,159)"/>
+      <stop offset=".121" stop-color="rgb(65,65,65)"/>
+      <stop offset=".856" stop-color="rgb(85,85,85)"/>
     </linearGradient>
     <linearGradient id="paint4_linear" x1="32.949" y1="4.764" x2="32.949" y2="38.843" gradientUnits="userSpaceOnUse">
-      <stop offset=".084" stop-color="rgb(255,160,83)"/>
-      <stop offset=".538" stop-color="rgb(234,104,0)"/>
+      <stop offset=".084" stop-color="rgb(65,65,65)"/>
+      <stop offset=".538" stop-color="rgb(38,38,38)"/>
     </linearGradient>
   </defs>
 </svg>

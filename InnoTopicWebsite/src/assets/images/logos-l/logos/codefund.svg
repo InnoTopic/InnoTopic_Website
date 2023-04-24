@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="256px" height="256px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
 	<g>
-		<polygon fill="rgb(234,104,0)" points="0 127.944121 128 1.71602774e-14 256 127.944121 128 256"></polygon>
-		<polygon fill="rgb(255,134,37)" points="256 128 128 256 0 128"></polygon>
-		<circle fill="rgb(255,212,177)" cx="128" cy="128.5" r="64.5"></circle>
-		<circle fill="rgb(255,153,71)" cx="128" cy="128.5" r="43.4984264"></circle>
+		<polygon fill="rgb(38,38,38)" points="0 127.944121 128 1.71602774e-14 256 127.944121 128 256"></polygon>
+		<polygon fill="rgb(53,53,53)" points="256 128 128 256 0 128"></polygon>
+		<circle fill="rgb(90,90,90)" cx="128" cy="128.5" r="64.5"></circle>
+		<circle fill="rgb(62,62,62)" cx="128" cy="128.5" r="43.4984264"></circle>
 	</g>
 </svg>

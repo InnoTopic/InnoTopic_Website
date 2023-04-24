@@ -3,21 +3,21 @@
     <title>Space</title>
     <defs>
         <linearGradient x1="45.0824163%" y1="-1.34304614%" x2="55.5220482%" y2="97.6099761%" id="spaceLinearGradient-1">
-            <stop stop-color="rgb(255,212,177)" offset="0%"></stop>
-            <stop stop-color="rgb(255,193,143)" offset="32%"></stop>
-            <stop stop-color="rgb(255,166,95)" offset="79%"></stop>
-            <stop stop-color="rgb(255,155,75)" offset="100%"></stop>
+            <stop stop-color="rgb(90,90,90)" offset="0%"></stop>
+            <stop stop-color="rgb(81,81,81)" offset="32%"></stop>
+            <stop stop-color="rgb(68,68,68)" offset="79%"></stop>
+            <stop stop-color="rgb(63,63,63)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="-2.94159918%" y1="38.9923346%" x2="100.445236%" y2="62.1053821%" id="spaceLinearGradient-2">
-            <stop stop-color="rgb(255,171,103)" offset="0%"></stop>
-            <stop stop-color="rgb(255,129,27)" offset="100%"></stop>
+            <stop stop-color="rgb(70,70,70)" offset="0%"></stop>
+            <stop stop-color="rgb(51,51,51)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="-3.30779496%" y1="71.8068763%" x2="111.745094%" y2="15.4620075%" id="spaceLinearGradient-3">
-            <stop stop-color="rgb(255,138,43)" offset="0%"></stop>
-            <stop stop-color="rgb(255,133,35)" offset="18%"></stop>
-            <stop stop-color="rgb(255,123,17)" offset="49%"></stop>
-            <stop stop-color="rgb(242,108,0)" offset="89%"></stop>
-            <stop stop-color="rgb(234,104,0)" offset="100%"></stop>
+            <stop stop-color="rgb(55,55,55)" offset="0%"></stop>
+            <stop stop-color="rgb(53,53,53)" offset="18%"></stop>
+            <stop stop-color="rgb(48,48,48)" offset="49%"></stop>
+            <stop stop-color="rgb(41,41,41)" offset="89%"></stop>
+            <stop stop-color="rgb(38,38,38)" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g>

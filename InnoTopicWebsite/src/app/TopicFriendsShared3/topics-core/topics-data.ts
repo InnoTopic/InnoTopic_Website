@@ -167,7 +167,9 @@ export class Frontend {
 
   Ionic = t({
     /* logos: https://ionicframework.com/press */
-    logo: 'ionic-light-logo-black.svg',
+    // logo: 'ionic-light-logo-black.svg',
+    // logo: 'ionic-logotype-white-on-blue-cropped-print-fixed.svg',
+    logo: 'ionic-logo-affinity-export-import-print-fix.svg',
     urls: new TopicUrls(
       'https://ionicframework.com/',
       'https://en.wikipedia.org/wiki/Ionic_(mobile_app_framework)',
@@ -201,7 +203,7 @@ export class Frontend {
   'Alpine.js' = tWide('alpinejs-icon.svg')
   'Rax' = t()
   'Riot' = t()
-  'Vercel' = t('vercel-icon.svg')
+  'Vercel' = tWide('vercel-icon.svg')
   // ===== headless CMS:
   'Storyblok' = t('storyblok-icon.svg')
   "Strapi" = t('strapi-icon.svg')
@@ -237,7 +239,7 @@ export class Frontend {
   React = tWide()
   Preact = t()
   Gatsby = t('Gatsby-Monogram.svg', /* https://www.gatsbyjs.com/guidelines/logo */)
-  "Next.js" = t('nextjs-icon.svg')
+  "Next.js" = t('nextjs-icon-export.svg')
   "Remix" = t('remix-icon.svg') /* https://remix.run/ */
   // TODO: Chakra, Playwright
   GreenSock = t('greensock-icon.svg')
@@ -309,6 +311,7 @@ export class Backend {
   GraphQL = t()
   RabbitMQ = t()
   Swagger = t()
+  OpenAPI = t('openapi-icon.svg') /* https://www.openapis.org/ ; Compatible with JSON Schema */
   Django = t()
   Laravel = t()
 
@@ -435,6 +438,7 @@ export class Tools {
   'Travis CI' = t()
   'Jenkins' = t('jenkins-icon')
   'Zeplin' = tWide()
+  'Dribbble' = t(`dribbble-ball-mark.svg`) // https://dribbble.com/media-kit
   'Slack' = t('slack-icon.svg')
   'PandaDoc' = tNoIcon() /* FIXME logo */
   'Datadog' = t('datadog-icon')
@@ -443,7 +447,9 @@ export class Tools {
   'Snyk' = tWide()
   "OWASP" = t('owasp-icon')
   'CodeSee' = tWide('codesee-icon') // move to comprehension?
-  'Netlify' = t()
+  // TODO maybe https://stepsize.com/
+  'Netlify' = tWide('netlify-icon.svg') /* https://www.netlify.com/press/#logos */
+  'Jamstack' = tSquare('jamstack-icon.svg') /* https://www.netlify.com/jamstack/ */
   'VirtualBox' = t({
     iconUrl: 'https://icons8.com/icons/set/oracle-vm-virtualbox'
   })
@@ -468,12 +474,15 @@ export class Project_Management_Tools {
   })
 }
 
+/** TODO and UI UX */
 export class Graphics {
   SVG = t({
     // logo: 'svg-logo-v.svg',
     categories: 'Frontend',
   })
+  // Design Ops
   Figma = t()
+  UXPin = t('UXPin-Logo-BlackFill-export.svg')
   SVGator = tWide('svgator-icon.svg')
   InVision = t()
   Blender = tWide()
@@ -521,6 +530,7 @@ export class Languages {
   // TODO
 
   C = t()
+  'HolyC' = tNarrow('HolyC_Logo.svg')
   'C++' = t()
   'C#' = t('c_sharp.svg')
   Dart = t()
@@ -547,7 +557,7 @@ export class Languages {
   Lua = t('lua-no-text.svg')
   Eiffel = tWide('eiffel-no-text.svg')
   Erlang = tWide('erlang-no-text.svg')
-  Elixir = tWide('elixir-lang-icon.svg')
+  Elixir = tWide('elixir-pluginIcon-crop--for-print-fix.svg') /* https://plugins.jetbrains.com/plugin/7522-elixir for print fix */ // -- other options: simpler, black & white: https://logosear.ch/logos/elixir/index.html
   Haskell = tWide('haskell-icon')
   Lisp = tWide('lisp-logo.svg')
   OCaml = tWide('ocaml-no-text.svg'/* https://ocaml.org/docs/logos.html  http://ocaml.org/logo/Colour/SVG/colour-logo.svg
@@ -594,6 +604,9 @@ export class Mobile {
 
 export class Cloud {
   // TODO: cloud-native
+  'Supabase' = tNarrow('supabase-icon.svg') /* open source Firebase alternative supabase.com; https://supabase.com/brand-assets ; https://golden.com/wiki/Supabase-YX5N66V ; Build in a weekend.
+    Scale to millions.
+    Supabase is an open source Firebase alternative. Start your project with a Postgres database, Authentication, instant APIs, Edge Functions, Realtime subscriptions, and Storage.*/
   'Firebase' = t({
     subTopics: {
       // most are from firebase console left navbar:
@@ -716,7 +729,7 @@ export class Other {
   Wix = tWide()
   'Builder.io' = t('builder-io-icon')
   'Budibase' = tWide('budibase-icon')
-  'Bubble' = t('bubble-icon')
+  'Bubble' = t('bubble-icon') /** is a **visual programming language**, a no-code development platform and an application platform as a service, developed by Bubble Group, that enables non-technical people to build web applications without needing to type code */
   'Framer' = t()
 
 
