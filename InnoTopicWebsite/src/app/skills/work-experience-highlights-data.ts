@@ -228,25 +228,15 @@ export const highlights = {
     "LAION": {},
     "Stability AI": {},
     "Stable Diffusion": {},
-    // ===== BlockChain / CryptoCurrencies
-    "Bitcoin": {},
-    "Basic Attention Token (BAT)": {},
-    "Brave Browser": {},
-    "Ethereum": {},
-    "Solidity": {},
-    "Web3": {},
-    "web3.js" /* FIXME */: {},
-    "ethers.js": {},
-    "Solid": {},
+    "Ghostwriter": {}, // Between AI and Web IDE-s
+    "Replit": {},
+    "Carbide": {},
+    // "CodeSandbox": {},
+    // "Cloud9": {},
     // ====== LowCode / NoCode
     "Airtable": {},
     "Notion": {},
     "Coda": {},
-    "Carbide": {},
-    "Replit": {},
-    "Ghostwriter": {},
-    // "CodeSandbox": {},
-    // "Cloud9": {},
     "Zapier": {},
     "IFTTT": {},
     "Kong": {}, /* The Cloud Native API Management Platform */
@@ -268,6 +258,15 @@ export const highlights = {
     // mypy - python static type checker
     // DataSpell (data science) Jupyter; kaggle
     "Visual Studio Code": {},
+    // ===== BlockChain / CryptoCurrencies
+    "Ethereum": {},
+    "Basic Attention Token (BAT)": {},
+    "Bitcoin": {},
+    "Solidity": {},
+    "Web3": {},
+    "web3.js" /* FIXME */: {},
+    "ethers.js": {},
+    "Solid": {},
 
     // ==== Social / Content:
     "YouTube": {},
