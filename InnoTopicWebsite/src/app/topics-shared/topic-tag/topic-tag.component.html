@@ -1,44 +1,49 @@
-<mat-chip
-  (click)="clickTopic.emit($event)"
-  style="cursor: pointer; color: rgb(103, 58, 183)"
-  [ngClass]="{
-    'tag-chip': true,
-    'highlight': isHighlighted
-  }"
-> <!--   (mouseenter)="onMouseEnter()" -->
-  <div style="display:table-cell; vertical-align: middle">
-    <app-topic-logo
-      *ngIf="(showLogo || true) && tag.tagEntry.logo"
-      [topic]="tag.tagEntry"
-    ></app-topic-logo>
-    <!--<i *ngIf="editable"-->
-    <!--class="ion-close-circled"-->
-    <!--style="cursor:pointer; color: rgba(0, 0, 0, 0.54); font-size: 20px"-->
-    <!--(click)=deleteTag(chip)></i>-->
+<!--<mat-chip-->
+<!--  (click)="clickTopic.emit($event)"-->
+<!--  style="cursor: pointer; color: rgb(103, 58, 183)"-->
+<!--  [ngClass]="{-->
+<!--    'tag-chip': true,-->
+<!--    'highlight': isHighlighted-->
+<!--  }"-->
+<!--&gt; &lt;!&ndash;   (mouseenter)="onMouseEnter()" &ndash;&gt;-->
+<!--  <div style="display:table-cell; vertical-align: middle">-->
+<!--    <app-topic-logo-->
+<!--      *ngIf="(showLogo || true) && tag.tagEntry.logo"-->
+<!--      [topic]="tag.tagEntry"-->
+<!--    ></app-topic-logo>-->
+<!--    &lt;!&ndash;<i *ngIf="editable"&ndash;&gt;-->
+<!--    &lt;!&ndash;class="ion-close-circled"&ndash;&gt;-->
+<!--    &lt;!&ndash;style="cursor:pointer; color: rgba(0, 0, 0, 0.54); font-size: 20px"&ndash;&gt;-->
+<!--    &lt;!&ndash;(click)=deleteTag(chip)></i>&ndash;&gt;-->
 
-    <!--<div style="vertical-align: middle; display: inline; height: 100%">-->
-<!--    <span style="display: inline; height: 100%; vertical-align: middle; font-weight: normal; color: gray">-->
-<!--      <a *ngIf="! isCustomClick" [routerLink]="'/topic/'+tag.tagEntry.id">{{tag.tagEntry.name}}</a>-->
-<!--&lt;!&ndash;      <a *ngIf="isCustomClick"></a>&ndash;&gt;-->
-<!--      {{tag.tagEntry.name}}-->
-<!--      &lt;!&ndash;&nbsp;&ndash;&gt;-->
-<!--      &lt;!&ndash;<span *ngIf="shouldHighlightSymmetric()">SYM_MATCH</span>&ndash;&gt;-->
-<!--    </span>-->
+<!--    &lt;!&ndash;<div style="vertical-align: middle; display: inline; height: 100%">&ndash;&gt;-->
+<!--&lt;!&ndash;    <span style="display: inline; height: 100%; vertical-align: middle; font-weight: normal; color: gray">&ndash;&gt;-->
+<!--&lt;!&ndash;      <a *ngIf="! isCustomClick" [routerLink]="'/topic/'+tag.tagEntry.id">{{tag.tagEntry.name}}</a>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <a *ngIf="isCustomClick"></a>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;      {{tag.tagEntry.name}}&ndash;&gt;-->
+<!--&lt;!&ndash;      &lt;!&ndash;&nbsp;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;      &lt;!&ndash;<span *ngIf="shouldHighlightSymmetric()">SYM_MATCH</span>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    </span>&ndash;&gt;-->
 
-    {{tag.tagEntry.name}}
-    <!--    cat: {{tag.tagEntry.category}}-->
-    <!--<i *ngIf="editable"-->
-       <!--class="ion-close-circled"-->
-       <!--style="vertical-align: middle; cursor:pointer; color: rgba(0, 0, 0, 0.30); font-size: 18px"-->
-       <!--(click)="tagListModel.deleteTag(tag)"></i>-->
-    <!--<i *ngIf="! editable"-->
-    <!--class="ion-close-circled"-->
-    <!--style="vertical-align: middle; display: block; width: 0px;"-->
-    <!--&gt;</i>-->
+<!--    {{tag.tagEntry.name}}-->
+<!--    &lt;!&ndash;    cat: {{tag.tagEntry.category}}&ndash;&gt;-->
+<!--    &lt;!&ndash;<i *ngIf="editable"&ndash;&gt;-->
+<!--       &lt;!&ndash;class="ion-close-circled"&ndash;&gt;-->
+<!--       &lt;!&ndash;style="vertical-align: middle; cursor:pointer; color: rgba(0, 0, 0, 0.30); font-size: 18px"&ndash;&gt;-->
+<!--       &lt;!&ndash;(click)="tagListModel.deleteTag(tag)"></i>&ndash;&gt;-->
+<!--    &lt;!&ndash;<i *ngIf="! editable"&ndash;&gt;-->
+<!--    &lt;!&ndash;class="ion-close-circled"&ndash;&gt;-->
+<!--    &lt;!&ndash;style="vertical-align: middle; display: block; width: 0px;"&ndash;&gt;-->
+<!--    &lt;!&ndash;&gt;</i>&ndash;&gt;-->
 
-    <!--</div>-->
-    <!--<div style="vertical-align: middle; display: table-cell; height: 100px; width: 300px">{{chip.tagEntry.name}}</div>-->
-    <!--{{chip.tagEntry.name}}-->
-    <ng-content></ng-content>
-  </div>
-</mat-chip>
+<!--    &lt;!&ndash;</div>&ndash;&gt;-->
+<!--    &lt;!&ndash;<div style="vertical-align: middle; display: table-cell; height: 100px; width: 300px">{{chip.tagEntry.name}}</div>&ndash;&gt;-->
+<!--    &lt;!&ndash;{{chip.tagEntry.name}}&ndash;&gt;-->
+<!--    <ng-content></ng-content>-->
+<!--  </div>-->
+<!--</mat-chip>-->
+
+
+<span class="neumorphic-chip">
+  Test 2
+</span>

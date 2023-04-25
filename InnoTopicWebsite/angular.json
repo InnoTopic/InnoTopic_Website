@@ -147,7 +147,7 @@
   "cli": {
     "analytics": false,
     "schematicCollections": [
-      "@ngxs/schematics"
+//      "@ngxs/schematics"
     ]
   }
 }

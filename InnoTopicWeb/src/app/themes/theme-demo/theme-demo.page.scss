@@ -1,0 +1,6 @@
+.neumorphic-chip {
+  --ion-background-color: var(--background-color);
+  box-shadow: var(--shadow-offset-x) var(--shadow-offset-y) var(--shadow-blur-radius) var(--shadow-dark),
+  calc(-1 * var(--shadow-offset-x)) calc(-1 * var(--shadow-offset-y)) var(--shadow-blur-radius) var(--shadow-light);
+  border-radius: 16px;
+}
