@@ -1,0 +1,7 @@
+{
+  "name": "InnoTopicWeb",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

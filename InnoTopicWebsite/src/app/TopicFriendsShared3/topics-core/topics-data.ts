@@ -714,7 +714,7 @@ export class Other {
   // 'test' = t('dotnet.svg')
 
   ReactiveX = t()
-  Airtable = t()
+  Airtable = tWide()
   Notion = t('notion-icon-no-text.svg')
   Coda = t('coda-icon.svg')
   Observable = t('observablehq.svg') // "Collaborative data platform and canvas"; "Explore, analyze and explain data. As a team."
