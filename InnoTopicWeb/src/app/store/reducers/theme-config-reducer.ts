@@ -11,6 +11,7 @@ export const initialState: ThemeConfigState = {
   // shadow_offset_x: '5px',
   // shadow_offset_y: '5px',
   shadow_blur_radius: '10px',
+  shadow_opacity: '50',
 };
 
 export const themeConfigReducer = createReducer(

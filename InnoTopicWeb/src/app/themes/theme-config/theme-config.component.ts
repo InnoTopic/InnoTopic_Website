@@ -25,6 +25,7 @@ export class ThemeConfigComponent implements OnInit {
       // shadow_offset_x: '',
       // shadow_offset_y: '',
       shadow_blur_radius: '',
+      shadow_opacity: '50',
     });
 
     this.themeConfig$ = this.store.select('themeConfig');

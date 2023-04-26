@@ -24,10 +24,6 @@
   //border-radius: 45px;
   //background: linear-gradient(145deg, #f0f0f0, #cacaca);
 
-  --shadow-light-color: #f0f0f0;
-  --shadow-dark-color: #d0d0d0;
-  //--shadow-offset: 2px;
-  //--shadow-blur: 3px;
 
   box-shadow: var(--shadow-offset) var(--shadow-offset) var(--shadow-blur-radius) var(--shadow-dark-color), calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) var(--shadow-blur-radius) var(--shadow-light-color);
 

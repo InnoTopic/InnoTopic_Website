@@ -19,6 +19,12 @@ export class ThemeConfigEffects {
             const variable = `--${key.replace(/_/g, '-')}`;
             const val = variable.startsWith('--shadow') ? `${value}px` : value;
             root.setProperty(variable, val);
+
+            //--shadow-light-color: #f0f0f0;
+            root.setProperty('--shadow-light-color', `#ffffff${action.shadow_opacity}`)
+            root.setProperty('--shadow-dark-color' , `#000000${action.shadow_opacity}`)
+            //--shadow-dark-color: #d0d0d0;
+
           }
         }),
       ),
