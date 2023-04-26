@@ -36,6 +36,7 @@ import { FormsModule } from '@angular/forms';
 import { environment } from '../environments/environment';
 import {ThemeConfigComponent} from "./themes/theme-config/theme-config.component";
 import {themeConfigReducer} from "./store/reducers/theme-config-reducer";
+import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import {themeConfigReducer} from "./store/reducers/theme-config-reducer";
     AppRoutingModule,
     StoreModule.forRoot({ themeConfig: themeConfigReducer }),
     EffectsModule.forRoot([ThemeConfigEffects]),
+    StoreDevtoolsModule.instrument({ maxAge: 25 }),
     FormsModule,
     // AngularFireModule.initializeApp(environment.firebase),
     // AngularFirestoreModule,

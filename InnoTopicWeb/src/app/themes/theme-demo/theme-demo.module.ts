@@ -8,6 +8,7 @@ import { ThemeDemoPageRoutingModule } from './theme-demo-routing.module';
 
 import { ThemeDemoPage } from './theme-demo.page';
 import {ThemeConfigComponent} from "../theme-config/theme-config.component";
+import {ChipComponent} from "../../chip/chip.component";
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import {ThemeConfigComponent} from "../theme-config/theme-config.component";
   declarations: [
     ThemeDemoPage,
     ThemeConfigComponent,
+    ChipComponent,
   ]
 })
 export class ThemeDemoPageModule {}

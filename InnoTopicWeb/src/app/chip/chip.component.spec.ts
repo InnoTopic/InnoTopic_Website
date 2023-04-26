@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { ThemeConfigComponent } from './theme-config.component';
+import { ChipComponent } from './chip.component';
 
-describe('ThemeConfigComponent', () => {
-  let component: ThemeConfigComponent;
-  let fixture: ComponentFixture<ThemeConfigComponent>;
+describe('ChipComponent', () => {
+  let component: ChipComponent;
+  let fixture: ComponentFixture<ChipComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ThemeConfigComponent ],
+      declarations: [ ChipComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ThemeConfigComponent);
+    fixture = TestBed.createComponent(ChipComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

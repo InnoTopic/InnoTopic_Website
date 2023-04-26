@@ -16,7 +16,7 @@ export class ThemeConfigEffects {
           const root = document.documentElement.style;
           for (const [key, value] of Object.entries(action)) {
             // const variable = `--${key.replace('_', '-')}`;
-            const variable = `--ion-${key.replace('_', '-')}`;
+            const variable = `--${key.replace(/_/g, '-')}`;
             const val = variable.startsWith('--shadow') ? `${value}px` : value;
             root.setProperty(variable, val);
           }
