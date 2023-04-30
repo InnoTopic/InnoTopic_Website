@@ -52,7 +52,7 @@ export class ThemeConfigEffects {
             //--shadow-light-color: #f0f0f0;
             root.setProperty('--shadow-light-color', `#ffffff${action.shadow_opacity}`)
             root.setProperty('--shadow-dark-color' , `#000000${action.shadow_opacity}`)
-            let backgroundColor = action.ion_background_color;
+            const backgroundColor = action.ion_background_color;
             if ( backgroundColor ) {
               let fg = getIonicTextColor(backgroundColor, 'high');
               root.setProperty('--ion-text-color' , fg)
