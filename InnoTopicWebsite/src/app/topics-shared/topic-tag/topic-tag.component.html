@@ -45,5 +45,10 @@
 
 
 <span class="neumorphic-chip">
-  Test 2
+  <app-topic-logo
+    *ngIf="(showLogo || true) && tag.tagEntry.logo"
+    [topic]="tag.tagEntry"
+  ></app-topic-logo>
+
+  {{tag.tagEntry.name}}
 </span>
