@@ -427,7 +427,7 @@ export class Tools {
   WebStorm = t(/* https://www.jetbrains.com/de-de/company/brand/logos/ */)
   RubyMine = t()
   'Android Studio' = t('Android_Studio_icon.svg')
-  Eclipse = t()
+  Eclipse = t('eclipse-icon.svg')
   'IntelliJ IDEA' = t()
   'NetBeans' = t('apache-netbeans')
   'Visual Studio' = t()
