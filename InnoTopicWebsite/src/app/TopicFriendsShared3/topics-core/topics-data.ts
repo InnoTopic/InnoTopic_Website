@@ -347,7 +347,7 @@ export class Backend {
   })
   // TODO: adonis ?
 
-  Spring = t()
+  Spring = t('spring-icon.svg')
   'Spring Boot' = t()
 
   Hibernate = t()
