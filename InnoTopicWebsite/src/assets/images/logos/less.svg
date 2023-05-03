@@ -5,7 +5,7 @@
             <stop stop-color="#2E4F82" offset="0%"></stop>
             <stop stop-color="#182E4D" offset="100%"></stop>
         </linearGradient>
-        <path id="path-2asdf" d="M224.236,88.738 C224.236,100.302 214.548,109.763 202.707,109.763 L21.75,109.763 C9.909,109.763 0.221,100.302 0.221,88.738 L0.221,21.781 C0.221,10.218 9.909,0.756 21.75,0.756 L202.707,0.756 C214.548,0.756 224.236,10.218 224.236,21.781 L224.236,88.738"></path>
+        <path id="path-2" d="M224.236,88.738 C224.236,100.302 214.548,109.763 202.707,109.763 L21.75,109.763 C9.909,109.763 0.221,100.302 0.221,88.738 L0.221,21.781 C0.221,10.218 9.909,0.756 21.75,0.756 L202.707,0.756 C214.548,0.756 224.236,10.218 224.236,21.781 L224.236,88.738"></path>
         <path id="path-4" d="M-15.94,0.496 L240,0.496 L240,110 L-15.94,110"></path>
     </defs>
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -13,7 +13,7 @@
             <mask id="mask-3" fill="white">
                 <use xlink:href="#path-2"></use>
             </mask>
-            <use fill="url(#linearGradient-1)" xlink:href="#path-2asdf"></use>
+            <use fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
             <mask id="mask-5" fill="white">
                 <use xlink:href="#path-4"></use>
             </mask>
