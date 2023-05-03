@@ -85,11 +85,11 @@ export class KeyValOrderedPipe implements PipeTransform {
     //   this.keyValues.sort(compareFn);
     // }
     // return this.keyValues;
-    const retArray = []
+    const retArray: any = []
     for ( const key of Object.keys(input) ) {
       retArray.push({
         key: key,
-        value: input[key],
+        value: (input as any)[key],
       })
     }
     return retArray

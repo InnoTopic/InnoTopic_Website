@@ -11,7 +11,7 @@ import { WorkProjectComponent } from './work-projects-section/work-project/work-
 @NgModule({
   declarations: [
     WorkProjectsSectionComponent,
-    WorkProjectComponent
+    WorkProjectComponent,
   ],
   imports: [
     CommonModule,

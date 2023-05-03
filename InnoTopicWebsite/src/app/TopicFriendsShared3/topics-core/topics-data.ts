@@ -17,18 +17,21 @@ export type TopicData = Partial<Topic>
 export type TopicDataOrLogo = TopicData | string
 
 function coerceLogoToTopicData(topicData: TopicDataOrLogo): TopicData {
+  // console.log('coerceLogoToTopicData: topicData = ', topicData);
   if (typeof (topicData) === 'string') {
     topicData = {
       logo: topicData as string,
     }
   }
-  return topicData
+  // console.log('coerceLogoToTopicData: coerced topicData = ', topicData);
+  return topicData;
 }
 
 export function t(topicData?: TopicDataOrLogo, iconWebsiteTodo?: string | string[]) {
   topicData = coerceLogoToTopicData(topicData !)
   const topic = Object.create(Topic.prototype)
   Object.assign(topic, topicData)
+  // console.log(`t()`, `topicData`, topicData, `topic`, topic, `topic.id`, topic.id)
   // TODO: instantiate Topic class (once we have id). But be careful, if using Object.create, ctor is not called
   // console.log('topic instantiated', topic)
 
@@ -78,11 +81,12 @@ export class Frontend {
   'D3.js' = t({logo: 'd3.svg'}) // TODO Vega [Lite] - on top of d3. From Luis Sanchez
   'Chart.js' = t({logo: "chart-js.svg" /* non-standard svg*/})
   'Stylus' = tWide()
-  'Less' = tWide()
+  'Less' = tWide('less-nomasks.svg')
   'Sass' = tWide()
   'PostCSS' = t() /* sponsored by tailwind */
+  'Headless UI' = tSquare('headlessui-icon.svg') // Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.
   'Tailwind CSS' = tWide('tailwindcss-icon.svg')
-  'Windi CSS' = tWide('windi-css')
+  'Windi CSS' = tNarrow('windi-css.svg')
   // TODO: https://www.pollen.style/
 
   PouchDB = t({categories: 'Databases'})
@@ -192,7 +196,7 @@ export class Frontend {
   'Vue.js' = tWide({logo: 'vue'})
   'Nuxt' = tWide('nuxt-icon')
   'Gridsome' = t({logo: 'gridsome-icon.svg'})
-  'Svelte' = t('svelte-icon')
+  'Svelte' = tNarrow('svelte-icon')
   // TODO Phoenix  https://www.phoenixframework.org/  supposedly most loved; https://github.com/phoenixframework/phoenix
   'SolidJS' = t('solidjs-icon')
   'Qwik' = t('qwik')
@@ -206,7 +210,7 @@ export class Frontend {
   'Vercel' = tWide('vercel-icon.svg')
   // ===== headless CMS:
   'Storyblok' = t('storyblok-icon.svg')
-  "Strapi" = t('strapi-icon.svg')
+  "Strapi" = tSquare('strapi-icon.svg')
 
   // TODO: https://web.dev/
 
@@ -306,7 +310,8 @@ export class Backend {
     logoSmallIcon: 'nodejs-icon.svg',
   })
   'NestJS' = t(`nest--logo-small.ede75a6b.svg`)
-  'GraalVM' = tWide('graalvm-rgb-cropped.svg')
+  // 'GraalVM' = tWide('graalvm-rgb-cropped.svg')
+  'GraalVM' = tWide('graalvm_rabbit_icon.svg')
   Kong = tWide('kong-icon.svg'/* { tagline: 'the fastest cloud native API platform.' } */)
   GraphQL = t()
   RabbitMQ = t()

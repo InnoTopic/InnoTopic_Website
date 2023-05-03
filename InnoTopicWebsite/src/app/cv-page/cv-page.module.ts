@@ -45,4 +45,4 @@ import { VideoCvComponent } from './video-cv/video-cv.component';
   //   CUSTOM_ELEMENTS_SCHEMA,
   // ]
 })
-export class CvPageModule { }
+export class CvPageModule1 { }

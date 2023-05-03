@@ -14,7 +14,7 @@ export interface Organisation {
 export class Project {
   roles?: string
   description?: string
-  topicsById: MapToTopics<{}>
+  topicsById!: MapToTopics<{}>
 }
 
 function org(organisation: Organisation) {

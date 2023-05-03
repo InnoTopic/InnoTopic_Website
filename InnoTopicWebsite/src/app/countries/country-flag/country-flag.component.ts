@@ -11,7 +11,7 @@ import {
 })
 export class CountryFlagComponent implements OnInit {
 
-  @Input() country: string
+  @Input() country!: string
 
   constructor() { }
 

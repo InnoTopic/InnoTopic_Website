@@ -19,9 +19,9 @@ export class UserOtherProfileDescriptor {
   iconClass?: string
   iconImg?: string
   icon?: string
-  id?: string
+  id!: string
 
-  constructor(initFrom: UserOtherProfileDescriptor) {
+  constructor(initFrom: Omit<UserOtherProfileDescriptor, 'id'>) {
     Object.assign(this, initFrom)
     if (!this.whatIsEnough) {
       this.whatIsEnough = 'user name'
@@ -34,7 +34,7 @@ export type UserOtherProfilesDescriptorVals<T> = Partial<{
   [P in keyof UserOtherProfilesDescriptorsDefs]: T // https://www.typescriptlang.org/docs/handbook/advanced-types.html - TypeScript Mapped Types
 }>
 
-export function descriptor(d: UserOtherProfileDescriptor) {
+export function descriptor(d: Omit<UserOtherProfileDescriptor, 'id'>) {
   return new UserOtherProfileDescriptor(d)
 }
 
@@ -43,7 +43,7 @@ function prepareDescriptorsList(descriptorsMap: UserOtherProfilesDescriptorsDefs
   for ( let key in descriptorsMap ) {
     if (descriptorsMap.hasOwnProperty(key)) {
       // console.log('key: ', key)
-      let descriptor = descriptorsMap[key]
+      let descriptor = (descriptorsMap as any)[key]
       descriptor.id = key
       descriptor.websiteName = descriptor.websiteName || key
       // descriptor.iconImg = descriptor.iconImg || ('assets/images/logos/' + key.toLowerCase() + '.svg')

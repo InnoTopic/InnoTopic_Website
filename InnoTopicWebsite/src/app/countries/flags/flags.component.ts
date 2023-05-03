@@ -11,8 +11,8 @@ import {
 })
 export class FlagsComponent implements OnInit {
 
-  @Input() flags: string
-  flagsArray: any;
+  @Input() flags!: string
+  flagsArray!: any;
 
   constructor() { }
 

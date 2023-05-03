@@ -20,4 +20,14 @@ export class WorkProjectsSectionComponent implements OnInit {
   ngOnInit() {
   }
 
+  keyValOrdered(input: any) {
+    const retArray: any = []
+    for ( const key of Object.keys(input) ) {
+      retArray.push({
+        key: key,
+        value: (input as any)[key],
+      })
+    }
+    return retArray
+  }
 }

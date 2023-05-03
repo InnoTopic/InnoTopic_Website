@@ -24,8 +24,8 @@ export class SkillLevelIconComponent implements OnInit {
   ngOnInit() {
   }
 
-  skillIconSignal(level) {
-    return skillsIconsSignal[level]
+  skillIconSignal(level: UserSkillLevelEnum) {
+    return (skillsIconsSignal as any)[level !]
   }
 
 }

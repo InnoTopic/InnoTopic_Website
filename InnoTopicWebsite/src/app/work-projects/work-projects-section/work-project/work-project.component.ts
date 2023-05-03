@@ -15,9 +15,9 @@ export class WorkProjectComponent implements OnInit {
 
   faLaptop = faLaptop
 
-  @Input() project
+  @Input() project!: any
 
-  @Input() projectTitle: string
+  @Input() projectTitle!: string
 
   constructor() { }
 

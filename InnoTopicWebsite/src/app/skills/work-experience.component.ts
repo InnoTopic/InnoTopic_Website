@@ -7,6 +7,7 @@ import {
   workExperience
 } from './work-experience-data';
 import { highlights } from './work-experience-highlights-data';
+import {UserSkillLevelEnum} from "../TopicFriendsShared3/skills/skills-core/user-skills";
 
 @Component({
   selector: 'app-work-experience',
@@ -18,7 +19,9 @@ export class WorkExperienceComponent implements OnInit {
   highlights = highlights
 
   experience = workExperience
-  experiencesByStatusArray
+  experiencesByStatusArray: any
+
+  skillLevels = ['beginner', 'intermediate', 'advanced', 'expert'] as UserSkillLevelEnum[]
 
   constructor() { }
 

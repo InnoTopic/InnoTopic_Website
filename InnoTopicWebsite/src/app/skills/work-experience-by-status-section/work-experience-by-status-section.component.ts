@@ -13,7 +13,7 @@ import { WorkExperienceByStatus } from '../work-experience';
 })
 export class WorkExperienceByStatusSectionComponent implements OnInit {
 
-  @Input() experience: WorkExperienceByStatus
+  @Input() experience!: WorkExperienceByStatus
 
   constructor() { }
 

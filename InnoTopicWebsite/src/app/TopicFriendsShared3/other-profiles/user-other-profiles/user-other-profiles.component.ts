@@ -34,8 +34,8 @@ export class UserOtherProfilesComponent implements OnInit {
   descriptorsList = UserOtherProfilesDescriptorsDefs.array
 
   @Input() public parentFormGroup: FormGroup = new FormGroup({})
-  @Input() public userProfileInputs: UserProfileInputs
-  @Input() public otherProfiles: UserOtherProfiles
+  @Input() public userProfileInputs!: UserProfileInputs
+  @Input() public otherProfiles!: UserOtherProfiles
 
 
   public formGroup: FormGroup;
@@ -46,7 +46,7 @@ export class UserOtherProfilesComponent implements OnInit {
   ) {
     for ( let key in this.descriptorsMap ) {
       if (this.descriptorsMap.hasOwnProperty(key)) {
-        this.formControls[key] = new FormControl()
+        (this.formControls as any)[key] = new FormControl()
       }
     }
     this.formGroup = this.formBuilder.group(this.formControls)
@@ -74,7 +74,7 @@ export class UserOtherProfilesComponent implements OnInit {
       // this.formGroup.setValue({
       const patch = {}
       for ( let key of Object.keys(otherProfiles) ) {
-        patch[key] = getOtherProfileName(otherProfiles[key])
+        (patch as any)[key] = getOtherProfileName((otherProfiles as any)[key])
       }
       this.formGroup.patchValue(patch)
     }
@@ -85,10 +85,14 @@ export class UserOtherProfilesComponent implements OnInit {
   getOtherProfiles(): UserOtherProfiles {
     const formVal = {}
     for ( let key of Object.keys(this.formControls) ) {
-      formVal[key] = {
-        userName: otherProfileUserName(this.formControls[key])
+      (formVal as any)[key] = {
+        userName: otherProfileUserName((this.formControls as any)[key])
       }
     }
     return formVal as UserOtherProfiles
+  }
+
+  getFormControl(descriptor: UserOtherProfileDescriptor) {
+    return (this.formControls as any)[descriptor.id]
   }
 }

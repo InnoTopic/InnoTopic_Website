@@ -11,10 +11,10 @@ import {
   setIdsFromKeys,
 } from '../../utils/dictionary-utils';
 
-import * as _ from "lodash";
 import { groupByKeepingOrder } from '../../utils/utils';
+import {groupBy} from "lodash-es";
 
-(String.prototype as any).replaceAll = function(search, replacement) {
+(String.prototype as any).replaceAll = function(search: string, replacement: string) {
   const target = this;
   return target.split(search).join(replacement);
 };
@@ -28,11 +28,11 @@ export class WorkExperienceListComponent implements OnInit {
 
   public topicCategoriesArray = topicCategoriesArray
 
-  @Input() experienceByName
+  @Input() experienceByName!: any
 
-  @Input() showIcons: boolean
+  @Input() showIcons!: boolean
 
-  experienceArr
+  experienceArr!: any
 
   byCategory = []
   experienceByCategory = {}
@@ -53,7 +53,7 @@ export class WorkExperienceListComponent implements OnInit {
     this.byCategory = getDictionaryValuesAsArray(
       setIdsFromKeys(groupByKeepingOrder(this.experienceArr, 'category'))
     ) // .sortBy(group => this.experience.indexOf(group[0]))
-    this.experienceByCategory = _.groupBy(this.experienceArr, 'category') // .sortBy(group => this.experience.indexOf(group[0]))
+    this.experienceByCategory = groupBy(this.experienceArr, 'category') // .sortBy(group => this.experience.indexOf(group[0]))
     // console.log('this.byCategory', this.byCategory)
   }
 
@@ -62,7 +62,7 @@ export class WorkExperienceListComponent implements OnInit {
   }
 
   hasExperienceInCategory(category: TopicCategory) {
-    let experienceByCat = this.experienceByCategory[category.name];
+    let experienceByCat = (this.experienceByCategory as any)[category.name];
     // console.log('hasExperienceInCategory', arguments, this.experienceByCategory)
     // return true
     return experienceByCat // FIXME

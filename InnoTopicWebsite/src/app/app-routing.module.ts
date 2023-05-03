@@ -9,7 +9,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'karol-depka',
     pathMatch: 'full'
   },
   {
@@ -48,6 +48,10 @@ const routes: Routes = [
   //   pathMatch: 'full',
   //   //   canActivate: [AuthGuard]
   // },
+  {
+    path: 'karol-depka',
+    loadChildren: () => import('./cv/cv.module').then( m => m.CvPageModule)
+  },
   //
   // // Experimental routes
   // {

@@ -9,17 +9,17 @@ import { UserOtherProfileDescriptor } from '../../other-profiles-core/UserOtherP
 })
 export class OtherProfileUserNameComponent implements OnInit {
 
-  @Input() descriptor: UserOtherProfileDescriptor
-  @Input() parentFormGroup: FormGroup
-  @Input() thisFormControl: FormControl
+  @Input() descriptor!: UserOtherProfileDescriptor
+  @Input() parentFormGroup!: FormGroup
+  @Input() thisFormControl!: FormControl
 
   get isEditable() { return false }
 
   // @Input() userProfileInputs: UserProfileInputs
 
-  urlNoProtocol: string
-  fullUrl: string
-  userName: string
+  urlNoProtocol!: string
+  fullUrl!: string
+  userName!: string
 
   constructor() { }
 

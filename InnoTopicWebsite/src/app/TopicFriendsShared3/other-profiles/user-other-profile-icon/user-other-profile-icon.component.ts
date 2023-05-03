@@ -15,7 +15,7 @@ import { UserOtherProfileDescriptor } from '../other-profiles-core/UserOtherProf
 })
 export class UserOtherProfileIconComponent implements OnInit {
 
-  @Input() readonly descriptor: UserOtherProfileDescriptor
+  @Input() descriptor!: UserOtherProfileDescriptor
 
   constructor(
     public domSanitizer: DomSanitizer,

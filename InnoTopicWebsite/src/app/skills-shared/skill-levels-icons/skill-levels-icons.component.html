@@ -1,11 +1,11 @@
 <div style="display: inline-block; width: 15px; font-size: 11px">
   <ng-template [ngIf]="skillLevels?.have">
-    <fa *ngIf='! useSignalLevels'
-        class="skill-icon"
-        name="{{skillsIcons[skillLevels?.have]}}"
-    >
-      <!-- margin-right: -4px - causes wrapping in Firefox, but not in Chrome or Safari -->
-    </fa>
+<!--    <fa-icon *ngIf='! useSignalLevels'-->
+<!--        class="skill-icon"-->
+<!--        name="{{skillsIcons[skillLevels?.have]}}"-->
+<!--    >-->
+<!--      &lt;!&ndash; margin-right: -4px - causes wrapping in Firefox, but not in Chrome or Safari &ndash;&gt;-->
+<!--    </fa-icon>-->
     <img
       *ngIf='useSignalLevels'
       class="skill-icon signal-icon"
@@ -13,12 +13,12 @@
   </ng-template>
 
   <ng-template [ngIf]="skillLevels?.want"><!--↗-->
-    <fa *ngIf='! useSignalLevels'
-        class="skill-icon want"
-        name="{{skillsIcons[skillLevels?.want]}}"
-    >
-      <!-- margin-right: -5px - causes wrapping in Firefox, but not in Chrome or Safari -->
-    </fa>
+<!--    <fa-icon *ngIf='! useSignalLevels'-->
+<!--        class="skill-icon want"-->
+<!--        name="{{skillsIcons[skillLevels?.want]}}"-->
+<!--    >-->
+<!--      &lt;!&ndash; margin-right: -5px - causes wrapping in Firefox, but not in Chrome or Safari &ndash;&gt;-->
+<!--    </fa-icon>-->
 
     <img
       *ngIf='useSignalLevels'

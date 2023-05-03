@@ -5,6 +5,7 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import {
+  UserSkillLevelEnum,
   UserSkillLevelsHaveWant,
   UserSkillLevelsHaveWant2,
 } from '../../TopicFriendsShared3/skills/skills-core/user-skills';
@@ -28,7 +29,7 @@ export const skillsIconsSignal = {
 })
 export class SkillLevelsIconsComponent implements OnInit {
 
-  @Input() skillLevels: UserSkillLevelsHaveWant2;
+  @Input() skillLevels?: UserSkillLevelsHaveWant2;
   @Input() useSignalLevels = false
 
   icon: string;
@@ -44,8 +45,8 @@ export class SkillLevelsIconsComponent implements OnInit {
     expert: "battery-full"
   }
 
-  skillIconSignal(level) {
-    return skillsIconsSignal[level]
+  skillIconSignal(level: UserSkillLevelEnum) {
+    return skillsIconsSignal[level !]
   }
 
   constructor() {
@@ -61,7 +62,7 @@ export class SkillLevelsIconsComponent implements OnInit {
   ngOnInit() {
     if ( this.skillLevels ) {
       // console.log('SkillLevelLabelComponent, skillLevels', this.skillLevels)
-      this.icon = this.skillsIcons[this.skillLevels.have as any /* HACK */]
+      this.icon = this.skillsIcons[this.skillLevels.have ! /* HACK */]
       // todo; want
     }
     // this.icon = this.skillIcons[skillLevels]

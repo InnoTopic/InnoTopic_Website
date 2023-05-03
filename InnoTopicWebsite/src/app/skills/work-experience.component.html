@@ -98,13 +98,13 @@
   <div class="experience-info">
       <a href="https://www.linkedin.com/in/karoldepka" target="_blank">
       Please also take a look at skills endorsements on
-      <img style="vertical-align: middle; padding-bottom: 2px" height='14px' src="assets/images/logos/linkedin.svg"> <!-- TODO: underline link -->
+      <img alt="LinkedIn Logo" style="vertical-align: middle; padding-bottom: 2px" height='14px' src="assets/images/logos/linkedin.svg"> <!-- TODO: underline link -->
     </a>
     <br>
     <p id="legend">Legend:</p>
 
       <ng-container
-        *ngFor="let level of ['beginner', 'intermediate', 'advanced', 'expert']"
+        *ngFor="let level of skillLevels"
       >
         <app-skill-level-icon
           [skillLevel]="level"
@@ -211,10 +211,10 @@
 <!--  </section>-->
 <!--  <section>-->
 <!--    <h3>Project: FlexAgenda - time planning app <span class="years">2011-current</span></h3>-->
-    <mat-chip-list> <!-- HACK for its css -->
+<!--    <mat-chip-list> &lt;!&ndash; HACK for its css &ndash;&gt;-->
 <!--      <app-topic-tag tId="Android"></app-topic-tag>-->
 <!--      <app-topic-tag tId="Java"></app-topic-tag>-->
-    </mat-chip-list>
+<!--    </mat-chip-list>-->
 
 <!--  </section>-->
 
