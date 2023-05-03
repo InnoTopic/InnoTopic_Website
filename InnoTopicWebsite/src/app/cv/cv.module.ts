@@ -8,6 +8,8 @@ import { CvPageRoutingModule } from './cv-routing.module';
 
 import { CvPage } from './cv.page';
 import {CvPageModule1} from "../cv-page/cv-page.module";
+import {SharedModule} from "../shared/shared.module";
+import {ThemeDemoPageModule} from "../themes/theme-demo/theme-demo.module";
 
 @NgModule({
   imports: [
@@ -16,6 +18,8 @@ import {CvPageModule1} from "../cv-page/cv-page.module";
     IonicModule,
     CvPageRoutingModule,
     CvPageModule1,
+    SharedModule,
+    ThemeDemoPageModule,
   ],
   declarations: [CvPage]
 })

@@ -44,11 +44,21 @@
 <!--</mat-chip>-->
 
 
-<span class="neumorphic-chip">
+<app-chip style="display: inline-block; margin: 0.3rem;">
   <app-topic-logo
     *ngIf="(showLogo || true) && tag.tagEntry.logo"
     [topic]="tag.tagEntry"
   ></app-topic-logo>
 
   {{tag.tagEntry.name}}
-</span>
+</app-chip>
+
+
+<!--<span class="neumorphic-chip">-->
+<!--  <app-topic-logo-->
+<!--    *ngIf="(showLogo || true) && tag.tagEntry.logo"-->
+<!--    [topic]="tag.tagEntry"-->
+<!--  ></app-topic-logo>-->
+
+<!--  {{tag.tagEntry.name}}-->
+<!--</span>-->

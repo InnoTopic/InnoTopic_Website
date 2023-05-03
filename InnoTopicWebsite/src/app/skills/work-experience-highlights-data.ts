@@ -92,6 +92,7 @@ export const highlights = {
     "Less": {},
     "Stylus": {},
     "PostCSS": {},
+    "Headless UI": {},
     "Tailwind CSS": {},
     "Windi CSS": {},
     "Bootstrap": {},
@@ -118,7 +119,7 @@ export const highlights = {
     "Redux": {},
     // "Redux Toolkit": {}, // hide coz looks like duplicate icon?;  // hiding coz looks quirky and I don't have other stuff like that with same icon, e.g. SvelteKit. And it's kinda implied, that each tech can have its companion toolkit / higher-level utilities, so Redux Toolkit not that special; also, saving space
     "Recoil": {},
-    "Jotai": {},
+    // "Jotai": {}, - commented-out coz stands out too much and reminds me of some period of paranoia over which icons to add; just 13k GH stars anyway
     "Zustand": {},
     "Akita": {}, // TODO elf
     "NgRx": {},
@@ -296,6 +297,7 @@ export const highlights = {
     "AWS Amplify": {},
     "Firebase": {},
     "Supabase": {},
+    "RxDB": {},
 
     "Prisma": {},
     "MongoDB": {},
@@ -305,7 +307,6 @@ export const highlights = {
     "Dgraph": {},
     "Fauna": {},
     // "RethinkDB": {}, /* disabled to save space and optimize layout for print */
-    "RxDB": {},
     "MindsDB": {},
     // TODO JetBrains Fleet
 

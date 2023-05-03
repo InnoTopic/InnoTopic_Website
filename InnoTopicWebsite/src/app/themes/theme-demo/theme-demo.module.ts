@@ -18,6 +18,10 @@ import {ChipComponent} from "../../chip/chip.component";
     IonicModule,
     ThemeDemoPageRoutingModule
   ],
+  exports: [
+    ThemeConfigComponent,
+    ChipComponent
+  ],
   declarations: [
     ThemeDemoPage,
     ThemeConfigComponent,
