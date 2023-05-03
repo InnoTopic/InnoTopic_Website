@@ -95,7 +95,7 @@ var graphData = {
 
 var width = 960,
     height = 500,
-    root;
+    root: any;
 
 var force = d3.layout.force()
     .linkStrength(5)
@@ -128,7 +128,7 @@ function update() {
        .start();
 
   // Update links.
-  link = link.data(links, function(d) { return d.target.id; });
+  link = link.data(links, function(d: any) { return d.target.id; });
 
   link.exit().remove();
 
@@ -136,7 +136,7 @@ function update() {
       .attr("class", "link");
 
   // Update nodes.
-  node = node.data(nodes, function(d) { return d.id; });
+  node = node.data(nodes, function(d: any) { return d.id; });
 
   node.exit().remove();
 
@@ -146,35 +146,35 @@ function update() {
       .call(force.drag);
 
   nodeEnter.append("circle")
-      .attr("r", function(d) { return Math.sqrt(d.size) / 2 || 4.5; });
+      .attr("r", function(d: any) { return Math.sqrt(d.size) / 2 || 4.5; });
 
   var nodeGForHtml = nodeEnter.append("g")
 
-nodeGForHtml.html(function(d) {
+nodeGForHtml.html(function(d: any) {
     return d.body;
 });
-    
+
   node.select("circle")
       .style("fill", color);
 }
 
 function tick() {
-  link.attr("x1", function(d) { return d.source.x; })
-      .attr("y1", function(d) { return d.source.y; })
-      .attr("x2", function(d) { return d.target.x; })
-      .attr("y2", function(d) { return d.target.y; });
+  link.attr("x1", function(d: any) { return d.source.x; })
+      .attr("y1", function(d: any) { return d.source.y; })
+      .attr("x2", function(d: any) { return d.target.x; })
+      .attr("y2", function(d: any) { return d.target.y; });
 
-  node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+  node.attr("transform", function(d: any) { return "translate(" + d.x + "," + d.y + ")"; });
 }
 
-function color(d) {
+function color(d: any) {
   return d._children ? "#3182bd" // collapsed package
       : d.children ? "#c6dbef" // expanded package
       : "#fd8d3c"; // leaf node
 }
 
 // Toggle children on click.
-function click(d) {
+function click(d: any) {
   if (d3.event.defaultPrevented) return; // ignore drag
   if (d.children) {
     d._children = d.children;
@@ -187,10 +187,10 @@ function click(d) {
 }
 
 // Returns a list of all nodes under the root.
-function flatten(root) {
-  var nodes = [], i = 0;
+function flatten(root: any) {
+  var nodes: any = [], i = 0;
 
-  function recurse(node) {
+  function recurse(node: any) {
     if (node.children) node.children.forEach(recurse);
     if (!node.id) node.id = ++i;
     nodes.push(node);

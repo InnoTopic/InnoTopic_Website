@@ -1,26 +1,48 @@
 import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { CvPageComponent } from './cv-page/cv-page.component';
+import { EpicEliteComponent } from './jobs/epic-elite/epic-elite.component';
+import { ShirtComponent } from './shirt/shirt.component';
+import { TechGraphD3Component } from './cv-page/tech-graph-d3/tech-graph-d3.component';
+import { TechGraphD3Index1Component } from './cv-page/tech-graph-d3-index1/tech-graph-d3-index1.component';
 
 const routes: Routes = [
   {
+    path: 'karol-depka',
+    component: CvPageComponent,
+  },
+  {
+    path: 'jobs/epic-elite',
+    component: EpicEliteComponent,
+  },
+  {
+    path: 'shirt',
+    component: ShirtComponent,
+  },
+  {
     path: '',
-    redirectTo: 'folder/Inbox',
-    pathMatch: 'full'
+    redirectTo: 'karol-depka',
+    pathMatch: 'full',
+    //   canActivate: [AuthGuard]
+  },
+
+  // Experimental routes
+  {
+    path: 'tech-graph-d3',
+    component: TechGraphD3Component,
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    path: 'tech-graph-d3-index1',
+    component: TechGraphD3Index1Component,
+    /* FCK, no lazy loading; move to Ionic pages anyway */
   },
-  {
-    path: 'theme-demo',
-    loadChildren: () => import('./themes/theme-demo/theme-demo.module').then( m => m.ThemeDemoPageModule)
-  },
+
+  { path: '**', redirectTo: 'karol-depka' /* FIXME: does not work? */ },
+
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

@@ -35,9 +35,9 @@ export class TopicInterest {
 export class TopicTagComponent implements OnInit {
 
   /* Input-only for convenience; don't use internally; as it might have been mangled */
-  @Input() tId: string;
-  @Input() tag: TopicInterest;
-  @Input() editable: boolean;
+  @Input() tId!: string;
+  @Input() tag!: TopicInterest;
+  @Input() editable!: boolean;
   @Input() isCustomClick: boolean = false
   @Input() showLogo: boolean = true
 

@@ -1,70 +1,75 @@
-import { NgModule } from '@angular/core';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
-import { MatLegacyRadioModule as MatRadioModule } from '@angular/material/legacy-radio';
+// import { NgModule } from '@angular/core';
+// import { BrowserModule } from '@angular/platform-browser';
+// import { RouteReuseStrategy } from '@angular/router';
+//
+// import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+//
+// import { AppComponent } from './app.component';
+// import { AppRoutingModule } from './app-routing.module';
+//
+// @NgModule({
+//   declarations: [AppComponent],
+//   imports: [
+//     BrowserModule, IonicModule.forRoot(), AppRoutingModule
+//   ],
+//   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
+
+
+import {APP_INITIALIZER, NgModule} from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouteReuseStrategy } from '@angular/router';
+
+import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+
 import { AppComponent } from './app.component';
-import { CoreModule } from './core/core.module';
-import { CvPageModule } from './cv-page/cv-page.module';
-import { SharedModule } from './shared/shared.module';
-import { TopicSkillsModule } from './topic-skills/topic-skills.module';
-// import { WorkExperienceByStatusSectionComponent } from './skills/work-experience-by-status-section/work-experience-by-status-section.component';
-// import { WorkExperienceListComponent } from './skills/work-experience-list/work-experience-list.component';
-// import { WorkExperienceComponent } from './skills/work-experience.component';
-import { TopicsSharedModule } from './topics-shared/topics-shared.module';
-import { PoweredByComponent } from './powered-by/powered-by.component';
-import { EpicEliteComponent } from './jobs/epic-elite/epic-elite.component';
-import { ShirtComponent } from './shirt/shirt.component';
+import { AppRoutingModule } from './app-routing.module';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatLegacySlideToggleModule as MatSlideToggleModule } from '@angular/material/legacy-slide-toggle';
-import { ReactiveFormsModule } from '@angular/forms';
-import { MatIconModule } from '@angular/material/icon';
-import { MatLegacyFormFieldModule as MatFormFieldModule } from '@angular/material/legacy-form-field';
-import { MatLegacyCheckboxModule as MatCheckboxModule } from '@angular/material/legacy-checkbox';
-import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy-input';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {Store, StoreModule} from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { ThemeConfigEffects } from './store/effects/theme-config.effects';
+import { FormsModule } from '@angular/forms';
+// import { AngularFireModule } from '@angular/fire/compat';
+// import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { environment } from '../environments/environment';
+import {ThemeConfigComponent} from "./themes/theme-config/theme-config.component";
+import {initialState, themeConfigReducer} from "./store/reducers/theme-config-reducer";
+import {StoreDevtoolsModule} from "@ngrx/store-devtools";
+import {updateThemeConfig} from "./store/actions/theme-config-actions";
 
 
-
-// var log4js = require('log4js');
-// var logger = log4js.getLogger();
-// logger.level = 'debug';
-// logger.debug("Some debug messages");
+export function initializeApp(store: Store) {
+  return () => {
+    store.dispatch(updateThemeConfig(initialState));
+  };
+}
 
 @NgModule({
   declarations: [
     AppComponent,
-    PoweredByComponent,
-    EpicEliteComponent,
-    ShirtComponent,
-
-    // WorkExperienceComponent,
-    // WorkExperienceListComponent,
-    // WorkExperienceByStatusSectionComponent,
-
   ],
   imports: [
-    CoreModule,
-    SharedModule,
-    CvPageModule,
-    TopicsSharedModule,
-    TopicSkillsModule,
-    MatButtonModule,
-
-    MatRadioModule,
-    MatSlideToggleModule,
-    ReactiveFormsModule,
-    MatIconModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatCheckboxModule,
-    MatInputModule,
-    MatExpansionModule,
-    FontAwesomeModule
-
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    StoreModule.forRoot({ themeConfig: themeConfigReducer }),
+    EffectsModule.forRoot([ThemeConfigEffects]),
+    StoreDevtoolsModule.instrument({ maxAge: 25 }),
+    FormsModule,
+    // AngularFireModule.initializeApp(environment.firebase),
+    // AngularFirestoreModule,
   ],
   providers: [
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeApp,
+      deps: [Store],
+      multi: true,
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

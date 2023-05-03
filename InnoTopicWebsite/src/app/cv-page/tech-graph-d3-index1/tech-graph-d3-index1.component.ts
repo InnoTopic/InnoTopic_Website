@@ -50,8 +50,8 @@ export class TechGraphD3Index1Component implements OnInit {
     const simulation = d3.forceSimulation()
        // .force("gravity", 3)
       .force("link",
-        d3.forceLink().id(function(d) { return d.id; })
-          .strength(function(d) {
+        d3.forceLink().id(function(d: any) { return d.id; })
+          .strength(function(d: any) {
             return preset.forceLinkStrength;
 //                      return 1 / Math.min(count(link.source), count(link.target));
 //                      return (typeof d.strengthMul === "undefined") ? 3 : d.strengthMul
@@ -1309,7 +1309,7 @@ export class TechGraphD3Index1Component implements OnInit {
 
     const nodesKeys = Object.keys(nodes);
 
-    const nodesArray = nodesKeys.map(function(v) { return nodes[v]; });
+    const nodesArray = nodesKeys.map(function(v) { return (nodes as any)[v]; });
 
     // initial xy: https://observablehq.com/@d3/force-layout-phyllotaxis
 
@@ -1322,7 +1322,7 @@ export class TechGraphD3Index1Component implements OnInit {
       .selectAll("line")
       .data(graph.links)
       .enter().append("line")
-      .attr("stroke-width", function(d) { return Math.sqrt(d.thick == null ? 1 : d.thick ); });
+      .attr("stroke-width", function(d: any) { return Math.sqrt(d.thick == null ? 1 : d.thick ); });
 
     const allNodesGroup = svg.append("g") /* Group that contains all nodes */
       .attr("class", "nodes")
@@ -1342,7 +1342,7 @@ export class TechGraphD3Index1Component implements OnInit {
 
     simulation.force("link")
       .links(graph.links)
-      .distance(function(link) {
+      .distance(function(link: any) {
         //        return link.graph === 0 ? height/2 : height/4;
         const multip = link.distance == null ? 0.7 : link.distance;
         return multip * 70;
@@ -1351,20 +1351,20 @@ export class TechGraphD3Index1Component implements OnInit {
     const defaultRadius = 23;
     var isDragging = false;
 
-    const radiusFunc = function(d) {
+    const radiusFunc = function(d: any) {
       return d.sizeMult ? d.sizeMult * defaultRadius : defaultRadius
     };
 
-    const radiusFuncRect = function(d) {
+    const radiusFuncRect = function(d: any) {
       return radiusFunc(d) * 2;
     }
     var nodeCircle = perNodeMainGroup.append("circle")
-      .attr("class", function(d) { d.id + '_background' + ' circleBg' + ' techCircle'} )
+      .attr("class", function(d: any) { d.id + '_background' + ' circleBg' + ' techCircle'} )
       .attr("r", radiusFunc )
-      .attr("id2", function(d) { return d.id } )
-      .attr("id", function(d) { return d.id } )
+      .attr("id2", function(d: any) { return d.id } )
+      .attr("id", function(d: any) { return d.id } )
 
-      .attr("fill", function(d) { return color; })
+      .attr("fill", function(d: any) { return color; })
 //                .attr("title", "TEST")
     ;
 
@@ -1373,7 +1373,7 @@ export class TechGraphD3Index1Component implements OnInit {
     const foreignObjectH = 50;
     const defaultSize = 30;
 
-    perNodeMainGroup.append("g").html(function(d) {
+    perNodeMainGroup.append("g").html(function(d: any) {
       var bodyText = d.body || "";
       var size = d.sizeMult ? d.sizeMult * defaultSize
         : defaultSize;
@@ -1402,7 +1402,7 @@ export class TechGraphD3Index1Component implements OnInit {
       .attr("x", -foreignObjectW/2)
       .attr("y", -foreignObjectH/2)
       .style("font", "9px 'Helvetica Neue'")
-      .html(function(d) {
+      .html(function(d: any) {
         if ( d.body ) {
           return ""; // has icon: no need for text
         }
@@ -1415,7 +1415,7 @@ export class TechGraphD3Index1Component implements OnInit {
           bodyText + "</p></div>";
       });
 
-    function unHighlightHover(d?) {
+    function unHighlightHover(d?: any) {
       $('.techCircleHover').removeClass("techCircleHover", false);
       d3.select(".techCircleHover").classed("techCircleHover", false);
     }
@@ -1436,16 +1436,16 @@ export class TechGraphD3Index1Component implements OnInit {
       //        .attr("y", -defaultRadius)
       .classed("techCircleOverlay", true);
 
-    nodeCircleOverlay.on("mouseover", function(d) {
+    nodeCircleOverlay.on("mouseover", function(this: any, d: any) {
       if ( ! isDragging ) {
 //            $('tech').hover(function() {
         $('#'+d.id).addClass("techCircleHover");
 //            $("[id2='"+ d.id + "']").css('background-color','rgba(0, 0, 0, 0.6)');
         $("."+d.id + '_background').css('background-color','rgba(0, 0, 0, 0.6)');
-        d3.select(this).classed("techCircleHover", true); //"#fff8ee00"
+        d3.select(this as any).classed("techCircleHover", true); //"#fff8ee00"
       }
     })
-      .on("mouseout", function(d) {
+      .on("mouseout", function(this: any, d: any) {
         if ( ! isDragging ) { /* While dragging, the highlight shall stay */
           unHighlightHover.call(this, d);
         }
@@ -1457,7 +1457,7 @@ export class TechGraphD3Index1Component implements OnInit {
         .on("drag", dragged)
         .on("end", dragEnded));
 
-    const titleFunc = function(d) { return d.id; };
+    const titleFunc = function(d: any) { return d.id; };
     nodeCircle.append("title")
       .text(titleFunc);
     nodeCircleOverlay.append("title")
@@ -1466,24 +1466,24 @@ export class TechGraphD3Index1Component implements OnInit {
 
     function ticked() {
       allLinksGroup
-        .attr("x1", function(d) { return d.source.x; })
-        .attr("y1", function(d) { return d.source.y; })
-        .attr("x2", function(d) { return d.target.x; })
-        .attr("y2", function(d) { return d.target.y; });
+        .attr("x1", function(d: any) { return d.source.x; })
+        .attr("y1", function(d: any) { return d.source.y; })
+        .attr("x2", function(d: any) { return d.target.x; })
+        .attr("y2", function(d: any) { return d.target.y; });
 
       perNodeMainGroup
-        .attr("x", function(d) { return (d.x - radiusFunc(d) ); })
-        .attr("y", function(d) { return (d.y - radiusFunc(d) ); });
+        .attr("x", function(d: any) { return (d.x - radiusFunc(d) ); })
+        .attr("y", function(d: any) { return (d.y - radiusFunc(d) ); });
       nodeCircleOverlay /* need to set position separately, because of issue with drag&drop and "translate(...)" transform */
-        .attr("x", function(d) { return (d.fx || d.x) - radiusFunc(d); })
-        .attr("y", function(d) { return (d.fy || d.y) - radiusFunc(d); });
-      perNodeMainGroup.attr("transform", function(d) {
+        .attr("x", function(d: any) { return (d.fx || d.x) - radiusFunc(d); })
+        .attr("y", function(d: any) { return (d.fy || d.y) - radiusFunc(d); });
+      perNodeMainGroup.attr("transform", function(d: any) {
         // return "translate(" + (d.x + radiusFunc(d) / 2) + "," + (d.y + radiusFunc(d) / 2) + ")";
         return "translate(" + (d.x) + "," + (d.y) + ")";
       });
     }
 
-    function dragStarted(d) {
+    function dragStarted(d: any) {
       isDragging = true;
       if (!d3.event.active) {
         simulation.alphaTarget(0.3).restart();
@@ -1492,13 +1492,13 @@ export class TechGraphD3Index1Component implements OnInit {
       d.fy = d.y;
     }
 
-    function dragged(d) {
+    function dragged(d: any) {
       isDragging = true; // just in case...
       d.fx = d3.event.x;
       d.fy = d3.event.y;
     }
 
-    function dragEnded(d) {
+    function dragEnded(d: any) {
       isDragging = false;
       unHighlightHover()
 

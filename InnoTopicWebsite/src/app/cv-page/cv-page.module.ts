@@ -19,7 +19,18 @@ import { TopicsGraphComponent } from './topics-graph/topics-graph.component';
 import { VideoCvComponent } from './video-cv/video-cv.component';
 
 @NgModule({
-  declarations: [CvPageComponent, PersonalDataComponent, ExternalProfilesComponent, TechGraphComponent, WorldMapComponent, Logo3dComponent, TechGraphD3Component, TechGraphD3Index1Component, TopicsGraphComponent, VideoCvComponent],
+  declarations: [
+    CvPageComponent,
+    PersonalDataComponent,
+    ExternalProfilesComponent,
+    TechGraphComponent,
+    WorldMapComponent,
+    Logo3dComponent,
+    TechGraphD3Component,
+    TechGraphD3Index1Component,
+    TopicsGraphComponent,
+    VideoCvComponent
+  ],
   exports: [
     CvPageComponent,
   ],

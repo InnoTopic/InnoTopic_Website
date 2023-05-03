@@ -1,29 +1,38 @@
-<ion-app>
-  <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
-      <ion-content>
-        <ion-list id="inbox-list">
-          <ion-list-header>Inbox</ion-list-header>
-          <ion-note>hi@ionicframework.com</ion-note>
+<mat-toolbar *ngIf="false" color="primary">
+  <mat-toolbar-row>
+    <app-company-logo></app-company-logo>
+    &nbsp;
+    InnoTopic SLU<!-- <span class=comment>&nbsp;Under construction</span>-->
+<!--    <button mat-button>Contact</button>-->
+<!--    <button mat-button>People</button>&lt;!&ndash; Link see -> experience &ndash;&gt;-->
+<!--    <button mat-button>Experience</button>-->
+   <!-- <button mat-button>Conferences</button> &lt;!&ndash; TODO: list Angular Conferences, with logos, dates &ndash;&gt; -->
+   <div class="flex-stretch"></div>
+   <mat-slide-toggle [formControl]="toggleControl" style="margin-left:auto">
+   </mat-slide-toggle>
+  </mat-toolbar-row>
+</mat-toolbar>
 
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-              <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list>
+<!-- Ideas:
+  - try Angular Universal to speed up loading and to learn it (hosting on google cloud if necessary)
+-->
+<!-- People
+  - Karol Depka Pradzinski, InnoTopic S.L.U. Owner, Full-Stack Developer with focus on Angular
+  - photo
+  -
+-->
+<!-- List of topics with experience levels and -->
+<!-- D3 graph ; highlights from/to topic tags-->
 
-        <ion-list id="labels-list">
-          <ion-list-header>Labels</ion-list-header>
+<div class="app">
+<!--  <mat-radio-button>test</mat-radio-button>-->
+<!--  <button mat-button>btn</button>-->
 
-          <ion-item *ngFor="let label of labels" lines="none">
-            <ion-icon aria-hidden="true" slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-            <ion-label>{{ label }}</ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-    <ion-router-outlet id="main-content"></ion-router-outlet>
-  </ion-split-pane>
-</ion-app>
+  <!-- Testimonials (Felix, take from LinkedIn recommendations) -->
+
+<!--  <app-cv-page></app-cv-page>-->
+
+  <router-outlet></router-outlet>
+
+  <app-powered-by *ngIf="! config.shirtMode"></app-powered-by>
+</div>

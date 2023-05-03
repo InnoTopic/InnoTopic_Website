@@ -1,6 +1,4 @@
 import { AbstractControl } from '@angular/forms';
-import { Observable } from 'rxjs/Observable';
-import { combineLatest } from 'rxjs/observable/combineLatest';
 
 export function setFormControlEnabled(formControl: AbstractControl, enable: boolean) {
   if ( enable ) {
@@ -26,8 +24,8 @@ export function isNullOrUndefinedOrWhiteSpace(s: string) {
 //   return combineLatest2
 // }
 
-export function groupByKeepingOrder(kv, propertyToGroupBy: string) {
-  const ret = {}
+export function groupByKeepingOrder(kv: any, propertyToGroupBy: string) {
+  const ret: any = {}
   for ( let key in kv ) {
     if ( kv.hasOwnProperty(key) ) {
       // console.log('groupByKeepingOrder', key)

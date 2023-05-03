@@ -55,7 +55,7 @@ export class TopicsService {
   }
 
   private transformTags(inputList: (Topic|string)[]): Topic[] {
-    let retTopicsArray = []
+    let retTopicsArray: any = []
     for ( let elTopic of inputList ) {
       // console.log('transformTags elTopic', elTopic)
       this.addTopic(elTopic, retTopicsArray)
@@ -91,7 +91,7 @@ export class TopicsService {
       return id.toLowerCase() === topicIdOrName.toLowerCase()
     })
     if ( ! retVal ) {
-      retVal = topicsArray.find((it: Topic) => it.name.toLowerCase() === topicIdOrName.toLowerCase())
+      retVal = topicsArray.find((it: Topic) => it.name.toLowerCase() === topicIdOrName.toLowerCase()) !
     }
     // console.log('getTopicById', topicId, retVal)
     return retVal
@@ -125,7 +125,7 @@ export class TopicsService {
     return newTopic
   }
 
-  topicExistsById(topicId: string, topicsArray?) {
+  topicExistsById(topicId: string, topicsArray?: any) {
     return !! this.getTopicByIdIfExisting(topicId, topicsArray)
   }
 

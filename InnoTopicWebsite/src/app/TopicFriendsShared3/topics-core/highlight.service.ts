@@ -14,7 +14,7 @@ export class HighlightService {
 
   constructor() { }
 
-  setHighlight(id) {
+  setHighlight(id: string) {
     this.highlight$.next(id)
   }
 }

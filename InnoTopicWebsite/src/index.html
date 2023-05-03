@@ -1,99 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>InnoTopic.com</title>
-  <base href="/">
+  <meta charset="utf-8" />
+  <title>Ionic App</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Anton:300,400,500" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Karla:300,400,500" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Kanit:300,400,500" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <base href="/" />
 
-<!--  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">-->
-<!--  </script>-->
-  <script type="module"
-          src="https://unpkg.com/@google/model-viewer@1.4.1/dist/model-viewer.js">
-  </script>
+  <meta name="color-scheme" content="light dark" />
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
 
-  <!-- D3 experiments related-->
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
 
+  <!-- add to homescreen for ios -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 </head>
-<body class="dark-theme">
-<!-- https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948 -->
-<!--assets/3d/InnoTopic_3D_Logo.glb-->
-<!--src="assets/3d/Astronaut.glb"-->
-<!-- assets/3d/WebGL.glb -->
-<!--  <button-->
-<!--    onclick="document.querySelector('body').classList.add('dark-theme');"-->
-<!--  >DARK<sup>NEW</sup></button>-->
-<!--  <button-->
-<!--    onclick="document.querySelector('body').classList.remove('dark-theme');"-->
-<!--  >LIGHT</button>-->
 
-<!--  <model-viewer-->
-<!--    src="assets/3d/Scene5.glb"-->
-<!--    ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"-->
-
-<!--    alt="InnoTopic Logo"-->
-<!--    style="height: 1000px; outline: none; opacity: 10%"-->
-<!--    camera-orbit="calc(-1.5rad + env(window-scroll-y) * 4rad) calc(0deg + env(window-scroll-y) * 180deg) calc(3m - env(window-scroll-y) * 1.5m)"-->
-<!--    camera-target="0m 0m 0m"-->
-<!--    disable-zoom-->
-<!--    disable-orbit-->
-<!--    data-js-focus-visible=""-->
-<!--  >-->
-<!--    &lt;!&ndash;-->
-<!--      Vertices: 9564, Triangles: 3188-->
-<!--      TODO: try to convert to glTF from blender/other formats, to not lose materials-->
-<!--        - https://blackthread.io/gltf-converter/-->
-<!--      TODO: glossiness-->
-<!--      https://www.gltfeditor.com/ - Metallic Roughness - Metal, Rough-->
-<!--    &ndash;&gt;-->
-<!--    &lt;!&ndash; iOS transparency: https://github.com/google/model-viewer/pull/268/commits/99c720b21a3f8a92845c1a75da031bb9d6291781-->
-<!--      https://github.com/GoogleWebComponents/model-viewer/pull/268-->
-<!--      https://stackoverflow.com/questions/57150436/webgl-does-not-have-an-alpha-background-channel-on-ios-safari-->
-<!--    &ndash;&gt;-->
-
-<!--    &lt;!&ndash;              shadow-intensity="1"-->
-<!--                camera-controls-->
-<!--                auto-rotate ar-->
-<!--   &ndash;&gt;-->
-<!--    &lt;!&ndash; https://github.com/google/model-viewer/issues/969 &ndash;&gt;-->
-<!--    &lt;!&ndash; https://github.com/google/model-viewer/issues/1728 &ndash;&gt;-->
-<!--    &lt;!&ndash; https://stackblitz.com/edit/angular-ivy-onjfwt?file=package.json-->
-<!--      "@google/model-viewer": "^1.3.0"-->
-
-<!--      https://stackblitz.com/edit/angular-ivy-onjfwt?file=src%2Fapp%2Fapp.component.ts-->
-<!--      import "@google/model-viewer";-->
-
-<!--      focus outline: https://stackoverflow.com/questions/62044624/model-viewer-outline-->
-
-<!--    &ndash;&gt;-->
-<!--  </model-viewer>-->
-  <div class=" basic-container">
-    <!-- mat-app-background -->
-    <div
-      style="position: sticky; top: 0px"
-
-    >
-
-
-    </div>
-    <app-root><div style="margin: 20px;">Loading...</div></app-root>
-    <!--<app-root>Loading...</toolbar-multirow-example>-->
-  </div>
-
-<!--  <iframe style="border: none;" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKaYACG5qjy9ZkmwpMpXh6257%2FInterpreneurs-and-Socialise-and-Synergise%3Fnode-id%3D0%253A1" allowfullscreen></iframe>-->
-
-<!--  <div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://www.lucidchart.com/documents/embeddedchart/d0f540e2-1925-4c33-b188-16006fbd1a4e" id="yj67vAbtTlOC"></iframe></div>-->
-
+<body>
+  <app-root></app-root>
 </body>
-</html>
 
+</html>

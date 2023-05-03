@@ -20,15 +20,15 @@ export class TopicLogoComponent implements OnInit {
 
   debug_showText = false
 
-  @Input() public topic: Topic | string;
-  public _topic: Topic
-  @Input() public url;
+  @Input() public topic!: Topic | string;
+  public _topic!: Topic
+  @Input() public url!: string;
   @Input() public size = defaultIconHeight;
-  @Input() public width = undefined;
-  @Input() public height = undefined;
+  @Input() public width?: number;
+  @Input() public height?: number;
   @Input() public margin = 2;
 
-  public styles;
+  public styles: any;
 
   constructor(
     public topicsService: TopicsService,

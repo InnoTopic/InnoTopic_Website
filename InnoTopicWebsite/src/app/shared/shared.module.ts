@@ -118,22 +118,24 @@
 
 
 import { NgModule } from '@angular/core';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
-import { MatLegacyChipsModule as MatChipsModule } from '@angular/material/legacy-chips';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppRoutingModule } from '../app-routing.module';
+// import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
+// import { MatLegacyChipsModule as MatChipsModule } from '@angular/material/legacy-chips';
+// import { MatToolbarModule } from '@angular/material/toolbar';
+// import { BrowserModule } from '@angular/platform-browser';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { AppRoutingModule } from '../app-routing.module';
 import { CompanyLogoComponent } from './company-logo/company-logo.component';
 import { SpacerComponent } from './spacer/spacer.component';
+import {CommonModule} from "@angular/common";
 
 let imports = [
-  BrowserModule,
-  AppRoutingModule,
-  BrowserAnimationsModule,
-  MatToolbarModule,
-  MatButtonModule,
-  MatChipsModule,
+  // BrowserModule,
+  CommonModule,
+  // AppRoutingModule,
+  // BrowserAnimationsModule,
+  // MatToolbarModule,
+  // MatButtonModule,
+  // MatChipsModule,
 ];
 
 let declarations = [SpacerComponent, CompanyLogoComponent];

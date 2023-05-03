@@ -26,7 +26,7 @@ function coerceLogoToTopicData(topicData: TopicDataOrLogo): TopicData {
 }
 
 export function t(topicData?: TopicDataOrLogo, iconWebsiteTodo?: string | string[]) {
-  topicData = coerceLogoToTopicData(topicData)
+  topicData = coerceLogoToTopicData(topicData !)
   const topic = Object.create(Topic.prototype)
   Object.assign(topic, topicData)
   // TODO: instantiate Topic class (once we have id). But be careful, if using Object.create, ctor is not called
@@ -52,12 +52,12 @@ export function tSquare(topicData?: TopicDataOrLogo, logoSize?: number[]) {
 
 
 export function tWide(topicData?: TopicDataOrLogo, logoSize?: number[]) {
-  topicData = coerceLogoToTopicData(topicData);
+  topicData = coerceLogoToTopicData(topicData!);
   return t({...topicData, logoTypeWide: true, logoSize})
 }
 
 export function tNoIcon(topicData?: TopicData) {
-  return t({...topicData, logo: null})
+  return t({...topicData, logo: undefined})
 }
 
 
@@ -91,11 +91,11 @@ export class Frontend {
     iconUrl: 'https://www.primefaces.org/presskit/primeng-logo.svg',
     urls: new TopicUrls(
       'https://www.primefaces.org/primeng',
-      null,
+      undefined,
       'https://github.com/primefaces/primeng',
       'https://www.npmjs.com/package/primeng',
       'https://stackoverflow.com/questions/tagged/primeng',
-      null,
+      undefined,
       'https://twitter.com/prime_ng'
     )
   })
@@ -124,17 +124,17 @@ export class Frontend {
       'https://angular.io/',
       'https://en.wikipedia.org/wiki/Angular_(application_platform)',
       'https://github.com/angular/angular',
-      null,
+      undefined,
       'https://stackoverflow.com/questions/tagged/angular',
       'https://stackshare.io/angular-2',
       'https://twitter.com/angular',
     ),
     subTopics: {
       'Flex-Layout': t({
-        urls: new TopicUrls(null, 'https://github.com/angular/flex-layout'),
+        urls: new TopicUrls(undefined, 'https://github.com/angular/flex-layout'),
       }),
       'Flex-Layout Responsive API': t({
-        urls: new TopicUrls(null, 'https://github.com/angular/flex-layout/wiki/Responsive-API'),
+        urls: new TopicUrls(undefined, 'https://github.com/angular/flex-layout/wiki/Responsive-API'),
       }),
       'Change Detection': t(),
       'Dependency Injection': t({
@@ -155,13 +155,13 @@ export class Frontend {
   'Angular Material' = t()
   AngularJS = tNoIcon({
     urls: new TopicUrls(
-      null,
+      undefined,
       'https://en.wikipedia.org/wiki/AngularJS',
       'https://github.com/angular/angular.js',
-      null,
+      undefined,
       'https://stackoverflow.com/questions/tagged/angularjs',
       'https://stackshare.io/angularjs',
-      null,
+      undefined,
     )
   })
 
@@ -514,7 +514,7 @@ export class Languages {
       'https://www.python.org/',
       'https://en.wikipedia.org/wiki/Python_(programming_language)',
       'https://github.com/python',
-      null,
+      undefined,
       'https://stackoverflow.com/questions/tagged/python',
       'https://stackshare.io/python',
       'https://twitter.com/ThePSF'
@@ -842,16 +842,16 @@ export class FunAndSports {
   'ASG' = t('generic/fun/gun.svg')
 }
 
-export function processTopics<T>(inputTopics: T/*: Topics*/): T {
+export function processTopics<T extends Object>(inputTopics: T/*: Topics*/): T {
   // inputTopics = setIdsFromKeys(inputTopics, 'name')
   for (let topicKey of Object.getOwnPropertyNames(inputTopics)) {
     if ( inputTopics.hasOwnProperty(topicKey) ) {
       // console.log('transformTopics', topicKey)
-      let topic: Topic = inputTopics[topicKey]
+      let topic: Topic = (inputTopics as any)[topicKey] as Topic
       if ( ! topic ) {
         topic = new Topic(topicKey)
       }
-      inputTopics[topicKey] = topic
+      ;(inputTopics as any)[topicKey] = topic
       topic.setNameAndLogoAndId(topicKey) // TODO ; or setNameAndIdAndIcon
       topic.sealAndValidate() // finalise / solidify
     }

@@ -4,14 +4,14 @@ export type UserSkillLevelEnum = undefined | 'none' | 'beginner' | 'intermediate
 //
 // // TODO: new
 export class UserSkillLevelPerHaveWant {
-  level: number
+  level!: number
 
 }
 
 /* Rename: UserSkillLevelPerTopic ? */
 export class UserSkillLevel {
-  minLevel: UserSkillLevelEnum
-  maxLevel: UserSkillLevelEnum
+  minLevel!: UserSkillLevelEnum
+  maxLevel!: UserSkillLevelEnum
 
   // or, a custom syntax, in a single field `level`, like:
   // 'beginner..intermediate'

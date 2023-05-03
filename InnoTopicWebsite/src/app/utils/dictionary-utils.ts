@@ -25,7 +25,7 @@ export function setIdsFromKeys<TItem>(dictionary: Dict<TItem>, idKeyName: string
   // console.log('setIdsFromKeys ownPropertyNames', ownPropertyNames);
   for (const id of ownPropertyNames) {
     const curExp = dictionary[id];
-    curExp[idKeyName] = id;
+    ;(curExp as any)[idKeyName] = id;
     // console.log('setIdsFromKeys', id, curExp);
   }
   return dictionary;
