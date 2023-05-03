@@ -42,7 +42,10 @@ import {updateThemeConfig} from "./store/actions/theme-config-actions";
 
 export function initializeApp(store: Store) {
   return () => {
-    store.dispatch(updateThemeConfig(initialState));
+    const storageVal = localStorage.getItem('theme_config');
+
+    const state = storageVal ? JSON.parse(storageVal) : initialState;
+    store.dispatch(updateThemeConfig(state));
   };
 }
 

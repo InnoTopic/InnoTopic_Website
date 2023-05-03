@@ -358,7 +358,7 @@ export class Backend {
   Hibernate = t()
   "Fermyon" = tNarrow('fermyon-icon.svg') // wasm instead of docker { tagline: 'Fermyon Cloud is the easiest way to deploy and manage cloud native WebAssembly applications with Spin, our developer tool.', pressKitUrl: 'https://design.fermyon.dev/' }'
   Docker = tWide('docker-simple'/* https://www.docker.com/company/newsroom/media-resources */)
-  'Vagrant' = t()
+  'Vagrant' = tNarrow('vagrant-icon.svg')
   Terraform = t('terraform-icon.svg')
   Ansible = t('ansible-icon.svg')
   Kubernetes = t(/* they had a typo: 'kubernets.svg'*/)

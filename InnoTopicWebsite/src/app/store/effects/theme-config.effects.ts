@@ -71,7 +71,7 @@ export class ThemeConfigEffects {
             }
 
             //--shadow-dark-color: #d0d0d0;
-
+            localStorage.setItem('theme_config', JSON.stringify(action));
           }
         }),
       ),
