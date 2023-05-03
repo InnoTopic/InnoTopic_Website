@@ -52,12 +52,24 @@ export class ThemeConfigEffects {
             //--shadow-light-color: #f0f0f0;
             root.setProperty('--shadow-light-color', `#ffffff${action.shadow_opacity}`)
             root.setProperty('--shadow-dark-color' , `#000000${action.shadow_opacity}`)
+            const contrastValue = 'high';
             const backgroundColor = action.ion_background_color;
             if ( backgroundColor ) {
-              let fg = getIonicTextColor(backgroundColor, 'high');
+              let fg = getIonicTextColor(backgroundColor, contrastValue);
               root.setProperty('--ion-text-color' , fg)
               root.setProperty('--color' , fg)
             }
+            const primaryColor = action.ion_color_primary;
+            if ( primaryColor ) {
+              let fg = getIonicTextColor(primaryColor, contrastValue);
+              root.setProperty('--ion-color-primary-contrast' , fg)
+            }
+            const secondaryColor = action.ion_color_primary;
+            if ( secondaryColor ) {
+              let fg = getIonicTextColor(secondaryColor, contrastValue);
+              root.setProperty('--ion-color-secondary-contrast' , fg)
+            }
+
             //--shadow-dark-color: #d0d0d0;
 
           }

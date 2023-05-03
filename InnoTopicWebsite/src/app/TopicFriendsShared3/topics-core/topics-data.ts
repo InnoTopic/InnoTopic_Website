@@ -317,7 +317,7 @@ export class Backend {
   RabbitMQ = t()
   Swagger = t()
   OpenAPI = t('openapi-icon.svg') /* https://www.openapis.org/ ; Compatible with JSON Schema */
-  Django = t()
+  Django = tSquare('django-icon.svg')
   Laravel = t()
 
   'Express.js' = tWide({
