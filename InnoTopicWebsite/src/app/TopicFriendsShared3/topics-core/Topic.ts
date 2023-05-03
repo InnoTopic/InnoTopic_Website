@@ -1,123 +1,160 @@
-function escapeRegexp(s: string): string {
+function escapeRegexp(s: any) {
   return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
 }
 
 export class TopicUrls {
-  public alternativeTo: string | null;
-  public changeLog: string | null;
-  public runKit: string | null;
-
   constructor(
     public webSite?: string | null,
-    public wikipedia?: string| null,
-    public gitHub?: string| null,
-    public npm?: string| null,
+    public wikipedia?: string | null,
+    public gitHub?: string | null,
+    public npm?: string | null,
     public stackOverFlow?: string | null,
     public stackShare?: string | null,
     public twitter?: string | null,
-    alternativeTo?: string | null,
-    changeLog?: string | null,
-    runKit?: string | null,
+    public alternativeTo?: string | null,
+    public changeLog?: string | null,
+    public runKit?: string | null,
   ) {
-    this.alternativeTo = alternativeTo ?? null; // for firebase
-    this.changeLog = changeLog ?? null; // for firebase
-    this.runKit = runKit ?? null; // for firebase
+    if ( this.alternativeTo === undefined ) {
+      this.alternativeTo = null // for firebase
+    }
+    if ( this.changeLog === undefined ) {
+      this.changeLog = null // for firebase
+    }
+    if ( this.runKit === undefined ) {
+      this.runKit = null // for firebase
+    }
   }
 }
 
-export type Url = string;
+
+export type Url = string
 
 export class Topic {
-  logo!: string;
-  id!: string;
-  logoSize!: number[];
+  logo!: string | null;
+  id!: string
+  logoSize!: number[]
 
-  public pressKitUrl?: Url;
+  public pressKitUrl?: Url
+
+  // TODO: introduce a separate TopicMetaData or TopicPages class. Will be easier to put it in a separate firebase location.
 
   constructor(
     public name: string,
+    // public topicId?,
     logo?: string | null,
-    public website?: Url | null,
-    public related: Topic[] = [],
+    public website?: Url | null ,
+    public related?: Topic[] | null,
     public urls?: TopicUrls,
     public dependencies?: Topic[],
-    public shortName?: string,
-    public logoTypeWide?: boolean,
+    public shortName?: string | null,
+    public logoTypeWide?: boolean | null,
+    // just to match types for now:
     public iconWebsite?: string | string[],
-    public iconUrl?: Url,
+    public iconUrl?: Url | null,
     public subTopics?: any,
     public organisation?: any,
     public categories?: any,
     public ecosystem?: any,
     public logoSmallIcon?: string,
     public description?: string,
+    /** allows more free-form draft text than description or tagline */
     public comments?: string,
     public tagline?: string,
   ) {
-    this.setNameAndLogoAndId(name, logo!);
+    // console.log('new Topic(', name)
+    this.setNameAndLogoAndId(name, logo);
+    // if ( this.website === undefined ) {
+    //   this.website = null // for firebase, because it does not allow to save undefined
+    // }
+    if ( this.related === undefined ) {
+      this.related = null // for firebase, because it does not allow to save undefined
+    }
+    // if ( this.urls === undefined ) {
+    //   this.urls = new TopicUrls(null, null, null, null, null, null) // for firebase, because it does not allow to save undefined
+    // }
+    if ( this.id.match(/\.|#|\$|\[|\]|\//) ) {
+      const message = 'Topic id contains illegal char: '
+      console.error(message, this)
+      window.alert(message + this.id)
+      return null as any
+    }
   }
 
   private static regexpImageFileEndingWithExtension = /.*\.(png|svg|jpg)$/;
 
-  public setNameAndLogoAndId(name: string, logo?: string): void {
-    this.name = name;
+  /** Using Convention Over Configuration */
+  public setNameAndLogoAndId(name: string, logo?: string | null) {
+    // console.log('setNameAndLogoAnd name ' + name)
+    this.name = name
     this.id = name
       .replace('#', '_Sharp')
       .replace(/^\./, 'Dot_')
       .replace(/\./, '_Dot_')
       .replace(/\//, '_Slash_');
-
-    if (logo === undefined) {
-      this.logo = this.getLogoPath(this.getLogoFileName(name.toLowerCase()));
+    if (this.id !== name) {
+      // console.log('id mangled from name: ' + this.id)
+    }
+    if ( this.logo === undefined /* else do not override if specified */ ) {
+      if (logo === null) {
+        this.logo = null;
+      } else if (logo === undefined) {
+        this.logo = this.getLogoPath(this.getLogoFileName(name.toLowerCase()))
+      } else {
+        this.logo = this.getLogoPath(logo);
+      }
     } else {
-      this.logo = this.getLogoPath(logo);
+      if ( this.logo !== null ) {
+        this.logo = this.getLogoPath(this.logo)
+      }
     }
-
-    if (this.logo && !this.logo.toLowerCase().match(Topic.regexpImageFileEndingWithExtension)) {
-      this.logo = this.logo + '.svg';
+    if ( this.logo && ! this.logo.toLowerCase().match(Topic.regexpImageFileEndingWithExtension) ) {
+      this.logo = this.logo + '.svg'
     }
+    // console.log('setNameAndLogoAndId ' + this.id, this)
   }
 
-  public getLogoPath(iconFileName: string): string {
-    return '../../../assets/images/logos-l/logos/' + iconFileName;
+  public getLogoPath(iconFileName: string) {
+    // return '../../../assets/images/logos/' + iconFileName.toLowerCase() + '-icon.svg'
+    // return '../../../assets/images/logos/' + iconFileName
+    return '../../../assets/images/logos-l/logos/' + iconFileName
   }
 
-  private getLogoFileName(tag: string): string {
-    return (
-      tag.toLowerCase().replace(/ /g, '-') +
-      (tag.toLowerCase().match(Topic.regexpImageFileEndingWithExtension) ? '' : '.svg')
-    );
+  private getLogoFileName(tag: string) {
+    return tag.toLowerCase().replace(/ /g, '-') +
+      (tag.toLowerCase().match(Topic.regexpImageFileEndingWithExtension) ? '' : '.svg');
   }
 
-  matchesTextFilter(filterString: string): boolean {
-    if (!filterString) {
+  matchesTextFilter(filterString: string) {
+    if ( ! filterString ) {
       return true;
     }
-    filterString = escapeRegexp(filterString);
-    return this.name.toLowerCase().indexOf(filterString.toLowerCase()) !== -1;
+    filterString = escapeRegexp(filterString)
+    // return this.name.toLowerCase().indexOf(filterString.toLowerCase()) === 0;
+    return this.name.toLowerCase().match(filterString.toLowerCase());
   }
 
-  setLogo(icon: string): Topic {
-    this.logo = this.getLogoPath(icon);
-    return this;
+  setLogo(icon: string) {
+    this.logo = this.getLogoPath(icon)
+    return this
   }
 
-  setRelated(...related: Topic[]): Topic {
-    this.related = related;
-    return this;
+  setRelated(...related: any) {
+    this.related = related
+    return this
   }
 
-  setId(id: string): Topic {
-    this.id = id;
-    return this;
+  setId(id: any) {
+    this.id = id
+    return this
   }
 
-  setName(name: string): Topic {
-    this.name = name;
-    return this;
+  setName(name: any) {
+    this.name = name
+    return this
   }
 
-  sealAndValidate(): void {
+  sealAndValidate() {
     // FIXME
   }
 }
