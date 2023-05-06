@@ -9,18 +9,88 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
-/* Core CSS required for Ionic components to work properly */
-@import "@ionic/angular/css/core.css";
+///* Core CSS required for Ionic components to work properly */
+//@import "@ionic/angular/css/core.css";
+//
+///* Basic CSS for apps built with Ionic */
+//@import "@ionic/angular/css/normalize.css";
+//@import "@ionic/angular/css/structure.css";
+//@import "@ionic/angular/css/typography.css";
+//@import '@ionic/angular/css/display.css';
+//
+///* Optional CSS utils that can be commented out */
+//@import "@ionic/angular/css/padding.css";
+//@import "@ionic/angular/css/float-elements.css";
+//@import "@ionic/angular/css/text-alignment.css";
+//@import "@ionic/angular/css/text-transformation.css";
+//@import "@ionic/angular/css/flex-utils.css";
 
-/* Basic CSS for apps built with Ionic */
-@import "@ionic/angular/css/normalize.css";
-@import "@ionic/angular/css/structure.css";
-@import "@ionic/angular/css/typography.css";
-@import '@ionic/angular/css/display.css';
 
-/* Optional CSS utils that can be commented out */
-@import "@ionic/angular/css/padding.css";
-@import "@ionic/angular/css/float-elements.css";
-@import "@ionic/angular/css/text-alignment.css";
-@import "@ionic/angular/css/text-transformation.css";
-@import "@ionic/angular/css/flex-utils.css";
+html, body {
+  overflow: auto !important;
+  height: 100% !important;
+}
+
+//@media print {
+//  /* Set the page size to auto */
+//  @page {
+//    size: auto;
+//  }
+//
+//  /* Remove any background colors and images */
+//  body, ion-content, * {
+//    background-color: transparent !important;
+//    background-image: none !important;
+//  }
+//
+//  /* Make sure scrollable content is visible during print */
+//  ion-content, .scrollable {
+//    overflow: visible !important;
+//  }
+//
+//  /* Add any other styles specific to print media */
+//}
+
+/** This is from ChatGPT to enable scrolling (multiple pages, instead of limited to viewport) for print: */
+@media print {
+  /* Set the page size to auto */
+  @page {
+    size: auto;
+  }
+
+  /* Make sure the body, ion-content, and other container elements have the correct height and overflow properties */
+  body, ion-content, .scrollable {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  ///* Reset fixed positioning */
+  //* {
+  //  position: static !important;
+  //}
+  //
+  ///* Reset transform properties */
+  //* {
+  //  transform: none !important;
+  //}
+
+  /* Adjust flexbox and grid layout properties */
+  .flex-container, .grid-container {
+    display: block !important;
+  }
+
+  /* Add any other styles specific to print media */
+}
+
+@media print {
+  /* Disable block shadows for printing */
+  * {
+    box-shadow: none !important;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+  user-select: none;
+}
