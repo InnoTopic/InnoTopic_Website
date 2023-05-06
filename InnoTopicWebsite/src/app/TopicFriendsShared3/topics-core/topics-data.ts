@@ -436,7 +436,7 @@ export class Tools {
   'IntelliJ IDEA' = t()
   'NetBeans' = t('apache-netbeans')
   'Visual Studio' = t()
-  'Visual Studio Code' = t()
+  'Visual Studio Code' = tWide('visual-studio-code--no-masks.svg')
   'Vim' = t()
   // ==== CI:
   'CircleCI' = t()
