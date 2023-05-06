@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CvPage implements OnInit {
 
+  showThemeConfig = false;
+
   constructor() { }
 
   ngOnInit() {

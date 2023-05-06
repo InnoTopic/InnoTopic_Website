@@ -5,7 +5,10 @@
     </ion-buttons>
 
     <ion-title>InnoTopic SLU - Karol Depka Pradzinski</ion-title>
-    <app-theme-config></app-theme-config>
+    <ion-buttons slot="end">
+      <span (click)="showThemeConfig = !showThemeConfig" class="clickable">THEME</span>
+    </ion-buttons>
+    <app-theme-config [hidden]="! showThemeConfig"></app-theme-config>
   </ion-toolbar>
 </ion-header>
 
