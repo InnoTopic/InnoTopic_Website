@@ -13,7 +13,7 @@
       <span class="comment" *ngIf="orgKV.value.locations; let locations">{{locations}} </span>
     </h2>
     <a *ngIf="orgKV.value.linkedInRecommendations" href="https://www.linkedin.com/in/karoldepka" target="_blank">
-      Please also take a look at {{orgKV.value.linkedInRecommendations}} recommendations on
+      Please also take a look at {{orgKV.value.linkedInRecommendations}} {{orgKV.value.linkedInRecommendations > 1 ? 'recommendations' : 'recommendation'}} on
       <img alt="LinkedIn Logo" style="vertical-align: middle; padding-bottom: 2px" height="14px" src="assets/images/logos/linkedin.svg"> <!-- TODO LinkedIn Logo; TODO: underline link -->
     </a>
     <app-work-project
