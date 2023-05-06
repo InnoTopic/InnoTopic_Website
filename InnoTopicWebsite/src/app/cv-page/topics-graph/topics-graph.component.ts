@@ -24,6 +24,7 @@ export type GraphConnections = { [key in keyof Partial<Topics>]: GraphNode }
 
 export interface GraphNode {
   connections?: GraphConnections
+  sizeMult?: number
 }
 
 export interface LinkByIds {
@@ -47,6 +48,8 @@ const preset = {
 
 // TODO: try d3.forceRadial(radius[, x][, y])
 
+const veryBigSize = 2, bigSize = 1.76, midSize = 1.25, smallSize = 0.7, verySmallSize = 0.35;
+
 
 @Component({
   selector: 'app-topics-graph',
@@ -66,24 +69,33 @@ export class TopicsGraphComponent implements OnInit {
   @Input()
   connections: GraphConnections = {
     HTML5: {
+      sizeMult: bigSize,
       connections: {
         JavaScript: {
+          sizeMult: bigSize,
           connections: {
-            'TypeScript': { /*type: 'writtenIn'*/ /* dependsOn / uses */},
+            'TypeScript': { /*type: 'writtenIn'*/ /* dependsOn / uses */
+              sizeMult: veryBigSize,
+            },
             Ionic: {
+              sizeMult: veryBigSize,
               connections: {
                 'Angular': {
+                  sizeMult: veryBigSize,
                   connections: {
                     NgRx: {},
                   }
                 },
-                'Vue.js': {},
-                'React': { /*...weak*/},
+                'Vue.js': {sizeMult: bigSize},
+                'React': { /*...weak*/ sizeMult: veryBigSize},
                 Android: {
+                  sizeMult: midSize,
                   connections: {
                     Java: {
+                      sizeMult: smallSize,
                       connections: {
                         "Spring Boot": {
+                          sizeMult: verySmallSize,
                           /* TODO could display old stuff as faded/transparent/grayed */
                           // ...small
                         }
@@ -99,16 +111,18 @@ export class TopicsGraphComponent implements OnInit {
                 }
               },
             },
-            Svelte: {},
-            Qwik: {},
-            Astro: {},
-            SolidJS: {},
+            Svelte: {sizeMult: midSize},
+            Qwik: {sizeMult: smallSize},
+            // Astro: {},
+            SolidJS: {
+              sizeMult: smallSize,
+            },
             'Node.js': {},
             Deno: {
               connections: {
                 Rust: {
                   connections: {
-                    Turbopack: {},
+                    // Turbopack: {},
                     // Turborepo: {},
                   }
                 },
@@ -118,11 +132,11 @@ export class TopicsGraphComponent implements OnInit {
             Redux: {},
             RxJS: {},
             Vite: {},
-            Turbopack: {
-              connections: {
-                Turborepo: {},
-              },
-            },
+            // Turbopack: {
+            //   connections: {
+            //     Turborepo: {},
+            //   },
+            // },
             // TODO: "JS build & deploy node" - icon with a box and up-arrow (a'la upload): vercel, esbuild turbopack, netlify, vite
             // "JavaScript Libraries": {},
             // Astro: {},
@@ -132,15 +146,16 @@ export class TopicsGraphComponent implements OnInit {
           },
         },
         CSS3: {
+          sizeMult: bigSize,
           connections: {
             Sass: {},
-            Stylus: {},
-            Less: {},
+            Stylus: { sizeMult: smallSize},
+            Less: { sizeMult: smallSize},
           }
         },
         SVG: {
           connections: {
-            "Affinity Designer": {},
+            "Affinity Designer": { sizeMult: smallSize},
             Figma: {},
             'D3.js': {},
           }
@@ -255,7 +270,12 @@ export class TopicsGraphComponent implements OnInit {
 //                      return 1 / Math.min(count(link.source), count(link.target));
 //                      return (typeof d.strengthMul === "undefined") ? 3 : d.strengthMul
           }))
-      .force("charge", d3.forceManyBody().strength(preset.forceManyBodyStrength))
+      .force("charge", d3.forceManyBody().strength(function(d: GraphNode) {
+        const size = d.sizeMult ?? midSize;
+        // return preset.forceManyBodyStrength
+        // return size**5 * preset.forceManyBodyStrength / 3
+        return size**10 * preset.forceManyBodyStrength / 100
+      }))
       .force("center", d3.forceCenter(width / 2, height / 2));
 
 // simulation.force("charge", function() {
@@ -264,7 +284,6 @@ export class TopicsGraphComponent implements OnInit {
 //        })
 
 
-    const bigSize = 1.76, midSize = 1.25, smallSize = 0.7, verySmallSize = 0.35;
 
 
     const CSS = "CSS"; // FIXME remove
@@ -527,7 +546,10 @@ export class TopicsGraphComponent implements OnInit {
       }
 
       // return {id: key, html: key}
-      return {id: key }
+      return {
+        id: key,
+        ... child /* TODO keep in mind that I might be mixing connection and note attrs here; so maybe smth like: 'connection: xyz' */,
+      }
 
       // return {
       //   "id": key,
