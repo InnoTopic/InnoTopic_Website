@@ -21,6 +21,9 @@ import {ThemeDemoPageModule} from "../themes/theme-demo/theme-demo.module";
     SharedModule,
     ThemeDemoPageModule,
   ],
+  exports: [
+    CvPage
+  ],
   declarations: [CvPage]
 })
 export class CvPageModule {}

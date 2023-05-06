@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {TechGraphD3Component} from "./cv-page/tech-graph-d3/tech-graph-d3.component";
+import {TopicsGraphComponent} from "./cv-page/topics-graph/topics-graph.component";
 // import {TechGraphD3Component} from "./cv-page/tech-graph-d3/tech-graph-d3.component";
 // import {TechGraphD3Index1Component} from "./cv-page/tech-graph-d3-index1/tech-graph-d3-index1.component";
 // import {CvPageComponent} from "./cv-page/cv-page.component";
@@ -52,19 +54,27 @@ const routes: Routes = [
     path: 'karol-depka',
     loadChildren: () => import('./cv/cv.module').then( m => m.CvPageModule)
   },
+  {
+    path: 'cv-page-print',
+    loadChildren: () => import('./cv-page-print/cv-page-print.module').then( m => m.CvPagePrintPageModule)
+  },
   //
   // // Experimental routes
   // {
   //   path: 'tech-graph-d3',
   //   component: TechGraphD3Component,
   // },
+  {
+    path: 'topics-graph',
+    component: TopicsGraphComponent,
+  },
   // {
   //   path: 'tech-graph-d3-index1',
   //   component: TechGraphD3Index1Component,
   //   /* FCK, no lazy loading; move to Ionic pages anyway */
   // },
   //
-  // { path: '**', redirectTo: 'karol-depka' /* FIXME: does not work? */ },
+  { path: '**', redirectTo: 'karol-depka' /* FIXME: does not work? */ },
 ];
 
 @NgModule({
