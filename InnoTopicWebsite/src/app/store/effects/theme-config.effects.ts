@@ -1,37 +1,9 @@
 
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { tap } from 'rxjs/operators';
+import {tap, throttleTime} from 'rxjs/operators';
 import {updateThemeConfig} from "../actions/theme-config-actions";
-
-function getIonicTextColor(backgroundColor: string, contrastValue: 'high' | 'medium' | 'low'): string {
-  // Convert the background color to RGB format
-  const hexToRgb = (hex: string): number[] => {
-    const match = hex.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i);
-    if (!match) {
-      throw new Error(`Invalid hexadecimal color code: ${hex}`);
-    }
-    const [_, r, g, b] = match;
-    return [parseInt(r, 16), parseInt(g, 16), parseInt(b, 16)];
-  };
-  const rgbBackground: number[] = hexToRgb(backgroundColor);
-
-  // Calculate the relative luminance of the background color
-  const luminance: number = (rgbBackground[0] * 0.299 + rgbBackground[1] * 0.587 + rgbBackground[2] * 0.114) / 255;
-
-  // Determine the appropriate foreground color based on the contrast value
-  if (contrastValue === 'high') {
-    return luminance > 0.5 ? '#000000' : '#ffffff';
-  } else if (contrastValue === 'medium') {
-    return luminance > 0.4 ? '#000000' : '#ffffff';
-  } else if (contrastValue === 'low') {
-    return luminance > 0.6 ? '#000000' : '#ffffff';
-  } else {
-    return '#000000'; // default to black if contrast value is invalid
-  }
-}
-
-
+import {getIonicTextColor, hexToRgb, setIonicColorVarHexAndRgb} from "../../utils/colors/colorUtils";
 
 @Injectable()
 export class ThemeConfigEffects {
@@ -42,6 +14,7 @@ export class ThemeConfigEffects {
       this.actions$.pipe(
         ofType(updateThemeConfig),
         tap((action) => {
+          console.log(`action`, action)
           const root = document.documentElement.style;
           for (const [key, value] of Object.entries(action)) {
             // const variable = `--${key.replace('_', '-')}`;
@@ -62,19 +35,33 @@ export class ThemeConfigEffects {
             const primaryColor = action.ion_color_primary;
             if ( primaryColor ) {
               let fg = getIonicTextColor(primaryColor, contrastValue);
-              root.setProperty('--ion-color-primary-contrast' , fg)
+              const varName = '--ion-color-primary-contrast';
+              setIonicColorVarHexAndRgb(root, varName, fg);
             }
-            const secondaryColor = action.ion_color_primary;
+            const secondaryColor = action.ion_color_secondary;
             if ( secondaryColor ) {
               let fg = getIonicTextColor(secondaryColor, contrastValue);
-              root.setProperty('--ion-color-secondary-contrast' , fg)
+              setIonicColorVarHexAndRgb(root, '--ion-color-secondary-contrast', fg);
             }
 
             //--shadow-dark-color: #d0d0d0;
-            localStorage.setItem('theme_config', JSON.stringify(action));
+            localStorage.setItem('theme_config', JSON.stringify(action)); // FIXME extract to another effect
           }
         }),
       ),
     { dispatch: false },
   );
+
+  setLocalStorage$ = createEffect(
+    () =>
+      this.actions$.pipe(
+        ofType(updateThemeConfig),
+        throttleTime(1000),
+        tap((action) => {
+          localStorage.setItem('theme_config', JSON.stringify(action));
+        }),
+      ),
+    { dispatch: false },
+  );
+
 }

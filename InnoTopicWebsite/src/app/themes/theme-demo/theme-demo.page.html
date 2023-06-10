@@ -17,7 +17,7 @@
 
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>test-page</ion-title>
+    <ion-title>Theme Preferences</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -29,8 +29,12 @@
 <!--  </ion-header>-->
   <app-chip style="display: inline-block; margin: 3rem;"></app-chip>
 
- <ion-button>test</ion-button>
-  <app-theme-config style="display: block;"></app-theme-config>
+  <ion-button>primary</ion-button>
+  <ion-button disabled="true">primary disabled</ion-button>
+
+    <ion-button color="secondary">secondary</ion-button>
+    <ion-button color="secondary" disabled="true">secondary disabled</ion-button>
+    <app-theme-config style="display: block;"></app-theme-config>
 <!--  <ion-chip class="neumorphic-chip">-->
 <!--    <ion-label>Neumorphic Chip</ion-label>-->
 <!--  </ion-chip>-->

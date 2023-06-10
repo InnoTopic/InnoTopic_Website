@@ -1,0 +1,21 @@
+.icon-stack {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-right: 8px; /* Add this line to create a right margin for the icons */
+}
+
+.icon-background, .icon-foreground {
+  position: absolute;
+}
+
+.icon-background {
+  z-index: 1;
+}
+
+.icon-foreground {
+  z-index: 2;
+  color: white; /* Adjust the color of the foreground icon */
+}

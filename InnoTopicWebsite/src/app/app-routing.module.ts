@@ -74,6 +74,10 @@ const routes: Routes = [
   //   /* FCK, no lazy loading; move to Ionic pages anyway */
   // },
   //
+  {
+    path: 'test-tag',
+    loadChildren: () => import('./test-tag/test-tag.module').then( m => m.TestTagPageModule)
+  },
   { path: '**', redirectTo: 'karol-depka' /* FIXME: does not work? */ },
 ];
 

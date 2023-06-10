@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>test-tag</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">test-tag</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-topic-skill [tId]="'Angular'" [skillLevels]='{ have: "advanced", "want": "expert" }'></app-topic-skill>
+
+  ChatGPT:
+
+  <ion-chip>
+    <div class="icon-stack">
+      <ion-icon name="star" class="icon-background"></ion-icon>
+      <ion-icon name="heart" class="icon-foreground"></ion-icon>
+    </div>
+    <ion-label>Favorite</ion-label>
+  </ion-chip>
+
+</ion-content>
