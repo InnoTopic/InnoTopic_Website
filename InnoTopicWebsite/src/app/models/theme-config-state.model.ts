@@ -5,6 +5,6 @@ export interface ThemeConfigState {
   shadow_offset: string;
   // shadow_offset_x: string;
   // shadow_offset_y: string;
-  shadow_blur_radius: string;
-  shadow_opacity: string;
+  shadow_blur_radius: string; /*FIXME number*/
+  shadow_opacity: number;
 }

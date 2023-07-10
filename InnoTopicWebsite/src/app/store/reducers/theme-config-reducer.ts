@@ -2,6 +2,7 @@ import {createReducer, on} from '@ngrx/store';
 import {updateThemeConfig} from "../actions/theme-config-actions";
 import {ThemeConfigState} from "../../models/theme-config-state.model";
 
+/* TODO de-duplicate the patch type */
 export const initialState: ThemeConfigState = {
   ion_color_primary: '#007bff',
   ion_color_secondary: '#6c757d',
@@ -12,7 +13,7 @@ export const initialState: ThemeConfigState = {
   // shadow_offset_x: '5px',
   // shadow_offset_y: '5px',
   shadow_blur_radius: '10',
-  shadow_opacity: '50',
+  shadow_opacity: 50,
 };
 
 export const themeConfigReducer = createReducer(

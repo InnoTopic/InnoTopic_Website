@@ -1,0 +1,95 @@
+<app-chip style="display: inline-block; margin: 3rem;">NEUMORPHIC CHIP</app-chip>
+
+
+<section *ngFor="let colorName of colorNames">
+  <ion-button [color]='colorName' fill="clear">Clear
+    <ion-icon  slot="start" name="star"></ion-icon>
+  </ion-button>
+  <ion-button [color]='colorName' fill="clear" disabled="true">
+    <ion-icon  slot="start" name="star"></ion-icon>
+    Disabled
+  </ion-button>
+  <ion-button [color]='colorName' fill="outline">
+    <ion-icon  slot="start" name="star"></ion-icon>
+    Outline
+  </ion-button>
+  <ion-button [color]='colorName' fill="outline" disabled="true">
+    <ion-icon  slot="start" name="star"></ion-icon>
+    Disabled
+  </ion-button>
+<!--  <ion-button [color]='colorName' fill="solid">Solid</ion-button>-->
+  <ion-button [color]='colorName'>
+    <ion-icon  slot="start" name="star"></ion-icon>
+    Solid
+  </ion-button>
+  <ion-button [color]='colorName' disabled="true">
+    <ion-icon slot="start" name="star"></ion-icon>
+    Disabled
+  </ion-button>
+
+</section>
+
+
+<!--<ion-button aria-label="Favorite">-->
+<!--  <ion-icon name="heart" aria-hidden="true" slot="icon-only"></ion-icon>-->
+<!--</ion-button>-->
+
+<!--<ion-buttons slot="secondary">-->
+<!--  <ion-button>-->
+<!--    <ion-icon slot="icon-only" name="person-circle"></ion-icon>-->
+<!--  </ion-button>-->
+<!--  <ion-button>-->
+<!--    <ion-icon slot="icon-only" name="search"></ion-icon>-->
+<!--  </ion-button>-->
+<!--</ion-buttons>-->
+
+<!--<ion-buttons slot="primary">-->
+<!--  <ion-button>-->
+<!--    <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>-->
+<!--  </ion-button>-->
+<!--</ion-buttons>-->
+<!-- TODO: ion-card -->
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      Why are themes important?
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    To allow the Users pick visuals that <em>They</em> like, as opposed to (or in conjunction with) what the graphic designer liked.
+    In the long run, to keep User interest and avoid boredom (e.g. via random theme),
+    therefore increasing the utility value of the product.
+    Thus, same product, but more retention, better product-user fit, better ROI.
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      Flat? 3D? Material? Neumorphism? Neubrutalism? Light? Dark?
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    The design trends change cyclically. This demo is flexible enough to accommodate the changes. Without even code modifications. Without even reloading the page.
+    And allowing the End-Users to tweak it to their preferences.
+
+  </ion-card-content>
+</ion-card>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      Resources
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <a href="https://ionicframework.com/docs/theming/themes">Ionic App Themes</a>
+    •
+    <a href="https://accessibleweb.com/color-contrast-checker">WCAG Color Contrast Checker</a>
+    •
+    <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG</a>
+    •
+    <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast">Color contrast - Accessibility | MDN</a>
+
+  </ion-card-content>
+</ion-card>

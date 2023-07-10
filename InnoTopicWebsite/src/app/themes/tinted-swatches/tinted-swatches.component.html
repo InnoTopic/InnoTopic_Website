@@ -1,0 +1,8 @@
+<div [ngStyle]="{color: 'var(' + colorVarName + '-contrast)'}">
+  <div [ngStyle]="{'background-color': 'var(' + colorVarName + '-shade)'}">shade</div>
+  <div [ngStyle]="{'background-color': 'var(' + colorVarName + ')'}"><ng-content></ng-content></div>
+  <div [ngStyle]="{'background-color': 'var(' + colorVarName + '-tint)'}">tint</div>
+</div>
+<!--<div [ngStyle]="{'background-color': `${colorVarName}-shade`}">shade</div>-->
+<!--<div [ngStyle]="`background-color: ${colorVarName}`"><ng-content></ng-content>div>-->
+<!--<div [ngStyle]="`background-color: ${colorVarName}-tint`">tint</div>-->

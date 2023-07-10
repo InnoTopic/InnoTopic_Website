@@ -18,7 +18,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>Theme Preferences</ion-title>
+
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -27,14 +43,10 @@
 <!--      <ion-title size="large">test-page</ion-title>-->
 <!--    </ion-toolbar>-->
 <!--  </ion-header>-->
-  <app-chip style="display: inline-block; margin: 3rem;"></app-chip>
+  <app-theme-config style="display: block;"></app-theme-config>
+  <app-theme-samples></app-theme-samples>
+  <!-- --ion-color-step-850 -->
 
-  <ion-button>primary</ion-button>
-  <ion-button disabled="true">primary disabled</ion-button>
-
-    <ion-button color="secondary">secondary</ion-button>
-    <ion-button color="secondary" disabled="true">secondary disabled</ion-button>
-    <app-theme-config style="display: block;"></app-theme-config>
 <!--  <ion-chip class="neumorphic-chip">-->
 <!--    <ion-label>Neumorphic Chip</ion-label>-->
 <!--  </ion-chip>-->

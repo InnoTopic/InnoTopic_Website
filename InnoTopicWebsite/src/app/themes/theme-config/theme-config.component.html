@@ -1,26 +1,65 @@
 <form [formGroup]="themeConfigForm">
   <div class="form-group">
-    <label for="primary-color">Primary Color</label>
+    <label for="primary-color">Primary Color</label>&nbsp;
     <input id="primary-color" type="color" formControlName="ion_color_primary" />
   </div>
+  <app-tinted-swatches colorVarName="--ion-color-primary">primary</app-tinted-swatches>
 
   <div class="form-group">
-    <label for="secondary-color">Secondary Color</label>
+      <label for="secondary-color">Secondary Color</label>&nbsp;
     <input id="secondary-color" type="color" formControlName="ion_color_secondary"  />
   </div>
+  <app-tinted-swatches colorVarName="--ion-color-secondary">secondary</app-tinted-swatches>
 
   <div class="form-group">
-    <label for="background-color">Background Color</label>
+    <label for="background-color">Background Color</label>&nbsp;
     <input id="background-color" type="color" formControlName="ion_background_color" />
   </div>
 
-  <div class="form-group">
-    <label for="shadow-offset">Shadow Offset</label>
-    <ion-range formControlName="shadow_offset" min="-10" max="10" step="1" color="primary"
-               (ionInput)="themeConfigForm.patchValue({ shadow_offset:range_shadow_offset.value })"
-               #range_shadow_offset
-    ></ion-range>
-  </div>
+  <ion-item>
+    <ion-label>Notifications</ion-label>
+    <ion-range></ion-range>
+    <!-- FIXME set color for the ion-item line / separator border below this ion-range item -->
+  </ion-item>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="4">
+        <div class="form-group">
+          <label for="shadow_offset">Shadow Offset</label>&nbsp;
+          <ion-range id="shadow_offset" formControlName="shadow_offset" min="-10" max="10" step="1" color="primary"
+                     (ionInput)="themeConfigForm.patchValue({ shadow_offset:range_shadow_offset.value })"
+                     #range_shadow_offset
+          ></ion-range>
+        </div>
+
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <div class="form-group">
+          <label for="shadow-blur-radius">Shadow Blur Radius</label>
+          <ion-range formControlName="shadow_blur_radius" min="0" max="20" step="1" color="primary"
+                     (ionInput)="themeConfigForm.patchValue({ shadow_blur_radius:range_shadow_blur_radius.value })"
+                     #range_shadow_blur_radius
+          ></ion-range>
+        </div>
+
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <div class="form-group">
+          <label for="shadow-blur-radius">Shadow Opacity</label>
+          <ion-range formControlName="shadow_opacity" min="0" max="100" step="1" color="primary"
+                     (ionInput)="themeConfigForm.patchValue({ shadow_opacity:range_shadow_opacity.value })"
+                     #range_shadow_opacity
+
+          ></ion-range>
+        </div>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
 <!--  <div class="form-group">-->
 <!--    <label for="shadow-offset-x">Shadow Offset X</label>-->
 <!--    <ion-range formControlName="shadow_offset_x" min="-10" max="10" step="1" color="primary"></ion-range>-->
@@ -31,19 +70,4 @@
 <!--    <ion-range formControlName="shadow_offset_y" min="-10" max="10" step="1" color="primary"></ion-range>-->
 <!--  </div>-->
 
-  <div class="form-group">
-    <label for="shadow-blur-radius">Shadow Blur Radius</label>
-    <ion-range formControlName="shadow_blur_radius" min="0" max="20" step="1" color="primary"
-               (ionInput)="themeConfigForm.patchValue({ shadow_blur_radius:range_shadow_blur_radius.value })"
-               #range_shadow_blur_radius
-    ></ion-range>
-  </div>
-  <div class="form-group">
-    <label for="shadow-blur-radius">Shadow Opacity</label>
-    <ion-range formControlName="shadow_opacity" min="0" max="100" step="1" color="primary"
-               (ionInput)="themeConfigForm.patchValue({ shadow_opacity:range_shadow_opacity.value })"
-               #range_shadow_opacity
-
-    ></ion-range>
-  </div>
 </form>

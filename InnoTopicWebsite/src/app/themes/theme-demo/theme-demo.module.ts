@@ -9,6 +9,8 @@ import { ThemeDemoPageRoutingModule } from './theme-demo-routing.module';
 import { ThemeDemoPage } from './theme-demo.page';
 import {ThemeConfigComponent} from "../theme-config/theme-config.component";
 import {ChipComponent} from "../../chip/chip.component";
+import {ThemeSamplesComponent} from "../theme-samples/theme-samples.component";
+import {TintedSwatchesComponent} from "../tinted-swatches/tinted-swatches.component";
 
 @NgModule({
   imports: [
@@ -26,6 +28,8 @@ import {ChipComponent} from "../../chip/chip.component";
     ThemeDemoPage,
     ThemeConfigComponent,
     ChipComponent,
+    ThemeSamplesComponent,
+    TintedSwatchesComponent,
   ]
 })
 export class ThemeDemoPageModule {}

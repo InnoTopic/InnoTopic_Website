@@ -44,11 +44,3 @@ export function getIonicTextColor(backgroundColor: string, contrastValue: 'high'
   }
 }
 
-
-export function setIonicColorVarHexAndRgb(root: CSSStyleDeclaration, varName: string, colorValue: string) {
-  console.log(`root.setProperty(, )`, varName, colorValue)
-  root.setProperty(varName, colorValue)
-  // set in RGB format: https://ionicframework.com/docs/theming/advanced#the-alpha-problem
-  root.setProperty(`${varName}-rgb`, hexToRgb(colorValue))
-}
-
