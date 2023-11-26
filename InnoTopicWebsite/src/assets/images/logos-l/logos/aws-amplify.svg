@@ -3,8 +3,8 @@
     <title>Amplify</title>
     <defs>
         <linearGradient x1="100%" y1="22.1718317%" x2="0%" y2="77.8281683%" id="Amplify-linearGradient-1">
-            <stop stop-color="rgb(38,38,38)" offset="0%"></stop>
-            <stop stop-color="rgb(90,90,90)" offset="100%"></stop>
+            <stop stop-color="rgb(19,19,19)" offset="0%"></stop>
+            <stop stop-color="rgb(109,109,109)" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g>

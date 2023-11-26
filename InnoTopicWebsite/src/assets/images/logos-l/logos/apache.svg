@@ -2,45 +2,45 @@
 <svg width="256px" height="512px" viewBox="0 0 256 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
     <defs>
         <linearGradient x1="16.3628891%" y1="63.9052008%" x2="159.989811%" y2="20.2134672%" id="linearGradient-1">
-            <stop stop-color="rgb(89,89,89)" offset="0%"></stop>
-            <stop stop-color="rgb(90,90,90)" offset="31.23%"></stop>
-            <stop stop-color="rgb(80,80,80)" offset="83.83%"></stop>
+            <stop stop-color="rgb(108,108,108)" offset="0%"></stop>
+            <stop stop-color="rgb(109,109,109)" offset="31.23%"></stop>
+            <stop stop-color="rgb(91,91,91)" offset="83.83%"></stop>
         </linearGradient>
         <linearGradient x1="-217.650978%" y1="394.671992%" x2="74.7430764%" y2="13.846058%" id="linearGradient-2">
-            <stop stop-color="rgb(52,52,52)" offset="32.33%"></stop>
-            <stop stop-color="rgb(55,55,55)" offset="63.02%"></stop>
-            <stop stop-color="rgb(56,56,56)" offset="75.14%"></stop>
-            <stop stop-color="rgb(80,80,80)" offset="100%"></stop>
+            <stop stop-color="rgb(42,42,42)" offset="32.33%"></stop>
+            <stop stop-color="rgb(48,48,48)" offset="63.02%"></stop>
+            <stop stop-color="rgb(50,50,50)" offset="75.14%"></stop>
+            <stop stop-color="rgb(91,91,91)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="-80.0440054%" y1="170.418469%" x2="146.240033%" y2="-44.2993346%" id="linearGradient-3">
-            <stop stop-color="rgb(52,52,52)" offset="32.33%"></stop>
-            <stop stop-color="rgb(55,55,55)" offset="63.02%"></stop>
-            <stop stop-color="rgb(56,56,56)" offset="75.14%"></stop>
-            <stop stop-color="rgb(80,80,80)" offset="100%"></stop>
+            <stop stop-color="rgb(42,42,42)" offset="32.33%"></stop>
+            <stop stop-color="rgb(48,48,48)" offset="63.02%"></stop>
+            <stop stop-color="rgb(50,50,50)" offset="75.14%"></stop>
+            <stop stop-color="rgb(91,91,91)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="-18.3158042%" y1="77.3603602%" x2="165.002%" y2="-41.416466%" id="linearGradient-4">
-            <stop stop-color="rgb(38,38,38)" offset="0%"></stop>
-            <stop stop-color="rgb(50,50,50)" offset="9.548389%"></stop>
-            <stop stop-color="rgb(52,52,52)" offset="78.82%"></stop>
-            <stop stop-color="rgb(55,55,55)" offset="94.87%"></stop>
+            <stop stop-color="rgb(19,19,19)" offset="0%"></stop>
+            <stop stop-color="rgb(39,39,39)" offset="9.548389%"></stop>
+            <stop stop-color="rgb(43,43,43)" offset="78.82%"></stop>
+            <stop stop-color="rgb(49,49,49)" offset="94.87%"></stop>
         </linearGradient>
         <linearGradient x1="-129.782775%" y1="463.714866%" x2="66.4555408%" y2="17.1896681%" id="linearGradient-5">
-            <stop stop-color="rgb(52,52,52)" offset="32.33%"></stop>
-            <stop stop-color="rgb(55,55,55)" offset="63.02%"></stop>
-            <stop stop-color="rgb(56,56,56)" offset="75.14%"></stop>
-            <stop stop-color="rgb(80,80,80)" offset="100%"></stop>
+            <stop stop-color="rgb(42,42,42)" offset="32.33%"></stop>
+            <stop stop-color="rgb(48,48,48)" offset="63.02%"></stop>
+            <stop stop-color="rgb(50,50,50)" offset="75.14%"></stop>
+            <stop stop-color="rgb(91,91,91)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="-34.8804169%" y1="187.706139%" x2="110.598662%" y2="-51.1003524%" id="linearGradient-6">
-            <stop stop-color="rgb(52,52,52)" offset="32.33%"></stop>
-            <stop stop-color="rgb(55,55,55)" offset="63.02%"></stop>
-            <stop stop-color="rgb(56,56,56)" offset="75.14%"></stop>
-            <stop stop-color="rgb(80,80,80)" offset="100%"></stop>
+            <stop stop-color="rgb(42,42,42)" offset="32.33%"></stop>
+            <stop stop-color="rgb(48,48,48)" offset="63.02%"></stop>
+            <stop stop-color="rgb(50,50,50)" offset="75.14%"></stop>
+            <stop stop-color="rgb(91,91,91)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="-20.6189333%" y1="192.563688%" x2="125.259839%" y2="-136.90643%" id="linearGradient-7">
-            <stop stop-color="rgb(38,38,38)" offset="0%"></stop>
-            <stop stop-color="rgb(50,50,50)" offset="9.548389%"></stop>
-            <stop stop-color="rgb(52,52,52)" offset="78.82%"></stop>
-            <stop stop-color="rgb(55,55,55)" offset="94.87%"></stop>
+            <stop stop-color="rgb(19,19,19)" offset="0%"></stop>
+            <stop stop-color="rgb(39,39,39)" offset="9.548389%"></stop>
+            <stop stop-color="rgb(43,43,43)" offset="78.82%"></stop>
+            <stop stop-color="rgb(49,49,49)" offset="94.87%"></stop>
         </linearGradient>
     </defs>
 	<g>

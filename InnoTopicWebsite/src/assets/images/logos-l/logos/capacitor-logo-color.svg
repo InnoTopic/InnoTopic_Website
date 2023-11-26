@@ -8,13 +8,13 @@
 </style>
 <g>
 	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="218.4563" y1="574.3409" x2="389.8847" y2="574.3409">
-		<stop  offset="0" style="stop-color:rgb(90,90,90)"/>
-		<stop  offset="1" style="stop-color:rgb(38,38,38)"/>
+		<stop  offset="0" style="stop-color:rgb(109,109,109)"/>
+		<stop  offset="1" style="stop-color:rgb(19,19,19)"/>
 	</linearGradient>
 	<polygon class="st0" points="218.6,516.7 276.1,574.3 218.5,632 246.5,660.1 304.2,602.4 361.8,659.9 389.9,631.8 246.7,488.6 	"/>
 	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="275.0279" y1="517.7693" x2="446.4563" y2="517.7693">
-		<stop  offset="0" style="stop-color:rgb(90,90,90)"/>
-		<stop  offset="1" style="stop-color:rgb(38,38,38)"/>
+		<stop  offset="0" style="stop-color:rgb(109,109,109)"/>
+		<stop  offset="1" style="stop-color:rgb(19,19,19)"/>
 	</linearGradient>
 	<polygon class="st1" points="446.5,460.1 418.4,432.1 360.7,489.7 303.1,432.2 275,460.3 418.2,603.5 446.3,575.4 388.8,517.8 	"/>
 </g>

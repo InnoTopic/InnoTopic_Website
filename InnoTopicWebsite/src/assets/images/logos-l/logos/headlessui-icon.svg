@@ -3,12 +3,12 @@
     <title>Headless UI</title>
     <defs>
         <linearGradient x1="35.8706002%" y1="7.22395026%" x2="60.3143692%" y2="115.987925%" id="linearGradient-1">
-            <stop stop-color="rgb(90,90,90)" offset="0%"></stop>
-            <stop stop-color="rgb(38,38,38)" offset="100%"></stop>
+            <stop stop-color="rgb(109,109,109)" offset="0%"></stop>
+            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="39.1716101%" y1="-0.000258114803%" x2="55.0500969%" y2="99.1811839%" id="linearGradient-2">
-            <stop stop-color="rgb(90,90,90)" offset="0%"></stop>
-            <stop stop-color="rgb(38,38,38)" offset="100%"></stop>
+            <stop stop-color="rgb(109,109,109)" offset="0%"></stop>
+            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g>

@@ -3,8 +3,8 @@
     <title>SurrealDB</title>
     <defs>
         <linearGradient x1="31.0469515%" y1="11.7049903%" x2="68.9568365%" y2="88.3026737%" id="surrealDBLinearGradient-1">
-            <stop stop-color="rgb(90,90,90)" offset="0%"></stop>
-            <stop stop-color="rgb(38,38,38)" offset="100%"></stop>
+            <stop stop-color="rgb(94,94,94)" offset="0%"></stop>
+            <stop stop-color="rgb(73,73,73)" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g>

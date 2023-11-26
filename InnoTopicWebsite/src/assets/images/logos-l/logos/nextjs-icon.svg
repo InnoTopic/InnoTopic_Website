@@ -4,20 +4,20 @@
     <defs>
         <circle id="path-1" cx="128" cy="128" r="128"></circle>
         <linearGradient x1="55.6325605%" y1="56.3850422%" x2="83.2279093%" y2="96.0801119%" id="nextjsLinearGradient-3">
-            <stop stop-color="rgb(90,90,90)" offset="0%"></stop>
-            <stop stop-color="rgb(90,90,90)" stop-opacity="0" offset="100%"></stop>
+            <stop stop-color="rgb(109,109,109)" offset="0%"></stop>
+            <stop stop-color="rgb(109,109,109)" stop-opacity="0" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="49.9534722%" y2="73.4375%" id="nextjsLinearGradient-4">
-            <stop stop-color="rgb(90,90,90)" offset="0%"></stop>
-            <stop stop-color="rgb(90,90,90)" stop-opacity="0" offset="100%"></stop>
+            <stop stop-color="rgb(109,109,109)" offset="0%"></stop>
+            <stop stop-color="rgb(109,109,109)" stop-opacity="0" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g>
-        <mask id="mask-2" fill="rgb(90,90,90)">
+        <mask id="mask-2" fill="rgb(109,109,109)">
             <use xlink:href="#path-1"></use>
         </mask>
         <g mask="url(#mask-2)">
-            <circle fill="rgb(38,38,38)" cx="128" cy="128" r="128"></circle>
+            <circle fill="rgb(19,19,19)" cx="128" cy="128" r="128"></circle>
             <path d="M212.6336,224.028444 L98.3352889,76.8 L76.8,76.8 L76.8,179.157333 L94.0282311,179.157333 L94.0282311,98.6788978 L199.109689,234.446222 C203.851378,231.273244 208.368356,227.790222 212.6336,224.028444 Z" fill="url(#nextjsLinearGradient-3)"></path>
             <rect fill="url(#nextjsLinearGradient-4)" x="163.555556" y="76.8" width="17.0666667" height="102.4"></rect>
         </g>

@@ -3,63 +3,63 @@
     <defs>
         <rect id="path-1" x="6.39488462e-14" y="0.328353673" width="256.002879" height="210.938702"></rect>
         <linearGradient x1="12.932%" y1="9.052%" x2="71.216%" y2="81.625%" id="linearGradient-3">
-            <stop stop-color="rgb(42,42,42)" offset="0%"></stop>
-            <stop stop-color="rgb(44,44,44)" offset="100%"></stop>
+            <stop stop-color="rgb(25,25,25)" offset="0%"></stop>
+            <stop stop-color="rgb(29,29,29)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="91.997%" y1="52.448%" x2="29.654%" y2="52.448%" id="linearGradient-4">
-            <stop stop-color="rgb(41,41,41)" stop-opacity="0" offset="0%"></stop>
-            <stop stop-color="rgb(38,38,38)" offset="100%"></stop>
+            <stop stop-color="rgb(24,24,24)" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="91.997%" y1="52.448%" x2="29.654%" y2="52.448%" id="linearGradient-5">
-            <stop stop-color="rgb(41,41,41)" stop-opacity="0" offset="0%"></stop>
-            <stop stop-color="rgb(38,38,38)" offset="100%"></stop>
+            <stop stop-color="rgb(24,24,24)" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="91.675%" y1="5.599%" x2="56.225%" y2="79.874%" id="linearGradient-6">
-            <stop stop-color="rgb(50,50,50)" offset="0%"></stop>
-            <stop stop-color="rgb(51,51,51)" offset="100%"></stop>
+            <stop stop-color="rgb(40,40,40)" offset="0%"></stop>
+            <stop stop-color="rgb(41,41,41)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="63.479%" y1="48.225%" x2="0%" y2="48.225%" id="linearGradient-7">
-            <stop stop-color="rgb(50,50,50)" stop-opacity="0.1" offset="0%"></stop>
-            <stop stop-color="rgb(38,38,38)" offset="100%"></stop>
+            <stop stop-color="rgb(40,40,40)" stop-opacity="0.1" offset="0%"></stop>
+            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="24.699%" y1="31.401%" x2="80.097%" y2="66.964%" id="linearGradient-8">
-            <stop stop-color="rgb(40,40,40)" offset="0%"></stop>
-            <stop stop-color="rgb(43,43,43)" offset="100%"></stop>
+            <stop stop-color="rgb(22,22,22)" offset="0%"></stop>
+            <stop stop-color="rgb(27,27,27)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="12.346%" y1="34.458%" x2="81.65%" y2="53.652%" id="linearGradient-9">
-            <stop stop-color="rgb(40,40,40)" offset="0%"></stop>
-            <stop stop-color="rgb(47,47,47)" offset="100%"></stop>
+            <stop stop-color="rgb(22,22,22)" offset="0%"></stop>
+            <stop stop-color="rgb(34,34,34)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="100%" y1="0%" x2="100%" y2="69.36%" id="linearGradient-10">
-            <stop stop-color="rgb(39,39,39)" offset="0%"></stop>
-            <stop stop-color="rgb(44,44,44)" offset="100%"></stop>
+            <stop stop-color="rgb(20,20,20)" offset="0%"></stop>
+            <stop stop-color="rgb(29,29,29)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="50%" y1="74.788%" x2="19.624%" y2="71.707%" id="linearGradient-11">
-            <stop stop-color="rgb(41,41,41)" stop-opacity="0" offset="0%"></stop>
-            <stop stop-color="rgb(38,38,38)" offset="100%"></stop>
+            <stop stop-color="rgb(24,24,24)" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="linearGradient-12">
-            <stop stop-color="rgb(44,44,44)" offset="0%"></stop>
-            <stop stop-color="rgb(50,50,50)" offset="100%"></stop>
+            <stop stop-color="rgb(29,29,29)" offset="0%"></stop>
+            <stop stop-color="rgb(40,40,40)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="-6.66133815e-14%" y1="35.927%" x2="62.291%" y2="46.718%" id="linearGradient-13">
-            <stop stop-color="rgb(43,43,43)" offset="0%"></stop>
-            <stop stop-color="rgb(56,56,56)" offset="100%"></stop>
+            <stop stop-color="rgb(27,27,27)" offset="0%"></stop>
+            <stop stop-color="rgb(50,50,50)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="72%" y1="48.225%" x2="0%" y2="48.225%" id="linearGradient-14">
-            <stop stop-color="rgb(41,41,41)" stop-opacity="0" offset="0%"></stop>
-            <stop stop-color="rgb(38,38,38)" offset="100%"></stop>
+            <stop stop-color="rgb(24,24,24)" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="50%" y1="21.039%" x2="50%" y2="78.192%" id="linearGradient-15">
-            <stop stop-color="rgb(40,40,40)" offset="0%"></stop>
-            <stop stop-color="rgb(56,56,56)" offset="100%"></stop>
+            <stop stop-color="rgb(22,22,22)" offset="0%"></stop>
+            <stop stop-color="rgb(50,50,50)" offset="100%"></stop>
         </linearGradient>
     </defs>
 		<g>
-				<mask id="mask-2" fill="rgb(90,90,90)">
+				<mask id="mask-2" fill="rgb(109,109,109)">
 						<use xlink:href="#path-1"></use>
 				</mask>
-				<polygon fill="rgb(40,40,40)" mask="url(#mask-2)" points="6.39488462e-14 139.993146 6.39488462e-14 0.328353673 64.1019552 70.4120588 128.480846 0.328353673 192.001666 70.0488156 256.002879 0.328353673 256.002879 140.314947 192.721269 211.267056 128.480846 141.273759 64.240423 211.267056"></polygon>
+				<polygon fill="rgb(22,22,22)" mask="url(#mask-2)" points="6.39488462e-14 139.993146 6.39488462e-14 0.328353673 64.1019552 70.4120588 128.480846 0.328353673 192.001666 70.0488156 256.002879 0.328353673 256.002879 140.314947 192.721269 211.267056 128.480846 141.273759 64.240423 211.267056"></polygon>
 				<path d="M32.1221931,105.797705 C38.7765006,98.512714 60.1912961,75.0719906 64.240423,70.6387943 C56.1038574,61.7355024 13.2755878,14.8601181 7.10542736e-15,0.328353673 C0.809825391,2.98906216 28.8657174,95.1061107 32.1221931,105.797705 Z" fill="url(#linearGradient-3)" mask="url(#mask-2)"></path>
 				<polygon fill="url(#linearGradient-4)" mask="url(#mask-2)" transform="translate(19.588113, 55.239148) rotate(-17.000000) translate(-19.588113, -55.239148) " points="16.9102703 -2.99931617 31.9481592 28.2669449 32.5320785 113.478296 6.64414686 113.478296"></polygon>
 				<polygon fill="url(#linearGradient-5)" mask="url(#mask-2)" transform="translate(45.064179, 87.580270) rotate(-125.000000) translate(-45.064179, -87.580270) " points="29.7231827 60.7335265 60.4051755 70.8163387 57.5833641 111.709823 37.174144 114.427014"></polygon>
