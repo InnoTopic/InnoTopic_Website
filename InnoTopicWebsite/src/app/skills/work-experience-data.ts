@@ -257,7 +257,7 @@ export class WorkExperienceData {
     'DDD - Domain-Driven Design': we(intermediate, advanced),
     'Vite': we(intermediate, advanced),
     'SurrealDB': we(),
-    // TODO: Scully
+    // TODO: Scully https://github.com/scullyio/scully -- The Static Site Generator for Angular apps
   })
   earlier = experience('Earlier experience',
     'always curious to learn more, but no particular need right now',
