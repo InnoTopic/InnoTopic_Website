@@ -75,6 +75,7 @@ export class Frontend_Visual {
  *  - another criterion: stuff that I actually use for my own apps; e.g. I wouldnt care too much about e.g. Business Intelligence (yest?)
  * Frontend - Other (includes libs like lodash, state mgmt) */
 export class Frontend {
+  'Frontend' = tSquare('generic/frontend')
   'HTML5' = t({logo: 'html-5.svg'})
   'CSS3' = t({logo: 'css-3.svg'})
   'PWA' = tWide()
@@ -108,6 +109,7 @@ export class Frontend {
     // logoSize: [1048, 652], // FIXME
     iconUrl: 'https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png',
   })
+  Rush = tWide('rush-icon.svg')
   xplat = tWide('xplat-logo.png', [899, 393])
   'Web Components' = tWide('webcomponents')
   // TODO https://github.com/ampproject/amphtml
@@ -193,13 +195,14 @@ export class Frontend {
   "NW.js" = t('nodewebkit') /* NW.js */
   'Electron' = t()
   'Expo' = t('expo-icon')
+  'Compose Multiplatform' = tNarrow('compose-multiplatform.svg') /* Develop stunning shared UIs for Android, iOS, desktop, and web. JetBrains. https://stackshare.io/compose-mp */
   'Vue.js' = tWide({logo: 'vue'})
   'Nuxt' = tWide('nuxt-icon')
   'Gridsome' = t({logo: 'gridsome-icon.svg'})
   'Svelte' = tNarrow('svelte-icon')
   // TODO Phoenix  https://www.phoenixframework.org/  supposedly most loved; https://github.com/phoenixframework/phoenix
   'SolidJS' = t('solidjs-icon')
-  'Qwik' = t('qwik')
+  'Qwik' = tNarrow('qwik-icon.svg')
   'Astro' = t('astro-icon.svg')
   "Inferno" = t()
   'Mithril' = t()
@@ -241,6 +244,9 @@ export class Frontend {
   Pinia = tWide() // vue state management
 
   React = tWide()
+
+  // TODO: https://web.dev/baseline/ (on MDN)
+  // Million = tWide() TODO: https://million.dev/ ; Make React 70% faster
   Preact = t()
   Gatsby = t('Gatsby-Monogram.svg', /* https://www.gatsbyjs.com/guidelines/logo */)
   "Next.js" = t('nextjs-icon-export.svg')
@@ -278,6 +284,9 @@ export class Frontend {
      https://upload.wikimedia.org/wikipedia/en/d/dd/GlTF_Official_Logo.svg
      https://www.khronos.org/assets/images/api_logos/gltf.svg
      */
+  )
+  'WebGPU' = tWide('webgpu-icon--cropped.svg',
+    // https://github.com/samdauwe/webgpu-native-examples/commit/24f4d0e3c470afe0ebdf0672a915e778e652bcbc // https://github.com/gpuweb/admin/issues/14
   )
   'Micro Frontends' = tNoIcon(/* https://martinfowler.com/articles/micro-frontends.html */)
 }
@@ -317,6 +326,7 @@ export class Backend {
   RabbitMQ = t()
   Swagger = t()
   OpenAPI = t('openapi-icon.svg') /* https://www.openapis.org/ ; Compatible with JSON Schema */
+  // TODO https://www.asyncapi.com/ (has svgporn)
   Django = tSquare('django-icon.svg')
   Laravel = t()
 
@@ -359,13 +369,16 @@ export class Backend {
   "Fermyon" = tNarrow('fermyon-icon.svg') // wasm instead of docker { tagline: 'Fermyon Cloud is the easiest way to deploy and manage cloud native WebAssembly applications with Spin, our developer tool.', pressKitUrl: 'https://design.fermyon.dev/' }'
   Docker = tWide('docker-simple'/* https://www.docker.com/company/newsroom/media-resources */)
   'Vagrant' = tNarrow('vagrant-icon.svg')
-  Terraform = t('terraform-icon.svg')
+  Terraform = t('terraform-icon.svg') /* company: HashiCorp */
   Ansible = t('ansible-icon.svg')
   Kubernetes = t(/* they had a typo: 'kubernets.svg'*/)
   Elasticsearch = t(/* https://www.elastic.co/brand */)
+  OpenSearch = t('opensearch-icon.svg')
   Kibana = t(/* https://www.elastic.co/brand */)
   Logstash = t(/* https://www.elastic.co/brand */)
   Beats = t(/* https://www.elastic.co/brand */)
+  // Analytics
+  // TODO: https://superset.apache.org/
   NGINX = tWide()
   'Ruby On Rails' = t()
 }
@@ -387,6 +400,7 @@ export class Comprehension_Comparators_Security_And_Exploring {
   Openbase = t('openbase-icon-full.svg') // { tagline: 'Compare open-source packages with powerful metrics and user reviews.' }
   SVGPorn = tWide ('svgporn') // { tagline: 'Compare open-source packages with powerful metrics and user reviews.' }
   SVGO = t ('svgo-icon') // Node.js tool for optimizing SVG files; https://github.com/svg/svgo
+
   // https://tidelift.com/
   // https://npms.io/about - quality/popularity scores
 
@@ -430,6 +444,8 @@ export class Tools {
   "Brave Browser" = tNarrow('brave.svg')
 
   WebStorm = t(/* https://www.jetbrains.com/de-de/company/brand/logos/ */)
+  PyCharm = t(/* https://www.jetbrains.com/de-de/company/brand/logos/ */)
+  'JetBrains Fleet' = t('jetbrains-fleet-icon2.svg')
   RubyMine = t()
   'Android Studio' = t('Android_Studio_icon.svg')
   Eclipse = t('eclipse-icon.svg')
@@ -437,6 +453,9 @@ export class Tools {
   'NetBeans' = t('apache-netbeans')
   'Visual Studio' = t()
   'Visual Studio Code' = tWide('visual-studio-code--no-masks.svg')
+  'VSCodium' = tWide('vscodium-codium_cnl.svg')
+  "Open VSX Registry" = tWide('open-vsx-registry-icon.svg')
+  'Warp' = tWide('warp-icon.svg')
   'Vim' = t()
   // ==== CI:
   'CircleCI' = t()
@@ -500,6 +519,12 @@ export class Graphics {
   'Inkscape' = t('inkscape-logo.svg')
 }
 
+export class Markup_And_Config_Languages {
+  // https://github.com/json5/json5-logo/tree/master
+  // yaml
+  // hcl
+}
+
 export class Languages {
   'JetBrains MPS' = t()
   Java = t()
@@ -512,6 +537,7 @@ export class Languages {
   Swift = t()
   Ruby = t()
   Crystal = t()
+  Sorbet = tSquare('sorbet-logo-white-sparkles.svg')
   Markdown = t()
 
   Python = t({
@@ -525,10 +551,16 @@ export class Languages {
       'https://twitter.com/ThePSF'
     )
   })
+  mypy = tWide('mypy-icon.svg') // #AI #Python
+  'Python Pyre' = tWide('pyre-icon.svg') // #Python
+  'Pyright' = tWide('pyright-icon.svg') // #Python
+  Mojo = tWide('modular-mojo-icon') // #AI #Python
   Hack = tWide()
   Haxe = t()
   Scala = t()
+  "Eclipse Ceylon" = tWide('ceylon-icon.svg')
   Clojure = t()
+  ClojureScript = tSquare('cljs.svg')
   Perl = t()
   Raku = tWide('raku-cropped.svg')
   Fortran = t()
@@ -538,15 +570,18 @@ export class Languages {
   'HolyC' = tNarrow('HolyC_Logo.svg')
   'C++' = t()
   'C#' = t('c_sharp.svg')
+  'F#' = tWide('fsharp.svg')
   Dart = t()
   Groovy = tWide()
   Elm = t()
+  CoffeeScript = tWide('coffeescript.svg')
   PureScript = tWide('purescript-icon')
   ReScript = tWide('rescript-icon')
   Imba = tWide('imba-icon')
   'Mint Lang' = tWide('mint-lang-icon-wide.svg')
   Zig = tWide('zig-icon.svg')
   Nim = tWide('nim-lang-icon-wide.svg')
+  'Google Carbon' = tSquare('google-carbon-icon.svg')
   Rust = t()
   WebAssembly = t({
     categories: "Frontend",
@@ -560,6 +595,7 @@ export class Languages {
 
   Bash = t('bash-icon.svg')
   Lua = t('lua-no-text.svg')
+  Prolog = tSquare('prolog-icon.svg')
   Eiffel = tWide('eiffel-no-text.svg')
   Erlang = tWide('erlang-no-text.svg')
   Elixir = tWide('elixir-pluginIcon-crop--for-print-fix.svg') /* https://plugins.jetbrains.com/plugin/7522-elixir for print fix */ // -- other options: simpler, black & white: https://logosear.ch/logos/elixir/index.html
@@ -612,6 +648,7 @@ export class Cloud {
   'Supabase' = tNarrow('supabase-icon.svg') /* open source Firebase alternative supabase.com; https://supabase.com/brand-assets ; https://golden.com/wiki/Supabase-YX5N66V ; Build in a weekend.
     Scale to millions.
     Supabase is an open source Firebase alternative. Start your project with a Postgres database, Authentication, instant APIs, Edge Functions, Realtime subscriptions, and Storage.*/
+  'Redis' = tWide('redis.svg')
   'Firebase' = t({
     subTopics: {
       // most are from firebase console left navbar:
@@ -635,8 +672,20 @@ export class Cloud {
   })
   Algolia = t('algolia-icon.svg') /* new icon ~2023 */
   "Meilisearch" = tWide('meilisearch-icon-wide.svg')  /* Rust 99% */
-  "Typesense" = tWide('typesense-text-wide.svg')
+  "Typesense" = tWide('typesense-icon.svg')
   MindsDB = tWide('mindsdb-icon-wide.svg') // { iconUrl: 'mindsdb-icon-wide.svg', comments: 'Embedding AI in DB (select query from models e.g. from HuggingFace'}); automatic #MLOps
+  Weaviate = tWide('weaviate-icon--crop-simplified.svg') // https://weaviate.io/img/site/weaviate-nav-logo-light.svg // original had base64 png-s // simple orig was green https://github.com/weaviate/weaviate
+  Chroma = tWide('chroma.svg') // https://github.com/chroma-core/chroma /* the AI-native open-source embedding database; www.trychroma.com */
+  Milvus = tWide('milvus-icon.svg') // https://milvus.io/
+  Qdrant = tNarrow('qdrant-icon.svg') // https://qdrant.tech/ ; from Luis Lopez CommerceHub
+  Pinecone = tNarrow('pinecone-icon.svg')
+  Vespa = tNarrow('vespa-icon.svg')
+  LlamaIndex = tNarrow('llamaindex-icon2-gradient.svg') // AKA gpt-index
+  "Apache Cassandra" = tWide('cassandra-icon.svg') // also vector DB according to https://en.wikipedia.org/wiki/Vector_database#cite_note-7
+  /// TODO next to elastic, algolia
+
+  // =====
+
   // TODO: CockroachDB
   tRPC = t('trpc-icon.svg') // end-to-end typescript typesafe; powered by Vercel. https://trpc.io/media (RIGHT CLICK on logo! I'm impressed :D)
   "Microsoft Azure" = t('microsoft-azure')
@@ -644,6 +693,9 @@ export class Cloud {
   'AWS Amplify' = tWide('aws-amplify.svg')
   // TODO: CLoudFlare - has its own databases, D1, on the edge
 }
+
+
+// TODO: ai -> vector_databases
 
 export class Databases {
   "8base" = t('8base-icon') // like Hasura; "Create custom JavaScript and TypeScript logic and run as 8base Serverless Functions."
@@ -700,16 +752,14 @@ export class Version_Control {
 export class Other {
   'Mailgun' = t('mailgun-icon.svg')
   'reCAPTCHA' = t('recaptcha.svg') // TODO: crop icon only
-  'YouTube' = tWide('youtube-icon.svg')
-  'LinkedIn' = t('linkedin-icon')
-  'Spotify' = t()
   'AudioSalad' = t(`audiosalad-traced.svg`)
   'WorldFirst' = tNoIcon()
   'Payoneer' = tWide()
   'PayPal' = t()
   'TransferWise' = tNoIcon()
   'Axios' = tNoIcon()
-  'Meetup' = tWide(`meetup-seeklogo.com.svg`)
+  'Discord' = tWide(`discord-icon.svg`)
+  'Y Combinator' = tWide(`ycombinator.svg`)
   'Wikipedia' = tWide(`generic/fun/wikipedia-w2.svg`)
   'Google Play' = t('google-play-icon')
   'WordPress' = t('wordpress-icon.svg')
@@ -726,14 +776,18 @@ export class Other {
   Carbide = t('carbide.svg')
   Replit = tNarrow('replit-icon.svg') /* highlights: social coding; computation token currency; AI-assisted IDE (Ghostwriter) */
   "Ghostwriter" = tNarrow('ghostwriter-icon-cropped.svg') /* #AI #IDE */
+  "Cursor.sh" = tNarrow('FIXME-cursor')
+  "Rift" = tWide('rift-icon.svg') /* #AI #VScode*/
+  "MetaMage" = tNarrow('FIXME-metamage')
   Zapier = t('zapier-icon')
   IFTTT = tWide('ifttt.svg')
   // ======== LowCode / NoCode / CMS:
   Shopify = tNarrow()
   WebFlow = t('webflow-mark-vector-blue.svg') /* https://brand-at.webflow.io/resources#logos */
   Wix = tWide()
-  'Builder.io' = t('builder-io-icon')
-  'Budibase' = tWide('budibase-icon')
+  'Vercel V0' = t('vercel-v0-icon.svg')
+  'Builder.io' = t('builder-io-icon.svg')
+  'Budibase' = tSquare('budibase-icon.svg')
   'Bubble' = t('bubble-icon') /** is a **visual programming language**, a no-code development platform and an application platform as a service, developed by Bubble Group, that enables non-technical people to build web applications without needing to type code */
   'Framer' = t()
 
@@ -799,19 +853,35 @@ export class Crypto {
 export class AI {
   "Microsoft Bing" = tNarrow('bing.svg')
   "GitHub Copilot" = tWide('github-copilot.svg')
+  "Tabnine" = tNarrow('tabnine-icon.svg')
+  "CodiumAI" = tWide('codium-icon.svg' /* from svgporn */)
+  "Safurai" = tWide('safurai-icon.svg')
+  "Sourcegraph" = tWide('sourcegraph.svg')
+  "Cody AI" = tWide('cody-icon.svg')
+  "Continue" = tWide('continue-icon.svg')
+  "TabbyML" = tNarrow('tabbyml-icon.svg')
   "OpenAI Codex" = tNarrow('openai-codex')
   OpenAI = t('openai-icon')
+  'Perplexity.ai' = t('FIXME-perplexity')
   'Open Assistant' = tWide('open-assistant-icon-wide.svg') // https://github.com/LAION-AI/Open-Assistant
+  'Google Bard' = tSquare('Google_Bard_logo.svg')
   'LAION' = t()
-  'Stable Diffusion' = tWide('stable-diffusion-logo-vectorizer.ai.svg') // https://github.com/LAION-AI/Open-Assistant
-  'Stability AI' = tWide('stability-ai-vectorizer.ai.svg') // https://github.com/LAION-AI/Open-Assistant https://www.linkedin.com/company/stability-ai/
+  'Stable Diffusion' = tWide('stable-diffusion-logo-vectorizer.ai.svg') // not official?
+  'Stability AI' = tSquare('stability-ai-icon.svg' /* by vectorizer.ai */) // https://www.linkedin.com/company/stability-ai/
   'Google Colaboratory' = tWide('google-colab-icon-wide.svg')
   TensorFlow = t()
   NumPy = t()
   'Hugging Face' = tWide('huggingface_logo-noborder.svg')
+  'Cohere' = tSquare('cohere-icon.svg')
+  "Weights & Biases" = tSquare('weights-and-biases-icon.svg')
+  "Open Neural Network Exchange" = t('onnxai-icon.svg') /* ONNX  acronym; */ // https://www.vectorlogo.zone/logos/onnxai/index.html
+  "Google JAX" = tWide('Google_JAX_logo.svg') // https://jax.readthedocs.io/en/latest/
   Jupyter = tWide('jupyter-icon2')
+  "Conda" = tNarrow('conda-icon.svg')
+  "Anaconda" = tNarrow('anaconda-icon.svg')
   "JetBrains DataLore" = t('jetbrains-datalore-icon.svg')
   PyTorch = tWide('pytorch-icon')
+  pandas = tNarrow('pandas-icon.svg')
   Keras = t/*Wide*/('keras.svg'/*{
     https://github.com/valohai/ml-logos/blob/master/keras.svg
     logo: 'keras-logo-2018-large-1200.png',
@@ -847,6 +917,16 @@ export class FunAndSports {
   'ASG' = t('generic/fun/gun.svg')
 }
 
+export class Social /* and media platforms */ {
+  'YouTube' = tWide('youtube-icon.svg')
+  'Vimeo' = tWide('vimeo-icon.svg')
+  'Twitch' = tNarrow('twitch.svg') // also live coding
+  'Spotify' = tNarrow('spotify-icon.svg') // also podcasts
+  'Meetup' = tWide(`meetup-seeklogo.com.svg`)
+  'LinkedIn' = t('linkedin-icon')
+  'Mastodon' = t('mastodon-icon')
+}
+
 export function processTopics<T extends Object>(inputTopics: T/*: Topics*/): T {
   // inputTopics = setIdsFromKeys(inputTopics, 'name')
   for (let topicKey of Object.getOwnPropertyNames(inputTopics)) {
@@ -870,7 +950,7 @@ export type Topics =
   Graphics &
   Backend & Other & Testing & Tools & Languages & OS & Mobile & Cloud &
   Project_Management_Tools & Version_Control & Databases & Java & JavaScript & Build_Systems_And_Package_Managers &
-  AI & Crypto & FunAndSports
+  AI & Crypto & FunAndSports & Social
 
 function mergeTopics<T1, T2, T3, T4, T5>(t1: T1, t2: T2, t3: T3, t4: T4, t5?: T5) {
   return Object.assign({}, Object.create(t1 as any), Object.create(t2 as any), Object.create(t3 as any), Object.create(t4 as any), Object.create(t5 as any));
@@ -916,6 +996,7 @@ export const topicCategoriesArray = [
   new TopicCategory('Other', new Other()),
   new TopicCategory('Crypto', new Crypto()),
   new TopicCategory('Fun and Sports', new FunAndSports()),
+  new TopicCategory('Social', new Social()),
 ]
 
 export const topics: Topics = processTopics(

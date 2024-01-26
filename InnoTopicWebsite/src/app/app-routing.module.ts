@@ -23,6 +23,10 @@ const routes: Routes = [
     loadChildren: () => import('./themes/theme-demo/theme-demo.module').then( m => m.ThemeDemoPageModule)
   },
   {
+    path: 'theme',
+    loadChildren: () => import('./themes/theme-demo/theme-demo.module').then( m => m.ThemeDemoPageModule)
+  },
+  {
     path: 'shirt',
     loadChildren: () => import('./shirt/shirt.module').then( m => m.ShirtPageModule)
   },

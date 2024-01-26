@@ -40,17 +40,18 @@ export const highlights = {
     // TODO maybe ts-node; https://typestrong.org/ts-node/ , https://github.com/TypeStrong/ts-node
     Deno: {},
     Bun: {} /* TODO: mark as non-main experience; written in Zig */,
-    JavaScriptCore: {} /* used by bun */, // (not here; small frontend icon)
+    // TODO: JavaScriptCore: {} /* used by bun */, // (not here; small frontend icon)
   }),
   crossPlatform: topics({
     HTML5: {},
     Ionic: {},
     Electron: {} /* TODO: mark as non-main experience */,
-    Tauri: {} /* TODO: mark as non-main experience */,
-    Tonic: {} /* TODO: mark as non-main experience */,
-    Yew: {} /* TODO: mark as non-main experience */,
-    'https://bevyengine.org/': {} /* TODO: Near Rust */,
-    'InfluxDB': {} /* TODO: Near Rust; written in rust */,
+    // TODO: Rust: Tauri: {} /* TODO: mark as non-main experience */,
+    // TODO: Rust:  clap
+    // TODO: Tonic: {} /* TODO: mark as non-main experience */,
+    // TODO: Yew: {} /* TODO: mark as non-main experience */,
+    // TODO: 'https://bevyengine.org/': {} /* TODO: Near Rust */,
+    // TODO: 'InfluxDB': {} /* TODO: Near Rust; written in rust */,
     Angular: {},
     Java: {},
     Android: {},
@@ -66,8 +67,8 @@ export const highlights = {
   */
   utility: topics({
     // "Svelte": {},
-    HTMX: {},
-    Biome: {}, // small icon frontend
+    // TODO: Frontend: HTMX: {},
+    // TODO: Frontend: Biome: {}, // small icon frontend
     Qwik: {},
     SolidJS: {},
     Mithril: {},
@@ -83,10 +84,10 @@ export const highlights = {
     NestJS: {},
     // TODO: maybe https://analogjs.org/ - The fullstack Angular meta-framework. SSR, file-based routing
     Nuxt: {},
-    Gridsome: {} /* A Jamstack framework for Vue.js */,
+    // TODO: Frontend: Gridsome: {} /* A Jamstack framework for Vue.js */,
     Gatsby: {},
     'Next.js': {},
-    'https://million.dev/': {},
+    // TODO: Frontend: 'https://million.dev/': {},
 
     jQuery: {} /* kinda as a joke / to test someone */,
     Nx: {},
@@ -127,7 +128,7 @@ export const highlights = {
     Flutter: {},
     Expo: {} /* TODO: mark as non-main experience; (in nx project template; here and in expanding-to) */,
     'Compose Multiplatform': {},
-    'https://avaloniaui.net/': {}, // .NET ; https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.vscode-avalonia
+    // TODO: Frontend: 'https://avaloniaui.net/': {}, // .NET ; https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.vscode-avalonia
     Electron: {} /* TODO: mark as non-main experience */,
     // "NW.js": {}, // bad contrast and kinda old stuff anyway
     // "WebKit": {}, // bad contrast
@@ -163,7 +164,7 @@ export const highlights = {
     /// ====
     /* TODO: Smth like PowerBI, Tableau ? */
     /* TODO: (kubernetes?) */
-    ComRev: {}, // CompaReview -
+    // TODO: Mine: ComRev: {}, // CompaReview -
     StackShare: {}, // comprehension
     // TODO: https://open-vsx.org/ // comprehension
 
@@ -210,9 +211,9 @@ export const highlights = {
     Wasmtime: {},
     Fermyon: {}, // https://github.com/fermyon/spin ; microservices in webassembly // too ugly; but this will have tiny icons anyway
     Rust: {},
-    Tauri: {},
-    Tokio: {},
-    Tonic: {},
+    // TODO: Rust: Tauri: {},
+    // TODO: Rust: Tokio: {},
+    // TODO: Rust: Tonic: {},
     /// ===== ^^^^^ End of Frontend / UI / UX / WASM related
     // ========= Frontend-Backed communication protocols:
     GraphQL: {},
@@ -240,11 +241,11 @@ export const highlights = {
     // ====== LowCode / NoCode
     Airtable: {},
     Notion: {},
-    'FIXME Affine': {},
-    'FIXME Outline': {}, // or next to notion
-    'FIXME Appflowy': {}, // or next to notion
-    'FIXME Baserow': {}, // or next to notion
-    'FIXME nocodb': {}, // or next to notion
+    // TODO: Lowcode: 'FIXME Affine': {},
+    // TODO: Lowcode: 'FIXME Outline': {}, // or next to notion
+    // TODO: Lowcode: 'FIXME Appflowy': {}, // or next to notion
+    // TODO: Lowcode: 'FIXME Baserow': {}, // or next to notion
+    // TODO: Lowcode:'FIXME nocodb': {}, // or next to notion
 
     Coda: {},
     Zapier: {},
@@ -263,7 +264,7 @@ export const highlights = {
 
     // TODO: https://github.com/imartinez/privateGPT
     // TODO: https://github.com/smol-ai/developer
-    'SMOL.ai': {}, // vercel investment
+    // TODO: AI: 'SMOL.ai': {}, // vercel investment
     'Cursor.sh': {},
     // ==== AI / ML: TODO its own section with bigger icons, etc.
     // ====== IDE-s:
@@ -274,7 +275,7 @@ export const highlights = {
     Warp: {},
     Ghostwriter: {}, // Between AI and Web IDE-s
     Replit: {},
-    CodeSandbox: {}, // Boxy AI // https://codesandbox.io/
+    // TODO: AI-powered coding: CodeSandbox: {}, // Boxy AI // https://codesandbox.io/
     'Visual Studio Code': {},
     VSCodium: {},
     'Open VSX Registry': {},
@@ -283,6 +284,7 @@ export const highlights = {
     'JetBrains Fleet': {},
     WebStorm: {},
     PyCharm: {},
+    //
     'JetBrains DataLore': {},
     Jupyter: {},
     Conda: {},
@@ -290,13 +292,15 @@ export const highlights = {
     'Google Colaboratory': {},
     Observable: {},
     'Hugging Face': {},
-    // ===== TODO MLOPS
+    // ===== TODO MLOPS (MLOps)
     Cohere: {},
     'Weights & Biases': {},
     // https://clear.ml/
     'Open Neural Network Exchange': {},
     // TODO AutoGPT
     // TODO FIXME MUST_HAVE: AI: https://github.com/langchain-ai/langchain - LangChain must have
+    // TODO: AI: 'LangChain': {},
+    // TODO: AI: 'https://github.com/deepset-ai/haystack': {}, // https://github.com/deepset-ai
     // TODO FIXME MUST_HAVE: AI: smith.langchain.com/ -- LangSmith
     // LangServe
     // https://localai.io/features/text-generation/ - llama -
@@ -318,34 +322,35 @@ export const highlights = {
 
     TensorFlow: {},
     Keras: {},
-    'nvidia.svg': {},
+    // TODO: AI: 'nvidia.svg': {},
     // ============== AI-powered coding
-
+    // TODO: AI: prompt engineering
     'Builder.io': {}, // https://www.youtube.com/watch?v=bRFLE9qi3t8&ab_channel=Steve%28Builder.io%29 -- MIT License
-    'FIXME https://github.com/BuilderIO/mitosis': {},
+    // TODO: Frontend: 'FIXME https://github.com/BuilderIO/mitosis': {},
     'Vercel V0': {}, // vercel-v0-icon
     'GitHub Copilot': {},
-    'GitHub Copilot in Terminal': {},
+    // TODO: AI-powered coding: 'GitHub Copilot in Terminal': {},
     Tabnine: {},
-    "https://www.jetbrains.com/ai/": {}, // jetbrains ai assistant // got the swirly logo
+    // TODO: AI-powered coding: "https://www.jetbrains.com/ai/": {}, // jetbrains ai assistant // got the swirly logo
     CodiumAI: {},
     Safurai: {},
     /// Open-source AI-powered coding
-    // TODO "https://github.com/AntonOsika/gpt-engineer": {}, // -- no logo
-    // TODO "Aider": {}, // -- no logo except on discord
-    Ollama: {},
-    Gradio: {},
-    'https://replicate.com/': {}, // MLops? Maybe not on shirt but should be on AI graph
-    'TODO https://github.com/streamlit/streamlit': {},
-    'TODO https://github.com/oobabooga/text-generation-webui': {},
-    'FIXME GRAB shirt.data.ts': {},
-    Gpt4all: {}, // open-source
-    Nomic: {},
-    Phind: {},
-    'https://www.deepseek.com/': {},
-    'https://falconllm.tii.ae/': {}, // TII logo if necessary
-    'Mistral Orca / openorca etc': {}, // TODO MIXTRAL DOPLHIN 8x7B
-    LongNet: {}, // https://abishpius.medium.com/say-goodbye-to-llm-token-limits-soon-longnet-scaling-transformers-to-1-000-000-000-tokens-1db51388d3d#:~:text=Longnet%20has%20a%20Vastly%20larger%20token,limit%20than%20all%20the%20current%20LLM%20models
+    // TODO: AI:  "https://github.com/AntonOsika/gpt-engineer": {}, // -- no logo
+    // TODO: AI: "Aider": {}, // -- no logo except on discord
+    // TODO: AI: Ollama: {},
+    // TODO: AI: Gradio: {},
+    // TODO: AI: 'https://replicate.com/': {}, // MLops? Maybe not on shirt but should be on AI graph
+    // TODO: AI: 'TODO https://github.com/streamlit/streamlit': {},
+    // TODO: AI: 'TODO https://github.com/oobabooga/text-generation-webui': {},
+    // TODO: AI: 'FIXME GRAB shirt.data.ts': {},
+    // TODO: AI: Gpt4all: {}, // open-source
+    // TODO: AI: Nomic: {},
+    // TODO: AI: Phind: {},
+    // TODO: AI: 'https://www.deepseek.com/': {},
+    // TODO: AI: 'https://falconllm.tii.ae/': {}, // TII logo if necessary
+    // TODO: AI: 'AI21': {},
+    // TODO: AI: 'Mistral Orca / openorca etc': {}, // TODO MIXTRAL DOPLHIN 8x7B
+    // TODO: AI: LongNet: {}, // https://abishpius.medium.com/say-goodbye-to-llm-token-limits-soon-longnet-scaling-transformers-to-1-000-000-000-tokens-1db51388d3d#:~:text=Longnet%20has%20a%20Vastly%20larger%20token,limit%20than%20all%20the%20current%20LLM%20models
     Sourcegraph: {},
     'Cody AI': {},
     MetaMage: {},
@@ -359,26 +364,33 @@ export const highlights = {
     'Microsoft Bing': {},
     OpenAI: {},
     'Perplexity.ai': {},
-    Poe: {}, // Poe (Platform for Open Exploration) is a service developed by Quora and launched in December 2022.
+    // TODO: AI: Poe: {}, // Poe (Platform for Open Exploration) is a service developed by Quora and launched in December 2022.
     'Google Bard': {},
-    'TODO Meta': {}, // (llama, FAISS)
-    'Amazon Q': {},
-    'x.ai Grok': {},
-    'Google Project IDX': {}, // https://idx.dev/
-    'Google Duet AI': {},
-    'Google Gemini': {},
-    'Google Palm': {},
+    // TODO: AI: 'TODO Meta': {}, // (llama, FAISS)
+    // TODO: AI: 'Amazon Q': {},
+    // TODO: AI: 'Amazon CodeWhisperer': {}, // https://aws-icons.com/icons/augmented-ai-a2i -> https://aws.amazon.com/architecture/icons/
+    // TODO: AI: 'Amazon Bedrock': {},
+    // TODO: AI: 'Amazon Sagemaker': {}, // ipynb?
+    // TODO: AI: 'Amazon SageMaker JumpStart': {},
+    // TODO: AI: 'Amazon PartyRock': {}, // similar to vercel v0 a bit?
+    // Arch_Amazon-Comprehend_16.svg + Lex etc with same prefix
+    // TODO: AI: 'x.ai Grok': {},
+    // TODO: AI: 'Google Project IDX': {}, // https://idx.dev/
+    // TODO: AI: 'Google Duet AI': {},
+    // TODO: AI: 'Google Gemini': {},
+    // TODO: AI: 'Google Palm': {},
     // TODO Google Bard, Lamda, https://ai.meta.com/llama/ meta llama, "Meta AI"
     'Open Assistant': {},
     LAION: {},
-    "https://github.com/joaomdmoura/crewAI": {},
+    // TODO: AI: "https://github.com/joaomdmoura/crewAI": {},
     'Stability AI': {},
     'Stable Diffusion': {},
-    AutoGen: {},
-    AutoGPT: {},
-    'https://www.aie.foundation/': {},
+    // TODO: AI: AutoGen: {},
+    // TODO: AI: AutoGPT: {},
+    // TODO: AI: 'https://www.rabbit.tech/': {}, // rabbit r1 - https://twitter.com/PatrickJS__/status/1744976985313660968
+    // TODO: AI: 'https://www.aie.foundation/': {},
     Markdown: {},
-    Asciidoctor: {}, // asciidoc
+    // TODO: AI (competition to markdown): Asciidoctor: {}, // asciidoc
 
     // ===== BlockChain / CryptoCurrencies
     Ethereum: {},
@@ -413,7 +425,7 @@ export const highlights = {
     // TODO: postrgres, redis (also vec db) ,, pgvector
     // MySQL vec db -- planetscale - https://planetscale.com/blog/planetscale-is-bringing-vector-search-and-storage-to-mysql https://planetscale.com/ logo svgporn
     // TODO Azure Cosmos DB
-    Grafana: {},
+    // TODO: Grafana: {},
     Feathers: {},
     '8base': {},
     Algolia: {},
@@ -460,8 +472,9 @@ export const highlights = {
     Chroma: {},
 
     Milvus: {},
+    // TODO: AI: 'Milvus Zilliz': {},
     Qdrant: {},
-    Faiss: {},
+    // TODO: AI: Faiss: {},
     'Apache Cassandra': {},
     // FAISS is (from meta) is another thing related to embeddings / vector db; but no logo currently
 
@@ -521,7 +534,7 @@ export const highlights = {
     Rust: {},
     Zig: {},
     Nim: {},
-    "https://www.roc-lang.org/": {/* Brydon*/},
+    // TODO: "https://www.roc-lang.org/": {/* Brydon*/},
     Go: {},
     'D Language':
       {} /* FIXME: D logo prints with glitches; FIXME: remove shadow; adapt: https://dlang.org/images/dlogo.svg -- OR BETTER just get the square-bounded logo out of the current file as square is less problemss */,
@@ -539,16 +552,16 @@ export const highlights = {
     Crystal: {},
     Sorbet: {}, //  TODO: https://sorbet.org/ - a fast, powerful type checker designed for Ruby
     Python: {},
-    PyScript: {}, // by anaconda
+    // TODO: AI: PyScript: {}, // by anaconda
     mypy: {},
     'Python Pyre': {},
     Pyright: {},
     // TODO: pytype - 🦆✔ - by google - https://github.com/google/pytype #Python static type analyzer
     Mojo: {}, // TODO https://github.com/modularml/mojof
-    'OpenAI Triton': {},
+    // TODO: AI: 'OpenAI Triton': {},
     Julia: {},
-    'Wolfram Language': {},
-    'Wolfram Mathematica': {},
+    // TODO: AI: 'Wolfram Language': {},
+    // TODO: AI: 'Wolfram Mathematica': {},
 
     Haxe: {},
     Hack: {},
@@ -583,7 +596,7 @@ export const highlights = {
   personalInterests: topics({
     Volleyball: {},
     'Interpersonal Networking': {},
-    'https://thesolfoundation.org/': {},
+    // TODO: 'https://thesolfoundation.org/': {},
     Hiking: {},
     /* TODO: mountain / climbing icon */
     Outdoors: {},
