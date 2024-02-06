@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80px" height="40px" viewBox="0 0 60 30" version="1.1" style="display: block;"><title>TechCrunch</title><g mask="url(#tc-logo)"><rect x="0" y="0" width="60" height="30" fill="rgb(64,64,64)"></rect><rect id="logo-gradient" class="navigation__logo-gradient" x="0" y="0" width="60" height="30" fill="url(#tc-gradient)"></rect></g></svg>
