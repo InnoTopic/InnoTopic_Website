@@ -48,10 +48,12 @@ export const highlights = {
     Electron: {} /* TODO: mark as non-main experience */,
     // TODO: Rust: Tauri: {} /* TODO: mark as non-main experience */,
     // TODO: Rust:  clap
-    // TODO: Tonic: {} /* TODO: mark as non-main experience */,
-    // TODO: Yew: {} /* TODO: mark as non-main experience */,
-    // TODO: 'https://bevyengine.org/': {} /* TODO: Near Rust */,
-    // TODO: 'InfluxDB': {} /* TODO: Near Rust; written in rust */,
+    // TODO: Rust: Tonic: {} /* TODO: mark as non-main experience */,
+    // TODO: Rust:  Yew: {} /* TODO: mark as non-main experience */,
+    // TODO: Rust: 'https://bevyengine.org/': {} /* TODO: Near Rust */,
+    // TODO: Rust: 'InfluxDB': {} /* TODO: Near Rust; written in rust */,
+    // TODO: Rust: https://github.com/helix-editor/helix
+    // TODO: Rust: https://github.com/tree-sitter/tree-sitter
     Angular: {},
     Java: {},
     Android: {},
@@ -156,6 +158,7 @@ export const highlights = {
     // TODO Parcel
     Vite: {}, // https://github.com/pocketbase/pocketbase
     Vitest: {},
+    Biome: {},
     pnpm: {},
     /* TODO: Spring Framework */
     /* FIXME: more backend: OpenAPI, maybe JSON Schema, websockets, socket.io maybe */
@@ -214,6 +217,7 @@ export const highlights = {
     // TODO: Rust: Tauri: {},
     // TODO: Rust: Tokio: {},
     // TODO: Rust: Tonic: {},
+    // TODO: Rust: Rust Rover
     /// ===== ^^^^^ End of Frontend / UI / UX / WASM related
     // ========= Frontend-Backed communication protocols:
     GraphQL: {},
@@ -241,11 +245,15 @@ export const highlights = {
     // ====== LowCode / NoCode
     Airtable: {},
     Notion: {},
+    // https://www.opensourcealternative.to/alternatives-to/Airtable
     // TODO: Lowcode: 'FIXME Affine': {},
     // TODO: Lowcode: 'FIXME Outline': {}, // or next to notion
     // TODO: Lowcode: 'FIXME Appflowy': {}, // or next to notion
     // TODO: Lowcode: 'FIXME Baserow': {}, // or next to notion
+    // TODO: Lowcode: 'FIXME Rowy': {}, // or next to notion
     // TODO: Lowcode:'FIXME nocodb': {}, // or next to notion
+    // TODO: Lowcode: https://github.com/appwrite/appwrite
+
 
     Coda: {},
     Zapier: {},
@@ -271,7 +279,7 @@ export const highlights = {
     // TODO: intellij idea
     // jetbrains academy, JB Space
     // mypy - python static type checker
-    // DataSpell (data science) Jupyter; kaggle
+    // DataSpell (data science) Jupyter;
     Warp: {},
     Ghostwriter: {}, // Between AI and Web IDE-s
     Replit: {},
@@ -292,6 +300,8 @@ export const highlights = {
     'Google Colaboratory': {},
     Observable: {},
     'Hugging Face': {},
+    // TODO: AI: kaggle -  data sets, models
+
     // ===== TODO MLOPS (MLOps)
     Cohere: {},
     'Weights & Biases': {},
@@ -313,9 +323,13 @@ export const highlights = {
     PyTorch: {},
     pandas: {},
     'Google JAX': {},
-    // TODO Pandas
-    // TODO https://www.pola.rs/ - Rust for AI/ML From Luis Lopez CommerceHub
-    // TODO https://scikit-learn.org/stable/
+    // TODO AI: Pandas
+    // TODO AI: https://www.pola.rs/ - Polars Rust for AI/ML From Luis Lopez CommerceHub; DataFrames for the new era - play on Pandas? "Built by developers for developers to achieve up to 50x Performance"
+    // TODO AI: Dask
+    // TODO AI: Vaex
+    // TODO AI: Modin
+    // TODO AI: Parquet
+    // TODO AI: https://scikit-learn.org/stable/
     // TODO Jax - https://github.com/google/jax - has logo - group with lower-level stuff with smaller icons
     // whereas my higher-level stuff like LLM-s for coding, with bigger icons, almost as big as TypeScript, Angular, second row
     // TODO: ONNX | Home -- Open Neural Network Exchange -- The open standard for machine learning interoperability
@@ -338,7 +352,6 @@ export const highlights = {
     // TODO: AI:  "https://github.com/AntonOsika/gpt-engineer": {}, // -- no logo
     // TODO: AI: "Aider": {}, // -- no logo except on discord
     // TODO: AI: Ollama: {},
-    // TODO: AI: Gradio: {},
     // TODO: AI: 'https://replicate.com/': {}, // MLops? Maybe not on shirt but should be on AI graph
     // TODO: AI: 'TODO https://github.com/streamlit/streamlit': {},
     // TODO: AI: 'TODO https://github.com/oobabooga/text-generation-webui': {},
@@ -361,31 +374,63 @@ export const highlights = {
     TabbyML: {},
     // TODO: https://learn.microsoft.com/en-us/semantic-kernel/overview/ -- Semantic Kernel
     'OpenAI Codex': {},
-    'Microsoft Bing': {},
-    OpenAI: {},
-    'Perplexity.ai': {},
-    // TODO: AI: Poe: {}, // Poe (Platform for Open Exploration) is a service developed by Quora and launched in December 2022.
-    'Google Bard': {},
-    // TODO: AI: 'TODO Meta': {}, // (llama, FAISS)
-    // TODO: AI: 'Amazon Q': {},
-    // TODO: AI: 'Amazon CodeWhisperer': {}, // https://aws-icons.com/icons/augmented-ai-a2i -> https://aws.amazon.com/architecture/icons/
-    // TODO: AI: 'Amazon Bedrock': {},
-    // TODO: AI: 'Amazon Sagemaker': {}, // ipynb?
+    'Amazon CodeWhisperer': {}, // https://aws-icons.com/icons/augmented-ai-a2i -> https://aws.amazon.com/architecture/icons/
+    'Amazon Q': {}, // https://aws-icons.com/icons/augmented-ai-a2i -> https://aws.amazon.com/architecture/icons/
+    'Amazon Bedrock': {},
+    'Amazon SageMaker': {}, // ipynb?
+    'Amazon Comprehend': {},
+    'Amazon Kendra': {},
+    'Amazon Lex': {},
+    // TODO: AI: 'Amazon Titan': {}, // mas multimodal
+    // TODO: AI: 'Amazon SageMaker Studio': {}, // https://aws.amazon.com/sagemaker/studio/
+    // TODO: AI: JupyterLab // https://jupyter.org/try
     // TODO: AI: 'Amazon SageMaker JumpStart': {},
     // TODO: AI: 'Amazon PartyRock': {}, // similar to vercel v0 a bit?
-    // Arch_Amazon-Comprehend_16.svg + Lex etc with same prefix
+    // TODO: AI: https://runwayml.com/ai-magic-tools/gen-2/ (text to video, multimodal)
+    // TODO: AI: https://github.com/apache/mxnet
     // TODO: AI: 'x.ai Grok': {},
     // TODO: AI: 'Google Project IDX': {}, // https://idx.dev/
     // TODO: AI: 'Google Duet AI': {},
-    // TODO: AI: 'Google Gemini': {},
+    // TODO: AI: 'Google Vertex AI': {},
     // TODO: AI: 'Google Palm': {},
-    // TODO Google Bard, Lamda, https://ai.meta.com/llama/ meta llama, "Meta AI"
+    // TODO: AI: Google Bard, Lamda, https://ai.meta.com/llama/ meta llama, "Meta AI"
+    // TODO: AI: https://github.com/langgenius/dify - "An Open-Source Assistants API and GPTs alternative. Dify.AI is an LLM application development platform. It integrates the concepts of Backend as a Service and LLMOps, covering the core tech stack required for building generative AI-native applications, including a built-in RAG engine."
+
+    'Microsoft Bing': {},
+    'Microsoft Copilot': {},
+    'Microsoft AutoGen': {},
+    'LangChain': {},
+    // TODO: AI: https://smythos.com/
+    'C3 AI': {}, // enterprise AI
+
+    OpenAI: {},
+    // TODO: AI: OpenAI Gym
+    xAI: {},
+    'Tesla': {},
+    '1X Technologies': {},
+    'Boston Dynamics': {},
+    'Stanford University': {},
+    'Phind': {},
+    'Perplexity.ai': {},
+    'Quora Poe': {},
+    // TODO: AI: Poe: {}, // Quora Poe (Platform for Open Exploration) is a service developed by Quora and launched in December 2022.
+    'Google Bard': {},
+    'Google Gemini': {},
+    'Google DeepMind': {},
+    'Mistral AI': {},
+    'Anthropic': {},
+    'AI21 Labs': {},
+    // TODO: AI: 'TODO Meta': {}, // (llama, FAISS)
     'Open Assistant': {},
     LAION: {},
+    Ollama: {},
+    Gradio: {},
+    Streamlit: {}, // chat: https://docs.streamlit.io/knowledge-base/tutorials/build-conversational-apps
     // TODO: AI: "https://github.com/joaomdmoura/crewAI": {},
     'Stability AI': {},
     'Stable Diffusion': {},
-    // TODO: AI: AutoGen: {},
+    'Midjourney': {},
+    'Runway': {}, // https://runwayml.com/
     // TODO: AI: AutoGPT: {},
     // TODO: AI: 'https://www.rabbit.tech/': {}, // rabbit r1 - https://twitter.com/PatrickJS__/status/1744976985313660968
     // TODO: AI: 'https://www.aie.foundation/': {},

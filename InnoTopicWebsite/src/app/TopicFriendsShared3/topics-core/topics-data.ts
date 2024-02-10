@@ -123,6 +123,7 @@ export class Frontend {
   "esbuild" = t()
   Turbopack = t('turbopack-icon.svg')
   Turborepo = t('turborepo-icon.svg')
+  Biome = t('biome-icon.svg') // Rust
   pnpm = t('pnpm-icon')
   Angular = tNarrow({
     logo: 'angular-icon',
@@ -199,7 +200,7 @@ export class Frontend {
   'Vue.js' = tWide({logo: 'vue'})
   'Nuxt' = tWide('nuxt-icon')
   'Gridsome' = t({logo: 'gridsome-icon.svg'})
-  'Svelte' = tNarrow('svelte-icon')
+  'Svelte' = tNarrow('svelte-icon') // https://github.com/sveltejs/branding
   // TODO Phoenix  https://www.phoenixframework.org/  supposedly most loved; https://github.com/phoenixframework/phoenix
   'SolidJS' = t('solidjs-icon')
   'Qwik' = tNarrow('qwik-icon.svg')
@@ -210,6 +211,7 @@ export class Frontend {
   'Alpine.js' = tWide('alpinejs-icon.svg')
   'Rax' = t()
   'Riot' = t()
+  // TODO: Turbo (DHH dropping TypeScript, and not even jsdoc nor .d.ts). + hotwire stimulus
   'Vercel' = tWide('vercel-icon.svg')
   // ===== headless CMS:
   'Storyblok' = t('storyblok-icon.svg')
@@ -538,7 +540,7 @@ export class Languages {
   Ruby = t()
   Crystal = t()
   Sorbet = tSquare('sorbet-logo-white-sparkles.svg')
-  Markdown = t()
+  Markdown = tWide()
 
   Python = t({
     urls: new TopicUrls(
@@ -785,7 +787,7 @@ export class Other {
   Shopify = tNarrow()
   WebFlow = t('webflow-mark-vector-blue.svg') /* https://brand-at.webflow.io/resources#logos */
   Wix = tWide()
-  'Vercel V0' = t('vercel-v0-icon.svg')
+  'Vercel V0' = tWide('vercel-v0-icon.svg')
   'Builder.io' = t('builder-io-icon.svg')
   'Budibase' = tSquare('budibase-icon.svg')
   'Bubble' = t('bubble-icon') /** is a **visual programming language**, a no-code development platform and an application platform as a service, developed by Bubble Group, that enables non-technical people to build web applications without needing to type code */
@@ -794,7 +796,8 @@ export class Other {
 
   RegExp = t('_icon_hammer-solid.svg')
   'Java Swing' = t('java')
-  'Google Maps' = tNoIcon()
+  'Google Maps' = tNarrow('google-maps.svg')
+  'Mapbox' = t('mapbox-icon.svg')
   Guice = tNoIcon()
   SOAP = tNoIcon()
   XML = tNoIcon()
@@ -851,9 +854,15 @@ export class Crypto {
 
 /** AI / Machine Learning ML */
 export class AI {
+  "C3 AI" = tWide('c3-ai.svg')
+  "LangChain" = tWide('langchain.svg')
+  "Microsoft AutoGen" = tNarrow('autogen-icon.svg')
   "Microsoft Bing" = tNarrow('bing.svg')
+  "Microsoft Copilot" = tNarrow('microsoft-copilot.svg')
   "GitHub Copilot" = tWide('github-copilot.svg')
   "Tabnine" = tNarrow('tabnine-icon.svg')
+  // TODO: CodeGPT / https://www.codegpt.co/#start
+  // TODO: AskCodi /  https://www.askcodi.com/
   "CodiumAI" = tWide('codium-icon.svg' /* from svgporn */)
   "Safurai" = tWide('safurai-icon.svg')
   "Sourcegraph" = tWide('sourcegraph.svg')
@@ -862,11 +871,37 @@ export class AI {
   "TabbyML" = tNarrow('tabbyml-icon.svg')
   "OpenAI Codex" = tNarrow('openai-codex')
   OpenAI = t('openai-icon')
-  'Perplexity.ai' = t('FIXME-perplexity')
+  xAI = t('x.ai.svg')
+  'Tesla' = tWide('fixme-tesla') // next to xAI
+  '1X Technologies' = tWide('1x-technologies.svg') // https://www.1x.tech/ // autonomous robots; "Founded in Norway."
+  'Boston Dynamics' = tNarrow('boston-dynamics.svg')
+  'Stanford University' = tWide('FIXME-stanford') // https://mobile-aloha.github.io/
+
+  'Phind' = tWide('phind.svg')
+  'Amazon CodeWhisperer' = tSquare('Arch_Amazon-CodeWhisperer_16.svg')
+  'Amazon Q' = tSquare('Fixme-amazon-q')
+  'Amazon Bedrock' = tSquare('Arch_Amazon-Bedrock_16.svg')
+  'Amazon SageMaker' = tSquare('Arch_Amazon-SageMaker_16.svg')
+  'Amazon Lex' = tSquare('Arch_Amazon-Lex_16.svg')
+  'Amazon Comprehend' = tSquare('Arch_Amazon-Comprehend_16.svg') // Gewinnen Sie wertvolle Einblicke und Erkenntnisse aus Ihren Textdokumenten
+  'Amazon Kendra' = tSquare('Arch_Amazon-Kendra_16.svg')
+  'Perplexity.ai' = tNarrow('perplexity-ai.svg')
+  'Quora Poe' = tWide('quora-poe.svg')
   'Open Assistant' = tWide('open-assistant-icon-wide.svg') // https://github.com/LAION-AI/Open-Assistant
   'Google Bard' = tSquare('Google_Bard_logo.svg')
+  'Google Gemini' = tSquare('google-gemini-icon.svg')
+  'Google DeepMind' = tSquare('google-deepmind-icon.svg')
+  'Anthropic' = tWide('anthropic-icon.svg')
+  'AI21 Labs' = tWide('ai21.svg')
+  'Mistral AI' = tWide('mistral-ai-icon.svg')
   'LAION' = t()
+  'Ollama' = tNarrow('ollama.svg')
+  Gradio = tWide('gradio-icon.svg')
+  Streamlit = tWide('streamlit.svg')
+
   'Stable Diffusion' = tWide('stable-diffusion-logo-vectorizer.ai.svg') // not official?
+  'Midjourney' = tWide('midjourney.svg')
+  'Runway' = tSquare('runwayml-icon.svg')
   'Stability AI' = tSquare('stability-ai-icon.svg' /* by vectorizer.ai */) // https://www.linkedin.com/company/stability-ai/
   'Google Colaboratory' = tWide('google-colab-icon-wide.svg')
   TensorFlow = t()
@@ -888,6 +923,7 @@ export class AI {
     logoSize: [1200, 348],
     logoSmallIcon: 'keras-logo-small.jpg',
   }*/)
+
 }
 
 export class Build_Systems_And_Package_Managers {
