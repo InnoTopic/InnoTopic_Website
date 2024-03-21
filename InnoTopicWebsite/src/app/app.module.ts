@@ -59,7 +59,7 @@ export function initializeApp(store: Store) {
     AppRoutingModule,
     StoreModule.forRoot({ themeConfig: themeConfigReducer }),
     EffectsModule.forRoot([ThemeConfigEffects]),
-    StoreDevtoolsModule.instrument({ maxAge: 25 }),
+    StoreDevtoolsModule.instrument({ maxAge: 25 , connectInZone: true}),
     FormsModule,
     // AngularFireModule.initializeApp(environment.firebase),
     // AngularFirestoreModule,
