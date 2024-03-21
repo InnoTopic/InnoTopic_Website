@@ -2,12 +2,12 @@
   <defs>
     <linearGradient id="a" x1="263.36" y1="14.74" x2="333.47" y2="84.85" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="rgb(67,67,67)"/>
-      <stop offset="1" stop-color="rgb(39,39,39)"/>
+      <stop offset="1" stop-color="rgb(36,36,36)"/>
     </linearGradient>
     <linearGradient id="b" x1="262.64" y1="15.46" x2="332.75" y2="85.57" xlink:href="#a"/>
     <style>
       .text {
-        fill: rgb(19,19,19);
+        fill: rgb(13,13,13);
       }
       .gear {
         fill: url(#a);
@@ -17,7 +17,7 @@
       }
       @media (prefers-color-scheme: dark) {
         .text,.gear,.dots {
-          fill: rgb(109,109,109);
+          fill: rgb(115,115,115);
         }
       }
     </style>

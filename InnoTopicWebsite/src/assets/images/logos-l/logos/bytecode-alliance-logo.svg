@@ -4,20 +4,20 @@
 	 viewBox="0 0 1442.7 251.5" style="enable-background:new 0 0 1442.7 251.5;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:url(#SVGID_1_);}
-	.st1{fill:rgb(91,91,91);}
+	.st1{fill:rgb(95,95,95);}
 	.st2{fill:rgb(59,59,59);}
-	.st3{fill:rgb(109,109,109);}
-	.st4{fill:rgb(19,19,19);}
+	.st3{fill:rgb(115,115,115);}
+	.st4{fill:rgb(13,13,13);}
 </style>
 <g>
 	<g>
 		
 			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="127.9" x2="450" y2="127.9" gradientTransform="matrix(1 0 0 -1 0 253.6)">
 			<stop  offset="0" style="stop-color:rgb(59,59,59)"/>
-			<stop  offset="0.1312" style="stop-color:rgb(68,68,68)"/>
-			<stop  offset="0.5" style="stop-color:rgb(91,91,91)"/>
-			<stop  offset="0.8179" style="stop-color:rgb(104,104,104)"/>
-			<stop  offset="1" style="stop-color:rgb(109,109,109)"/>
+			<stop  offset="0.1312" style="stop-color:rgb(69,69,69)"/>
+			<stop  offset="0.5" style="stop-color:rgb(95,95,95)"/>
+			<stop  offset="0.8179" style="stop-color:rgb(109,109,109)"/>
+			<stop  offset="1" style="stop-color:rgb(115,115,115)"/>
 		</linearGradient>
 		<path class="st0" d="M425,100.7h-50h-50c-13.8,0-25-11.2-25-25l0,0c0-13.8,11.2-25,25-25h25c13.8,0,25-11.2,25-25l0,0
 			c0-13.8-11.2-25-25-25h-50H150H25c-13.8,0-25,11.2-25,25l0,0c0,13.8,11.2,25,25,25h50h50c13.8,0,25,11.2,25,25l0,0

@@ -45,14 +45,16 @@
 
 
 <app-chip style="display: inline-block; margin: 0.3rem;">
-  <app-topic-logo
-    *ngIf="(showLogo || true) && tag.tagEntry.logo"
-    [topic]="tag.tagEntry"
-  ></app-topic-logo>
+  <div style="display: flex; align-items: center">
+    <app-topic-logo
+      *ngIf="(showLogo || true) && tag.tagEntry.logo"
+      [topic]="tag.tagEntry"
+    ></app-topic-logo>
 
-  {{tag.tagEntry.name}}
-  <!-- skill level goes here: -->
-  <ng-content></ng-content>
+    {{tag.tagEntry.name}}
+    <!-- skill level goes here: -->
+    <ng-content></ng-content>
+  </div>
 </app-chip>
 
 

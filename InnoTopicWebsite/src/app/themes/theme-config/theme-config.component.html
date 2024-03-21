@@ -1,26 +1,41 @@
 <form [formGroup]="themeConfigForm">
-  <div class="form-group">
-    <label for="primary-color">Primary Color</label>&nbsp;
-    <input id="primary-color" type="color" formControlName="ion_color_primary" />
-  </div>
-  <app-tinted-swatches colorVarName="--ion-color-primary">primary</app-tinted-swatches>
+  <lib-themes-lib></lib-themes-lib>
+  <ion-grid>
+    <ion-row>
+      <!-- Primary Color Column -->
+      <ion-col size="12" size-md="4">
+        <div class="form-group">
+          <label for="primary-color">Primary Color</label>&nbsp;
+          <input id="primary-color" type="color" formControlName="ion_color_primary" />
+        </div>
+        <app-tinted-swatches colorVarName="--ion-color-primary">primary</app-tinted-swatches>
+      </ion-col>
 
-  <div class="form-group">
-      <label for="secondary-color">Secondary Color</label>&nbsp;
-    <input id="secondary-color" type="color" formControlName="ion_color_secondary"  />
-  </div>
-  <app-tinted-swatches colorVarName="--ion-color-secondary">secondary</app-tinted-swatches>
+      <!-- Secondary Color Column -->
+      <ion-col size="12" size-md="4">
+        <div class="form-group">
+          <label for="secondary-color">Secondary Color</label>&nbsp;
+          <input id="secondary-color" type="color" formControlName="ion_color_secondary" />
+        </div>
+        <app-tinted-swatches colorVarName="--ion-color-secondary">secondary</app-tinted-swatches>
+      </ion-col>
 
-  <div class="form-group">
-    <label for="background-color">Background Color</label>&nbsp;
-    <input id="background-color" type="color" formControlName="ion_background_color" />
-  </div>
+      <!-- Background Color Column -->
+      <ion-col size="12" size-md="4">
+        <div class="form-group">
+          <label for="background-color">Background Color</label>&nbsp;
+          <input id="background-color" type="color" formControlName="ion_background_color" />
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  <ion-item>
-    <ion-label>Notifications</ion-label>
-    <ion-range></ion-range>
-    <!-- FIXME set color for the ion-item line / separator border below this ion-range item -->
-  </ion-item>
+
+<!--  <ion-item>-->
+<!--    <ion-label>Notifications</ion-label>-->
+<!--    <ion-range></ion-range>-->
+<!--    &lt;!&ndash; FIXME set color for the ion-item line / separator border below this ion-range item &ndash;&gt;-->
+<!--  </ion-item>-->
 
 
   <ion-grid>

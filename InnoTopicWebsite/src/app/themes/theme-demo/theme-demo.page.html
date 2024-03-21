@@ -17,6 +17,10 @@
 
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button mode="md" [defaultHref]="'/'"></ion-back-button>
+      <app-app-logo [withText]="true"></app-app-logo>
+    </ion-buttons>
     <ion-title>Theme Preferences</ion-title>
 
     <ion-buttons slot="secondary">

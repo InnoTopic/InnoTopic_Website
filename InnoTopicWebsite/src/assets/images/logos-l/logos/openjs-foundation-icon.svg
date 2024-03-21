@@ -3,9 +3,9 @@
     <title>OpenJS Fondation</title>
     <defs>
         <linearGradient x1="20.3935593%" y1="15.8494593%" x2="79.5710016%" y2="84.1511768%" id="OpenJS-linearGradient-1">
-            <stop stop-color="rgb(19,19,19)" offset="21.45%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="21.45%"></stop>
             <stop stop-color="rgb(62,62,62)" offset="70.67%"></stop>
-            <stop stop-color="rgb(109,109,109)" offset="100%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

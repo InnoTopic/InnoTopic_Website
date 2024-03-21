@@ -2,24 +2,24 @@
 <svg width="256px" height="425px" viewBox="0 0 256 425" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
     <defs>
         <linearGradient x1="50%" y1="-352.925786%" x2="50%" y2="96.7175267%" id="linearGradient-1">
-            <stop stop-color="rgb(24,24,24)" offset="0%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
+            <stop stop-color="rgb(18,18,18)" offset="0%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="50%" y1="-2.80786187%" x2="50%" y2="428.758892%" id="linearGradient-2">
-            <stop stop-color="rgb(24,24,24)" offset="0%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
+            <stop stop-color="rgb(18,18,18)" offset="0%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="100%"></stop>
         </linearGradient>
         <radialGradient cx="16.4234038%" cy="142.999709%" fx="16.4234038%" fy="142.999709%" r="295.57111%" id="radialGradient-3">
-            <stop stop-color="rgb(109,109,109)" offset="0%"></stop>
-            <stop stop-color="rgb(99,99,99)" offset="100%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="0%"></stop>
+            <stop stop-color="rgb(104,104,104)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="16.423338%" cy="-42.999755%" fx="16.423338%" fy="-42.999755%" r="357.003966%" id="radialGradient-4">
-            <stop stop-color="rgb(109,109,109)" offset="0%"></stop>
-            <stop stop-color="rgb(99,99,99)" offset="100%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="0%"></stop>
+            <stop stop-color="rgb(104,104,104)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="11.4670327%" cy="-40.4580495%" fx="11.4670327%" fy="-40.4580495%" r="343.189366%" id="radialGradient-5">
-            <stop stop-color="rgb(41,41,41)" offset="0%"></stop>
-            <stop stop-color="rgb(30,30,30)" offset="100%"></stop>
+            <stop stop-color="rgb(38,38,38)" offset="0%"></stop>
+            <stop stop-color="rgb(25,25,25)" offset="100%"></stop>
         </radialGradient>
     </defs>
     <g>

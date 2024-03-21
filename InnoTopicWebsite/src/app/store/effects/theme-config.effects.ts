@@ -1,7 +1,7 @@
 
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import {tap, throttleTime} from 'rxjs/operators';
+import {tap, throttleTime, withLatestFrom} from 'rxjs/operators';
 import {updateThemeConfig} from "../actions/theme-config-actions";
 import {getIonicTextColor, hexToRgb} from "../../utils/colors/colorUtils";
 import {setIonicColorSteps, setIonicColorVarHexAndRgb} from "../../utils/colors/ionic-color-utils";
@@ -16,7 +16,9 @@ export class ThemeConfigEffects {
       this.actions$.pipe(
         ofType(updateThemeConfig),
         // withLatestFrom(this.store.pipe(select(fromRoot.selectEntireState))),
+        // concatLatestFrom
         tap((action) => {
+          const storeVal = action // FIXME
           console.log(`action`, action)
           const root = document.documentElement.style;
           for (const [key, value] of Object.entries(action)) {
@@ -39,7 +41,7 @@ export class ThemeConfigEffects {
             root.setProperty('--shadow-light-color', adjustLuminance(action.ion_background_color as string, shadowLumAdjust))
             // root.setProperty('--shadow-dark-color' , `#000000${action.shadow_opacity}`)
             root.setProperty('--shadow-dark-color', adjustLuminance(action.ion_background_color as string, -shadowLumAdjust))
-            root.setProperty('--ion-item-border-color', 'var(--ion-color-step-200)')
+            root.setProperty('--ion-item-border-color', 'var(--ion-color-step-100)')
 
             const contrastValue = 'high';
             const backgroundColor = action.ion_background_color;
@@ -60,9 +62,12 @@ export class ThemeConfigEffects {
               let fg = getIonicTextColor(secondaryColor, contrastValue);
               setIonicColorVarHexAndRgb(root, '--ion-color-secondary-contrast', fg);
             }
-
+            root.setProperty('--chip-shadow-margin',
+              +storeVal.shadow_blur_radius! / 4 /* TODO could take opacity into account for dividing */ +
+              Math.abs(+storeVal.shadow_offset!) + 2 + 'px'
+            )
             //--shadow-dark-color: #d0d0d0;
-            localStorage.setItem('theme_config', JSON.stringify(action)); // FIXME extract to another effect
+            // localStorage.setItem('theme_config', JSON.stringify(action)); // FIXME extract to another effect
           }
         }),
       ),
@@ -74,8 +79,10 @@ export class ThemeConfigEffects {
     () =>
       this.actions$.pipe(
         ofType(updateThemeConfig),
-        throttleTime(1000),
+        throttleTime(1000, undefined, {leading: true, trailing: true}),
         tap((action) => {
+          console.log('setLocalStorage$ action: ', action)
+          // FIXME: store entire config, not just patch (action)
           localStorage.setItem('theme_config', JSON.stringify(action));
         }),
       ),

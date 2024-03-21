@@ -1,0 +1,42 @@
+
+<!-- Portuguese, German, Spanish-->
+
+<div class="container">
+  <h2 class="section-title">Books</h2>
+
+<!--  <section class="organisation" *ngFor="let orgKV of keyValOrdered(organisationsAndProjects)">-->
+<!--    &lt;!&ndash;<ng-template let-org="orgKV.value">&ndash;&gt;-->
+
+<!--    <h2>-->
+<!--      <img alt="Organization Logo" *ngIf='orgKV.value.logoFileName' width=auto height=50 src="assets/images/clients/{{orgKV.value.logoFileName}}">-->
+<!--      <span>{{orgKV.key}}</span>-->
+<!--      <span class="years">{{orgKV.value.time[0]}} - {{orgKV.value.time[1]}}</span>-->
+<!--      <app-flags [flags]="orgKV.value.flags"></app-flags>-->
+<!--      <span class="comment" *ngIf="orgKV.value.locations; let locations">{{locations}} </span>-->
+<!--    </h2>-->
+<!--    <a *ngIf="orgKV.value.linkedInRecommendations" href="https://www.linkedin.com/in/karoldepka" target="_blank">-->
+<!--      Please also take a look at {{orgKV.value.linkedInRecommendations}} {{orgKV.value.linkedInRecommendations > 1 ? 'recommendations' : 'recommendation'}} on-->
+<!--      <img alt="LinkedIn Logo" style="vertical-align: middle; padding-bottom: 2px" height="14px" src="assets/images/logos/linkedin.svg"> &lt;!&ndash; TODO LinkedIn Logo; TODO: underline link &ndash;&gt;-->
+<!--    </a>-->
+<!--    <app-work-project-->
+<!--      *ngFor="let projKV of keyValOrdered(orgKV.value.projects)"-->
+<!--      [project]="projKV.value"-->
+<!--      [projectTitle]="projKV.key"-->
+<!--    ></app-work-project>-->
+
+<!--    &lt;!&ndash;</ng-template>&ndash;&gt;-->
+<!--  </section>-->
+  <div style="display: flex; flex-wrap: wrap;">
+    <p>
+      Some of the books and audiobooks that I've read and listened to, in English, Polish, German, Spanish, Portuguese, Russian.
+    </p>
+
+    <div *ngFor="let book of books" >
+      <img width=130 height=130 [attr.src]="book.coverUrl"
+           [attr.alt]="book.id"
+           [attr.title]="book.id">
+    </div>
+
+  </div>
+
+</div>

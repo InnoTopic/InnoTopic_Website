@@ -3,16 +3,16 @@
     <title>Angular</title>
     <defs>
         <linearGradient x1="0%" y1="48.0651813%" x2="100%" y2="50.3909793%" id="angularLinearGradient-1">
-            <stop stop-color="rgb(72,72,72)" offset="0%"></stop>
-            <stop stop-color="rgb(109,109,109)" offset="25.6871273%"></stop>
-            <stop stop-color="rgb(107,107,107)" offset="33.7594597%"></stop>
+            <stop stop-color="rgb(73,73,73)" offset="0%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="25.6871273%"></stop>
+            <stop stop-color="rgb(113,113,113)" offset="33.7594597%"></stop>
             <stop stop-color="rgb(63,63,63)" offset="56.4416993%"></stop>
-            <stop stop-color="rgb(24,24,24)" offset="100%"></stop>
+            <stop stop-color="rgb(18,18,18)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="36.6151082%" y1="41.6558838%" x2="33.2923255%" y2="100%" id="angularLinearGradient-2">
-            <stop stop-color="rgb(19,19,19)" stop-opacity="0.2" offset="0%"></stop>
-            <stop stop-color="rgb(19,19,19)" stop-opacity="0.62" offset="28.0229926%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
+            <stop stop-color="rgb(13,13,13)" stop-opacity="0.2" offset="0%"></stop>
+            <stop stop-color="rgb(13,13,13)" stop-opacity="0.62" offset="28.0229926%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g>

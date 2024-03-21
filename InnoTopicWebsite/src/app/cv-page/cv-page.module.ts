@@ -17,6 +17,7 @@ import { TechGraphD3Component } from './tech-graph-d3/tech-graph-d3.component';
 import { TechGraphD3Index1Component } from './tech-graph-d3-index1/tech-graph-d3-index1.component';
 import { TopicsGraphComponent } from './topics-graph/topics-graph.component';
 import { VideoCvComponent } from './video-cv/video-cv.component';
+import {SharedModule} from "../shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { VideoCvComponent } from './video-cv/video-cv.component';
     WorkProjectsModule,
     PersonalInterestsModule,
     OtherProfilesModule,
+    SharedModule,
   ],
   // schemas: [
   //   CUSTOM_ELEMENTS_SCHEMA,

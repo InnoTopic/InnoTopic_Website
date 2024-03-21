@@ -2,7 +2,7 @@
   <defs>
     <style>
       .cls-1 {
-        fill: rgb(19,19,19);
+        fill: rgb(70,70,70);
       }
 
       .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
@@ -10,19 +10,19 @@
       }
 
       .cls-2 {
-        fill: rgb(39,39,39);
+        fill: rgb(80,80,80);
       }
 
       .cls-3 {
-        fill: rgb(63,63,63);
+        fill: rgb(92,92,92);
       }
 
       .cls-4 {
-        fill: rgb(89,89,89);
+        fill: rgb(105,105,105);
       }
 
       .cls-5 {
-        fill: rgb(109,109,109);
+        fill: rgb(115,115,115);
       }
     </style>
   </defs>

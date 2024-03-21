@@ -5,23 +5,23 @@
     <desc>Created with Sketch.</desc>
     <defs>
         <linearGradient x1="62.1023273%" y1="0%" x2="108.19718%" y2="37.8635764%" id="linearGradient-1">
-            <stop stop-color="rgb(57,57,57)" offset="0%"></stop>
-            <stop stop-color="rgb(94,94,94)" offset="100%"></stop>
+            <stop stop-color="rgb(56,56,56)" offset="0%"></stop>
+            <stop stop-color="rgb(98,98,98)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="69.644116%" y1="0%" x2="54.0428975%" y2="108.456714%" id="linearGradient-2">
-            <stop stop-color="rgb(96,96,96)" offset="0%"></stop>
-            <stop stop-color="rgb(51,51,51)" offset="37.8600687%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
+            <stop stop-color="rgb(101,101,101)" offset="0%"></stop>
+            <stop stop-color="rgb(49,49,49)" offset="37.8600687%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="69.6908165%" y1="-12.9743587%" x2="16.7228981%" y2="117.391248%" id="linearGradient-3">
-            <stop stop-color="rgb(98,98,98)" offset="0%"></stop>
+            <stop stop-color="rgb(103,103,103)" offset="0%"></stop>
             <stop stop-color="rgb(61,61,61)" offset="41.472606%"></stop>
-            <stop stop-color="rgb(27,27,27)" offset="100%"></stop>
+            <stop stop-color="rgb(21,21,21)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="68.1279872%" y1="-35.6905737%" x2="30.4400914%" y2="114.942679%" id="linearGradient-4">
-            <stop stop-color="rgb(109,109,109)" offset="0%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="0%"></stop>
             <stop stop-color="rgb(61,61,61)" offset="51.2635191%"></stop>
-            <stop stop-color="rgb(27,27,27)" offset="100%"></stop>
+            <stop stop-color="rgb(21,21,21)" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

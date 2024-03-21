@@ -127,6 +127,7 @@ import { NgModule } from '@angular/core';
 import { CompanyLogoComponent } from './company-logo/company-logo.component';
 import { SpacerComponent } from './spacer/spacer.component';
 import {CommonModule} from "@angular/common";
+import {BooksComponent} from "../books/books.component";
 
 let imports = [
   // BrowserModule,
@@ -142,10 +143,13 @@ let declarations = [SpacerComponent, CompanyLogoComponent];
 
 @NgModule({
   imports: imports,
-  declarations: declarations,
-  exports: [
-    ...imports, ...declarations
-  ],
+    declarations: [
+        declarations,
+        BooksComponent
+    ],
+    exports: [
+        ...imports, ...declarations, BooksComponent
+    ],
   providers: []
 })
 export class SharedModule { }

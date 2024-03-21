@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="256px" height="168px" viewBox="0 0 256 168" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
     <g>
-        <polygon fill="rgb(26,26,26)" points="85.326959 83.9967251 170.653918 167.99345 0 167.99345"></polygon>
-        <polygon fill="rgb(109,109,109)" points="0 0 85.326959 83.9967251 170.653918 0"></polygon>
-        <polygon fill="rgb(19,19,19)" points="85.3406727 83.9967251 170.667632 167.99345 255.994591 83.9967251 170.667632 0"></polygon>
+        <polygon fill="rgb(20,20,20)" points="85.326959 83.9967251 170.653918 167.99345 0 167.99345"></polygon>
+        <polygon fill="rgb(115,115,115)" points="0 0 85.326959 83.9967251 170.653918 0"></polygon>
+        <polygon fill="rgb(13,13,13)" points="85.3406727 83.9967251 170.667632 167.99345 255.994591 83.9967251 170.667632 0"></polygon>
     </g>
 </svg>

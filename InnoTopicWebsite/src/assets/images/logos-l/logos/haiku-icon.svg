@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="256px" height="295px" viewBox="0 0 256 295" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">    <defs>
         <linearGradient x1="49.0838061%" y1="4.31143537%" x2="49.0838061%" y2="95.7864712%" id="linearGradient-1">
-            <stop stop-color="rgb(109,109,109)" offset="0%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="0%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="143.212497%" y1="-204.866615%" x2="143.212497%" y2="86.0496667%" id="linearGradient-2">
-            <stop stop-color="rgb(109,109,109)" offset="0%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="0%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g>

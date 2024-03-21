@@ -20,6 +20,10 @@ export const themeConfigReducer = createReducer(
   initialState,
   // on(ThemeConfigActions.init, (state) => state),
   on(updateThemeConfig, (state, action) => {
-    return { ...state, ...action };
+    return {
+      ...state,
+      ...action,
+    // (((themeColor$ | async).themeConfig.shadow_blur_radius) + abs(((themeColor$ | async).themeConfig.shadow_offset)))/2 + 2 + 'px'
+    };
   }),
 );

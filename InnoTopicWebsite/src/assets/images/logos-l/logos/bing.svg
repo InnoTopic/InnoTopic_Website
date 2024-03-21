@@ -3,16 +3,16 @@
     <title>bing</title>
     <defs>
         <radialGradient cx="93.7173476%" cy="77.8181394%" fx="93.7173476%" fy="77.8181394%" r="143.12136%" gradientTransform="translate(0.937173,0.778181),scale(1.000000,0.719543),rotate(-130.909000),translate(-0.937173,-0.778181)" id="bingRadialGradient-1">
-            <stop stop-color="rgb(109,109,109)" offset="0%"></stop>
-            <stop stop-color="rgb(59,59,59)" offset="100%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="0%"></stop>
+            <stop stop-color="rgb(58,58,58)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="13.8926614%" cy="71.4480037%" fx="13.8926614%" fy="71.4480037%" r="150.086127%" gradientTransform="translate(0.138927,0.714480),scale(0.600049,1.000000),rotate(-23.195400),translate(-0.138927,-0.714480)" id="bingRadialGradient-2">
-            <stop stop-color="rgb(100,100,100)" offset="0%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
+            <stop stop-color="rgb(105,105,105)" offset="0%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="100%"></stop>
         </radialGradient>
         <linearGradient x1="50.0002111%" y1="-3.51563173e-08%" x2="50.0002111%" y2="99.9999984%" id="bingLinearGradient-3">
-            <stop stop-color="rgb(100,100,100)" offset="0%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
+            <stop stop-color="rgb(105,105,105)" offset="0%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g>

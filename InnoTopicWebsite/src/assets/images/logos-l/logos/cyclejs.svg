@@ -3,11 +3,11 @@
     <defs>
         <linearGradient x1="29.1842525%" y1="99.591125%" x2="86.4835855%" y2="0.354484375%" id="linearGradient-1">
             <stop stop-color="rgb(59,59,59)" offset="41.47%"></stop>
-            <stop stop-color="rgb(109,109,109)" offset="100%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="34.1175797%" y1="106.866256%" x2="94.6503472%" y2="20.5520801%" id="linearGradient-2">
             <stop stop-color="rgb(59,59,59)" offset="41.47%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="100%"></stop>
         </linearGradient>
     </defs>
 	<g>

@@ -24,13 +24,13 @@ export const skillsIconsSignal = {
 @Component({
   selector: 'app-skill-levels-icons',
   templateUrl: './skill-levels-icons.component.html',
-  styleUrls: ['./skill-level-label.component.sass'],
+  styleUrls: ['./skill-levels-icons.component.sass'],
   encapsulation: ViewEncapsulation.None
 })
 export class SkillLevelsIconsComponent implements OnInit {
 
   @Input() skillLevels?: UserSkillLevelsHaveWant2;
-  @Input() useSignalLevels = false
+  @Input() useSignalLevels = true; //false
 
   icon: string;
   // text:string = "set";

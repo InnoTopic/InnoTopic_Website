@@ -43,22 +43,31 @@ export class WorkOrganisationsAndProjectsData {
   constructor() {
   }
 
-  'Epic Elite FZE' = org({
-    flags: 'es uk ae us',
-    time: ['March 2021', 'September 2022'],
+  // Rithum - CloudFormation, CDK, Serverless, Lambda, Kinesis, DynamoDB, OpenSearch, Kibana, Tanstack, Java, C#
+  // Tokio, Clap, Diesel, LaunchDarkly, Amazon RDS
+  // Rust Rover. C# jetbrains thingy - JetBrains Rider, dotMemory, dotTrace, dotCover, Resharper, dotPeek.
+  // Serde, Serde JSON
+  // Bedrock, Gradio, Qdrant, AutoGen
+  // Azure (for GPT4)
+  // TerraForm CDK
+  'Rithum' = org({
+    // subTitle: '(formerly known as CommerceHub / ChannelAdvisor / DSCO)',
+    // TODO: some info that it was e-commerce
+    flags: 'es uk us pt',
+    time: ['2023', '2024' /* TODO: make months optional */],
     linkedInRecommendations: 3,
-    locations: `Málaga, remote, London, Dubai`,
+    locations: `Málaga, remote, Madrid, Dubai`,
     logoFileName: `epic-elite-logo.svg`,
     projects: {
       'EpicElite Platform': project({
-        roles: 'Lead/Senior Full-Stack Developer & Interviewing and Recruiting (Consultant)',
+        roles: 'Staff Engineer',
         description: 'Recruited and interviewed 5 Developers and a UI/UX/Web/Graphics Designer. I have lead a team of 5 Developers. Did code&architecture reviews.' +
           'Working directly with CEO & Director of Operations. Communication in English, Spanish, Polish.',
         topicsById: {
-          'Mailgun': {},
-          'reCAPTCHA': {},
           'Terraform': {},
           'Angular': {},
+          'React': {},
+          'Tailwind CSS': {},
           'Angular Material': {},
           'AG Grid': {},
           'GraphQL': {},
@@ -68,13 +77,14 @@ export class WorkOrganisationsAndProjectsData {
           'Ionic': {},
           'Cypress': {},
           'Jest': {},
-          'React': {},
           'Bootstrap': {},
           'React-Bootstrap': {},
           'Netlify': {},
           'Gatsby': {},
           'Lodash': {},
           'YouTube': {},
+          // TODO: 'YouTube API': {},
+          // TODO: 'YouTube Partner API': {},
           'Figma': {},
           'Zeplin': {},
           'SVG': {},
@@ -101,7 +111,76 @@ export class WorkOrganisationsAndProjectsData {
           // TODO: PyCharm
           'PHP': {},
           'Laravel': {},
-          // 'PandaDoc': {},
+          'PandaDoc': {},
+          DDEX: {},
+        }
+      })
+    },
+  })
+
+
+  'Epic Elite FZE' = org({
+    flags: 'es uk ae us pl pt',
+    time: ['March 2021', 'September 2022'],
+    linkedInRecommendations: 3,
+    locations: `Málaga, remote, London, Dubai`,
+    logoFileName: `epic-elite-logo.svg`,
+    projects: {
+      'EpicElite Platform': project({
+        roles: 'Lead/Senior Full-Stack Developer & Interviewing and Recruiting (Consultant)',
+        description: 'Recruited and interviewed 5 Developers and a UI/UX/Web/Graphics Designer. I have lead a team of 5 Developers. Did code&architecture reviews.' +
+          'Working directly with CEO & Director of Operations. Communication in English, Spanish, Polish.',
+        topicsById: {
+          'Mailgun': {},
+          'Rust': {},
+          'reCAPTCHA': {},
+          'Terraform': {},
+          'Angular': {},
+          'Angular Material': {},
+          'AG Grid': {},
+          'GraphQL': {},
+          'Apollo': {},
+          'Apollo Studio': {},
+          'TypeScript': {},
+          'Ionic': {},
+          'Cypress': {},
+          'Jest': {},
+          'React': {},
+          'Tailwind CSS': {},
+          'Bootstrap': {},
+          'React-Bootstrap': {},
+          'Netlify': {},
+          'Gatsby': {},
+          'Lodash': {},
+          'YouTube': {},
+          'Figma': {},
+          'Zeplin': {},
+          'SVG': {},
+          'MobX': {},
+          "MobX-State-Tree": {},
+          // 'TestCafe': {},
+          'Git': {},
+          'GitHub': {},
+          'Docker': {},
+          'Kubernetes': {},
+          'Elasticsearch': {},
+          'AWS': {},
+          // 'Trello': {},
+          'WebStorm': {},
+          // 'PyCharm': {},
+          'Notion': {},
+          'Slack': {},
+          // TODO: 'Slack API': {},
+          'Datadog': {},
+          'TypeORM': {},
+          'TypeGraphQL': {},
+          'AudioSalad': {},
+          'Python': {},
+          'Django': {},
+          // TODO: PyCharm
+          'PHP': {},
+          'Laravel': {},
+          'PandaDoc': {},
         }
       })
     },
@@ -121,6 +200,7 @@ export class WorkOrganisationsAndProjectsData {
           ' Then I made numerous improvements of UI/UX, performance, robustness, architecture, refactors and I prepared the app for release. Working directly with CEO & CTO. Communication in English and Spanish.',
         topicsById: {
           'Angular': {},
+          'React': {},
           'TypeScript': {},
           'TestCafe': {},
           'Angular Material': {},
@@ -582,7 +662,7 @@ export class WorkOrganisationsAndProjectsData {
           'GitLab': {},
         }
       },
-      'Angular app for geo-fencing protection of field workers in dangerous areas (NDA)': {
+      'Angular app for geo-fencing protection of field workers in dangerous areas' /* (NDA) */: {
         description: `Angular Development. Worked directly with CEO/Founder.`,
         topicsById: {
           Angular: {},
@@ -591,6 +671,8 @@ export class WorkOrganisationsAndProjectsData {
           'WebStorm': {},
           'Vagrant': {},
           'Git': {},
+          'Mapbox': {},
+          // TODO: 'Mapbox': {},
         }
       },
       'Invoice Generator for Cable TV + Internet + Phone Company (Petrus)': {
@@ -605,7 +687,7 @@ export class WorkOrganisationsAndProjectsData {
           'Git': {},
         }
       },
-      'BlackBerry client for a social network (NDA)': {
+      'BlackBerry client for a social network' /*(NDA) */: {
         topicsById: {
           Java: {},
           BlackBerry: {},

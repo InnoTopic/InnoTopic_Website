@@ -2,20 +2,20 @@
 <svg width="256px" height="227px" viewBox="0 0 256 227" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
     <defs>
         <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
-            <stop stop-color="rgb(97,97,97)" offset="0.54%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
+            <stop stop-color="rgb(101,101,101)" offset="0.54%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-2">
-            <stop stop-color="rgb(109,109,109)" offset="22%"></stop>
-            <stop stop-color="rgb(47,47,47)" offset="100%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="22%"></stop>
+            <stop stop-color="rgb(44,44,44)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="0%" y1="50%" x2="99.9993221%" y2="50%" id="linearGradient-3">
-            <stop stop-color="rgb(109,109,109)" offset="0%"></stop>
-            <stop stop-color="rgb(47,47,47)" offset="100%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="0%"></stop>
+            <stop stop-color="rgb(44,44,44)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-4">
-            <stop stop-color="rgb(109,109,109)" offset="0%"></stop>
-            <stop stop-color="rgb(47,47,47)" offset="100%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="0%"></stop>
+            <stop stop-color="rgb(44,44,44)" offset="100%"></stop>
         </linearGradient>
     </defs>
 	<g>

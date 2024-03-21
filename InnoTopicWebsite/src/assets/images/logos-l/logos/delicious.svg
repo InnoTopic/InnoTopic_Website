@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="256px" height="256px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
 	<g>
-		<rect fill="rgb(109,109,109)" x="0" y="0" width="128" height="128"></rect>
-		<rect fill="rgb(19,19,19)" x="0" y="128" width="128" height="128"></rect>
-		<rect fill="rgb(101,101,101)" x="128" y="128" width="128" height="128"></rect>
-		<rect fill="rgb(56,56,56)" x="128" y="0" width="128" height="128"></rect>
+		<rect fill="rgb(115,115,115)" x="0" y="0" width="128" height="128"></rect>
+		<rect fill="rgb(13,13,13)" x="0" y="128" width="128" height="128"></rect>
+		<rect fill="rgb(107,107,107)" x="128" y="128" width="128" height="128"></rect>
+		<rect fill="rgb(54,54,54)" x="128" y="0" width="128" height="128"></rect>
 	</g>
 </svg>

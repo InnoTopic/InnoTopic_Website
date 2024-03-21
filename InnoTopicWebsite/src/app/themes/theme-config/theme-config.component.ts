@@ -5,6 +5,7 @@ import {Observable, take} from 'rxjs';
 
 import {ThemeConfigState} from "../../models/theme-config-state.model";
 import {updateThemeConfig} from "../../store/actions/theme-config-actions";
+import {testLibFunc} from "themes-lib";
 
 @Component({
   selector: 'app-theme-config',
@@ -17,6 +18,7 @@ export class ThemeConfigComponent implements OnInit {
   themeConfig$: Observable<ThemeConfigState>;
 
   constructor(private fb: FormBuilder, private store: Store<{ themeConfig: ThemeConfigState }>) {
+    testLibFunc()
     this.themeConfigForm = this.fb.group({
       ion_color_primary: '',
       ion_color_secondary: '',

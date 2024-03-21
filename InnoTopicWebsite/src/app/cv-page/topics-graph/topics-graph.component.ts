@@ -25,11 +25,13 @@ export type GraphConnections = { [key in keyof Partial<Topics>]: GraphNode }
 export interface GraphNode {
   connections?: GraphConnections
   sizeMult?: number
+  strengthMul?: number
 }
 
 export interface LinkByIds {
   source: GraphNodeId
   target: GraphNodeId
+  strengthMul?: number
 }
 
 const preset1 = {
@@ -44,6 +46,7 @@ const preset = {
   forceLinkStrength: 1,
   // forceManyBodyStrength: -1000,
   forceManyBodyStrength: -200,
+  allowZoom: true,
 }
 
 // TODO: try d3.forceRadial(radius[, x][, y])
@@ -68,33 +71,64 @@ export class TopicsGraphComponent implements OnInit {
 
   @Input()
   connections: GraphConnections = {
-    HTML5: {
+    CSS3: {
       sizeMult: bigSize,
       connections: {
-        JavaScript: {
-          sizeMult: bigSize,
+        Sass: {},
+        Stylus: { sizeMult: smallSize},
+        Less: { sizeMult: smallSize},
+      }
+    },
+    JavaScript: {
+      sizeMult: bigSize,
+      connections: {
+        'TypeScript': { /*type: 'writtenIn'*/ /* dependsOn / uses */
+          sizeMult: veryBigSize,
+          strengthMul: 0.4,
+        },
+        'Frontend': { /*type: 'writtenIn'*/ /* dependsOn / uses */
+          strengthMul: 1.5,
+          sizeMult: veryBigSize,
+          // strengthMul: 0.4,
           connections: {
-            'TypeScript': { /*type: 'writtenIn'*/ /* dependsOn / uses */
-              sizeMult: veryBigSize,
+            Svelte: {sizeMult: midSize},
+            Qwik: {sizeMult: smallSize},
+            // Astro: {},
+            SolidJS: {
+              sizeMult: smallSize,
             },
             Ionic: {
+              strengthMul: 2,
               sizeMult: veryBigSize,
               connections: {
+
                 'Angular': {
+                  strengthMul: 0.7,
                   sizeMult: veryBigSize,
                   connections: {
-                    NgRx: {},
+                    NgRx: {
+                      strengthMul: 2,
+                    },
                   }
                 },
-                'Vue.js': {sizeMult: bigSize},
-                'React': { /*...weak*/ sizeMult: veryBigSize},
+                'Vue.js': {
+                  strengthMul: 0.5,
+                  sizeMult: bigSize
+                },
+                'React': { /*...weak*/
+                  strengthMul: 0.5,
+                  sizeMult: veryBigSize
+                },
                 Android: {
+                  strengthMul: 1.5,
                   sizeMult: midSize,
                   connections: {
                     Java: {
+                      strengthMul: 3,
                       sizeMult: smallSize,
                       connections: {
                         "Spring Boot": {
+                          strengthMul: 2,
                           sizeMult: verySmallSize,
                           /* TODO could display old stuff as faded/transparent/grayed */
                           // ...small
@@ -105,55 +139,52 @@ export class TopicsGraphComponent implements OnInit {
                   },
                 },
                 'Stencil': {
+                  strengthMul: 2,
                   connections: {
                     'Web Components': {},
                   }
                 }
               },
-            },
-            Svelte: {sizeMult: midSize},
-            Qwik: {sizeMult: smallSize},
-            // Astro: {},
-            SolidJS: {
-              sizeMult: smallSize,
-            },
-            'Node.js': {},
-            Deno: {
-              connections: {
-                Rust: {
-                  connections: {
-                    // Turbopack: {},
-                    // Turborepo: {},
-                  }
-                },
-              }
-            },
-            Jest: {},
-            Redux: {},
-            RxJS: {},
-            Vite: {},
-            // Turbopack: {
-            //   connections: {
-            //     Turborepo: {},
-            //   },
-            // },
-            // TODO: "JS build & deploy node" - icon with a box and up-arrow (a'la upload): vercel, esbuild turbopack, netlify, vite
-            // "JavaScript Libraries": {},
-            // Astro: {},
-            // TurboPack,
-            Vercel: {},
-            Netlify: {},
-          },
-        },
-        CSS3: {
-          sizeMult: bigSize,
-          connections: {
-            Sass: {},
-            Stylus: { sizeMult: smallSize},
-            Less: { sizeMult: smallSize},
+            }
           }
         },
+        'Node.js': {},
+        Deno: {
+          connections: {
+            Rust: {
+              connections: {
+                Turbopack: {},
+                Turborepo: {},
+              },
+              strengthMul: 2,
+            },
+          }
+        },
+        Jest: {},
+        Redux: {},
+        RxJS: {},
+        Vite: {
+          strengthMul: 0.5,
+        },
+        // Turbopack: {
+        //   connections: {
+        //     Turborepo: {},
+        //   },
+        // },
+        // TODO: "JS build & deploy node" - icon with a box and up-arrow (a'la upload): vercel, esbuild turbopack, netlify, vite
+        // "JavaScript Libraries": {},
+        // Astro: {},
+        // TurboPack,
+        Vercel: {},
+        Netlify: {},
+      },
+    },
+    HTML5: {
+      sizeMult: bigSize,
+      connections: {
         SVG: {
+          sizeMult: bigSize,
+          strengthMul: 2,
           connections: {
             "Affinity Designer": { sizeMult: smallSize},
             Figma: {},
@@ -165,7 +196,16 @@ export class TopicsGraphComponent implements OnInit {
   }
 
   public d3Nodes: any[] = []
-  private d3Links: LinkByIds[] = []
+  private d3Links: LinkByIds[] = [
+    // {source: 'Web Components', target: 'HTML5'},
+    {source: 'Kotlin', target: 'Java'},
+    {source: 'Turbopack', target: 'Vercel'},
+    {source: 'Turborepo', target: 'Vercel'},
+    // {source: 'Angular', target: 'TypeScript', strengthMul: 0.3},
+    {source: 'Frontend', target: 'CSS3'},
+    {source: 'Frontend', target: 'HTML5'},
+    // TODO: introduce a grouping element for "Frontend" (to separate a bit from Node.js, deno)
+  ]
 
   constructor() { }
 
@@ -249,9 +289,19 @@ export class TopicsGraphComponent implements OnInit {
     const svg = svgRootElement.append("g"); /* actually a <g>, to fix transform not working in <svg> on chrome:
         http://stackoverflow.com/questions/27283610/d3-workaround-for-svg-transform-in-chrome */
 
-    // svgRootElement.call(d3.zoom().on("zoom", function () {
-    //   svg.attr("transform", d3.event.transform)
-    // }));
+    // svgRootElement.call(zoom1.transform, d3.zoomIdentity
+    //   .translate(150, 100)
+    //   .scale(2))
+
+    if (preset.allowZoom) {
+      svgRootElement.call(d3.zoom().on("zoom", function () {
+        // https://www.geeksforgeeks.org/d3-js-transform-scale-function/
+        console.log('transform d3.event.transform', d3.event.transform)
+        svg.attr("transform", d3.event.transform)
+        // svg.attr("transform", {k: 0.6087830093314941, x: 176.23706425069088, y: 116.76122945091723})
+        // svg.attr("transform", d3.transform({k: 0.6087830093314941, x: 176.23706425069088, y: 116.76122945091723}))
+      }));
+    }
 
     // var color = d3.scaleOrdinal(d3.schemeCategory20);
     // const color = d3.rgb(230, 230, 230, 128);
@@ -263,49 +313,32 @@ export class TopicsGraphComponent implements OnInit {
        Force-Directed Graph: https://bl.ocks.org/mbostock/4062045 */
     const simulation = d3.forceSimulation()
       // .force("gravity", 3)
+      // .velocityDecay(3)
       .force("link",
         d3.forceLink().id(function(d: any) { return d.id; })
           .strength(function(d: any) {
-            return preset.forceLinkStrength;
-//                      return 1 / Math.min(count(link.source), count(link.target));
-//                      return (typeof d.strengthMul === "undefined") ? 3 : d.strengthMul
+            if (d.strengthMul) {
+              console.log('d.strengthMul', d.strengthMul)
+            }
+            // return preset.forceLinkStrength;
+            //          return 1 / Math.min(count(link.source), count(link.target));
+            return preset.forceLinkStrength * (d.strengthMul ?? 1)
           }))
       .force("charge", d3.forceManyBody().strength(function(d: GraphNode) {
         const size = d.sizeMult ?? midSize;
         // return preset.forceManyBodyStrength
         // return size**5 * preset.forceManyBodyStrength / 3
-        return size**10 * preset.forceManyBodyStrength / 100
+        // return size**10 * preset.forceManyBodyStrength / 100 // this was kinda working
+        return size**1.5 * preset.forceManyBodyStrength / 1 // this was kinda working
+        // return size * 1000000
       }))
       .force("center", d3.forceCenter(width / 2, height / 2));
 
-// simulation.force("charge", function() {
-////        return (d.sizeMult ? d.sizeMult : 1) * 100 }
-//            return -1000000;
-//        })
-
-
-
-
-    const CSS = "CSS"; // FIXME remove
-    const nodes = {
-      // AffinityDesigner: {id: AffinityDesigner, html: "Affinity<br/>Designer"},
-      // Java: {
-      //   "id": Java,
-      //   sizeMult: bigSize,
-      //   body: "viewBox=\"0 0 256 346\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" preserveAspectRatio=\"xMidYMid\">\n" +
-      //     "\t<g>\n" +
-      //     "\t\t<path d=\"M82.5539491,267.472524 C82.5539491,267.472524 69.35552,275.147869 91.9468218,277.745105 C119.315549,280.867375 133.303389,280.419607 163.463913,274.711273 C163.463913,274.711273 171.393396,279.683258 182.467491,283.989644 C114.855564,312.966982 29.4483782,282.311215 82.5539491,267.472524\" fill=\"#5382A1\"></path>\n" +
-      //     "\t\t<path d=\"M74.2921309,229.658996 C74.2921309,229.658996 59.4888145,240.616727 82.0968727,242.955171 C111.333004,245.971316 134.421411,246.218007 174.373236,238.524975 C174.373236,238.524975 179.899113,244.127185 188.588218,247.190807 C106.841367,271.094691 15.79008,249.075898 74.2921309,229.658996\" fill=\"#5382A1\"></path>\n" +
-      //     "\t\t<path d=\"M143.941818,165.514705 C160.601367,184.695156 139.564684,201.955142 139.564684,201.955142 C139.564684,201.955142 181.866124,180.117876 162.438982,152.772422 C144.294633,127.271098 130.380335,114.600495 205.706705,70.9138618 C205.706705,70.9138618 87.4691491,100.44416 143.941818,165.514705\" fill=\"#E76F00\"></path>\n" +
-      //     "\t\t<path d=\"M233.364015,295.441687 C233.364015,295.441687 243.131113,303.489396 222.60736,309.715316 C183.580858,321.537862 60.1748945,325.107898 25.8932364,310.186356 C13.5698618,304.825251 36.67968,297.385425 43.9491491,295.824291 C51.5304727,294.180305 55.8629236,294.486575 55.8629236,294.486575 C42.15808,284.832116 -32.7195927,313.443607 17.8287709,321.637469 C155.681513,343.993251 269.121164,311.570618 233.364015,295.441687\" fill=\"#5382A1\"></path>\n" +
-      //     "\t\t<path d=\"M88.9008873,190.479825 C88.9008873,190.479825 26.1287564,205.389265 66.6717091,210.803433 C83.7901964,213.095331 117.915462,212.576815 149.702284,209.913484 C175.680233,207.722124 201.765236,203.062924 201.765236,203.062924 C201.765236,203.062924 192.605091,206.985775 185.977949,211.510924 C122.233949,228.275665 -0.907636364,220.476509 34.5432436,203.328233 C64.5241018,188.83584 88.9008873,190.479825 88.9008873,190.479825\" fill=\"#5382A1\"></path>\n" +
-      //     "\t\t<path d=\"M201.506444,253.422313 C266.305164,219.7504 236.344785,187.392 215.432844,191.751447 C210.307258,192.818269 208.021876,193.742662 208.021876,193.742662 C208.021876,193.742662 209.924655,190.761891 213.558924,189.471651 C254.929455,174.927127 286.746065,232.368873 200.204102,255.11936 C200.204102,255.120291 201.206691,254.223825 201.506444,253.422313\" fill=\"#5382A1\"></path>\n" +
-      //     "\t\t<path d=\"M162.438982,0.371432727 C162.438982,0.371432727 198.325527,36.27008 128.402153,91.4720582 C72.3307055,135.753542 115.616116,161.001658 128.37888,189.848669 C95.6490473,160.318371 71.6297309,134.322735 87.7437673,110.128407 C111.395375,74.6132945 176.918342,57.3942691 162.438982,0.371432727\" fill=\"#E76F00\"></path>\n" +
-      //     "\t\t<path d=\"M95.2683055,344.665367 C157.466996,348.646865 252.980131,342.45632 255.24224,313.025629 C255.24224,313.025629 250.893964,324.182575 203.838371,333.042967 C150.750487,343.033484 85.2740655,341.867055 46.4393309,335.464262 C46.4402618,335.463331 54.3892945,342.043927 95.2683055,344.665367\" fill=\"#5382A1\"></path>\n" +
-      //     "\t</g>\n" +
-      //     "</svg>\n"
-      // },
-    };
+    // simulation.force("charge", function() {
+    ////        return (d.sizeMult ? d.sizeMult : 1) * 100 }
+    //            return -1000000;
+    //        })
+    const nodes = {};
 
     // const links = [
     //   {source: Java, target: "Scala"},
@@ -345,7 +378,7 @@ export class TopicsGraphComponent implements OnInit {
       .data(graph.links)
       .enter().append("line")
       .attr("stroke-width", function(d: any) {
-        return 10; // Math.sqrt(d.thick == null ? 10 : d.thick );
+        return 5; // Math.sqrt(d.thick == null ? 10 : d.thick );
       });
 
     const allNodesGroup = svg.append("g") /* Group that contains all nodes */
@@ -550,23 +583,6 @@ export class TopicsGraphComponent implements OnInit {
         id: key,
         ... child /* TODO keep in mind that I might be mixing connection and note attrs here; so maybe smth like: 'connection: xyz' */,
       }
-
-      // return {
-      //   "id": key,
-      //     // sizeMult: bigSize,
-      //     body: "viewBox=\"0 0 256 346\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" preserveAspectRatio=\"xMidYMid\">\n" +
-      //   "\t<g>\n" +
-      //   "\t\t<path d=\"M82.5539491,267.472524 C82.5539491,267.472524 69.35552,275.147869 91.9468218,277.745105 C119.315549,280.867375 133.303389,280.419607 163.463913,274.711273 C163.463913,274.711273 171.393396,279.683258 182.467491,283.989644 C114.855564,312.966982 29.4483782,282.311215 82.5539491,267.472524\" fill=\"#5382A1\"></path>\n" +
-      //   "\t\t<path d=\"M74.2921309,229.658996 C74.2921309,229.658996 59.4888145,240.616727 82.0968727,242.955171 C111.333004,245.971316 134.421411,246.218007 174.373236,238.524975 C174.373236,238.524975 179.899113,244.127185 188.588218,247.190807 C106.841367,271.094691 15.79008,249.075898 74.2921309,229.658996\" fill=\"#5382A1\"></path>\n" +
-      //   "\t\t<path d=\"M143.941818,165.514705 C160.601367,184.695156 139.564684,201.955142 139.564684,201.955142 C139.564684,201.955142 181.866124,180.117876 162.438982,152.772422 C144.294633,127.271098 130.380335,114.600495 205.706705,70.9138618 C205.706705,70.9138618 87.4691491,100.44416 143.941818,165.514705\" fill=\"#E76F00\"></path>\n" +
-      //   "\t\t<path d=\"M233.364015,295.441687 C233.364015,295.441687 243.131113,303.489396 222.60736,309.715316 C183.580858,321.537862 60.1748945,325.107898 25.8932364,310.186356 C13.5698618,304.825251 36.67968,297.385425 43.9491491,295.824291 C51.5304727,294.180305 55.8629236,294.486575 55.8629236,294.486575 C42.15808,284.832116 -32.7195927,313.443607 17.8287709,321.637469 C155.681513,343.993251 269.121164,311.570618 233.364015,295.441687\" fill=\"#5382A1\"></path>\n" +
-      //   "\t\t<path d=\"M88.9008873,190.479825 C88.9008873,190.479825 26.1287564,205.389265 66.6717091,210.803433 C83.7901964,213.095331 117.915462,212.576815 149.702284,209.913484 C175.680233,207.722124 201.765236,203.062924 201.765236,203.062924 C201.765236,203.062924 192.605091,206.985775 185.977949,211.510924 C122.233949,228.275665 -0.907636364,220.476509 34.5432436,203.328233 C64.5241018,188.83584 88.9008873,190.479825 88.9008873,190.479825\" fill=\"#5382A1\"></path>\n" +
-      //   "\t\t<path d=\"M201.506444,253.422313 C266.305164,219.7504 236.344785,187.392 215.432844,191.751447 C210.307258,192.818269 208.021876,193.742662 208.021876,193.742662 C208.021876,193.742662 209.924655,190.761891 213.558924,189.471651 C254.929455,174.927127 286.746065,232.368873 200.204102,255.11936 C200.204102,255.120291 201.206691,254.223825 201.506444,253.422313\" fill=\"#5382A1\"></path>\n" +
-      //   "\t\t<path d=\"M162.438982,0.371432727 C162.438982,0.371432727 198.325527,36.27008 128.402153,91.4720582 C72.3307055,135.753542 115.616116,161.001658 128.37888,189.848669 C95.6490473,160.318371 71.6297309,134.322735 87.7437673,110.128407 C111.395375,74.6132945 176.918342,57.3942691 162.438982,0.371432727\" fill=\"#E76F00\"></path>\n" +
-      //   "\t\t<path d=\"M95.2683055,344.665367 C157.466996,348.646865 252.980131,342.45632 255.24224,313.025629 C255.24224,313.025629 250.893964,324.182575 203.838371,333.042967 C150.750487,343.033484 85.2740655,341.867055 46.4393309,335.464262 C46.4402618,335.463331 54.3892945,342.043927 95.2683055,344.665367\" fill=\"#5382A1\"></path>\n" +
-      //   "\t</g>\n" +
-      //   "</svg>\n"
-      // }
     }))
     this.d3Nodes.push(...nodes)
   }
@@ -585,7 +601,8 @@ export class TopicsGraphComponent implements OnInit {
         key => {
           const d3Link: LinkByIds = {
             source: sourceId as GraphNodeId,
-            target: key as GraphNodeId
+            target: key as GraphNodeId,
+            strengthMul: nestedConnections[key].strengthMul,
           }
           return d3Link
         }

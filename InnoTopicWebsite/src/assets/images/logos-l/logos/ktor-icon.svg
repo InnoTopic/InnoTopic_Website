@@ -3,21 +3,21 @@
     <title>Ktor</title>
     <defs>
         <linearGradient x1="23.9648148%" y1="23.9648148%" x2="74.6407407%" y2="74.6407407%" id="ktorLinearGradient-1">
-            <stop stop-color="rgb(94,94,94)" offset="29.6%"></stop>
-            <stop stop-color="rgb(93,93,93)" offset="69.4%"></stop>
-            <stop stop-color="rgb(92,92,92)" offset="100%"></stop>
+            <stop stop-color="rgb(98,98,98)" offset="29.6%"></stop>
+            <stop stop-color="rgb(97,97,97)" offset="69.4%"></stop>
+            <stop stop-color="rgb(96,96,96)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="26.2055556%" y1="26.2055556%" x2="74.1166667%" y2="74.1166667%" id="ktorLinearGradient-2">
-            <stop stop-color="rgb(95,95,95)" offset="10.8%"></stop>
-            <stop stop-color="rgb(96,96,96)" offset="17.3%"></stop>
-            <stop stop-color="rgb(103,103,103)" offset="49.2%"></stop>
-            <stop stop-color="rgb(107,107,107)" offset="71.6%"></stop>
-            <stop stop-color="rgb(109,109,109)" offset="82.3%"></stop>
+            <stop stop-color="rgb(99,99,99)" offset="10.8%"></stop>
+            <stop stop-color="rgb(100,100,100)" offset="17.3%"></stop>
+            <stop stop-color="rgb(109,109,109)" offset="49.2%"></stop>
+            <stop stop-color="rgb(113,113,113)" offset="71.6%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="82.3%"></stop>
         </linearGradient>
     </defs>
     <g>
         <polygon fill="url(#ktorLinearGradient-1)" points="170.666667 85.3333333 128.176988 42.8436543 85.3333333 0 40.2773333 45.056 0 85.3333333 85.3333333 170.666667"></polygon>
         <polygon fill="url(#ktorLinearGradient-2)" points="85.3333333 170.666667 127.823012 213.156346 170.666667 256 215.722667 210.944 256 170.666667 170.666667 85.3333333"></polygon>
-        <polygon fill="rgb(19,19,19)" points="170.666667 85.3333333 85.3333333 85.3333333 85.3333333 170.666667 170.666667 170.666667"></polygon>
+        <polygon fill="rgb(13,13,13)" points="170.666667 85.3333333 85.3333333 85.3333333 85.3333333 170.666667 170.666667 170.666667"></polygon>
     </g>
 </svg>

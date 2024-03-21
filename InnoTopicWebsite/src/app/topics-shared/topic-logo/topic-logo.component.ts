@@ -18,7 +18,8 @@ export const defaultIconHeight = 18
 })
 export class TopicLogoComponent implements OnInit {
 
-  debug_showText = false
+  // debug_showText = false
+  debug_showText = true
 
   @Input() public topic!: Topic | string;
   public _topic!: Topic

@@ -7,6 +7,9 @@
   <div class="topics" style="gap: 20px; margin-bottom: 110px;">
     <app-topic-logo [size]="120" *ngFor="let topic of highlights.main.ids" [topic]="topic"></app-topic-logo>
   </div>
+  <div class="topics" style="gap: 15px; margin-bottom: 70px;">
+    <app-topic-logo [size]="120" *ngFor="let topic of highlights.secondaryHighlights.ids" [topic]="topic"></app-topic-logo>
+  </div>
 
   <div class="topics" style="gap: 30px;">
     <app-topic-logo [size]="70" *ngFor="let topic of highlights.utility.ids" [topic]="topic"></app-topic-logo>

@@ -227,6 +227,8 @@ export class Frontend {
   'React-Bootstrap' = t('react-bootstrap.svg')
   "Material Design" = t('Google_Material_Design_Logo.svg')
   jQuery = tWide('jquery-icon-cropped.svg')
+  "Hotwired Turbo" = tNarrow('hotwired-turbo.svg') // "Hotwire is an alternative approach to building modern web applications without using much JavaScript by sending HTML instead of JSON over the wire."
+  "Hotwired Stimulus" = tNarrow('hotwired-stimulus.svg')
   'AG Grid' = tWide('ag-grid')
   'ApexCharts.js' = tNoIcon()
   AngularFire = tNoIcon()
@@ -445,6 +447,8 @@ export class Tools {
   // browsers:
   "Brave Browser" = tNarrow('brave.svg')
 
+  // TODO: arc browser
+
   WebStorm = t(/* https://www.jetbrains.com/de-de/company/brand/logos/ */)
   PyCharm = t(/* https://www.jetbrains.com/de-de/company/brand/logos/ */)
   'JetBrains Fleet' = t('jetbrains-fleet-icon2.svg')
@@ -566,7 +570,7 @@ export class Languages {
   Perl = t()
   Raku = tWide('raku-cropped.svg')
   Fortran = t()
-  // TODO
+  COBOL = tWide('cobol.svg')
 
   C = t()
   'HolyC' = tNarrow('HolyC_Logo.svg')
@@ -585,6 +589,8 @@ export class Languages {
   Nim = tWide('nim-lang-icon-wide.svg')
   'Google Carbon' = tSquare('google-carbon-icon.svg')
   Rust = t()
+  Tauri = tNarrow('tauri.svg')
+  Tokio = tNarrow('tokio-fixme.svg') // https://tokio.rs/img/tokio-horizontal.svg
   WebAssembly = t({
     categories: "Frontend",
     ecosystem: "JavaScript",
@@ -872,6 +878,7 @@ export class AI {
   "OpenAI Codex" = tNarrow('openai-codex')
   OpenAI = t('openai-icon')
   xAI = t('x.ai.svg')
+  "Magic.dev" = tWide('magic.dev.svg') // Magic is working on frontier-scale code models to build a coworker, not just a copilot.
   'Tesla' = tWide('fixme-tesla') // next to xAI
   '1X Technologies' = tWide('1x-technologies.svg') // https://www.1x.tech/ // autonomous robots; "Founded in Norway."
   'Boston Dynamics' = tNarrow('boston-dynamics.svg')
@@ -891,6 +898,7 @@ export class AI {
   'Google Bard' = tSquare('Google_Bard_logo.svg')
   'Google Gemini' = tSquare('google-gemini-icon.svg')
   'Google DeepMind' = tSquare('google-deepmind-icon.svg')
+  'Google Vertex AI' = tNarrow('vertexai.svg') // MLOps
   'Anthropic' = tWide('anthropic-icon.svg')
   'AI21 Labs' = tWide('ai21.svg')
   'Mistral AI' = tWide('mistral-ai-icon.svg')

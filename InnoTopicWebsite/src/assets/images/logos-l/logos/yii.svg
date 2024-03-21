@@ -2,21 +2,21 @@
 <svg width="256px" height="274px" viewBox="0 0 256 274" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
     <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
-            <stop stop-color="rgb(61,61,61)" offset="0%"></stop>
-            <stop stop-color="rgb(109,109,109)" offset="100%"></stop>
+            <stop stop-color="rgb(60,60,60)" offset="0%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="84.857945%" y1="26.2510333%" x2="13.5844148%" y2="100%" id="linearGradient-2">
-            <stop stop-color="rgb(91,91,91)" offset="0%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="68.8649011%"></stop>
-            <stop stop-color="rgb(20,20,20)" offset="100%"></stop>
+            <stop stop-color="rgb(95,95,95)" offset="0%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="68.8649011%"></stop>
+            <stop stop-color="rgb(14,14,14)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="0%" y1="6.32032406%" x2="85.8842047%" y2="69.934521%" id="linearGradient-3">
-            <stop stop-color="rgb(30,30,30)" offset="0%"></stop>
-            <stop stop-color="rgb(106,106,106)" offset="100%"></stop>
+            <stop stop-color="rgb(25,25,25)" offset="0%"></stop>
+            <stop stop-color="rgb(112,112,112)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="30.9607463%" y1="30.9929036%" x2="86.77032%" y2="81.7463136%" id="linearGradient-4">
-            <stop stop-color="rgb(95,95,95)" offset="0%"></stop>
-            <stop stop-color="rgb(91,91,91)" offset="100%"></stop>
+            <stop stop-color="rgb(99,99,99)" offset="0%"></stop>
+            <stop stop-color="rgb(95,95,95)" offset="100%"></stop>
         </linearGradient>
     </defs>
 	<g>

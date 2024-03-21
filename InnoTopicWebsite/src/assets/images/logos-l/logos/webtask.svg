@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="256px" height="256px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
 	<g>
-		<polygon fill="rgb(19,19,19)" points="256 256 0 256 0 0 256 0"></polygon>
-		<polygon fill="rgb(57,57,57)" points="256 256 51.2 256 51.2 51.2 256 51.2"></polygon>
-		<polygon fill="rgb(68,68,68)" points="204.8 204.8 51.2 204.8 51.2 51.2 204.8 51.2"></polygon>
-		<polygon fill="rgb(93,93,93)" points="204.8 204.8 102.4 204.8 102.4 102.4 204.8 102.4"></polygon>
-		<polygon fill="rgb(109,109,109)" points="153.6 153.6 102.4 153.6 102.4 102.4 153.6 102.4"></polygon>
+		<polygon fill="rgb(13,13,13)" points="256 256 0 256 0 0 256 0"></polygon>
+		<polygon fill="rgb(56,56,56)" points="256 256 51.2 256 51.2 51.2 256 51.2"></polygon>
+		<polygon fill="rgb(69,69,69)" points="204.8 204.8 51.2 204.8 51.2 51.2 204.8 51.2"></polygon>
+		<polygon fill="rgb(98,98,98)" points="204.8 204.8 102.4 204.8 102.4 102.4 204.8 102.4"></polygon>
+		<polygon fill="rgb(115,115,115)" points="153.6 153.6 102.4 153.6 102.4 102.4 153.6 102.4"></polygon>
 	</g>
 </svg>

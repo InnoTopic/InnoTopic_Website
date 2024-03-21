@@ -31,16 +31,25 @@ export const highlights = {
   main: topics({
     Angular: {},
     React: {},
-    'Vue.js': {},
-    Svelte: {},
     Ionic: {},
     JavaScript: {},
     TypeScript: {},
     'Node.js': {},
+    Anthropic: {},
+    OpenAI: {},
+    "Mistral AI": {},
+    "Amazon Bedrock": {},
+    "Qdrant": {},
+    "Rust": {},
+    "WebAssembly": {},
     // TODO maybe ts-node; https://typestrong.org/ts-node/ , https://github.com/TypeStrong/ts-node
-    Deno: {},
-    Bun: {} /* TODO: mark as non-main experience; written in Zig */,
     // TODO: JavaScriptCore: {} /* used by bun */, // (not here; small frontend icon)
+  }),
+  secondaryHighlights: topics({
+    'Vue.js': {},
+    Svelte: {},
+    Deno: {}, /* TODO: secondary highlights */
+    Bun: {} /* TODO: mark as non-main experience; written in Zig */,
   }),
   crossPlatform: topics({
     HTML5: {},
@@ -92,6 +101,8 @@ export const highlights = {
     // TODO: Frontend: 'https://million.dev/': {},
 
     jQuery: {} /* kinda as a joke / to test someone */,
+    "Hotwired Turbo": {} /* DHH, does not use TS nor JSDoc nor .d.ts */,
+    "Hotwired Stimulus": {} /* DHH, does not use TS nor JSDoc nor .d.ts */,
     Nx: {},
     Rush: {}, // https://rushstack.io/
     PWA: {},
@@ -108,7 +119,7 @@ export const highlights = {
     PostCSS: {},
     'Headless UI': {},
     'Tailwind CSS': {},
-    'Windi CSS': {},
+    // 'Windi CSS': {}, // sunsetting
     Bootstrap: {},
     'Material Design': {},
     'Chakra UI': {},
@@ -214,6 +225,8 @@ export const highlights = {
     Wasmtime: {},
     Fermyon: {}, // https://github.com/fermyon/spin ; microservices in webassembly // too ugly; but this will have tiny icons anyway
     Rust: {},
+    Tauri: {},
+    Tokio: {},
     // TODO: Rust: Tauri: {},
     // TODO: Rust: Tokio: {},
     // TODO: Rust: Tonic: {},
@@ -323,7 +336,6 @@ export const highlights = {
     PyTorch: {},
     pandas: {},
     'Google JAX': {},
-    // TODO AI: Pandas
     // TODO AI: https://www.pola.rs/ - Polars Rust for AI/ML From Luis Lopez CommerceHub; DataFrames for the new era - play on Pandas? "Built by developers for developers to achieve up to 50x Performance"
     // TODO AI: Dask
     // TODO AI: Vaex
@@ -357,11 +369,9 @@ export const highlights = {
     // TODO: AI: 'TODO https://github.com/oobabooga/text-generation-webui': {},
     // TODO: AI: 'FIXME GRAB shirt.data.ts': {},
     // TODO: AI: Gpt4all: {}, // open-source
-    // TODO: AI: Nomic: {},
-    // TODO: AI: Phind: {},
+    // TODO: AI: Nomic: {}, (has embedding model)
     // TODO: AI: 'https://www.deepseek.com/': {},
     // TODO: AI: 'https://falconllm.tii.ae/': {}, // TII logo if necessary
-    // TODO: AI: 'AI21': {},
     // TODO: AI: 'Mistral Orca / openorca etc': {}, // TODO MIXTRAL DOPLHIN 8x7B
     // TODO: AI: LongNet: {}, // https://abishpius.medium.com/say-goodbye-to-llm-token-limits-soon-longnet-scaling-transformers-to-1-000-000-000-tokens-1db51388d3d#:~:text=Longnet%20has%20a%20Vastly%20larger%20token,limit%20than%20all%20the%20current%20LLM%20models
     Sourcegraph: {},
@@ -369,7 +379,6 @@ export const highlights = {
     MetaMage: {},
     Rift: {},
     // Blackbox - https://marketplace.visualstudio.com/items?itemName=Blackboxapp.blackbox
-    // TODO Tabby
     Continue: {},
     TabbyML: {},
     // TODO: https://learn.microsoft.com/en-us/semantic-kernel/overview/ -- Semantic Kernel
@@ -391,7 +400,6 @@ export const highlights = {
     // TODO: AI: 'x.ai Grok': {},
     // TODO: AI: 'Google Project IDX': {}, // https://idx.dev/
     // TODO: AI: 'Google Duet AI': {},
-    // TODO: AI: 'Google Vertex AI': {},
     // TODO: AI: 'Google Palm': {},
     // TODO: AI: Google Bard, Lamda, https://ai.meta.com/llama/ meta llama, "Meta AI"
     // TODO: AI: https://github.com/langgenius/dify - "An Open-Source Assistants API and GPTs alternative. Dify.AI is an LLM application development platform. It integrates the concepts of Backend as a Service and LLMOps, covering the core tech stack required for building generative AI-native applications, including a built-in RAG engine."
@@ -406,6 +414,7 @@ export const highlights = {
     OpenAI: {},
     // TODO: AI: OpenAI Gym
     xAI: {},
+    "Magic.dev": {},
     'Tesla': {},
     '1X Technologies': {},
     'Boston Dynamics': {},
@@ -417,6 +426,7 @@ export const highlights = {
     'Google Bard': {},
     'Google Gemini': {},
     'Google DeepMind': {},
+    'Google Vertex AI': {},
     'Mistral AI': {},
     'Anthropic': {},
     'AI21 Labs': {},
@@ -623,6 +633,8 @@ export const highlights = {
     Prolog: {},
     Lisp: {},
     OCaml: {},
+    Fortran: {},
+    COBOL: {},
     PureScript: {},
     ReScript: {}, // Cristiano Calcagno from Rift
     'Mint Lang': {},
@@ -631,7 +643,6 @@ export const highlights = {
     CoffeeScript: {},
     Clojure: {},
     ClojureScript: {},
-    Fortran: {},
     // https://pypl.github.io/PYPL.html
     // TODO: some functional / fancy languages: Erlang, Haskell, Elixir, Eiffel, OCaml (Pricemoov Ion)
     // Prolog, Mozart OZ

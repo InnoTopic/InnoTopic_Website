@@ -3,8 +3,8 @@
     <title>Medusa</title>
     <defs>
         <linearGradient x1="-66.6972559%" y1="81.8702074%" x2="108.629506%" y2="34.4186803%" id="medusaLinearGradient-1">
-            <stop stop-color="rgb(19,19,19)" offset="26.5625%"></stop>
-            <stop stop-color="rgb(109,109,109)" offset="100%"></stop>
+            <stop stop-color="rgb(79,79,79)" offset="26.5625%"></stop>
+            <stop stop-color="rgb(111,111,111)" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g>

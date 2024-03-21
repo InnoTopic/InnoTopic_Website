@@ -1,5 +1,6 @@
 .neumorphic-chip {
-  margin-right: 1em;
+  display: inline-block;
+  margin: var(--chip-shadow-margin);
 
   //--bg-color: #e0e0e0;
   --bg-color: #e0e0e0;
@@ -10,7 +11,6 @@
   --inset-shadow-offset: -3px;
   --inset-shadow-blur: 7px;
 
-  display: inline-block;
   padding: 8px 16px;
   font-size: 14px;
   font-weight: 500;

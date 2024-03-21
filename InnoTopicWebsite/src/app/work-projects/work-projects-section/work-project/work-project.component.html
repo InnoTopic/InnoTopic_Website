@@ -3,7 +3,8 @@
     <div><fa-icon [icon]="faLaptop"></fa-icon><span><label>  Project: </label> {{projectTitle}}</span></div>
     <!-- FIXME: position & size of laptop icon -->
     <div *ngIf="project.roles; let roles">
-       <fa name="male"></fa><span><label>  Roles: </label>{{roles}}</span>
+      <!-- FIXME replace / remove icon (<fa> not working after moving to ionic) -->
+<!--       <fa name="male"></fa><span><label>  Roles: </label>{{roles}}</span>-->
     </div>
   </h3>
   <span *ngIf="project.description; let description">{{description}}</span>

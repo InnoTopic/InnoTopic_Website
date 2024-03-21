@@ -2,39 +2,39 @@
 <svg width="256px" height="198px" viewBox="0 0 256 198" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
     <defs>
         <linearGradient x1="-57.5270968%" y1="50.1241953%" x2="232.39121%" y2="50.1241953%" id="linearGradient-1">
-            <stop stop-color="rgb(33,33,33)" offset="0%"></stop>
-            <stop stop-color="rgb(37,37,37)" offset="22.85%"></stop>
-            <stop stop-color="rgb(53,53,53)" offset="74.33%"></stop>
-            <stop stop-color="rgb(60,60,60)" offset="100%"></stop>
+            <stop stop-color="rgb(29,29,29)" offset="0%"></stop>
+            <stop stop-color="rgb(33,33,33)" offset="22.85%"></stop>
+            <stop stop-color="rgb(51,51,51)" offset="74.33%"></stop>
+            <stop stop-color="rgb(59,59,59)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="0.182516704%" y1="49.95997%" x2="100.273441%" y2="49.95997%" id="linearGradient-2">
-            <stop stop-color="rgb(33,33,33)" offset="0%"></stop>
-            <stop stop-color="rgb(37,37,37)" offset="22.85%"></stop>
-            <stop stop-color="rgb(53,53,53)" offset="74.33%"></stop>
-            <stop stop-color="rgb(60,60,60)" offset="100%"></stop>
+            <stop stop-color="rgb(29,29,29)" offset="0%"></stop>
+            <stop stop-color="rgb(33,33,33)" offset="22.85%"></stop>
+            <stop stop-color="rgb(51,51,51)" offset="74.33%"></stop>
+            <stop stop-color="rgb(59,59,59)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="-62.8015845%" y1="49.8578253%" x2="253.671294%" y2="49.8578253%" id="linearGradient-3">
-            <stop stop-color="rgb(33,33,33)" offset="0%"></stop>
-            <stop stop-color="rgb(37,37,37)" offset="22.85%"></stop>
-            <stop stop-color="rgb(53,53,53)" offset="74.33%"></stop>
-            <stop stop-color="rgb(60,60,60)" offset="100%"></stop>
+            <stop stop-color="rgb(29,29,29)" offset="0%"></stop>
+            <stop stop-color="rgb(33,33,33)" offset="22.85%"></stop>
+            <stop stop-color="rgb(51,51,51)" offset="74.33%"></stop>
+            <stop stop-color="rgb(59,59,59)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="0.175556793%" y1="50.0058048%" x2="101.808162%" y2="50.0058048%" id="linearGradient-4">
-            <stop stop-color="rgb(19,19,19)" offset="0%"></stop>
-            <stop stop-color="rgb(26,26,26)" offset="47.51%"></stop>
-            <stop stop-color="rgb(34,34,34)" offset="82.61%"></stop>
-            <stop stop-color="rgb(37,37,37)" offset="100%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="0%"></stop>
+            <stop stop-color="rgb(21,21,21)" offset="47.51%"></stop>
+            <stop stop-color="rgb(30,30,30)" offset="82.61%"></stop>
+            <stop stop-color="rgb(33,33,33)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="-0.575855512%" y1="49.9142191%" x2="98.13299%" y2="49.9142191%" id="linearGradient-5">
-            <stop stop-color="rgb(27,27,27)" offset="0%"></stop>
-            <stop stop-color="rgb(29,29,29)" offset="17.35%"></stop>
-            <stop stop-color="rgb(33,33,33)" offset="57.31%"></stop>
-            <stop stop-color="rgb(32,32,32)" offset="85.85%"></stop>
-            <stop stop-color="rgb(32,32,32)" offset="100%"></stop>
+            <stop stop-color="rgb(22,22,22)" offset="0%"></stop>
+            <stop stop-color="rgb(25,25,25)" offset="17.35%"></stop>
+            <stop stop-color="rgb(28,28,28)" offset="57.31%"></stop>
+            <stop stop-color="rgb(27,27,27)" offset="85.85%"></stop>
+            <stop stop-color="rgb(27,27,27)" offset="100%"></stop>
         </linearGradient>
     </defs>
 	<g>
-		<path d="M256.000001,157.418094 C256.000001,179.325184 238.16137,197.163815 216.254279,197.163815 L-3.43623867e-08,197.163815 L-3.43623867e-08,39.7457218 C-3.43623867e-08,17.8386312 17.8386309,3.69395977e-07 39.7457214,3.69395977e-07 L256.000001,3.69395977e-07 L256.000001,157.418094 Z" fill="rgb(109,109,109)"></path>
+		<path d="M256.000001,157.418094 C256.000001,179.325184 238.16137,197.163815 216.254279,197.163815 L-3.43623867e-08,197.163815 L-3.43623867e-08,39.7457218 C-3.43623867e-08,17.8386312 17.8386309,3.69395977e-07 39.7457214,3.69395977e-07 L256.000001,3.69395977e-07 L256.000001,157.418094 Z" fill="rgb(115,115,115)"></path>
 		<path d="M185.584353,117.046455 L202.01467,117.046455 C202.484108,117.046455 203.579463,116.889977 204.048901,116.889977 C207.178485,116.26406 209.838631,113.447434 209.838631,109.535453 C209.838631,105.779952 207.178485,102.963326 204.048901,102.18093 C203.579463,102.024451 202.640588,102.024451 202.01467,102.024451 L185.584353,102.024451 L185.584353,117.046455 Z" fill="url(#linearGradient-1)"></path>
 		<path d="M200.13692,13.3007339 C184.488999,13.3007339 171.657702,25.9755506 171.657702,41.7799516 L171.657702,71.354524 L211.872861,71.354524 C212.811737,71.354524 213.907092,71.354524 214.689488,71.511003 C223.765282,71.980441 230.493888,76.6748175 230.493888,84.8117365 C230.493888,91.2273845 225.955991,96.7041575 217.506113,97.799512 L217.506113,98.11247 C226.738387,98.738387 233.779952,103.902201 233.779952,111.882641 C233.779952,120.488998 225.955991,126.122251 215.628363,126.122251 L171.501223,126.122251 L171.501223,184.019561 L213.281174,184.019561 C228.929097,184.019561 241.760392,171.344744 241.760392,155.540344 L241.760392,13.3007339 L200.13692,13.3007339 L200.13692,13.3007339 Z" fill="url(#linearGradient-2)"></path>
 		<path d="M207.804402,86.6894875 C207.804402,82.933986 205.144255,80.4303185 202.01467,79.960881 C201.701713,79.960881 200.919316,79.8044015 200.449879,79.8044015 L185.584353,79.8044015 L185.584353,93.574573 L200.449879,93.574573 C200.919316,93.574573 201.858192,93.574573 202.01467,93.4180935 C205.144255,92.948656 207.804402,90.4449885 207.804402,86.6894875 L207.804402,86.6894875 Z" fill="url(#linearGradient-3)"></path>

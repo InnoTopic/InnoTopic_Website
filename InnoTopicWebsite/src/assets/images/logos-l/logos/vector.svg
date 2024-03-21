@@ -3,24 +3,24 @@
     <title>Vector</title>
     <defs>
         <linearGradient x1="13.5234674%" y1="74.6786913%" x2="86.4136075%" y2="25.3053691%" id="vectorLinearGradient-1">
-            <stop stop-color="rgb(109,109,109)" offset="0%"></stop>
-            <stop stop-color="rgb(109,109,109)" offset="10.3%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="25.5%"></stop>
-            <stop stop-color="rgb(109,109,109)" offset="40.8%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="56%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="71%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="85.8%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="0%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="10.3%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="25.5%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="40.8%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="56%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="71%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="85.8%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="21.0059701%" y1="54.0325908%" x2="96.4656716%" y2="27.0469592%" id="vectorLinearGradient-2">
-            <stop stop-color="rgb(109,109,109)" offset="0%"></stop>
-            <stop stop-color="rgb(109,109,109)" offset="10.3%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="25.5%"></stop>
-            <stop stop-color="rgb(109,109,109)" offset="40.8%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="56%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="71%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="85.8%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="0%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="10.3%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="25.5%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="40.8%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="56%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="71%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="85.8%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g>

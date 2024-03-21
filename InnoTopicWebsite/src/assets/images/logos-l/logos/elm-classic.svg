@@ -2,12 +2,12 @@
 <svg width="256px" height="256px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
   <title>Elm</title>
 	<g>
-		<polygon fill="rgb(89,89,89)" points="128 135.022029 7.02282105 256 248.977971 256"></polygon>
-		<polygon fill="rgb(102,102,102)" points="202.332313 195.311075 256 248.979554 256 141.643388"></polygon>
-		<polygon fill="rgb(19,19,19)" points="120.977971 128 0 7.02202921 0 248.979554"></polygon>
-		<polygon fill="rgb(89,89,89)" points="256 113.806284 256 0 142.192924 0"></polygon>
-		<polygon fill="rgb(109,109,109)" points="195.583504 67.4342159 255.872312 127.723024 195.308589 188.286748 135.01978 127.99794"></polygon>
-		<polygon fill="rgb(109,109,109)" points="7.02123737 0 62.7461228 55.7256772 183.875335 55.7256772 128.149658 0"></polygon>
-		<polygon fill="rgb(102,102,102)" points="128 120.978763 183.321839 65.6561315 72.6773689 65.6561315"></polygon>
+		<polygon fill="rgb(92,92,92)" points="128 135.022029 7.02282105 256 248.977971 256"></polygon>
+		<polygon fill="rgb(107,107,107)" points="202.332313 195.311075 256 248.979554 256 141.643388"></polygon>
+		<polygon fill="rgb(13,13,13)" points="120.977971 128 0 7.02202921 0 248.979554"></polygon>
+		<polygon fill="rgb(92,92,92)" points="256 113.806284 256 0 142.192924 0"></polygon>
+		<polygon fill="rgb(115,115,115)" points="195.583504 67.4342159 255.872312 127.723024 195.308589 188.286748 135.01978 127.99794"></polygon>
+		<polygon fill="rgb(115,115,115)" points="7.02123737 0 62.7461228 55.7256772 183.875335 55.7256772 128.149658 0"></polygon>
+		<polygon fill="rgb(107,107,107)" points="128 120.978763 183.321839 65.6561315 72.6773689 65.6561315"></polygon>
 	</g>
 </svg>

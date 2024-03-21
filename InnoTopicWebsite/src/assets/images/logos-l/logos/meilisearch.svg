@@ -3,16 +3,16 @@
     <title>Meilisearch</title>
     <defs>
         <linearGradient x1="153.820608%" y1="-7.63826138%" x2="19.1721041%" y2="89.2387581%" id="meilisearchLinearGradient-1">
-            <stop stop-color="rgb(109,109,109)" offset="0%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="0%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="117.3253%" y1="-7.63849731%" x2="-17.3229972%" y2="89.2384892%" id="meilisearchLinearGradient-2">
-            <stop stop-color="rgb(109,109,109)" offset="0%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="0%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="80.8280376%" y1="-7.63849731%" x2="-53.8207274%" y2="89.2384892%" id="meilisearchLinearGradient-3">
-            <stop stop-color="rgb(109,109,109)" offset="0%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="0%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g>

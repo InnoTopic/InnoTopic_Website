@@ -29,27 +29,27 @@
 		</clipPath>
 		<radialGradient id="j" gradientTransform="matrix(14.54723 0 0 -14.54723 190.132 110.72)" r="1" cy="0" cx="0" fy="0"
 		                fx="0">
-			<stop offset="1" stop-color="rgb(40,40,40)"/>
+			<stop offset="1" stop-color="rgb(37,37,37)"/>
 		</radialGradient>
 		<radialGradient id="h" gradientTransform="matrix(14.54737 0 0 -14.54737 142.788 110.72)" r="1" cy="0" cx="0" fy="0"
 		                fx="0">
-			<stop offset="1" stop-color="rgb(40,40,40)"/>
+			<stop offset="1" stop-color="rgb(37,37,37)"/>
 		</radialGradient>
 		<radialGradient id="b" gradientTransform="scale(127.80571 -127.80571) rotate(11.057 8.897 4.247)" r="1" cy="0"
 		                cx="0" fy="0" fx="0">
-			<stop offset="1" stop-color="rgb(77,77,77)"/>
+			<stop offset="1" stop-color="rgb(78,78,78)"/>
 		</radialGradient>
 		<radialGradient id="f" gradientTransform="matrix(76.41132 -87.14402 -92.52952 -81.13354 135.49 208.538)" r="1"
 		                cy="0" cx="0" fy="0" fx="0">
-			<stop offset=".667" stop-color="rgb(43,43,43)"/>
+			<stop offset=".667" stop-color="rgb(40,40,40)"/>
 		</radialGradient>
 		<radialGradient id="d" gradientTransform="matrix(107.57257 -44.67343 -48.58997 -117.00349 93.83 204.712)" r="1"
 		                cy="0" cx="0" fy="0" fx="0">
-			<stop offset="1" stop-color="rgb(22,22,22)"/>
+			<stop offset="1" stop-color="rgb(16,16,16)"/>
 		</radialGradient>
 		<radialGradient id="m" gradientTransform="matrix(3.63757 -18.41156 -18.47398 -3.6499 164.778 180.114)" r="1" cy="0"
 		                cx="0" fy="0" fx="0">
-			<stop offset="1" stop-color="rgb(40,40,40)"/>
+			<stop offset="1" stop-color="rgb(37,37,37)"/>
 		</radialGradient>
 	</defs>
 	<g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 -94.595 372.31)">
@@ -80,18 +80,18 @@
 	<g clip-path="url(#k)" transform="matrix(1.33333 0 0 -1.33333 -94.595 372.31)">
 		<path
 				d="M162.824 194.907c0-14.721-11.934-26.653-26.651-26.653-14.721 0-26.653 11.932-26.653 26.653 0 14.718 11.932 26.648 26.653 26.648 14.717 0 26.65-11.93 26.65-26.648"
-				fill="rgb(109,109,109)"/>
+				fill="rgb(115,115,115)"/>
 		<path
 				d="M150.02 192.3a8.318 8.318 0 00-8.32-8.316c-4.597 0-8.323 3.723-8.323 8.317a8.32 8.32 0 008.322 8.324 8.32 8.32 0 008.321-8.324"
-				fill="rgb(19,19,19)"/>
+				fill="rgb(13,13,13)"/>
 		<path
 				d="M140.508 195.229a2.493 2.493 0 00-4.985 0 2.492 2.492 0 004.985 0m83.592-.322c0-14.721-11.935-26.653-26.654-26.653-14.72 0-26.653 11.932-26.653 26.653 0 14.718 11.934 26.648 26.653 26.648s26.654-11.93 26.654-26.648"
-				fill="rgb(109,109,109)"/>
+				fill="rgb(115,115,115)"/>
 		<path
 				d="M211.292 192.3a8.317 8.317 0 00-8.317-8.316c-4.598 0-8.325 3.723-8.325 8.317a8.322 8.322 0 008.325 8.324 8.318 8.318 0 008.317-8.324"
-				fill="rgb(19,19,19)"/>
+				fill="rgb(13,13,13)"/>
 		<path d="M201.782 195.229a2.494 2.494 0 00-2.496-2.491 2.49 2.49 0 000 4.982 2.495 2.495 0 002.496-2.491"
-		      fill="rgb(109,109,109)"/>
+		      fill="rgb(115,115,115)"/>
 	</g>
 	<g clip-path="url(#l)" transform="matrix(1.33333 0 0 -1.33333 -94.595 372.31)">
 		<path

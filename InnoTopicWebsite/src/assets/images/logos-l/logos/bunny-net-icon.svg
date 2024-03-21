@@ -3,40 +3,40 @@
     <title>bunny.net</title>
     <defs>
         <linearGradient x1="-33.9398264%" y1="50.04095%" x2="153.690572%" y2="50.04095%" id="bunnyLinearGradient-1">
-            <stop stop-color="rgb(91,91,91)" offset="0%"></stop>
-            <stop stop-color="rgb(24,24,24)" offset="100%"></stop>
+            <stop stop-color="rgb(94,94,94)" offset="0%"></stop>
+            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="32.8908646%" y1="96.6666487%" x2="67.1130842%" y2="3.11111053%" id="bunnyLinearGradient-2">
-            <stop stop-color="rgb(74,74,74)" offset="0%"></stop>
-            <stop stop-color="rgb(55,55,55)" offset="100%"></stop>
+            <stop stop-color="rgb(75,75,75)" offset="0%"></stop>
+            <stop stop-color="rgb(54,54,54)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="14.4028408%" y1="75.177305%" x2="63.2274953%" y2="12.4480313%" id="bunnyLinearGradient-3">
-            <stop stop-color="rgb(106,106,106)" offset="0%"></stop>
-            <stop stop-color="rgb(34,34,34)" offset="100%"></stop>
+            <stop stop-color="rgb(112,112,112)" offset="0%"></stop>
+            <stop stop-color="rgb(30,30,30)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="69.8803244%" y1="3.21352923%" x2="33.1012862%" y2="81.5809617%" id="bunnyLinearGradient-4">
-            <stop stop-color="rgb(26,26,26)" offset="0%"></stop>
-            <stop stop-color="rgb(104,104,104)" offset="100%"></stop>
+            <stop stop-color="rgb(21,21,21)" offset="0%"></stop>
+            <stop stop-color="rgb(109,109,109)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="-40.1271778%" y1="49.9893198%" x2="144.708119%" y2="49.9893198%" id="bunnyLinearGradient-5">
             <stop stop-color="rgb(60,60,60)" offset="0%"></stop>
-            <stop stop-color="rgb(19,19,19)" offset="100%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="-143.227273%" y1="49.9166667%" x2="243.363636%" y2="49.9166667%" id="bunnyLinearGradient-6">
-            <stop stop-color="rgb(109,109,109)" offset="0%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="0%"></stop>
             <stop stop-color="rgb(68,68,68)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="39.6769732%" y1="-25.0126839%" x2="63.8868118%" y2="131.608321%" id="bunnyLinearGradient-7">
-            <stop stop-color="rgb(21,21,21)" offset="0%"></stop>
-            <stop stop-color="rgb(87,87,87)" offset="100%"></stop>
+            <stop stop-color="rgb(15,15,15)" offset="0%"></stop>
+            <stop stop-color="rgb(90,90,90)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="-562.993864%" y1="49.9979816%" x2="562.904684%" y2="49.9979816%" id="bunnyLinearGradient-8">
-            <stop stop-color="rgb(101,101,101)" offset="0%"></stop>
-            <stop stop-color="rgb(77,77,77)" offset="100%"></stop>
+            <stop stop-color="rgb(106,106,106)" offset="0%"></stop>
+            <stop stop-color="rgb(78,78,78)" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="1.98261285%" y1="41.5011038%" x2="106.167127%" y2="60.0441501%" id="bunnyLinearGradient-9">
-            <stop stop-color="rgb(106,106,106)" offset="0%"></stop>
-            <stop stop-color="rgb(34,34,34)" offset="100%"></stop>
+            <stop stop-color="rgb(112,112,112)" offset="0%"></stop>
+            <stop stop-color="rgb(30,30,30)" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g>

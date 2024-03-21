@@ -158,7 +158,7 @@ export const topicsOld = [
   'CocoaPods',
   // tagLogoType('ArangoDB'),
   'Auth0',
-  'Mapbox',
+  // 'Mapbox',
   'OData', tagNoIcon('PowerBI'), tagNoIcon('SignalR'), // Mark S.
   // tagNoIcon('Voice Interfaces'),
   // tagNoIcon('Amazon Alexa'),

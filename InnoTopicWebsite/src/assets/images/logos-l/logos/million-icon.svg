@@ -3,20 +3,20 @@
     <title>Million</title>
     <defs>
         <radialGradient cx="49.9999398%" cy="49.9986554%" fx="49.9999398%" fy="49.9986554%" r="32.3059134%" gradientTransform="translate(0,5, 0,5), scale(0,448, 1), rotate(92,849), translate(-0,5, -0,5)" id="radialGradient-1">
-            <stop stop-color="rgb(19,19,19)" offset="0%"></stop>
-            <stop stop-color="rgb(109,109,109)" offset="100%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="0%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="50.0606294%" cy="104.166644%" fx="50.0606294%" fy="104.166644%" r="67.3009497%" gradientTransform="translate(0,5006, 1,0417), scale(0,4435, 1), rotate(92,7908), translate(-0,5006, -1,0417)" id="radialGradient-2">
-            <stop stop-color="rgb(19,19,19)" offset="0%"></stop>
-            <stop stop-color="rgb(109,109,109)" offset="100%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="0%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="99.1220389%" cy="34.2223886%" fx="99.1220389%" fy="34.2223886%" r="42.5206194%" gradientTransform="translate(0,9912, 0,3422), scale(0,6888, 1), rotate(92,7908), translate(-0,9912, -0,3422)" id="radialGradient-3">
-            <stop stop-color="rgb(19,19,19)" offset="0%"></stop>
-            <stop stop-color="rgb(109,109,109)" offset="100%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="0%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="0.877957622%" cy="34.2104631%" fx="0.877957622%" fy="34.2104631%" r="42.5058021%" gradientTransform="translate(0,0088, 0,3421), scale(0,689, 1), rotate(92,7908), translate(-0,0088, -0,3421)" id="radialGradient-4">
-            <stop stop-color="rgb(19,19,19)" offset="0%"></stop>
-            <stop stop-color="rgb(109,109,109)" offset="100%"></stop>
+            <stop stop-color="rgb(13,13,13)" offset="0%"></stop>
+            <stop stop-color="rgb(115,115,115)" offset="100%"></stop>
         </radialGradient>
     </defs>
     <g>

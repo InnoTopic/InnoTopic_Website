@@ -1,4 +1,9 @@
-<div style="display: inline-block; width: 15px; font-size: 11px">
+<!--lvls {{skillLevels | json}}-->
+
+<!--<div style="width: 10px; height: 10px; background-color: red"></div>-->
+
+<div style="display: inline-block; width: 15px; font-size: 11px; position: relative">
+  <!-- `position: relative` is needed as parent for icons with `position: absolute` -->
   <ng-template [ngIf]="skillLevels?.have">
 <!--    <fa-icon *ngIf='! useSignalLevels'-->
 <!--        class="skill-icon"-->
@@ -6,6 +11,7 @@
 <!--    >-->
 <!--      &lt;!&ndash; margin-right: -4px - causes wrapping in Firefox, but not in Chrome or Safari &ndash;&gt;-->
 <!--    </fa-icon>-->
+<!--    img1-->
     <img
       *ngIf='useSignalLevels'
       class="skill-icon signal-icon"

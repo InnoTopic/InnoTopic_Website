@@ -58,5 +58,6 @@ export function adjustLuminance(color: ColorInput, amount: number): string {
   const rgb = toRgb(color);
   const hsl = toHsl(rgb);
   hsl[2] = Math.min(Math.max(hsl[2] + amount, 0), 1);
+  console.log(`amount`, amount, `hsl[2]`, hsl[2])
   return fromHsl(hsl);
 }
