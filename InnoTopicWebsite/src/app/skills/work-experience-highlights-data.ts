@@ -31,28 +31,43 @@ export const highlights = {
   main: topics({
     Angular: {},
     React: {},
+    "Next.js": {},
     Ionic: {},
     JavaScript: {},
     TypeScript: {},
+    'Web Components': {},
     'Node.js': {},
     Anthropic: {},
     OpenAI: {},
-    "Mistral AI": {},
-    "xAI": {},
-    "Amazon Bedrock": {},
-    "Google Vertex AI": {},
-    "Google Gemini": {},
-    "Qdrant": {},
-    "Rust": {},
-    "WebAssembly": {},
+    'Mistral AI': {},
+    xAI: {},
+    'Amazon Bedrock': {},
+    'Google Vertex AI': {},
+    'Google Gemini': {},
+    'Perplexity.ai': {},
+    'Ollama': {}, // nod to locally running
+    LangChain: {},
+    "Microsoft AutoGen": {},
+    PyTorch: {},
+    Qdrant: {},
+    'Visual Studio Code': {},
+    Continue: {},
+    Rust: {},
+    WebAssembly: {},
     // TODO maybe ts-node; https://typestrong.org/ts-node/ , https://github.com/TypeStrong/ts-node
     // TODO: JavaScriptCore: {} /* used by bun */, // (not here; small frontend icon)
   }),
   secondaryHighlights: topics({
     'Vue.js': {},
     Svelte: {},
-    Deno: {}, /* TODO: secondary highlights */
+    Vercel: {},
+    "Vercel V0": {},
+    Deno: {} /* TODO: secondary highlights */,
     Bun: {} /* TODO: mark as non-main experience; written in Zig */,
+    Zig: {},
+    Gradio: {},
+    Python: {},
+    Jupyter: {},
   }),
   crossPlatform: topics({
     HTML5: {},
@@ -104,8 +119,8 @@ export const highlights = {
     // TODO: Frontend: 'https://million.dev/': {},
 
     jQuery: {} /* kinda as a joke / to test someone */,
-    "Hotwired Turbo": {} /* DHH, does not use TS nor JSDoc nor .d.ts */,
-    "Hotwired Stimulus": {} /* DHH, does not use TS nor JSDoc nor .d.ts */,
+    'Hotwired Turbo': {} /* DHH, does not use TS nor JSDoc nor .d.ts */,
+    'Hotwired Stimulus': {} /* DHH, does not use TS nor JSDoc nor .d.ts */,
     Nx: {},
     Rush: {}, // https://rushstack.io/
     PWA: {},
@@ -262,14 +277,13 @@ export const highlights = {
     Airtable: {},
     Notion: {},
     // https://www.opensourcealternative.to/alternatives-to/Airtable
-    // TODO: Lowcode: 'FIXME Affine': {},
+    // TODO: Lowcode: 'FIXME Affine': {}, // https://affine.pro/
     // TODO: Lowcode: 'FIXME Outline': {}, // or next to notion
     // TODO: Lowcode: 'FIXME Appflowy': {}, // or next to notion
     // TODO: Lowcode: 'FIXME Baserow': {}, // or next to notion
     // TODO: Lowcode: 'FIXME Rowy': {}, // or next to notion
     // TODO: Lowcode:'FIXME nocodb': {}, // or next to notion
     // TODO: Lowcode: https://github.com/appwrite/appwrite
-
 
     Coda: {},
     Zapier: {},
@@ -313,6 +327,7 @@ export const highlights = {
     Jupyter: {},
     Conda: {},
     Anaconda: {},
+    // TODO: python poetry
     'Google Colaboratory': {},
     Observable: {},
     'Hugging Face': {},
@@ -366,7 +381,6 @@ export const highlights = {
     /// Open-source AI-powered coding
     // TODO: AI:  "https://github.com/AntonOsika/gpt-engineer": {}, // -- no logo
     // TODO: AI: "Aider": {}, // -- no logo except on discord
-    // TODO: AI: Ollama: {},
     // TODO: AI: 'https://replicate.com/': {}, // MLops? Maybe not on shirt but should be on AI graph
     // TODO: AI: 'TODO https://github.com/streamlit/streamlit': {},
     // TODO: AI: 'TODO https://github.com/oobabooga/text-generation-webui': {},
@@ -410,19 +424,19 @@ export const highlights = {
     'Microsoft Bing': {},
     'Microsoft Copilot': {},
     'Microsoft AutoGen': {},
-    'LangChain': {},
+    LangChain: {},
     // TODO: AI: https://smythos.com/
     'C3 AI': {}, // enterprise AI
 
     OpenAI: {},
     // TODO: AI: OpenAI Gym
     xAI: {},
-    "Magic.dev": {},
-    'Tesla': {},
+    'Magic.dev': {},
+    Tesla: {},
     '1X Technologies': {},
     'Boston Dynamics': {},
     'Stanford University': {},
-    'Phind': {},
+    Phind: {},
     'Perplexity.ai': {},
     'Quora Poe': {},
     // TODO: AI: Poe: {}, // Quora Poe (Platform for Open Exploration) is a service developed by Quora and launched in December 2022.
@@ -431,7 +445,7 @@ export const highlights = {
     'Google DeepMind': {},
     'Google Vertex AI': {},
     'Mistral AI': {},
-    'Anthropic': {},
+    Anthropic: {},
     'AI21 Labs': {},
     // TODO: AI: 'TODO Meta': {}, // (llama, FAISS)
     'Open Assistant': {},
@@ -442,8 +456,8 @@ export const highlights = {
     // TODO: AI: "https://github.com/joaomdmoura/crewAI": {},
     'Stability AI': {},
     'Stable Diffusion': {},
-    'Midjourney': {},
-    'Runway': {}, // https://runwayml.com/
+    Midjourney: {},
+    Runway: {}, // https://runwayml.com/
     // TODO: AI: AutoGPT: {},
     // TODO: AI: 'https://www.rabbit.tech/': {}, // rabbit r1 - https://twitter.com/PatrickJS__/status/1744976985313660968
     // TODO: AI: 'https://www.aie.foundation/': {},
@@ -467,6 +481,7 @@ export const highlights = {
     Vimeo: {},
     LinkedIn: {},
     Mastodon: {},
+    // TODO: x.com (twitter)
     Meetup: {},
     Discord: {}, // AI stuff
     'Y Combinator': {}, // also Hacker News ( https://news.ycombinator.com/ ) where stuff emerges; also social and kinda comprehension
