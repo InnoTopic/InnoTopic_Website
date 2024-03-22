@@ -82,6 +82,10 @@ const routes: Routes = [
     path: 'test-tag',
     loadChildren: () => import('./test-tag/test-tag.module').then( m => m.TestTagPageModule)
   },
+  {
+    path: 'experiments',
+    loadChildren: () => import('./experiments/experiments.module').then( m => m.ExperimentsPageModule)
+  },
   { path: '**', redirectTo: 'karol-depka' /* FIXME: does not work? */ },
 ];
 

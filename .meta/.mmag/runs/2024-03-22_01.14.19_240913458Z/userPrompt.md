@@ -1,0 +1,1 @@
+write example code with angular signals
