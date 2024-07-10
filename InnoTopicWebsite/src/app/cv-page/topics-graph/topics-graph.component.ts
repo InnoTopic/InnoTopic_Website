@@ -10,7 +10,6 @@ import {
 } from '../../TopicFriendsShared3/topics-core/topics-data';
 import { errorAlert } from '../../utils/utils';
 import {size} from "./topics-graph.data";
-import {PrintService} from "../../TopicFriendsShared3/topics-core/print.service";
 
 
 // idea: new/expanding-to topics could be with effect e.g. static noise or fading in-out, e.g. qwik, turbopack; while old, permanently faded
@@ -49,7 +48,6 @@ const preset = {
   // forceManyBodyStrength: -1000,
   forceManyBodyStrength: -200,
   allowZoom: true,
-  // allowZoom: false,
 }
 
 // TODO: try d3.forceRadial(radius[, x][, y])
@@ -68,8 +66,6 @@ export const
   encapsulation: ViewEncapsulation.None,
 })
 export class TopicsGraphComponent implements OnInit {
-
-  isPrint = PrintService.isPrint
 
   @Input()
   nodes = {
@@ -104,8 +100,6 @@ export class TopicsGraphComponent implements OnInit {
           // strengthMul: 0.4,
           connections: {
             Backend: {
-              sizeMult: size.veryBig,
-              strengthMul: 1.5,
               connections: {
                 Cloud: {
                   connections: {
@@ -122,7 +116,7 @@ export class TopicsGraphComponent implements OnInit {
                     "Cloud Firestore": {},
                     "PostgreSQL": {},
                     "MongoDB": {
-                      sizeMult: size.veryBig,
+                      sizeMult: size.big,
                     },
                     "Supabase": {},
                     "MariaDB": {},
@@ -130,14 +124,14 @@ export class TopicsGraphComponent implements OnInit {
                   }
                 },
                 Python: {
-                  sizeMult: size.veryBig,
+                  sizeMult: veryBigSize,
                   connections: {
                     Django: {
-                      sizeMult: size.veryBig,
+                      sizeMult: bigSize,
 
                     },
                     Flask: {
-                      sizeMult: size.mid
+                      sizeMult: smallSize
                     },
                   }
                 }
@@ -345,10 +339,6 @@ export class TopicsGraphComponent implements OnInit {
     //   .translate(150, 100)
     //   .scale(2))
 
-    // svg.call(d3.zoom().transform, d3.zoomIdentity.translate(1050, 50)
-    //   .scale(130.5));
-
-
     if (preset.allowZoom) {
       svgRootElement.call(d3.zoom().on("zoom", function () {
         // https://www.geeksforgeeks.org/d3-js-transform-scale-function/
@@ -428,14 +418,14 @@ export class TopicsGraphComponent implements OnInit {
     };
 
 
-    // const allLinksGroup = svg.append("g")
-    //   .attr("class", "links")
-    //   .selectAll("line")
-    //   .data(graph.links)
-    //   .enter().append("line")
-    //   .attr("stroke-width", function(d: any) {
-    //     return 5; // Math.sqrt(d.thick == null ? 10 : d.thick );
-    //   });
+    const allLinksGroup = svg.append("g")
+      .attr("class", "links")
+      .selectAll("line")
+      .data(graph.links)
+      .enter().append("line")
+      .attr("stroke-width", function(d: any) {
+        return 5; // Math.sqrt(d.thick == null ? 10 : d.thick );
+      });
 
     const allNodesGroup = svg.append("g") /* Group that contains all nodes */
       .attr("class", "nodes")
@@ -578,11 +568,11 @@ export class TopicsGraphComponent implements OnInit {
 
 
     function ticked() {
-      // allLinksGroup
-      //   .attr("x1", function(d: any) { return d.source.x; })
-      //   .attr("y1", function(d: any) { return d.source.y; })
-      //   .attr("x2", function(d: any) { return d.target.x; })
-      //   .attr("y2", function(d: any) { return d.target.y; });
+      allLinksGroup
+        .attr("x1", function(d: any) { return d.source.x; })
+        .attr("y1", function(d: any) { return d.source.y; })
+        .attr("x2", function(d: any) { return d.target.x; })
+        .attr("y2", function(d: any) { return d.target.y; });
 
       perNodeMainGroup
         .attr("x", function(d: any) { return (d.x - radiusFunc(d) ); })

@@ -30,15 +30,6 @@ export const highlights = {
 
   /** High-level stuff that I really do or very strongly want to do */
   main: topics({
-    Python: {},
-    Django: {},
-    Rust: {},
-    WebAssembly: {},
-
-    MongoDB: {},
-    PostgreSQL: {},
-    Supabase: {},
-
     Angular: {},
     React: {},
     'Next.js': {},
@@ -59,7 +50,7 @@ export const highlights = {
     'Quora Poe': {}, // (Platform for Open Exploration) is a service developed by Quora and launched in December 2022.
     'Hume AI': {},
     Ollama: {}, // nod to locally running
-    // Python: {},
+    Python: {},
     PyTorch: {},
     LangChain: {},
     'Microsoft AutoGen': {},
@@ -68,6 +59,8 @@ export const highlights = {
     Continue: {},
     MetaMage: {},
     "Cursor.sh": {},
+    Rust: {},
+    WebAssembly: {},
     // TODO maybe ts-node; https://typestrong.org/ts-node/ , https://github.com/TypeStrong/ts-node
     // TODO: JavaScriptCore: {} /* used by bun */, // (not here; small frontend icon)
   }),
@@ -126,7 +119,6 @@ export const highlights = {
     }
   }),
   crossPlatform: topics({
-    Python: {},
     HTML5: {},
     Ionic: {},
     Electron: {} /* TODO: mark as non-main experience */,
@@ -142,9 +134,9 @@ export const highlights = {
     Java: {},
     Android: {},
     iOS: {},
-    Linux: {},
     macOS: {},
     'Microsoft Windows': {},
+    Linux: {},
   }),
   /* TODO could have frontend (&fullstack frameworks) in a separate array to appear first via array concatenation
     or be on its own section / row(s)
@@ -658,9 +650,7 @@ export const highlights = {
    NuxtJS ? (Vue, inspired by Next.js) - https://www.npmjs.com/package/nuxt - https://github.com/nuxt/framework TypeScript
    TODO some DevOps, like Terraform or other popular / rising
   *  */
-  /** This should just be languages / platforms / ecosystems
-   * TODO: distinguish broadInterests from broadExperience
-   * */
+  /** This should just be languages / platforms / ecosystems */
   broad: topics({
     /* maybe distinguish broad from polyglot? This is more past stuff */
     // "JavaScript": {}, /* FIXME es6 bad */

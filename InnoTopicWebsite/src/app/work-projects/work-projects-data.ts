@@ -61,10 +61,10 @@ export class WorkOrganisationsAndProjectsData {
     logoFileName: `epic-elite-logo.svg`,
     description: 'Test #Rust #React and #AWS hashtags',
     projects: {
-      'AI-based LLM-powered processing of product metadata': project({
+      'EpicElite Platform': project({
         roles: 'Staff Engineer',
-        description: 'Using #Python and #Amazon_Bedrock with #DynamoDB and #MongoDB and #Django + #TypeScript Web App' +
-          'Working directly with CTO and Senior Principal Engineer.',
+        description: 'Recruited and interviewed 5 Developers and a UI/UX/Web/Graphics Designer. #Lead of 5 #TypeScript and #Python Developers. Did code&architecture reviews.' +
+          'Working directly with CEO & Director of Operations. Communication in English, Spanish, Polish.',
         topicsById: {
           'Terraform': {},
           'Angular': {},
@@ -131,7 +131,7 @@ export class WorkOrganisationsAndProjectsData {
       'EpicElite Platform': project({
         roles: 'Lead/Senior Full-Stack Developer & Interviewing and Recruiting (Consultant)',
         description: 'Recruited and interviewed 5 Developers and a UI/UX/Web/Graphics Designer. I have lead a team of 5 Developers. Did code&architecture reviews.' +
-          'Working directly with CEO & Director of Operations. Communication in English, Spanish, Polish. #Python #Django + #TypeScript app using #MongoDB and #MariaDB .',
+          'Working directly with CEO & Director of Operations. Communication in English, Spanish, Polish.',
         topicsById: {
           'Mailgun': {},
           'Rust': {},

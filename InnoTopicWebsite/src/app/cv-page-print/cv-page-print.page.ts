@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {PrintService} from "../TopicFriendsShared3/topics-core/print.service";
 
 @Component({
   selector: 'app-cv-page-print',
@@ -8,9 +7,7 @@ import {PrintService} from "../TopicFriendsShared3/topics-core/print.service";
 })
 export class CvPagePrintPage implements OnInit {
 
-  constructor() {
-    PrintService.isPrint = true
-  }
+  constructor() { }
 
   ngOnInit() {
   }

@@ -266,7 +266,7 @@ export class Frontend {
   'Dexie.js' = t('dexie-js.svg')
   'Aurelia' = t()
   'Font Awesome' = t('fort-awesome-alt-brands.svg')
-  Workbox = tWide('workbox-icon.svg')
+  Workbox = tWide('Workbox-Logo-Grey.svg')
   'SVG.js' = t('svg-js.png' /* WTF, PNG for an SVG lib :D */)
   'Storybook' = t('storybook-icon.svg')
   // TODO: storyblok?
@@ -276,7 +276,7 @@ export class Frontend {
     https://developers.google.com/web/tools/lighthouse
     https://developers.google.com/web/tools/lighthouse/images/lighthouse-logo.svg*/
   )
-  'three.js' = t('threejs.svg'/*
+  'three.js' = tNoIcon(/*
     https://threejs.org/
     pressKit: https://github.com/mrdoob/three.js/issues/2789
 
@@ -339,7 +339,7 @@ export class Backend {
   Laravel = t()
 
   'Express.js' = tWide({
-    logo: 'expressjs-icon.svg',
+    logo: 'express.svg',
     subTopics: [
       tag('Kraken.js', 'krakenjs', 'http://krakenjs.com/'),
       tag('FeathersJS', 'feathersjs', 'https://feathersjs.com/'),
@@ -394,8 +394,8 @@ export class Backend {
 
 
 export class Frontend_And_Backend_App_Platforms {
-  JHipster = tWide("jhipster-icon.svg")
-  Meteor = tWide('meteor-icon.svg')
+  JHipster = t()
+  Meteor = tWide()
   Hoodie = tWide() // redirects to rxdb
   Feathers = t('feathersjs.svg') // The API and Real-time Application Framework
   Akita = tWide() // https://github.com/datorama/akita
@@ -645,7 +645,7 @@ export class OS {
   'Debian Linux' = t('debian.svg')
   'Fedora Linux' = t('fedora.svg' /* Officially just "Fedora", but better for filtering*/)
   'macOS' = t('macosx.svg')
-  'Microsoft Windows' = t('microsoft-windows-icon.svg')
+  'Microsoft Windows' = t()
 }
 
 export class Mobile {
@@ -739,7 +739,6 @@ export class Databases {
   "8base" = t('8base-icon') // like Hasura; "Create custom JavaScript and TypeScript logic and run as 8base Serverless Functions."
   Prisma = tWide() /* "Next-generation Node.js and TypeScript ORM" */
   MongoDB = tWide('mongodb-icon.svg')
-  DynamoDB = tSquare('aws-dynamodb.svg')
   ArangoDB = tWide('arangodb-icon') /* native multi-model database with flexible data models for documents, graphs, and key-values. Build high performance applications using a convenient SQL-like query language or JavaScript extensions. */
   Mongoose = tNoIcon()
   // TODO
@@ -790,7 +789,7 @@ export class Version_Control {
 */
 export class Other {
   'Mailgun' = t('mailgun-icon.svg')
-  'reCAPTCHA' = t('recaptcha-icon.svg') // TODO: crop icon only
+  'reCAPTCHA' = t('recaptcha.svg') // TODO: crop icon only
   'AudioSalad' = t(`audiosalad-traced.svg`)
   'WorldFirst' = tNoIcon()
   'Payoneer' = tWide()
