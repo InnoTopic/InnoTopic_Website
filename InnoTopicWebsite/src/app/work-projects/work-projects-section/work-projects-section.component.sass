@@ -17,17 +17,47 @@
 
 .organisation
   margin: 0
+  padding: 16px
+  background: antiquewhite
+
   &:not(:last-child)
     // page-break-after: always
     page-break-after: auto
     margin-bottom: 35px
-  h2
+
+  header.organisation-header
+
+    border: 1px dashed #fff
+
+    .org
+      display: flex
+      align-items: center
+      justify-content: space-between
+      gap: 16px
+
+      .brand-logo
+        margin: 0 16px
+
+      h3.brand-name
+        flex: 1
+        line-height: 1.1
+        text-align: left
+
+    .org-detail
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+      .comment-flag-wrap
+        display: flex
+        gap: 16px
+
     //border-bottom: 2px solid mat-color($light-accent,800)
-    margin-bottom: 20px
-    display: flex
-    align-items: center
-    line-height: 1.1
-    page-break-inside: avoid
+    // margin-bottom: 20px
+    // display: flex
+    // align-items: center
+    // line-height: 1.1
+    // page-break-inside: avoid
     @media screen and (max-width: $break-medium)
       flex-wrap: wrap
       justify-content: center
@@ -46,6 +76,16 @@
   a
     margin-left: 10px
     display: block
+
+  .recommendations
+    display: flex
+    align-items: center
+    justify-content: flex-end
+
+    a
+      padding: 4px 8px
+      border: 1px dashed #fff
+      border-top: unset
 
 app-work-project
   page-break-before: auto
