@@ -3,28 +3,28 @@
   <div class="overview">
     <div>
       <p><strong>~15 Years</strong> of international…</p>
-      <app-flags flags="de at pl gb us es es-ct fr lu in"></app-flags>
+      <app-flags flags="de at pl gb us es es-ct fr lu in ae" />
       <p>…cross-platform experience: </p>
       <span>
-      <app-topic-logo *ngFor="let topic of highlights.crossPlatform.ids" [topic]="topic"></app-topic-logo>
+      <app-topic-logo *ngFor="let topic of highlights.crossPlatform.ids" [topic]="topic" />
 
       </span>
     </div>
     <div>
       <p>Modern <strong>Full-Stack Development</strong>, focused on</p>
 
-      <app-topic-logo *ngFor="let topic of highlights.main.ids" [topic]="topic"></app-topic-logo>
-      TODO: Secondary:
-      <app-topic-logo *ngFor="let topic of highlights.secondaryHighlights.ids" [topic]="topic"></app-topic-logo>
+<!--      <app-topic-logo *ngFor="let topic of highlights.main.ids" [topic]="topic" />-->
+<!--      TODO: Secondary:-->
+<!--      <app-topic-logo *ngFor="let topic of highlights.secondaryHighlights.ids" [topic]="topic" />-->
 
       <p>ecosystems, with a strong "utility belt":</p>
       <span>
         <!-- TODO: tooltips -->
-<!--        <app-topic-logo *ngFor="let topic of highlights.utility.ids" [topic]="topic"></app-topic-logo>-->
+<!--        <app-topic-logo *ngFor="let topic of highlights.utility.ids" [topic]="topic" />-->
       </span>
       <p>with a broad and polyglot general experience:</p>
       <span>
-        <app-topic-logo *ngFor="let topic of highlights.broad.ids" [topic]="topic"></app-topic-logo>
+<!--        <app-topic-logo *ngFor="let topic of highlights.broad.ids" [topic]="topic" />-->
       </span>
     </div>
   </div>
@@ -32,61 +32,75 @@
 </section>
 
 <section id="languages" class="container">
+  <!-- FIXME: extract languages component -->
   <h2 class="section-title">Languages</h2>
+  <!-- FIXME: 2..4 columns -->
+  <!--  <app-flags flags="de at lu pl gb us pt es es-ct fr" />-->
+  <!-- FIXME: extract component for flag + label-->
   <div class="languages-grid">
     <div class="language">
-      <div class="app-flags"><app-flags flags="pl"></app-flags></div>
+      <div class="app-flags"><app-flags flags="pl" /></div>
       <label>Polish</label>
       <span>Native</span>
     </div>
     <div class="language">
-      <div class="app-flags"><app-flags flags="gb us"></app-flags></div>
+      <div class="app-flags"><app-flags flags="gb us" /></div>
       <label>English</label>
       <span>Full professional proficiency</span>
     </div>
     <div class="language">
-      <div class="app-flags"><app-flags flags="es mx"></app-flags></div>
+      <div class="app-flags"><app-flags flags="es mx" /></div>
       <label>Spanish</label>
       <span>Full professional proficiency</span>
     </div>
     <div class="language">
-      <div class="app-flags"><app-flags flags="de at"></app-flags></div>
+      <div class="app-flags"><app-flags flags="de at" /></div>
       <label>German</label>
       <span>Full professional proficiency</span>
     </div>
     <div class="language">
-      <div class="app-flags"><app-flags flags="es-ct"></app-flags></div>
+      <div class="app-flags"><app-flags flags="es-ct" /></div>
       <label>Català</label>
-      <span>Basic</span>
+      <span>Intermediate</span>
     </div>
     <div class="language">
-      <div class="app-flags"><app-flags flags="pt br"></app-flags></div>
+      <div class="app-flags"><app-flags flags="pt br" /></div>
       <label>Portuguese</label>
       <span>Intermediate</span>
     </div>
     <div class="language">
-      <div class="app-flags"><app-flags flags="fr be"></app-flags></div>
+      <div class="app-flags"><app-flags flags="fr be" /></div>
       <label>French</label>
       <span>Beginner</span>
     </div>
     <div class="language">
-      <div class="app-flags"><app-flags flags="it"></app-flags></div>
+      <div class="app-flags"><app-flags flags="it" /></div>
       <label>Italian</label>
       <span>Beginner</span>
     </div>
     <div class="language">
-      <div class="app-flags"><app-flags flags="nl be"></app-flags></div>
+      <div class="app-flags"><app-flags flags="nl be" /></div>
       <label>Dutch</label>
       <span>Beginner</span>
     </div>
     <div class="language">
-      <div class="app-flags"><app-flags flags="ru"></app-flags></div>
+      <div class="app-flags"><app-flags flags="ru" /></div>
       <label>Russian</label>
       <span>Beginner</span>
     </div>
     <div class="language">
-      <div class="app-flags"><app-flags flags="cn"></app-flags></div>
+      <div class="app-flags"><app-flags flags="cn" /></div>
       <label>Mandarin Chinese</label>
+      <span>Beginner</span>
+    </div>
+    <div class="language">
+      <div class="app-flags"><app-flags flags="ma"/></div>
+      <label>Arabic</label>
+      <span>Beginner</span>
+    </div>
+    <div class="language">
+      <div class="app-flags"><app-flags flags="in"/></div>
+      <label>Hindi</label>
       <span>Beginner</span>
     </div>
   </div>
@@ -116,9 +130,9 @@
   <!--    <app-skill-levels-icons [skillLevels]="{have: 'beginner', want: 'expert'}"></app-skill-levels-icons>-->
   <!--    <app-skill-levels-icons [skillLevels]="{have: 'advanced'}"></app-skill-levels-icons>-->
       <p class="example">Example:</p>
-      <app-topic-skill [tId]="'Angular'"
+      <app-topic-skill [tId]="'Python'"
                       [skillLevels]="{have: 'advanced', want: 'expert'}"
-      ></app-topic-skill>- have: advanced; on my way to become: expert.
+      />- have: advanced; on my way to become: expert.
   <!--    none: 'battery-empty',-->
   <!--    beginner: "battery-quarter",-->
   <!--    intermediate: "battery-half",-->

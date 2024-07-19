@@ -26,10 +26,10 @@
 
 <!--    &lt;!&ndash;</ng-template>&ndash;&gt;-->
 <!--  </section>-->
+  <p>
+    Some of the books and audiobooks that I've read and listened to, in English, Polish, German, Spanish, Portuguese, Russian, French.
+  </p>
   <div style="display: flex; flex-wrap: wrap;">
-    <p>
-      Some of the books and audiobooks that I've read and listened to, in English, Polish, German, Spanish, Portuguese, Russian.
-    </p>
 
     <div *ngFor="let book of books" >
       <img width=130 height=130 [attr.src]="book.coverUrl"

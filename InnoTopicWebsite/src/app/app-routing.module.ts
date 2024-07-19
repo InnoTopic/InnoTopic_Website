@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import {TechGraphD3Component} from "./cv-page/tech-graph-d3/tech-graph-d3.component";
 import {TopicsGraphComponent} from "./cv-page/topics-graph/topics-graph.component";
+import {PrintService} from "./TopicFriendsShared3/topics-core/print.service";
 // import {TechGraphD3Component} from "./cv-page/tech-graph-d3/tech-graph-d3.component";
 // import {TechGraphD3Index1Component} from "./cv-page/tech-graph-d3-index1/tech-graph-d3-index1.component";
 // import {CvPageComponent} from "./cv-page/cv-page.component";
@@ -60,7 +61,12 @@ const routes: Routes = [
   },
   {
     path: 'print',
-    loadChildren: () => import('./cv-page-print/cv-page-print.module').then( m => m.CvPagePrintPageModule)
+    loadChildren: async () => {
+      console.log('print, loadChildren; FIXME: re-enable PrintService.isPrint = true') // why this runs?
+      // PrintService.isPrint = true // this needs to be done earlier, at router level
+      let m = await import('./cv-page-print/cv-page-print.module');
+      return m.CvPagePrintPageModule;
+    }
   },
   //
   // // Experimental routes
@@ -90,12 +96,22 @@ const routes: Routes = [
     path: 'experiments',
     loadChildren: () => import('./experiments/experiments.module').then( m => m.ExperimentsPageModule)
   },
+  {
+    path: 'config',
+    loadChildren: async () => (await import('./experiments/experiments.module')).ExperimentsPageModule
+  },
+  {
+    path: 'theme',
+    loadChildren: async () => (await import('./experiments/experiments.module')).ExperimentsPageModule
+  },
   { path: '**', redirectTo: 'karol-depka' /* FIXME: does not work? */ },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, {
+      // preloadingStrategy: PreloadAllModules
+    })
   ],
   exports: [RouterModule]
 })

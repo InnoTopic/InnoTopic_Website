@@ -53,6 +53,7 @@ export class TopicTagComponent implements OnInit {
     // console.log('related tags', this.relatedTopicLists)
     // console.log('TopicTagComponent: tag', this.tag)
     this.tId = this.tId.replace("#", '') // FIXME for c#
+    this.tId = this.tId.replace(/_/g, ' ') // Fix for #Some_Hashtag
     const topicById = this.topicsService.getTopicById(this.tId)
     if ( ! topicById ) {
       console.error('! topicById', this.tag, this.tId)

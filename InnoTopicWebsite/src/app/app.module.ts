@@ -39,6 +39,7 @@ import {initialState, themeConfigReducer} from "./store/reducers/theme-config-re
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import {updateThemeConfig} from "./store/actions/theme-config-actions";
 import {CvPagePrintPageModule} from "./cv-page-print/cv-page-print.module";
+import {PrintService} from "./TopicFriendsShared3/topics-core/print.service";
 
 
 export function initializeApp(store: Store) {
@@ -74,6 +75,12 @@ export function initializeApp(store: Store) {
       deps: [Store],
       multi: true,
     },
+    // {
+    //   provide: APP_INITIALIZER,
+    //   useClass: PrintService,
+    //   // deps: [Store],
+    //   multi: true,
+    // },
   ],
   bootstrap: [AppComponent],
 })

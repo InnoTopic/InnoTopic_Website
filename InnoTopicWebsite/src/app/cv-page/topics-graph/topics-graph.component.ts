@@ -10,6 +10,7 @@ import {
 } from '../../TopicFriendsShared3/topics-core/topics-data';
 import { errorAlert } from '../../utils/utils';
 import {size} from "./topics-graph.data";
+import {PrintService} from "../../TopicFriendsShared3/topics-core/print.service";
 
 
 // idea: new/expanding-to topics could be with effect e.g. static noise or fading in-out, e.g. qwik, turbopack; while old, permanently faded
@@ -48,6 +49,7 @@ const preset = {
   // forceManyBodyStrength: -1000,
   forceManyBodyStrength: -200,
   allowZoom: true,
+  // allowZoom: false,
 }
 
 // TODO: try d3.forceRadial(radius[, x][, y])
@@ -66,6 +68,10 @@ export const
   encapsulation: ViewEncapsulation.None,
 })
 export class TopicsGraphComponent implements OnInit {
+
+  get isPrint() {
+    return PrintService.isPrint
+  }
 
   @Input()
   nodes = {
@@ -100,6 +106,8 @@ export class TopicsGraphComponent implements OnInit {
           // strengthMul: 0.4,
           connections: {
             Backend: {
+              sizeMult: size.veryBig,
+              strengthMul: 1.5,
               connections: {
                 Cloud: {
                   connections: {
@@ -116,7 +124,7 @@ export class TopicsGraphComponent implements OnInit {
                     "Cloud Firestore": {},
                     "PostgreSQL": {},
                     "MongoDB": {
-                      sizeMult: size.big,
+                      sizeMult: size.veryBig,
                     },
                     "Supabase": {},
                     "MariaDB": {},
@@ -124,14 +132,14 @@ export class TopicsGraphComponent implements OnInit {
                   }
                 },
                 Python: {
-                  sizeMult: veryBigSize,
+                  sizeMult: size.veryBig,
                   connections: {
                     Django: {
-                      sizeMult: bigSize,
+                      sizeMult: size.veryBig,
 
                     },
                     Flask: {
-                      sizeMult: smallSize
+                      sizeMult: size.mid
                     },
                   }
                 }
@@ -198,7 +206,19 @@ export class TopicsGraphComponent implements OnInit {
         Deno: {
           connections: {
             Rust: {
+              sizeMult: size.veryBig,
               connections: {
+                WebAssembly: {
+
+                },
+                Tokio: {},
+                Tonic: {
+                  sizeMult: smallSize,
+                },
+                Tauri: {},
+                Dioxus: {},
+                Yew: {},
+                // SurrealDB: {},
                 Turbopack: {},
                 Turborepo: {},
               },
@@ -332,6 +352,8 @@ export class TopicsGraphComponent implements OnInit {
       width = +svgRootElement.attr("width"),
       height = +svgRootElement.attr("height");
 
+      svgRootElement.selectAll('*').remove();
+
     const svg = svgRootElement.append("g"); /* actually a <g>, to fix transform not working in <svg> on chrome:
         http://stackoverflow.com/questions/27283610/d3-workaround-for-svg-transform-in-chrome */
 
@@ -339,11 +361,15 @@ export class TopicsGraphComponent implements OnInit {
     //   .translate(150, 100)
     //   .scale(2))
 
+    // svg.call(d3.zoom().transform, d3.zoomIdentity.translate(1050, 50)
+    //   .scale(130.5));
+
+
     if (preset.allowZoom) {
       svgRootElement.call(d3.zoom().on("zoom", function () {
         // https://www.geeksforgeeks.org/d3-js-transform-scale-function/
         console.log('transform d3.event.transform', d3.event.transform)
-        svg.attr("transform", d3.event.transform)
+        svg.attr("transform", d3.event.transform) // TODO: I could hack the default zoom level here??
         // svg.attr("transform", {k: 0.6087830093314941, x: 176.23706425069088, y: 116.76122945091723})
         // svg.attr("transform", d3.transform({k: 0.6087830093314941, x: 176.23706425069088, y: 116.76122945091723}))
       }));
@@ -364,7 +390,7 @@ export class TopicsGraphComponent implements OnInit {
         d3.forceLink().id(function(d: any) { return d.id; })
           .strength(function(d: any) {
             if (d.strengthMul) {
-              console.log('d.strengthMul', d.strengthMul)
+              // console.log('d.strengthMul', d.strengthMul)
             }
             // return preset.forceLinkStrength;
             //          return 1 / Math.min(count(link.source), count(link.target));
@@ -418,14 +444,14 @@ export class TopicsGraphComponent implements OnInit {
     };
 
 
-    const allLinksGroup = svg.append("g")
-      .attr("class", "links")
-      .selectAll("line")
-      .data(graph.links)
-      .enter().append("line")
-      .attr("stroke-width", function(d: any) {
-        return 5; // Math.sqrt(d.thick == null ? 10 : d.thick );
-      });
+    // const allLinksGroup = svg.append("g")
+    //   .attr("class", "links")
+    //   .selectAll("line")
+    //   .data(graph.links)
+    //   .enter().append("line")
+    //   .attr("stroke-width", function(d: any) {
+    //     return 5; // Math.sqrt(d.thick == null ? 10 : d.thick );
+    //   });
 
     const allNodesGroup = svg.append("g") /* Group that contains all nodes */
       .attr("class", "nodes")
@@ -568,11 +594,11 @@ export class TopicsGraphComponent implements OnInit {
 
 
     function ticked() {
-      allLinksGroup
-        .attr("x1", function(d: any) { return d.source.x; })
-        .attr("y1", function(d: any) { return d.source.y; })
-        .attr("x2", function(d: any) { return d.target.x; })
-        .attr("y2", function(d: any) { return d.target.y; });
+      // allLinksGroup
+      //   .attr("x1", function(d: any) { return d.source.x; })
+      //   .attr("y1", function(d: any) { return d.source.y; })
+      //   .attr("x2", function(d: any) { return d.target.x; })
+      //   .attr("y2", function(d: any) { return d.target.y; });
 
       perNodeMainGroup
         .attr("x", function(d: any) { return (d.x - radiusFunc(d) ); })

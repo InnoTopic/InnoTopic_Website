@@ -3,11 +3,37 @@ mat-form-field {
 }
 
 .other-profile-icon-container {
-  text-align: center;
-  width: 1.5em;
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 
 .tf-user-other-profile-prefix {
   color: gray;
 }
+// .parent-container
+//   display: flex
+//   align-items: center
+
+// .other-profile-icon-container
+//   display: flex
+//   align-items: center
+//   justify-content: center
+//   width: 1.5em
+//   height: 1.5em
+//   margin-right: 10px
+
+// .other-profile-icon-container app-user-other-profile-icon
+//   display: flex
+//   align-items: center
+//   justify-content: center
+//   height: 100%
+
+// a
+//   display: flex
+//   align-items: center
+
+
+// app-other-profile-user-name p
+//   display: flex
+//   align-items: center
+//   justify-content: flex-start

@@ -94,30 +94,34 @@ h4
     width: 16px !important
     height: 16px !important
 
+.parent-container
+  display: flex
+  align-items: center
+
 .other-profile-icon-container
-  width: 1.2em !important
-  height: 1.2em
-   padding: 5px
-   background-color: #eee
-   border-radius: 50%
-  flex: none
-  & + a
-    word-break: break-all
-    margin-left: 5px
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 1.5em
+  height: 1.5em
+  margin-right: 10px
 
-app-user-other-profile-icon
-  vertical-align: middle
+.other-profile-icon-container app-user-other-profile-icon
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 100%
 
-.otherProfileIcon
-  width: 1rem !important
-  height: auto !important
-  // TODO: theme - color
+a
+  display: flex
+  align-items: center
+
 
 app-other-profile-user-name p
   display: flex
   align-items: center
   justify-content: flex-start
-
+  
 .dark-theme
   .section-title
    background-color: var(--ion-color-dark)
@@ -156,17 +160,6 @@ model-viewer
 body
   background-color: #e0e0e0
 // Adding grid layout for languages section just crosschecking
-//.languages-grid
- // display: grid
- // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
-  //gap: 20px
-
-//.language
-  //display: flex
- // flex-direction: column
-  //align-items: center
-  //text-align: center
- //this is another way of how it can looked , im talking about language section
 .languages-grid
   display: grid
   grid-template-columns: repeat(2, 1fr) // Creates two columns with equal width
@@ -200,5 +193,3 @@ body
 
 #languages
   font-weight: bold
-
-   

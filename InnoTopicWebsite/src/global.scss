@@ -1,106 +1,113 @@
-/*
- * App Global CSS
- * ----------------------------------------------------------------------------
- * Put style rules here that you want to apply globally. These styles are for
- * the entire app and not just one component. Additionally, this file can be
- * used as an entry point to import other CSS/Sass files to be included in the
- * output CSS.
- * For more information on global stylesheets, visit the documentation:
- * https://ionicframework.com/docs/layout/global-stylesheets
- */
-
-///* Core CSS required for Ionic components to work properly */
+///*
+// * App Global CSS
+// * ----------------------------------------------------------------------------
+// * Put style rules here that you want to apply globally. These styles are for
+// * the entire app and not just one component. Additionally, this file can be
+// * used as an entry point to import other CSS/Sass files to be included in the
+// * output CSS.
+// * For more information on global stylesheets, visit the documentation:
+// * https://ionicframework.com/docs/layout/global-stylesheets
+// */
+//
+//// I was disabling those to print CV to PDF:
+//
+/////* Core CSS required for Ionic components to work properly */
 @import "@ionic/angular/css/core.css";
-
-///* Basic CSS for apps built with Ionic */
+////
+/////* Basic CSS for apps built with Ionic */
 @import "@ionic/angular/css/normalize.css";
-@import "@ionic/angular/css/structure.css";
+//@import "@ionic/angular/css/structure.css"; /* THIS is causing no-scroll on PDF */
 @import "@ionic/angular/css/typography.css";
 @import '@ionic/angular/css/display.css';
-
+//
 ///* Optional CSS utils that can be commented out */
 @import "@ionic/angular/css/padding.css";
 @import "@ionic/angular/css/float-elements.css";
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
-
-
+//
+//
 html, body {
   overflow: scroll !important;
   //height: 100% !important; /* this is causing no scroll on PDF print */
 }
 
-// @media print {
-//   /* Set the page size to auto */
-//   @page {
-//     size: auto;
-//   }
-
-//   /* Remove any background colors and images */
-//   body, ion-content, * {
-//     background-color: transparent !important;
-//     background-image: none !important;
-//   }
-
-//   /* Make sure scrollable content is visible during print */
-//   ion-content, .scrollable {
-//     overflow: visible !important;
-//   }
-
-//   /* Add any other styles specific to print media */
-// }
 @media print {
-    html, body, app-root, ion-router-outlet, ion-content {
-      overflow: scroll !important;
-      height: auto !important; // FOR PDF Print 2024
-      max-height: max-content !important;
-    }
-  }
-  
-/** This is from ChatGPT to enable scrolling (multiple pages, instead of limited to viewport) for print: */
-/* 2024: disabling this fixes exporting to PDF: */
-@media print {
-  /* Set the page size to auto */
-  @page {
-    size: auto;
-  }
-
-/* BEGIN issues with PDF export blank page is here: */
-  /* Make sure the body, ion-content, and other container elements have the correct height and overflow properties */
-  body, ion-content, .scrollable {
-    height: auto !important;
-    max-height: none !important;
-    overflow: visible !important;
-  }
-/* END issues with PDF export blank page is here: */
-
-  /* Reset fixed positioning */
-  * {
-    position: static !important;
-  }
-  
-  /* Reset transform properties */
-  * {
-    transform: none !important;
-  }
-
-  /* Adjust flexbox and grid layout properties */
-  .flex-container, .grid-container {
-    display: block !important;
-  }
-
-  /* Add any other styles specific to print media */
-}
-
-@media print {
-  /* Disable block shadows for printing */
-  * {
-    box-shadow: none !important;
+  html, body, app-root, ion-router-outlet, ion-content {
+    overflow: scroll !important;
+    height: auto !important; // FOR PDF Print 2024
+    max-height: max-content !important;
+ 
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
 
-.clickable {
-  cursor: pointer;
-  user-select: none;
-}
+//
+//@media print {
+////  /* Set the page size to auto */
+////  @page {
+////    size: auto;
+////  }
+////
+////  /* Remove any background colors and images */
+////  body, ion-content, * {
+////    background-color: transparent !important;
+////    background-image: none !important;
+////  }
+////
+//  /* Make sure scrollable content is visible during print */
+//  ion-content, .scrollable {
+//    overflow: /*visible*/ scroll !important;
+//  }
+////
+////  /* Add any other styles specific to print media */
+//}
+//
+///** This is from ChatGPT to enable scrolling (multiple pages, instead of limited to viewport) for print: */
+///* 2024: disabling this fixes exporting to PDF: */
+//@media print {
+//  ///* Set the page size to auto */
+//  //@page {
+//  //  size: auto;
+//  //}
+//
+///* BEGIN issues with PDF export blank page is here: */
+//  ///* Make sure the body, ion-content, and other container elements have the correct height and overflow properties */
+//  body, ion-content, .scrollable {
+//  //  height: auto !important;
+//  //  max-height: none !important;
+//    overflow: /*visible*/ scroll !important;
+//  }
+///* END issues with PDF export blank page is here: */
+//
+////  ///* Reset fixed positioning */
+////  //* {
+////  //  position: static !important;
+////  //}
+////  //
+////  ///* Reset transform properties */
+////  //* {
+////  //  transform: none !important;
+////  //}
+////
+////  /* Adjust flexbox and grid layout properties */
+////  .flex-container, .grid-container {
+////    display: block !important;
+////  }
+////
+////  /* Add any other styles specific to print media */
+//}
+//
+//@media print {
+//  /* Disable block shadows for printing */
+//  * {
+//    box-shadow: none !important;
+//  }
+//}
+//
+//.clickable {
+//  cursor: pointer;
+//  user-select: none;
+//}

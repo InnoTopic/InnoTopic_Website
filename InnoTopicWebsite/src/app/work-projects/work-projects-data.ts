@@ -61,11 +61,15 @@ export class WorkOrganisationsAndProjectsData {
     logoFileName: `epic-elite-logo.svg`,
     description: 'Test #Rust #React and #AWS hashtags',
     projects: {
-      'EpicElite Platform': project({
+      'AI-based LLM-powered processing of product metadata': project({
         roles: 'Staff Engineer',
-        description: 'Recruited and interviewed 5 Developers and a UI/UX/Web/Graphics Designer. #Lead of 5 #TypeScript and #Python Developers. Did code&architecture reviews.' +
-          'Working directly with CEO & Director of Operations. Communication in English, Spanish, Polish.',
+        description: 'Using #Python and #Amazon_Bedrock with #DynamoDB and #MongoDB and #Django + #TypeScript Web App. ' +
+          'Working directly with CTO and Senior Principal Engineer. ' +
+          'Working with big brands like Walmart, Adidas, Puma, Amazon.',
         topicsById: {
+          'Python': {},
+          'Django': {},
+          'MongoDB': {},
           'Terraform': {},
           'Angular': {},
           'React': {},
@@ -108,15 +112,65 @@ export class WorkOrganisationsAndProjectsData {
           'TypeORM': {},
           'TypeGraphQL': {},
           'AudioSalad': {},
+        }
+      }),
+      'eCommerce Orders SLA real-time monitor and analytics platform': project({
+        roles: 'Staff Engineer, #Rust, #React, #Angular Developer',
+        description: 'Using #Rust, #Python and #DynamoDB and #MongoDB and #Django + #TypeScript Web App' +
+          'Working directly with CTO and Senior Principal Engineer. ' +
+          'Working with big brands like Walmart, Adidas, Puma, Amazon.',
+        topicsById: {
+          // TODO: 'AWS CDK': {},
+          'Rust': {},
+          'Tokio': {},
+          'Tauri': {},
+          'Terraform': {},
+          'Angular': {},
+          'React': {},
+          'Tailwind CSS': {},
+          'Angular Material': {},
+          'AG Grid': {},
+          'GraphQL': {},
+          'Apollo': {},
+          'Apollo Studio': {},
+          'TypeScript': {},
+          'Ionic': {},
+          'Cypress': {},
+          'Jest': {},
+          'Bootstrap': {},
+          'React-Bootstrap': {},
+          'Netlify': {},
+          'Gatsby': {},
+          'Lodash': {},
+          'Figma': {},
+          'Zeplin': {},
+          'SVG': {},
+          'MobX': {},
+          "MobX-State-Tree": {},
+          // 'TestCafe': {},
+          'Git': {},
+          'GitHub': {},
+          'Docker': {},
+          'Kubernetes': {},
+          'Elasticsearch': {},
+          'DynamoDB': {},
+          'MongoDB': {},
+          'AWS': {},
+          // 'Trello': {},
+          'WebStorm': {},
+          // 'PyCharm': {},
+          'Notion': {},
+          'Slack': {},
+          'Datadog': {},
+          'TypeORM': {},
+          'TypeGraphQL': {},
+          'AudioSalad': {},
           'Python': {},
           'Django': {},
           // TODO: PyCharm
-          'PHP': {},
-          'Laravel': {},
-          'PandaDoc': {},
-          DDEX: {},
         }
       })
+
     },
   })
 
@@ -131,7 +185,7 @@ export class WorkOrganisationsAndProjectsData {
       'EpicElite Platform': project({
         roles: 'Lead/Senior Full-Stack Developer & Interviewing and Recruiting (Consultant)',
         description: 'Recruited and interviewed 5 Developers and a UI/UX/Web/Graphics Designer. I have lead a team of 5 Developers. Did code&architecture reviews.' +
-          'Working directly with CEO & Director of Operations. Communication in English, Spanish, Polish.',
+          'Working directly with CEO & Director of Operations. Communication in English, Spanish, Polish. #Python #Django + #TypeScript app using #MongoDB and #MariaDB .',
         topicsById: {
           'Mailgun': {},
           'Rust': {},
@@ -236,6 +290,8 @@ export class WorkOrganisationsAndProjectsData {
             }
           },
           TypeScript: {},
+          Python: {},
+          Django: {},
           Karma: {},
           Jasmine: {},
           Bootstrap: {},

@@ -17,6 +17,10 @@ import {
 
 export class WorkExperienceData {
   main = experience('Main Experience', 'extensive usage and always honing my skills and learning', {
+    Python:
+      we(advanced, expert),
+    Docker:
+      we(advanced),
     Angular:
       we(advanced, expert),
     React:
@@ -221,10 +225,6 @@ export class WorkExperienceData {
       we(intermediate),
     Swift:
       we(intermediate, advanced),
-    Python:
-      we(intermediate),
-    Docker:
-      we(intermediate),
     Gatsby:
       we(),
     Redux:
