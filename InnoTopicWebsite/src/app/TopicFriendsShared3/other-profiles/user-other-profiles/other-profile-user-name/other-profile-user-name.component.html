@@ -27,22 +27,14 @@
 <!--  </mat-form-field>-->
 
 
-  <p
-    *ngIf="! isEditable"
-  >
-    <span
-      class="other-profile-icon-container"
-    >
-      <app-user-other-profile-icon
-        [descriptor]="descriptor"
-      ></app-user-other-profile-icon>
-    </span>
-    <a
-      *ngIf="fullUrl"
-      href="{{fullUrl}}"
-      target="_blank"
-    >{{urlNoProtocol}}</a> <!-- DO NOT make newline, coz it shows as underlined space -->
-  </p>
+<p *ngIf="!isEditable">
+  <span class="other-profile-icon-container">
+    <app-user-other-profile-icon [descriptor]="descriptor"></app-user-other-profile-icon>
+  </span>
+  <a *ngIf="fullUrl" [href]="fullUrl" target="_blank">
+    {{urlNoProtocol}}
+  </a>
+</p>
 
   <!--</p>-->
 

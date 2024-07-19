@@ -3,9 +3,8 @@ mat-form-field {
 }
 
 .other-profile-icon-container {
-  text-align: center;
-  width: 1.5em;
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 
 .tf-user-other-profile-prefix {
