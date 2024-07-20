@@ -7,7 +7,7 @@ import {filter} from "rxjs";
 })
 export class PrintService {
 
-  static isPrint = false // !! JSON.parse(window.localStorage.getItem('isPrint') ?? 'false') // true // hack for now
+  static isPrint = true // !! JSON.parse(window.localStorage.getItem('isPrint') ?? 'false') // true // hack for now
 
   constructor(
     private router: Router,
