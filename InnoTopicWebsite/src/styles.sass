@@ -94,29 +94,34 @@ h4
     width: 16px !important
     height: 16px !important
 
+.parent-container
+  display: flex
+  align-items: center
+
 .other-profile-icon-container
-  width: 1.2em !important
-  height: 1.2em
-   padding: 5px
-   background-color: #eee
-   border-radius: 50%
-  flex: none
-  & + a
-    word-break: break-all
-    margin-left: 5px
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 1.5em
+  height: 1.5em
+  margin-right: 10px
 
-app-user-other-profile-icon
-  vertical-align: middle
+.other-profile-icon-container app-user-other-profile-icon
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 100%
 
-.otherProfileIcon
-  width: 1rem !important
-  height: auto !important
-  // TODO: theme - color
+a
+  display: flex
+  align-items: center
+
 
 app-other-profile-user-name p
   display: flex
   align-items: center
   justify-content: flex-start
+  
 
 .dark-theme
   .section-title
@@ -162,6 +167,7 @@ body
   gap: 2px
 
 .language
+  height: 40px
   display: flex
   align-items: center
   margin: 10px 0
@@ -189,3 +195,36 @@ body
 
 #languages
   font-weight: bold
+
+@media print
+  app-hashtag-replacer app-topic-tag
+    .neumorphic-chip
+      padding: 0 !important
+      margin: 4px 0 !important
+
+  .project-skills
+    app-topic-skill
+      app-topic-tag
+        .neumorphic-chip
+          padding: 0 !important
+          margin: 4px 8px !important
+
+  app-work-experience-by-status-section
+    app-work-experience-list
+      span
+        app-topic-skill
+          app-topic-tag
+            .neumorphic-chip
+              padding: 0 !important
+              margin: 4px 8px !important
+
+app-hashtag-replacer app-topic-tag
+  .neumorphic-chip
+    padding: 0 !important
+    margin: 4px 0 !important
+    transition: none !important
+
+    &:hover
+      box-shadow: unset !important
+
+

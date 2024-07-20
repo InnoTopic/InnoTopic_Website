@@ -5,18 +5,34 @@
   <section class="organisation" *ngFor="let orgKV of keyValOrdered(organisationsAndProjects)">
     <!--<ng-template let-org="orgKV.value">-->
 
-    <h2>
-      <img alt="Organization Logo" *ngIf='orgKV.value.logoFileName' width=auto height=50 src="assets/images/clients/{{orgKV.value.logoFileName}}">
-      <span>{{orgKV.key}}</span>
-      <span class="years">{{orgKV.value.time[0]}} - {{orgKV.value.time[1]}}</span>
-      <app-flags [flags]="orgKV.value.flags"></app-flags>
-      <span class="comment" *ngIf="orgKV.value.locations; let locations">{{locations}} </span>
-    </h2>
+    <header class="organisation-header">
+      <div class="org">
+        <img class="brand-logo" alt="Organization Logo" *ngIf='orgKV.value.logoFileName' width=auto height=50 src="assets/images/clients/{{orgKV.value.logoFileName}}">
+        <h3 class="brand-name">{{orgKV.key}}</h3>
+      </div>
+      <div class="org-detail">
+        <ng-container *ngIf="orgKV.value.time[1]; else singleYear">
+          <span class="years">{{orgKV.value.time[0]}} - {{orgKV.value.time[1]}}</span>
+        </ng-container>
+
+        <ng-template #singleYear>
+          <span class="years">{{orgKV.value.time[0]}}</span>
+        </ng-template>
+
+        <!-- <span class="years">{{orgKV.value.time[0]}} - {{orgKV.value.time[1]}}</span> -->
+        <div class="comment-flag-wrap">
+          <app-flags [flags]="orgKV.value.flags"></app-flags>
+          <span class="comment" *ngIf="orgKV.value.locations; let locations">{{locations}} </span>
+        </div>
+      </div>
+    </header>
+    <div class="recommendations">
+      <a *ngIf="orgKV.value.linkedInRecommendations" href="https://www.linkedin.com/in/karoldepka" target="_blank">
+        Please also take a look at {{orgKV.value.linkedInRecommendations}} {{orgKV.value.linkedInRecommendations > 1 ? 'recommendations' : 'recommendation'}} on
+        <img alt="LinkedIn Logo" class="linkedin-logo" height="14px" src="assets/images/logos/linkedin.svg"> <!-- TODO LinkedIn Logo; TODO: underline link -->
+      </a>
+    </div>
     <app-hashtag-replacer [text]="orgKV.value.description" />
-    <a *ngIf="orgKV.value.linkedInRecommendations" href="https://www.linkedin.com/in/karoldepka" target="_blank">
-      Please also take a look at {{orgKV.value.linkedInRecommendations}} {{orgKV.value.linkedInRecommendations > 1 ? 'recommendations' : 'recommendation'}} on
-      <img alt="LinkedIn Logo" style="vertical-align: middle; padding-bottom: 2px" height="14px" src="assets/images/logos/linkedin.svg"> <!-- TODO LinkedIn Logo; TODO: underline link -->
-    </a>
     <app-work-project
       *ngFor="let projKV of keyValOrdered(orgKV.value.projects)"
       [project]="projKV.value"

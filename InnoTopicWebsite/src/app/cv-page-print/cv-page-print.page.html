@@ -1,4 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <app-company-logo></app-company-logo>
+    </ion-buttons>
 
-<!--<ion-content>-->
+    <ion-title>InnoTopic SLU - Karol Depka Pradzinski - ng 16</ion-title>
+    <ion-buttons slot="end">
+      <span (click)="showThemeConfig = !showThemeConfig" class="clickable">THEME</span>
+    </ion-buttons>
+    <app-theme-config [hidden]="! showThemeConfig"></app-theme-config>
+  </ion-toolbar>
+</ion-header>
+
+<div class="print-container">
   <app-cv-page></app-cv-page>
-<!--</ion-content>-->
+</div>
