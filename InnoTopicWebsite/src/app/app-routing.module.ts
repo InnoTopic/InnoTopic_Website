@@ -104,6 +104,10 @@ const routes: Routes = [
     path: 'theme',
     loadChildren: async () => (await import('./experiments/experiments.module')).ExperimentsPageModule
   },
+  {
+    path: 'shirt-generator',
+    loadChildren: () => import('./shirt-generator/shirt-generator.module').then( m => m.ShirtGeneratorPageModule)
+  },
   { path: '**', redirectTo: 'karol-depka' /* FIXME: does not work? */ },
 ];
 
