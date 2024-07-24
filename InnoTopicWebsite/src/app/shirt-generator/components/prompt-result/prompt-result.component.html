@@ -1,0 +1,13 @@
+<ng-container *ngIf="!isLoading; else loader">
+  <!-- <app-preview
+    *ngFor="let item of promptResult"
+    [item]="item"
+  /> -->
+  <app-topic-logo *ngFor="let item of promptResult" [topic]="item" />
+</ng-container>
+
+<ng-template #loader>
+  <div class="loader">
+    <ion-spinner/>
+  </div>
+</ng-template>

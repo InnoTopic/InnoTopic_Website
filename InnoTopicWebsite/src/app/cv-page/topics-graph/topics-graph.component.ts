@@ -361,6 +361,8 @@ export class TopicsGraphComponent implements OnInit {
       width = +svgRootElement.attr("width"),
       height = +svgRootElement.attr("height");
 
+      svgRootElement.selectAll('*').remove();
+
     const svg = svgRootElement.append("g"); /* actually a <g>, to fix transform not working in <svg> on chrome:
         http://stackoverflow.com/questions/27283610/d3-workaround-for-svg-transform-in-chrome */
 

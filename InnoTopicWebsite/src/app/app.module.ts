@@ -40,6 +40,7 @@ import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import {updateThemeConfig} from "./store/actions/theme-config-actions";
 import {CvPagePrintPageModule} from "./cv-page-print/cv-page-print.module";
 import {PrintService} from "./TopicFriendsShared3/topics-core/print.service";
+import {HttpClientModule} from "@angular/common/http";
 
 
 export function initializeApp(store: Store) {
@@ -58,6 +59,7 @@ export function initializeApp(store: Store) {
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
+    HttpClientModule,
     AppRoutingModule,
     StoreModule.forRoot({themeConfig: themeConfigReducer}),
     EffectsModule.forRoot([ThemeConfigEffects]),
