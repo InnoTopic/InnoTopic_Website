@@ -19,11 +19,11 @@ export interface LinkByIds {
 }
 
 export const size = {
-  verySmall: 0.25,
-  small: 0.3,
-  mid: 0.95,
-  big: 1.26,
-  veryBig: 2,
+  verySmall: 0.35,
+  small: 0.7,
+  mid: 1.15,
+  big: 1.56,
+  veryBig: 2.5,
 };
 export const
   veryBigSize = size.veryBig,
