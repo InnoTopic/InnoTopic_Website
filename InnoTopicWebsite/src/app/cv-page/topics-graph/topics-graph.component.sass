@@ -88,3 +88,12 @@ tech:hover
   padding: 5px
   overflow: scroll
 
+.graph-svg
+  display: inline-block
+
+@media print
+  .graph-svg
+    transform: scale(0.9)
+    transform-origin: top left
+    width: 100%
+    height: 600px

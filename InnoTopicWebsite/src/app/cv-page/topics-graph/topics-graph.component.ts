@@ -9,7 +9,7 @@ import {
   topics,
 } from '../../TopicFriendsShared3/topics-core/topics-data';
 import { errorAlert } from '../../utils/utils';
-import {size} from "./topics-graph.data";
+import {connections, GraphConnections, GraphNode, GraphNodeId, LinkByIds, midSize, nodes, size, preset} from "./topics-graph.data";
 import {PrintService} from "../../TopicFriendsShared3/topics-core/print.service";
 
 
@@ -18,48 +18,10 @@ import {PrintService} from "../../TopicFriendsShared3/topics-core/print.service"
 declare const d3: any;
 declare const $: any;
 
-export type GraphNodeId = string
-export type TopicId = string /*FIXME move*/
 
-// export type GraphConnections = { [key: TopicId]: GraphNode }
-export type GraphConnections = { [key in keyof Partial<Topics>]: GraphNode }
-
-export interface GraphNode {
-  connections?: GraphConnections
-  sizeMult?: number
-  strengthMul?: number
-}
-
-export interface LinkByIds {
-  source: GraphNodeId
-  target: GraphNodeId
-  strengthMul?: number
-}
-
-const preset1 = {
-  // forceLinkStrength: 3,
-  forceLinkStrength: 0.1,
-  // forceManyBodyStrength: -1000,
-  forceManyBodyStrength: -50,
-}
-
-const preset = {
-  // forceLinkStrength: 3,
-  forceLinkStrength: 1,
-  // forceManyBodyStrength: -1000,
-  forceManyBodyStrength: -200,
-  allowZoom: true,
-  // allowZoom: false,
-}
 
 // TODO: try d3.forceRadial(radius[, x][, y])
 
-export const
-  veryBigSize = size.veryBig,
-  bigSize = size.big,
-  midSize = size.mid,
-  smallSize = size.small,
-  verySmallSize = size.small;
 
 @Component({
   selector: 'app-topics-graph',
@@ -74,193 +36,10 @@ export class TopicsGraphComponent implements OnInit {
   }
 
   @Input()
-  nodes = {
-    /* only nodes that I want to apply special properties */
-    jQuery: { /*size: small*/},
-    Angular: { /*size: big*/},
-  }
+  nodes = nodes;
 
   @Input()
-  connections: GraphConnections = {
-    CSS3: {
-      sizeMult: bigSize,
-      connections: {
-        Sass: {},
-        Stylus: { sizeMult: smallSize},
-        Less: { sizeMult: smallSize},
-      }
-    },
-    JavaScript: {
-      sizeMult: bigSize,
-      connections: {
-        'TypeScript': { /*type: 'writtenIn'*/ /* dependsOn / uses */
-          sizeMult: veryBigSize,
-          strengthMul: 0.4,
-        },
-
-        // backend, cloud
-
-        'Frontend': { /*type: 'writtenIn'*/ /* dependsOn / uses */
-          strengthMul: 1.5,
-          sizeMult: veryBigSize,
-          // strengthMul: 0.4,
-          connections: {
-            Backend: {
-              sizeMult: size.veryBig,
-              strengthMul: 1.5,
-              connections: {
-                Cloud: {
-                  connections: {
-                    AWS: {},
-                    "GCP - Google Cloud Platform": {},
-                    "Microsoft Azure": {},
-                    // "Cloud Firestore": {},
-
-                  },
-                },
-
-                Databases: {
-                  connections: {
-                    "Cloud Firestore": {},
-                    "PostgreSQL": {},
-                    "MongoDB": {
-                      sizeMult: size.veryBig,
-                    },
-                    "Supabase": {},
-                    "MariaDB": {},
-                    "SurrealDB": {},
-                  }
-                },
-                Python: {
-                  sizeMult: size.veryBig,
-                  connections: {
-                    Django: {
-                      sizeMult: size.veryBig,
-
-                    },
-                    Flask: {
-                      sizeMult: size.mid
-                    },
-                  }
-                }
-              }
-            },
-            Svelte: {sizeMult: midSize},
-            Qwik: {sizeMult: smallSize},
-            // Astro: {},
-            SolidJS: {
-              sizeMult: smallSize,
-            },
-            Ionic: {
-              strengthMul: 2,
-              sizeMult: veryBigSize,
-              connections: {
-
-                'Angular': {
-                  strengthMul: 0.7,
-                  sizeMult: veryBigSize,
-                  connections: {
-                    NgRx: {
-                      strengthMul: 2,
-                    },
-                  }
-                },
-                'Vue.js': {
-                  strengthMul: 0.5,
-                  sizeMult: bigSize
-                },
-                'React': { /*...weak*/
-                  strengthMul: 0.5,
-                  sizeMult: veryBigSize
-                },
-                Android: {
-                  strengthMul: 1.5,
-                  sizeMult: midSize,
-                  connections: {
-                    Java: {
-                      strengthMul: 3,
-                      sizeMult: smallSize,
-                      connections: {
-                        "Spring Boot": {
-                          strengthMul: 2,
-                          sizeMult: verySmallSize,
-                          /* TODO could display old stuff as faded/transparent/grayed */
-                          // ...small
-                        }
-                      }
-                    },
-                    Kotlin: {},
-                  },
-                },
-                'Stencil': {
-                  strengthMul: 2,
-                  connections: {
-                    'Web Components': {},
-                  }
-                }
-              },
-            }
-          }
-        },
-        'Node.js': {},
-        Deno: {
-          connections: {
-            Rust: {
-              sizeMult: size.veryBig,
-              connections: {
-                WebAssembly: {
-
-                },
-                Tokio: {},
-                Tonic: {
-                  sizeMult: smallSize,
-                },
-                Tauri: {},
-                Dioxus: {},
-                Yew: {},
-                // SurrealDB: {},
-                Turbopack: {},
-                Turborepo: {},
-              },
-              strengthMul: 2,
-            },
-          }
-        },
-        Jest: {},
-        Redux: {},
-        RxJS: {},
-        Vite: {
-          strengthMul: 0.5,
-        },
-        // Turbopack: {
-        //   connections: {
-        //     Turborepo: {},
-        //   },
-        // },
-        // TODO: "JS build & deploy node" - icon with a box and up-arrow (a'la upload): vercel, esbuild turbopack, netlify, vite
-        // "JavaScript Libraries": {},
-        // Astro: {},
-        // TurboPack,
-        Vercel: {},
-        Netlify: {},
-      },
-    },
-    HTML5: {
-      sizeMult: bigSize,
-      connections: {
-        SVG: {
-          sizeMult: bigSize,
-          strengthMul: 2,
-          connections: {
-            "Affinity Designer": { sizeMult: smallSize},
-            Figma: {},
-            'D3.js': {},
-          }
-        },
-      },
-    },
-  }
-
+  connections = connections;
   public d3Nodes: any[] = []
   private d3Links: LinkByIds[] = [
     // {source: 'Web Components', target: 'HTML5'},
@@ -363,6 +142,13 @@ export class TopicsGraphComponent implements OnInit {
 
     // svg.call(d3.zoom().transform, d3.zoomIdentity.translate(1050, 50)
     //   .scale(130.5));
+    const zoom = d3.zoom()
+    .scaleExtent([0.5, 5]) 
+    .on("zoom", function() {
+      svg.attr("transform", d3.event.transform);
+    });
+  svg.call(zoom)
+    .call(zoom.transform, d3.zoomIdentity.scale(1)); // This sets the initial zoom level to 1.
 
 
     if (preset.allowZoom) {
@@ -599,10 +385,12 @@ export class TopicsGraphComponent implements OnInit {
       //   .attr("y1", function(d: any) { return d.source.y; })
       //   .attr("x2", function(d: any) { return d.target.x; })
       //   .attr("y2", function(d: any) { return d.target.y; });
-
+       
       perNodeMainGroup
-        .attr("x", function(d: any) { return (d.x - radiusFunc(d) ); })
-        .attr("y", function(d: any) { return (d.y - radiusFunc(d) ); });
+          .attr("cx", function(d: any) { return d.x = Math.max(radiusFunc(d), Math.min(width - radiusFunc(d), d.x)); })
+          .attr("cy", function(d: any) { return d.y = Math.max(radiusFunc(d), Math.min(height - radiusFunc(d), d.y)); });
+        // Rest of your ticked function...
+       
       nodeCircleOverlay /* need to set position separately, because of issue with drag&drop and "translate(...)" transform */
         .attr("x", function(d: any) { return (d.fx || d.x) - radiusFunc(d); })
         .attr("y", function(d: any) { return (d.fy || d.y) - radiusFunc(d); });
