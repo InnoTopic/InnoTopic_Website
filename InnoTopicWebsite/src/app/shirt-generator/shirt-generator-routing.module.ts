@@ -6,8 +6,18 @@ import { ShirtGeneratorPage } from './shirt-generator.page';
 const routes: Routes = [
   {
     path: '',
-    component: ShirtGeneratorPage
-  },
+    component: ShirtGeneratorPage,
+    pathMatch: 'full'
+  },{
+    path: 'window-ai',
+    component: ShirtGeneratorPage,
+  },{
+    path: 'dummy-ai',
+    component: ShirtGeneratorPage,
+  },{
+    path: '**',
+    redirectTo: ''
+  }
 ];
 
 @NgModule({

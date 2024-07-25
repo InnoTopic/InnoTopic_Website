@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { AiEngineFactory } from '../models/ai-engine.factory';
+import { AbstractTopicsPromptService } from '../models/abstract-topics-prompt.service';
 import { defer, from, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class WindowDotAiTopicsPromptService extends AiEngineFactory {
+export class WindowDotAiTopicsPromptService extends AbstractTopicsPromptService {
 
   constructor() {
     super();

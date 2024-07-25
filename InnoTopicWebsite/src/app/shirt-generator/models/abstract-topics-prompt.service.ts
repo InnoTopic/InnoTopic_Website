@@ -1,6 +1,5 @@
 import { Observable } from "rxjs";
 
-// AbstractTopicsPromptService
-export abstract class AiEngineFactory {
+export abstract class AbstractTopicsPromptService {
   public abstract prompt(text: string): Observable<string[]>;
 }

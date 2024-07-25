@@ -1,9 +1,11 @@
 <ng-container *ngIf="!isLoading; else loader">
-  <!-- <app-preview
-    *ngFor="let item of promptResult"
-    [item]="item"
-  /> -->
-  <app-topic-logo *ngFor="let item of promptResult" [topic]="item" />
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" size-md="4" size-lg="3" *ngFor="let item of promptResult">
+        <app-preview [item]="item" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ng-container>
 
 <ng-template #loader>

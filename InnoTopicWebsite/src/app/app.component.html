@@ -27,7 +27,7 @@
 <!--    <ion-router-outlet id="main-content"></ion-router-outlet>-->
 <!--  </ion-split-pane>-->
 <!--</ion-app>-->
-isPrint: {{isPrint}}
+
 <ion-router-outlet *ngIf="! isPrint" id="main-content" />  <!--THIS IS PREVENTING SCROLL FOR PDF PRINT EXPORT-->
 <!--<router-outlet id="main-content" /> &lt;!&ndash; for PDF print?&ndash;&gt;-->
 <app-cv-page-print *ngIf="isPrint" />

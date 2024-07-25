@@ -162,6 +162,7 @@ body
   gap: 2px
 
 .language
+  height: 40px
   display: flex
   align-items: center
   margin: 10px 0
@@ -189,3 +190,36 @@ body
 
 #languages
   font-weight: bold
+
+@media print
+  app-hashtag-replacer app-topic-tag
+    .neumorphic-chip
+      padding: 0 !important
+      margin: 4px 0 !important
+
+  .project-skills
+    app-topic-skill
+      app-topic-tag
+        .neumorphic-chip
+          padding: 0 !important
+          margin: 4px 8px !important
+
+  app-work-experience-by-status-section
+    app-work-experience-list
+      span
+        app-topic-skill
+          app-topic-tag
+            .neumorphic-chip
+              padding: 0 !important
+              margin: 4px 8px !important
+
+app-hashtag-replacer app-topic-tag
+  .neumorphic-chip
+    padding: 0 !important
+    margin: 4px 0 !important
+    transition: none !important
+
+    &:hover
+      box-shadow: unset !important
+
+

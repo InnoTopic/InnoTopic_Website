@@ -130,7 +130,7 @@ export const highlights = {
     HTML5: {},
     Ionic: {},
     Electron: {} /* TODO: mark as non-main experience */,
-    // TODO: Rust: Tauri: {} /* TODO: mark as non-main experience */,
+    Tauri: {},
     // TODO: Rust:  clap
     // TODO: Rust: Tonic: {} /* TODO: mark as non-main experience */,
     // TODO: Rust: 'https://bevyengine.org/': {} /* TODO: Near Rust */,
@@ -769,9 +769,10 @@ export const highlights = {
     // "Pentagram": {}, // E.g., Washington's street layout; baphomet.svg too suggestive?
     "Hinduism": {},
     "Judaism": {},
+    // Mormon temple
     // "Merkaba": {},
     // "Mandala": {},
-    // "Taoism": {},
+    // "Taoism": {}, // https://es.wikipedia.org/wiki/Tao#/media/Archivo:Tao.svg
     // "Islam": {},
     // "Christianity": {},
     // "Bahai Faith": {},

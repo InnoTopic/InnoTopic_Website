@@ -1,0 +1,48 @@
+name: Continuous Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+
+    - name: Install dependencies
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Test the application
+      run: |
+        source venv/bin/activate
+        pytest
+
+    - name: Deploy to server
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        SERVER_USER: ${{ secrets.SERVER_USER }}
+        SERVER_HOST: ${{ secrets.SERVER_HOST }}
+      run: |
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' | ssh-add - > /dev/null
+        ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST << 'EOF'
+          cd /path/to/your/application
+          git pull origin main
+          source venv/bin/activate
+          pip install -r requirements.txt
+          docker-compose down
+          docker-compose up -d --build
+        EOF

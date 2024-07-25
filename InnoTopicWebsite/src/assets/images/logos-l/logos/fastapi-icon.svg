@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg fill="rgb(45,45,45)"  width="256px" height="256px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
-    <title>FastAPI</title>
-    <g>
-        <path d="M128.000174,7.10542736e-15 C57.3307104,7.10542736e-15 0,57.3306183 0,127.999964 C0,198.669366 57.3307104,256.000056 128.000174,256.000056 C198.669334,256.000056 256,198.669366 256,127.999964 C256,57.3306183 198.669334,7.10542736e-15 128.000174,7.10542736e-15 Z M121.330642,230.60518 L121.330642,150.31662 L76.6976362,150.31662 L140.825663,25.3948123 L140.825663,105.683328 L183.791664,105.683328 L121.330642,230.60518 Z" fill="rgb(83,83,83)"></path>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg fill="rgb(45,45,45)"  width="100%" height="100%" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="path875-5-9-7-3-2-3-9-9-8-0-0-5-87-7" transform="matrix(1,0,0,1,-1.51465,-1.51465)">
+        <path d="M9,1.515L9,1.515C4.894,1.515 1.515,4.882 1.515,8.975C1.515,8.975 1.515,8.976 1.515,8.976C1.515,13.069 4.893,16.437 9,16.437L9,16.437C13.107,16.437 16.485,13.069 16.485,8.976C16.485,8.976 16.485,8.975 16.485,8.975C16.485,4.882 13.106,1.515 9,1.515ZM8.483,4.893L13.192,4.893L8.464,8.216L11.697,8.216L4.808,13.058L6.303,9.735L6.987,8.216L8.483,4.893Z" style="fill:rgb(83,83,83);fill-opacity:0.98;fill-rule:nonzero;"/>
     </g>
 </svg>

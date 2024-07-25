@@ -7,11 +7,13 @@ import { TopicSkillsModule } from '../topic-skills/topic-skills.module';
 import { WorkExperienceByStatusSectionComponent } from './work-experience-by-status-section/work-experience-by-status-section.component';
 import { WorkExperienceListComponent } from './work-experience-list/work-experience-list.component';
 import { WorkExperienceComponent } from './work-experience.component';
+import { LanguageSectionComponent } from "./language-section/language-section.component";
 
 let declarations = [
   WorkExperienceComponent,
   WorkExperienceListComponent,
   WorkExperienceByStatusSectionComponent,
+  LanguageSectionComponent
 ]
 
 @NgModule({

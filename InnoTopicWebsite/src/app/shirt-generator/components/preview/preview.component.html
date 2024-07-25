@@ -1,5 +1,8 @@
 <ion-card>
   <ion-card-header>
-    <ion-card-title>{{ item }}</ion-card-title>
+    <ion-card-title align="center">{{ item }}</ion-card-title>
   </ion-card-header>
+  <ion-card-content class="preview-card-content">
+    <app-topic-logo [topic]="item" [width]="200" [height]="200" [margin]="0" />
+  </ion-card-content>
 </ion-card>

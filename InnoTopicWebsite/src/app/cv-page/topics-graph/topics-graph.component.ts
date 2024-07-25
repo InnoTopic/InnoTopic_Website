@@ -142,6 +142,9 @@ export class TopicsGraphComponent implements OnInit {
                     Flask: {
                       sizeMult: size.mid
                     },
+                    FastAPI: {
+                      sizeMult: size.mid
+                    },
                   }
                 }
               }

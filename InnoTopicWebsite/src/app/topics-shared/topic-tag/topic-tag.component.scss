@@ -168,3 +168,9 @@
 //    box-shadow: inset var(--shadow-offset) var(--shadow-offset) var(--shadow-blur) var(--shadow-light), inset calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) var(--shadow-blur) var(--shadow-dark);
 //  }
 //}
+
+app-chip {
+  app-topic-logo {
+    margin-right: 6px;
+  }
+}

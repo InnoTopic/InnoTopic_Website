@@ -565,6 +565,7 @@ export class Languages {
   'Python Pyre' = tWide('pyre-icon.svg') // #Python
   'Pyright' = tWide('pyright-icon.svg') // #Python
   'Flask' = tWide('flask-icon.svg') // #Python
+  'FastAPI' = tSquare('fastapi-icon.svg') // #Python
   Mojo = tWide('modular-mojo-icon') // #AI #Python
   Hack = tWide()
   Haxe = t()

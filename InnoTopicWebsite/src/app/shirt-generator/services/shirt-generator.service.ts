@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject} from "rxjs";
-import {AiEngineFactory} from '../models/ai-engine.factory';
+import {AbstractTopicsPromptService} from '../models/abstract-topics-prompt.service';
 
 @Injectable({
   providedIn: 'root',
@@ -11,10 +11,8 @@ export class ShirtGeneratorService {
 
   readonly generatedContent$ = this.generatedContent.asObservable();
 
-  readonly apiUrl = 'localhost:3000';
-
   constructor(
-    private aiEngine: AiEngineFactory,
+    private aiEngine: AbstractTopicsPromptService,
   ) {
   }
 
