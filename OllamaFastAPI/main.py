@@ -4,7 +4,8 @@ from pydantic import BaseModel, Field
 import httpx
 import logging
 from typing import List, Dict
-from app.config import settings
+import json
+# from app.config import settings
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -23,11 +24,11 @@ app.add_middleware(
 )
 
 # Configuration
-OLLAMA_API_BASE_URL = settings.ollama_api_base_url
+OLLAMA_API_BASE_URL = "http://localhost:11434"
 
 class Query(BaseModel):
     prompt: str = Field(..., description="The prompt to generate text from")
-    model: str = Field(settings.default_model, description="The model to use for generation")
+    model: str = Field("deepseek-coder", description="The model to use for generation")
 
 class Conversation(BaseModel):
     id: str
@@ -48,6 +49,24 @@ async def generate(query: Query, client: httpx.AsyncClient = Depends(get_client)
     """
     Generate text using the specified model and prompt.
     """
+
+    def parse_responses(input_string):
+        # Split the input string into individual JSON objects
+        json_strings = input_string.strip().split('\n')
+
+        # Initialize an empty string to store the aggregated response
+        aggregated_response = ""
+
+        # Iterate through each JSON string
+        for json_str in json_strings:
+            # Parse the JSON string
+            data = json.loads(json_str)
+
+            # Extract the "response" value and add it to the aggregated response
+            aggregated_response += data.get("response", "")
+
+        return aggregated_response
+
     try:
         logger.info(f"Received generate request with data: {query.dict()}")
         
@@ -60,19 +79,21 @@ async def generate(query: Query, client: httpx.AsyncClient = Depends(get_client)
         logger.info(f"Response status code: {response.status_code}")
         logger.info(f"Response text: {response.text}")
         response.raise_for_status()
-        
-        response_data = response.json()
+
+        response_data = parse_responses(response.text)
+        # response_data = response.json()
         logger.info(f"Response from Ollama: {response_data}")
         
         return {
-            "response": response_data.get("response", ""),
-            "model": response_data.get("model", ""),
-            "created_at": response_data.get("created_at", ""),
-            "total_duration": response_data.get("total_duration", 0),
-            "eval_count": response_data.get("eval_count", 0)
+            "response": response_data,
+            # "response": response_data.get("response", ""),
+            # "model": response_data.get("model", ""),
+            # "created_at": response_data.get("created_at", ""),
+            # "total_duration": response_data.get("total_duration", 0),
+            # "eval_count": response_data.get("eval_count", 0)
         }
     
-    except httpx.RequestError as re:
+    except HTTPException as re:
         logger.error(f"Request error while communicating with Ollama: {re}")
         raise HTTPException(status_code=500, detail=f"Error communicating with Ollama API: {re}")
     except httpx.HTTPStatusError as he:
@@ -85,94 +106,6 @@ async def generate(query: Query, client: httpx.AsyncClient = Depends(get_client)
         logger.error(f"Unexpected error: {e}")
         raise HTTPException(status_code=500, detail=f"An unexpected error occurred: {e}")
 
-@app.get("/models", summary="List available models")
-async def list_models(client: httpx.AsyncClient = Depends(get_client)):
-    """
-    Retrieve a list of available models from the Ollama API.
-    """
-    logger.info("Received request to list models")
-    try:
-        response = await client.get(f"{OLLAMA_API_BASE_URL}/api/tags")
-        
-        logger.info(f"Response status code: {response.status_code}")
-        logger.info(f"Response text: {response.text}")
-        response.raise_for_status()
-        
-        models = response.json().get("models", [])
-        logger.info(f"Available models: {models}")
-        return {"models": models}
-    
-    except httpx.RequestException as e:
-        logger.error(f"Error fetching models from Ollama: {e}")
-        raise HTTPException(status_code=500, detail=f"Error fetching models: {e}")
-
-@app.post("/conversation/start", summary="Start a new conversation")
-async def start_conversation(conv_id: str):
-    """
-    Start a new conversation with the given ID.
-    """
-    logger.info(f"Received request to start conversation with ID: {conv_id}")
-    if conv_id in conversations:
-        logger.error(f"Conversation ID {conv_id} already exists")
-        raise HTTPException(status_code=400, detail="Conversation ID already exists")
-    conversations[conv_id] = Conversation(id=conv_id)
-    logger.info(f"Conversation {conv_id} started")
-    return {"message": f"Conversation {conv_id} started"}
-
-@app.post("/conversation/{conv_id}/message", summary="Add a message to a conversation")
-async def add_message(conv_id: str, query: Query, client: httpx.AsyncClient = Depends(get_client)):
-    """
-    Add a message to an existing conversation and get a response.
-    """
-    logger.info(f"Received message for conversation {conv_id} with query: {query}")
-    if conv_id not in conversations:
-        logger.error(f"Conversation {conv_id} not found")
-        raise HTTPException(status_code=404, detail="Conversation not found")
-    
-    conversation = conversations[conv_id]
-    conversation.messages.append({"role": "user", "content": query.prompt})
-    
-    try:
-        context = "\n".join([f"{m['role']}: {m['content']}" for m in conversation.messages])
-        response = await client.post(
-            f"{OLLAMA_API_BASE_URL}/api/generate",
-            json={"model": query.model, "prompt": context},
-            timeout=30.0
-        )
-        
-        logger.info(f"Response status code: {response.status_code}")
-        logger.info(f"Response text: {response.text}")
-        response.raise_for_status()
-        
-        response_data = response.json()
-        generated_text = response_data.get("response", "")
-        conversation.messages.append({"role": "assistant", "content": generated_text})
-        logger.info(f"Generated text added to conversation {conv_id}: {generated_text}")
-        
-        return {
-            "generated_text": generated_text,
-            "model": response_data.get("model", ""),
-            "created_at": response_data.get("created_at", ""),
-            "total_duration": response_data.get("total_duration", 0),
-            "eval_count": response_data.get("eval_count", 0)
-        }
-    
-    except httpx.RequestException as e:
-        logger.error(f"Error communicating with Ollama: {e}")
-        raise HTTPException(status_code=500, detail=f"Error communicating with Ollama: {e}")
-
-@app.get("/conversation/{conv_id}", summary="Get conversation history")
-async def get_conversation(conv_id: str):
-    """
-    Retrieve the conversation history for the given conversation ID.
-    """
-    logger.info(f"Received request to get conversation with ID: {conv_id}")
-    if conv_id not in conversations:
-        logger.error(f"Conversation {conv_id} not found")
-        raise HTTPException(status_code=404, detail="Conversation not found")
-    logger.info(f"Returning conversation {conv_id}")
-    return conversations[conv_id]
-
 @app.get("/health", summary="Check API health")
 async def health_check(client: httpx.AsyncClient = Depends(get_client)):
     """
@@ -182,11 +115,11 @@ async def health_check(client: httpx.AsyncClient = Depends(get_client)):
         response = await client.get(f"{OLLAMA_API_BASE_URL}/api/tags")
         response.raise_for_status()
         return {"status": "healthy", "ollama_api": "accessible"}
-    except httpx.RequestException as e:
+    except HTTPException as e:
         logger.error(f"Health check failed: {e}")
         return {"status": "unhealthy", "ollama_api": "inaccessible"}
 
 if __name__ == "__main__":
     import uvicorn
     logger.info("Starting FastAPI application")
-    uvicorn.run(app, host=settings.fastapi_host, port=settings.fastapi_port)
+    uvicorn.run(app, host="localhost", port=8000)
