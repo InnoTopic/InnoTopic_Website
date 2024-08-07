@@ -1,0 +1,22 @@
+/* Logger.css */
+.logger {
+    background-color: #2e2e2e;
+    color: #ffffff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  .logger h3 {
+    margin-top: 0;
+  }
+  
+  .logger ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .logger li {
+    margin: 5px 0;
+  }
+  

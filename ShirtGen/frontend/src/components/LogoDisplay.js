@@ -5,7 +5,7 @@ function LogoDisplay({ logos, onAddLogo }) {
     <div className="logo-display">
       {logos.map((logo, index) => (
         <div key={index} onClick={() => onAddLogo(logo)}>
-          <img src={logo.thumbnail_url} alt={`Logo ${index + 1}`} />
+          <img src={logo} alt={`Logo ${index + 1}`} />
           <p>{`Logo ${index + 1}`}</p>
         </div>
       ))}

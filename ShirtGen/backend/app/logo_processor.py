@@ -17,6 +17,12 @@ if not OLLAMA_API_KEY:
     logger.error("OLLAMA_API_KEY is not set")
     raise ValueError("OLLAMA_API_KEY is not set")
 
+OLLAMA_MODEL_NAME = os.getenv('OLLAMA_MODEL_NAME')
+
+if not OLLAMA_MODEL_NAME:
+    logger.error("OLLAMA_MODEL_NAME is not set")
+    raise ValueError("OLLAMA_MODEL_NAME is not set")
+
 def process_prompt(prompt):
     logger.debug(f"Processing prompt: {prompt}")
     try:
@@ -27,7 +33,7 @@ def process_prompt(prompt):
         # Check if the prompt is a direct topic
         if re.match(r'^[a-z]+$', prompt):
             logger.debug("Direct topic detected, searching Noun Project")
-            return search_noun_project(prompt)
+            return search_noun_project([prompt])
 
         # Use the Ollama API to generate a response
         logger.debug("Generating text with Ollama")
@@ -39,22 +45,14 @@ def process_prompt(prompt):
         keywords = extract_keywords(generated_text)
         logger.debug(f"Extracted keywords: {keywords}")
 
-        # Search Noun Project for each keyword
-        logos = []
-        for keyword in keywords:
-            logos.extend(search_noun_project(keyword))
+        # Search Noun Project for the combined keywords
+        logos = search_noun_project(keywords)
         
         logger.debug(f"Found logos: {logos}")
         return logos
     except Exception as e:
         logger.error(f"Error in process_prompt: {str(e)}", exc_info=True)
         raise
-
-OLLAMA_MODEL_NAME = os.getenv('OLLAMA_MODEL_NAME')
-
-if not OLLAMA_MODEL_NAME:
-    logger.error("OLLAMA_MODEL_NAME is not set")
-    raise ValueError("OLLAMA_MODEL_NAME is not set")
 
 def generate_text_with_ollama(prompt):
     try:
@@ -74,7 +72,6 @@ def generate_text_with_ollama(prompt):
     except requests.RequestException as e:
         logger.error(f"Error calling Ollama API: {str(e)}", exc_info=True)
         raise
-
 
 def extract_keywords(text):
     # Simple keyword extraction logic
