@@ -1,58 +1,74 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>people</ion-title>
+    <ion-buttons slot="start">
+      <app-company-logo></app-company-logo>
+    </ion-buttons>
+
+    <ion-title>People</ion-title>
+    <ion-buttons slot="end">
+      <span (click)="showThemeConfig = !showThemeConfig" class="clickable">THEME</span>
+    </ion-buttons>
+    <app-theme-config [hidden]="! showThemeConfig"></app-theme-config>
   </ion-toolbar>
 </ion-header>
 
+ 
 <ion-content [fullscreen]="true">
+  <div class="masonry">
+    <div class="masonry-item" *ngFor="let person of peopleArray">
+      <div class="flip-card" (click)="flipCard(person.id)">
+        <div class="flip-card-inner" [ngClass]="{'is-flipped': isFlipped[person.id]}">
+          <div class="flip-card-front">
+            <ion-card>
+              <ion-card-header>
+                <ion-img class="ion-image" [src]="person.imageUrl" ></ion-img>
+                <ion-card-title>
+                  <a href="p/{{ person.id }}">{{ person.fullName }}</a>
+                </ion-card-title>
+                <ion-card-subtitle>
+                  <strong>
+                    <app-hashtag-replacer [text]="person.position" />
+                  </strong>
+                  at {{ person.company }}, {{ person.location?.city }} ({{ person.location?.countryCodeISO3166_1Alpha2 }})
+                </ion-card-subtitle>
+              </ion-card-header>
+              <ion-card-content>
+                <app-hashtag-replacer [text]="person.tagline" />
+                 
+              </ion-card-content>  
+            </ion-card>
+          </div>
+          <div class="flip-card-back">
+           
+              <ion-card-content>
+               
+                <section>
+                  <h3>TODO: Jay save the day here please haha:</h3>
+                  <li>maybe geo countries from the maps; create GH issue to make the map declarative maybe; low prio though.</li>
+                  <li>ALl components (but separate components from `-section` component) please</li>
+                  <li>maybe geo countries from the maps; create GH issue to make the map declarative maybe; low prio though.</li>
+                  <li>ALl components (but separate components from `-section` component) please</li>
+                  <ul>
+                       </ul>
+                </section>
+              </ion-card-content>
+           
 
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">people</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-
-  <h1>TODO:  Jay: ion-grid or something, with cards, please :)</h1>
-  <p>Of course fully theme-able and responsive, please :)</p>
-
-  <ion-card *ngFor="let person of peopleArray">
-    <ion-card-header>
-      <ion-card-title>
-        <a href="p/{{ person.id }}">
-          {{ person.fullName }}
-        </a>
-      </ion-card-title>
-      <ion-card-subtitle>
-        <strong>
-          <app-hashtag-replacer [text]="person.position" />
-        </strong>
-          at {{person.company}},
-
-        {{ person.location?.city}} (
-        {{ person.location?.countryCodeISO3166_1Alpha2}}
-        )
-      </ion-card-subtitle>
-    </ion-card-header>
-
-    <ion-card-content>
-      <app-hashtag-replacer [text]="person.tagline" />
-
-      <section>
-        <h3>TODO: Jay save the day here please haha:</h3>
-        <ul>
-          <li>(transplant declarative data from my CV page)</li>
-          <li>TODO: get my foto from linkedin please</li>
-          <li>TODO: linkedin etc as small icons</li>
-          <li>TODO: BIO </li>
-          <li>TODO: natural languages</li>
-          <li>TODO: skills</li>
-          <li>maybe geo countries from the maps; create GH issue to make the map declarative maybe; low prio though.</li>
-          <li>ALl components (but separate components from `-section` component) please</li>
-        </ul>
-      </section>
-
-    </ion-card-content>
-  </ion-card>
-
+              
+          </div>
+          <div class="card-footer">
+            <ion-button fill="clear" size="small" [routerLink]="['/p', person.id]" (click)="$event.stopPropagation()">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </ion-button>
+            <ion-button fill="clear" size="small" [routerLink]="['/p', person.id]" (click)="$event.stopPropagation()">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </ion-button>
+            <ion-button fill="clear" size="small" [routerLink]="['/p', person.id]" (click)="$event.stopPropagation()">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </ion-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>
