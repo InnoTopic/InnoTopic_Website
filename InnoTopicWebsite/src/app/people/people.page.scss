@@ -2,42 +2,32 @@
   display: grid;
   gap: 10px; // Adjust gap as needed
 }
-
-/* For mobile screens */
 @media (max-width: 600px) {
   .masonry {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
-
-/* For tablet screens */
 @media (min-width: 601px) and (max-width: 1024px) {
   .masonry {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
-
-/* For desktop screens */
 @media (min-width: 1025px) {
   .masonry {
     grid-template-columns: repeat(3, 1fr) !important;
   }
-
 }
-
-
 .masonry-item {
   padding: 15px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   grid-row-end: span 1; // Default span
-  transition: grid-row-end 0.3s ease;
-
-  height: 100%; // Ensure the masonry item takes full height
+  transition: all 0.3s ease-in-out;
+  height: 100%; 
 }
 ion-img {
-   overflow: hidden; // Ensure the image respects the border-radius
+   overflow: hidden;
  }
  
 .ion-image {
@@ -47,9 +37,6 @@ ion-img {
   height: 240px;       
   object-fit: cover;   
 }
- 
-
-
 .flip-card {
   perspective: 1000px;
   height: 100%; // Ensure the flip card takes full height
@@ -57,7 +44,6 @@ ion-img {
   flex-direction: column;
  
 }
-
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -68,13 +54,10 @@ ion-img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
-
 .flip-card-inner.is-flipped {
   transform: rotateY(180deg);
 }
-
 .flip-card-front,
 .flip-card-back {
   position: absolute;
@@ -82,44 +65,40 @@ ion-img {
   height: 100%;
   backface-visibility: hidden;
   border-radius: 10px; /* Adjust as needed */
-  /* Apply box-shadow if you have one for elevation effect */
-}
+ }
 .flip-card-back {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Example shadow, adjust as needed */
   transform: rotateY(180deg);
-}
+  margin-top: 10px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
-
 ion-card {
   width: 100%; // Ensure the card takes full width of masonry item
   flex-direction: column;
   height: 100%; // Ensure the card takes full height of masonry item
   border-radius: 10px;
 }
-
 .card-content-md {
   flex-grow: 1; // Allow the content to grow and fill available space
-  
 }
-
 .card-footer {
   position: absolute;
   bottom: 0;
   text-align: center;
   width:100%;
-
 }
 .masonry > *:nth-child(odd) {
   grid-row-end: span 55;
 }
-
 .masonry > *:nth-child(even) {
   grid-row-end: span 50;
 }
- 
 .card-title-container {
   display: flex;
   align-items: center;

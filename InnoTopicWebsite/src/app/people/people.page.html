@@ -12,7 +12,6 @@
   </ion-toolbar>
 </ion-header>
 
- 
 <ion-content [fullscreen]="true">
   <div class="masonry">
     <div class="masonry-item" *ngFor="let person of peopleArray">
@@ -33,40 +32,34 @@
                 </ion-card-subtitle>
               </ion-card-header>
               <ion-card-content>
-                <app-hashtag-replacer [text]="person.tagline" />
-                 
+                <app-hashtag-replacer [text]="person.tagline" />            
               </ion-card-content>  
             </ion-card>
           </div>
-          <div class="flip-card-back">
-           
-              <ion-card-content>
-               
+          <div class="flip-card-back">   
+            <app-hashtag-replacer [text]="person.tagline" />          
+              <ion-card-content>         
                 <section>
-                  <h3>TODO: Jay save the day here please haha:</h3>
-                  <li>maybe geo countries from the maps; create GH issue to make the map declarative maybe; low prio though.</li>
-                  <li>ALl components (but separate components from `-section` component) please</li>
-                  <li>maybe geo countries from the maps; create GH issue to make the map declarative maybe; low prio though.</li>
-                  <li>ALl components (but separate components from `-section` component) please</li>
-                  <ul>
-                       </ul>
+                    <ul>
+                      <li>maybe geo countries from the maps; create GH issue to make the map declarative maybe; low prio though.</li>
+                      <li>ALl components (but separate components from `-section` component) please</li>
+                      <li>maybe geo countries from the maps; create GH issue to make the map declarative maybe; low prio though.</li>
+                      <li>ALl components (but separate components from `-section` component) please</li> 
+                    </ul>
                 </section>
-              </ion-card-content>
-           
-
-              
-          </div>
-          <div class="card-footer">
-            <ion-button fill="clear" size="small" [routerLink]="['/p', person.id]" (click)="$event.stopPropagation()">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </ion-button>
-            <ion-button fill="clear" size="small" [routerLink]="['/p', person.id]" (click)="$event.stopPropagation()">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </ion-button>
-            <ion-button fill="clear" size="small" [routerLink]="['/p', person.id]" (click)="$event.stopPropagation()">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </ion-button>
-          </div>
+              </ion-card-content>     
+          </div>        
+        </div>
+        <div class="card-footer">
+          <ion-button fill="clear" size="small" [href]="person.profiles?.linkedIn" target="_blank">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </ion-button>
+          <ion-button fill="clear" size="small" [href]="person.profiles?.facebook" target="_blank">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </ion-button>
+          <ion-button fill="clear" size="small" [href]="person.profiles?.twitter" target="_blank">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </ion-button>
         </div>
       </div>
     </div>

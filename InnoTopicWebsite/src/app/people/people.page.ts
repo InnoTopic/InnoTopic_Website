@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { peopleArray } from './people.data';
-import * as d3 from 'd3';
 
 @Component({
   selector: 'app-people',
@@ -23,8 +22,5 @@ export class PeoplePage implements OnInit {
     this.isFlipped[id] = !this.isFlipped[id];
   }
 
-  toggleDropdown(event: Event, id: string): void {
-    event.stopPropagation(); // Prevents the flipCard function from being triggered
-    this.dropdownOpen[id] = !this.dropdownOpen[id];
-  }
+ 
 }

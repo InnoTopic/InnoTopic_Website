@@ -101,7 +101,6 @@ export const people = {
     position: "#Rust expert, CTO",
   }),
 
-
   "Joisco": person({
     givenNames: "Joseph",
     position: "#LLM intern specializing in #Python",
@@ -138,8 +137,6 @@ export const people = {
     imageUrl: "https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80",
 
   }),
-
-
   noviodelangel: person({
     givenNames: "Mateusz",
     surnames: "Werpulewski",
@@ -153,7 +150,6 @@ export const people = {
       TypeScript: { level: "advanced"},
     }
   }),
-
   samyak: person({
     position: "Part-time Intern",
     givenNames: "Samyak",
@@ -162,8 +158,6 @@ export const people = {
     location: cities.Chandigarh,
     imageUrl: "https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
   }),
-
-
   paco: person({
     position: "Part-time LLM intern",
     imageUrl: "https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80",
