@@ -20,7 +20,9 @@
           <div class="flip-card-front">
             <ion-card>
               <ion-card-header>
-                <ion-img class="ion-image" [src]="person.imageUrl" ></ion-img>
+                <div class="ion-image-container">
+                  <ion-img class="ion-image" [src]="person.imageUrl"></ion-img>
+                </div>                
                 <ion-card-title>
                   <a href="p/{{ person.id }}">{{ person.fullName }}</a>
                 </ion-card-title>
@@ -37,14 +39,18 @@
             </ion-card>
           </div>
           <div class="flip-card-back">   
-            <app-hashtag-replacer [text]="person.tagline" />          
-              <ion-card-content>         
+               <ion-card-content>         
                 <section>
-                    <ul>
-                      <li>maybe geo countries from the maps; create GH issue to make the map declarative maybe; low prio though.</li>
-                      <li>ALl components (but separate components from `-section` component) please</li>
-                      <li>maybe geo countries from the maps; create GH issue to make the map declarative maybe; low prio though.</li>
-                      <li>ALl components (but separate components from `-section` component) please</li> 
+                  <h3>TODO: Jay save the day here please haha:</h3>
+                  <ul>
+                    <li>(transplant declarative data from my CV page)</li>
+                    <li>TODO: get my foto from linkedin please</li>
+                    <li>TODO: linkedin etc as small icons</li>
+                    <li>TODO: BIO </li>
+                    <li>TODO: natural languages</li>
+                    <li>TODO: skills</li>
+                    <li>maybe geo countries from the maps; create GH issue to make the map declarative maybe; low prio though.</li>
+                    <li>ALl components (but separate components from `-section` component) please</li>
                     </ul>
                 </section>
               </ion-card-content>     

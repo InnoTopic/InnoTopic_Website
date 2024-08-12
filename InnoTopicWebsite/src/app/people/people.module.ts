@@ -19,9 +19,7 @@ import { ThemeDemoPageModule } from '../themes/theme-demo/theme-demo.module';
         PeoplePageRoutingModule,
         TopicsSharedModule,
         ThemeDemoPageModule
-
     ],
-  declarations: [PeoplePage
-    ]
+  declarations: [PeoplePage]
 })
 export class PeoplePageModule {}

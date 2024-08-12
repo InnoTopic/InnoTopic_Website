@@ -61,7 +61,6 @@ export const people = {
     surnames: "Depka Pradzinski",
     position: "CEO, Chief Software Developer",
     imageUrl: "https://media.licdn.com/dms/image/C4D03AQFcgqkctrdd8g/profile-displayphoto-shrink_400_400/0/1661274041297?e=1728518400&v=beta&t=rbYZHGuKDkWgovM1TC5S6rh_JwYHju4M5egCLrK7NO0",
-
     company: companies.InnoTopic,
     // note we r using "position", not "title", as title, could be smth like PhD.
     tagline: "#Rust and #TypeScript enthusiast with a broad experience, especially in #Frontend",
@@ -81,7 +80,6 @@ export const people = {
     formalTitle: "PhD",
     position: "CMO, Chief Metaverse Officer",
     imageUrl: "https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80",
-
     // company: companies.XR-Prototyping /* TBD InnoTopic */,
     company: companies.InnoTopic /* TBD InnoTopic */,
     // note can list as CMO for InnoTopic?
@@ -97,7 +95,6 @@ export const people = {
     givenNames: "Daniel",
     surnames: "Dettlaff",
     imageUrl: "https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80",
-
     position: "#Rust expert, CTO",
   }),
 
@@ -105,7 +102,6 @@ export const people = {
     givenNames: "Joseph",
     position: "#LLM intern specializing in #Python",
     imageUrl: "https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80",
-
     tagline: "Finding creative solutions with #LLM-s, #Python, #Ollama and #LangChain" // TODO: AutoGen when icon
   }),
 
@@ -117,7 +113,6 @@ export const people = {
     // position: "Full Stack #typescript and #javascript developer, Specialization in #Angular also works with #Node.js and #NestJS", TODO: check why node and nest is not working
     location: cities.Surat,
     imageUrl: "https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80",
-
     skills: {
       Angular: { level: "expert" },
       NodeJs: { level: "professional" },
@@ -135,13 +130,12 @@ export const people = {
   Nekmo: person({
     position: "#Python and #Django Expert",
     imageUrl: "https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80",
-
   }),
+  
   noviodelangel: person({
     givenNames: "Mateusz",
     surnames: "Werpulewski",
     imageUrl: "https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80",
-
     position: "Full Stack Developer",
     company: companies.InnoTopic,
     tagline: "#Java and #TypeScript developer with a broad experience, especially in #Backend",
@@ -150,24 +144,23 @@ export const people = {
       TypeScript: { level: "advanced"},
     }
   }),
+
   samyak: person({
     position: "Part-time Intern",
     givenNames: "Samyak",
- 
     surnames: "Jain",
     location: cities.Chandigarh,
     imageUrl: "https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
   }),
+
   paco: person({
     position: "Part-time LLM intern",
     imageUrl: "https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80",
-
   }),
 
   janek: person({
     firstName: "Jan",
     imageUrl: "https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80",
-
     position: "#PHP Architect and Expert at #Laravel and #Symfony",
     location: cities.Berlin,
   }),

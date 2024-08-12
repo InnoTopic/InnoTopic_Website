@@ -1,6 +1,6 @@
 .masonry {
   display: grid;
-  gap: 10px; // Adjust gap as needed
+  gap: 10px; 
 }
 @media (max-width: 600px) {
   .masonry {
@@ -9,7 +9,7 @@
 }
 @media (min-width: 601px) and (max-width: 1024px) {
   .masonry {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 @media (min-width: 1025px) {
@@ -22,24 +22,33 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  grid-row-end: span 1; // Default span
+  grid-row-end: span 1;  
   transition: all 0.3s ease-in-out;
   height: 100%; 
 }
 ion-img {
    overflow: hidden;
  }
- 
-.ion-image {
-  border-radius: 40px;  
-  overflow: hidden;     
-  width: 100%;          
-  height: 240px;       
-  object-fit: cover;   
+ .ion-image-container {
+   --radius: 50px;
+  padding: var(--gap);
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  width: 100%; 
+  height: 240px; 
 }
+
+.ion-image {
+  border-radius: calc(var(--radius) - var(--gap));
+  object-fit: cover;  
+  width: 100%;          
+  height: 100%;       
+}
+
 .flip-card {
   perspective: 1000px;
-  height: 100%; // Ensure the flip card takes full height
+  height: 100%;  
   display: flex;
   flex-direction: column;
  
@@ -64,10 +73,10 @@ ion-img {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 10px; /* Adjust as needed */
+  border-radius: 10px; 
  }
 .flip-card-back {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Example shadow, adjust as needed */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);   
   transform: rotateY(180deg);
   margin-top: 10px;
 
@@ -79,13 +88,13 @@ ion-img {
   transform: rotateY(180deg);
 }
 ion-card {
-  width: 100%; // Ensure the card takes full width of masonry item
+  width: 100%;  
   flex-direction: column;
-  height: 100%; // Ensure the card takes full height of masonry item
+  height: 100%;  
   border-radius: 10px;
 }
 .card-content-md {
-  flex-grow: 1; // Allow the content to grow and fill available space
+  flex-grow: 1;
 }
 .card-footer {
   position: absolute;
