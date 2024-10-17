@@ -5,9 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { PeoplePageRoutingModule } from './people-routing.module';
+import { ThemeConfigComponent } from '../themes/theme-config/theme-config.component';
 
 import { PeoplePage } from './people.page';
 import {TopicsSharedModule} from "../topics-shared/topics-shared.module";
+import { ThemeDemoPageModule } from '../themes/theme-demo/theme-demo.module';
 
 @NgModule({
     imports: [
@@ -15,7 +17,8 @@ import {TopicsSharedModule} from "../topics-shared/topics-shared.module";
         FormsModule,
         IonicModule,
         PeoplePageRoutingModule,
-        TopicsSharedModule
+        TopicsSharedModule,
+        ThemeDemoPageModule
     ],
   declarations: [PeoplePage]
 })
